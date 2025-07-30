@@ -1,0 +1,25 @@
+version: 2
+
+exposures:
+  
+  - name: betterup_insights
+    type: application
+    maturity: medium
+    url: https://connect.betterup.io/connect/#/apps/f1dbf066-5051-4c78-9c36-b970d71a699d/access
+    description: >
+      QBR slide generation automation tool for PIA + CS&T teams
+
+    depends_on:
+      - ref('fact_reporting_group_reference_population_construct_scores')
+      - ref('fact_construct_benchmark_scores_reference_population')
+      - ref('dim_member_attributes')
+      - ref('dim_accounts_daily_snapshot')
+      - ref('fact_reference_population_construct_scores')
+      - ref('dim_members')
+      - ref('dim_track_assignments')
+      - ref('dim_reporting_group_assignments')
+      - ref('dim_organizations')
+
+    owner:
+      name: Natalie O`Shea
+      email: natalie.oshea@betterup.co

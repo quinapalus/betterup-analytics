@@ -1,0 +1,23 @@
+version: 2
+
+models:
+  - name: int_iai_members
+    description: ""
+    columns:
+      - name: member_reporting_group_key
+        description: ""
+        tests:
+          - not_null
+          - unique        
+
+      - name: member_id
+        description: ""
+
+      - name: reporting_group_id
+        description: ""
+
+      - name: ended_at
+        description: ""
+
+      - name: count_completed_reflection_points
+        description: ""

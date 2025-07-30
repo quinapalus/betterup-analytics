@@ -1,0 +1,63 @@
+version: 2
+models:
+  - name: fact_coach_recommendation_metric
+    description: >
+      This atomic fact table provides information on each coach recommendation, augmented
+      with relevant metrics.
+
+    columns:
+      - name: fact_coach_recommendation_metric_id
+        description: Surrogate Primary Key of APP_COACH_RECOMMENDATION_ID and COACH_SELECTED_DATE
+        tests:
+          - not_null
+          - unique
+      - name: coach_app_coach_id
+        description: >
+          Denormalized foreign key to the coach associated with the coach
+          recommendation.
+
+      - name: date_key
+        description: >
+          Foreign key to conformed Date Dimension.
+        tests:
+          - not_null
+
+      - name: member_key
+        description: >
+          Foreign key to conformed Member Dimension.
+
+      - name: coach_recommendation_position
+        description: >
+          Integer denoting the position of the coach in the associated recommendation
+          set.
+
+      - name: is_coach_selected
+        description: >
+          Boolean denoting if the recommendation was followed by a selection.
+
+      - name: coach_assignment_ended
+        description: >
+          Boolean denoting if the coach assignment ended; in other words,
+          is the member still matched to the coach as part of this coach assignment?
+
+      - name: coach_assignment_duration_days
+        description: >
+          Integer denoting how long the coach assignment has been active in number
+          of days.
+
+      - name: app_coach_recommendation_id
+        description: >
+          Foreign key to the associated recommendation.
+
+      - name: coach_recommended_date
+        description: >
+          UTC timestamp denoting when the coach was recommended. The sole purpose
+          of this
+          timestamp (in addition to the datekey) is to allow for aggregation in downstream
+          `carina` models.
+
+      - name: coach_selected_date
+        description: >
+          UTC timestamp denoting when the coach was selected by the member. NULL if
+          there
+          was no selection.

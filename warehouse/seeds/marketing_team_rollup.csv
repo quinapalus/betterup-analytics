@@ -1,0 +1,192 @@
+ROLE_ID,ROLE,COUNT_OF_ACTIVE_USERS,MARKETING_TEAM_ROLLUP
+00E50000001FMbHEAW,Customer Success Manager,47,Undefined
+00E50000001ITclEAG,All Access,38,Undefined
+00E50000001ITd0EAG,Finance,29,Undefined
+00E2J000001oJmmUAE,Undefined,19,Undefined
+00E2J000001Yk2PUAS,Deployment Manager,17,Undefined
+00E2J000001g8JWUAY,SBS - East,15,Undefined
+00E2J000001wJ40UAE,Product Marketing,14,Undefined
+00E2J000001ZUuiUAG,CSM Global SMB,11,Undefined
+00E2J000001sRnMUAU,Product Management,11,Undefined
+00E2J000001ZUuHUAW,AE Emerging Enterprise 3,9,AE Emerging Enterprise
+00E2J000001ZUuaUAG,AM Enterprise West,9,AM Enterprise
+00E2J000001sRJgUAM,Inbound SDR,9,Undefined
+00E2J000001ZUuDUAW,AE Emerging Enterprise 1,8,AE Emerging Enterprise
+00E2J000001ZUuFUAW,AE Emerging Enterprise 2,8,AE Emerging Enterprise
+00E2J000001sPoSUAU,Government,8,Government
+00E2J000001wWWbUAM,Legal,8,Undefined
+00E2J000001ZUuMUAW,AE EMEA 1,7,AE EMEA
+00E2J000001ZUuAUAW,AE Enterprise East 2,7,AE Enterprise
+00E2J000001ZUu6UAG,AE Enterprise West 2,7,AE Enterprise
+00E2J000001ZUugUAG,AM Emerging Enterprise 2,7,AM Emerging Enterprise
+00E2J000001ZUuYUAW,AM Enterprise East,7,AM Enterprise
+00E2J000001gUBsUAM,Europe SDR Continental,7,Undefined
+00E2J000001g8JgUAI,SBS - West,7,Undefined
+00E2J000001ZUuKUAW,AE EMEA 2,6,AE EMEA
+00E2J000001ZUueUAG,AM Emerging Enterprise 1,6,AM Emerging Enterprise
+00E2J000001ZUuRUAW,GAP 2,6,GAP
+00E2J000001oJmhUAE,Sales Development,6,Undefined
+00E2J000001VzxvUAC,AM East 2,5,Undefined
+00E2J0000024wxRUAQ,CRO,5,Undefined
+00E2J000001ZUu8UAG,AE Enterprise East 1,4,AE Enterprise
+00E2J000001ZUukUAG,CSM EMEA,4,Undefined
+00E2J000001ZUuVUAW,GAP 4,4,GAP
+00E2J000001gUudUAE,Outbound SDR Central South,4,Undefined
+00E2J000001gUuiUAE,Outbound SDR West,4,Undefined
+00E2J000001g8JbUAI,SBS Lead - West,4,Undefined
+00E2J000001wUOaUAM,AE Care East,3,Undefined
+00E2J000001ZUu7UAG,AE Enterprise West 1,3,AE Enterprise
+00E2J000001ZUucUAG,AM EMEA,3,AM EMEA
+00E2J000001gUuTUAU,Europe SDR UKI-Nordics,3,Undefined
+00E2J000001ZUuTUAW,GAP 3,3,GAP
+00E2J000001gUunUAE,Outbound SDR Central North,3,Undefined
+00E50000001ITdAEAW,Partnerships,3,Undefined
+00E2J000001sPowUAE,VP Care,3,Undefined
+00E2J000001Z0LDUA0,D2C,2,Undefined
+00E2J000001oSCnUAM,GAM AE,2,Undefined
+00E2J000001sRJWUA2,"Manager, Europe SDR",2,Undefined
+00E2J000001gUusUAE,Outbound SDR Government,2,Undefined
+00E2J000001gUv2UAE,Outbound SDR Northeast,2,Undefined
+00E2J000001sRJlUAM,Post Sales SDR,2,Undefined
+00E2J000001sRJRUA2,VP Sales Development,2,Undefined
+00E2J000001gUVKUA2,AE Care West,1,Undefined
+00E2J000001gUlMUAU,AM Central 1,1,Undefined
+00E2J000001VzxqUAC,AVP AM East,1,Undefined
+00E2J000001ZUufUAG,AVP AM Emerging Enterprise,1,AM Emerging Enterprise
+00E2J000001ZUuZUAW,AVP AM Enterprise West,1,AM Enterprise
+00E2J000001sRKFUA2,AVP AM West 1,1,Undefined
+00E2J000001ZUuhUAG,AVP CSM Global SMB,1,AM SMB
+00E2J000001ZUuLUAW,AVP EMEA,1,AE EMEA
+00E2J000001ZUuCUAW,AVP Emerging Enterprise 1,1,AE Emerging Enterprise
+00E2J000001ZUuEUAW,AVP Emerging Enterprise 2,1,AE Emerging Enterprise
+00E2J000001ZUuGUAW,AVP Emerging Enterprise 3,1,AE Emerging Enterprise
+00E2J000001ZUu9UAG,AVP NorAm Enterprise West,1,AE Enterprise
+00E2J000001ZUuIUAW,AVP SMB,1,AE SMB
+00E2J000001ZUuNUAW,Chief Customer Officer,1,Undefined
+00E2J000001sRnHUAU,Chief Product Officer,1,Undefined
+00E50000001rw7eEAA,GAM,1,Undefined
+00E2J000001ZUuPUAW,GAP 1,1,GAP
+00E2J000001oKBmUAM,GM AM East,1,Undefined
+00E50000001J2MTEA0,Head of Account Management,1,Undefined
+00E2J000001wYqiUAE,Head of Government,1,Government
+00E2J000001ZUu3UAG,Head of Sales,1,Undefined
+00E2J000001wK1WUAU,Head of Strategy & Growth,1,Undefined
+00E2J000001sRJqUAM,Outbound SDR,1,Undefined
+00E2J000001gUuYUAU,Outbound SDR Canada,1,Undefined
+00E2J000001gUuxUAE,Outbound SDR Southeast,1,Undefined
+00E2J0000024wjyUAA,Partnerships AE,1,Undefined
+00E2J000001VqBYUA0,Post Sales SDR Central,1,Undefined
+00E2J000001gUv7UAE,Post Sales SDR East,1,Undefined
+00E2J000001gUvCUAU,Post Sales SDR West,1,Undefined
+00E2J000001ZUubUAG,RVP AM EMEA,1,AM EMEA
+00E2J000001ZUudUAG,RVP AM Emerging Enterprise,1,AM Emerging Enterprise
+00E2J000001ZUuXUAW,RVP AM Enterprise East,1,AM Enterprise
+00E2J000001ZUujUAG,RVP CSM EMEA,1,Undefined
+00E2J000001ZUuJUAW,RVP EMEA,1,Undefined
+00E2J000001ZUuUUAW,RVP GAP 4,1,GAP
+00E2J000001wYqnUAE,RVP Government,1,Government
+00E2J000001ZUuBUAW,RVP NorAm Emerging Enterprise,1,AE Emerging Enterprise
+00E2J000001ZUulUAG,RVP NorAm Enterprise East,1,AE Enterprise
+00E2J000001ZUu5UAG,RVP NorAm Enterprise West,1,AE Enterprise
+00E50000001rvuGEAQ,RVP Northeast,1,Undefined
+00E50000001rvuBEAQ,RVP West 1,1,Undefined
+00E2J000001ZUuOUAW,SVP GAP,1,GAP
+00E2J000001ZUuWUAW,VP AM Enterprise,1,AM Enterprise
+00E2J000001ZUuQUAW,VP GAP 2,1,GAP
+00E2J000001ZUuSUAW,VP GAP 3,1,GAP
+00E2J000001ZUu4UAG,VP NorAm Enterprise West,1,AE Enterprise
+00E2J000001wYqYUAU,Account Executive,0,Undefined
+00E2J000001wYqdUAE,Account Manager,0,Undefined
+00E2J000001wYqOUAU,AE Canada,0,Undefined
+00E2J000001gUVYUA2,AE Care MM,0,Undefined
+00E2J000001Vz8TUAS,AE Care MM East,0,Undefined
+00E2J000001Vz8OUAS,AE Care MM West,0,Undefined
+00E50000001Ft6tEAC,AE Central North,0,Undefined
+00E2J000001gUVJUA2,AE Central North 1.1,0,Undefined
+00E2J000001ZHpeUAG,AE Central North 2.1,0,Undefined
+00E2J000001wYqsUAE,AE Central South,0,Undefined
+00E2J000001gUtGUAU,AE Central South 2,0,Undefined
+00E2J000001sSv7UAE,AE Continental Europe,0,Undefined
+00E2J000001oLVYUA2,AE Northeast,0,Undefined
+00E2J000001VsiUUAS,AE Northeast 1,0,Undefined
+00E2J000001Z7gXUAS,AE Northeast 2,0,Undefined
+00E2J000001VsKwUAK,AE Northeast 3,0,Undefined
+00E2J000001wYqxUAE,AE Southeast,0,Undefined
+00E2J000001gUqCUAU,AE UK-Nordics,0,Undefined
+00E50000001rw7jEAA,AE West 1.1,0,Undefined
+00E2J000001gUg7UAE,AE West 1.2,0,Undefined
+00E2J000001YxjlUAC,AE West 2.1,0,Undefined
+00E2J000001gUgCUAU,AE West 2.2,0,Undefined
+00E2J000001ZE67UAG,AM Central 2,0,Undefined
+00E2J000001wYrCUAU,AM East,0,Undefined
+00E2J000001sV54UAE,AM Europe,0,Undefined
+00E2J000001wYr7UAE,AM West,0,Undefined
+00E2J000001ZE6HUAW,AM West 1,0,Undefined
+00E2J000001gUV9UAM,AM West 2,0,Undefined
+00E2J000001ZE6MUAW,AM West 3,0,Undefined
+00E2J000001ZChfUAG,AVP AM Central,0,Undefined
+00E2J000001gUV4UAM,AVP AM West 2,0,Undefined
+00E2J000001ZE6CUAW,AVP AM West 3,0,Undefined
+00E2J000001gUVEUA2,AVP Central North 1,0,Undefined
+00E2J000001ZHpZUAW,AVP Central North 2,0,Undefined
+00E2J000001gUtBUAU,AVP Central South,0,Undefined
+00E2J000001ZAHVUA4,AVP Continental Europe,0,Undefined
+00E2J000001VsiPUAS,AVP Northeast 1,0,Undefined
+00E2J000001Z6xrUAC,AVP Northeast 2,0,Undefined
+00E2J000001VsKrUAK,AVP Northeast 2,0,Undefined
+00E2J000001ZD5NUAW,AVP Southeast,0,Undefined
+00E2J000001JfGRUA0,AVP UK-Nordics,0,Undefined
+00E2J000001gUg2UAE,AVP West 1.1,0,Undefined
+00E2J000001Yo5hUAC,AVP West 1.2,0,Undefined
+00E2J000001gUfxUAE,AVP West 2.1,0,Undefined
+00E2J000001oJmcUAE,BDR-Manager,0,Undefined
+00E2J000001gUiNUAU,Care SDR,0,Undefined
+00E2J000001JZVpUAO,Chief Growth Officer,0,Undefined
+00E50000001IU4GEAW,Chief Innovation Officer,0,Undefined
+00E2J000001wJ3qUAE,CMO,0,Undefined
+00E2J000001wUOVUA2,COO,0,Undefined
+00E2J000001sQpCUAU,CSM Care,0,Undefined
+00E2J000001oJmrUAE,Customer BDR,0,Undefined
+00E2J000001sSv2UAE,EMEA AE,0,Undefined
+00E2J000001sS6xUAE,EMEA SDR,0,Undefined
+00E2J000001gUlHUAU,GM AM Central,0,Undefined
+00E2J000001wYr2UAE,GM AM West,0,Undefined
+00E2J000001Yk2KUAS,Head of Customer Success,0,Undefined
+00E2J000001Z0L8UAK,Head of D2C,0,Undefined
+00E50000001FMaxEAG,Head of Enterprise Sales,0,Undefined
+00E50000001rzgmEAA,Head of MM-SMB,0,Undefined
+00E2J000001gUvvUAE,"Manager, Inbound",0,Undefined
+00E2J000001sRJbUAM,"Manager, Outbound SDR",0,Undefined
+00E2J000001gUvqUAE,"Manager, Post Sales",0,Undefined
+00E2J000001oJmXUAU,MM - Account Executive,0,Undefined
+00E2J000001oKGXUA2,MM - Account Manager,0,Undefined
+00E2J000001oXVLUA2,MM - Central,0,Undefined
+00E2J000001oXVQUA2,MM - East,0,Undefined
+00E2J000001oXVVUA2,MM - West,0,Undefined
+00E2J000001oKGSUA2,MM Manager,0,Undefined
+00E2J000001ZUtyUAG,Need to Move,0,Undefined
+00E2J000001sPorUAE,President Care,0,Undefined
+00E2J000001g8EbUAI,Relationship Management Leader - East,0,Undefined
+00E50000001FMbCEAW,Relationship Management Leader - West,0,Undefined
+00E2J000001g8EWUAY,Relationship Manager - West,0,Undefined
+00E2J000001sV4zUAE,RVP AM Europe,0,Undefined
+00E2J000001wYqJUAU,RVP Canada,0,Undefined
+00E2J000001sPp1UAE,RVP Care East,0,Undefined
+00E2J000001gUgWUAU,RVP Care EMEA,0,Undefined
+00E2J000001gUVTUA2,RVP Care MM,0,Undefined
+00E2J000001gUVOUA2,RVP Care West,0,Undefined
+00E2J000001g8B3UAI,RVP Central North,0,Undefined
+00E2J000001wYqEUAU,RVP Central South,0,Undefined
+00E2J000001sOghUAE,RVP Continental Europe,0,Undefined
+00E2J000001wYqTUAU,RVP Enterprise Sales,0,Undefined
+00E2J000001wYq9UAE,RVP Southeast,0,Undefined
+00E2J000001gUq7UAE,RVP UK-Nordics,0,Undefined
+00E2J000001gUfsUAE,RVP West 2,0,Undefined
+00E2J000001g8JRUAY,SBS Lead - East,0,Undefined
+00E2J000001oHutUAE,SMB - Account Executive,0,Undefined
+00E2J000001g7sQUAQ,SMB - Account Manager,0,Undefined
+00E2J000001oKGNUA2,SMB Manager,0,Undefined
+00E2J000001wKZTUA2,SMB-Expansion-Renewal,0,Undefined
+00E2J000001l0TXUAY,Strategic AM East,0,Undefined
+00E2J000001l0TcUAI,Strategic AM West,0,Undefined
+00E2J000001wJ3vUAE,"VP, Product Marketing",0,Undefined

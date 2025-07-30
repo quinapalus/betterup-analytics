@@ -1,0 +1,14 @@
+version: 2
+
+sources:
+  - name: sendgrid
+    schema: stitch_sendgrid
+    database: raw
+    tables:
+      - name: events
+
+      - name: event_resource_ids
+        identifier: events__resource_ids
+
+      - name: event_categories
+        identifier: events__category

@@ -1,0 +1,70 @@
+version: 2
+models:
+  - name: stg_app__activities
+    description: >
+      Activities are resources that have been assigned to users. If the  user has
+      completed an activity then the corresponding entry will
+      contain the time completed and rating the user provided. 
+    columns:
+      - name: activity_id
+        description: Unique identifier of the Activity
+        tests:
+          - unique
+          - not_null
+
+      - name: member_id
+        description: Unique identifier of the Member the Activity is assigned to.
+        tests:
+          - not_null
+
+      - name: resource_id
+        description: Unique identifier of the Resource assigned for the Activity.
+        tests:
+          - not_null
+
+      - name: creator_id
+        description: >
+          Unique identifier of the User who created the Activity. Can be null if not
+          created by a User.
+
+      - name: viewed_at
+        description: >
+          When the Member viewed the Activity. Only
+          populated for activities starting December 2016.
+          See [Issue 3768](https://github.com/betterup/betterup-app/issues/3768)
+
+      - name: completed_at
+        description: >
+          When the Member completed the Activity.  If the Member has not completed
+          the Activity then
+          this field is `null`.
+
+      - name: favorited_at
+        description: When the Member favorited the Activity (saved it to the Bookmarked
+          list). If the Member has not favorited the Activity then this field is `null`.
+
+      - name: rating
+        description: >
+          Rating the Member gave to the Activity.
+          Ratings were re-introduced in September 2017.
+
+      - name: created_at
+        description: >
+          When the Activity was created.
+        tests:
+          - not_null
+
+      - name: updated_at
+        description: >
+          When the Activity was updated. 
+        tests:
+          - not_null
+
+      - name: associated_record_id
+        description: The 'associated_record_id' column stores a unique identifier
+          that links the activity records stored in this model to a related external
+          record. [GenAI Description]
+
+      - name: associated_record_type
+        description: The 'associated_record_type' column contains the type of record
+          that is related to the activity. [GenAI Description]

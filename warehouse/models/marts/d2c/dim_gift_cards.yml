@@ -1,0 +1,28 @@
+version: 2
+
+models:
+  - name: dim_gift_cards
+    meta:
+      owner: "adrian.lievano@betterup.co"
+    description: >
+      A table tracking all consumer gift cards enabled by BetterUp
+
+    columns:
+      - name: app_consumer_gift_card_id
+        description: Primary key
+        tests:
+          - unique
+          - not_null
+
+      - name: created_at
+        description: Timestamp associated with the creation of the gift card
+
+      - name: voided_at
+        description: Timestamp when the gift card is voided
+
+      - name: paid_at
+        description: Timestamp for when the gift card is paid.
+
+      - name: redeemed_at
+        description: Timestamp of when the gift paid is redeemed by the successful
+          completion of an appointment

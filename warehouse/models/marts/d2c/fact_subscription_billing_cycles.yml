@@ -1,0 +1,34 @@
+version: 2
+
+models:
+  - name: fact_subscription_billing_cycles
+    meta:
+      owner: "adrian.lievano@betterup.co"
+    description: >
+      A table tracking all possible start and stop times for a subscription's billing. Each month, a new record for 
+      each subscription is added up until the subscription itself is ended. 
+      
+    columns:
+      - name: _unique
+        description: Primary key
+        tests:
+          - unique
+          - not_null
+
+      - name: stripe_subscription_id
+        description: ""
+
+      - name: stripe_customer_id
+        description: ""
+
+      - name: user_id
+        description: "BetterUp internal user_id."
+
+      - name: billing_cycle_order
+        description: "A window function that tracks all the billing cycles a subscription experienced."
+
+      - name: cycle_start
+        description: "The start time for a subscription in the given subscription billing cycle"
+
+      - name: cycle_end
+        description: "The end time for a subscription in the given subscription billing cycle"

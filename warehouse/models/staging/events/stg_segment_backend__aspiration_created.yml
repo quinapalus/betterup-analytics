@@ -1,0 +1,65 @@
+version: 2
+
+models:
+  - name: stg_segment_backend__aspiration_created
+    description: The DBT model stg_segment_backend__aspiration_created is an aggregation
+      of data related to user aspirations on the Segment Backend, such as aspiration
+      id, growth focus area selection, timeframe translation key, timeframe duration,
+      description, track/subscription assignment, context library name, event type,
+      and event timestamp. It collects the data from the node 'segment_backend' and
+      'aspiration_created', then has the results processed accordingly. [GenAI Description]
+    columns:
+      - name: id
+        description: The 'id' column holds a unique identifier for each row in the
+          table. [GenAI Description]
+        tests:
+          - unique
+          - not_null
+
+      - name: user_id
+        description: The 'user_id' column stores the identifier for the user associated
+          with the aspiration created. [GenAI Description]
+
+      - name: aspiration_id
+        description: The 'aspiration_id' column stores each individual aspiration's
+          unique ID. [GenAI Description]
+
+      - name: aspiration_growth_focus_area_selection_id
+        description: This column contains the ID of the selected growth focus area
+          for the created aspiration. [GenAI Description]
+
+      - name: aspiration_aspiration_timeframe_translation_key
+        description: This column holds the translation key associated with the user's
+          chosen timeframe for their aspiration. [GenAI Description]
+
+      - name: aspiration_aspiration_timeframe_duration
+        description: The 'aspiration_aspiration_timeframe_duration' column contains
+          the timeframe duration in days for each aspiration. [GenAI Description]
+
+      - name: aspiration_description
+        description: The column 'aspiration_description' is a text field containing
+          the user's description of their long-term goal. [GenAI Description]
+
+      - name: track_assignment_id
+        description: "'track_assignment_id' is a unique identifier for an assignment\
+          \ of a user to a specific learning track. [GenAI Description]"
+
+      - name: product_subscription_assignment_id
+        description: "'product_subscription_assignment_id' is the identifier of the\
+          \ subscription associated with the aspiration. [GenAI Description]"
+
+      - name: event
+        description: The event column stores data about the type of event associated
+          with the aspiration record. [GenAI Description]
+
+      - name: context_library_name
+        description: "'context_library_name' is the library name associated with the\
+          \ aspiration that was created. [GenAI Description]"
+
+      - name: deployment_type
+        description: The 'deployment_type' column stores the type of deployment associated
+          with an aspiration. [GenAI Description]
+
+      - name: event_at
+        description: The 'event_at' column stores the timestamp of the event as a
+          timestamp format. [GenAI Description]

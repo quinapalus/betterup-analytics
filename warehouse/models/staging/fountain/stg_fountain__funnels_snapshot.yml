@@ -1,0 +1,39 @@
+version: 2
+
+models:
+  - name: stg_fountain__funnels_snapshot
+    description: "This has snapshot data for Fountain funnels (aka openings).
+                  The grain is one row per funnel. Active and inactive funnels are included.
+                  Docs on Funnels - https://developer.fountain.com/reference/list-all-positions"
+    columns:
+      - name: funnel_id
+        description: "Unique identifier for Funnels"
+        tests:
+          - not_null
+
+      - name: primary_key
+        description: "Surrogate primary key created from funnel_id, valid_to and valid_from"
+        tests:
+          - unique
+          - not_null
+
+      - name: funnel_title
+        description: "Name of the funnel"
+
+      - name: is_active_funnel
+        description: "True if funnel is active, false if not"
+
+      - name: valid_from
+        description: "The timestamp when this snapshot row was first inserted	"
+
+      - name: valid_to
+        description: "The timestamp when this row became invalidated.	The most recent snapshot will have a null value"
+
+      - name: is_current_version
+        description: "True if this row is the most recent snapshot for the funnel"
+
+      - name: version
+        description: ""
+
+      - name: is_last_snapshot_of_day
+        description: ""

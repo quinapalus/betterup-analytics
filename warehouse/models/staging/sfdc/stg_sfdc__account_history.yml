@@ -1,0 +1,69 @@
+version: 2
+models:
+  - name: stg_sfdc__account_history
+    description: >
+      Salesforce Account History model. This dataset reports on object changes in
+      the Salesforce Account model.
+      There are few idiosyncracies related to the model: (1) The same change can be
+      reported in separate rows,
+      with user IDs and names being displayed separately (for instance, one row may
+      be just their Salesforce user IDs,
+      another row can be their full names), but the two rows are associated with unique
+      primary keys; (2) if objects
+      are assigned at the time the account is created in Salesforce, those object
+      changes will not be registered in the
+      Account History model. For instance, if a CSM Owner is assigned at the same
+      time the account object is created,
+      the model will not pick up any changes on the CSM Owner object. For more information,
+      check out the
+      [Salesforce ObjectName History documentation](https://developer.salesforce.com/docs/atlas.en-us.api.meta/api/sforce_api_associated_objects_history.htm)
+
+    columns:
+      - name: sfdc_account_history_id
+        description: Primary Key associated with the object change in Salesforce Account
+          model.
+        tests:
+          - unique
+          - not_null
+
+      - name: sfdc_account_id
+        description: Unique identifier of the Salesforce account.
+        tests:
+          - not_null
+
+      - name: field
+        description: Account field associated with this change record.
+        tests:
+          - not_null
+
+      - name: new_value
+        description: >
+          New value associated with the field after the object change. This can be
+          NULL if the field hasn't been
+          updated with any new value or if the change is more general (for example,
+          "created" or
+          "accountUpdatedByLead", which don't have to be accompanied with any value
+          change).
+
+      - name: old_value
+        description: >
+          Old value associated with the field before the object change. This can be
+          NULL if the field didn't have any
+          associated value or if the change is more general (for example, "created"
+          or
+          "accountUpdatedByLead", which don't have to be accompanied with any value
+          change).
+
+      - name: is_deleted
+        description: >
+          Boolean denoting if this account history record has been deleted in SFDC.
+        tests:
+          - not_null
+          - accepted_values:
+              values: [true, false]
+
+      - name: created_at
+        description: >
+          Timestamp denoting when the object change occurred in Salesforce.
+        tests:
+          - not_null

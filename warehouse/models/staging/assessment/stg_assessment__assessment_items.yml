@@ -1,0 +1,54 @@
+version: 2
+
+models:
+  - name: stg_assessment__assessment_items
+    description: The stg_assessment__assessment_items model contains data corresponding
+      to the registration process for assessments. Its fields include assessment_item_id,
+      assessment_item_uuid, assessment_response_set_id, item_type, key, translation_key,
+      prompt, created_at, updated_at, prompt_i18n, and PROMPT_I18N. It is an aggregation
+      of data from the parent models raw.stitch_assessment.assessment_items. [GenAI
+      Description]
+    columns:
+      - name: assessment_item_id
+        description: The 'assessment_item_id' column is the unique identifier for
+          each assessment item, which is used to link this model with other models
+          in the data warehouse. [GenAI Description]
+
+      - name: assessment_item_uuid
+        description: Primary key (UUID version)
+        tests:
+          - not_null
+          - unique
+
+      - name: assessment_response_set_id
+        description: The assessment_response_set_id is a unique identifier linking
+          to the response set preceding the assessment item. [GenAI Description]
+
+      - name: item_type
+        description: The 'item_type' column is a categorization of assessment items
+          that specifies their type. [GenAI Description]
+
+      - name: key
+        description: The 'key' column contains a unique identifier for an individual
+          assessment item. [GenAI Description]
+
+      - name: translation_key
+        description: The 'translation_key' column holds the internationalization key
+          for a specific type of assessment item. [GenAI Description]
+
+      - name: prompt
+        description: The 'prompt' column contains textual prompt information for assessment
+          items in JSON format. [GenAI Description]
+
+      - name: created_at
+        description: Created_at is the timestamp corresponding to the date and time
+          when the record was created in the assessment_items table. [GenAI Description]
+
+      - name: updated_at
+        description: The column 'updated_at' contains a timestamp of when the assessment
+          item was last updated. [GenAI Description]
+
+      - name: prompt_i18n
+        description: The 'prompt_i18n' column stores a key-value mapping with language
+          codes as keys and prompts for assessment items in different languages as
+          values. [GenAI Description]

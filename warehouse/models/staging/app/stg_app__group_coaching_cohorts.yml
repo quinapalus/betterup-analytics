@@ -1,0 +1,54 @@
+version: 2
+
+models:
+  - name: stg_app__group_coaching_cohorts
+    description: >
+      Application table containing Group Coaching Cohorts in betterup-app
+
+    columns:
+      - name: group_coaching_cohort_id
+        description: Primary key
+        tests:
+          - not_null
+          - unique
+
+      - name: group_coaching_series_id
+        description: Id of the series this cohort is for.
+
+      - name: coach_id
+        description: Id of coach who is running sessions for this cohort.
+
+      - name: session_duration_minutes
+        description: How long each session is in this cohort.
+
+      - name: remaining_seats
+        description: How many seats are left in this cohort.
+
+      - name: seat_capacity
+        description: Column 'seat_capacity' represents the maximum number of seats
+          available for a group coaching cohort. [GenAI Description]
+
+      - name: min_seat_count
+        description: The 'min_seat_count' column contains the minimum number of seats
+          required for a group coaching cohort to take place. [GenAI Description]
+
+      - name: is_live_session
+        description: A boolean column indicating whether the group coaching session
+          is being conducted live. [GenAI Description]
+
+      - name: first_session_starts_at
+        description: When the first session in this cohort starts, UTC.
+
+      - name: ended_at
+        description: The 'ended_at' field stores the timestamp for when the group
+          coaching cohort ended. [GenAI Description]
+
+      - name: canceled_at
+        description: "'canceled_at' is the timestamp when the group coaching cohort\
+          \ was canceled. [GenAI Description]"
+
+      - name: created_at
+        description: Time when the Rails object was created in UTC.
+
+      - name: updated_at
+        description: Time when the Rails object was updated in UTC.

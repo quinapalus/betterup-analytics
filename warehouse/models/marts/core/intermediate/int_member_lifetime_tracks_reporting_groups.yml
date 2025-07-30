@@ -1,0 +1,25 @@
+version: 2
+
+models:
+  - name: int_member_lifetime_tracks_reporting_groups
+    description: >
+      This intermediate model creates arrays that aggregate all a members' lifetime tracks (all the tracks they've had access to)
+      and reporting groups. It's derived from reporting_group_assignments, since this has the two things we need: track and
+      reporting groups for a member.
+
+    columns:
+      - name: member_id
+        description: "Foreign key to members / users"
+        tests:
+          - unique
+          - not_null
+
+      - name: lifetime_track_ids
+        description: "An array list of all the track IDs a member has had a track assignment for in their entire time as a member."
+
+      - name: lifetime_track_names
+        description: "An array list of all the track names a member has had access to in their entire time as a member."
+
+      - name: lifetime_reporting_group_ids
+        description: "An array list of all the reporting group IDs a member has had access to in their entire time as a member."
+

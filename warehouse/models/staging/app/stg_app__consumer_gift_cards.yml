@@ -1,0 +1,12 @@
+version: 2
+
+models:
+  - name: stg_app__consumer_gift_cards
+    description: Table to track gift cards applied to payment_intent_id in Stripe.
+      Does not represent a 1-1 mapping to Stripe coupons.
+    columns:
+      - name: app_consumer_gift_card_id
+        description: BetterUp internal consumer gift card id
+        tests:
+          - unique
+          - not_null

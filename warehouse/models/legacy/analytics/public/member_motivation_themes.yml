@@ -1,0 +1,36 @@
+version: 2
+
+models:
+  - name: member_motivation_themes
+    description: >
+      This table contains the top 3 themes for each member's motivation
+    tests:
+      - unique:
+          column_name: "(member_id || '-' || assessment_id)"
+
+    columns:
+      - name: member_id
+        tests:
+          - not_null
+
+      - name: motivation
+      - name: valid_motivation
+      - name: topic_theme1_id
+      - name: topic_theme1_name
+      - name: topic1
+      - name: topic1_score
+      - name: topic_theme2_id
+      - name: topic_theme2_name
+      - name: topic2
+      - name: topic2_score
+      - name: topic_theme3_id
+      - name: topic_theme3_name
+      - name: topic3
+      - name: topic3_score
+      - name: assessment_id
+        tests:
+          - not_null
+
+      - name: assessment_item_key
+      - name: submitted_at
+      - name: scored_at

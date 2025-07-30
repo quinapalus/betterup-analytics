@@ -1,0 +1,66 @@
+version: 2
+
+models:
+  - name: anon_gov__coach_comp__assessments
+    description: >
+      Coach Compensation Assessments table from analytics to support coach insights
+      dashboard.
+
+    columns:
+      - name: user_season_id
+        description: Surrogate Key of User UUID + Season Name. Functions as primary
+          key.
+        tests:
+          - not_null
+          - unique
+      - name: coach_id
+        tests:
+          - not_null
+
+        description: The 'coach_id' column contains a unique identifier for each coach
+          in the database. [GenAI Description]
+      - name: coach_profile_uuid
+        tests:
+          - not_null
+
+        description: The 'coach_profile_uuid' column stores the unique identifier
+          for each registered coach profile in the system. [GenAI Description]
+      - name: user_uuid
+        tests:
+          - not_null
+
+        description: The user_uuid column contains a unique identifier for each user.
+          [GenAI Description]
+      - name: full_name
+        description: The 'full_name' column contains the full name of an assessed
+          individual. [GenAI Description]
+      - name: season_name
+        tests:
+          - not_null
+
+        description: The 'season_name' column stores the name of a given season in
+          which the assessment took place. [GenAI Description]
+      - name: lifetime_assessments
+        tests:
+          - not_null
+
+        description: The 'lifetime_assessments' column contains the total number of
+          assessments an employee has received during their employment. [GenAI Description]
+      - name: primary_b2b_assessments
+        tests:
+          - not_null
+
+        description: This column provides the primary assessment score for business-to-business
+          assessments. [GenAI Description]
+      - name: lifetime_lca_assessments
+        tests:
+          - not_null
+
+        description: The 'lifetime_lca_assessments' column contains the total number
+          of labor condition assessments undertaken by a company since the program's
+          inception. [GenAI Description]
+      - name: primary_b2b_lca_assessments
+        tests:
+          - not_null
+        description: This column contains the primary benchmarking assessment results
+          for business-to-business clients. [GenAI Description]

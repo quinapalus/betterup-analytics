@@ -1,0 +1,46 @@
+version: 2
+models:
+  - name: stg_app__group_coaching_curriculums
+    description: >
+      Application table containing Group Coaching Curriculums
+      in betterup-app
+
+    columns:
+      - name: group_coaching_curriculum_id
+        description: Primary key
+        tests:
+          - unique
+          - not_null
+
+      - name: group_coaching_curriculum_uuid
+        description: UUID version of Primary key
+        tests:
+          - unique
+          - not_null
+      
+      - name: title_i18n
+        description: A JSON object of title translations.
+
+      - name: title
+        description: >
+          Title of the curriculum (e.g. "Feedback to Breakthrough").
+          Pulling the English version from the localized
+          JSON translations (title_i18n).
+
+      - name: description_i18n
+        description: A JSON object of curriculum description translations.
+
+      - name: description
+        description: >
+          Description of the curriculum.
+          Pulling the English version from the localized
+          JSON translations (description_i18n).
+
+      - name: learn_more_resource_id
+        description: Id of the resource to learn more about the curriculum.
+
+      - name: created_at
+        description: Time when the Rails object was created in UTC.
+
+      - name: updated_at
+        description: Time when the Rails object was updated in UTC.

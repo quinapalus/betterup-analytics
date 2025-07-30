@@ -1,0 +1,19 @@
+version: 2
+
+models:
+  - name: base_app__nylas_accounts_historical
+    description: ""
+    columns:
+      - name: created_at
+      - name: email
+      - name: id
+        tests:
+          - unique
+          - not_null
+      - name: name
+      - name: provider
+      - name: synced_at
+      - name: updated_at
+      - name: user_id
+      - name: sync_status
+      - name: billing_status

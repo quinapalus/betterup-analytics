@@ -1,0 +1,200 @@
+version: 2
+models:
+  - name: dim_coach
+    description: >
+      Conformed Coach dimension.
+
+    columns:
+      - name: coach_key
+        description: Primary Key
+        tests:
+          - unique
+          - not_null
+
+      - name: coach_email
+        description: Primary email associated with coach or coach applicant
+        tests:
+          # remove unqiue test until dim_coach refactor is completed
+          # unique
+          - not_null
+
+      - name: coach_first_name
+        description: First name of the coach or coach applicant.
+
+      - name: coach_last_name
+        description: Last name of the coach or coach applicant.
+        # test that coach_last_name is not_null when coach_is_currently_in_network above
+
+      - name: coach_name
+        description: Contentated first and last name of the coach or coach applicant.
+
+      - name: coach_is_currently_in_network
+        description: >
+          Boolean indicating if the associated coach is currenlty considered "in network".
+          "In network" classification includes all platform coaches that are staffable or
+          "on hold", and all applicants that are in S2 - Contract, S3 - Train, or
+          S4 - Finalize and have had a Fountain transition within the past 90 days.
+        tests:
+          - not_null
+          - accepted_values:
+              values: [true, false]
+
+      - name: coach_is_type_primary
+        description: >
+          Boolean indicating if coach is a Primary coach. NULL for applicants that don't
+          yet have a platform account.
+
+      - name: coach_is_type_extended_network
+        description: >
+          Boolean indicating if coach is an Extended Network coach. NULL for applicants
+          that don't yet have a platform account.
+
+      - name: application_date_key
+        description: >
+          Foreign key to conformed Date dimension for the date the coach applied.
+        tests:
+          - relationships:
+              to: ref('dim_date')
+              field: date_key
+
+      - name: application_fiscal_year_quarter
+        description: >
+          Fiscal Year and Quarter when the coach applied. `Unknown` if not known.
+
+      - name: hire_date_key
+        description: >
+          Foreign key to conformed Date dimension for the date the coach was hired. Currently
+          implemented as the date the coach's platform account was created. NULL if not yet a
+          Live coach.
+        tests:
+          - relationships:
+              to: ref('dim_date')
+              field: date_key
+
+      - name: hire_fiscal_year_quarter
+        description: >
+          Fiscal Year and Quarter when the coach was hired. `N/A` if coach hasn't been
+          hired.
+
+      - name: coach_geo
+        description: >
+          Geographic region for the given coach, based on timezone to region mapping.
+          Unknown only in cases where coach is in earlier application stages and time zone
+          isn't known or formatted properly.
+        tests:
+          - not_null
+          - accepted_values:
+              values: [NORAM, LATAM, EMEA, APAC, Unknown]
+
+      - name: coach_subregion_m49
+        description: >
+          Geographic subregion for the given coach, based on timezoe to UN M.49 subregion.
+          `Unknown` in cases where timezone isn't known or is not formatted properly.
+        tests:
+          - not_null
+
+      - name: coach_country_code
+        description: >
+          The 2-letter ISO 3166 country code based on mapping from a coach's time
+          zone. Note: US and Canada share common time zones in the Rails application,
+          so if a coach's currency code is available, we use that information to
+          disambiguate US from Canada. Unknown only in rare cares where coach is in earlier application stages and time zone isn't known or formatted properly.
+        tests:
+          - not_null
+
+      - name: coach_country_name
+        description: >
+          Human-readable country name for corresponding ISO `country_code`. See
+          note on logic in description for `coach_country_code`.
+        tests:
+          - not_null
+
+      - name: coach_geo_country_code
+        description: >
+          Concatenation of `coach_geo` and ISO `coach_country_code`.
+        tests:
+          - not_null
+
+      - name: coach_staffing_languages
+        description: >
+          Comma-separated list of ISO 639-1 Alpha-2 codes for all languages the
+          coach is qualified to coach in.
+
+      - name: coach_is_staffable_language_ru
+        description: Boolean flag, true if coach is qualified to coach in Russian.
+        tests:
+          - not_null
+          - accepted_values:
+              values: [true, false]
+
+      - name: coach_is_staffable_language_pt
+        description: Boolean flag, true if coach is qualified to coach in Portuguese.
+        tests:
+          - not_null
+          - accepted_values:
+              values: [true, false]
+
+      - name: coach_is_staffable_language_zh
+        description: Boolean flag, true if coach is qualified to coach in Mandarin.
+        tests:
+          - not_null
+          - accepted_values:
+              values: [true, false]
+
+      - name: coach_is_staffable_language_es
+        description: Boolean flag, true if coach is qualified to coach in Spanish.
+        tests:
+          - not_null
+          - accepted_values:
+              values: [true, false]
+
+      - name: coach_is_staffable_language_de
+        description: Boolean flag, true if coach is qualified to coach in German.
+        tests:
+          - not_null
+          - accepted_values:
+              values: [true, false]
+
+      - name: coach_is_staffable_language_fr
+        description: Boolean flag, true if coach is qualified to coach in French.
+        tests:
+          - not_null
+          - accepted_values:
+              values: [true, false]
+
+      - name: coach_is_certified_mbti
+        description: Boolean flag, true if coach is MBTI certified.
+        tests:
+          - not_null
+          - accepted_values:
+              values: [true, false]
+
+      - name: coach_is_certified_icf_acc
+        description: Boolean flag, true if coach is ICF-ACC certified.
+        tests:
+          - not_null
+          - accepted_values:
+              values: [true, false]
+
+      - name: coach_is_certified_icf_mcc
+        description: Boolean flag, true if coach is ICF-MCC certified.
+        tests:
+          - not_null
+          - accepted_values:
+              values: [true, false]
+
+      - name: coach_is_certified_icf_pcc
+        description: Boolean flag, true if coach is ICF-PCC certified.
+        tests:
+          - not_null
+          - accepted_values:
+              values: [true, false]
+
+      - name: coach_bio
+        description: Bio from Coach Profile.
+
+      - name: coach_fnt_applicant_id
+        description: Foreign key to associated Fountain applicant record.
+
+      - name: coach_app_coach_id
+        description: Foreign key to associated platform coach record.

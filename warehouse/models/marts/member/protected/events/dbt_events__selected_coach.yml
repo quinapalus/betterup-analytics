@@ -1,0 +1,49 @@
+version: 2
+
+models:
+  - name: dbt_events__selected_coach
+    description: The dbt_events__selected_coach model shows the coach selection events
+      for members, with fields for the selected coach type ('primary', 'secondary',
+      'group', 'on_demand', 'care', or 'peer'), associated record type, associated
+      record ID, and other attributes. [GenAI Description]
+    columns:
+      - name: dbt_events__selected_coach_id
+        description: Primary Key, concatenation of 'member_id', 'event_object', 'event_at',  'associated_record_id'
+        tests:
+          - unique
+          - not_null
+
+      - name: member_id
+        description: The 'member_id' column contains a unique identifier for a member
+          associated with a coach selection event. [GenAI Description]
+
+      - name: event_at
+        description: "'event_at' indicates the date and time when the selected type\
+          \ of coach was assigned. [GenAI Description]"
+
+      - name: event_action
+        description: The 'event_action' column records the action taken when a coach
+          is selected. [GenAI Description]
+
+      - name: event_object
+        description: Column 'event_object' contains a descriptive value of the coach
+          assignment (e.g. 'primary_coach'). [GenAI Description]
+
+      - name: event_action_and_object
+        description: The column 'event_action_and_object' combines the event action
+          and object to create a concise summary of a coach assignment selection.
+          [GenAI Description]
+
+      - name: associated_record_type
+        description: The column 'associated_record_type' identifies the type of associated
+          record related to the coach selection event, which is 'CoachAssignment'.
+          [GenAI Description]
+
+      - name: associated_record_id
+        description: "'associated_record_id' is the coach assignment ID associated\
+          \ with a given event. [GenAI Description]"
+
+      - name: attributes
+        description: The 'attributes' column contains an object that stores additional
+          information about the coach selection event. [GenAI Description]
+

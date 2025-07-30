@@ -1,0 +1,219 @@
+version: 2
+models:
+  - name: int_sfdc__opportunities
+    description: >
+      Salesforce Opportunity models. For more information, check out the [Salesforce
+      Opportunities documentation](https://developer.salesforce.com/docs/atlas.en-us.api.meta/api/sforce_api_objects_opportunity.htm)
+
+    columns:
+      - name: sfdc_opportunity_id
+        description: Unique identifier for the Opportunity
+        tests:
+          - not_null
+          - unique
+
+      - name: opportunity_name
+        description: Human-readable name of the Opportunity
+        tests:
+          - not_null
+
+      - name: sfdc_account_id
+        description: Foreign key of the Account associated with this Opportunity
+        tests:
+          - relationships:
+              to: ref('stg_sfdc__accounts')
+              field: sfdc_account_id
+
+      - name: amount
+        description: How much the Opportunity was worth
+
+      - name: created_at
+        description: When the Opportunity was created
+
+      - name: last_modified_at
+        description: When the opportunity was last modified in Salesforce
+
+      - name: fiscal_quarter
+        description: Fiscal year the Opportunity was closed in
+
+      - name: fiscal_year
+        description: Fiscal quarter the Opportunity was closed in
+
+      - name: type
+        description: Type of Opportunity (e.g. renewal, expansion, new business)
+
+      - name: internal_type
+        description: Internal type of the Opportunity
+
+      - name: stage_name
+        description: Which stage of the process an Opportunity is in (e.g. Closed
+          Won, Closed Lost, 1-Initiate)
+
+      - name: start_date_estimate
+        description: >
+          Estimated start date for the opportunity, updated by the Go-To Market team
+          while
+          the opportunity is open.
+
+      - name: renewal_date_estimate
+        description: >
+          Estimated renewal date for the opportunity, updated by the Go-To Market
+          team while
+          the opportunity is open.
+
+      - name: plan_renewal_amount
+        description: Planned renewal amount based on the new business opportunity
+          amount.
+
+      - name: is_won
+        description: True if the Opportunity was won.
+
+      - name: is_closed
+        description: True if the Opportunity is closed
+
+      # to delete
+      - name: closed_at
+        description: When the Opportunity closed
+
+      - name: closed_date
+        description: >
+          Estimated / scheduled close date for an opportunity. Not necessarily the
+          date an opportunity moved into the closed-won / closed-lost stage.
+
+      - name: start_date_per_agreement
+        description: >
+          Start date for the opportunity based on contract term for closed-won opportunities.
+
+      - name: end_date_per_agreement
+        description: >
+          End date for the opportunity based on contract term for closed-won opportunities.
+
+      - name: win_reason
+        description: Tags denoting the reasons for winning the Opportunity.
+
+      - name: win_story
+        description: Description of how the Opportunity was won.
+
+      - name: lost_reason
+        description: Tags denoting the reasons the Opportunity was lost.
+
+      - name: lost_reason_detail
+        description: Free text field explaining why the Opportunity was lost
+
+      - name: is_deleted
+        description: >
+          True if the opportunity has been deleted in SFDC. Deleted records should
+          be excluded primarily from reporting.
+
+      - name: opp_owner_region
+        description: >
+          Sales region of the opportunity owner. Captured from the owners’s user record
+          upon opportunity creation
+          or ownership change.
+
+      - name: forecast_category
+        description: Forecast category of the opportunity based on likelihood to close.
+          E.g. Commit, Upside.
+
+      - name: subscription_start_date
+        description: Start date of the opportunity subscription.
+
+      - name: subscription_end_date
+        description: End date of the opportunity subscription.
+
+      - name: opportunity_owner_id
+        description: Foreign Key to SFDC user that is listed as the Opportunity Owner.
+        tests:
+          - not_null
+          - relationships:
+              to: ref('stg_sfdc__users')
+              field: sfdc_user_id
+
+      - name: owner_name
+        description: Name of the opportunity owner.
+
+      - name: owner_role
+        description: Current role of the opportunity owner.
+
+      - name: member_hours_limit_of_hours
+        description: Limit of hours per member. Currently, only used by SMB Opportunities.
+
+      - name: custom_program_design
+        description: Description of custom program details
+
+      - name: custom_whole_person_mapping_description
+        description: Description or URL to the Whole Person mapping for the Opportunity
+
+      - name: program_design_description
+        description: Description of the Program to be deployed.
+
+      - name: default_resource_list
+        description: Which default resource list to use. Currently, only used by SMB
+          Opportunities.
+
+      - name: whole_person_360_enabled
+        description: True if Whole Person 360 is enabled. Currently, only used by
+          SMB Opportunities.
+
+      - name: staffing_tier
+        description: The agreed coaching tier for the Opportunity. Currently, only
+          used by SMB Opportunities.
+
+      - name: video_chat_recording_enabled
+        description: True if video chat recording is enabled. Currently, only used
+          by SMB Opportunities
+
+      - name: smb_deployment_cadence
+        description: Cadence for deploying to members in the Opportunity (e.g. Rolling
+          vs One-time)
+
+      - name: smb_program_length_days
+        description: How long the program lasts
+
+      - name: smb_enforce_hours_limit
+        description: True if the hours limit should be enforced
+
+      - name: smb_additional_info_partner_motivations
+        description: Additional information for the Partner's motivations
+
+      - name: smb_engagement_type
+        description: Type of the engagement (e.g. Standard, SMB 6 months, Dynamic)
+
+      - name: smb_extended_network
+        description: True if extended network is enabled.
+
+      - name: smb_manager_feedback_enabled
+        description: True if manager feedback is enabled.
+
+      - name: smb_includes_behavioral_assessments
+        description: True if behavioral assessments are enabled.
+
+      - name: smb_additional_requirements
+        description: Free text field that describes additional requirements requested.
+
+      - name: smb_key_satisfaction_driver
+        description: Tags denoting the key satisifaction drivers for the Opportunity.
+
+      - name: product_exception_request
+        description: Records whether a product exception was requested. Usually `TBD`,
+          `No`, `Yes` or empty.
+
+      - name: product_exception_request_details
+        description: Description of the product exception request
+
+      - name: programs_exception_request
+        description: Records whether a program exception was requested. Usually `TBD`,
+          `No`, `Yes` or empty.
+
+      - name: programs_exception_request_details
+        description: Description of the program exception request
+
+      - name: ops_exception_request
+        description: Records whether a ops exception was requested. Usually `TBD`,
+          `No`, `Yes` or empty.
+
+      - name: ops_exception_request_details
+        description: Description of the ops exception request
+
+      - name: exception_discussion_outcome_c
+        description: Notes on the discussion of exceptions

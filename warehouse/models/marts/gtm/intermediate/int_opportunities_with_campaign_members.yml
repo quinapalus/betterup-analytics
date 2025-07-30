@@ -1,0 +1,38 @@
+version: 2
+
+models:
+
+  - name: int_opportunities_with_campaign_members
+    columns:
+      - name: "sfdc_opportunity_id"
+        tests:
+          - unique
+          - not_null
+          
+      - name: management_targets_line_of_business
+        tests:
+          - accepted_values:
+              #test that only these values exist
+              values: ['New/Upsell','Expand']
+          - dbt_expectations.expect_column_distinct_values_to_contain_set:
+              #test that these values actually exist at least once
+              value_set: ['New/Upsell','Expand']
+
+      - name: management_targets_geo
+        tests:
+          - accepted_values:
+              #test that only these values exist
+              values: ['North America','Europe','Government']
+          - dbt_expectations.expect_column_distinct_values_to_contain_set:
+              #test that these values actually exist at least once
+              value_set: ['North America','Europe','Government']
+
+      - name: management_targets_super_channel
+        tests:
+          - dbt_expectations.expect_column_distinct_values_to_contain_set:
+              #test that these values actually exist at least once
+              value_set: ['SDR','Sales','Marketing','Post Sales']
+          - accepted_values:
+              values: ['Referral/Alliances','Sales','Post Sales','SDR',
+                      'Marketing','Client Partner','Unattributed']
+          - not_null

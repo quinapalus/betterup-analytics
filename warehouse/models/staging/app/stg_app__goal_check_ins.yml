@@ -1,0 +1,64 @@
+version: 2
+models:
+  - name: stg_app__goal_check_ins
+    description: >
+      Application table containing goal check-in information
+      (application Object is "ObjectiveCheckIn").
+
+    columns:
+      - name: goal_check_in_id
+        description: Primary key
+        tests:
+          - unique
+          - not_null
+
+      - name: goal_id
+        description: >
+          Foreign key to the goal
+
+      - name: creator_id
+        description: >
+          Foreign key to the user that created the check-in (could be the
+          member or the member's manager).
+
+      - name: progress_response_percent
+        description: >
+          Integer value of the user's response of the completion percentage of
+          the goal. The user can be the member or the member's manager.
+
+      - name: goal_check_in_emotion_id
+        description: >
+          Foreign key to the goal check-in emotion (only used for member
+          check-ins)
+        tests:
+          - relationships:
+              to: ref('stg_app__goal_check_in_emotions')
+              field: goal_check_in_emotion_id
+
+      - name: expired_at
+        description: >
+          Time when the Rails object was expired in UTC, this happens if the
+          system no longer is prompting the user to check-in for the goal (e.g.
+          if the goal is completed, member doesn't check-in within 2 weeks,
+          etc.)
+
+      - name: completed_at
+        description: >
+          Time when the user completed the check-in in UTC
+
+      - name: feedback
+        description: >
+          Feedback that the manager provides to the member about the goal. Only
+          used for manager check-ins.
+
+      - name: created_at
+        description: >
+          Time when the Rails object was created in UTC, i.e. when the
+          goal check-in was created.
+        tests:
+          - not_null
+
+      - name: updated_at
+        description: Time when the Rails object was updated in UTC.
+        tests:
+          - not_null

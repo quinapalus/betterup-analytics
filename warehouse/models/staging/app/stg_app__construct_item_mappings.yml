@@ -1,0 +1,24 @@
+version: 2
+
+models:
+  - name: stg_app__construct_item_mappings
+    description: The DBT model stg_app__construct_item_mappings prepares and transforms
+      data from the raw.stitch_app.construct_item_mappings table, normalizing it into
+      a consistent shape for further processing. The output of this model consists
+      of three fields - construct_item_mapping_id, construct_uuid and item_mapping_id
+      - which can then be used in relationships with other models in the DBT pipeline.
+      [GenAI Description]
+    columns:
+      - name: construct_item_mapping_id
+        description: Primary key
+        tests:
+          - unique
+          - not_null
+
+      - name: construct_uuid
+        description: The 'construct_uuid' column contains a universally unique identifier
+          associated with each item mapping. [GenAI Description]
+
+      - name: item_mapping_id
+        description: The 'item_mapping_id' column stores the internal ID associated
+          with a particular item mapping. [GenAI Description]

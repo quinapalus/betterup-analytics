@@ -1,0 +1,33 @@
+version: 2
+models:
+  - name: dei_coach_recommendations_assignments_by_day
+    description: >
+      This table contains daily information on the number of recommendations and 
+      assignments for each coach on every day that they were active on the platform.
+
+    columns:
+      - name: coach_recommendations_assignments_by_day_id
+        description: Primary surrogate key
+        tests:
+          - unique
+          - not_null
+
+      - name: coach_id
+        description: Denormalized foreign key to associated coach.
+
+      - name: date_day
+        description: >
+          Timestamp of the day associated with coach's activity on the platform.
+
+      - name: recommendation_count
+        description: >
+          Integer denoting the number of recommendations for the coach on that particular 
+          day.
+        tests:
+          - not_null
+
+      - name: assignment_count
+        description: >
+          Integer denoting the number of assignments for the coach on that particular day.
+        tests:
+          - not_null

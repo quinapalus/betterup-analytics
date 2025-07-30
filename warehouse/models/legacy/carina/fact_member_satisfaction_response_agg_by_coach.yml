@@ -1,0 +1,46 @@
+version: 2
+models:
+  - name: fact_member_satisfaction_response_agg_by_coach
+    description: >
+      Fact table for aggregate member responses to satisfaction and post-session feedback items
+      per coach. Facts are limited to responses submitted during paid external deployments for
+      both satisfaction and post-session feedback items, and post-session items specifically are limited
+      to assessments submitted after Mar 8, 2019 when post-session items changed.
+
+    columns:
+##      - name: coach_key
+##        description: Foreign key to conformed Coach dimension.
+##        tests:
+##           - relationships:
+##              to: ref('dim_coach')
+##              field: coach_key
+
+      - name: assessment_item_key
+        description: Foreign key to conformed Assessment Item dimension.
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_assessment_item')
+              field: assessment_item_key
+
+      - name: assessment_item_response_count
+        description: >
+          Number of member responses for the particular assessment item key per coach during
+          paid external deployments.
+        tests:
+          - not_null
+
+      - name: assessment_item_score_mean
+        description: >
+          Average member response for the particular assessment item key per coach during
+          paid external deployments.
+
+      - name: assessment_item_response_count_t90d
+        description: >
+          Number of member responses for the particular assessment item key per coach within
+          the last 90 days on paid external deployments.
+
+      - name: assessment_item_score_mean_t90d
+        description: >
+          Average member response for the particular assessment item key per coach within
+          the last 90 days on paid external deployments.

@@ -1,0 +1,28 @@
+[tool.poetry]
+name = "warehouse"
+version = "0.1.0"
+description = ""
+authors = ["David <3835938+davidmhleung@users.noreply.github.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+dbt-core = "1.4.6"
+dbt-extractor = "0.4.1"
+dbt-snowflake = "1.4.2"
+snowflake-connector-python = {version = "3.0.3", extras = ["secure-local-storage"]}
+sqlparse = "^0.4.0"
+
+[tool.poetry.group.dev.dependencies]
+sqlfluff = "^1.3.2"
+sqlfluff-templater-dbt = "^1.3.2"
+dbt-coverage = "^0.2.2"
+dbt-junitxml = "^0.1.5"
+
+[tool.poetry.group.cicd.dependencies]
+montecarlodata = "^0.39.2"
+acryl-datahub = {extras = ["dbt"], version = "^0.10.1"}
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

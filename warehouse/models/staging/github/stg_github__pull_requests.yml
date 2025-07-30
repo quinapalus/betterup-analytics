@@ -1,0 +1,47 @@
+version: 2
+models:
+  - name: stg_github__pull_requests
+    description: >
+      Pull request information for the main repositories at BetterUp.
+
+    columns:
+      - name: pull_request_id
+        description: Unique identifier of the pull request.
+        tests:
+          - not_null
+          - unique
+
+      - name: pull_request_number
+        description: The PR number as assigned by GitHub.
+        tests:
+          - not_null
+
+      - name: repository
+        description: Source repository of the PR
+
+      - name: title
+        description: Title of the PR
+
+      - name: body
+        description: Content of the PR body when it was created.
+
+      - name: username
+        description: GitHub username of the person who created the PR.
+
+      - name: state
+        description: State of the PR
+        tests:
+          - accepted_values:
+              values: [open, closed]
+
+      - name: created_at
+        description: When the PR was created
+
+      - name: closed_at
+        description: When the PR was closed
+
+      - name: merged_at
+        description: When the PR was merged. NULL if the PR has not been merged.
+
+      - name: updated_at
+        description: When the PR was last updated.

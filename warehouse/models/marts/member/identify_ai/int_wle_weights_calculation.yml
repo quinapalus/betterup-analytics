@@ -1,0 +1,17 @@
+version: 2
+
+models:
+  - name: int_wle_weights_calculation
+    description: calculates average number of seesions that were taken ever when a work life event happened.
+
+    columns:
+      - name: wle
+        description: Name of the work life event (wle)
+        tests:
+          - unique
+          - not_null
+
+      - name: avg_event_sessions
+        description: average number of seesions that were taken ever when a work life event happened
+        tests:
+          - not_null

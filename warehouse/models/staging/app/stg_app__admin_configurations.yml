@@ -1,0 +1,47 @@
+version: 2
+
+models:
+  - name: stg_app__admin_configurations
+    description: The stg_app__admin_configurations model contains data on different
+      configurations admins can assign to customers within a given product. The model
+      includes data on the customer's goals, deployment type, deployment cadence,
+      internal notes, key satisfaction driver, launch date, member orientation, and
+      WPM behavior goals. [GenAI Description]
+    columns:
+      - name: admin_configuration_id
+        description: Admin Configuration ID
+        tests:
+          - not_null
+          - unique
+
+      - name: customer_goals
+        description: The customer_goals column contains customer-defined metrics for
+          evaluation. [GenAI Description]
+
+      - name: deployment_type
+        description: The 'deployment_type' column holds information about the deployment
+          method used for the configuration. [GenAI Description]
+
+      - name: deployment_cadence
+        description: The 'deployment_cadence' column holds values for the regularity
+          with which a deployment type should occur. [GenAI Description]
+
+      - name: internal_notes
+        description: The 'internal_notes' column contains additional internal notes
+          related to a customer's configuration. [GenAI Description]
+
+      - name: key_satisfaction_driver
+        description: The 'key_satisfaction_driver' column contains customer insights
+          about what drives their satisfaction. [GenAI Description]
+
+      - name: launches_on
+        description: The 'launches_on' column stores the timestamp when an application
+          configuration is launched. [GenAI Description]
+
+      - name: member_orientation
+        description: The member_orientation column contains the orientation for a
+          specific customer or member. [GenAI Description]
+
+      - name: wpm_behavior_goals
+        description: The column 'wpm_behavior_goals' stores behavior goals to measure
+          WPM progress. [GenAI Description]

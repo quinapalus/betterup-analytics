@@ -1,0 +1,43 @@
+version: 2
+
+models:
+  - name: int_coach__coach_assignments_coach_rollup_daily_snapshot
+    description: >
+      Coach Assignments is the application table this is derived from.
+      This is a rollup at the coach level, so all coach assignments aggregated by coach.
+      It is also a daily snapshot, so a historic as_of_date is in the grain.
+      Business context: Think of this int model as "assignments by coach"
+      which is a factor of coach availability / the coach's ability to take new members
+      More docs here: https://betterup.atlassian.net/wiki/spaces/DATA/pages/3345450158/Coach+Snapshot+Data+Model
+
+    columns:
+      - name: history_primary_key
+        description: "Surrogate key of coach_id and as_of_date. This model is 1 row per coach per daily snapshot date"
+        tests:
+          - unique
+          - not_null
+
+      - name: as_of_date
+        description: ""
+
+      - name: coach_id
+        description: ""
+
+      - name: primary_seats_occupied
+        description: ""
+
+      - name: care_seats_occupied
+        description: ""
+
+      - name: secondary_seats_occupied
+        description: ""
+
+      - name: primary_active_seats_occupied
+        description: ""
+
+      - name: care_active_seats_occupied
+        description: ""
+
+      - name: secondary_active_seats_occupied
+        description: ""
+

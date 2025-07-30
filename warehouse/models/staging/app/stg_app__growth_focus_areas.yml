@@ -1,0 +1,31 @@
+version: 2
+
+models:
+  - name: stg_app__growth_focus_areas
+    description: This DBT model is used to access and analyze data from a growth focus
+      areas table. It includes fields such as growth_focus_area_id, name, position,
+      created_at, updated_at and allows for exploration of relationships in the underlying
+      table. [GenAI Description]
+    columns:
+      - name: growth_focus_area_id
+        description: The column 'growth_focus_area_id' stores a unique identifier
+          for each growth focus area. [GenAI Description]
+        tests:
+          - not_null
+          - unique
+
+      - name: name
+        description: The 'name' column contains a JSON object with details about the
+          growth focus area. [GenAI Description]
+
+      - name: position
+        description: The 'position' column contains the order in which different growth
+          focus areas are displayed. [GenAI Description]
+
+      - name: created_at
+        description: The 'created_at' column stores the user-specified timestamp of
+          when the growth focus area was created. [GenAI Description]
+
+      - name: updated_at
+        description: The column 'updated_at' contains a timestamp in ISO 8601 format,
+          indicating when this record was last updated. [GenAI Description]

@@ -1,0 +1,62 @@
+version: 2
+
+models:
+  - name: fact_construct_scores
+    description: ""
+    columns:
+      - name: primary_key
+        description: Surrogate primary key
+        tests:
+          - unique
+          - not_null
+
+      - name: member_id
+        description: ""
+
+      - name: track_assignment_id
+        description: ""
+
+      - name: track_id
+        description: ""
+
+      - name: construct_key
+        description: ""
+
+      - name: construct_type
+        description: ""
+
+      - name: construct_reference_population_id
+        description: ""
+
+      - name: construct_reference_population_uuid
+        description: ""
+
+      - name: raw_score
+        description: ""
+
+      - name: scale_score_mean
+        description: ""
+
+      - name: scale_score_standard_deviation
+        description: ""
+
+      - name: original_scale_score
+        description: ""
+
+      - name: scale_score
+        description: ""
+
+      - name: construct_attributes
+        description: ""
+
+      - name: assessment_id
+        description: ""
+
+      - name: assessment_type
+        description: ""
+
+      - name: submitted_at
+        description: ""
+
+      - name: is_duplicate_assessment
+        description: ""

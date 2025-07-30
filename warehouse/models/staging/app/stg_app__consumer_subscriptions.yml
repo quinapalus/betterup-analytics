@@ -1,0 +1,15 @@
+version: 2
+
+models:
+  - name: stg_app__consumer_subscriptions
+    description: Mapping table between BetterUp internal app subscription id and Stripe.
+    columns:
+      - name: app_subscription_id
+        description: BetterUp internal app subscription id on a user's subscription
+        tests:
+          - unique
+          - not_null
+      - name: stripe_subscription_id
+        description: Stripe subscription id.
+        tests:
+          - not_null

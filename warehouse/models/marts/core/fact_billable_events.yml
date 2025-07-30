@@ -1,0 +1,34 @@
+version: 2
+
+models:
+  - name: fact_billable_events
+    description: Billable events from BetterUp's platform.
+    columns:
+      - name: billable_event_id
+        description: ""
+        tests:
+          - unique
+          - not_null
+      - name: stripe_subscription_id
+        description: ""
+
+      - name: product_subscription_assignment_id
+        description: ""
+
+      - name: coach_id
+        description: ""
+
+      - name: member_id
+        description: ""
+
+      - name: track_id
+        description: ""
+
+      - name: event_type
+        description: ""
+
+      - name: event_at
+        description: ""
+
+      - name: amount_due_usd
+        description: ""

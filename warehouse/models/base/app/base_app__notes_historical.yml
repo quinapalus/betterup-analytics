@@ -1,0 +1,16 @@
+version: 2
+
+models:
+  - name: base_app__notes_historical
+    description: ""
+    columns:
+      - name: body
+      - name: created_at
+      - name: creator_id
+      - name: id
+        tests:
+          - unique
+          - not_null
+      - name: notable_id
+      - name: notable_type
+      - name: updated_at

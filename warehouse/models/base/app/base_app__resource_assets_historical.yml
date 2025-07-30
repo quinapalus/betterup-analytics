@@ -1,0 +1,16 @@
+version: 2
+
+models:
+  - name: base_app__resource_assets_historical
+    description: ""
+    columns:
+      - name: asset
+      - name: created_at
+      - name: id
+        tests:
+          - unique
+          - not_null
+      - name: resource_id
+      - name: updated_at
+      - name: resource_uuid
+      - name: uuid

@@ -1,0 +1,13 @@
+item_key,item_prompt,scale
+leveraging_strengths,"How have you leveraged your strengths to approach challenges, to grow, or to learn?",text_response
+meaningful_progress,My coach has helped me make meaningful progress towards my goals.,1-Strongly Disagree;2-Disagree;3-Neither Disagree nor Agree;4-Agree;5-Strongly Agree
+more_effective,Working with my coach has made me more effective in my job.,1-Strongly Disagree;2-Disagree;3-Neither Disagree nor Agree;4-Agree;5-Strongly Agree
+net_promoter,"In the event a friend or colleague is seeking a coach, how likely are you to recommend BetterUp?",0-Extremely unlikely;1-Very unlikely;2-Unlikely;3-Somewhat unlikely;4-A bit unlikely;5-Neutral;6-A bit likely;7-Somewhat likely;8-Likely;9-Very likely;10-Extremely likely
+next_steps,What are the next steps in your journey?,text_response
+overall_satisfaction,"Overall, how satisfied are you with your BetterUp coaching experience?",0-Extremely dissatisfied;1-Very dissatisfied;2-Dissatisfied;3-Somewhat dissatisfied;4-A bit dissatisfied;5-Neutral;6-A bit satisfied;7-Somewhat satisfied;8-Satisfied;9-Very satisfied;10-Extremely satisfied
+progress_toward_goals,What have you learned in service of your goals?,text_response
+use_of_time,BetterUp is a valuable use of my time.,1-Strongly Disagree;2-Disagree;3-Neither Disagree nor Agree;4-Agree;5-Strongly Agree
+working_relationship,"My coach and I have a strong working relationship, characterized by mutual respect and trust.",1-Strongly Disagree;2-Disagree;3-Neither Disagree nor Agree;4-Agree;5-Strongly Agree
+changed_or_grown,In what ways have you changed or grown since starting your BetterUp journey?,text_response
+milestones_achievements_or_learnings,What notable milestones/achievements/learnings have you gained since starting your BetterUp coaching journey?,text_response
+next_stage,Where would you like to go in the next stage of your personal and professional growth?,text_response

@@ -1,0 +1,57 @@
+version: 2
+
+models:
+  - name: int_coach__profile_island_attributes_snapshot
+    description: >
+      Removes deleted records and adds derived dbt snapshot fields.
+      Just like in the non-snapshot int model (int_coach__profile_island_attributes) we are calling
+      a macro that filter the entries by island depending on which Snowflake account
+      we are running this data model. If this model is run on the US Snowflake instance,
+      this data model will only return entries for the US island. If run on EU Snowflake
+      instance, thiw data model will only return enties for the EU instance. There
+      should be only one row per coach in this view.
+      More docs here: https://betterup.atlassian.net/wiki/spaces/DATA/pages/3345450158/Coach+Snapshot+Data+Model
+
+    columns:
+      - name: history_primary_key
+        description: "Snapshot model primary key is concatenated Coach Profile UUID + as of date"
+        tests:
+          - unique
+          - not_null
+
+      - name: profile_island_attribute_id
+        description: ""
+
+      - name: profile_island_attribute_uuid
+        description: ""
+
+      - name: coach_profile_uuid
+        description: ""
+
+      - name: island
+        description: ""
+
+      - name: max_member_count
+        description: ""
+
+      - name: created_at
+        description: ""
+
+      - name: updated_at
+        description: ""
+
+      - name: valid_from
+        description: ""
+
+      - name: valid_to
+        description: ""
+
+      - name: is_current_version
+        description: ""
+
+      - name: version
+        description: ""
+
+      - name: is_last_snapshot_of_day
+        description: ""
+

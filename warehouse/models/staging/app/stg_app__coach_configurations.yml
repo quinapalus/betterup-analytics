@@ -1,0 +1,36 @@
+version: 2
+
+models:
+  - name: stg_app__coach_configurations
+    description: DBT model stg_app__coach_configurations represents coach configurations
+      data from the source raw.stitch_app.coach_configurations, including the fields
+      overview, program_briefing_duration_minutes, program_briefing_automatic_payment,
+      success_criteria, and external_resource_video_links. [GenAI Description]
+    columns:
+      - name: coach_configuration_id
+        description: "'coach_configuration_id' is the identifier for a coach's configuration,\
+          \ including settings such as program briefing duration, success criteria,\
+          \ and external resource video links. [GenAI Description]"
+        tests:
+          - unique
+          - not_null
+
+      - name: overview
+        description: This column contains a brief overview of the coach configuration
+          information. [GenAI Description]
+
+      - name: program_briefing_duration_minutes
+        description: The column 'program_briefing_duration_minutes' stores the duration
+          of the program briefing, in minutes. [GenAI Description]
+
+      - name: program_briefing_automatic_payment
+        description: This column contains a boolean indicating whether a program briefing
+          includes automated payment. [GenAI Description]
+
+      - name: success_criteria
+        description: The 'success_criteria' column records the success metrics or
+          goals defined for a coach's program. [GenAI Description]
+
+      - name: external_resource_video_links
+        description: The column 'external_resource_video_links' contains links to
+          video resources used to support the coach configuration. [GenAI Description]

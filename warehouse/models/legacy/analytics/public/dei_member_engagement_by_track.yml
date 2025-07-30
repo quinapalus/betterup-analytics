@@ -1,0 +1,134 @@
+version: 2
+models:
+  - name: dei_member_engagement_by_track
+    description: >
+      This table contains information on members' previous and upcoming engagement
+      by track.
+
+    columns:
+      - name: primary_key
+        description: ""
+        tests:
+          - unique
+          - not_null
+     
+      - name: member_id
+        description: Denormalized foreign key to associated user.
+        tests:
+          - not_null
+
+      - name: track_id
+        description: Foreign key to associated track.
+        tests:
+          - not_null
+          
+      - name: invited_at
+        description: >
+          Timestamp that denotes when the member was invited to the track.
+        tests:
+          - not_null
+
+      - name: ended_at
+        description: >
+          Timestamp that denotes when the member was closed on the track.
+
+      - name: ends_on
+        description: >
+          Timestamp that denotes when the member's deployment on the track
+          is scheduled to end, if such field was populated in the Admin Panel.
+
+      - name: coaching_hours_remaining
+        description: >
+          Number that denotes the number of coaching hours remaining, if the
+          member has a fixed number of hours of the track.
+
+      - name: is_primary_coaching_enabled
+        description: >
+          Boolean that specifies whether primary coaching is enabled for the
+          member on the track.
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['true', 'false']
+
+      - name: is_on_demand_coaching_enabled
+        description: >
+          Boolean that specifies whether on-demand coaching is enabled for the
+          member on the track.
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['true', 'false']
+
+      - name: is_extended_network_coaching_enabled
+        description: >
+          Boolean that specifies whether extended-network coaching is enabled for the
+          member on the track.
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['true', 'false']
+
+      - name: billable_hours_sum
+        description: >
+          Number that denotes the sum of billable hours for the member on track.
+
+      - name: billable_session_count
+        description: >
+          Number that denotes the sum of billable session for the member on track.
+
+      - name: first_billable_session_at
+        description: >
+          Timestamp that denotes when the first billable session was scheduled for the member.
+
+      - name: last_billable_session_at
+        description: >
+          Timestamp that denotes when the last billable session was scheduled for the member.
+
+      - name: completed_session_hours_sum
+        description: >
+          Number that denotes the total number of completed session hours for the member.
+        tests:
+          - not_null
+
+      - name: completed_session_count
+        description: >
+          Number that denotes the total number of completed sessions for the member.
+        tests:
+          - not_null
+
+      - name: completed_session_minutes_mean
+        description: >
+          Number that denotes the mean of completed session minutes for the member.
+
+      - name: first_completed_session_at
+        description: >
+          Timestamp that denotes when the first session was completed by the member.
+
+      - name: first_completed_session_days_after_invite
+        description: >
+          Number that denotes the number of days that the first session was completed
+          after the member has been invited to the track.
+
+      - name: last_completed_session_at
+        description: >
+          Timestamp that denotes when the most recent session was completed by the member.
+
+      - name: has_upcoming
+        description: >
+          Boolean that specifies whether the member has an upcoming session
+          scheduled on the track.
+        tests:
+          - not_null
+          - accepted_values:
+              values: [true, false]
+
+      - name: track_assignments_count
+        description: >
+          Number that denotes the number of track assignments the member had associated
+          with that particular track.
+        tests:
+          - not_null
+
+      - name: contract_id
+        description: Which Contract the Track is associated with and this Member was invited under.

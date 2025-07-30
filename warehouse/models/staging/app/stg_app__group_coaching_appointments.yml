@@ -1,0 +1,41 @@
+version: 2
+
+models:
+  - name: stg_app__group_coaching_appointments
+    description: The DBT model stg_app__group_coaching_appointments is a staging model
+      used to organize appointment data from a group coaching application. It contains
+      identifiers and timestamps to represent appointments joined, sessions associated
+      with those appointments, and resources assigned. The model also contains a relationship
+      to the parent models, providing further insight into the data. [GenAI Description]
+
+    columns:
+      - name: group_coaching_appointment_id
+        description: "'group_coaching_appointment_id' is a unique identifier for a\
+          \ group coaching appointment. [GenAI Description]"
+        tests:
+          - not_null
+          - unique
+
+      - name: created_at
+        description: The 'created_at' column stores the timestamp of when the appointment
+          was created. [GenAI Description]
+
+      - name: updated_at
+        description: The 'updated_at' column stores the timestamp of the last update
+          of each group coaching appointment. [GenAI Description]
+
+      - name: attempted_to_join_at
+        description: The 'attempted_to_join_at' column tracks the date and time a
+          group coaching appointment was attempted to be joined. [GenAI Description]
+
+      - name: group_coaching_session_id
+        description: The column 'group_coaching_session_id' identifies the group coaching
+          session associated with a given group coaching appointment. [GenAI Description]
+
+      - name: member_id
+        description: "'member_id' is the unique identifier of the user associated\
+          \ with each coaching appointment. [GenAI Description]"
+
+      - name: assigned_post_session_resources_at
+        description: The 'assigned_post_session_resources_at' column stores the timestamp
+          when the post-session resources were assigned to users. [GenAI Description]

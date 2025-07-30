@@ -1,0 +1,51 @@
+version: 2
+
+models:
+  - name: stg_segment_backend__growth_recommendation_updated
+    description: This DBT model provides growth recommendations for users within a
+      given context library, based on updated events generated from the segment_backend
+      source. It contains fields relevant for identifying users, items and events,
+      as well as timestamp values for dismissed and completed changes. This model
+      helps track and analyze changes in user behavior, allowing for more accurate
+      and targeted growth recommendations. [GenAI Description]
+    columns:
+      - name: id
+        description: The 'id' column is a unique identifier for each row of data.
+          [GenAI Description]
+        tests:
+          - unique
+          - not_null
+
+      - name: user_id
+        description: "'user_id' stores the user to whom the growth recommendation\
+          \ applies. [GenAI Description]"
+
+      - name: growth_recommendation_recommended_item_id
+        description: The 'growth_recommendation_recommended_item_id' column stores
+          the unique ID of the recommended item. [GenAI Description]
+
+      - name: track_assignment_id
+        description: The 'track_assignment_id' column holds the id of the track assignment
+          associated with a given growth recommendation. [GenAI Description]
+      - name: product_subscription_assignment_id
+        description: product_subscription_assignment_id is the unique identifier of
+          a product subscription assigned to the user. [GenAI Description]
+
+      - name: event
+        description: The 'event' column contains the name of the event which triggered
+          the growth recommendation. [GenAI Description]
+
+      - name: context_library_name
+        description: "'context_library_name' is the library name associated with the\
+          \ event for a user. [GenAI Description]"
+
+      - name: event_at
+        description: The 'event_at' column contains the timestamp of an event, represented
+          as a datetime. [GenAI Description]
+
+      - name: changes_dismissed_at
+        description: "'changes_dismissed_at' stores the timestamp at which a user\
+          \ dismissed a growth recommendation. [GenAI Description]"
+      - name: changes_completed_at
+        description: "'changes_completed_at' is the timestamp when any changes to\
+          \ a growth recommendation were completed. [GenAI Description]"

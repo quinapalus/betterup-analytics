@@ -1,0 +1,46 @@
+version: 2
+
+models:
+  - name: stg_app__development_topics
+    description: Dictionary of topics that coaches use to code focus area for a given
+      session.
+    columns:
+      - name: development_topic_id
+        description: Unique identifier for the development topic.
+        tests:
+          - not_null
+          - unique
+
+      - name: name_i18n
+        description: A JSON object of development topic translations.
+
+      - name: name
+        description: Name of the development topic. Pulling the English version from
+          the localized JSON translations (name_i18n).
+
+      - name: translation_key
+        description: Foreign Key to `topic_themes`, that is, the parent cluster for
+          the given development topic. Can be `NULL` if development topic is not mapped
+          to a `topic_theme`.
+
+      - name: topic_theme_id
+        description: This column contains an ID that identifies the theme associated
+          with a particular development topic. [GenAI Description]
+
+      - name: topic_version
+        description: Development Topic taxonomy version.
+
+      - name: is_coach_selectable
+        description: "'is_coach_selectable' is a boolean column expressing whether\
+          \ the development topic is selectable by coaches. [GenAI Description]"
+
+      - name: is_member_selectable
+        description: The column 'is_member_selectable' stores a boolean value that
+          indicates whether this development topic is selectable by members. [GenAI
+          Description]
+
+      - name: created_at
+        description: Timestamp (UTC) when the development topic was created.
+
+      - name: updated_at
+        description: Timestamp (UTC) when the development topic was last updated.

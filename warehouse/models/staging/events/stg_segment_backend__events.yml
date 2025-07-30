@@ -1,0 +1,40 @@
+version: 2
+models:
+  - name: stg_segment_backend__events
+    description: >
+      Analytic events from Segment that were generated from the `betterup-app` backend.
+      See this [Github query](https://github.com/search?utf8=%E2%9C%93&q=AnalyticsService+user%3Abetterup+repo%3Abetterup%2Fbetterup-app+path%3Aapp%2F&type=Code&ref=advsearch&l=&l=) to see what
+      events are tracked.
+
+      Segment was officially enabled for the backed on Janurary 4, 2019. Events were recorded directly
+      to third-party services before then. As such, those events are not in this table.
+
+    columns:
+      - name: event_id
+        description: Unique identifier of the event.
+        tests:
+          - not_null
+          - unique
+
+      - name: user_id
+        description: Unique identfier of the User.
+
+      - name: event_at
+        description: >
+          Specifies when the datapoint occurred (UTC), corrected for client-device clock skew.
+          See the Segment [documentation](https://segment.com/docs/spec/common/#timestamps) for more information.
+        tests:
+          - not_null
+
+      - name: event
+        description: Name of the event.
+
+      - name: event_text
+        description:
+          Human-readable name of the event.
+
+      - name: context_library_version
+        description: Version of the Segment library the generated the event.
+
+      - name: context_library_name
+        description: Name of the Segment library that generated the event.

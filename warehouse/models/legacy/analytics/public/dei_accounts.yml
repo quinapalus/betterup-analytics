@@ -1,0 +1,61 @@
+version: 2
+models:
+  - name: dei_accounts
+    description: >
+      This table contains a list of organizations with external deployments,
+      i.e. "accounts".
+
+    columns:
+      - name: organization_id
+        description: Primary Key
+        tests:
+          - unique
+          - not_null
+
+      - name: organization_name
+        description: Denormalized name of the associated Organization.
+        tests:
+          - not_null
+
+      - name: sfdc_account_id
+        description: Salesforce Account identifier for the Organization of this Track.
+
+      - name: sfdc_account_name
+        description: Salesforce Account name for the Organization
+
+      - name: sfdc_account_owner
+        description: Full name of the SFDC Account Owner.
+        tests:
+          - not_null
+
+      - name: sfdc_account_csm
+        description: Full name of the SFDC Account CSM.
+        tests:
+          - not_null
+
+      - name: industry
+        description: Which industry the company is in
+
+      - name: company_size
+        description: Approximation of how many employees the company has.
+
+      - name: account_segment
+        description: >
+          Market segment of the associated account.
+
+      - name: first_paid_session_at
+        description: >
+          Timestamp of the first paid session within the account. Null if no paid
+          sessions.
+
+      - name: last_paid_session_at
+        description: Timestamp of the last paid session within the account.
+
+      - name: account_status
+        description: >
+          Internal designation of the account's status based on the
+          date of the last session. Accounts where the last paid session is
+          more than 6 months ago are considered inactive.
+        tests:
+          - accepted_values:
+              values: ['inactive', 'active']

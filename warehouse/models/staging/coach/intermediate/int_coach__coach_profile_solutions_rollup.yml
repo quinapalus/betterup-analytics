@@ -1,0 +1,35 @@
+version: 2
+
+models:
+  - name: int_coach__coach_profile_solutions_rollup
+    description: "This intermediate model combines coach_profile_solutions and solutions to get flags for solutions by coach_profile_uuid"
+    columns:
+      - name: coach_profile_uuid
+        description: ""
+        tests:
+          - unique
+          - not_null
+
+      - name: solution_keys_array
+        description: "An array list of each key from the solutions table for that coach_profile_uuid"
+
+      - name: has_solution_growth_and_transformation
+        description: "A flag for whether that coach_profile_uuid has the solution_growth_and_transformation checkbox selected"
+        tests:
+          - accepted_values:
+              values: ['true', 'false']
+              quote: false
+
+      - name: has_solution_sales_performance
+        description: "A flag for whether that coach_profile_uuid has the has_solution_sales_performance checkbox selected"
+        tests:
+          - accepted_values:
+              values: ['true', 'false']
+              quote: false
+
+      - name: has_solution_diversity_equity_inclusion_and_belonging
+        description: "A flag for whether that coach_profile_uuid has the has_solution_diversity_equity_inclusion_and_belonging checkbox selected"
+        tests:
+          - accepted_values:
+              values: ['true', 'false']
+              quote: false

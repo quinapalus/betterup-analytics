@@ -1,0 +1,15 @@
+dbt:
+  run:
+    command:
+    - dbt
+    - build
+    args:
+    - --selector
+    - job__gov__models
+  seed:
+    enabled: true
+schedule: "0 1 * * *"
+snowflake:
+  database: ANALYTICS
+  schema: ANALYTICS
+  warehouse: TRANSFORMING

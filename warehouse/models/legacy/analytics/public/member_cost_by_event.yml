@@ -1,0 +1,72 @@
+version: 2
+
+models:
+  - name: member_cost_by_event
+    columns:
+      - name: primary_key
+        description: ""
+        tests:
+          - unique
+          - not_null
+      - name: session_id
+        description: ""
+      - name: associated_record_type
+        description: ""
+      - name: billable_event_id
+        description: ""
+      - name: event_date
+        description: ""
+      - name: event_reported_date
+        description: ""
+      - name: sent_to_processor_date
+        description: ""
+      - name: event_type
+        description: ""
+      - name: coach_id
+        description: ""
+      - name: amount_due
+        description: ""
+      - name: currency_code
+        description: ""
+      - name: usage_minutes
+        description: ""
+      - name: units
+        description: ""
+      - name: response_body
+        description: ""
+      - name: payment_id
+        description: ""
+      - name: group_coaching_cohort_id
+        description: ""
+      - name: intervention_type
+        description: ""
+      - name: group_coaching_series_id
+        description: ""
+      - name: session_date
+        description: ""
+      - name: session_order
+        description: ""
+      - name: member_id
+        description: ""
+      - name: track_assignment_id
+        description: ""
+      - name: track_id
+        description: ""
+      - name: organization_id
+        description: ""
+      - name: product_subscription_assignment_id
+        description: ""
+      - name: member_registered
+        description: ""
+      - name: member_attempted_to_join
+        description: ""
+      - name: max_registrants
+        description: ""
+      - name: min_registrants
+        description: ""
+      - name: registered_members_per_cohort
+        description: ""
+      - name: unique_tracks_per_session
+        description: ""
+      - name: unique_orgs_per_session
+        description: ""

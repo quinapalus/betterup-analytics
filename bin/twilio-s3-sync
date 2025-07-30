@@ -1,0 +1,19 @@
+#!/bin/bash
+
+set -e
+set -o pipefail
+
+(
+  cd packages/target-s3
+  poetry install
+)
+
+(
+  cd packages/bu-tap-twilio
+  poetry install
+  hash -r
+  poetry run create-twilio-configs
+  poetry run bu-tap-twilio --config twilio.json | (cd ../target-s3 && poetry run target-s3 -b "${TWILIO_AWS_BUCKET}")
+)
+
+echo 'Done.'

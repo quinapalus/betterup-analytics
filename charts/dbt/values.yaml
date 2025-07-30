@@ -1,0 +1,26 @@
+cronjob:
+  enabled: true
+dbt:
+  deployEnv: US Gov
+  run:
+    command:
+    - dbt-run
+  seed:
+    args:
+    - --selector
+    - job__gov__models
+    enabled: false
+image:
+  repository: ''
+  tag: 2023.7.28.f1af-GOV
+manual:
+  enabled: true
+schedule: 0 * * * *
+snowflake:
+  account: ''
+  database: ''
+  password: ''
+  role: TRANSFORMER
+  schema: ANALYTICS
+  user: ''
+  warehouse: TRANSFORMING

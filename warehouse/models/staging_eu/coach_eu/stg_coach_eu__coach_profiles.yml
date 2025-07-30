@@ -1,0 +1,307 @@
+version: 2
+
+models:
+  - name: stg_coach_eu__coach_profiles
+    description: Coach Profiles EU
+
+    columns:
+      - name: coach_profile_id
+        description: Unique identifier of Coach Profiles
+        tests:
+          - unique
+          - not_null
+      - name: created_at
+        description: This column records the date and time when the record in the
+          coach profiles table was created. [GenAI Description]
+      - name: coach_profile_uuid
+        tests:
+          - unique
+          - not_null
+        description: "'coach_profile_uuid' is the unique identifier for each coach\
+          \ profile record. [GenAI Description]"
+      - name: updated_at
+        description: "'updated_at' is a timestamp column that stores the date and\
+          \ time the profile was last updated. [GenAI Description]"
+      - name: account_qualifications
+        description: This column contains qualifications and credentials attesting
+          to the Coach's proficiency and specialist expertise. [GenAI Description]
+      - name: additional_qualifications
+        description: The 'additional_qualifications' column contains any qualifications
+          or additional certifications held by a coach. [GenAI Description]
+      - name: audio_intro
+        description: Audio_intro stores an audio clip introducing the coach, allowing
+          users to get to know the coach better. [GenAI Description]
+      - name: bio
+        description: This column contains a brief biography of the coach. [GenAI Description]
+      - name: certification_qualifications
+        description: The 'certification_qualifications' column stores a list of certifications
+          that a coach has obtained. [GenAI Description]
+      - name: coach_style_words
+        description: The 'coach_style_words' column contains descriptive words that
+          summarize the experience and coaching styles of each coach profile. [GenAI
+          Description]
+      - name: endorsement
+        description: The 'endorsement' column contains information about endorsements
+          of the coaches by other entities. [GenAI Description]
+      - name: experience_highlight
+        description: "'experience_highlight' is the experience that the coach has\
+          \ to offer and is used to describe their skills and qualifications. [GenAI\
+          \ Description]"
+      - name: focus_qualifications
+        description: Focus qualifications includes special areas of qualifications
+          or certifications coaches may have. [GenAI Description]
+      - name: fountain_applicant_id
+        description: "'fountain_applicant_id' is a unique identifier for the coach\
+          \ applicant. [GenAI Description]"
+      - name: greatest_accomplishment
+        description: A field indicating the greatest accomplishment of a coach. [GenAI
+          Description]
+      - name: group_coaching_qualifications
+        description: This column contains the experience and qualifications a coach
+          has in group coaching. [GenAI Description]
+      - name: industries AS staffing_industries
+        description: The column 'industries' contains a list of industries a coach
+          has inputted as their work experience. [GenAI Description]
+      - name: invoices_with_shortlist
+        description: A boolean column denoting whether an invoice has been generated
+          for the coach profile. [GenAI Description]
+      - name: languages AS staffing_languages
+        description: This column contains the languages spoken by coaches in the warehouse
+          staging table. [GenAI Description]
+      - name: last_book_read
+        description: The 'last_book_read' column contains information about the last
+          book read by a coach profile. [GenAI Description]
+      - name: max_member_count
+        description: The 'max_member_count' column stores the maximum number of members
+          a coach can manage. [GenAI Description]
+      - name: member_endings_training_assigned_at
+        description: The 'member_endings_training_assigned_at' column stores information
+          about when a coach's training was assigned in order to end their memberships.
+          [GenAI Description]
+      - name: member_levels AS staffing_member_levels
+        description: The column 'staffing_member_levels' lists the coach's experience
+          with different member levels. [GenAI Description]
+      - name: most_grateful_for
+        description: This column stores the self-reported information of what the
+          coach is most grateful for. [GenAI Description]
+      - name: on_demand
+        description: The 'on_demand' column indicates if the coach is able to provide
+          on demand services or not. [GenAI Description]
+      - name: on_demand_qualifications
+        description: The column 'on_demand_qualifications' stores qualifications related
+          to on-demand coaching services. [GenAI Description]
+      - name: organization_black_list
+        description: An optional list of banned organizations associated with a coach
+          profile. [GenAI Description]
+      - name: outlook
+        description: The 'outlook' column stores information about a coach's availability
+          for scheduling purposes. [GenAI Description]
+      - name: pick_rate
+        description: "'pick_rate' is a column that represents the rate at which a\
+          \ coach is chosen by customers for booking. [GenAI Description]"
+      - name: postgrad_qualifications
+        description: This column contains the post-graduate qualifications of a coach,
+          such as academic degrees or certificates. [GenAI Description]
+      - name: primary AS type_primary
+        description: This column identifies the primary type of coaching the coach
+          provides. [GenAI Description]
+      - name: product_qualifications
+        description: The 'product_qualifications' column contains qualifications related
+          to coaching products relevant to the coach's profile. [GenAI Description]
+      - name: professional_qualifications
+        description: A field containing information about qualifications that professionally
+          apply to the coach. [GenAI Description]
+      - name: qa AS type_qa
+        description: The column 'qa' indicates if the coach profile is assigned to
+          the quality assurance team. [GenAI Description]
+      - name: risk_level AS staffing_risk_level
+        description: The risk_level column contains the risk level assigned to each
+          coach profile for staffing purposes. [GenAI Description]
+      - name: segment_qualifications
+        description: Describes qualifications that may qualify a coach to be assigned
+          to a particular segment. [GenAI Description]
+      - name: specialist_vertical_uuid
+        description: The 'specialist_vertical_uuid' column stores a unique identifier
+          for the specialist vertical associated to a coach profile. [GenAI Description]
+      - name: specialist_vertical_id
+        description: "'Specialist_vertical_id' is a field that stores vertical-specific\
+          \ qualifications and staffing requirements for coaches. [GenAI Description]"
+      - name: staffable
+        description: "'staffable' is a column that indicates whether a coach profile\
+          \ is eligible to be staffed. [GenAI Description]"
+      - name: staffable_state
+        tests:
+          - accepted_values:
+              values: [staffable, onboarding, hold_involuntary, hold_voluntary, offboarded_involuntary,
+                offboarded_voluntary]
+        description: "'staffable_state' indicates if a coach is currently available\
+          \ for staffing. [GenAI Description]"
+      - name: tier AS staffing_tier
+        description: This column holds the staff tier of an individual coach. [GenAI
+          Description]
+      - name: videochat_storage_persistence_enabled
+        description: This column indicates whether videochat storage persistence is
+          enabled for a coach profile. [GenAI Description]
+      - name: videochat_transcription_enabled
+        description: This column indicates whether or not transcription of video chat
+          sessions is enabled for a given coach profile. [GenAI Description]
+      - name: next_coach_nps_at
+        description: The 'next_coach_nps_at' column stores the timestamp when a coach
+          profile is due for a customer satisfaction survey. [GenAI Description]
+      - name: clinical_experience
+        description: "'clinical_experience' contains information regarding the clinical\
+          \ experience of the coach, such as the total number of years spent in clinical\
+          \ work and the total number of clinical hours. [GenAI Description]"
+      - name: lgbtq
+        description: The 'lgbtq' column stores information regarding the coach's sexuality
+          or sexual orientation. [GenAI Description]
+      - name: management_work_years
+        description: "'management_work_years' is a column containing the number of\
+          \ years of management work experience. [GenAI Description]"
+      - name: experience_country
+        description: The 'experience_country' column contains the country in which
+          the coach has experience. [GenAI Description]
+      - name: clinical_corporate_years
+        description: This column contains the total number of years of experience
+          a coach has had in a clinical or corporate setting. [GenAI Description]
+      - name: industry_work_experience
+        description: The 'industry_work_experience' column contains the work industry(s)
+          a coach profile has professional experience in. [GenAI Description]
+      - name: coaching_hours
+        description: This column contains the total number of hours a coach has spent
+          providing coaching services. [GenAI Description]
+      - name: industry_coaching_experience
+        description: This column contains a list of the industries in which the coach
+          has professional coaching experience. [GenAI Description]
+      - name: accredited_coaching
+        description: The 'accredited_coaching' column indicates whether the coach
+          profile has been accredited by an external organization such as the International
+          Coaching Federation. [GenAI Description]
+      - name: clinical_years
+        description: "'clinical_years' is the amount of years of clinical experience\
+          \ held by a coach. [GenAI Description]"
+      - name: armed_forces
+        description: The column 'armed_forces' contains a boolean flag for whether
+          the coach has experience in the armed forces. [GenAI Description]
+      - name: race_ethnicity
+        description: The 'race_ethnicity' column stores the racial and ethnic identity
+          of a coach. [GenAI Description]
+      - name: clinical_hours
+        description: The 'clinical_hours' column indicates the total amount of clinical
+          experience a coach has in hours. [GenAI Description]
+      - name: additional_certifications
+        description: This column contains any additional certifications that the coach
+          possesses. [GenAI Description]
+      - name: gender
+        description: Gender of the coach. [GenAI Description]
+      - name: function_coaching_experience
+        description: This column contains the function-specific coaching experience
+          of a coach profile. [GenAI Description]
+      - name: vp_leadership_org_size
+        description: This column records the size of the organization where the coach
+          has held a Vice President Leadership role. [GenAI Description]
+      - name: topic_experience
+        description: The 'topic_experience' column contains the experience the coach
+          has in various topics. [GenAI Description]
+      - name: exec_experience_org_size
+        description: A column for documenting the size of an executive experience
+          organization. [GenAI Description]
+      - name: function_work_experience
+        description: This column captures the general work experience, such as industry,
+          function, and years of experience, of the coach. [GenAI Description]
+      - name: vp_leadership_years
+        description: vp_leadership_years indicates the number of years of Vice President-level
+          leadership experience the coach has. [GenAI Description]
+      - name: accountability_style
+        description: "'accountability_style' contains details about the coach's accountability\
+          \ style, such as their approaches to feedback and goals. [GenAI Description]"
+      - name: new_member
+        description: The 'new_member' column represents whether or not the coach is
+          new. [GenAI Description]
+      - name: resistant_member
+        description: The resistant_member column contains a boolean value indicating
+          whether a coach profile does not want to be contacted for coaching assignments.
+          [GenAI Description]
+      - name: professional_work_years
+        description: This column contains the total number of years of professional
+          work experience for coaches on the platform. [GenAI Description]
+      - name: short_engagement
+        description: The short_engagement column records whether or not the coach
+          is available for short engagements. [GenAI Description]
+      - name: coaching_style
+        description: The 'coaching_style' column describes a coach's specific coaching
+          approach. [GenAI Description]
+      - name: coaching_cloud
+        description: The 'coaching_cloud' column holds information about the coach's
+          experience with various types of coaching. [GenAI Description]
+      - name: engaged_member_count
+        description: The 'engaged_member_count' column stores the total number of
+          members a coach has engaged with. [GenAI Description]
+      - name: current_volunteer_member_count
+        description: The 'current_volunteer_member_count' column stores the number
+          of volunteer members currently associated with each coach profile. [GenAI
+          Description]
+      - name: country_of_residence
+        description: The 'country_of_residence' column represents the country that
+          the coach resides in. [GenAI Description]
+      - name: segment_priority_level
+        description: The 'segment_priority_level' column contains the priority level
+          at which a coach is featured in a given segment. [GenAI Description]
+      - name: appointment_buffer_enabled
+        description: The 'appointment_buffer_enabled' column indicates whether appointment
+          buffering is enabled for coaches. [GenAI Description]
+      - name: hiring_tier
+        description: The 'hiring_tier' column specifies the hiring tier of the coach.
+          [GenAI Description]
+      - name: currency_code
+        description: The 'currency_code' column contains the three-letter currency
+          code for the coach's country of residence. [GenAI Description]
+      - name: care
+        description: The 'care' column denotes the type of care provided by the coach
+          - such as consumer care, clinical care, etc. [GenAI Description]
+      - name: organization_block_list AS banned_organization_ids
+        description: The 'banned_organization_ids' column stores a list of organizations
+          which are blocked from hiring the coach in question. [GenAI Description]
+      - name: group
+        description: The 'group' column denotes the type of profile, such as primary
+          or QA. [GenAI Description]
+      - name: group_coaching_session_url
+        description: This column contains a URL to the group coaching session associated
+          with a coach profile. [GenAI Description]
+      - name: peer
+        description: The 'peer' column contains the coach's peers. [GenAI Description]
+      - name: docebo_user_id
+        description: "'docebo_user_id' is the user ID of a coach from the Docebo platform.\
+          \ [GenAI Description]"
+      - name: coaching_varieties
+        description: "'coaching_varieties' stores the types of coaching services that\
+          \ a coach offers. [GenAI Description]"
+      - name: consumer_priority_level
+        description: "'consumer_priority_level' is an integer field indicating the\
+          \ priority level of the given consumer. [GenAI Description]"
+      - name: consumer
+        description: The consumer column indicates whether a coach profile belongs
+          to the consumer user group. [GenAI Description]
+      - name: workshops_bio
+        description: The workshops_bio column contains a brief bio about the coach's
+          experience in conducting workshops. [GenAI Description]
+      - name: debrief360
+        description: The 'debrief360' column contains information about a coach's
+          qualifications and experience with Debrief360, a coaching certification
+          program. [GenAI Description]
+      - name: currency_code_backup
+        description: The 'currency_code_backup' column provides a backup of the currency
+          code in the event that the original 'currency_code' is unavailable. [GenAI
+          Description]
+      - name: tier_backup
+        description: The 'tier_backup' column contains data on the staffing tier associated
+          with a given coach profile. [GenAI Description]
+      - name: eea_eligible
+        description: The column 'eea_eligible' indicates the eligibility of the coach
+          to operate in countries of the European Economic Area (EEA). [GenAI Description]
+      - name: external_shortlist_id
+        description: The 'external_shortlist_id' column stores the ID of coaches which
+          are included in external shortlists. [GenAI Description]
+      - name: cohort
+        description: "'Cohort' is a field that stores information about the group\
+          \ a coach belongs to. [GenAI Description]"

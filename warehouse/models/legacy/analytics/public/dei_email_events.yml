@@ -1,0 +1,48 @@
+version: 2
+models:
+  - name: dei_email_events
+    description: >
+      Email events as reported by SendGrid.
+
+    columns:
+      - name: _unique
+        description: Surrogate Key
+        tests:
+          - not_null
+          - unique
+
+      - name: sendgrid_event_id
+        description: Unique identifier of the event as set by set by SendGrid.
+
+      - name: sendgrid_message_id
+        description: Unique identifier of the message as set Sendgrid.
+
+      - name: user_id
+        description: Unique identifier of the recipient.
+
+      - name: event
+        description: What the event is (e.g. open, delivered)
+
+      - name: event_at
+        description: Timestamp when the event occurred.
+
+      - name: tags
+        description: >
+          Tags from the mail sender. Usually indicates which
+          Ruby mailer object sent the email.
+
+      - name: useragent
+        description: >
+          Which browser was used to open the email.
+
+      - name: url
+
+        description: The 'url' column contains a URL related to an email event. [GenAI
+          Description]
+      - name: reason
+        description: >
+          Optional field to describe the reason for an event.
+
+      - name: comms_tracking_number
+        description: Internal BetterUp tracking UUID for full lifecycle reporting
+          of notifications.

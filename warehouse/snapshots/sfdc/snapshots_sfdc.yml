@@ -1,0 +1,110 @@
+version: 2
+
+snapshots:
+  - name: snapshot_sfdc_accounts
+    tests:
+      - unique:
+          column_name: "(id || '-' || dbt_valid_from || '-' || dbt_valid_to)"
+    columns:
+      - name: id
+        tests:
+          - not_null
+      - name: dbt_scd_id
+        tests:
+          - unique
+
+  - name: snapshot_sfdc_opportunities
+    tests:
+      - unique:
+          column_name: "(id || '-' || dbt_valid_from || '-' || dbt_valid_to)"
+    columns:
+      - name: id
+        tests:
+          - not_null
+      - name: dbt_scd_id
+        tests:
+          - unique
+  
+  - name: snapshot_sfdc_campaign_members
+    tests:
+      - unique:
+          column_name: "(id || '-' || dbt_valid_from || '-' || dbt_valid_to)"
+    columns:
+      - name: id
+        tests:
+          - not_null
+      - name: dbt_scd_id
+        tests:
+          - unique
+
+  - name: snapshot_sfdc_contacts
+    tests:
+      - unique:
+          column_name: "(id || '-' || dbt_valid_from || '-' || dbt_valid_to)"
+    columns:
+      - name: id
+        tests:
+          - not_null
+      - name: dbt_scd_id
+        tests:
+          - unique
+
+  - name: snapshot_sfdc_leads
+    tests:
+      - unique:
+          column_name: "(id || '-' || dbt_valid_from || '-' || dbt_valid_to)"
+    columns:
+      - name: id
+        tests:
+          - not_null
+      - name: dbt_scd_id
+        tests:
+          - unique
+
+  - name: snapshot_sfdc_products
+    tests:
+      - unique:
+          column_name: "(id || '-' || dbt_valid_from || '-' || dbt_valid_to)"
+    columns:
+      - name: id
+        tests:
+          - not_null
+      - name: dbt_scd_id
+        tests:
+          - unique
+
+  - name: snapshot_sfdc_users
+    tests:
+      - unique:
+          column_name: "(id || '-' || dbt_valid_from || '-' || dbt_valid_to)"
+    columns:
+      - name: id
+        tests:
+          - not_null
+      - name: dbt_scd_id
+        tests:
+          - unique
+
+  - name: snapshot_sfdc_campaign_influence_details
+    tests:
+      - unique:
+          column_name: "(id || '-' || dbt_valid_from || '-' || dbt_valid_to)"
+    columns:
+      - name: id
+        tests:
+          - not_null
+      - name: dbt_scd_id
+        tests:
+          - unique
+
+  - name: snapshot_sfdc_forecasts
+    tests:
+      - unique:
+          column_name: "(id || '-' || dbt_valid_from || '-' || dbt_valid_to)"
+    columns:
+      - name: id
+        tests:
+         - not_null
+      - name: dbt_scd_id
+        tests:
+          - unique           

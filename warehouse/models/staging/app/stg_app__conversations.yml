@@ -1,0 +1,69 @@
+version: 2
+
+models:
+  - name: stg_app__conversations
+    description: The DBT model stg_app__conversations is a compiled view of conversations
+      taken from the raw source table stitch_app.conversations. This includes fields
+      such as conversation_id, assigned_care_guide_id, conversation_subject_id, care_guide_responded
+      and more. It contains timestamps for creation, updates and closing of conversations
+      and provides key information such as type, subject, priority and next steps.
+      [GenAI Description]
+    columns:
+      - name: conversation_id
+        description: "'conversation_id' is an identifier column for conversations\
+          \ from a raw data source. [GenAI Description]"
+        tests:
+          - unique
+          - not_null
+
+      - name: assigned_care_guide_id
+        description: The 'assigned_care_guide_id' column identifies which Care Guide
+          has been assigned to the conversation. [GenAI Description]
+
+      - name: conversation_subject_id
+        description: The 'conversation_subject_id' column stores the ID reference
+          for the subject of the conversation. [GenAI Description]
+
+      - name: care_guide_responded
+        description: The 'care_guide_responded' column indicates whether a care guide
+          has responded to the conversation. [GenAI Description]
+
+      - name: case_notes
+        description: Case_notes is a column containing care givers' notes about the
+          conversation. [GenAI Description]
+
+      - name: next_steps
+        description: The 'next_steps' column contains text indicating the next steps
+          to take to progress a conversation. [GenAI Description]
+
+      - name: participants_count
+        description: The 'participants_count' column contains the total number of
+          members in a conversation. [GenAI Description]
+
+      - name: priority
+        description: The 'priority' column indicates whether a conversation should
+          be given higher priority than other conversations. [GenAI Description]
+
+      - name: type
+        description: The 'Type' column indicates the type of conversation. [GenAI
+          Description]
+      - name: due_at
+        description: The 'due_at' column contains the due date and time of a conversation.
+          [GenAI Description]
+      - name: closed_at
+        description: The 'closed_at' column captures the timestamp value when the
+          conversation was closed. [GenAI Description]
+      - name: last_member_message_at
+        description: The last_member_message_at column stores the timestamp of the
+          most recent message by an end user in the conversation. [GenAI Description]
+      - name: last_message_at
+        description: The last_message_at column contains a timestamp of when the last
+          message in the conversation was sent. [GenAI Description]
+
+      - name: created_at
+        description: The 'created_at' column contains the time at which the conversation
+          was created. [GenAI Description]
+
+      - name: updated_at
+        description: The updated_at column contains a timestamp indicating when the
+          record in the conversations table was last updated. [GenAI Description]

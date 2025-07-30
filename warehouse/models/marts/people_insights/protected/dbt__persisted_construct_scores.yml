@@ -1,0 +1,64 @@
+version: 2
+
+models:
+  - name: dbt__persisted_construct_scores
+    description: "Construct scores that are calculated by the application at time of submission by referencing or aggregating records in the SCORES table. This table contains all persisted construct scores, while downstream derivations filter on those constructs which are WPM or not."
+    columns:
+      - name: primary_key
+        tests:
+          - not_null
+          - unique
+
+      - name: assessment_id
+        description: ""
+        tests:
+          - not_null
+
+      - name: construct_id
+        description: ""
+        tests:
+          - not_null
+
+      - name: key
+        description: "Can be either a construct key or a subdimension key"
+        tests:
+          - not_null
+
+      - name: assessment_type
+        description: ""
+
+      - name: questions_version
+        description: ""
+
+      - name: type
+        description: ""
+
+      - name: raw_score
+        description: ""
+
+      - name: construct_reference_population_id
+        description: ""
+
+      - name: score_mean
+        description: ""
+
+      - name: score_standard_deviation
+        description: ""
+
+      - name: scale_min_score
+        description: ""
+
+      - name: scale_max_score
+        description: ""
+
+      - name: scale_mean
+        description: ""
+
+      - name: scale_standard_deviation
+        description: ""
+
+      - name: original_scale_score
+        description: ""
+
+      - name: scale_score
+        description: ""

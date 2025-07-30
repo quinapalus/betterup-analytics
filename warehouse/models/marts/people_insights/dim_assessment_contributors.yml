@@ -1,0 +1,61 @@
+version: 2
+
+models:
+  - name: dim_assessment_contributors
+    description: The DBT model dim_assessment_contributors joins data from the int_app__assessments
+      and stg_app__assessment_contributors models, creating fields for assessment_contributor_id,
+      parent_assessment_id, role, contributor_id, response_assessment_id, created_at,
+      response_created_at, response_submitted_at, report_generated_at, and also evaluating
+      flags for whether the response has been submitted, the report has been generated,
+      and whether the response was included in the report. [GenAI Description]
+    columns:
+      - name: assessment_contributor_id
+        description: Primary key, unique for each requested contributor for the given
+          parent assessment.
+        tests:
+          - unique
+          - not_null
+
+      - name: parent_assessment_id
+        description: Foreign key to the (parent) self assessment for the given contributor.
+
+      - name: role
+        description: Role for the given contributor, e.g. manager, direct_report,
+          other_coworker.
+
+      - name: contributor_id
+        description: Foreign key to user_id for the given contributor.
+
+      - name: response_assessment_id
+        description: Foreign key to the contributor's assessment. NULL if contributor
+          has not yet started their response,
+
+      - name: created_at
+        description: Time when the contribution was requested.
+
+      - name: response_created_at
+        description: Time when the response assessment was started. Will be NULL if
+          the contributor has not yet responded.
+
+      - name: response_submitted_at
+        description: Time when the response assessment was submitted. Will be NULL
+          if contributor has not completed their response.
+
+      - name: report_generated_at
+        description: Time when the parent (member-facing) report was generated. Will
+          be NULL for any 180 or 360 assessments pending completion. Generally, we
+          expect response submitted time to occur prior to report generated time,
+          however the application does not restrict contributors from submitting responses
+          after the member report has already been generated. Note in these cases,
+          the response assessment will *not* be included in the member's report.
+
+      - name: is_response_submitted
+        description: Yes, if the contributor has submitted their response.
+
+      - name: is_report_generated
+        description: Yes, if the member report has been generated.
+
+      - name: is_response_included_in_report
+        description: Yes, if the contributor's response in included in the member's
+          report. Note responses submitted after the report has been generated are
+          not included in the member's report.

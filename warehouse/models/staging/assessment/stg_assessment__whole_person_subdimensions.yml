@@ -1,0 +1,62 @@
+version: 2
+
+models:
+  - name: stg_assessment__whole_person_subdimensions
+    description: DBT model stg_assessment__whole_person_subdimensions pulls in data
+      from the raw table Stitch_Assessment.whole_person_subdimensions. It creates
+      a primary key and renames fields related to subdimensions of the whole-person
+      model, such as category, domain, and dimension. This data can be used to support
+      analytic applications related to the whole-person model. [GenAI Description]
+    columns:
+      - name: primary_key
+        tests:
+          - unique
+          - not_null
+
+        description: The 'primary_key' column is a concatenation of the whole_person_model_version
+          and key fields hashed as MD5. [GenAI Description]
+      - name: whole_person_model_version
+        description: This column stores the version of the Whole Person Model used
+          in the assessment. [GenAI Description]
+
+      - name: construct_id
+        description: The construct_id column stores a unique identifier for each subdimension
+          in the Whole Person model. [GenAI Description]
+
+      - name: subdimension_key
+        description: The 'subdimension_key' column refers to an identifier for the
+          subdimension within a given model version of the whole person assessment.
+          [GenAI Description]
+
+      - name: name
+        description: The 'name' column contains the name of the subdimension in the
+          Whole Person Model. [GenAI Description]
+
+      - name: category
+        description: The 'category' column shows the category of the subdimension.
+          [GenAI Description]
+
+      - name: category_key
+        description: The "category_key" column contains the categories of subdimensions,
+          which are standardized by replacing any spaces with underscores. [GenAI
+          Description]
+
+      - name: domain
+        description: The 'domain' column stores the domain of a particular subdimension
+          belonging to the Whole Person construct. [GenAI Description]
+
+      - name: domain_key
+        description: The domain_key column contains the domain name in lowercase with
+          any spaces replaced by underscores. [GenAI Description]
+
+      - name: dimension
+        description: The 'dimension' column stores the higher level category of each
+          assessment subdimension. [GenAI Description]
+
+      - name: dimension_key
+        description: The 'dimension_key' column stores a normalized version of the
+          'dimension' column, with spaces replaced by underscores. [GenAI Description]
+
+      - name: visible_to_partner
+        description: The column 'visible_to_partner' shows whether or not a subdimension
+          is visible to a partner. [GenAI Description]

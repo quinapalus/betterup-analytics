@@ -1,0 +1,102 @@
+version: 2
+
+models:
+  - name: int_fountain__applicants_snapshot
+    description: "This has snapshot data for Fountain applicants.
+                  The grain is one row per applicant per snapshot.
+                  Docs on Applicants - https://developer.fountain.com/reference/get-apiv2applicants-list-applicants"
+    columns:
+      - name: applicant_id
+        description: "Unique ID for applicants"
+        tests:
+          - not_null
+
+      - name: primary_key
+        description: "Surrogate primary key created from applicant_id, valid_to and valid_from"
+        tests:
+          - unique
+          - not_null
+
+      - name: custom_attributes
+        description: "Array containing custom attributes. All of our custom attributes can be viewed here https://web.fountain.com/betterup/data_keys?null"
+
+      - name: email
+        description: "Email address for applicants"
+
+      - name: personal_email
+        description: "Personal email address for applicants"
+
+      - name: phone_number
+        description: "Phone number for the applicant"
+
+      - name: region
+        description: "Region which the applicant is operating in"
+
+      - name: sprint
+        description: "Segmentation field used by coach ops team"
+
+      - name: pay_rate_tier
+        description: "Tier of pay for the applicant"
+
+      - name: lgbtq_status
+        description: ""
+
+      - name: professional_coaching_hours
+        description: ""
+
+      - name: extended_network_specialist_type
+        description: "Specialist type of the applicant. Applies to applications for extended network specialists"
+
+      - name: citizenship_verification
+        description: "Whether or not the applicant has opted in to citizenship verification"
+
+      - name: is_duplicate
+        description: "Fountain creates a duplicate row everytime an individual applies for any position.
+                      It does provide this flag that will True if this individual has already applied before."
+
+      - name: care_clinical_matrix
+        description: ""
+
+      - name: care_coach_matrix
+        description: ""
+
+      - name: care_matrix
+        description: ""
+
+      - name: inspiring_matrix
+        description: ""
+
+      - name: thriving_matrix
+        description: ""
+
+      - name: created_at
+        description: ""
+
+      - name: updated_at
+        description: ""
+
+      - name: valid_from
+        description: "The timestamp when this snapshot row was first inserted	"
+
+      - name: valid_to
+        description: "The timestamp when this row became invalidated.	The most recent snapshot will have a null value"
+
+      - name: is_current_version
+        description: "True if this row is the most recent snapshot for the funnel"
+
+      - name: version
+        description: ""
+
+      - name: is_last_snapshot_of_day
+        description: ""
+
+      - name: master_personal_email
+        description: "When applicants start an application they use their personal email in the email field.
+                      When they get to a certain point in the application process the email field gets overwritten with their betterup coach email address.
+                      Their personal email is then copied to the personal_email field.
+                      We need to use personal email as a unique id to get count of distinct individuals. We use this master_personal_email column to do this"
+
+      - name: master_personal_email_key
+        description: "Surrogate key created from master_personal_email"
+        tests:
+          - not_null

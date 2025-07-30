@@ -1,0 +1,136 @@
+version: 2
+
+models:
+  - name: int_coach__applications_auxillary_details
+    description: "This model stores auxiliary details for each application. Anything having to do with standard stage buckets we will do in fact_coach_applications. 
+                  Anything more custom having to do with specific fountain stages we will do in this auxillary model. 
+                  The main purpose of this split to to try and keep fact_coach_applications manageable"
+    columns:
+      - name: primary_key
+        description: "Unique surrogate key from fountain applicant ID and funnel ID"
+        tests:
+          - unique
+          - not_null
+          
+      - name: fountain_applicant_id
+        description: "Unique identifier for each applicant."
+
+      - name: funnel_id
+        description: "Unique identifier for each stage in the application process."
+
+      - name: days_spent_in_waitlist
+        description: "The number of days an applicant spent on the waitlist."
+
+      - name: days_spent_in_adm_rate_information_state
+        description: "The number of days an applicant spent in the 'adm rate information state' stage."
+
+      - name: days_spent_in_app_initial_assessment_pending
+        description: "The number of days an applicant spent in the 'initial assessment pending' stage."
+
+      - name: days_spent_in_application_changing_soon_will_update_when_ready
+        description: "The number of days an applicant spent in the 'application changing soon' stage."
+
+      - name: days_spent_in_red_final_interview_grief
+        description: "The number of days an applicant spent in the 'final interview - grief' stage."
+
+      - name: days_spent_in_red_care_final_interview
+        description: "The number of days an applicant spent in the 'care final interview' stage."
+
+      - name: days_spent_in_red_final_interview
+        description: "The number of days an applicant spent in the 'final interview' stage."
+
+      - name: days_spent_in_red_final_interview_sleep
+        description: "The number of days an applicant spent in the 'final interview - sleep' stage."
+
+      - name: days_spent_in_app_intial_screen_review
+        description: "The number of days an applicant spent in the 'initial screen review' stage."
+
+      - name: days_spent_in_red_final_interview_effective_communications
+        description: "The number of days an applicant spent in the 'final interview - effective communications' stage."
+
+      - name: days_spent_in_adm_credential_check
+        description: "The number of days an applicant spent in the 'credential check' stage."
+
+      - name: days_spent_in_red_final_interview_nutrition
+        description: "The number of days an applicant spent in the 'final interview - nutrition' stage."
+
+      - name: days_spent_in_adm_rate_information_state_en
+        description: "The number of days an applicant spent in the 'rate information state - English' stage."
+
+      - name: has_ever_been_overflow_on_hold
+        description: "Boolean flag indicating whether the applicant has ever been on hold due to overflow."
+
+      - name: has_ever_been_legacy_inactive
+        description: "Boolean flag indicating whether the applicant has ever been inactive on the legacy system."
+
+      - name: is_adm_rate_information_state_fallout
+        description: "Boolean flag indicating whether the applicant dropped out at the 'rate information state' stage."
+
+      - name: is_app_initial_assessment_pending_fallout
+        description: "Boolean flag indicating whether the applicant dropped out at the 'initial assessment pending' stage."
+
+      - name: is_application_changing_soon_will_update_when_ready_fallout
+        description: "Boolean flag indicating whether the applicant dropped out at the 'application changing soon' stage."
+
+      - name: is_red_final_interview_grief_fallout
+        description: "Boolean flag indicating whether the applicant dropped out at the 'final interview - grief' stage."
+
+      - name: is_red_care_final_interview_fallout
+        description: "Boolean flag indicating whether the applicant dropped out at the 'care final interview' stage."
+
+      - name: is_red_final_interview_fallout
+        description: "Boolean flag indicating whether the applicant dropped out at the 'final interview' stage."
+
+      - name: is_red_final_interview_sleep_fallout
+        description: "Boolean flag indicating whether the applicant dropped out at the 'final interview - sleep' stage."
+
+      - name: is_app_intial_screen_review_fallout
+        description: "Boolean flag indicating whether the applicant dropped out at the 'initial screen review' stage."
+
+      - name: is_red_final_interview_effective_communications_fallout
+        description: "Boolean flag indicating whether the applicant dropped out at the 'final interview - effective communications' stage."
+
+      - name: is_adm_credential_check_fallout
+        description: "Boolean flag indicating whether the applicant dropped out at the 'credential check' stage."
+
+      - name: is_red_final_interview_nutrition_fallout
+        description: "Boolean flag indicating whether the applicant dropped out at the 'final interview - nutrition' stage."
+
+      - name: is_adm_rate_information_state_en_fallout
+        description: "Boolean flag indicating whether the applicant dropped out at the 'rate information state - English' stage."
+
+      - name: first_entered_adm_rate_information_state_timestamp
+        description: "Timestamp of when the applicant first entered the 'rate information state' stage."
+
+      - name: first_entered_app_initial_assessment_pending_timestamp
+        description: "Timestamp of when the applicant first entered the 'initial assessment pending' stage."
+
+      - name: first_entered_application_changing_soon_will_update_when_ready_timestamp
+        description: "Timestamp of when the applicant first entered the 'application changing soon' stage."
+
+      - name: first_entered_red_final_interview_grief_timestamp
+        description: "Timestamp of when the applicant first entered the 'final interview - grief' stage."
+
+      - name: first_entered_red_care_final_interview_timestamp
+        description: "Timestamp of when the applicant first entered the 'care final interview' stage."
+
+      - name: first_entered_red_final_interview_timestamp
+        description: "Timestamp of when the applicant first entered the 'final interview' stage."
+
+      - name: first_entered_red_final_interview_sleep_timestamp
+        description: "Timestamp of when the applicant first entered the 'final interview - sleep' stage."
+
+      - name: first_entered_app_intial_screen_review_timestamp
+        description: "Timestamp of when the applicant first entered the 'initial screen review' stage."
+
+      - name: first_entered_red_final_interview_effective_communications_timestamp
+        description: "Timestamp of when the applicant first entered the 'final interview - effective communications' stage."
+
+      - name: first_entered_adm_credential_check_timestamp
+        description: "Timestamp of when the applicant first entered the 'credential check' stage."
+
+      - name: first_entered_red_final_interview_nutrition_timestamp
+        description: "Timestamp of when the applicant first entered the 'final interview - nutrition' stage."
+
+      - name: first_entered_adm_rate_information_state_en_timestamp
+        description: "Timestamp of when the applicant first entered the 'rate information state - English' stage."

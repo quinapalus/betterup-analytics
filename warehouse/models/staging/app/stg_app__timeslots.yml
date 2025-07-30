@@ -1,0 +1,43 @@
+version: 2
+
+models:
+  - name: stg_app__timeslots
+    description: Data around submitted availability of coaches for a coaching session
+      (timeslots).
+
+    columns:
+      - name: timeslot_id
+        description: Primary Key
+        tests:
+          - not_null
+          - unique
+      - name: coach_id
+        description: Foreign key to the associated coach
+        tests:
+          - not_null
+          - relationships:
+              to: ref('int_app__users')
+              field: user_id
+      - name: starts_at
+        description: Timestamp denoting when the timeslot begins
+        tests:
+          - not_null
+      - name: ends_at
+        description: Timestamp denoting when the timeslot ends
+        tests:
+          - not_null
+      - name: created_at
+        description: Timestamp denoting when the timeslot was created
+        tests:
+          - not_null
+      - name: updated_at
+        description: Timestamp denoting when the timeslot was updated
+        tests:
+          - not_null
+      - name: available_minutes
+        description: "'available_minutes' is the amount of time available for scheduling\
+          \ for a given timeslot. [GenAI Description]"
+      - name: external_unavailable_minutes
+        description: The external_unavailable_minutes column contains the number of
+          minutes that are unavailable to appointment scheduling due to external events.
+          [GenAI Description]

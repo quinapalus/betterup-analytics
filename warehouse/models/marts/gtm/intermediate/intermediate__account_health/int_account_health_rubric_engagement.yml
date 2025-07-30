@@ -1,0 +1,70 @@
+version: 2
+
+models:
+  - name: int_account_health_rubric_engagement
+    description: "This model does the calculation for the account health engagment rubric.
+                  For documentation on the business logic read
+                  https://betterup.atlassian.net/wiki/spaces/AN/pages/3148087347/Engagement+Health+Score+Calculation"
+    columns:
+      - name: sfdc_account_id
+        description: ""
+        tests:
+          - unique
+          - not_null
+
+      - name: members_past_30_days
+        description: ""
+
+      - name: members_past_120_days
+        description: ""
+
+      - name: members_with_1_session_past_30_days
+        description: ""
+
+      - name: members_with_1_session_past_120_days
+        description: ""
+
+      - name: total_billable_sessions
+        description: ""
+
+      - name: members_with_1_reflection_point_past_120_days
+        description: ""
+
+      - name: average_of_total_months_in_tenure_since_activation
+        description: ""
+
+      - name: average_sessions_per_member_per_month
+        description: ""
+
+      - name: percent_of_members_with_1_reflection_point
+        description: ""
+
+      - name: account_health_rubric_adoption_driver_average_sessions_per_member_per_month
+        description: ""
+        tests:
+          - accepted_values:
+              #test that only these values exist
+              values: ['Good','Okay','Poor']
+          - dbt_expectations.expect_column_distinct_values_to_contain_set:
+              #test that these values actually exist at least once
+              value_set: ['Good','Okay','Poor']
+
+      - name: account_health_rubric_adoption_driver_reflection_points
+        description: ""
+        tests:
+          - accepted_values:
+              #test that only these values exist
+              values: ['Good','Okay','Poor']
+          - dbt_expectations.expect_column_distinct_values_to_contain_set:
+              #test that these values actually exist at least once
+              value_set: ['Good','Okay','Poor']
+
+      - name: account_health_rubric_engagement_overall_score
+        description: ""
+        tests:
+          - accepted_values:
+              #test that only these values exist
+              values: ['Good','Okay','Poor','Not Enough Data']
+          - dbt_expectations.expect_column_distinct_values_to_contain_set:
+              #test that these values actually exist at least once
+              value_set: ['Good','Okay','Poor','Not Enough Data']

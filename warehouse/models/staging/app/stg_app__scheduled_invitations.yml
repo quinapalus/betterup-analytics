@@ -1,0 +1,62 @@
+version: 2
+models:
+  - name: stg_app__scheduled_invitations
+    description: The stg_app__scheduled_invitations DBT model stores data about scheduled
+      invitations for the Stitch App. It contains fields such as invitation_id, invitee_email,
+      job_run_at, status, and product_subscription_data, enabling the Stitch App to
+      track when and to whom invitations have been sent and their response status.
+      [GenAI Description]
+    columns:
+      - name: scheduled_invitation_id
+        description: The unique ID for each scheduled invitation sent to an invitee.
+          [GenAI Description]
+        tests:
+          - unique
+          - not_null
+
+      - name: invitation_id
+        description: The unique identifier for an invitation scheduled for sending.
+          [GenAI Description]
+
+      - name: invite_track_id
+        description: The 'invite_track_id' column stores the randomly generated identifier
+          associated with each invitation. [GenAI Description]
+
+      - name: inviting_user_id
+        description: The column 'inviting_user_id' represents the user ID of the user
+          who invited another user to create an account. [GenAI Description]
+
+      - name: scheduled_job_id
+        description: The scheduled_job_id is a unique identifier for the job associated
+          with a scheduled invitation. [GenAI Description]
+
+      - name: invitation_type
+        description: "'invitation_type' is a categorical column that records the type\
+          \ of invitation being sent. [GenAI Description]"
+
+      - name: invitee_email
+        description: The email address of the invited recipient. [GenAI Description]
+
+      - name: language
+        description: The 'language' column stores the language in which the associated
+          scheduled invitation was sent. [GenAI Description]
+
+      - name: options
+        description: The 'options' column holds any additional information attached
+          to an invitation, such as invited user roles. [GenAI Description]
+
+      - name: product_subscription_data
+        description: A column containing subscription-related data associated with
+          an invitation. [GenAI Description]
+
+      - name: send_date
+        description: The send_date column stores the date and time when a scheduled
+          invitation was sent. [GenAI Description]
+
+      - name: created_at
+        description: The 'created_at' column stores the date and time when the invite
+          was created. [GenAI Description]
+
+      - name: updated_at
+        description: The 'updated_at' column records the latest date and time when
+          the scheduled invitation record was updated. [GenAI Description]

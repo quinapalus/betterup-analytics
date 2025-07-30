@@ -1,0 +1,103 @@
+version: 2
+
+models:
+  - name: dei_activities
+    description: The DBT model dei_activities captures information about activities
+      from BetterUp's application, including information about coaches, members, and
+      resources. It contains fields recording basic activity information, such as
+      activity_id, member_id, resource_id, created_at, viewed_at, etc. It also stores
+      resource information such as resource_title, author, host, duration, and modality.
+      Additionally, coach type information from coach_assignments is included.
+      [GenAI Description]
+
+    columns:
+      - name: activity_id
+        description: ID of the activity.
+        tests:
+          - unique
+          - not_null
+
+      - name: member_id
+        description: ID of the member associated with the activity.
+
+      - name: coach_id
+        description: ID of the coach associated with the activity.
+
+      - name: resource_id
+        description: ID of the resource associated with the activity.
+
+      - name: created_at
+        description: When the activity was created.
+
+      - name: viewed_at
+        description: When the Member viewed the Activity. Only populated for activities
+          starting December 2016.
+
+      - name: is_viewed
+        description: True, if the member viewed the resource at all.
+
+      - name: days_to_view
+        description: How many days from when the activity was created did it take
+          for the member to view it.
+
+      - name: completed_at
+        description: When the Member completed the Activity. If the Member has not
+          completed the Activity then this field is null.
+
+      - name: is_completed
+        description: True, if the activity has been completed.
+
+      - name: days_to_complete
+        description: How many days from when the activity was created did it take
+          for the member to complete it."
+
+      - name: favorited_at
+        description: Member saved to Bookmarked list
+
+      - name: rating
+        description: Rating (1-5) the Member gave to the Activity.  Rating was re-introduced
+          in Sept 2017.
+
+      - name: updated_at
+        description: When the activity was updated.
+
+      - name: associated_record_id
+        description: The ID of the record associated with the activity
+
+      - name: associated_record_type
+        description: Type of the record associated with the activity
+
+      - name: resource_title
+        description: English title of the resource.
+
+      - name: resource_type
+        description: Type of resource, for example Resources::LinkResource (an external
+          link) or Resources::ContentResource (an internal article-like learning resource)
+
+      - name: resource_content
+        description: English text representing displayed content of the resource (if
+          applicable). Applicable for resources of type Resources::ContentResource.
+          Can contain plain text or markdown
+
+      - name: resource_content_modality
+        description: Content modality of resource, e.g. video, audio, multimedia,
+          article etc.
+
+      - name: duration_minutes
+        description: Duration (in minutes), the resource takes to complete.
+
+      - name: duration_hours
+        description: Duration (in hours), the resource takes to complete.
+
+      - name: author
+        description: Author of the resource in English.
+
+      - name: host
+        description: Where resource is hosted, for example YouTube or Stitcher
+
+      - name: resource_verb
+        description: Verb representing how the resource is to be used, e.g. read,
+          watch, listen.
+
+      - name: coach_type
+        description: Type of coach associated with the activity.

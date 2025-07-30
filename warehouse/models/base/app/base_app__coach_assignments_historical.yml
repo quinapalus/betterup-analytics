@@ -1,0 +1,35 @@
+version: 2
+
+models:
+  - name: base_app__coach_assignments_historical
+    description: ""
+    columns:
+      - name: coach_id
+      - name: coach_recommendation_id
+      - name: created_at
+      - name: ended_at
+      - name: ended_reason
+      - name: id
+        tests:
+          - unique
+          - not_null
+      - name: last_appointment_id
+      - name: next_appointment_id
+      - name: on_demand
+      - name: role
+      - name: specialist_vertical_id
+      - name: specialty
+      - name: updated_at
+      - name: user_id
+      - name: user_unread_message_count
+      - name: coaching_cloud
+      - name: group_coaching_cohort_id
+      - name: member_last_active_at
+      - name: coach_unread_message_count
+      - name: last_message_sent_at
+      - name: last_message_id
+      - name: next_appointment_at
+      - name: group_coaching_registration_id
+      - name: conversation_id
+      - name: debrief360
+      - name: specialist_vertical_uuid

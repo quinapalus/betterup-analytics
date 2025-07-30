@@ -1,0 +1,23 @@
+version: 2
+
+models:
+  - name: int_iai_leading_indicators
+    description: ""
+    columns:
+      - name: member_id
+        description: ""
+
+      - name: reporting_group_id
+        description: ""
+
+      - name: member_reporting_group_id
+        description: ""
+        tests:
+          - unique
+          - not_null
+
+      - name: avg_session_hours_last60days
+        description: ""
+
+      - name: count_work_life_events
+        description: ""

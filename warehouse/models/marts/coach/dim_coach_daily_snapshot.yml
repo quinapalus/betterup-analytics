@@ -1,0 +1,149 @@
+version: 2
+
+models:
+  - name: dim_coach_daily_snapshot
+    description: >
+      Snapshot of Coach Availability data.
+      One record per coach per day, with information for that coach on that day that is relevant
+      to coach availability (coach supply/demand).
+      More docs here: https://betterup.atlassian.net/wiki/spaces/DATA/pages/3345450158/Coach+Snapshot+Data+Model
+
+    columns:
+      - name: history_primary_key
+        description: ""
+        tests:
+          - unique
+          - not_null
+
+      - name: coach_id
+        description: ""
+
+      - name: user_uuid
+        description: ""
+
+      - name: as_of_date
+        description: ""
+
+      - name: is_currently_valid
+        description: ""
+
+      - name: coach_profile_uuid
+        description: ""
+
+      - name: coach_profile_id
+        description: ""
+
+      - name: updated_at
+        description: ""
+
+      - name: created_at
+        description: ""
+
+      - name: is_primary_coach
+        description: ""
+
+      - name: is_consumer
+        description: ""
+
+      - name: is_on_demand_coach
+        description: ""
+
+      - name: is_qa_coach
+        description: ""
+
+      - name: is_care_coach
+        description: ""
+
+      - name: is_peer_coach
+        description: ""
+
+      - name: is_group_coach
+        description: ""
+
+      - name: max_member_count
+        description: ""
+
+      - name: hiring_tier
+        description: ""
+
+      - name: segment_priority_level
+        description: ""
+
+      - name: staffing_languages
+        description: ""
+
+      - name: staffing_tier
+        description: ""
+
+      - name: coaching_cloud
+        description: ""
+
+      - name: coaching_varieties
+        description: ""
+
+      - name: staffable_state
+        description: ""
+
+      - name: is_eea_eligible
+        description: ""
+      
+      - name: is_fed_eligible
+        description: ""
+
+      - name: coach_id
+        description: ""
+
+      - name: as_of_date
+        description: ""
+
+      - name: primary_seats_occupied
+        description: ""
+
+      - name: primary_active_seats_occupied
+        description: ""
+
+      - name: care_seats_occupied
+        description: ""
+
+      - name: care_active_seats_occupied
+        description: ""
+
+      - name: secondary_seats_occupied
+        description: ""
+
+      - name: secondary_active_seats_occupied
+        description: ""
+
+      - name: upcoming_timeslot_hours_minus_external_3d
+        description: ""
+
+      - name: upcoming_timeslot_minutes_minus_external_3d
+        description: ""
+
+      - name: upcoming_timeslot_hours_minus_external_7d
+        description: ""
+
+      - name: upcoming_timeslot_minutes_minus_external_7d
+        description: ""
+
+      - name: upcoming_timeslot_hours_minus_external_14d
+        description: ""
+
+      - name: upcoming_timeslot_minutes_minus_external_14d
+        description: ""
+
+      - name: upcoming_booking_hours_3d
+        description: ""
+
+      - name: upcoming_booking_hours_7d
+        description: ""
+
+      - name: upcoming_booking_hours_14d
+        description: ""
+      
+      - name: preferred_weekly_hours
+        description: ""
+      
+      - name: preferred_weekly_hours_updated_at
+        description: ""
+

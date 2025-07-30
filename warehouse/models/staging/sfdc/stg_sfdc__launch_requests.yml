@@ -1,0 +1,113 @@
+version: 2
+
+models:
+  - name: stg_sfdc__launch_requests
+    description: Launch Requests Salesforce custom object. This object is used to
+      track partner deployments. Each record represents one deployment. Salesforce
+      calls these Launch Requests, the business calls them Partner Deployments. In
+      staging we will refer to them as Launch Requests. In marts we will call them
+      partner deployments.
+    columns:
+      - name: sfdc_launch_request_id
+        description: The column 'sfdc_launch_request_id' is the unique identifier
+          of each launch request record from Salesforce. [GenAI Description]
+        tests:
+          - unique
+          - not_null
+
+      - name: sfdc_opportunity_id
+        description: The 'sfdc_opportunity_id' column stores the unique ID of the
+          corresponding Salesforce Opportunity record. [GenAI Description]
+        tests:
+          - not_null
+
+      - name: launch_request_created_by_id
+        description: launch_request_created_by_id is the Salesforce ID of the user
+          who created the launch request. [GenAI Description]
+
+      - name: deployment_manager_id
+        description: The 'deployment_manager_id' column holds an identifier for the
+          user assigned as the deployment manager for a given launch request. [GenAI
+          Description]
+
+      - name: sfdc_record_type_id
+        description: The 'sfdc_record_type_id' column contains the unique ID for the
+          Salesforce record type linked to the launch request. [GenAI Description]
+
+      - name: launch_request_name
+        description: This column stores the name of the associated SFDC Launch Request.
+          [GenAI Description]
+
+      - name: status
+        description: The column 'status' indicates the current stage of the launch
+          request. [GenAI Description]
+
+      - name: deployment_manager_customer_interaction_hours
+        description: The number of hours that the deployment manager spent interacting
+          with the customer. [GenAI Description]
+
+      - name: deployment_manager_internal_coordination_hours
+        description: This column stores the number of hours spent by the deployment
+          manager on internal coordination. [GenAI Description]
+
+      - name: deployment_manager_technical_configuration_hours
+        description: The 'deployment_manager_technical_configuration_hours' column
+          contains the number of hours spent by deployment managers on the technical
+          configurations for a requested launch. [GenAI Description]
+
+      - name: deployment_manager_member_orientation_prep_hours
+        description: This column contains the number of hours spent preparing the
+          orientation of a deployment manager member for the launch request. [GenAI
+          Description]
+
+      - name: specialist_on_demand_circles_licenses
+        description: The number of Specialist on Demand Circles licenses associated
+          with the launch request. [GenAI Description]
+
+      - name: executive_specialist_on_demand_circles_licenses
+        description: Number of executive on-demand specialist licenses purchased for
+          this launch request. [GenAI Description]
+
+      - name: coaching_circles_within_company_licenses
+        description: This column stores the number of licenses allocated to a customer
+          for Coaching Circles within their organization. [GenAI Description]
+
+      - name: connect_beta_licenses
+        description: The 'connect_beta_licenses' column represents the number of Connect
+          Beta licenses for the requested launch. [GenAI Description]
+
+      - name: lead_specialist_on_demand_licenses
+        description: The column 'lead_specialist_on_demand_licenses' stores the number
+          of Lead Specialist On Demand licenses in the launch request. [GenAI Description]
+
+      - name: lead_executive_one_to_one_on_demand_licenses
+        description: This column contains the number of Lead Executive 1 to 1 On Demand
+          licenses purchased. [GenAI Description]
+
+      - name: care_licenses
+        description: The 'care_licenses' column stores the number of licenses purchased
+          for Care. [GenAI Description]
+
+      - name: one_to_one_coaching_only_licenses
+        description: '"one_to_one_coaching_only_licenses" is the number of licenses
+          for one-to-one coaching-only. [GenAI Description]'
+
+      - name: coaching_circles_multi_company_licenses
+        description: This column contains the number of licenses for multi-company
+          coaching circles. [GenAI Description]
+
+      - name: lead_sales_performance_licenses
+        description: This column contains the number of lead sales performance licenses
+          associated with a launch request. [GenAI Description]
+
+      - name: created_at
+        description: The 'created_at' column holds a timestamp for when the launch
+          request was created. [GenAI Description]
+
+      - name: proposed_launch_date
+        description: "'proposed_launch_date' contains an approximate timestamp of\
+          \ when the launch request was considered to be launched. [GenAI Description]"
+
+      - name: is_deleted
+        description: "'is_deleted' is a boolean field indicating if a launch request\
+          \ has been soft deleted in SFDC. [GenAI Description]"

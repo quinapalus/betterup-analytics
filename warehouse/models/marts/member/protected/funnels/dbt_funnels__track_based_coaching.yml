@@ -1,0 +1,13 @@
+version: 2
+
+models:
+  - name: dbt_funnels__track_based_coaching
+    description: The dbt_funnels__track_based_coaching model is a funnel analysis
+      tool to track coaching participants from invitation to onboarding and assessment
+      completion. [GenAI Description]
+    columns:
+      - name: _unique
+        description: Surrogate Primary Key
+        tests:
+          - not_null
+          - unique

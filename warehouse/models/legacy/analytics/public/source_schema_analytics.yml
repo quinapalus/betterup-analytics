@@ -1,0 +1,25 @@
+version: 2
+
+sources:
+  - name: analytics_analytics
+    schema: analytics
+    database: analytics
+
+    tables:
+      - name: member_motivation_themes
+        freshness:
+          warn_after:
+            count: 8
+            period: hour
+          error_after:
+            count: 16
+            period: hour
+
+      - name: member_motivation_topics
+        freshness:
+          warn_after:
+            count: 8
+            period: hour
+          error_after:
+            count: 16
+            period: hour

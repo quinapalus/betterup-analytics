@@ -1,0 +1,15 @@
+version: 2
+
+models:
+  - name: fact_invoice_item_charge
+    meta:
+      owner: "adrian.lievano@betterup.co"
+    description: >
+      A table tracking invoice item charges.
+
+    columns:
+      - name: invoice_item_charge_id
+        description: Primary key
+        tests:
+          - unique
+          - not_null

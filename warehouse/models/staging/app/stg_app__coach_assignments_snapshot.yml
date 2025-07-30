@@ -1,0 +1,94 @@
+version: 2
+
+models:
+  - name: stg_app__coach_assignments_snapshot
+    description: >
+      Staging model for snapshot of Coach Assignments.
+      More docs here: https://betterup.atlassian.net/wiki/spaces/DATA/pages/3345450158/Coach+Snapshot+Data+Model
+    columns:
+      - name: history_primary_key
+        description: "Snapshot model primary key is concatenated coach_assignment ID + snapshot valid to / from timestamps"
+        tests:
+          - unique
+          - not_null
+
+      - name: coach_assignment_id
+        description: ""
+
+      - name: coach_id
+        description: ""
+
+      - name: coach_recommendation_id
+        description: ""
+
+      - name: created_at
+        description: ""
+
+      - name: ended_at
+        description: ""
+
+      - name: ended_reason
+        description: ""
+
+      - name: last_appointment_id
+        description: ""
+
+      - name: next_appointment_id
+        description: ""
+
+      - name: role
+        description: ""
+
+      - name: specialist_vertical_uuid
+        description: ""
+
+      - name: specialist_vertical_id
+        description: ""
+
+      - name: specialty
+        description: ""
+
+      - name: updated_at
+        description: ""
+
+      - name: member_id
+        description: ""
+
+      - name: user_unread_message_count
+        description: ""
+
+      - name: coaching_cloud
+        description: ""
+
+      - name: group_coaching_cohort_id
+        description: ""
+
+      - name: member_last_active_at
+        description: ""
+
+      - name: coach_unread_message_count
+        description: ""
+
+      - name: last_message_sent_at
+        description: ""
+
+      - name: last_message_id
+        description: ""
+
+      - name: next_appointment_at
+        description: ""
+
+      - name: group_coaching_registration_id
+        description: ""
+
+      - name: conversation_id
+        description: ""
+
+      - name: debrief360
+        description: ""
+
+      - name: valid_from
+        description: ""
+
+      - name: valid_to
+        description: ""

@@ -1,0 +1,53 @@
+version: 2
+models:
+  - name: dei_member_engagement_track_metrics
+    description: >
+      This model extracts key events and engagement statistics per track for members
+      on external deployments. The model should be used either in the `dei` level to
+      facilitate data processing for other `dei` models or in the `carina` level to
+      facilitate presentation of data (for example, calculating the number of days
+      between the date of submitted assessment and the date of invite in the
+      `fact_member_satisfaction_response` model).
+
+    columns:
+      - name: primary_key
+        description: Surrogate primary key from member_id and track_id.
+        tests:
+          - not_null
+          - unique
+
+      - name: member_id
+        description: Foreign Key to the associated member.
+        tests:
+          - not_null
+
+      - name: track_id
+        description: Foreign Key to the associated track.
+        tests:
+          - not_null
+
+      - name: invite_date
+        description: >
+          Truncated timestamp denoting the date when the user was invited to the track.
+        tests:
+          - not_null
+
+      - name: is_activated
+        description: >
+          Boolean denoting whether the member was activated on BetterUp platform.
+        tests:
+          - not_null
+          - accepted_values:
+              values: [true, false]
+
+      - name: activation_date
+        description: >
+          Truncated timestamp denoting the date when the user was activated on the platform.
+          NULL if the user didn't activate yet.
+
+      - name: completed_session_count
+        description: >
+          Integer denoting the cumulative number of completed sessions on the
+          track.
+        tests:
+          - not_null

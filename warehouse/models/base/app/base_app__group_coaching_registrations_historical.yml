@@ -1,0 +1,17 @@
+version: 2
+
+models:
+  - name: base_app__group_coaching_registrations_historical
+    description: ""
+    columns:
+      - name: created_at
+      - name: group_coaching_cohort_id
+      - name: id
+        tests:
+          - unique
+          - not_null
+      - name: updated_at
+      - name: user_id
+      - name: canceled_at
+      - name: uuid
+      - name: first_session_resources_assigned_at

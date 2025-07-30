@@ -1,0 +1,65 @@
+version: 2
+
+models:
+  - name: int_app__topic_themes
+    description: ""
+    columns:
+      - name: topic_theme_id
+        description: ""
+        tests:
+          - unique
+          - not_null
+
+      - name: translation_key
+        description: ""
+
+      - name: name_i18n
+        description: ""
+
+      - name: name
+        description: ""
+
+      - name: name_i18n_internationalized
+        description: ""
+
+      - name: name_depr
+        description: ""
+
+      - name: collaborator_description_i18n
+        description: ""
+
+      - name: collaborator_description
+        description: ""
+
+      - name: collaborator_description_i18n_internationalized
+        description: ""
+
+      - name: description_i18n
+        description: ""
+
+      - name: description
+        description: ""
+
+      - name: description_i18n_internationalized
+        description: ""
+
+      - name: description_depr
+        description: ""
+
+      - name: external_resources
+        description: ""
+
+      - name: image_url
+        description: ""
+
+      - name: topic_version
+        description: ""
+
+      - name: resources_count
+        description: ""
+
+      - name: created_at
+        description: ""
+
+      - name: updated_at
+        description: ""

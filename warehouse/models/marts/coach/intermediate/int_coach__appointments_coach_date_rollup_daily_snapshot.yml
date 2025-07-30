@@ -1,0 +1,34 @@
+version: 2
+
+models:
+  - name: int_coach__appointments_coach_date_rollup_daily_snapshot
+    description: >
+      Appointments is the application table this is derived from.
+      This is a rollup at the coach and appointment date level, so all appointments aggregated by coach and date.
+      It is also a daily snapshot, so a historic as_of_date is in the grain.
+      Business context: Think of this int model as "total coach scheduled hours by date"
+      which is a factor of coach availability / the demand of coach hours
+      More docs here: https://betterup.atlassian.net/wiki/spaces/DATA/pages/3345450158/Coach+Snapshot+Data+Model
+
+    columns:
+      - name: history_primary_key
+        description: "surrogate key of coach_id, appointment_starts_at_date, and as_of_date. This model is 1 row per coach per appointment date per daily snapshot date"
+        tests:
+          - unique
+          - not_null
+
+      - name: coach_id
+        description: ""
+
+      - name: appointment_starts_at_date
+        description: ""
+
+      - name: as_of_date
+        description: ""
+
+      - name: total_appointment_minutes
+        description: ""
+
+      - name: total_appointment_hours
+        description: ""
+

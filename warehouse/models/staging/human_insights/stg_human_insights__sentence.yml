@@ -1,0 +1,38 @@
+version: 2
+
+models:
+  - name: stg_human_insights__sentence
+    description: >
+      Sentences extracted from each document
+
+    columns:
+      - name: sentence_id
+        description: Unique identifier (primary key) for the document
+        tests:
+          - not_null
+          - unique
+
+      - name: text_document_id
+        description: ID of the document that this sentence is associated with
+        tests:
+          - not_null
+
+      - name: sentence_index
+        description: Index of the sentence in the document
+        tests:
+          - not_null
+
+      - name: sentence_len
+        description: Number of characters in the sentence
+        tests:
+          - not_null
+
+      - name: text
+        description: The sentence text
+        tests:
+          - not_null
+
+      - name: created_at
+        description: Timestamp denoting when the sentence's document landed in Snowflake
+        tests:
+          - not_null

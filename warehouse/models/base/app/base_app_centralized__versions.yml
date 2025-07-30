@@ -1,0 +1,60 @@
+version: 2
+
+models:
+  - name: base_app_centralized__versions
+    description: "This versions table unions historical versions data and current versions data for the centralized
+                  tables in the new aurora DB. It only includes a sub-set of item_types: 'CoachProfileSolution',
+                  'ProfileIslandAttribute', 'BasePayRate', 'CoachQualification', 'CoachProfilePayRate',
+                  'CoachProfile'."
+    columns:
+      - name: primary_key
+        tests:
+          - unique
+          - not_null
+        description: ""
+
+      - name: version_id
+        description: "This version_id might at some point clash with other version_ids since the versions tables
+                      from the new centralized DB started incrementing newly."
+
+      - name: created_at
+        description: ""
+
+      - name: event
+        description: ""
+
+      - name: item_id
+        description: ""
+
+      - name: item_uuid
+        description: ""
+
+      - name: item_type
+        description: ""
+
+      - name: object
+        description: ""
+
+      - name: object_changes
+        description: ""
+
+      - name: user_agent
+        description: ""
+
+      - name: impersonated
+        description: ""
+
+      - name: impersonated_user_id
+        description: ""
+
+      - name: request_id
+        description: ""
+
+      - name: whodunnit
+        description: ""
+
+      - name: whodunnit_job
+        description: ""
+
+      - name: whodunnit_jid
+        description: ""

@@ -1,0 +1,40 @@
+#! /bin/bash
+
+# configure bash to exit on error
+set -e
+set -o pipefail
+
+function runDBTForModel() {
+    msgPrefix="Running DBT for specified models - $DBT_MODEL"
+
+    if [[ -z "${DBT_TARGET}" ]]; then
+        echo "$msgPrefix (default target)"
+        dbt run --profiles-dir /home/betterup/.dbt --project-dir /home/betterup/warehouse --models $DBT_MODEL
+    else
+        echo "$msgPrefix (Target: $DBT_TARGET)"
+        dbt run --profiles-dir /home/betterup/.dbt --project-dir /home/betterup/warehouse --target=$DBT_TARGET --models $DBT_MODEL
+    fi 
+}
+
+function runDBTForAllModels() {
+    msgPrefix="Running DBT for all models"
+
+    if [[ -z "${DBT_TARGET}" ]]; then
+        echo "$msgPrefix (default target)"
+        dbt run --profiles-dir /home/betterup/.dbt --project-dir /home/betterup/warehouse
+    else
+        echo "$msgPrefix (default target)"
+        dbt run --profiles-dir /home/betterup/.dbt --project-dir /home/betterup/warehouse --target=$DBT_TARGET
+    fi 
+}
+
+function execute() {
+    if [[ -z "${DBT_MODEL}" ]]
+    then
+        runDBTForAllModels
+    else
+        runDBTForModel
+    fi 
+}
+
+execute

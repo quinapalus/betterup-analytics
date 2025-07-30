@@ -1,0 +1,51 @@
+version: 2
+models:
+  - name: stg_segment_sendgrid__email_events
+    description: >
+      The union of all SendGrid event tables. Useful for creating funnels.
+      Official Segment documentation for SendGrid is located [here](https://segment.com/docs/sources/cloud-apps/sendgrid/)
+
+      Segment was enabled to synchronized Sendgrid data on October 16, 2019. Prior to then email
+      events are captured in `stg_segment_sendgrid__email_events`.
+
+    columns:
+      - name: event_id
+        description: Unique identifier of the event as defined by SendGrid
+        tests:
+          - unique
+          - not_null
+
+      - name: message_id
+
+      - name: email
+        description: Recipient's email address
+
+      - name: event
+        description: What the event is (e.g. open, delivered)
+
+      - name: event_at
+        description: Timestamp when the event occurred
+
+      - name: tags
+        description: Tags associated with the email.
+
+      - name: resource_ids
+        description: >
+          List of resources included on the email. Only useful for
+          weekly resource recommendation emails.
+
+      - name: useragent
+        description: User agent string of the client viewing the email.
+
+      - name: url
+        description: Url that was clicked. NULL if the event type is not `clicked`.
+
+      - name: url_offset_index
+        description: Position of the URL in the email relative to the other URLs.
+
+      - name: url_offset_type
+
+      - name: reason
+
+      - name: comms_tracking_number
+        description: Internal BetterUp tracking UUID for full lifecycle reporting of notifications.

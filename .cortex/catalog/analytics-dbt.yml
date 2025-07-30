@@ -1,0 +1,28 @@
+openapi: 3.0.1
+info:
+  title: DBT
+  description: >
+    Data Warehouse ELT (the T of our Extract-Load-Transform process)
+
+    Project is in ./warehouse.
+  x-cortex-git:
+    github:
+      repository: betterup/betterup-analytics
+  x-cortex-tag: betterup-analytics
+  x-cortex-type: service
+  x-cortex-link:
+  - name: Analytics Confluence
+    type: documentation
+    url: https://betterup.atlassian.net/wiki/spaces/AN/overview
+  x-cortex-owners:
+  - name: betterup/analytics
+    type: GROUP
+  - type: SLACK
+    channel: analytics
+  - type: SLACK
+    channel: guild-data
+  x-cortex-service-groups:
+  - external-system
+  - tier-2
+  x-cortex-custom-metadata:
+    codeowner-path: .github/CODEOWNERS

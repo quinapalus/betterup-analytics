@@ -1,0 +1,52 @@
+version: 2
+
+models:
+  - name: int_app__timeslots_snapshot
+    description: >
+      Intermediate model for snapshot of Timeslots. Removes deleted records, adds derived fields.
+      More docs here: https://betterup.atlassian.net/wiki/spaces/DATA/pages/3345450158/Coach+Snapshot+Data+Model
+    columns:
+      - name: timeslot_id
+        description: ""
+
+      - name: history_primary_key
+        description: ""
+        tests:
+          - unique
+          - not_null
+
+      - name: coach_id
+        description: ""
+
+      - name: available_minutes
+        description: ""
+
+      - name: external_unavailable_minutes
+        description: ""
+
+      - name: starts_at
+        description: ""
+
+      - name: ends_at
+        description: ""
+
+      - name: created_at
+        description: ""
+
+      - name: updated_at
+        description: ""
+
+      - name: valid_from
+        description: ""
+
+      - name: valid_to
+        description: ""
+
+      - name: is_current_version
+        description: ""
+
+      - name: version
+        description: ""
+
+      - name: is_last_snapshot_of_day
+        description: ""

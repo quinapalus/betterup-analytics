@@ -1,0 +1,60 @@
+version: 2
+models:
+  - name: member_track_calendar
+
+    columns:
+      - name: member_track_calendar_id
+        description: Surrogate key used as a primary key.
+        tests:
+          - unique
+          - not_null
+
+      - name: DATE_KEY
+        description: Foreign key to conformed Date dimension.
+
+      - name: DATE
+        description: Calendar date (YYYY-MM--DD format) for the given day.
+
+      - name: CALENDAR_YEAR_MONTH
+        description: Concatenated Calendar year-month (YYYY-MM format) for the given
+          day.
+
+      - name: IS_CURRENT_FISCAL_QUARTER
+        description: Boolean flag, true if date is within current fiscal quarter.
+
+      - name: IS_PREVIOUS_FISCAL_QUARTER
+        description: Boolean flag, true if date is within previous fiscal quarter.
+
+      - name: IS_LAST_DAY_OF_MONTH
+        description: Boolean flag, true if date is last day of the month.
+
+      - name: TRACK_ASSIGNMENT_ID
+        description: Foreign Key for the associated Track Assignment.
+
+      - name: TRACK_ID
+        description: Foreign Key for the associated Track.
+
+      - name: MEMBER_ID
+        description: Foreign Key for the associated Member.
+
+      - name: ACTIVATED_AT
+        description: Timestamp denoting the date when the user was activated on the
+          platform. NULL if the user didn't activate yet.
+
+      - name: MAX_ACTIVATED_DATE
+        description: Last activated time for a given member on the given day day.
+
+      - name: MEMBER_WAS_ACTIVATED_ON_TRACK
+        description: Boolean flag, true if the member was activated on the given track.
+
+      - name: DAYS_SINCE_ACTIVATION
+        description: Days since the member activated on the given track. Day 0 is
+          the day they activated.
+
+      - name: MONTHS_SINCE_ACTIVATION
+        description: Months since the member activated on the given track.
+    description: The member_track_calendar model provides a time-ordered view of members
+      assigned to track on a daily basis. It includes fields such as date, calendar_year_month,
+      days_since_activation, and months_since_activation, as well as foreign key fields
+      for track_assignment_id, track_id, and member_id. It contains the most up-to-date
+      information about members' track assignments and activations. [GenAI Description]

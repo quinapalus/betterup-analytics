@@ -1,0 +1,9 @@
+dbt:
+  run:
+    command:
+    - dbt-run-anon
+snowflake:
+  database: GOV_ANONYMIZED
+  warehouse: ANONYMIZING
+  schema: ANON_GOV_COACH
+schedule: "0 2 * * *"

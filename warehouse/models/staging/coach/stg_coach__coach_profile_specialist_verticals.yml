@@ -1,0 +1,55 @@
+version: 2
+models:
+  - name: stg_coach__coach_profile_specialist_verticals
+    description: >
+      This is a join table between `app_coach_profiles` and `app_specialist_verticals`
+      because each coach profile
+      can be linked to multiple specialist verticals as of March 2020. If a specialist
+      vertical is removed, the record
+      will be destroyed from the table, so any historical reporting would be affected.
+
+    columns:
+      - name: coach_profile_specialist_vertical_id
+        description: Primary Key.
+        tests:
+          - not_null
+          - unique
+
+      - name: coach_profile_specialist_vertical_uuid
+        description: This column contains the unique identifier for a coach profile
+          specialist vertical. [GenAI Description]
+        tests:
+          - not_null
+          - unique
+
+      - name: coach_profile_id
+        description: Old Foreign Key to the associated coach profile, can be Blank
+
+      - name: coach_profile_uuid
+        description: Foreign key to the associated coach profile
+        tests:
+          - not_null
+
+      - name: specialist_vertical_id
+        description: >
+          Foreign key to the associated specialist vertical.
+        tests:
+          - not_null
+
+      - name: specialist_vertical_uuid
+        description: "'Specialist_vertical_uuid' is a unique Universal ID that links\
+          \ coaches to specialist verticals. [GenAI Description]"
+        tests:
+          - not_null
+
+      - name: created_at
+        description: >
+          UTC timestamp denoting when the record was created.
+        tests:
+          - not_null
+
+      - name: updated_at
+        description: >
+          UTC timestamp denoting when the record was updated.
+        tests:
+          - not_null

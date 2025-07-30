@@ -1,0 +1,15 @@
+version: 2
+
+models:
+  - name: int_subscription_products
+    meta:
+      owner: "adrian.lievano@betterup.co"
+    description: >
+      A table tracking all products from Stripe, App Products, and App Consumer Products. Intermediate table to help with downstream use cases.
+
+    columns:
+      - name: stripe_product_id
+        description: Primary key
+        tests:
+          - unique
+          - not_null

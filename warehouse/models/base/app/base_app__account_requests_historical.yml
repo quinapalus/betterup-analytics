@@ -1,0 +1,26 @@
+version: 2
+
+models:
+  - name: base_app__account_requests_historical
+    description: ""
+    columns:
+      - name: collection_and_use
+      - name: company
+      - name: company_size
+      - name: country
+      - name: created_at
+      - name: declined_at
+      - name: email
+      - name: first_name
+      - name: id
+        tests:
+          - unique
+          - not_null
+      - name: invited_at
+      - name: job_title
+      - name: last_name
+      - name: product_updates
+      - name: qualified
+      - name: terms_and_policy
+      - name: track_assignment_id
+      - name: updated_at

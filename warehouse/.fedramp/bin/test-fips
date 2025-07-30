@@ -1,0 +1,14 @@
+#!/usr/bin/env python
+import hashlib
+
+
+if __name__ == "__main__":
+    EXPECTED = "[digital envelope routines] unsupported"
+    try:
+        hashlib.md5(b"Is FIPS enabled?").digest()
+        raise RuntimeError("FIPS not enabled")
+    except ValueError as e:
+        assert str(e) == EXPECTED, f"Unexpected error: {e}"
+    
+    hashlib.md5(b"Can MD5 be used properly?", usedforsecurity=False).digest()
+    print("Ok: FIPS enabled")

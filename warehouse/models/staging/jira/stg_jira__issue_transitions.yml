@@ -1,0 +1,29 @@
+version: 2
+models:
+  - name: stg_jira__issue_transitions
+    description: >
+      Contains the transitions of the status of Jira issues.
+
+    columns:
+      - name: jira_issue_transition_id
+        description: Unique identifier of the issue transition.
+        tests:
+          - not_null
+          - unique
+
+      - name: jira_issue_id
+        description: Unique identifier of the source issue.
+        tests:
+          - not_null
+
+      - name: from_status
+        description: Name of the status of the issue prior to the transition.
+
+      - name: to_status
+        description: Name of the status of the issue after the transition.
+
+      - name: to_status_category
+        description: Category of the new status (e.g. In Progress, Done)
+
+      - name: created_at
+        description: When the transition occurred.

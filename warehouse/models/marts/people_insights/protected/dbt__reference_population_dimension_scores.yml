@@ -1,0 +1,50 @@
+version: 2
+
+models:
+  - name: dbt__reference_population_dimension_scores
+    description: ""
+    columns:
+      - name: primary_key
+        description: "Surrogate key created from all of the grouped dimensions"
+        tests:
+          - unique
+          - not_null
+
+      - name: reference_population_id
+        description: ""
+
+      - name: reference_population_subgroup_id
+        description: ""
+
+      - name: assessment_id
+        description: ""
+
+      - name: dimension_key
+        description: ""
+
+      - name: dimension
+        description: ""
+
+      - name: whole_person_model_version
+        description: ""
+
+      - name: domain_key
+        description: ""
+
+      - name: domain
+        description: ""
+
+      - name: category_key
+        description: ""
+
+      - name: category
+        description: ""
+
+      - name: raw_score
+        description: ""
+
+      - name: original_scale_score
+        description: ""
+
+      - name: scale_score
+        description: ""

@@ -1,0 +1,56 @@
+version: 2
+
+models:
+  - name: anon_app_eu__assessments
+    description: >
+      Assessments table from app with removed PII.
+      Fields Removed:
+        - RESPONSES
+      Assessments completed by Users.
+    tests:
+      # Test that all WPM assessments that have been migrated to 2.0 have valid questions_version
+      - dbt_utils.expression_is_true:
+          expression: "CASE WHEN type IN ('Assessments::WholePersonAssessment', 'Assessments::WholePerson360Assessment', 'Assessments::WholePerson360ContributorAssessment', 'Assessments::WholePerson180Assessment', 'Assessments::WholePerson180ContributorAssessment',
+          'Assessments::WholePersonProgramCheckinAssessment') THEN questions_version IS NOT NULL AND questions_version IN ('1.0', '2.0') ELSE true END"
+
+    columns:
+      - name: assessment_id
+        description: Unique identifier of the Assessment
+        tests:
+          - unique
+          - not_null
+
+      - name: user_id
+        description: Unique identifier of the User who completed the assessment.
+        tests:
+          - not_null
+
+      - name: creator_id
+        description: Unique identifier of the User who created the Assessment.
+
+      - name: type
+        description: Type of the Assessment
+
+      - name: associated_record_type
+        description: Object class for polymorphic foreign relationship to associated
+          record.
+
+      - name: associated_record_id
+        description: Foreign key for polymorphic relationship to associated record.
+
+      - name: submitted_at
+        description: When the Assessment was submitted.
+
+      - name: expires_at
+        description: When the Assessment expires.
+
+      - name: questions_version
+        description: Version of the Assessment questions.
+
+      - name: created_at
+        description: >
+          When the Assessment was created.
+
+      - name: updated_at
+        description: >
+          When the Assessment was updated.

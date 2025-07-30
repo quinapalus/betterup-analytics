@@ -1,0 +1,31 @@
+version: 2
+
+models:
+  - name: int_app__reporting_group_organizations
+    description: This model stores relationships between reporting groups and organizations,
+      and records the created and updated timestamps for them. It is populated by
+      a join between records from the staging table 'stg_app__reporting_group_organizations'
+      and destroyed records in 'int_app__versions_destroyed_records'. [GenAI Description]
+
+    columns:
+      - name: reporting_group_organization_id
+        description: Primary Key
+        tests:
+          - unique
+          - not_null
+
+      - name: created_at
+        description: This column stores the date and time that a row in the reporting_group_organizations
+          table was created. [GenAI Description]
+
+      - name: updated_at
+        description: The 'updated_at' column stores the timestamp when the data was
+          last updated. [GenAI Description]
+
+      - name: organization_id
+        description: The 'organization_id' column stores unique IDs for organizations
+          associated with a reporting group. [GenAI Description]
+
+      - name: reporting_group_id
+        description: This column contains unique identifiers for the reporting groups
+          associated with each organization. [GenAI Description]

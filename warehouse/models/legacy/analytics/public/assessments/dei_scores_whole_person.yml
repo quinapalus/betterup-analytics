@@ -1,0 +1,94 @@
+version: 2
+models:
+  - name: dei_scores_whole_person
+    description: >
+      This table contains scores for the Whole Person Assessment taking at onboarding,
+      RP, 360, and 180.
+
+    columns:
+      - name: primary_key
+        tests:
+          - unique
+          - not_null
+
+      - name: source
+        description: >
+          String that specifies which type of assessment the responses are associated
+          with.
+        tests:
+          - not_null
+
+      - name: assessment_id
+        description: Foreign key to associated assessment.
+        tests:
+          - not_null
+
+      - name: created_at
+        description: >
+          Timestamp that denotes when the assessment was initiated.
+        tests:
+          - not_null
+
+      - name: score_key
+        description: >
+          String that denotes the score key associated with the question in
+          the assessment.
+        tests:
+          - not_null
+
+      - name: score_type
+        description: >
+          String that denotes the score type associated with the question in
+          the assessment.
+        tests:
+          - not_null
+
+      - name: score_title
+        description: >
+          String that denotes the score title associated with the question in
+          the assessment.
+        tests:
+          - not_null
+
+      - name: z_score
+        description: >
+          z_score associated with the member's response.
+        tests:
+          - not_null
+
+      - name: sequence
+        description: >
+          Integer that represents the sequence of the assessment for the user.
+        tests:
+           - not_null
+
+      - name: submitted_at
+        description: >
+          Timestamp that denotes when the assessment was submitted.
+        tests:
+           - not_null
+
+      - name: member_id
+        description: Denormalized foreign key to associated user.
+        tests:
+           - not_null
+
+      - name: track_id
+        description: >
+          Foreign key to associated track. NULL if the assessment
+          was submitted before January 20, 2018 due to existence
+          of overlapping track assignments.
+
+      - name: subdimension
+        description: >
+          String that denotes the subdimension associated with the item key.
+
+      - name: dimension
+        description: >
+          String that denotes the WPM dimension associated with the item key.
+
+      - name: factor
+        description: >
+          String that denotes the WPM factor associated with the item key.
+        tests:
+           - not_null

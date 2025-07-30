@@ -1,0 +1,45 @@
+version: 2
+
+models:
+  - name: base_app__appointments_historical
+    description: ""
+    columns:
+      - name: call_id
+      - name: canceled_at
+      - name: canceled_by_user_id
+      - name: coach_assignment_id
+      - name: coach_id
+      - name: complete_at
+      - name: contact_method
+      - name: created_at
+      - name: creator_id
+      - name: development_topic_id
+      - name: ends_at
+      - name: id
+        tests:
+          - unique
+          - not_null
+      - name: length
+      - name: missed
+      - name: original_starts_at
+      - name: participant_id
+      - name: post_session_member_assessment_id
+      - name: rating_pending
+      - name: recurring
+      - name: requested_length
+      - name: requested_weekly_interval
+      - name: sequence_number
+      - name: started_at
+      - name: starts_at
+      - name: timeslot_id
+      - name: track_assignment_id
+      - name: updated_at
+      - name: user_id
+      - name: uuid
+      - name: nylas_event_id
+      - name: product_subscription_assignment_id
+      - name: facilitator_assignment_type
+      - name: facilitator_assignment_id
+      - name: token
+      - name: confirmed_at
+      - name: last_rescheduled_by_user_id

@@ -1,0 +1,54 @@
+version: 2
+models:
+  - name: stg_app__coach_recommendations
+    description: The DBT model stg_app__coach_recommendations stores data related
+      to coach recommendations, including coach IDs, scores and available hours. It
+      is built based on the raw SQL code which selects fields such as coach_recommendation_id,
+      created_at, updated_at, member_id, algorithm, available_during_work_week, coach_id,
+      coach_recommendation_set_id, eligible_assignments, goals_score, overall_score,
+      position, style_score, successful_assignments, upcoming_available_hours, and
+      next_available_start_time. [GenAI Description]
+    columns:
+      - name: coach_recommendation_id
+        description: The unique identifier for an individual coach recommendation.
+          [GenAI Description]
+        tests:
+          - unique
+          - not_null
+
+      - name: created_at
+        description: The 'created_at' column holds the timestamp of when the coach
+          recommendation was created. [GenAI Description]
+
+      - name: updated_at
+        description: The field 'updated_at' represents a timestamp of when the record
+          was last updated. [GenAI Description]
+
+      - name: member_id
+        description: member_id is an unique identifier for the user receiving coach
+          recommendations. [GenAI Description]
+
+      - name: algorithm
+        description: What algorithm was used to make the coach recommendations?
+
+      - name: available_during_work_week
+        description: Does the coach have at least 1 available 45 minute timeslot during
+          the next 7 days? See app/models/coach_recommendation.rb in betterup-app.
+
+      - name: coach_id
+        description: The 'coach_id' column contains the unique identifier of the coach
+          associated with each coach recommendation. [GenAI Description]
+
+      - name: coach_recommendation_set_id
+        description: The 'coach_recommendation_set_id' stores the identifier of the
+          associated coach recommendation set. [GenAI Description]
+
+      - name: overall_score
+        description: Matchmaking score output by the recommender algorithm.
+
+      - name: position
+        description: Position of the recommendation in the associated coach_recommendation_set
+
+      - name: upcoming_available_hours
+        description: "Total number of available hours for the coach during the next 14 days.
+                      See app/models/coach_recommendation.rb in betterup-app."

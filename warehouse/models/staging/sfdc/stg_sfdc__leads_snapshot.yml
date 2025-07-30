@@ -1,0 +1,1114 @@
+version: 2
+
+models:
+  - name: stg_sfdc__leads_snapshot
+    description: ""
+    columns:
+      - name: history_primary_key
+        description: ""
+        tests:
+          - unique
+          - not_null
+
+      - name: sfdc_lead_id
+        description: ""
+        tests:
+          - not_null
+
+      - name: lead_owner_id
+        description: ""
+
+      - name: lead_created_by_id
+        description: ""
+
+      - name: sfdc_account_id
+        description: ""
+
+      - name: converted_contact_id
+        description: ""
+
+      - name: converted_date
+        description: ""
+
+      - name: sfdc_record_type
+        description: ""
+
+      - name: first_name
+        description: ""
+
+      - name: last_name
+        description: ""
+
+      - name: company_name
+        description: ""
+
+      - name: email
+        description: ""
+
+      - name: email_domain
+        description: ""
+
+      - name: job_title
+        description: ""
+
+      - name: person_country
+        description: ""
+
+      - name: person_state
+        description: ""
+
+      - name: lead_status
+        description: ""
+
+      - name: booking_status
+        description: ""
+
+      - name: role_level
+        description: ""
+
+      - name: company_size
+        description: ""
+
+      - name: job_function
+        description: ""
+
+      - name: first_conversion
+        description: ""
+
+      - name: recent_conversion
+        description: ""
+
+      - name: prospect_type
+        description: ""
+
+      - name: latest_source
+        description: ""
+
+      - name: latest_source_drill_down_1
+        description: ""
+
+      - name: latest_source_drill_down_2
+        description: ""
+
+      - name: original_source
+        description: ""
+
+      - name: original_source_drill_down_1
+        description: ""
+
+      - name: original_source_drill_down_2
+        description: ""
+
+      - name: content_syndication_asset_download
+        description: ""
+
+      - name: currently_active_outreach_sequence
+        description: ""
+
+      - name: current_sequence_step
+        description: ""
+
+      - name: current_sequence_step_type
+        description: ""
+
+      - name: current_sequence_status
+        description: ""
+
+      - name: current_sequence_task_due_date
+        description: ""
+
+      - name: finished_sequences
+        description: ""
+
+      - name: number_of_active_tasks
+        description: ""
+
+      - name: number_of_active_sequences
+        description: ""
+
+      - name: person_score
+        description: ""
+
+      - name: mql_score
+        description: ""
+
+      - name: behavioral_score
+        description: ""
+
+      - name: demographic_score
+        description: ""
+
+      - name: has_opted_out_of_email
+        description: ""
+
+      - name: created_at
+        description: ""
+
+      - name: last_modified_at
+        description: ""
+
+      - name: first_conversion_date
+        description: ""
+
+      - name: recent_conversion_date
+        description: ""
+
+      - name: is_deleted
+        description: ""
+
+      - name: is_converted
+        description: ""
+
+      - name: valid_from
+        description: ""
+
+      - name: valid_to
+        description: ""
+
+      - name: is_current_version
+        description: ""
+
+      - name: version
+        description: ""
+
+      - name: is_last_snapshot_of_day
+        description: ""
+
+      - name: cfcr_status_reason_c
+        description: ""
+
+      - name: dscorgpkg_reports_to_c
+        description: ""
+
+      - name: lead_source_detail_c
+        description: ""
+
+      - name: mkto_si_urgency_value_c
+        description: ""
+
+      - name: dscorgpkg_ownership_c
+        description: ""
+
+      - name: master_record_id
+        description: ""
+
+      - name: mkto_71_original_source_type_c
+        description: ""
+
+      - name: referring_coach_referral_reason_c
+        description: ""
+
+      - name: trac_rtc_traction_complete_status_c
+        description: ""
+
+      - name: bdr_lead_owner_c
+        description: ""
+
+      - name: trac_rtc_date_of_last_completion_c
+        description: ""
+
+      - name: dscorgpkg_exclude_update_c
+        description: ""
+
+      - name: dscorgpkg_twitter_url_c
+        description: ""
+
+      - name: mkto_71_original_search_engine_c
+        description: ""
+
+      - name: current_sequence_owner_outreach_c
+        description: ""
+
+      - name: interest_c
+        description: ""
+
+      - name: postal_code
+        description: ""
+
+      - name: associated_e_value_prompter_c
+        description: ""
+
+      - name: cfcr_sql_date_c
+        description: ""
+
+      - name: city
+        description: ""
+
+      - name: email_bounced_date
+        description: ""
+
+      - name: data_quality_score_c
+        description: ""
+
+      - name: dscorgpkg_company_hq_address_c
+        description: ""
+
+      - name: dscorgpkg_job_function_c
+        description: ""
+
+      - name: dscorgpkg_management_level_c
+        description: ""
+
+      - name: mkto_71_original_search_phrase_c
+        description: ""
+
+      - name: mobile_phone
+        description: ""
+
+      - name: phone
+        description: ""
+
+      - name: do_not_route_c
+        description: ""
+
+      - name: dscorgpkg_fiscal_year_end_c
+        description: ""
+
+      - name: fcrm_fcr_post_assign_notification_pending_c
+        description: ""
+
+      - name: last_viewed_date
+        description: ""
+
+      - name: trac_rtc_d_b_match_grade_c
+        description: ""
+
+      - name: trac_rtc_sic_code_c
+        description: ""
+
+      - name: lead_source
+        description: ""
+
+      - name: mkto_71_inferred_postal_code_c
+        description: ""
+
+      - name: registration_status_c
+        description: ""
+
+      - name: type_c
+        description: ""
+
+      - name: dscorgpkg_fortune_rank_c
+        description: ""
+
+      - name: dscorgpkg_linked_in_url_c
+        description: ""
+
+      - name: notes_mkto_c
+        description: ""
+
+      - name: territory_c
+        description: ""
+
+      - name: dscorgpkg_do_3_yr_employees_growth_c
+        description: ""
+
+      - name: last_referenced_date
+        description: ""
+
+      - name: dscorgpkg_company_hq_country_full_name_c
+        description: ""
+
+      - name: fcrm_fcr_defer_assignment_c
+        description: ""
+
+      - name: owned_by_user_c
+        description: ""
+
+      - name: system_modstamp
+        description: ""
+
+      - name: trac_rtc_realtime_clean_processed_c
+        description: ""
+
+      - name: lead_rating_c
+        description: ""
+
+      - name: mkto_71_inferred_phone_area_code_c
+        description: ""
+
+      - name: last_activity_date
+        description: ""
+
+      - name: trac_rtc_re_run_realtime_clean_c
+        description: ""
+
+      - name: website
+        description: ""
+
+      - name: dscorgpkg_company_hq_postal_code_c
+        description: ""
+
+      - name: fcrm_fcr_created_by_lead_conversion_c
+        description: ""
+
+      - name: persons_evaluating_better_up_c
+        description: ""
+
+      - name: dscorgpkg_discover_org_last_update_c
+        description: ""
+
+      - name: is_mql_c
+        description: ""
+
+      - name: data_quality_description_c
+        description: ""
+
+      - name: fcrm_fcr_response_score_c
+        description: ""
+
+      - name: in_nurture_c
+        description: ""
+
+      - name: mkto_71_acquisition_program_id_c
+        description: ""
+
+      - name: prospecting_status_c
+        description: ""
+
+      - name: actively_being_sequenced_outreach_c
+        description: ""
+
+      - name: dscorgpkg_discover_org_id_c
+        description: ""
+
+      - name: dscorgpkg_do_3_yr_sales_growth_c
+        description: ""
+
+      - name: jigsaw
+        description: ""
+
+      - name: mkto_71_original_referrer_c
+        description: ""
+
+      - name: mkto_si_add_to_marketo_campaign_c
+        description: ""
+
+      - name: trac_rtc_ddc_company_id_c
+        description: ""
+
+      - name: cfcr_admin_score_increment_audit_c
+        description: ""
+
+      - name: is_lead_owner_ae_c
+        description: ""
+
+      - name: email_bounced_reason
+        description: ""
+
+      - name: fcrm_fcr_take_scoring_snapshot_c
+        description: ""
+
+      - name: nurture_exit_date_c
+        description: ""
+
+      - name: referring_coach_email_c
+        description: ""
+
+      - name: do_not_call
+        description: ""
+
+      - name: mkto_71_inferred_company_c
+        description: ""
+
+      - name: mkto_si_urgency_c
+        description: ""
+
+      - name: trac_rtc_contact_c
+        description: ""
+
+      - name: fcrm_fcr_admin_update_counter_c
+        description: ""
+
+      - name: mkto_si_priority_c
+        description: ""
+
+      - name: salutation
+        description: ""
+
+      - name: street
+        description: ""
+
+      - name: total_outreach_c
+        description: ""
+
+      - name: trac_rtc_traction_complete_domain_c
+        description: ""
+
+      - name: call_count_c
+        description: ""
+
+      - name: dscorgpkg_company_phone_c
+        description: ""
+
+      - name: linked_in_profile_c
+        description: ""
+
+      - name: marketing_opt_out_c
+        description: ""
+
+      - name: photo_url
+        description: ""
+
+      - name: cfcr_fccrm_threshold_c
+        description: ""
+
+      - name: owner_name_text_c
+        description: ""
+
+      - name: sdr_owner_lead_email_c
+        description: ""
+
+      - name: d_b_industry_c
+        description: ""
+
+      - name: mkto_71_original_source_info_c
+        description: ""
+
+      - name: is_coach_c
+        description: ""
+
+      - name: referring_coach_phone_number_c
+        description: ""
+
+      - name: trac_rtc_original_lead_data_c
+        description: ""
+
+      - name: dscorgpkg_company_hq_country_code_c
+        description: ""
+
+      - name: dscorgpkg_company_hq_state_c
+        description: ""
+
+      - name: dscorgpkg_external_discover_org_id_c
+        description: ""
+
+      - name: converted_account_id
+        description: ""
+
+      - name: d_b_last_update_c
+        description: ""
+
+      - name: uuid_ts
+        description: ""
+
+      - name: bdr_abm_outreach_c
+        description: ""
+
+      - name: cfcr_first_meeting_date_c
+        description: ""
+
+      - name: nurture_entry_date_c
+        description: ""
+
+      - name: outreach_pdf_name_c
+        description: ""
+
+      - name: is_unread_by_owner
+        description: ""
+
+      - name: mkto_71_inferred_metropolitan_area_c
+        description: ""
+
+      - name: name
+        description: ""
+
+      - name: trac_rtc_disable_complete_c
+        description: ""
+
+      - name: dscorgpkg_discover_org_technologies_c
+        description: ""
+
+      - name: referring_coach_full_name_c
+        description: ""
+
+      - name: suppression_c
+        description: ""
+
+      - name: dscorgpkg_itorg_chart_c
+        description: ""
+
+      - name: mkto_si_relative_score_value_c
+        description: ""
+
+      - name: outreach_id_c
+        description: ""
+
+      - name: target_account_c
+        description: ""
+
+      - name: trac_rtc_realtime_clean_company_match_c
+        description: ""
+
+      - name: d_b_email_c
+        description: ""
+
+      - name: outreach_event_name_c
+        description: ""
+
+      - name: outreach_status_c
+        description: ""
+
+      - name: outreach_url_c
+        description: ""
+
+      - name: mkto_71_inferred_state_region_c
+        description: ""
+
+      - name: promo_code_c
+        description: ""
+
+      - name: trac_rtc_sic_desc_c
+        description: ""
+
+      - name: fcrm_fcr_trigger_engagement_data_rebuild_c
+        description: ""
+
+      - name: lead_stage_c
+        description: ""
+
+      - name: mkto_si_view_in_marketo_c
+        description: ""
+
+      - name: no_longer_w_account_c
+        description: ""
+
+      - name: account_tier_c
+        description: ""
+
+      - name: calendly_created_c
+        description: ""
+
+      - name: check_in_status_c
+        description: ""
+
+      - name: dscorgpkg_discover_org_first_update_c
+        description: ""
+
+      - name: last_modified_by_id
+        description: ""
+
+      - name: mkto_si_last_interesting_moment_date_c
+        description: ""
+
+      - name: d_b_title_c
+        description: ""
+
+      - name: dscorgpkg_naics_codes_c
+        description: ""
+
+      - name: dscorgpkg_sic_codes_c
+        description: ""
+
+      - name: trac_rtc_traction_complete_status_text_c
+        description: ""
+
+      - name: development_areas_of_focus_c
+        description: ""
+
+      - name: rating
+        description: ""
+
+      - name: trac_rtc_realtime_clean_error_message_c
+        description: ""
+
+      - name: trac_rtc_realtime_clean_failed_c
+        description: ""
+
+      - name: dscorgpkg_it_employees_c
+        description: ""
+
+      - name: mkto_si_last_interesting_moment_source_c
+        description: ""
+
+      - name: received_at
+        description: ""
+
+      - name: dscorgpkg_discover_org_company_id_c
+        description: ""
+
+      - name: mkto_71_inferred_city_c
+        description: ""
+
+      - name: mkto_si_hide_date_c
+        description: ""
+
+      - name: mkto_si_last_interesting_moment_c
+        description: ""
+
+      - name: mkto_si_last_interesting_moment_type_c
+        description: ""
+
+      - name: middle_name
+        description: ""
+
+      - name: fcrm_fcr_status_last_set_c
+        description: ""
+
+      - name: outreached_approved_c
+        description: ""
+
+      - name: trac_rtc_traction_complete_lead_match_c
+        description: ""
+
+      - name: dscorgpkg_company_hq_city_c
+        description: ""
+
+      - name: fcrm_fcr_stage_age_c
+        description: ""
+
+      - name: jigsaw_contact_id
+        description: ""
+
+      - name: trac_rtc_d_b_match_confidence_c
+        description: ""
+
+      - name: higher_ed_four_year_institution_c
+        description: ""
+
+      - name: mkto_71_acquisition_date_c
+        description: ""
+
+      - name: mkto_si_relative_score_c
+        description: ""
+
+      - name: bizzabo_event_id_c
+        description: ""
+
+      - name: converted_opportunity_id
+        description: ""
+
+      - name: dscorgpkg_conflict_c
+        description: ""
+
+      - name: suffix
+        description: ""
+
+      - name: fcrm_fcr_name_created_date_c
+        description: ""
+
+      - name: dscorgpkg_discover_org_created_on_c
+        description: ""
+
+      - name: dscorgpkg_discover_org_full_country_name_c
+        description: ""
+
+      - name: email_count_c
+        description: ""
+
+      - name: referring_coach_relationship_to_prospect_c
+        description: ""
+
+      - name: trac_rtc_naics_code_c
+        description: ""
+
+      - name: description_mkto_c
+        description: ""
+
+      - name: integrate_source_id_c
+        description: ""
+
+      - name: trac_rtc_match_type_c
+        description: ""
+
+      - name: trac_rtc_naics_desc_c
+        description: ""
+
+      - name: trac_rtc_original_completion_date_c
+        description: ""
+
+      - name: dscorgpkg_deleted_from_discover_org_c
+        description: ""
+
+      - name: trac_rtc_realtime_clean_contact_match_c
+        description: ""
+
+      - name: employees_on_linked_in_outreach_c
+        description: ""
+
+      - name: fcrm_fcr_status_synced_from_response_c
+        description: ""
+
+      - name: industry
+        description: ""
+
+      - name: cfcr_response_c
+        description: ""
+
+      - name: dscorgpkg_company_hq_state_full_name_c
+        description: ""
+
+      - name: dscorgpkg_discover_org_state_full_name_c
+        description: ""
+
+      - name: is_ooto_c
+        description: ""
+
+      - name: last_engagement_date_c
+        description: ""
+
+      - name: outreach_webinar_name_c
+        description: ""
+
+      - name: cfcr_admin_score_increment_c
+        description: ""
+
+      - name: mkto_71_acquisition_program_c
+        description: ""
+
+      - name: mkto_si_last_interesting_moment_desc_c
+        description: ""
+
+      - name: account_type_c
+        description: ""
+
+      - name: dscorgpkg_department_c
+        description: ""
+
+      - name: dscorgpkg_it_budget_c
+        description: ""
+
+      - name: mkto_71_inferred_country_c
+        description: ""
+
+      - name: number_of_seats_requested_c
+        description: ""
+
+      - name: trac_rtc_global_ultimate_duns_number_c
+        description: ""
+
+      - name: hq_phone_c
+        description: ""
+
+      - name: number_of_employees
+        description: ""
+
+      - name: current_program_membership_c
+        description: ""
+
+      - name: dscorgpkg_email_invalid_c
+        description: ""
+
+      - name: sfdc_campaign_id_c
+        description: ""
+
+      - name: i_sell_oskey_id_c
+        description: ""
+
+      - name: d_b_function_c
+        description: ""
+
+      - name: recent_lead_activity_count_temp_c
+        description: ""
+
+      - name: double_opt_in_c
+        description: ""
+
+      - name: groove_last_touch_c
+        description: ""
+
+      - name: account_owner_region_c
+        description: ""
+
+      - name: utm_term_c
+        description: ""
+
+      - name: active_working_exit_date_c
+        description: ""
+
+      - name: third_party_lead_source_c
+        description: ""
+
+      - name: opt_in_c
+        description: ""
+
+      - name: better_up_last_touch_program_id_c
+        description: ""
+
+      - name: high_value_c
+        description: ""
+
+      - name: third_party_lead_owner_c
+        description: ""
+
+      - name: utm_source_c
+        description: ""
+
+      - name: better_up_last_touch_program_c
+        description: ""
+
+      - name: account_territory_c
+        description: ""
+
+      - name: da_scoop_composer_normalized_mobile_c
+        description: ""
+
+      - name: account_id_c
+        description: ""
+
+      - name: ga_cid_c
+        description: ""
+
+      - name: groove_last_touch_type_c
+        description: ""
+
+      - name: groove_last_flow_name_c
+        description: ""
+
+      - name: community_marketing_contact_c
+        description: ""
+
+      - name: double_opt_out_date_c
+        description: ""
+
+      - name: account_owner_c
+        description: ""
+
+      - name: bombora_avg_composite_score_c
+        description: ""
+
+      - name: bombora_topic_count_c
+        description: ""
+
+      - name: da_scoop_composer_normalized_phone_c
+        description: ""
+
+      - name: ga_id_c
+        description: ""
+
+      - name: groove_last_engagement_c
+        description: ""
+
+      - name: requested_demo_c
+        description: ""
+
+      - name: marketo_unique_id_c
+        description: ""
+
+      - name: utm_campaign_c
+        description: ""
+
+      - name: utm_content_c
+        description: ""
+
+      - name: groove_outbound_email_counter_c
+        description: ""
+
+      - name: opt_out_date_c
+        description: ""
+
+      - name: requested_demo_date_c
+        description: ""
+
+      - name: utm_medium_c
+        description: ""
+
+      - name: groove_last_flow_step_number_c
+        description: ""
+
+      - name: da_scoop_composer_groove_log_a_call_c
+        description: ""
+
+      - name: groove_last_flow_status_c
+        description: ""
+
+      - name: bombora_composite_score_sum_c
+        description: ""
+
+      - name: da_scoop_composer_groove_convert_c
+        description: ""
+
+      - name: is_converted_c
+        description: ""
+
+      - name: lead_interest_c
+        description: ""
+
+      - name: given_to_obview_c
+        description: ""
+
+      - name: groove_last_engagement_type_c
+        description: ""
+
+      - name: groove_engagement_score_c
+        description: ""
+
+      - name: auto_convert_c
+        description: ""
+
+      - name: groove_last_flow_step_type_c
+        description: ""
+
+      - name: groove_last_step_completed_c
+        description: ""
+
+      - name: owner_active_c
+        description: ""
+
+      - name: is_deal_registration_lead_c
+        description: ""
+
+      - name: better_up_opt_in_program_c
+        description: ""
+
+      - name: better_up_opt_in_program_id_c
+        description: ""
+
+      - name: opt_in_date_c
+        description: ""
+
+      - name: how_you_hope_to_work_with_bu_c
+        description: ""
+
+      - name: marketo_unique_code_c
+        description: ""
+
+      - name: break_out_session_c
+        description: ""
+
+      - name: double_opt_in_date_c
+        description: ""
+
+      - name: dozisf_zoom_info_company_id_c
+        description: ""
+
+      - name: dozisf_zoom_info_last_updated_c
+        description: ""
+
+      - name: dozisf_zoom_info_id_c
+        description: ""
+
+      - name: dozisf_zoom_info_first_updated_c
+        description: ""
+
+      - name: estimated_deal_size_c
+        description: ""
+
+      - name: partner_phone_c
+        description: ""
+
+      - name: business_unit_c
+        description: ""
+
+      - name: partner_email_c
+        description: ""
+
+      - name: partner_company_c
+        description: ""
+
+      - name: partner_name_c
+        description: ""
+
+      - name: survey_url_c
+        description: ""
+
+      - name: help_needed_from_bu_c
+        description: ""
+
+      - name: partner_type_c
+        description: ""
+
+      - name: average_client_company_size_c
+        description: ""
+
+      - name: how_did_you_hear_about_bu_c
+        description: ""
+
+      - name: currently_a_bu_coach_member_c
+        description: ""
+
+      - name: of_clients_c
+        description: ""
+
+      - name: pain_point_c
+        description: ""
+
+      - name: training_tactic_c
+        description: ""
+
+      - name: page_prior_to_demo_req_c
+        description: ""
+
+      - name: time_frame_c
+        description: ""
+
+      - name: da_scoop_composer_groove_notes_c
+        description: ""
+
+      - name: lt_utm_campaign_c
+        description: ""
+
+      - name: ft_utm_source_c
+        description: ""
+
+      - name: lt_utm_medium_c
+        description: ""
+
+      - name: ft_utm_medium_c
+        description: ""
+
+      - name: lt_utm_content_c
+        description: ""
+
+      - name: ft_utm_campaign_c
+        description: ""
+
+      - name: lt_utm_source_c
+        description: ""
+
+      - name: lt_referrer_c
+        description: ""
+
+      - name: ft_utm_term_c
+        description: ""
+
+      - name: ft_utm_content_c
+        description: ""
+
+      - name: lt_utm_term_c
+        description: ""
+
+      - name: lid_linked_in_company_id_c
+        description: ""
+
+      - name: d_b_phone_c
+        description: ""
+
+      - name: x6_sense_lead_account_6_qa_c
+        description: ""
+
+      - name: gclid_c
+        description: ""
+
+      - name: trac_rtc_traction_complete_custom_match_c
+        description: ""
+
+      - name: currency_iso_code
+        description: ""
+
+      - name: trac_rtc_time_delay_processed_c
+        description: ""
+
+      - name: mql_campaign_type_c
+        description: ""
+
+      - name: sdr_on_account_c
+        description: ""
+
+      - name: outreach_mql_c
+        description: ""
+
+      - name: mql_tier_c
+        description: ""
+
+      - name: outreach_demo_requested_c
+        description: ""
+
+      - name: ft_utm_camp_c
+        description: ""
+
+      - name: account_segment_c
+        description: ""
+
+      - name: abm_prospect_c
+        description: ""

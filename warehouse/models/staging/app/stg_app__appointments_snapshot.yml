@@ -1,0 +1,125 @@
+version: 2
+
+models:
+  - name: stg_app__appointments_snapshot
+    description: >
+      Staging model for snapshot of Appointments.
+      More docs here: https://betterup.atlassian.net/wiki/spaces/DATA/pages/3345450158/Coach+Snapshot+Data+Model
+    columns:
+      - name: history_primary_key
+        description: "Snapshot model primary key is concatenated appointment ID + snapshot valid to / from timestamps"
+        tests:
+          - unique
+          - not_null
+
+      - name: appointment_id
+        description: ""
+
+      - name: uuid
+        description: ""
+
+      - name: appointment_created_at
+        description: ""
+
+      - name: appointment_updated_at
+        description: ""
+
+      - name: timeslot_id
+        description: ""
+
+      - name: coach_id
+        description: ""
+
+      - name: creator_id
+        description: ""
+
+      - name: member_id
+        description: ""
+
+      - name: starts_at
+        description: ""
+
+      - name: ends_at
+        description: ""
+
+      - name: started_at
+        description: ""
+
+      - name: complete_at
+        description: ""
+
+      - name: canceled_at
+        description: ""
+
+      - name: is_completed
+        description: ""
+
+      - name: call_id
+        description: ""
+
+      - name: participant_id
+        description: ""
+
+      - name: canceled_by_user_id
+        description: ""
+
+      - name: coach_assignment_id
+        description: ""
+
+      - name: confirmed_at
+        description: ""
+
+      - name: contact_method
+        description: ""
+
+      - name: appointment_length
+        description: ""
+
+      - name: is_appointment_missed
+        description: ""
+
+      - name: is_appointment_recurring
+        description: ""
+
+      - name: original_starts_at
+        description: ""
+
+      - name: development_topic_id
+        description: ""
+
+      - name: post_session_member_assessment_id
+        description: ""
+
+      - name: requested_length
+        description: ""
+
+      - name: requested_weekly_interval
+        description: ""
+
+      - name: track_assignment_id
+        description: ""
+
+      - name: nylas_event_id
+        description: ""
+
+      - name: product_subscription_assignment_id
+        description: ""
+
+      - name: facilitator_assignment_id
+        description: ""
+
+      - name: last_rescheduled_by_user_id
+        description: ""
+
+      - name: token
+        description: ""
+
+      - name: sequence_number
+        description: ""
+
+      - name: valid_from
+        description: ""
+
+      - name: valid_to
+        description: ""
+

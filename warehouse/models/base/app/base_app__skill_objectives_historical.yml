@@ -1,0 +1,14 @@
+version: 2
+
+models:
+  - name: base_app__skill_objectives_historical
+    description: ""
+    columns:
+      - name: created_at
+      - name: id
+        tests:
+          - unique
+          - not_null
+      - name: objective_id
+      - name: skill_id
+      - name: updated_at

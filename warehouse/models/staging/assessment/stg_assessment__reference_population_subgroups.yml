@@ -1,0 +1,30 @@
+version: 2
+
+models:
+  - name: stg_assessment__reference_population_subgroups
+    description: This DBT model stores data about reference population subgroups.
+      It contains multiple fields including reference_population_subgroup_id, key,
+      description, created_at, and updated_at. [GenAI Description]
+    columns:
+      - name: reference_population_subgroup_id
+        description: '`reference_population_subgroup_id` is an ID which identifies
+          individual subgroups in the reference population. [GenAI Description]'
+        tests:
+          - unique
+          - not_null
+
+      - name: key
+        description: The 'key' column holds the unique identifier for each reference
+          population subgroup. [GenAI Description]
+
+      - name: description
+        description: The 'description' column contains the textual description of
+          a reference population subgroup. [GenAI Description]
+
+      - name: created_at
+        description: "'created_at' is a timestamp column indicating when the row was\
+          \ added or created in the database. [GenAI Description]"
+
+      - name: updated_at
+        description: Updated_at is the timestamp providing information about when
+          the record was last updated. [GenAI Description]

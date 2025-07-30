@@ -1,0 +1,23 @@
+version: 2
+
+models:
+  - name: base_app__contracts_historical
+    description: ""
+    columns:
+      - name: created_at
+      - name: hours_purchased
+      - name: id
+        tests:
+          - unique
+          - not_null
+      - name: name
+      - name: organization_id
+      - name: salesforce_opportunity_identifiers
+      - name: seats_purchased
+      - name: updated_at
+      - name: salesforce_contract_id
+      - name: trial
+      - name: salesforce_legacy_contract_id
+      - name: end_date
+      - name: start_date
+      - name: salesforce_contract_number

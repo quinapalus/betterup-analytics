@@ -1,0 +1,10 @@
+version: 2
+
+models:
+
+  - name: dim_sfdc_users_daily_snapshot
+    meta:
+      owner: "xavier.mafe@betterup.co"
+    tests:
+      - unique:
+          column_name: "daily_snapshot_unique_key"

@@ -1,0 +1,11 @@
+version: 2
+
+sources:
+  - name: gsheets_assessments
+    database: raw
+    schema: "{{ 'airbyte_gsheets_assessments' if env_var('DEPLOYMENT_ENVIRONMENT', '') == 'US Gov' else 'stitch_gsheets_assessments' }}"
+    loader: "{{ 'airbyte' if env_var('DEPLOYMENT_ENVIRONMENT', '') == 'US Gov' else 'stitch' }}"
+
+
+    tables:
+      - name: assessments

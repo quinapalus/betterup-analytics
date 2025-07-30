@@ -1,0 +1,72 @@
+version: 2
+
+models:
+  - name: contract_utilization
+    description: ""
+    columns:
+      - name: unique_id
+        tests:
+          - unique
+          - not_null
+      - name: utilization_date
+        description: ""
+
+      - name: availability_date
+        description: ""
+
+      - name: product_id
+        description: ""
+
+      - name: organization_id
+        description: ""
+
+      - name: available_seat_number
+        description: ""
+
+      - name: product_subscription_id
+        description: ""
+
+      - name: product_subscription_assignment_id
+        description: ""
+
+      - name: v2
+        description: ""
+
+      - name: track_assignment_id
+        description: ""
+
+      - name: track_id
+        description: ""
+
+      - name: contract_line_item_id
+        description: ""
+
+      - name: utilized_seat_number
+        description: ""
+
+      - name: member_id
+        description: ""
+
+      - name: is_over_utilized
+        description: ""
+
+      - name: coaching_cloud
+        description: ""
+
+      - name: on_demand
+        description: ""
+
+      - name: primary_coaching
+        description: ""
+
+      - name: care
+        description: ""
+
+      - name: coaching_circles
+        description: ""
+
+      - name: workshops
+        description: ""
+
+      - name: extended_network
+        description: ""

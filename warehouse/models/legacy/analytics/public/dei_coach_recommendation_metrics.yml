@@ -1,0 +1,47 @@
+version: 2
+models:
+  - name: dei_coach_recommendation_metrics
+    description: >
+      Key metrics and attributes related to coach recommendations.
+      This model is intended to provide insights into how coach
+      recommendation algorithms are affecting coaches and to
+      identify recommendation issues. Recommendation metrics only
+      apply to coaches first staffed after GA of global staffing on
+      11/13/2019.
+
+    columns:
+      - name: coach_id
+        description: Unique identifier of the coach
+        tests:
+          - unique
+          - not_null
+
+      - name: appearances_count
+        description: Total number of times a coach has appeared in a recommendation set.
+
+      - name: selected_count
+        description: Total number of times a coach has been picked from a recommendation.
+
+      - name: selected_rate
+        description: Ratio of number of recommendations to the time the coach has been picked.
+
+      - name: first_appeared_at
+        description: When the coach first appeared as eligible to coach members.
+
+      - name: first_assigned_at
+        description: When the coach was first assigned a member.
+
+      - name: first_recommended_at
+        description: When the coach first appeared in a recommendation set.
+
+      - name: first_selected_at
+        description: When the coach was first picked from a recommendation set.
+
+      - name: last_recommended_at
+        description: When the coach was last recommended at
+
+      - name: time_to_first_assignment_days
+        description: How many days it took for the coach to have an assignment from their first appearance
+
+      - name: time_to_first_recommendation_days
+        description: How many days it took before the coach appeared in a recommendation set from their first appearance.

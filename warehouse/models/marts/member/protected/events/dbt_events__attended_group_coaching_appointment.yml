@@ -1,0 +1,48 @@
+version: 2
+
+models:
+  - name: dbt_events__attended_group_coaching_appointment
+    description: Event for group coaching attendance
+    columns:
+      - name: member_associated_record_id
+        description: A unique identifier for a member's attendance at a group coaching
+          appointment, created by combining the member_id and the group_coaching_appointment_id.
+          [GenAI Description]
+        tests:
+          - unique
+          - not_null
+
+      - name: member_id
+        description: The 'member_id' column stores the unique identifier of a user
+          associated with each group coaching appointment. [GenAI Description]
+
+      - name: event_at
+        description: "'event_at' represents the timestamp of when the member attempted\
+          \ to join a Group Coaching Appointment. [GenAI Description]"
+
+      - name: event_action
+        description: The 'event_action' column of the table records whether a user
+          attended or did not attend a group coaching appointment. [GenAI Description]
+
+      - name: event_object
+        description: The 'event_object' column contains the type of group coaching
+          appointment, such as 'expert_appointment', in relation to the event action
+          'attended'. [GenAI Description]
+
+      - name: event_action_and_object
+        description: "'event_action_and_object' stores the joined event action and\
+          \ event object for an attended group coaching appointment, such as \"attended\
+          \ nutrition_appointment\". [GenAI Description]"
+
+      - name: associated_record_type
+        description: The 'associated_record_type' column indicates the type of associated
+          record, which is 'GroupCoachingAppointment' in this case. [GenAI Description]
+
+      - name: associated_record_id
+        description: The column 'associated_record_id' is the unique identifier of
+          the group coaching appointment for the member. [GenAI Description]
+
+      - name: attributes
+        description: The column 'attributes' stores information about the associated
+          Group Coaching Appointment, including the group coaching cohort ID, group
+          coaching series ID, and session duration minutes. [GenAI Description]

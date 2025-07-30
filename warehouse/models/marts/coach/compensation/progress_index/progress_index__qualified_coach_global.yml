@@ -1,0 +1,15 @@
+version: 2
+
+models:
+  - name: progress_index__qualified_coach_global
+    description: ""
+    columns:
+      - name: coach_uuid
+        description: ""
+        tests:
+          - unique
+          - not_null
+
+      - name: member_count
+        description: ""
+

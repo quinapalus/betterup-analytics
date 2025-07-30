@@ -1,0 +1,64 @@
+version: 2
+models:
+  - name: dei_assessment_contributors
+    description: >
+      Join table for assessments that require responses from multiple contributors,
+      e.g.
+      180 and 360 assessments. Includes a row for every requested contribution, with
+      `response_assessment_id` populated for unsubmitted contributions along with
+      denormalized fields for when response assessment was created and submitted.
+
+    columns:
+      - name: assessment_contributor_id
+        description: Primary key
+        tests:
+          - unique
+          - not_null
+
+      - name: assessment_id
+        description: Foreign Key to the (parent) self assessment for the given contributor.
+        tests:
+          - not_null
+
+      - name: role
+        description: >
+          Role of the Assessment Contributor.
+        tests:
+          - accepted_values:
+              values: [manager, direct_report, other_coworker]
+
+      - name: contributor_id
+        description: >
+          Foreign Key to `user_id` of the Contributor
+        tests:
+          - not_null
+
+      - name: response_assessment_id
+        description: >
+          Foreign Key to contributor's assessment
+
+      - name: created_at
+        description: Timestamp for when the contribution was first requested.
+        tests:
+          - not_null
+
+      - name: response_created_at
+        description: >
+          Timestamp for when the response assessment was started. Will be NULL if
+          contributor has not yet responded.
+
+      - name: response_submitted_at
+        description: >
+          Timestamp for when the response assessment was submitted. Will be NULL if
+          contributor has not completed response.
+
+      - name: report_generated_at
+        description: >
+          Timestamp denoting when the parent (member-facing) report was generated.
+          Will be
+          NULL for any 180 or 360 assessments pending completion. Generally, we expect
+          response_submitted_at to occur prior to report_generated_at, however the
+          application does not restrict contributors from submitting responses after
+          the
+          member reports has already been generated. Note in these cases, the response
+          assessment will *not* be included in the member's report.

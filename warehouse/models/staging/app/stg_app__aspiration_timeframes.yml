@@ -1,0 +1,31 @@
+version: 2
+models:
+  - name: stg_app__aspiration_timeframes
+    description: This DBT model stores information on the different aspiration time
+      frames that are tracked in the Stitch application, such as short-term, mid-term
+      and long-term aspirations. It contains the aspiration_timeframe_id, description,
+      and translation_key fields, as well as the created_at and updated_at fields
+      for tracking changes. [GenAI Description]
+    columns:
+      - name: aspiration_timeframe_id
+        description: The column 'aspiration_timeframe_id' contains unique IDs of aspiration
+          timeframes. [GenAI Description]
+        tests:
+          - unique
+          - not_null
+
+      - name: description
+        description: The column 'description' contains a text description for each
+          aspiration timeframe. [GenAI Description]
+
+      - name: translation_key
+        description: The 'translation_key' column identifies the translation keyword
+          for the corresponding description. [GenAI Description]
+
+      - name: created_at
+        description: The 'created_at' column stores the time and date that a record
+          was added to the table. [GenAI Description]
+
+      - name: updated_at
+        description: The 'updated_at' column contains a timestamp of when the aspiration
+          timeframe was last updated. [GenAI Description]

@@ -1,0 +1,23 @@
+version: 2
+
+models:
+  - name: stg_app__integration_events
+    description: Application table containing integration events for monitoring dashboard
+    columns:
+      - name: integration_event_id
+        description: Primary key
+        tests:
+          - not_null
+          - unique
+      - name: organization_id
+      - name: organization_uuid
+      - name: email
+      - name: type
+      - name: category
+      - name: details
+      - name: dry_run
+      - name: request_uuid
+      - name: whodunnit_jid
+      - name: extra_data
+      - name: source
+      - name: timestamp

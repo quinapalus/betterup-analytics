@@ -1,0 +1,71 @@
+version: 2
+models:
+  - name: dei_assessment_items
+    description: >
+      This table contains members' unpacked responses for each item in BetterUp's
+      completed assessments, as well as the chronological sequence of each
+      completed assessment per member.
+
+    columns:
+      - name: assessment_item_key
+        description: >
+          Primary key: combination of assessment id and item key
+        tests:
+          - not_null
+          - unique
+
+      - name: sequence
+        description: >
+          The chronological sequence of each assessment, partitioned by member
+          and the type of assessment.
+        tests:
+          - not_null
+
+      - name: assessment_id
+        description: Foreign key to associated assessment.
+        tests:
+          - not_null
+
+      - name: user_id
+        description: Foreign key to associated user.
+        tests:
+          - not_null
+
+      - name: creator_id
+        description: >
+          Denormalized foreign key to associated user who initiated the
+          assessment. Can be a NULL field for particular assessments.
+
+      - name: type
+        description: >
+          String denoting the type of assessment.
+
+      - name: questions_version
+        description: >
+          Version of the Assessment questions. For Whole Person Model assessments,
+          `questions_version` indicates whether assessment is on WPM 1.0 or 2.0.
+
+      - name: created_at
+        description: >
+          Timestamp denoting when the assessment was started. Note that
+          auto-save feature was not implemented immediately, so this field
+          has been backpopulated based on the timestamp of submitted_at until
+          April 2018.
+        tests:
+          - not_null
+
+      - name: submitted_at
+        description: >
+          Timestamp denoting when the assessment was submitted.
+        tests:
+          - not_null
+
+      - name: item_key
+        description: >
+          Unpacked item key from responses field of app_assessments.
+        tests:
+          - not_null
+
+      - name: item_response
+        description: >
+          Unpacked item response from responses field of app_assessments.

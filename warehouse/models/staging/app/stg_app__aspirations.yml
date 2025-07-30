@@ -1,0 +1,40 @@
+version: 2
+models:
+  - name: stg_app__aspirations
+    description: The stg_app__aspirations DBT model stores information about aspiring
+      user goals, including their aspiration timeframes, selected growth areas, a
+      description, and a priority rating. It has the aspiration_id, member_id, aspiration_timeframe_id,
+      growth_focus_area_selection_id, description, priority_rating, created_at and
+      updated_at fields. [GenAI Description]
+    columns:
+      - name: aspiration_id
+        description: The 'aspiration_id' column stores a unique numerical identifier
+          for each aspiration. [GenAI Description]
+        tests:
+          - unique
+          - not_null
+
+      - name: member_id
+        description: The column 'member_id' is the unique identifier of the user associated
+          with each aspiration. [GenAI Description]
+
+      - name: aspiration_timeframe_id
+        description: Column 'aspiration_timeframe_id' is an identifier for timeframes
+          related to the aspirations of a user. [GenAI Description]
+
+      - name: growth_focus_area_selection_id
+        description: The 'growth_focus_area_selection_id' column is a foreign key
+          reference to an area of personal development sub-categorization. [GenAI
+          Description]
+
+      - name: description
+        description: The 'description' column stores user-generated free-text describing
+          the aspects of an aspiration. [GenAI Description]
+
+      - name: created_at
+        description: The 'created_at' column stores the timestamp of when the aspiration
+          record was created. [GenAI Description]
+
+      - name: updated_at
+        description: The column 'updated_at' contains the timestamp when a record
+          was last updated. [GenAI Description]

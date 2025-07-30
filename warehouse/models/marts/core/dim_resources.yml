@@ -1,0 +1,147 @@
+version: 2
+
+models:
+  - name: dim_resources
+    description: The DBT model dim_resources stores data on resources such as videos,
+      podcasts, articles, assessments, and other informational content. It includes
+      fields such as resource_id, source_i18n, source, title_i18n, title, description_i18n,
+      description, type, duration, language, retired, hide_from_recommendation_algorithm,
+      recommended, publicly_available, url, audio_embed_url, content_i18n, content,
+      content_type, content_modality, verb, tag_list, creator_id, host, author_i18n,
+      author, image, external_image_url, ingeniux_id, created_at, updated_at. This
+      model has relationships to parent models for further analysis. [GenAI Description]
+    columns:
+      - name: resource_id
+        description: The 'resource_id' column contains unique identifier values for
+          each resource. [GenAI Description]
+        tests:
+          - unique
+          - not_null
+
+      - name: resource_uuid
+        description: The 'resource_uuid' column is a unique identifier for each resource.
+          [GenAI Description]
+        tests:
+          - unique
+          - not_null
+
+      - name: assessment_configuration_uuid
+        description: Unique identifier of an assessment configuration associated with
+          each resource. [GenAI Description]
+
+      - name: source_i18n
+        description: The 'source_i18n' column contains the internationalized source
+          name associated with each resource. [GenAI Description]
+
+      - name: source
+        description: This column tracks the source system from which the resource
+          data originated. [GenAI Description]
+
+      - name: title_i18n
+        description: Column 'title_i18n' stores localized titles for the corresponding
+          resource. [GenAI Description]
+
+      - name: title
+        description: "'Title' contains the title of an educational resource. [GenAI\
+          \ Description]"
+
+      - name: description_i18n
+        description: A multi-language description of a resource. [GenAI Description]
+
+      - name: description
+        description: Contains resource information such as name, id, and type. [GenAI
+          Description]
+
+      - name: type
+        description: The 'type' column contains the types of resources, such as physical,
+          financial, or skills. [GenAI Description]
+
+      - name: duration
+        description: Duration is the amount of time a resource is active. [GenAI Description]
+
+      - name: language
+        description: Contains the language of the resource. [GenAI Description]
+
+      - name: retired
+        description: This column indicates if a resource is retired or not. [GenAI
+          Description]
+
+      - name: hide_from_recommendation_algorithm
+        description: This column specifies whether a given resource should be excluded
+          from the resource recommendation algorithm. [GenAI Description]
+
+      - name: recommended
+        description: "'Recommended' indicates whether the resource is recommended\
+          \ for use or not. [GenAI Description]"
+
+      - name: publicly_available
+        description: Indicates whether a resource is publicly available or not. [GenAI
+          Description]
+
+      - name: url
+        description: The 'url' column contains the URLs of various resources. [GenAI
+          Description]
+
+      - name: audio_embed_url
+        description: The column 'audio_embed_url' stores embedded audio file URLs.
+          [GenAI Description]
+
+      - name: content_i18n
+        description: This column stores localized content or text in different languages.
+          [GenAI Description]
+
+      - name: content
+        description: The 'content' column contains information about the resources
+          such as names, formats, and descriptions. [GenAI Description]
+
+      - name: content_type
+        description: The 'content_type' column contains the file type associated with
+          each resources. [GenAI Description]
+
+      - name: content_modality
+        description: This column identifies what type of content is associated with
+          the resource. [GenAI Description]
+
+      - name: verb
+        description: The column 'verb' stores the type of action taken with a given
+          resource. [GenAI Description]
+
+      - name: tag_list
+        description: The 'tag_list' column contains a list of tags associated with
+          resources. [GenAI Description]
+
+      - name: creator_id
+        description: A unique identifier for the creator of a resource. [GenAI Description]
+
+      - name: host
+        description: The 'host' column identifies the host machine related to a particular
+          resource. [GenAI Description]
+
+      - name: author_i18n
+        description: This column contains a localized version of an author's name.
+          [GenAI Description]
+
+      - name: author
+        description: The 'author' column contains information about the individual
+          who created the resource. [GenAI Description]
+
+      - name: image
+        description: The 'image' column holds a graphical representation associated
+          with a resource. [GenAI Description]
+
+      - name: external_image_url
+        description: "'external_image_url' is a URL linking to an image related to\
+          \ the resource. [GenAI Description]"
+
+      - name: ingeniux_id
+        description: The 'ingeniux_id' column contains unique identifiers for resources.
+          [GenAI Description]
+
+      - name: created_at
+        description: Contains the date and time when the resource was created. [GenAI
+          Description]
+
+      - name: updated_at
+        description: This column stores the timestamp of when the resource data was
+          last updated. [GenAI Description]
+

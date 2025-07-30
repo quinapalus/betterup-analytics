@@ -1,0 +1,44 @@
+version: 2
+
+models:
+  - name: int_account_health_rubric_behavioral
+    description: ""
+    columns:
+      - name: sfdc_account_id
+        description: "This model does the calculation for the account health behavioral outcomes rubric.
+                  For documentation on the business logic read
+                  https://betterup.atlassian.net/wiki/spaces/AN/pages/3148087297/Behavioral+Growth+Outcomes+Health+Score+Calculation"
+        tests:
+          - unique
+          - not_null
+
+      - name: account_segment
+        description: ""
+
+      - name: mindset_average_percent_growth_from_reference
+        description: ""
+
+      - name: thriving_average_percent_growth_from_reference
+        description: ""
+
+      - name: inspiring_average_percent_growth_from_reference
+        description: ""
+
+      - name: outcome_average_percent_growth_from_reference
+        description: ""
+
+      - name: overall_average_percent_growth_from_reference
+        description: ""
+
+      - name: account_health_rubric_behavorial_overall_score
+        description: ""
+        tests:
+          - accepted_values:
+              #test that only these values exist
+              values: ['Good','Okay','Poor']
+          - dbt_expectations.expect_column_distinct_values_to_contain_set:
+              #test that these values actually exist at least once
+              value_set: ['Good','Okay','Poor']
+
+      - name: count_activated_members
+        description: ""

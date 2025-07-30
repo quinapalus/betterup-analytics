@@ -1,0 +1,10 @@
+{{ if .Values.manual.enabled }}
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: {{ include "dbt.fullname" . }}-{{ .Values.image.tag | replace "." "-" | lower }}-{{ .Release.Revision }}
+  labels:
+    {{- include "dbt.labels" . | nindent 4 }}
+spec:
+  {{- include "dbt.jobSpec" . | nindent 2 }}
+{{ end }}

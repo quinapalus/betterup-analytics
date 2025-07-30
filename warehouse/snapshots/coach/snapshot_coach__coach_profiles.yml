@@ -1,0 +1,25 @@
+version: 2
+
+snapshots:
+  - name: snapshot_coach__coach_profiles
+    description: >
+      Snapshot model of Coach Profile staging model.
+      More docs here: https://betterup.atlassian.net/wiki/spaces/DATA/pages/3345450158/Coach+Snapshot+Data+Model
+    tests:
+      - unique:
+          column_name: "(uuid || '-' || dbt_valid_from || '-' || dbt_valid_to)"
+
+    columns:
+      - name: uuid
+        description: ""
+
+      - name: id
+        description: ""
+
+      - name: dbt_valid_from
+        description: ""
+
+      - name: dbt_valid_to
+        description: ""
+
+        # Not including all column names; unnecessarily verbose. Same columns as stg_coach__coach_profiles

@@ -1,0 +1,65 @@
+version: 2
+
+models:
+  - name: stg_app__track_assignments
+
+    columns:
+      - name: track_assignment_id
+        description: Unique identifer (primary key) of the Track Assignment
+        tests:
+          - unique
+          - not_null
+      - name: created_at
+        description: Timestamp when the track assignment was created
+      - name: ended_at
+        description: Timestamp when the member's track assignment was ended. NULL
+          if the track assignment is currently unended (i.e. open)
+      - name: ended_reason
+        description: Enumerated value set for ended track_assignments
+      - name: ends_on
+        description: Timestamp when the member's track assignment is scheduled to
+          end.
+      - name: is_extended_network_coaching_enabled
+        description: Column is_extended_network_coaching_enabled indicates whether
+          extended network coaching is enabled for the track assignment. [GenAI Description]
+      - name: is_hidden
+        description: Boolean flag indicating whether the track assignment is hidden
+          from partners and coaches (soft-delete). Set manually by platform admins.
+      - name: minutes_limit
+        description: The 'minutes_limit' column stores the maximum number of minutes
+          for a given coach-member engagement. [GenAI Description]
+      - name: minutes_used
+        description: Number of minutes of coaching used on the current track assignment.
+      - name: is_on_demand_coaching_enabled
+        description: This column indicates whether on-demand coaching by coaches is
+          enabled or not. [GenAI Description]
+      - name: is_primary_coaching_enabled
+        description: Boolean flag, true if member is eligible for Primary coaching.
+      - name: primary_coaching_ends_at
+        description: Primary coaching end timestamp for the member's track assignment.
+          [GenAI Description]
+      - name: is_program_change_notifications_enabled
+        description: Indicates if the user subscribed to program change notifications.
+          [GenAI Description]
+      - name: track_id
+        description: Foreign Key for the associated Track
+      - name: updated_at
+        description: '"updated_at" is a timestamp of when the track assignment data
+          was last updated. [GenAI Description]'
+      - name: user_id
+        description: Foreign Key for the associated Member
+      - name: primary_coaching_starts_at
+        description: The 'primary_coaching_starts_at' column stores the timestamp
+          when Primary Coaching has started for the member. [GenAI Description]
+      - name: is_care_coaching_enabled
+        description: This column indicates whether care coaching is enabled for the
+          associated member. [GenAI Description]
+      - name: is_peer_coaching_enabled
+#      - name: is_community_coaching_enabled --this column does not exist anymore in the postgres DB
+
+        description: The column 'is_peer_coaching_enabled' indicates whether peer
+          coaching is enabled for a given track assignment. [GenAI Description]
+    description: stg_app__track_assignments is a DBT model which stores data related
+      to user track assignments such as when the assignment started, the ID of the
+      track assigned, the amount of minutes used, and other related details. [GenAI
+      Description]

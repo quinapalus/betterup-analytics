@@ -1,0 +1,36 @@
+openapi: 3.0.1
+info:
+  title: Extract & Load Pipelines
+  description: >
+    A group of custom Extract & Load workflows that are orchestrated by Github Actions and 
+    soon to be migrated to Argo Workflows
+  x-cortex-git:
+    github:
+      repository: betterup/betterup-analytics
+  x-cortex-tag: betterup-analytics-loaders
+  x-cortex-type: service
+  x-cortex-link:
+  - name: Existing Workflow Job List
+    type: documentation
+    url: https://betterup.atlassian.net/wiki/spaces/DATAOPS/pages/3221815330/Airflow+Jobs+List
+  - name: Workflow Job Datadog Monitoring Dashboard
+    type: Monitoring Dashboard
+    url: https://app.datadoghq.com/dashboard/cep-e9z-qjs/betterup-analytics-workflow-job-monitoring
+  - name: Datadog Workflow Job List
+    type: Datadog Job List
+    url: https://app.datadoghq.com/ci/pipelines?search=pipeline&start=1677863622849&end=1678468422849&paused=false
+  x-cortex-apm:
+    datadog:
+      monitors:
+        - 113292285
+        - 113301252
+  x-cortex-owners:
+  - name: betterup/data-operations-squad
+    type: GROUP
+  - type: SLACK
+    channel: squad-data-ops
+  x-cortex-service-groups:
+  - external-system
+  - tier-2
+  x-cortex-custom-metadata:
+    codeowner-path: .github/CODEOWNERS

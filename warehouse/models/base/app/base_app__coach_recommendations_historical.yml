@@ -1,0 +1,25 @@
+version: 2
+
+models:
+  - name: base_app__coach_recommendations_historical
+    description: ""
+    columns:
+      - name: algorithm
+      - name: available_during_work_week
+      - name: coach_id
+      - name: coach_recommendation_set_id
+      - name: created_at
+      - name: eligible_assignments
+      - name: goals_score
+      - name: id
+        tests:
+          - unique
+          - not_null
+      - name: overall_score
+      - name: position
+      - name: style_score
+      - name: successful_assignments
+      - name: upcoming_available_hours
+      - name: updated_at
+      - name: user_id
+      - name: next_available_start_time

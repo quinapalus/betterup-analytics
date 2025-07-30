@@ -1,0 +1,45 @@
+version: 2
+
+models:
+  - name: stg_sfdc__opportunity_stages
+    description: DBT Model stg_sfdc__opportunity_stages stores data for each stage
+      of the salesforce.com Opportunities in a data model. It includes fields such
+      as sfdc_opportunity_stage_id, api_name, master_label, is_active, is_closed,
+      is_won, forecast_category_name, and description. This model can be used to analyze
+      sales performance over time and to determine trends in sales cycles. [GenAI
+      Description]
+    columns:
+      - name: sfdc_opportunity_stage_id
+        description: This column contains a unique identifier for each Salesforce
+          Opportunity Stage. [GenAI Description]
+        tests:
+          - not_null
+          - unique
+
+      - name: api_name
+        description: "'api_name' is the unique identifier used by Salesforce to refer\
+          \ to the stage of an opportunity. [GenAI Description]"
+
+      - name: master_label
+        description: The 'master_label' column contains a single-word description
+          for an opportunity stage. [GenAI Description]
+
+      - name: is_active
+        description: The field 'is_active' indicates whether the opportunity stage
+          is active or not. [GenAI Description]
+
+      - name: is_closed
+        description: '"is_closed" is a Boolean field which indicates whether a given
+          stage of an opportunity is closed (e.g. rejected, lost, etc.). [GenAI Description]'
+
+      - name: is_won
+        description: The 'is_won' column is a boolean value representing whether the
+          opportunity stage resulted in a win. [GenAI Description]
+
+      - name: forecast_category_name
+        description: The "forecast_category_name" column contains the predicted probability
+          of a sales opportunity being won. [GenAI Description]
+
+      - name: description
+        description: This column contains a textual description of each opportunity
+          stage stored in Salesforce. [GenAI Description]

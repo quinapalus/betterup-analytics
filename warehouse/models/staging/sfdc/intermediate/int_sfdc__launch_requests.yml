@@ -1,0 +1,92 @@
+version: 2
+
+models:
+  - name: int_sfdc__launch_requests
+    description: ""
+    tests:
+      - dbt_utils.expression_is_true:
+          expression: "not is_deleted"
+    columns:
+      - name: sfdc_launch_request_id
+        description: ""
+        tests:
+          - unique
+          - not_null
+
+      - name: sfdc_opportunity_id
+        description: ""
+        tests:
+          - not_null
+
+      - name: launch_request_created_by_id
+        description: ""
+
+      - name: deployment_manager_id
+        description: ""
+
+      - name: sfdc_record_type_id
+        description: ""
+
+      - name: launch_request_name
+        description: ""
+
+      - name: status
+        description: ""
+
+      - name: deployment_manager_customer_interaction_hours
+        description: ""
+
+      - name: deployment_manager_internal_coordination_hours
+        description: ""
+
+      - name: deployment_manager_technical_configuration_hours
+        description: ""
+
+      - name: deployment_manager_member_orientation_prep_hours
+        description: ""
+
+      - name: specialist_on_demand_circles_licenses
+        description: ""
+
+      - name: executive_specialist_on_demand_circles_licenses
+        description: ""
+
+      - name: coaching_circles_within_company_licenses
+        description: ""
+
+      - name: connect_beta_licenses
+        description: ""
+
+      - name: lead_specialist_on_demand_licenses
+        description: ""
+
+      - name: lead_executive_one_to_one_on_demand_licenses
+        description: ""
+
+      - name: care_licenses
+        description: ""
+
+      - name: one_to_one_coaching_only_licenses
+        description: ""
+
+      - name: coaching_circles_multi_company_licenses
+        description: ""
+
+      - name: lead_sales_performance_licenses
+        description: ""
+
+      - name: created_at
+        description: ""
+
+      - name: proposed_launch_date
+        description: ""
+
+      - name: is_deleted
+        description: ""
+
+      - name: sfdc_account_id
+        description: ""
+        tests:
+
+      - name: record_type_name
+        description: ""

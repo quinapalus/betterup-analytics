@@ -1,0 +1,84 @@
+version: 2
+models:
+  - name: fact_coach_satisfaction_response
+    description: >
+      Fact table for coach responses to satisfaction items. Grain is one row per coach response
+      to given item prompt. Unlike the `fact_member_satisfaction_response` table, we are not
+      limiting any responses here in terms of tracks or accounts as we are observing responses
+      from all coaches present in `dei_assessment_items`. Note that this table should be used
+      for any future satisfaction items on the coach side, similar to how we incorporated post-
+      session ratings and one-month survey items in `fact_member_satisfaction_response`.
+
+    columns:
+      - name: date_key
+        description: Foreign key to conformed Date dimension.
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_date')
+              field: date_key
+
+      - name: coach_app_coach_id
+        description: Foreign key to the associated coach.
+        tests:
+          - not_null
+          - relationships:
+              to: ref('int_app__users')
+              field: user_id
+
+      - name: assessment_item_key
+        description: Foreign key to conformed Assessment Item dimension.
+        tests:
+          - not_null
+          - unique:
+              config:
+                #A note on this config: there is a known issue with assessment_item uniqueness. This also happens when we try to assert uniqueness on the fact_assessment_item_responses model
+                #Since it is only a handful of duplicates and is on the docket to be addressed in the near future, 
+                #I have added this config to ensure that there is at least a guardrail for uniqueness on this model
+                severity: error
+                error_if: ">5"
+                warn_if: ">5"
+          - relationships:
+              to: ref('dim_assessment_item')
+              field: assessment_item_key
+
+
+      - name: assessment_item_category
+        description: General category of the given assessment item.
+        tests:
+          - not_null
+          - accepted_values:
+              values: [Coach Satisfaction]
+
+      - name: assessment_item_response
+        description: >
+          Actual coach response to the given prompt.
+        tests:
+          - not_null
+
+      - name: assessment_item_score
+        description: Scored response, suitable for summary along any dimension.
+        tests:
+          - not_null
+
+      - name: coach_response_category
+        description: >
+          Sanitized response category based on the coach response. For NPS items,
+          response categories are "Promoter", "Neutral", and "Detractor". This also
+          might be expanded with other categories if other coach satisfaction responses
+          become available in the future.
+
+      - name: app_assessment_id
+        description: >
+          Foreign key to the assessment that's associated with the coach response.
+        tests:
+          - not_null
+          - relationships:
+              to: ref('int_app__assessments')
+              field: assessment_id
+
+      - name: app_assessment_submitted_at
+        description: >
+          UTC timestamp denoting when the assessment was submitted.
+        tests:
+          - not_null

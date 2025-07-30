@@ -1,0 +1,56 @@
+[sqlfluff]
+verbose = 0
+nocolor = false
+dialect = snowflake
+recurse = 0
+output_line_length = 100
+runaway_limit = 10
+ignore_templated_areas = true
+
+exclude_rules = L052, L009, L035, L044, L047, L034
+    #L052: Statements must need with a semi-colon
+    #L009: Files must end with a single trailing newline
+    #L035: Do not specify else null in a case when statement
+    #L047: Use consisten syntax to express "count number of rows"
+    #L034: select wildcards then simple targets before calculations and aggregates. 
+
+sql_file_exts = .sql
+
+##########################
+#        THE RULES:      #
+##########################
+
+
+##Use trailing commands
+[sqlfluff:layout:type:comma]
+spacing_before = touch
+line_position = trailing
+
+## Line of SQL Should be no longer than 80 characters
+max_line_length = 80
+indent_unit = space
+single_table_references = consistent
+
+
+[sqlfluff:rules:layout.long_lines] #Lines that are too long
+ignore_comment_lines = True
+ignore_comment_clauses = True
+
+[sqlfluff:rules:capitalisation.keywords]
+# select, group, from
+capitalisation_policy = lower
+
+[sqlfluff:rules:capitalisation.functions]
+# functions like null or sum()
+capitalisation_policy = lower
+
+[sqlfluff:rules:capitalisation.identifiers]
+capitalisation_policy = lower
+
+[sqlfluff:rules:capitalisation.literals]
+## boolean values like true, false
+capitalisation_policy = lower
+
+[sqlfluff:rules:capitalisation.types]
+## data types like ::string, ::numeric
+capitalisation_policy = lower

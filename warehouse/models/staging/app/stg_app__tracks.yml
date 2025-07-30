@@ -1,0 +1,199 @@
+version: 2
+
+models:
+  - name: stg_app__tracks
+    description: ""
+    columns:
+      - name: track_id
+        description: "Primary key"
+        tests:
+          - unique
+          - not_null
+
+      - name: name
+        description: ""
+
+      - name: program_name
+        description: ""
+
+      - name: overview
+        description: ""
+
+      - name: default_resource_list_id
+        description: ""
+
+      - name: organization_id
+        description: ""
+
+      - name: contract_id
+        description: ""
+
+      - name: ends_on
+        description: ""
+
+      - name: restricted
+        description: ""
+
+      - name: minutes_limit
+        description: ""
+
+      - name: members_limit
+        description: ""
+
+      - name: length_days
+        description: ""
+
+      - name: sfdc_opportunity_id
+        description: ""
+
+      - name: includes_behavioral_assessments
+        description: ""
+
+      - name: manager_feedback_enabled
+        description: ""
+
+      - name: reflection_point_interval_days
+        description: ""
+
+      - name: reflection_point_interval_appointments
+        description: ""
+
+      - name: num_reflection_points
+        description: ""
+
+      - name: deployment_type
+        description: ""
+
+      - name: deployment_group
+        description: ""
+
+      - name: launches_on
+        description: ""
+
+      - name: estimated_seat_count
+        description: ""
+
+      - name: member_orientation
+        description: ""
+
+      - name: use_cases
+        description: ""
+
+      - name: customer_goals
+        description: ""
+
+      - name: key_satisfaction_driver
+        description: ""
+
+      - name: wpm_behavior_goals
+        description: ""
+
+      - name: aggregate_hours_limit
+        description: ""
+
+      - name: deployment_cadence
+        description: ""
+
+      - name: whole_person360_enabled
+        description: ""
+
+      - name: whole_person180_enabled
+        description: ""
+
+      - name: coaching_primary_enabled
+        description: ""
+
+      - name: coaching_on_demand_enabled
+        description: ""
+
+      - name: coaching_extended_network_enabled
+        description: ""
+
+      - name: whole_person_model_2
+        description: ""
+
+      - name: staffing_member_levels
+        description: ""
+
+      - name: coaching_cloud
+        description: ""
+
+      - name: program_briefing_duration_minutes
+        description: ""
+
+      - name: program_briefing_automatic_payment
+        description: ""
+
+      - name: staffing_risk_levels
+        description: ""
+
+      - name: staffing_tiers
+        description: ""
+
+      - name: staffing_industries
+        description: ""
+
+      - name: client_limit
+        description: ""
+
+      - name: stripe_pricing_plan_id
+        description: ""
+
+      - name: staffing_languages
+        description: ""
+
+      - name: staffing_qualifications
+        description: ""
+
+      - name: account_qualifications
+        description: ""
+
+      - name: certification_qualifications
+        description: ""
+
+      - name: focus_qualifications
+        description: ""
+
+      - name: postgrad_qualifications
+        description: ""
+
+      - name: product_qualifications
+        description: ""
+
+      - name: professional_qualifications
+        description: ""
+
+      - name: segment_qualifications
+        description: ""
+
+      - name: created_at
+        description: ""
+
+      - name: updated_at
+        description: ""
+
+      - name: internal_notes
+        description: ""
+
+      - name: downloadable
+        description: ""
+
+      - name: videochat_recording_enabled
+        description: ""
+
+      - name: primary_coaching_months_limit
+        description: ""
+
+      - name: salesforce_program_identifier
+        description: ""
+
+      - name: solution_uuid
+        description: ""
+
+      - name: community
+        description: ""
+
+      - name: is_deleted
+        description: >
+          This table contains destroyed/deleted track records found the BU app versions
+          table.  Is_delete is TRUE if the track record came from the versions table.

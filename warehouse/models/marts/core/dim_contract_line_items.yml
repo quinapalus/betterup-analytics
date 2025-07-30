@@ -1,0 +1,50 @@
+version: 2
+
+models:
+  - name: dim_contract_line_items
+    columns:
+      - name: contract_line_item_id
+        description: ""
+        tests:
+          - unique
+          - not_null
+      - name: contract_id
+        description: ""
+      - name: product_id
+        description: ""
+      - name: product_subscription_id
+        description: ""
+      - name: subscription_terms_id
+        description: ""
+      - name: organization_id
+        description: ""
+      - name: salesforce_subscription_id
+        description: ""
+      - name: salesforce_order_item_identifier
+        description: ""
+      - name: salesforce_legacy_root_id
+        description: ""
+      - name: salesforce_legacy_subscription_id
+        description: ""
+      - name: seats
+        description: ""
+      - name: coaching_months
+        description: ""
+      - name: covered_lives
+        description: ""
+      - name: deployment_type
+        description: ""
+      - name: sku
+        description: ""
+      - name: starts_at
+        description: ""
+      - name: ends_at
+        description: ""
+      - name: created_at
+        description: ""
+      - name: updated_at
+        description: ""
+      - name: is_active
+        description: ""
+      - name: status
+        description: ""

@@ -1,0 +1,17 @@
+version: 2
+
+sources:
+  - name: assessments
+    database: analytics
+    schema: assessments
+
+    freshness:
+      warn_after:
+        count: 4
+        period: hour
+      error_after:
+        count: 8
+        period: hour
+
+    tables:
+      - name: assessments__assessment_text_scores

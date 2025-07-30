@@ -1,0 +1,151 @@
+version: 2
+models:
+  - name: fact_coach_payment
+    description: >
+      Fact table containing information on each payment paid out to BetterUp
+      coaches.
+
+    columns:
+      - name: shl_payment_id
+        description: Primary Key based on Shortlist-designated Payment ID.
+        tests:
+          - unique
+          - not_null
+
+      - name: date_key
+        description: >
+          Foreign key to conformed Date dimension associated with the
+          accrual date for the payment used by Accounting (also the date
+          the event was sent to Shortlist).
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_date')
+              field: date_key
+
+      - name: coach_key
+        description: >
+          Foreign key to conformed Coach dimension for the coach associated
+          with the payment.
+        tests:
+          - not_null
+
+      - name: member_key
+        description: >
+          Foreign key to conformed Member dimension, if a member was associated
+          with a payment paid out to the coach.
+        tests:
+          - not_null
+
+      - name: deployment_key
+        description: >
+          Foreign key to conformed Deployment dimension, if a track was associated
+          with a payment paid out to the coach.
+        tests:
+          - not_null
+
+      - name: account_key
+        description: >
+          Foreign key to conformed Account dimension, if an account was associated
+          with a payment paid out to the coach.
+        tests:
+          - not_null
+
+      - name: contract_key
+        description: >
+          Foreign key to conformed Contract dimension, if a contract was associated
+          with a payment paid out to the coach.
+        tests:
+          - not_null
+
+      - name: app_billable_event_id
+        description: >
+          Denormalized foreign key to the billable event associated with the payment.
+        tests:
+          - unique
+          - not_null
+
+      - name: app_event_type
+        description: >
+          String denoting the type of event associated with the payment.
+        tests:
+          - not_null
+
+      - name: augmented_event_type
+        description: >
+          String denoting the augmented type of event associated with the
+          coach payment.
+        tests:
+          - not_null
+
+      - name: is_coach_cost_manual_upload
+        description: >
+          String denoting whether the cost associated with the event type is a
+          manual upload by the finance team.
+
+      - name: deployment_type
+        description: >
+          String denoting the type of deployment associated with the payment.
+
+      - name: app_event_at
+        description: >
+          Timestamp denoting when the event occurred.
+        tests:
+          - not_null
+
+      - name: event_reported_at
+        description: >
+          Timestamp denoting when the event was reported by the finance team. Particularly,
+          if the event was manually uploaded by the finance team, `sent_to_processor_at` reflects
+          when the upload occurred, not when the actual event occurred (which is always in the prior month).
+          For manual uploads, therefore, `event_reported_at` is always equal to `sent_to_processor_at` - 1 month.
+          This is done to facilitate reporting on data in the `carina` layer.
+        tests:
+          - not_null
+
+      - name: session_requested_length
+        description: >
+          Integer denoting the requested length for the session. NULL if the event type is not
+          `completed_sessions`.
+
+      - name: usage_minutes
+        description: >
+          The length of the event reported in minutes. Should only be non-zero for
+          session-related events (`completed_sessions`, `late_cancellation`, `late_reschedules`, `missed_session`).
+        tests:
+          - not_null
+
+      - name: coach_payment_local_amount
+        description: >
+          Amount paid out to coaches in local currency through Shortlist.
+        tests:
+          - not_null
+
+      - name: coach_payment_local_currency
+        description: >
+          ISO 4217 Alpha code for the local currency associated with the payment
+          through Shortlist.
+        tests:
+          - not_null
+
+      - name: coach_payment_without_markup_usd_amount
+        description: >
+          Amount paid out to coaches when converted to USD from local currency,
+          excluding Shortlist's processing fees.
+
+      - name: coach_markup_usd_amount
+        description: >
+          Shortlist's processing fees, converted to USD dollars.
+
+      - name: coach_payment_with_markup_usd_amount
+        description: >
+          Amount paid out to coaches when converted to USD from local currency,
+          including Shortlist's processing fees.
+
+      - name: accounting_category
+        description: >
+          String denoting the General Ledger accounting category.
+
+      - name: parent_accounting_category
+        description: >
+          String denoting the parent General Ledger accounting category.

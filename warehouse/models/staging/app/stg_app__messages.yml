@@ -1,0 +1,55 @@
+version: 2
+
+models:
+  - name: stg_app__messages
+    description: The DBT Model stg_app__messages is comprised of information regarding
+      user messages across different conversations. The data set includes fields such
+      as attachment, attachment_content_type, attachment_filename, created_at, created_from,
+      recipient_id, sender_id, conversation_participant_id, and more, all of which
+      help inform user activities across conversations in the application. [GenAI
+      Description]
+    columns:
+      - name: attachment_status
+        description: The 'attachment_status' column stores the status of an attachment
+          associated with a message. [GenAI Description]
+      - name: body
+        description: The 'body' column contains the contents of the message sent or
+          received. [GenAI Description]
+      - name: client_uuid
+        description: "'client_uuid' identifies the client associated with a message.\
+          \ [GenAI Description]"
+      - name: coach_assignment_id
+        description: The 'coach_assignment_id' column holds the unique identifier
+          for a coach assignment. [GenAI Description]
+      - name: created_at
+        description: The 'created_at' column contains the timestamp when the message
+          was created. [GenAI Description]
+      - name: created_from
+        description: The 'created_from' column identifies which application the message
+          was created from. [GenAI Description]
+      - name: message_id
+        tests:
+          - unique
+          - not_null
+        description: The 'message_id' column represents the unique identifier for
+          each message. [GenAI Description]
+      - name: read_by_recipient_at
+        description: The 'read_by_recipient_at' column stores a timestamp indicating
+          when the message was read by its recipient. [GenAI Description]
+      - name: recipient_id
+        description: The recipient_id column stores the ID of the person receiving
+          the message. [GenAI Description]
+      - name: sender_id
+        description: The 'sender_id' column identifies the user who sent the message.
+          [GenAI Description]
+      - name: updated_at
+        description: The 'updated_at' column stores a timestamp for when the message
+          was last updated. [GenAI Description]
+      - name: conversation_participant_id
+        description: The 'conversation_participant_id' column identifies a participant
+          of a conversation in the app. [GenAI Description]
+      - name: generated_message_id
+        description: Foreign key to generated_messages table. This is populated if
+          the message was generated using the AI beta feature ZAP!. It is null if
+          message was written normally, without ZAP!.
+

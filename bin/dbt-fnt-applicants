@@ -1,0 +1,21 @@
+#!/bin/bash
+
+# configure bash to exit on error
+set -u
+set -eo pipefail
+
+# Create a virtualenv to install dbt and its requirements
+python3 -m venv venv
+venv/bin/pip install dbt
+. venv/bin/activate
+
+# Setup dbt
+cd warehouse
+mkdir -p ~/.dbt
+cp setup.profiles.yml ~/.dbt/profiles.yml
+dbt deps
+
+# Run dbt
+dbt run --models=fnt_applicants --target=snowflake-dev"
+
+echo "Done."

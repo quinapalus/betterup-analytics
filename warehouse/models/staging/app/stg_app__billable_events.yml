@@ -1,0 +1,86 @@
+version: 2
+
+models:
+    - name: stg_app__billable_events
+      description: >
+          Application table containing records of all application activities that *may* be paid out to coaches. `billable_events` is responsible for the interface between the application and our external coach payment processor. Note: not all `billable_events` result in external payments, but all external payments orginate from a `billable_event`.
+          The model removes billable events that have been deleted from the Admin Panel.
+
+      columns:
+          - name: billable_event_id
+            description: Primary key
+            tests:
+                - unique
+                - not_null
+
+          - name: event_type
+            description: Event type. Note `week_messaging` was removed as a valid `event_type` in [#6693](https://github.com/betterup/betterup-app/pull/6693) (coach compensation update released 2/1/2018).
+            tests:
+                - not_null
+                
+          - name: event_at
+            description: Time of the actual event in UTC.
+            tests:
+                - not_null
+
+          - name: usage_minutes
+            description: >
+                The number of minutes that are deducted from a member's allotment.
+                Note: should only be non-zero for session-related events (`completed_sessions`, `late_cancellation`, `late_reschedules`, `missed_session`).
+            tests:
+                - not_null
+
+          - name: member_id
+            description: >
+                Foreign key for `members`. Note: Does not apply to non-member related events, i.e. `member_id IS NULL` for `event_type IN ('launch_call', 'training_session', 'training_stipend', 'incentive', 'event_adjustments', 'miscellaneous')`.
+
+          - name: coach_id
+            description: Foreign key for `coaches`.
+            tests:
+                - not_null
+
+          - name: track_id
+            description: >
+                Foreign key for `tracks`. Note: Does not apply to events that are manually uploaded ('launch_call', 'training_session', 'training_stipend', 'incentive', 'event_adjustments', 'miscellaneous')`.
+
+          - name: track_assignment_id
+            description: >
+                Foreign key for `track_assignments`. Note: Does not apply to events that are manually uploaded ('launch_call', 'training_session', 'training_stipend', 'incentive', 'event_adjustments', 'miscellaneous')`.
+
+          - name: associated_record_type
+            description: >
+                Object class for polymorphic foreign relationship to associated record. 
+                Note: Does not apply to non-application related events, 
+                i.e. `associated_record_type IS NULL` for `event_type IN 
+                ('launch_call', 'training_session', 'training_stipend', 'incentive', 'event_adjustments', 'miscellaneous')`. 
+                `associated_record_type` is also `NULL` for `event_type = late_cancellation` 
+                prior to implementation of [#6701](https://github.com/betterup/betterup-app/pull/6701) (soft delete sessions released 2/5/2018).
+
+          - name: associated_record_id
+            description: Foreign key for polymorphic relationship to associated record.
+
+          - name: has_pay_rate
+            description: >
+              Boolean indicating whether given billable event record has an associated
+              pay rate. Billable Events without an associated pay rate will not be sent
+              to Shortlist. Coaches that are also BetterUp employees are expected to
+              not have a pay rate set.
+            
+          - name: is_primary_b2b_session
+              Boolean indicating whether or not the billing event was a primary coach B2B session. 
+
+          - name: response_body
+            description: API response from Shortlist.
+
+          - name: sent_to_processor_at
+            description: Time when the event was sent to Shortlist in UTC.
+
+          - name: created_at
+            description: Time when the Rails object was created in UTC.
+            tests:
+                - not_null
+
+          - name: updated_at
+            description: Time when the Rails object was updated in UTC.
+            tests:
+                - not_null

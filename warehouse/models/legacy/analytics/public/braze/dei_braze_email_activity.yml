@@ -1,0 +1,67 @@
+version: 2
+models:
+  - name: dei_braze_email_activity
+    description: >
+      Email events as reported by Braze. A more in-depth explanation of these fields
+      can be found in these two links:
+        https://segment.com/docs/connections/sources/catalog/cloud-apps/braze/
+        https://segment.com/docs/connections/spec/common/
+
+    columns:
+      - name: id
+        description: Unique identifier of each Braze event
+
+      - name: uuid_ts
+        description: Timestamp of event
+
+      - name: dispatch_id
+        description: Unique identifier of the communication sent, email events can
+          be linked together with this. The same dispatch can be sent to multiple
+          users.
+
+      - name: user_id
+        description: The Monolith User active record model id for the recipient
+
+      - name: event
+        description: type of email event that occured
+
+      - name: campaign_id
+        description: Braze Campaign id the email was triggered from if applicable
+
+      - name: campaign_name
+        description: The name of the Braze Campaign id the email was triggered from
+          if applicable
+
+      - name: message_variation_id
+        description: Id of the message variation of the email if applicable
+
+      - name: canvas_id
+        description: The id of the Braze Canvas the email was triggered from if applicable
+
+      - name: canvas_name
+        description: The name of the Braze Canvas the email was triggered from if
+          applicable
+
+      - name: canvas_variation_id
+        description: Id of the Braze Canvas variation the email was triggered from
+          if applicable
+
+      - name: canvas_step_id
+        description: The id of the Braze Canvas step the email was triggered from
+          if applicable
+
+      - name: canvas_step_name
+        description: The name of the Braze Canvas step the email was triggered from
+          if applicable
+
+      - name: bounce_reason
+        description: The bounce reason for the email, only applies to email_bounce
+          and email_soft_bounce events
+
+      - name: link_url
+        description: The url of the email link clicked by the user, only applies to
+          email_link_clicked events
+
+      - name: machine_open
+        description: An indicator that the email was opened by an automated process,
+          only applies to email_opened events

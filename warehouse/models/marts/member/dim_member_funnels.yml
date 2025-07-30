@@ -1,0 +1,30 @@
+version: 2
+
+models:
+  - name: dim_member_funnels
+    description: The DBT model dim_member_funnels is a dimensional data model that
+      tracks the progress of member funnels. It is composed of fields referring to
+      funnel_type, event_name and funnel_stage, plus a primary_key generated from
+      a unioned select clause of the related parent models. This model can be used
+      to gain insights on member funnels and track member interactions over time.
+      [GenAI Description]
+    columns:
+      - name: primary_key
+        description: The 'primary_key' column is a generated surrogate key used to
+          identify the combination of the 'funnel_type', 'event_name', and 'funnel_stage"
+          columns in the model. [GenAI Description]
+        tests:
+          - unique
+          - not_null
+
+      - name: funnel_type
+        description: The 'funnel_type' column contains the type of marketing funnel
+          that a member has participated in. [GenAI Description]
+
+      - name: event_name
+        description: The 'event_name' column contains the name of the funnel event.
+          [GenAI Description]
+
+      - name: funnel_stage
+        description: The 'funnel_stage' column provides a categorization of the user's
+          progress within the funnel. [GenAI Description]

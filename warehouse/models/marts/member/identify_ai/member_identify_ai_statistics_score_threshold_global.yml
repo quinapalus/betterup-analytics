@@ -1,0 +1,28 @@
+
+version: 2
+
+models:
+  - name: member_identify_ai_statistics_score_threshold_global
+    description: Calculates mean, median, mode for member scores across reporting groups (globally)
+
+    columns:
+      - name: primary_key
+        description: ""
+        tests:
+          - unique
+          - not_null
+
+      - name: avg_score
+        description: mean of the member scores globally
+        tests:
+          - not_null
+
+      - name: median_score
+        description: median of the member scores globally
+        tests:
+          - not_null
+
+      - name: mode_score
+        description: mode of the member scores globally
+        tests:
+          - not_null

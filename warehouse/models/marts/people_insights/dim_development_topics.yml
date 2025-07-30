@@ -1,0 +1,52 @@
+version: 2
+
+models:
+  - name: dim_development_topics
+    description: The DBT model dim_development_topics is a collection of development
+      topics information, related to a parent model. This model contains nine fields
+      containing the development_topic_id, name_i18n, name, translation_key, topic_theme_id,
+      topic_version, is_coach_selectable, is_member_selectable, created_at, updated_at
+      and its related fields. [GenAI Description]
+    columns:
+      - name: development_topic_id
+        description: The column 'development_topic_id' stores unique identifiers for
+          different development topics. [GenAI Description]
+        tests:
+          - unique
+          - not_null
+
+      - name: name_i18n
+        description: The 'name_i18n' column contains the internationalized topic name
+          for the development topic. [GenAI Description]
+
+      - name: name
+        description: The "name" column contains the name of the development topic.
+          [GenAI Description]
+
+      - name: translation_key
+        description: The 'translation_key' column stores a key used to match translated
+          versions of development topics. [GenAI Description]
+
+      - name: topic_theme_id
+        description: The 'topic_theme_id' column contains a unique identifier for
+          the theme associated with a development topic. [GenAI Description]
+
+      - name: topic_version
+        description: The 'topic_version' column stores the version of the development
+          topics. [GenAI Description]
+
+      - name: is_coach_selectable
+        description: Indicates whether a coach can select the development topic. [GenAI
+          Description]
+
+      - name: is_member_selectable
+        description: This column indicates if a member is allowed to select the development
+          topic or not. [GenAI Description]
+
+      - name: created_at
+        description: Column 'created_at' stores the date and time when each development
+          topic was created. [GenAI Description]
+
+      - name: updated_at
+        description: The 'updated_at' column stores the timestamp of when a record
+          in the development_topics table is updated. [GenAI Description]

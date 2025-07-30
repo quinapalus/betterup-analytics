@@ -1,0 +1,8 @@
+item_key,item_prompt,scale
+leveraging_strengths,"How has the member leveraged their strengths to approach challenges, to grow, or to learn?",text_response
+next_steps,"What are the next steps in the member's journey?",text_response
+progress_toward_goals,"What has the member learned in service of their goals?",text_response
+changed_or_grown,In what ways has this member changed or grown since starting their BetterUp journey?,text_response
+milestones_achievements_or_learnings,What notable milestones/achievements/learnings has this member gained since starting their BetterUp coaching journey?,text_response
+next_stage,Where do you see this member going in the next stage of their personal and professional growth?,text_response
+covid_session_helped,If applicable would you like to provide any additional thoughts on how this session helped to reduce the personal and professional impact of COVID-19 for your member?,text_response

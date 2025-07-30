@@ -1,0 +1,40 @@
+version: 2
+models:
+  - name: dei_coach_available_time_blocks
+    description: >
+      This model provides upcoming available blocks of time for coaches for coach
+      ops reporting. There can be multiple blocks per timeslot and the durations can
+      be any >0 amount of time. We limit ourselves to blocks of time starting within
+      the next 60 days.
+
+    columns:
+      - name: timeslot_block_start_key
+        description: Primary key -- composite of timeslot id and block start time
+        tests:
+          - not_null
+          - unique
+
+      - name: coach_id
+        description: Id of the coach
+        tests:
+          - not_null
+
+      - name: timeslot_id
+        description: Timeslot id in which the block of time is contained.
+        tests:
+          - not_null
+
+      - name: block_starts_at
+        description: Time at which the block starts.
+        tests:
+          - not_null
+
+      - name: block_ends_at
+        description: Time at which the block ends.
+        tests:
+          - not_null
+
+      - name: block_duration_minutes
+        description: Length of the block of time in minutes.
+        tests:
+          - not_null

@@ -1,0 +1,62 @@
+version: 2
+
+models:
+  - name: stg_app__scheduled_jobs
+    description: The DBT model stg_app__scheduled_jobs is a representation of the
+      raw.stitch_app.scheduled_jobs table, containing details about scheduled jobs
+      such as their job type, status, message, scheduling user Id, and timestamp data.
+      This model includes relationships to parent models, and has the fields scheduled_job_id,
+      job_type, perform_at, scheduling_user_id, sidekiq_job_id, enqueued_at, started_at,
+      completed_at, status, message, created_at, updated_at. [GenAI Description]
+    columns:
+      - name: scheduled_job_id
+        description: The 'scheduled_job_id' identifies each entry in the table of
+          stored scheduled jobs. [GenAI Description]
+        tests:
+          - unique
+          - not_null
+
+      - name: job_type
+        description: The 'job_type' column stores the type of job that was scheduled.
+          [GenAI Description]
+
+      - name: perform_at
+        description: '"Perform_at" is a timestamp indicating the time when the scheduled
+          job should be performed. [GenAI Description]'
+
+      - name: scheduling_user_id
+        description: The column 'scheduling_user_id' contains the identifier of the
+          user who triggered the scheduled job. [GenAI Description]
+
+      - name: sidekiq_job_id
+        description: The 'sidekiq_job_id' column stores the ID of the Sidekiq Job
+          used to process the scheduled job. [GenAI Description]
+
+      - name: enqueued_at
+        description: "'enqueued_at' is a timestamp column containing the date and\
+          \ time when the scheduled job was added to the queue. [GenAI Description]"
+
+      - name: started_at
+        description: The started_at column stores a timestamp representing the date
+          and time that a scheduled job was started. [GenAI Description]
+
+      - name: completed_at
+        description: This column contains the timestamp when the scheduled job was
+          completed. [GenAI Description]
+
+      - name: status
+        description: The 'status' column is a text field that stores the result of
+          a scheduled job, such as 'enqueued', 'started', 'completed' or 'failed'.
+          [GenAI Description]
+
+      - name: message
+        description: The 'message' column stores additional information related to
+          status of a scheduled job such as error messages or warnings. [GenAI Description]
+
+      - name: created_at
+        description: "'created_at' is the timestamp when the job was created. [GenAI\
+          \ Description]"
+
+      - name: updated_at
+        description: "'updated_at' is a timestamp column that records the latest time\
+          \ an action was taken on the record. [GenAI Description]"

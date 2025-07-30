@@ -1,0 +1,60 @@
+version: 2
+
+models:
+  - name: stg_segment_backend__assessment_created
+    description: This DBT model captures the data from the 'assessment_created' table,
+      in the 'segment_backend' source. It can be used to determine when assessments
+      have been created, as well as determining information about the assessments,
+      such as the assessment's version, type, and user IDs. It also stores the corresponding
+      timestamp for when the assessment was created. [GenAI Description]
+    columns:
+      - name: id
+        description: The 'id' column contains a unique identifier for each row. [GenAI
+          Description]
+        tests:
+          - unique
+          - not_null
+
+      - name: assessment_id
+        description: The 'assessment_id' column stores an ID that indicates individual
+          assessments. [GenAI Description]
+
+      - name: assessment_parent_id
+        description: The assessment_parent_id is a foreign key that identifies the
+          parent assessment associated with the created assessment. [GenAI Description]
+
+      - name: assessment_questions_version
+        description: The 'assessment_questions_version' column contains the version
+          number of the assessment questions. [GenAI Description]
+
+      - name: event
+        description: The 'event' column tracks the type of event related to an assessment
+          and its associated data. [GenAI Description]
+
+      - name: assessment_type
+        description: "'assessment_type' is a categorical field indicating the type\
+          \ of assessment the user took. [GenAI Description]"
+
+      - name: user_id
+        description: The 'user_id' column stores the user identifier associated with
+          an assessment. [GenAI Description]
+
+      - name: track_assignment_id
+        description: track_assignment_id is a unique identifier for the assignment
+          associated with the assessment. [GenAI Description]
+
+      - name: product_subscription_assignment_id
+        description: The product_subscription_assignment_id links an assessment to
+          a purchased subscription. [GenAI Description]
+
+      - name: assessment_user_id
+        description: The 'assessment_user_id' column stores an ID of the user who
+          initiated the assessment. [GenAI Description]
+
+      - name: context_library_name
+        description: "'context_library_name' contains the name of the library within\
+          \ which the assessment was created. [GenAI Description]"
+
+      - name: event_at
+        description: The 'event_at' column stores the date & time of the event being
+          tracked. [GenAI Description]

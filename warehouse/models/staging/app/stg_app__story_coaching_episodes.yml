@@ -1,0 +1,73 @@
+version: 2
+
+models:
+  - name: stg_app__story_coaching_episodes
+    description: The stg_app__story_coaching_episodes model is used to provide data
+      for the Story Coaching platform. It contains episode information such as audio_url,
+      image_url, description, duration_milliseconds, episode_number, storyteller,
+      storyteller_title, story_quote, title, launch_date, as well as created_at and
+      updated_at timestamps. It is derived from the raw.stitch_app.story_coaching_episodes
+      table. [GenAI Description]
+    columns:
+      - name: story_coaching_episode_id
+        description: The story_coaching_episode_id column stores the unique identifier
+          of a story coaching episode. [GenAI Description]
+        tests:
+          - unique
+          - not_null
+
+      - name: resource_id
+        description: The 'resource_id' column contains a unique identifier for each
+          row in the story coaching episodes table. [GenAI Description]
+
+      - name: resource_uuid
+        description: The 'resource_uuid' column stores the universally unique identifier
+          for the associated story coaching episode. [GenAI Description]
+
+      - name: audio_url
+        description: The 'audio_url' column contains the URL of an audio file associated
+          with the story coaching episode. [GenAI Description]
+
+      - name: image_url
+        description: The 'image_url' column stores the URL of an image related to
+          a story coaching episode. [GenAI Description]
+
+      - name: description
+        description: This column contains a description for each story coaching episode.
+          [GenAI Description]
+
+      - name: duration_milliseconds
+        description: "'Duration_milliseconds' represents the length of audio or image\
+          \ recording, measured in milliseconds. [GenAI Description]"
+
+      - name: episode_number
+        description: Column 'episode_number' indicates the order of the episode. [GenAI
+          Description]
+
+      - name: storyteller
+        description: The 'storyteller' column holds the name of the individual telling
+          the episode's story. [GenAI Description]
+
+      - name: storyteller_title
+        description: The 'storyteller_title' column contains the title associated
+          with the storyteller of a story coaching episode. [GenAI Description]
+
+      - name: story_quote
+        description: "'story_quote' contains a quote extracted from the audio clip\
+          \ in the episode, associated with the storyteller. [GenAI Description]"
+
+      - name: title
+        description: The 'title' column stores the title of each episode of the story
+          coaching podcast. [GenAI Description]
+
+      - name: launch_date
+        description: The launch_date column contains the date a Story Coaching Episode
+          was made available. [GenAI Description]
+
+      - name: created_at
+        description: The 'created_at' column holds the date and time a story coaching
+          episode was created. [GenAI Description]
+
+      - name: updated_at
+        description: "'updated_at' contains a timestamp showing when the episode data\
+          \ was last updated. [GenAI Description]"

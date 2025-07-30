@@ -1,0 +1,43 @@
+version: 2
+models:
+  - name: stg_gsheets_deployments__bu_event_type_accounting_categories
+    description: >
+      Permutation list of deployment-billable event types as captured in Google Sheets
+      and maintained by Operations team.
+      This is a custom-defined table to facilitate joins in the coach payments pipeline
+      due to existence of
+      parent Ledger accounting categories. The data is updated with each dbt run,  so
+      any updates can be controlled directly in Google Sheets.
+
+    columns:
+      - name: bu_event_type_accounting_category_key
+        description: Primary key for the table
+        tests:
+          - unique
+          - not_null
+
+      - name: deployment_type
+        description: >
+          Deployment type as specified in the app.
+        tests:
+          - not_null
+
+      - name: event_type
+        description: >
+          Billable event type as specified in the app.
+        tests:
+          - not_null
+
+      - name: accounting_category
+        description: >
+          Ledger Account associated with the deployment-event combination for accounting
+          purposes.
+        tests:
+          - not_null
+
+      - name: parent_accounting_category
+        description: >
+          Parent Ledger Account associated with the deployment-event combination for
+          accounting purposes.
+        tests:
+          - not_null

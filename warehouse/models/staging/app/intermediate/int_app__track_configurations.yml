@@ -1,0 +1,11 @@
+version: 2
+
+models:
+  - name: int_app__track_configurations
+    description: ""
+    columns:
+      - name: track_id
+        description: Unique identifier
+        tests:
+          - not_null
+          - unique

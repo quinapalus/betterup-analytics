@@ -1,0 +1,58 @@
+version: 2
+
+models:
+  - name: int_app__on_demand_configurations
+    description: DBT int_app__on_demand_configurations model provides unique records
+      representing on-demand configurations for experiences such as member levels,
+      languages, staffing risk levels, staffing tiers, staffing industries, and a
+      cached on-demand tag list for each track. It is generated using the parent models
+      stg_app__on_demand_configurations and stg_app__experience_configuration_assignments,
+      and stores the field ids primary_key, track_id, on_demand_configuration_id,
+      member_levels, languages, staffing_risk_levels, staffing_tiers, staffing_industries,
+      cached_on_demand_tag_list, and client_limit. [GenAI Description]
+    columns:
+      - name: primary_key
+        description: The primary_key column is a generated identifier to uniquely
+          identify each row in the table. [GenAI Description]
+        tests:
+          - unique
+          - not_null
+
+      - name: track_id
+        description: The 'track_id' column contains the unique identifier for a given
+          tracking record. [GenAI Description]
+
+      - name: on_demand_configuration_id
+        description: "'on_demand_configuration_id' is a unique ID associated with\
+          \ an on-demand configuration. [GenAI Description]"
+
+      - name: member_levels
+        description: The column 'member_levels' contains the member levels associated
+          with an on-demand configuration. [GenAI Description]
+
+      - name: languages
+        description: The 'languages' column stores data related to the language setting
+          of an on-demand configuration. [GenAI Description]
+
+      - name: staffing_risk_levels
+        description: The 'staffing_risk_levels' column contains data on staffing risk
+          level associated with an on-demand configuration. [GenAI Description]
+
+      - name: staffing_tiers
+        description: This column contains the tiers that define the staff associated
+          with an experience configuration. [GenAI Description]
+
+      - name: staffing_industries
+        description: This column represents industries (such as retail, healthcare,
+          etc) that the staffing configuration is applicable to. [GenAI Description]
+
+      - name: cached_on_demand_tag_list
+        description: The 'cached_on_demand_tag_list' column stores the list of tags
+          set in the on demand configuration for the given track. [GenAI Description]
+
+      - name: client_limit
+        description: The 'client_limit' column records the maximum number of clients
+          who can interact with an experience. [GenAI Description]
+
+
+

@@ -1,0 +1,118 @@
+version: 2
+
+models:
+  - name: dei_reflection_points
+    description: Legacy reflection point model
+    columns:
+      - name: reflection_point_id
+        description: "'reflection_point_id' represents a unique identifier for each\
+          \ reflection point in the generated model. [GenAI Description]"
+        tests:
+          - unique
+          - not_null
+
+      - name: member_id
+        description: The 'member_id' column refers to the unique identification number
+          for the member assigned to a particular reflection point. [GenAI Description]
+
+      - name: coach_id
+        description: "'Coach_id' is a foreign key linking to the coaches assigned\
+          \ to a particular reflection point. [GenAI Description]"
+
+      - name: track_id
+        description: The 'track_id' column stores the unique identifier of the track
+          associated with the reflection point. [GenAI Description]
+
+      - name: track_sequence_assigned_rp
+        description: "'track_sequence_assigned_rp' is an assigned sequence number\
+          \ to each reflection point for a given member-track combination, used to\
+          \ help order the reflection points. [GenAI Description]"
+
+      - name: met_prereqs
+        description: The column 'met_prereqs' contains a boolean value indicating
+          whether any prerequisite requirements for a given reflection point have
+          been met, and the success state for the met prerequisites requirement. [GenAI
+          Description]
+
+      - name: met_prereqs_success
+        description: A boolean flag and corresponding success state measuring if prerequisite
+          requirements have been met for a reflection point. [GenAI Description]
+
+      - name: coach_complete
+        description: The column 'coach_complete' indicates whether a coach's assessment
+          of a reflection point has been completed, as well as its success state.
+          [GenAI Description]
+
+      - name: coach_complete_success
+        description: The column 'coach_complete_success' indicates the success status
+          of coach completing a reflection point, such as 'success', 'pending', and
+          'miss'. [GenAI Description]
+
+      - name: member_complete
+        description: '"member_complete" is a boolean representing whether the member
+          has completed an assessment associated with a reflection point. It also
+          has an accompanying success state, which can be "success", "pending", or
+          "miss". [GenAI Description]'
+
+      - name: member_complete_success
+        description: This column indicates the success or pending status of a member's
+          completion of the reflection points associated with their coach and track
+          assignments. [GenAI Description]
+
+      - name: met_prerequisites_at
+        description: The column 'met_prerequisites_at' records the timestamp at which
+          a specific reflection point's prerequisites had been satisfied. [GenAI Description]
+
+      - name: upcoming_at
+        description: The "upcoming_at" column stores the date and time when a reflection
+          point is scheduled to be available for a member. [GenAI Description]
+
+      - name: eligible_at
+        description: "'eligible_at' is a timestamp representing the earliest moment\
+          \ at which this reflection point became available for completion. [GenAI\
+          \ Description]"
+
+      - name: coach_due_at
+        description: The 'coach_due_at' column stores the date and time at which reflection
+          point activities should be completed by a coach. [GenAI Description]
+
+      - name: canceled_at
+        description: The 'canceled_at' column stores the date and time when a reflection
+          point assignment was canceled. [GenAI Description]
+
+      - name: coach_assessment_id
+        description: The 'coach_assessment_id' column contains the assessment ID of
+          the coach's assessment of the reflection point. [GenAI Description]
+
+      - name: coach_submitted_at
+        description: Details the date and time that a coach submitted an assessment
+          for a reflection point. [GenAI Description]
+
+      - name: member_assessment_id
+        description: The 'member_assessment_id' column stores the identifier of the
+          assessment created by a member when completing a reflection point. [GenAI
+          Description]
+
+      - name: member_submitted_at
+        description: The date/time when the Member submitted their assessment for
+          the reflection point. [GenAI Description]
+
+      - name: coach_assignment_id
+        description: The unique identifier that links reflection points with coach
+          assignments. [GenAI Description]
+
+      - name: track_assignment_id
+        description: The column 'track_assignment_id' is a foreign key that identifies
+          the assignment of a track to a member. [GenAI Description]
+
+      - name: coach_type
+        description: The column 'coach_type' stores the specific role of a coach associated
+          with a reflection point. [GenAI Description]
+
+      - name: created_at
+        description: The 'created_at' column stores the original timestamp when the
+          reflection point was created. [GenAI Description]
+
+      - name: updated_at
+        description: This column stores the date and time of the last update to the
+          reflection point. [GenAI Description]

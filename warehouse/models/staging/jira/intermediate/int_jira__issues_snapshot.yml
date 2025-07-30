@@ -1,0 +1,162 @@
+version: 2
+
+models:
+  - name: int_jira__issues_snapshot
+    description: ""
+    columns:
+      - name: primary_key
+        description: "Unique surrogate key from jira_issue_id,valid_from and valid_to "
+        tests:
+          - unique
+          - not_null
+
+      - name: jira_issue_id
+        description: "Natural primary key for JIRA issues. Not unique for this model because it is a snapshot"
+
+      - name: jira_issue_key
+        description: Slug of the issue (e.g. MLAI-100)
+
+      - name: issue_type
+        description: Type of the issue (e.g. 'Bug', 'Task')
+        tests:
+          #test that at least one row has a non-null value. If this fails that most likely means that our json extraction is not working
+          - dbt_utils.at_least_one
+
+      - name: status
+        description: The issue status (e.g. Closed)
+        tests:
+          #test that at least one row has a non-null value. If this fails that most likely means that our json extraction is not working
+          - dbt_utils.at_least_one
+
+      - name: priority
+        description: The issue priority
+        tests:
+          #test that at least one row has a non-null value. If this fails that most likely means that our json extraction is not working
+          - dbt_utils.at_least_one
+
+      - name: description
+        description: Description of the issue.
+        tests:
+          #test that at least one row has a non-null value. If this fails that most likely means that our json extraction is not working
+          - dbt_utils.at_least_one
+
+      - name: assignee
+        description: Username of the individual assigned to the issue.
+        tests:
+          #test that at least one row has a non-null value. If this fails that most likely means that our json extraction is not working
+          - dbt_utils.at_least_one
+
+      - name: creator
+        description: Who created the ticket
+        tests:
+          #test that at least one row has a non-null value. If this fails that most likely means that our json extraction is not working
+          - dbt_utils.at_least_one
+          
+      - name: impact
+        description: Estimated impact of the issue.
+        tests:
+          - accepted_values:
+              values: [Trivial, Minor, Major, Critical]
+          #test that at least one row has a non-null value. If this fails that most likely means that our json extraction is not working
+          - dbt_utils.at_least_one
+      
+      - name: fiscal_quarter
+        description: BU Fiscal Quarter for Issue
+        tests:
+          #test that at least one row has a non-null value. If this fails that most likely means that our json extraction is not working
+          - dbt_utils.at_least_one
+
+      - name: effort
+        description: Estimated effort of the issue.
+        tests:
+          - accepted_values:
+              values: [Xtra Small, Small, Medium, Large, Xtra Large]
+          #test that at least one row has a non-null value. If this fails that most likely means that our json extraction is not working
+          - dbt_utils.at_least_one
+
+      - name: team
+        description: Name of the team that owns the issue.
+        tests:
+          #test that at least one row has a non-null value. If this fails that most likely means that our json extraction is not working
+          - dbt_utils.at_least_one
+
+      - name: investment_category
+        description: Category that explains whether we are investing in improving or bringing something new or Keep the lights on or Productivity improvements.
+        tests:
+          #test that at least one row has a non-null value. If this fails that most likely means that our json extraction is not working
+          - dbt_utils.at_least_one
+
+      - name: created_at
+        description: When the issue was created
+        tests:
+          #test that at least one row has a non-null value. If this fails that most likely means that our json extraction is not working
+          - dbt_utils.at_least_one
+
+      - name: updated_at
+        description: When the issue was last updated
+        tests:
+          #test that at least one row has a non-null value. If this fails that most likely means that our json extraction is not working
+          - dbt_utils.at_least_one
+
+      - name: due_date
+        description: When the issue is due.
+        tests:
+          #test that at least one row has a non-null value. If this fails that most likely means that our json extraction is not working
+          - dbt_utils.at_least_one
+
+      - name: resolved_at
+        description: When the issue was resolved. Null if it is not resolved.
+        tests:
+          #test that at least one row has a non-null value. If this fails that most likely means that our json extraction is not working
+          - dbt_utils.at_least_one
+
+      - name: start_date
+        description: Date that work on the issue was started
+        tests:
+          #test that at least one row has a non-null value. If this fails that most likely means that our json extraction is not working
+          - dbt_utils.at_least_one
+
+      - name: sprint_names
+        description: "List of sprint names that this issue is associated with"
+        tests:
+          #test that at least one row has a non-null value. If this fails that most likely means that our json extraction is not working
+          - dbt_utils.at_least_one
+
+
+      - name: is_real_work
+        description: "Classify issue as 'real work' (Story, Task, Sub-task)"
+        tests:
+          - dbt_expectations.expect_column_distinct_values_to_contain_set:
+              #test that these values actually exist at least once
+              value_set: ['true','false']
+
+      - name: is_bug
+        description: "Classify issue as Bug based on issue type"
+        tests:
+          - dbt_expectations.expect_column_distinct_values_to_contain_set:
+              #test that these values actually exist at least once
+              value_set: ['true','false']
+
+      - name: is_team_product
+        description: "Classify issues that belong to the product team boards (filter=10000)"
+        tests:
+          - dbt_expectations.expect_column_distinct_values_to_contain_set:
+              #test that these values actually exist at least once
+              value_set: ['true','false']
+
+      - name: is_guild
+        description: "Classify issues that belong to a guild vs a squad"
+        tests:
+          - dbt_expectations.expect_column_distinct_values_to_contain_set:
+              #test that these values actually exist at least once
+              value_set: ['true','false']
+
+      - name: effort_in_days
+        description: "Estimated number of days based on the Impact + Effort framework 
+                      https://betterup.atlassian.net/wiki/spaces/PT/pages/2031634/Impact+Effort+Framework"
+
+      - name: components
+        description: The issue components
+        tests:
+          #test that at least one row has a non-null value. If this fails that most likely means that our json extraction is not working
+          - dbt_utils.at_least_one

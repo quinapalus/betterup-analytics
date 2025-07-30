@@ -1,0 +1,26 @@
+version: 2
+
+models:
+  - name: int_app__users_roles
+    description: The DBT model int_app__users_roles links users and roles by storing
+      user ids and role ids that have not been removed. It has two parent models and
+      has fields containing the associated role id and user id. This model can be
+      used to determine which roles a user has access to. [GenAI Description]
+
+    columns:
+      - name: primary_key
+        tests:
+          - not_null
+          - unique
+
+        description: The 'primary_key' column is a unique identifier automatically
+          generated from a combination of a user's role_id and user_id. [GenAI Description]
+      - name: role_id
+        description: Foreign Key to associated Role.
+        tests:
+          - not_null
+
+      - name: user_id
+        description: Foreign Key to associated User.
+        tests:
+          - not_null

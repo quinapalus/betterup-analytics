@@ -1,0 +1,14 @@
+version: 2
+
+models:
+  - name: base_app__group_coaching_series_tracks_historical
+    description: ""
+    columns:
+      - name: created_at
+      - name: group_coaching_series_id
+      - name: id
+        tests:
+          - unique
+          - not_null
+      - name: track_id
+      - name: updated_at

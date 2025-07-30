@@ -1,0 +1,57 @@
+version: 2
+
+models:
+  - name: member_consumer_subscriptions_calendar
+    description: The member_consumer_subscriptions_calendar model provides data regarding
+      paid consumer subscriptions over preset time frames stored in a date dimension
+      table. The model contains fields purchasing date, subscription length, type
+      of subscription, and subscription tracking details. It is derived from a combination
+      of tables from the staging schema and a date table, and provides the most up-to-date
+      information regarding paid subscriptions. [GenAI Description]
+    columns:
+      - name: unique_id
+        tests:
+          - unique
+          - not_null
+        description: A unique identifier for each combination of date_key, subscription_id,
+          track_assignment_id, and is_paid_subscription. [GenAI Description]
+      - name: date_key
+        description: The 'date_key' column in 'model.warehouse.member_consumer_subscriptions_calendar'
+          contains a unique date key which references to the date on which a consumer
+          subscription occurred. [GenAI Description]
+
+      - name: date
+        description: The 'date' column holds the calendar date associated with each
+          member's subscription status. [GenAI Description]
+
+      - name: calendar_year_month
+        description: The 'calendar_year_month' column contains the calendar month
+          (01 - 12) and year in which the customer subscription record was valid.
+          [GenAI Description]
+
+      - name: is_current_fiscal_quarter
+        description: The 'is_current_fiscal_quarter' column indicates whether the
+          corresponding date falls in the current fiscal quarter. [GenAI Description]
+
+      - name: is_previous_fiscal_quarter
+        description: The 'is_previous_fiscal_quarter' column indicates whether a date
+          is in the fiscal quarter directly preceding the current fiscal quarter.
+          [GenAI Description]
+
+      - name: is_last_day_of_month
+        description: The 'is_last_day_of_month' column indicates whether the date
+          is the last day of the month or not. [GenAI Description]
+
+      - name: subscription_id
+        description: Subscription_id is the unique identifier of a consumer subscription.
+          [GenAI Description]
+
+      - name: track_assignment_id
+        description: "'track_assignment_id' is the unique identifier of a subscription\
+          \ track assignment associated with each consumer subscription. [GenAI Description]"
+
+      - name: is_paid_subscription
+        description: The column 'is_paid_subscription' is a boolean value that indicates
+          whether the corresponding subscription record corresponds to a payment-based
+          subscription (as opposed to a trial). [GenAI Description]
+

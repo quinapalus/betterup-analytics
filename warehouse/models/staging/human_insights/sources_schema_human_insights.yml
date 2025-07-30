@@ -1,0 +1,22 @@
+version: 2
+
+sources:
+  - name: human_insights
+    schema: human_insights
+    database: raw
+
+    freshness:
+      warn_after:
+        count: 4
+        period: hour
+      error_after:
+        count: 8
+        period: hour
+
+    tables:
+      - name: text_scoring_pipeline_attribute
+      - name: text_scoring_pipeline_sentence
+      - name: text_scoring_pipeline_sentence_score
+      - name: text_scoring_pipeline_term
+      - name: text_scoring_pipeline_text_document
+      - name: text_scoring_pipeline_text_document_score

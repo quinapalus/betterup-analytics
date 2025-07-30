@@ -1,0 +1,31 @@
+version: 2
+
+models:
+  - name: stg_app__session_recordings
+    description: The DBT model stg_app__session_recordings is a record of session
+      recordings related to specific call IDs, including their status, timestamps,
+      video metadata, and external archving IDs. [GenAI Description]
+    columns:
+      - name: call_id
+        description: Call ID
+
+      - name: created_at
+        description: Created At
+
+      - name: ext_archive_id
+        description: External Archive ID
+
+      - name: session_recording_id
+        description: Session Recording ID
+        tests:
+          - unique
+          - not_null
+
+      - name: status
+        description: Status
+
+      - name: updated_at
+        description: Updated At
+
+      - name: video_metadata
+        description: Video Metadata

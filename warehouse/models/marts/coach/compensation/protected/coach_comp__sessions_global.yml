@@ -1,0 +1,18 @@
+version: 2
+
+models:
+  - name: coach_comp__sessions_global
+    description: Summary of all sessions for coach compensation combining US and EU data
+
+    columns:
+      - name: user_season_id
+        description: Surrogate Key of User UUID + Season Name. Functions as primary key.
+        tests:
+          - not_null
+          - unique
+      - name: user_uuid
+        tests:
+          - not_null
+      - name: season_name
+      - name: lifetime_sessions_global
+      - name: primary_b2b_lifetime_sessions_global

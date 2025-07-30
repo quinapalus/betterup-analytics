@@ -1,0 +1,54 @@
+version: 2
+
+models:
+  - name: int_app__scores
+    description: Raw scores and app-scaled scores for assessment item responses recorded
+      at the time of assessment submission.
+    columns:
+      - name: score_id
+        description: The 'score_id' column is a unique identifier for each score record
+          in the dataset. [GenAI Description]
+        tests:
+          - unique
+          - not_null
+
+      - name: key
+        description: The 'key' column contains a unique identifier for each record
+          in the table. [GenAI Description]
+
+      - name: type
+        description: The 'type' column indicates the type of score being recorded.
+          [GenAI Description]
+
+      - name: assessment_id
+        description: The 'assessment_id' column contains the specific ID for an assessment.
+          [GenAI Description]
+
+      - name: raw_score
+        description: The column 'raw_score' contains score values from an application
+          stage after filtering out deleted records. [GenAI Description]
+
+      - name: scale_score
+        description: The 'scale_score' column contains score values on a particular
+          scale. [GenAI Description]
+
+      - name: z_score
+        description: The 'z_score' column contains a statistical measurement of a
+          score relative to an average. [GenAI Description]
+
+      - name: construct_reference_population_id
+        description: The 'construct_reference_population_id' column refers to the
+          reference population used in constructing a score. [GenAI Description]
+
+      - name: construct_reference_population_uuid
+        description: The 'construct_reference_population_uuid' column contains a unique
+          identifier associated with the reference population. [GenAI Description]
+
+      - name: created_at
+        description: The 'created_at' column stores the date and time when the score
+          record was created. [GenAI Description]
+
+      - name: updated_at
+        description: The 'updated_at' column contains a timestamp representing the
+          last time the data for the score was updated. [GenAI Description]
+

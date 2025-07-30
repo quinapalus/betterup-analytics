@@ -1,0 +1,75 @@
+version: 2
+
+models:
+  - name: stg_sfdc__subscriptions
+    description: The DBT model stg_sfdc__subscriptions provides all fields relating
+      to subscriptions in Salesforce, including the product ID, name, quantity, bundled
+      status, start and end date, and pricing and billing information. It also includes
+      foreign keys to the related account and contract. These fields are sourced from
+      the Salesforce subscriptions object. [GenAI Description]
+    columns:
+      - name: sfdc_subscription_id
+        description: ''
+        tests:
+          - not_null
+          - unique
+
+      - name: subscription_name
+        description: ''
+
+      - name: product_id
+        description: ''
+
+      - name: product_name
+        description: ''
+
+      - name: quantity
+        description: ''
+
+      - name: is_bundled
+        description: ''
+
+      - name: root_id
+        description: ''
+
+      - name: subscription_start_date
+        description: ''
+
+      - name: subscription_end_date
+        description: ''
+
+      - name: required_by_product_id
+        description: ''
+
+      - name: renewal_quantity
+        description: ''
+
+      - name: list_price
+        description: ''
+
+      - name: net_price
+        description: ''
+
+      - name: regular_price
+        description: ''
+
+      - name: customer_price
+        description: ''
+
+      - name: discount_amount
+        description: ''
+
+      - name: billing_frequency
+        description: ''
+
+      - name: prorate_multiplier
+        description: ''
+
+      - name: contract_id
+        description: ''
+
+      - name: opportunity_type
+        description: ''
+
+      - name: sfdc_account_id
+        description: ''

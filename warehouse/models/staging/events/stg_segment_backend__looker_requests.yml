@@ -1,0 +1,48 @@
+version: 2
+models:
+  - name: stg_segment_backend__looker_requests
+    description: >
+      Looker request segment events
+
+      The looker_requests table has audit data for all the Looker API requests made from betterup-app
+
+    columns:
+      - name: event_id
+        description: Unique identifier of the event.
+        tests:
+          - not_null
+          - unique
+
+      - name: user_id
+        description: Unique identifier of the User
+
+      - name: anonymous_id
+        description: Identifier of the anonymous user if no user_id was provided
+
+      - name: received_at
+        description: >
+          Specifies when the datapoint occurred, corrected for client-device clock skew.
+          See the Segment [documentation](https://segment.com/docs/spec/common/#timestamps) for more information.
+        tests:
+          - not_null
+
+      - name: event_text
+        description: Human-readable name of the event.
+
+      - name: create_resp_duration
+        description: Amount of time it took to create a query in Looker via the API
+
+      - name: run_query_duration
+        description: Amount of time it took to execute a query in Looker via the API
+
+      - name: total_duration
+        description: Amount of time it took to create and execute a query in Looker via the API (including time spent in Rails code between)
+
+      - name: status_code
+        description: HTTP status code of the response
+
+      - name: query_id
+        description: The query id in Looker for the created/run query
+
+      - name: request_group_id
+        description: Unique identifier grouping separate requests together (typically the Rails web request id)

@@ -1,0 +1,15 @@
+version: 2
+models:
+  - name: dbt_partners
+    description: >
+      Internal warehouse helper model that contains a row for every user with
+      global `partner` role.
+
+    columns:
+      - name: partner_id
+        description: Foreign key to associated user.
+        tests:
+          - not_null
+          - relationships:
+              to: ref('int_app__users')
+              field: user_id

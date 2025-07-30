@@ -1,0 +1,33 @@
+version: 2
+models:
+  - name: stg_gsheets_marketing_attribution_sk_mapping__metadata_attribution
+    description: This is a google sheet that manually maps each unique utm_source,
+      utm_content, utm_campaign into a channel_atttribution. It is derived from lead_metadata_attribution
+
+    columns:
+      - name: _unique
+        description: Primary key
+        tests:
+          - unique
+          - not_null
+      - name: utm_source__st
+        description: This column contains the UTM source value in Stitch (st) format
+          for a particular entry in the marketing attribution table. [GenAI Description]
+      - name: utm_source__de
+        description: This column stores the source channel from which a user or customer
+          arrived to a website in German. [GenAI Description]
+      - name: utm_source
+        description: "'utm_source' contains the source of the campaign from which\
+          \ the user originated. [GenAI Description]"
+      - name: utm_campaign
+        description: "'utm_campaign' is a string field indicating the campaign of\
+          \ the UTM tag being tracked. [GenAI Description]"
+      - name: utm_content
+        description: The 'utm_content' column stores the specific variables used in
+          a URL parameter to track the content or product information. [GenAI Description]
+      - name: utm_medium
+        description: The 'utm_medium' column contains identifiers for the medium of
+          the user's visit, such as search or email. [GenAI Description]
+      - name: channel_attribution
+        description: The column 'channel_attribution' stores the assigned channel
+          for a particular marketing campaign. [GenAI Description]

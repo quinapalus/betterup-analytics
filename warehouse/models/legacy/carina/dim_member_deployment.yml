@@ -1,0 +1,90 @@
+version: 2
+models:
+  - name: dim_member_deployment
+    description: >
+      Conformed Member-Deployment dimension. The model sources from `dbt_track_enrollments`, which consolidates
+      multiple track assignments into a single member-track entity. This dimension is currently scoped only to contain
+      status information on member's engagement on a track. In future work, this dimension can also
+      contain key dates (such as date of invite, date of activation), which will require architectural
+      cleanup of fact models that inherently carry these dates.
+
+    columns:
+      - name: member_deployment_key
+        description: Primary Key
+        tests:
+          - not_null
+          - unique
+
+      - name: deployment_invite_date
+        description: >
+          UTC timestamp denoting when the member was invited to the deployment.
+        tests:
+          - not_null
+
+      - name: member_is_open_on_deployment
+        description: >
+          Boolean denoting if the member is open or closed on the given track.
+        tests:
+          - not_null
+          - accepted_values:
+              values: [true, false]
+
+      - name: deployment_ended_date
+        description: >
+          UTC timestamp denoting when the member's assignment ended on the deployment.
+          NULL if the member is still open.
+
+      - name: deployment_ends_on_date
+        description: >
+          UTC timestamp denoting when the member's assignment ends on the deployment,
+          in case the member is still open. Can be NULL if BetterUp teams didn't
+          populate this field in the Admin Panel.
+
+      - name: member_is_activated_on_deployment
+        description: >
+          Boolean denoting if the member is activated on the given track. Note that this
+          is not a track-specific state, as the member -- in most cases -- activates only
+          once on BetterUp platform. It is therefore an inferred state from `dei_members`.
+        tests:
+          - not_null
+          - accepted_values:
+              values: [true, false]
+
+      - name: member_has_upcoming_session_on_deployment
+        description: >
+          Boolean denoting if the member has an upcoming session scheduled on the deployment.
+          This is inferred from `dei_members` and adjusted based on the end date of
+          member's enrollment to a deployment.
+        tests:
+          - not_null
+          - accepted_values:
+              values: [true, false]
+
+      - name: member_has_recurring_upcoming_session_on_deployment
+        description: >
+          Boolean denoting if the upcoming session is recurring. NULL if no next session.
+        tests:
+          - accepted_values:
+              values: [true, false]
+
+      - name: upcoming_session_on_deployment_type
+        description: >
+          String denoting the type of upcoming session. NULL if no next session.
+        tests:
+          - accepted_values:
+              values: [Primary, Extended Network, On Demand]
+
+      - name: upcoming_session_on_deployment_date
+        description: >
+          UTC timestamp denoting the start time of upcoming session.
+
+      - name: member_is_hidden_on_deployment
+        description: >
+          Inferred boolean denoting if the member-track pair has been hidden in the Admin Panel by
+          BU employees (inferred because track assignments are hidden). In case of multiple track assignments
+          for the same track, the member-track pair is classified as hidden if all of the track assignments
+          were classified as hidden.
+        tests:
+          - not_null
+          - accepted_values:
+              values: [true, false]

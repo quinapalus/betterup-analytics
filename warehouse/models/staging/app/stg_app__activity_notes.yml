@@ -1,0 +1,43 @@
+version: 2
+models:
+  - name: stg_app__activity_notes
+    description: >
+      When a Coach assigns an Activity to
+      a Member the Coach is prompted to add
+      a note. The note is a personalized message
+      relating to the Activity.
+    columns:
+      - name: activity_note_id
+        description: Unique identifer for the Activity Note
+        tests:
+          - not_null
+          - unique
+
+      - name: activity_id
+        description: >
+          Identifer of the Activity the Activity Note belongs to.
+        tests:
+          - not_null
+
+      - name: creator_id
+        description: >
+          Unique indentifier of the Coach who created the Activity Note.
+        tests:
+          - relationships:
+              to: ref('int_app__users')
+              field: user_id
+
+      - name: text
+        description: Content of the Activity Note.
+
+      - name: created_at
+        description: >
+          When the Activity Note was created.
+        tests:
+          - not_null
+
+      - name: updated_at
+        description: >
+          When the Activity Note was updated.
+        tests:
+          - not_null

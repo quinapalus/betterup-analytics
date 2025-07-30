@@ -1,0 +1,29 @@
+version: 2
+models:
+  - name: stg_mixpanel__events
+    description: >
+
+      Segment was officially enabled for the backed on Janurary 4, 2019. This model
+      drops any events received after then. See `dei_events` for the model that
+      combines Mixpanel and Segment events.
+
+    columns:
+      - name: event_id
+        description: Unique identifier of the event. Alias of `_rjm_record_hash` from Mixpanel.
+        tests:
+          - not_null
+          - unique
+
+      - name: user_id
+        description: Unique identfier of the User.
+
+      - name: event_at
+        description: >
+          UTC timestamp of when the event occurred.
+
+      - name: event
+        description: Name of the event.
+
+      - name: event_text
+        description:
+          Human-readable name of the event.

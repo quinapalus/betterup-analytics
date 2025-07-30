@@ -1,0 +1,42 @@
+version: 2
+models:
+  - name: stg_semaphore__jobs
+    description: >
+      Build information for Semaphore CI jobs.
+
+    columns:
+      - name: job_id
+        description: Unique identifier in Semaphore
+        tests:
+          - unique
+          - not_null
+
+      - name: job_name
+        description: Name of the job
+
+      - name: project_id
+        description: Identifier of the Semaphore project
+
+      - name: workflow_id
+        description: Identifier of the Semaphore workflow
+
+      - name: agent_type
+        description: Type of agent used to run the job
+
+      - name: os_image
+        description: Base image of the agent
+
+      - name: branch
+        description: Which branch was built
+
+      - name: git_sha
+        description: Git commit hash of the job build
+
+      - name: git_repo
+        description: Which repository the build was for
+
+      - name: result
+        description: Status of the job.
+        tests:
+          - accepted_values:
+              values: [PASSED, STOPPED, FAILED]

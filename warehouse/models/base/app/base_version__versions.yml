@@ -1,0 +1,77 @@
+version: 2
+
+models:
+  - name: base_version__versions
+    description: The base_version__versions model provides a record of changes that
+      have been made to data in your database, along with additional details about
+      those changes. It consists of a collection of fields such as created_at, event,
+      id, impersonated, and whodunnit, that provide specific information about the
+      changes that were made, as well as relationships to parent models. [GenAI Description]
+    columns:
+      - name: created_at
+        description: The 'created_at' column stores the date and time that the version
+          record was created. [GenAI Description]
+
+      - name: event
+        description: The 'event' column contains information regarding the type of
+          event that occurred in the source data. [GenAI Description]
+
+      - name: id
+        description: The 'id' column stores the unique identifier assigned to each
+          version. [GenAI Description]
+        tests:
+          - unique
+          - not_null
+
+      - name: impersonated
+        description: The 'impersonated' column indicates whether the version is an
+          impersonation of another user. [GenAI Description]
+
+      - name: impersonated_user_id
+        description: The 'impersonated_user_id' column stores the ID of the user performing
+          the action as seen from the perspective of the user being impersonated.
+          [GenAI Description]
+
+      - name: item_id
+        description: The 'item_id' column holds unique identifiers for each version
+          entry. [GenAI Description]
+
+      - name: item_type
+        description: "'item_type' is an attribute of product versions that indicates\
+          \ their type. [GenAI Description]"
+
+      - name: item_uuid
+        description: The 'item_uuid' column stores the unique identifier of each item
+          in the table. [GenAI Description]
+
+      - name: object
+        description: This column contains information about the versions associated
+          with the US island. [GenAI Description]
+
+      - name: object_changes
+        description: "'object_changes' contains a field that describes the type of\
+          \ changes made to an object. [GenAI Description]"
+
+      - name: request_id
+        description: The 'request_id' column stores the unique ID of each request
+          sent to the database. [GenAI Description]
+
+      - name: user_agent
+        description: The 'user_agent' column stores the user agent associated with
+          each version. [GenAI Description]
+
+      - name: whodunnit
+        description: The 'whodunnit' column contains the name of the user who made
+          an edit. [GenAI Description]
+
+      - name: whodunnit_jid
+        description: Refers to a unique identifier for a user who\
+          \ made changes to the data. [GenAI Description]
+
+      - name: whodunnit_job
+        description: Contains the name of the job that caused the\
+          \ changes tracked in the version. [GenAI Description]
+
+      - name: island
+        description: The 'island' column filters versions indicated to be in the United
+          States. [GenAI Description]

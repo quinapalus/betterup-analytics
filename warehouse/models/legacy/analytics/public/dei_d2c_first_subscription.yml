@@ -1,0 +1,18 @@
+version: 2
+models:
+  - name: dei_d2c_first_subscription
+    description: The dei_d2c_first_subscription model provides a consolidated look
+      into consumers' first subscription for a particular product. It tracks the initial
+      subscription information (stripe_subscription_id, stripe_data, member_id, track_assignment_id,
+      etc.) as well as product details associated with the subscription (consumer_product_price_unit_amount,
+      consumer_product_price_recurring_interval, browser_name, etc.). The model focuses
+      on the first customer subscription with this data, eliminating any duplicative
+      information and making it easier to track consumer behavior. [GenAI Description]
+    columns:
+      - name: _unique
+        tests:
+          - unique
+          - not_null
+        description: The '_unique' column is a surrogate key generated based on subscription
+          ID, product-subscription assignment ID, and platform version, to ensure
+          unique records are being ingested. [GenAI Description]

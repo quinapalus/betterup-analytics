@@ -1,0 +1,31 @@
+version: 2
+
+models:
+  - name: base_app__objectives_historical
+    description: ""
+    columns:
+      - name: created_at
+      - name: description
+      - name: id
+        tests:
+          - unique
+          - not_null
+      - name: updated_at
+      - name: user_id
+      - name: objective_outcome_id
+      - name: topic_theme_id
+      - name: objective_obstacle_id
+      - name: objective_action_id
+      - name: objective_obstacle_custom_text
+      - name: development_topic_id
+      - name: objective_action_custom_text
+      - name: objective_outcome_custom_text
+      - name: creator_id
+      - name: completed_at
+      - name: shared_with_manager
+      - name: ends_at
+      - name: last_user_progress_response
+      - name: archived_at
+      - name: last_manager_progress_response
+      - name: objective_shares_count
+      - name: share_uuid

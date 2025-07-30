@@ -1,0 +1,12 @@
+version: 2
+
+sources:
+  - name: analytics_gov
+    database: analytics
+    schema: coach
+
+    tables:
+      - name: coach_comp__5in90_sessions
+      - name: coach_comp__sessions
+      - name: coach_comp__assessments
+      - name: progress_index__metadata

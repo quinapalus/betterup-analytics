@@ -1,0 +1,13 @@
+version: 2
+
+models:
+  - name: base_fed_sfdc__record_types
+    description: ""
+    columns:
+      - name: _airbyte_data
+        description: "Variant column with all Salesforce fields"
+        
+      - name: id
+        tests:
+          - unique
+          - not_null

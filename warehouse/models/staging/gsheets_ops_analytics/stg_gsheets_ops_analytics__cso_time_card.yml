@@ -1,0 +1,39 @@
+version: 2
+
+models:
+  - name: stg_gsheets_ops_analytics__cso_time_card
+    description: ""
+    columns:
+      - name: primary_key
+        description: ""
+        tests:
+          - unique
+          - not_null
+
+      - name: zendesk_user_id__st
+        description: ""
+
+      - name: employee_number
+        description: ""
+
+      - name: first_name
+        description: ""
+
+      - name: last_name
+        description: ""
+
+      - name: name_cleaned
+        description: ""
+
+      - name: ot_hours
+        description: ""
+
+      - name: reg_hours
+        description: ""
+
+      - name: work_date
+        description: ""
+
+      - name: zendesk_user_id
+        description: ""
+

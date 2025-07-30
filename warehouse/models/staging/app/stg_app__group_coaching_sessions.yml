@@ -1,0 +1,30 @@
+version: 2
+
+models:
+  - name: stg_app__group_coaching_sessions
+    description: Application table containing Group Coaching Sessions in betterup-app
+    columns:
+      - name: group_coaching_session_id
+        description: Primary key
+        tests:
+          - not_null
+          - unique
+
+      - name: group_coaching_cohort_id
+        description: Id of the cohort this session is for.
+
+      - name: session_number
+        description: Time the group coaching session starts, UTC.
+
+      - name: starts_at
+        description: Time the group coaching session ends, UTC.
+
+      - name: ends_at
+        description: Time when the Rails object was created in UTC.
+
+      - name: created_at
+        description: Time when the Rails object was updated in UTC.
+
+      - name: updated_at
+        description: The 'updated_at' column stores the timestamp indicating when
+          the record was last modified. [GenAI Description]

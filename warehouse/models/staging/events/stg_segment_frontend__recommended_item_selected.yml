@@ -1,0 +1,66 @@
+version: 2
+
+models:
+  - name: stg_segment_frontend__recommended_item_selected
+    description: The stg_segment_frontend__recommended_item_selected DBT model provides
+      data about selected items from the Segment Frontend source table. This model
+      has fields which include id type, item_id, section_id, position, user_id, context_locale,
+      context_page_referrer, context_page_path, context_page_title, page_url, event,
+      event_at. It connects to the Segment Frontend source table to generate insights
+      about what items have been selected by users. [GenAI Description]
+    columns:
+      - name: id
+        description: The 'id' column stores unique identifiers for the recommended
+          item selected. [GenAI Description]
+        tests:
+          - unique
+          - not_null
+
+      - name: type
+        description: The 'type' column identifies the type of item recommended. [GenAI
+          Description]
+
+      - name: item_id
+        description: "'item_id' is the ID of the item which has been recommended and\
+          \ selected. [GenAI Description]"
+
+      - name: section_id
+        description: The 'section_id' column contains the section ID related to a
+          recommended item. [GenAI Description]
+
+      - name: position
+        description: The 'position' column is the order assigned to each item related
+          to a user's web activity. [GenAI Description]
+
+      - name: user_id
+        description: The 'user_id' column contains a unique identifier for the user
+          that triggered the recommendation. [GenAI Description]
+
+      - name: context_locale
+        description: The column 'context_locale' contains information about the locale
+          or language of the user at the time the event in this model was triggered.
+          [GenAI Description]
+
+      - name: context_page_referrer
+        description: Context page referrer captures the URL of the page where the
+          recommendation was displayed. [GenAI Description]
+
+      - name: context_page_path
+        description: The 'context_page_path' column holds the webpage address path
+          associated with the item the user selected. [GenAI Description]
+
+      - name: context_page_title
+        description: "'context_page_title' stores the title of the webpage in which\
+          \ the item was selected. [GenAI Description]"
+
+      - name: page_url
+        description: The page_url column stores the URL of the page on which the event
+          occurred. [GenAI Description]
+
+      - name: event
+        description: The 'event' column records the type of event that triggered the
+          recommendation. [GenAI Description]
+
+      - name: event_at
+        description: The 'event_at' column stores the date and time when the event
+          associated with the row occurred. [GenAI Description]

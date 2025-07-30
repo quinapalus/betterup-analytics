@@ -1,0 +1,47 @@
+version: 2
+
+models:
+  - name: dbt_events__engaged_objective
+    description: Engagement events for objectives
+
+    columns:
+      - name: events__engaged_objective_id
+        description: Surrogate Key of MEMBER_ID, EVENT_ACTION_AND_OBJECT, EVENT_AT,
+          ASSOCIATED_RECORD_ID
+        tests:
+          - not_null
+          - unique
+
+      - name: member_id
+        description: ID of the member (users.id)
+        tests:
+          - not_null
+
+      - name: event_at
+        description: Date when event was created
+        tests:
+          - not_null
+
+      - name: event_action
+        description: The event behavior that happened
+
+      - name: event_object
+        description: The abstract business object associated with the event
+        tests:
+          - not_null
+
+      - name: event_action_and_object
+        description: Concatenation of event action and event object
+
+      - name: associated_record_type
+        description: Type of the associated_record_id. Here it is 'Objective'
+        tests:
+          - not_null
+
+      - name: associated_record_id
+        description: Associated 'Objective' id
+        tests:
+          - not_null
+
+      - name: attributes
+        description: Extra fields associated with the event

@@ -1,0 +1,10 @@
+version: 2
+
+models:
+  - name: dbt__organization_constructs
+    description: ""
+    columns:
+      - name: _unique
+        tests:
+          - not_null
+          - unique

@@ -1,0 +1,120 @@
+version: 2
+models:
+  - name: dei_coaches
+
+    columns:
+      - name: coach_id
+        tests:
+          - unique
+          - not_null
+
+      - name: fnt_applicant_id
+        description: >
+          Foreign key to a coach's associated Fountain account. Currently stubbed as NULL, pending
+          addition of `fnt_applicant_id` to the `coach_profiles` table in the application.
+
+      - name: priority_language
+        description: >
+          ISO 639-1 Alpha-2 code for highest ranked language the coach can coach in, selected
+          from the list of priority languages in `data/bu_priority_staffing_languages.csv`.
+          Value will be `Other` if coach has non-English, non-priority language, and `en` only
+          if English is their only coaching language.
+        tests:
+          - not_null
+
+      - name: staffing_languages
+        description: >
+          Array of ISO 639-1 Alpha-2 codes for all languages the coach is qualified to coach in.
+        tests:
+          - not_null
+
+      - name: staffable
+        description: Whether the coach is able to be staffed (i.e if staffable_state = 'staffable')
+
+      - name: staffable_state
+        description: '{{ doc("int_coach__coach_profiles__staffable_states") }}'
+
+      - name: first_staffable_at
+        description: >
+          The earliest time when the coach was staffable through the Global Staffing system.
+          Only valid for coaches marked staffable after 1/10/2019
+          ([betterup-app/#9191](https://github.com/betterup/betterup-app/pull/9191)). A majority
+          of legacy-staffed coaches were migrated to Global Staffing on 4/3/2019.
+
+      - name: currency_code
+        description: The primary currency from a coach's `completed_sessions` pay rate.
+
+      - name: country_code
+        description: >
+          The 2-letter ISO 3166 country code based on mapping from a coach's time
+          zone. Note: US and Canada share common time zones in the Rails application,
+          so if a coach's currency code is available, we use that information to
+          disambiguate US from Canada.
+
+      - name: country_name
+        description: >
+          Human-readable country name for corresponding ISO `country_code`. See
+          note on logic in description for `country_code`.
+
+      - name: max_member_count
+        description: >
+          Maximum member capacity as indicated by the coach through the platform.
+
+      - name: seats_occupied_count
+        description: >
+          Number of seats currently occupied for the given coach. Does not include any
+          QA/Mock Coach account track_assignments
+        tests:
+          - not_null
+
+      - name: seats_available_count
+        description: >
+          Number of seats available for the given coach, calculated as the difference
+          between max_member_count and seats_occupied_count, set to 0 if they are currently
+          overstaffed.
+
+      - name: overstaffed
+        description: >
+          Boolean indicating whether number of seats currently occupied for the given coach
+          exceeds their desired max member count.
+        tests:
+          - not_null
+          - accepted_values:
+              values: [true, false]
+
+      - name: type_extended_network
+        description: >
+          Boolean indicating if the coach belongs to at least one extended network vertical.
+        tests:
+          - not_null
+          - accepted_values:
+              values: [true, false]
+
+      - name: specialist_vertical_uuids
+        description: >
+          Array of UUIDs of the extended network verticals associated with the coach.
+
+      - name: specialist_vertical_ids
+        description: >
+          Array of IDs of the extended network verticals associated with the coach.
+
+      - name: specialist_verticals
+        description: >
+          Array of names of the extended network verticals associated with the coach.
+
+      - name: coaching_cloud
+        description: Array of applicable clouds for the particular coach.
+
+      - name: engaged_member_count
+        description: >
+          Number of ongoing coach assignments -- across all types of coaching --  where the member has last_engaged_at within 30 days.
+          This is computed within the production app and replicated directly from there -- not computed in the warehouse.
+
+      - name: current_volunteer_member_count
+        description: >
+          Current number of volunteer members assigned to the coach as part of Galen project, if the coach is
+          enabled for volunteer coaching.
+
+      - name: segment_priority_level
+        description: >
+          P1, P2, or P3 indicating a coach's level of priority during recommendation with P1 high and P3 low.

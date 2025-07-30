@@ -1,0 +1,89 @@
+version: 2
+
+models:
+  - name: stg_zendesk__ticket_metrics
+    description: >
+      Contains ticket metrics information as synchronized through the Zendesk
+      API by Segment.
+
+    columns:
+      - name: ticket_metric_id
+        description: Primary key
+        tests:
+          - unique
+          - not_null
+
+      - name: ticket_id
+        description: >
+          Foreign Key to the ticket associated with the metric.
+        tests:
+          - unique
+          - not_null
+          - relationships:
+              to: ref('stg_zendesk__tickets')
+              field: ticket_id
+
+      - name: initially_assigned_at
+        description: >
+          Timestamp denoting when the ticket was initially assigned.
+
+      - name: assigned_at
+        description: >
+          Timestamp denoting when the ticket was last assigned.
+
+      - name: solved_at
+        description: >
+          Timestamp denoting when the ticket was marked as solved.
+
+      - name: updated_at
+        description: >
+          Timestamp denoting when the ticket was last updated.
+
+      - name: status_updated_at
+        description: >
+          Timestamp denoting when the status associated with this ticket
+          was last updated.
+
+      - name: assignee_updated_at
+        description: >
+          Timestamp denoting when the assignee last updated the ticket.
+
+      - name: requester_updated_at
+        description: >
+          Timestamp denoting when the requester last updated the ticket.
+
+      - name: time_to_reply_business_minutes
+        description: >
+          Number of minutes to the first reply during business hours.
+
+      - name: time_to_reply_calendar_minutes
+        description: >
+          Number of minutes to the first reply outside of business hours.
+
+      - name: time_to_first_resolution_business_minutes
+        description: >
+          Number of minutes to the first resolution during business hours.
+
+      - name: time_to_first_resolution_calendar_minutes
+        description: >
+          Number of minutes to the first resolution outside of business hours.
+
+      - name: time_to_full_resolution_business_minutes
+        description: >
+          Number of minutes to the full resolution during business hours.
+
+      - name: time_to_full_resolution_calendar_minutes
+        description: >
+          Number of minutes to the full resolution outside of business hours.
+
+      - name: replies_count
+        description: >
+          Number of replies associated with this ticket.
+        tests:
+          - not_null
+
+      - name: reopens_count
+        description: >
+          Number of reopens associated with this ticket.
+        tests:
+          - not_null

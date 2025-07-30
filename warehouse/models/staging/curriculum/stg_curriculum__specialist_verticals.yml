@@ -1,0 +1,111 @@
+version: 2
+models:
+  - name: stg_curriculum__specialist_verticals
+    description: Application table containing Extended Network specialist vertical
+      information
+
+    columns:
+
+      - name: specialist_vertical_id
+        description: Primary key
+        tests:
+          - unique
+          - not_null
+
+      - name: specialist_vertical_uuid
+        tests:
+          - unique
+          - not_null
+
+        description: The 'specialist_vertical_uuid' column in this DBT model contains
+          a universally unique identifier for each specialist vertical. [GenAI Description]
+      - name: name_i18n
+        description: A JSON object of specialist vertical translations.
+        tests:
+          - not_null
+
+      - name: name
+        description: >
+          Name of the specialist vertical (e.g. "Sleep").
+          Pulling the English version from the localized JSON translations (name_i18n).
+        tests:
+          - not_null
+
+      - name: created_at
+        description: >
+          Time when the Rails object was created in UTC, i.e. when the
+          specialist vertical was created.
+        tests:
+          - not_null
+
+      - name: updated_at
+        description: Time when the Rails object was updated in UTC.
+        tests:
+          - not_null
+
+      - name: description_i18n
+        description: The 'description_i18n' column contains an internationalized description
+          of each curriculum specialization. [GenAI Description]
+
+      - name: disclaimer
+        description: The 'disclaimer' column contains text information related to
+          disclaimers associated with the specialist verticals. [GenAI Description]
+
+      - name: disclaimer_i18n
+        description: The 'disclaimer_i18n' column stores a disclaimer translated into
+          various languages, as an internationalized string. [GenAI Description]
+
+      - name: hero_image_url
+        description: "'hero_image_url' contains a URL linking to the hero image associated\
+          \ with the specialist vertical. [GenAI Description]"
+
+      - name: resource_id
+        description: "'resource_id' is a unique identifier for each row in the table\
+          \ that links to Stitch. [GenAI Description]"
+
+      - name: thumbnail_image_url
+        description: The 'thumbnail_image_url' column stores the URL for a thumbnail
+          image associated with the specialist vertical. [GenAI Description]
+
+      - name: coach_matching_assessment_prompt_i18n
+        description: coach_matching_assessment_prompt_i18n is a JSON field that stores
+          the i18n prompt used for the coach matching assessment. [GenAI Description]
+
+      - name: key
+        description: The 'key' column contains a unique identifier used to identify
+          a specialist vertical. [GenAI Description]
+
+      - name: order
+        description: The 'order' column represents the order of the specialist verticals.
+          [GenAI Description]
+
+      - name: primary_at
+        description: Primary_at indicates the primary status of the specialist vertical,
+          which is used to give priority when displaying specialist verticals. [GenAI
+          Description]
+
+      - name: post_session_configuration_id
+        description: "'post_session_configuration_id' is the ID of the configuration\
+          \ applied post-session. [GenAI Description]"
+
+      - name: post_session_configuration_uuid
+        description: "'post_session_configuration_uuid' identifies the unique universal\
+          \ identifier of the post-session configuration information associated with\
+          \ the specialist vertical. [GenAI Description]"
+
+      - name: coach_match_configuration_id
+        description: coach_match_configuration_id is an ID used to specify the configuration
+          criteria for a coach match. [GenAI Description]
+
+      - name: coach_match_configuration_uuid
+        description: "'coach_match_configuration_uuid' is a unique identifier for\
+          \ a configuration related to coach matching. [GenAI Description]"
+
+      - name: coach_availability_period
+        description: "'coach_availability_period' defines the period of time coaches\
+          \ are available for the given specialist vertical. [GenAI Description]"
+
+      - name: share_coach_matching_assessment_with_coach
+        description: The 'share_coach_matching_assessment_with_coach' column indicates
+          whether the coach matching assessment should be shared with the coach. [GenAI
+          Description]

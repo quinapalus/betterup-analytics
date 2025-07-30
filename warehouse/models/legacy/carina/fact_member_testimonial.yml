@@ -1,0 +1,55 @@
+version: 2
+models:
+  - name: fact_member_testimonial
+    description: >
+      Fact table for member testimonials. Facts are limited to testimonials
+      promoted from members' post-session feedback while they were on external
+      deployments.
+
+    columns:
+      - name: primary_key
+        tests:
+          - not_null
+          - unique
+
+      - name: member_key
+        description: Foreign key to conformed Member dimension.
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_members')
+              field: member_key
+
+      - name: date_key
+        description: Foreign key to conformed Date dimension.
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_date')
+              field: date_key
+
+      - name: account_key
+        description: >
+          Foreign key to conformed Account dimension for the account the member was
+          associated with on the day the post-session feedback was submitted.
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_account')
+              field: account_key
+
+      - name: deployment_key
+        description: >
+          Foreign key to conformed Deployment dimension for the deployment associated
+          with the testimonial.
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_deployment')
+              field: deployment_key
+
+      - name: text
+        description: >
+          Promoted testimonial from the member's post-session written feedback.
+        tests:
+          - not_null

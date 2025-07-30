@@ -1,0 +1,31 @@
+openapi: 3.0.1
+info:
+  title: Data Catalog (in development)
+  description: >
+    BetterUp's Data Catalog is a metadata management platform for data asset developers
+    to share data assets with others. A Data Catalog enables search, discovery and 
+    data lineage analysis.
+  x-cortex-git:
+    github:
+      repository: betterup/betterup-analytics
+  x-cortex-tag: betterup-analytics-data-catalog
+  x-cortex-type: service
+  x-cortex-link:
+  - name: Data Ops Confluence
+    type: documentation
+    url: https://betterup.atlassian.net/wiki/spaces/DATAOPS/overview
+  - name: "RFC: Data Catalog"
+    type: documentation
+    url: https://betterup.atlassian.net/wiki/spaces/ET/pages/3254911277/RFC+Data+Catalog
+  x-cortex-owners:
+  - name: betterup/data-operations-squad
+    type: GROUP
+  - type: SLACK
+    channel: squad-data-ops
+  - type: SLACK
+    channel: proj-data-catalog
+  x-cortex-service-groups:
+  - external-system
+  - tier-2
+  x-cortex-custom-metadata:
+    codeowner-path: .github/CODEOWNERS

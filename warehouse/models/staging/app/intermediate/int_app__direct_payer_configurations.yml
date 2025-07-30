@@ -1,0 +1,11 @@
+version: 2
+
+models:
+  - name: int_app__direct_payer_configurations
+    description: Direct Payer Configurations w/ Experience Configuration Assignments
+    columns:
+      - name: primary_key
+        description: Unique identifier
+        tests:
+          - not_null
+          - unique

@@ -1,0 +1,18 @@
+version: 2
+
+models:
+  - name: stg_sfdc__user_roles
+    description: DBT model stg_sfdc__user_roles provides a snapshot of the roles set
+      up in Salesforce. It contains information on uniquely identified roles with
+      IDs and names. This model can be used to get an overview of the roles and their
+      properties. [GenAI Description]
+    columns:
+      - name: sfdc_user_role_id
+        description: "'sfdc_user_role_id' is the Salesforce ID of a user role. [GenAI\
+          \ Description]"
+        tests:
+          - unique
+          - not_null
+      - name: role_name
+        description: The 'role_name' column contains the name of each user role in
+          Salesforce. [GenAI Description]

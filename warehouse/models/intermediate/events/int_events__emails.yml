@@ -1,0 +1,53 @@
+version: 2
+
+models:
+  - name: int_events__emails
+    description: The int_events__emails model contains email engagement data sourced
+      from the SendGrid Event API. This model tracks and stores data about the delivery,
+      open, click, and unsubscribe events associated with emails, including the event
+      ID, message ID, email address, time of the event, tags, useragent, URL, and
+      reason. This data can be used to provide valuable insights into which emails
+      are most effective in engaging customers or other stakeholders. [GenAI Description]
+    columns:
+      - name: int_events__emails_id
+        description: A unique identifier for each email-event combination. [GenAI
+          Description]
+        tests:
+          - unique
+          - not_null
+
+      - name: event_id
+        description: The 'event_id' column contains the unique identifier of an event,
+          associated with an email. [GenAI Description]
+
+      - name: message_id
+        description: The 'message_id' column holds the unique Sendgrid identifier
+          for the message sent. [GenAI Description]
+
+      - name: email
+        description: The 'email' column stores the recipient email address associated
+          with an event. [GenAI Description]
+
+      - name: event
+        description: The 'event' column identifies the type of event associated with
+          an email, such as 'open' or 'click'. [GenAI Description]
+
+      - name: event_at
+        description: The event_at column stores the timestamp of when the event occurred.
+          [GenAI Description]
+
+      - name: tags
+        description: The 'tags' column contains a series of comma-separated categories
+          associated with an email event. [GenAI Description]
+
+      - name: useragent
+        description: The 'useragent' column identifies the web browser/operating system
+          of the user that generated the event. [GenAI Description]
+
+      - name: url
+        description: The 'url' column contains the URL associated with a given event.
+          [GenAI Description]
+
+      - name: reason
+        description: The 'reason' column contains the delivery status or classification
+          of the email, such as deferred, bounced, processed, etc. [GenAI Description]

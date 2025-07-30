@@ -1,0 +1,101 @@
+name: DBT Daily Workflow
+
+on:
+  # Allows you to reference this workflow from another workflow
+  workflow_call:
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+  
+  # Execute This Workflow Daily, at 5:30 AM UTC
+  schedule:
+    - cron: "30 5 * * *"
+
+# Allow one concurrent deployment of this workflow. Cancel In-Progress Workflow another trigger is activated.
+concurrency:
+  group: dbt-daily
+  cancel-in-progress: true
+
+env:
+  SNOWFLAKE_USER: "DBT_GITHUB_CI_USER"
+  SNOWFLAKE_PASSWORD: ${{ secrets.DBT_GITHUB_CI_USER_PASSWORD }}
+  SNOWFLAKE_ACCOUNT: ${{ secrets.SNOWFLAKE_ACCOUNT }}
+  SLACK_WEBHOOK_URL: ${{ secrets.DATA_SLACK_WEBHOOK_URL }}
+  SLACK_WEBHOOK_TYPE: INCOMING_WEBHOOK
+  GITHUB_ACTION_URL: "https://github.com/betterup/betterup-analytics/actions/workflows/dbt_daily.yml"
+  DEPLOYMENT_ENVIRONMENT: ${{ secrets.BETTERUP_ENVIRONMENT }}
+
+jobs:
+        
+  dbt_pr_test:
+    strategy:
+      matrix:
+        environment: ['US Prod','EU Prod']
+        
+    name: Daily Clone + Clean 
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: warehouse
+
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16
+
+      - name: Install python dependencies
+        # Retry 3 times before the install actually fails 
+        run: |
+          (echo "===== Install Attempt: 1 =====" && make installdeps) || \
+          (echo "===== Install Attempt: 2 =====" && make installdeps) || \
+          (echo "===== Install Attempt: 3 =====" && make installdeps) || \
+          (echo "===== Install python dependencies step failed =====" && exit 1)
+          pip install --upgrade pip
+          pip install 'snowflake-connector-python[pandas]'
+
+      - name: Write DBT configs
+        run: |
+          make writedbtconfig
+      
+      - name: Install DBT dependencies
+        run: |
+          poetry run dbt deps --target prod
+
+      - name: Daily Clone of Analytics Schemas
+        if: matrix.environment == 'US Prod'
+        run: poetry run dbt run-operation recent_history_backup__clone_schemas --args '{"source_database":"analytics", "target_database":"analytics_recent_history" }' --target prod
+      
+      - name: Daily Cleanup of Recent History Clones
+        if: matrix.environment == 'US Prod'
+        run: poetry run dbt run-operation recent_history_backup__drop_old_clones --args '{"target_database":"analytics_recent_history"}' --target prod
+        
+      - name: Cleanup old PR Schemas in Snowflake
+        run: python ../python_utils/clean_temp_schemas.py
+
+      - name: Archive target artifacts
+        if: matrix.environment == 'US Prod'
+        uses: actions/upload-artifact@v3
+        with:
+          name: dbt-build-artifacts
+          path: |
+            warehouse/target
+      
+      - name: Send GitHub Action data to Slack workflow
+        id: send-slack-notification
+        uses: slackapi/slack-github-action@v1.23.0
+        if: failure() 
+        with:
+          # Slack API Reference: 
+          # https://api.slack.com/messaging/composing
+          # https://api.slack.com/reference/messaging/payload
+          payload: |
+              {
+                "channel": "warroom-data",
+                "icon_emoji": ":dbt-logo:",
+                "text": "Daily Clone + Clean (dbt_daily.yml) Run Failure. <${{ env.GITHUB_ACTION_URL }}|View here.>"
+              }

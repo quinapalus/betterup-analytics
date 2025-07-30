@@ -1,0 +1,22 @@
+version: 2
+
+models:
+  - name: fact_app_experiment_assignment_events
+    description: >
+      This table tracks experiment, experiment_variant assignment events.  By creating
+      this separate fact table, we remove the need to ingest all the other amplitude
+      events into
+      the fact_app_experiment_events table to accurately calculate the number of users
+      assigned to experiments. 
+    columns:
+      - name: id
+        description: Unique id for this table's granularity.
+        tests:
+          - unique
+          - not_null
+
+      - name: uuid
+        description: Unique identifier for the event object. There should be many
+          duplicates in this table.
+        tests:
+          - not_null

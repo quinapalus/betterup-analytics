@@ -1,0 +1,38 @@
+version: 2
+
+models:
+  - name: fact_wkfw_item_responses
+    description: This DBT model stores all response entries for user assessments.
+      It contains relationship information for assessments, users, and assessment
+      configurations to which the responses apply. Records consist of an assessment
+      ID, user ID, item key, item response, assessment configuration ID, and a primary
+      key for identification. [GenAI Description]
+    columns:
+      - name: assessment_id
+        description: The 'assessment_id' column is a unique identifier for each completed
+          assessment. [GenAI Description]
+
+      - name: user_id
+        description: The column 'user_id' stores the unique ID of the user who completed
+          the assessment. [GenAI Description]
+
+      - name: item_key
+        description: The 'item_key' column contains the path of each response given
+          by a user in an assessment. [GenAI Description]
+
+      - name: item_response
+        description: This column contains the recorded response for each item in an
+          assessment. [GenAI Description]
+
+      - name: assessment_configuration_id
+        description: The 'assessment_configuration_id' column contains the unique
+          identifier of the assessment configuration that was used for the assessment.
+          [GenAI Description]
+
+      - name: primary_key
+        description: The 'primary_key' column is a generated surrogate key which combines
+          the assessment_id and item_key columns to create a unique identifier for
+          each row. [GenAI Description]
+        tests:
+          - not_null
+          - unique

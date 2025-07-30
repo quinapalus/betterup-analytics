@@ -1,0 +1,45 @@
+version: 2
+
+models:
+  - name: stg_app__member_configurations
+    description: The stg_app__member_configurations model holds configuration information
+      related to members in a specific app, such as whether or not they include behavioral
+      assessments, and if manager feedback is enabled. It includes fields like default_resource_list_id,
+      includes_behavioral_assessments, whole_person360_enabled, whole_person180_enabled,
+      disable_confirmation_email, manager_feedback_enabled, and manager_required_360.
+      [GenAI Description]
+    columns:
+      - name: member_configuration_id
+        description: The 'member_configuration_id' column identifies unique configurations
+          of a member in the application. [GenAI Description]
+        tests:
+          - unique
+          - not_null
+
+      - name: default_resource_list_id
+        description: The 'default_resource_list_id' column stores the id of the default
+          resource list associated with each Member Configuration. [GenAI Description]
+
+      - name: includes_behavioral_assessments
+        description: The 'includes_behavioral_assessments' column indicates whether
+          the model includes behavioral assessments. [GenAI Description]
+
+      - name: whole_person360_enabled
+        description: This column indicates whether the Whole Person 360 assessment
+          is enabled or not. [GenAI Description]
+
+      - name: whole_person180_enabled
+        description: This column indicates whether the Whole Person 180 program is
+          enabled for the member configuration. [GenAI Description]
+
+      - name: disable_confirmation_email
+        description: This column indicates whether an email confirmation is disabled
+          for a member configuration record. [GenAI Description]
+
+      - name: manager_feedback_enabled
+        description: This column indicates if manager feedback is enabled for a member
+          configuration. [GenAI Description]
+
+      - name: manager_required_360
+        description: The field 'manager_required_360' indicates whether a manager's
+          feedback is required for 360 degree reviews. [GenAI Description]

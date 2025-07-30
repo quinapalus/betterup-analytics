@@ -1,0 +1,62 @@
+version: 2
+
+models:
+  - name: int_account_health_rubric_nps
+    description: "Drivers and overall score calculations for the sentiment rubric of the account health score. 
+                  More detail here https://betterup.atlassian.net/wiki/spaces/AN/pages/3148087328/Sentiment+Health+Score+Calculation"
+    columns:
+      - name: sfdc_account_id
+        description: ""
+        tests:
+          - unique
+          - not_null
+
+      - name: most_recent_partner_rps
+        description: ""
+
+      - name: count_activated_members
+        description: ""
+
+      - name: sum_nps_promoters
+        description: ""
+
+      - name: sum_nps_detractors
+        description: ""
+
+      - name: count_item_responses
+        description: ""
+
+      - name: member_net_promoter_score
+        description: ""
+
+      - name: account_health_rubric_nps_driver_member_nps
+        description: ""
+        tests:
+          - accepted_values:
+              #test that only these values exist
+              values: ['Good','Okay','Poor']
+          - dbt_expectations.expect_column_distinct_values_to_contain_set:
+              #test that these values actually exist at least once
+              value_set: ['Good','Okay','Poor']
+
+      - name: account_health_rubric_nps_driver_partner_rps
+        description: ""
+        tests:
+          - accepted_values:
+              #test that only these values exist
+              values: ['Good','Okay','Poor']
+          - dbt_expectations.expect_column_distinct_values_to_contain_set:
+              #test that these values actually exist at least once
+              value_set: ['Good','Okay','Poor']
+              config:
+                severity: warn
+
+      - name: account_health_rubric_nps_overall_score
+        description: ""
+        tests:
+          - accepted_values:
+              #test that only these values exist
+              values: ['Good','Okay','Poor']
+          - dbt_expectations.expect_column_distinct_values_to_contain_set:
+              #test that these values actually exist at least once
+              value_set: ['Good','Okay','Poor']

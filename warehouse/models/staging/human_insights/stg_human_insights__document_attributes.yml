@@ -1,0 +1,42 @@
+version: 2
+
+models:
+  - name: stg_human_insights__document_attributes
+    description: >
+      Additional attributes sent with each request to the text scoring pipeline
+
+    columns:
+      - name: attribute_id
+        description: Unique identifier (primary key) of the attribute
+        tests:
+          - not_null
+          - unique
+
+      - name: text_document_id
+        description: ID of the document that this attribute is associated with
+        tests:
+          - not_null
+
+      - name: attribute_name
+        description: Name of the attribute
+        tests:
+          - not_null
+
+      - name: attribute_type
+        description: Type of the attribute
+        tests:
+          - not_null
+
+      - name: value_string
+        description: Value of the attribute if it is of type string
+
+      - name: value_float
+        description: Value of the attribute if it is of type float
+
+      - name: value_datetime
+        description: Value of the attribute if it is of type datetime
+
+      - name: created_at
+        description: Timestamp denoting when the attribute landed in Snowflake
+        tests:
+          - not_null

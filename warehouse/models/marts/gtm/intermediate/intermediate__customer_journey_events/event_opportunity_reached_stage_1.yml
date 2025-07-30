@@ -1,0 +1,10 @@
+version: 2
+
+models:
+
+  - name: event_opportunity_reached_stage_1
+    columns:
+      - name: "sfdc_opportunity_id"
+        tests:
+          - unique
+          - not_null

@@ -1,0 +1,46 @@
+version: 2
+
+models:
+  - name: stg_wkfw__assessment_item_options
+    description: DBT model stg_wkfw__assessment_item_options contains data from the
+      raw.stitch_app_viva_staging.assessment_item_options table and structured into
+      the fields assessment_item_option_id, position, question_type, value, label,
+      subtitle, created_at and updated_at. It stores localized textual value in label
+      and subtitle fields using a JSON format. Overall, this model provides a way
+      to store and access associated information related to assessment item options.
+      [GenAI Description]
+    columns:
+      - name: assessment_item_option_id
+        description: "'assessment_item_option_id' is the unique identifier for an\
+          \ item option in an assessment item. [GenAI Description]"
+        tests:
+          - not_null
+          - unique
+
+      - name: position
+        description: The 'position' column contains the order in which to display
+          the assessment item options. [GenAI Description]
+
+      - name: question_type
+        description: The 'question_type' column stores the type of question associated
+          with an assessment item. [GenAI Description]
+
+      - name: value
+        description: The 'value' column in this model contains the unique value associated
+          with each assessment item option. [GenAI Description]
+
+      - name: label
+        description: The 'label' column stores the label for the various assessment
+          item options in English. [GenAI Description]
+
+      - name: subtitle
+        description: The 'subtitle' column contains an English-language subtitle associated
+          with a given assessment item option. [GenAI Description]
+
+      - name: created_at
+        description: The column 'created_at' is a timestamp value which stores the
+          date and time at which the assessment item option was created. [GenAI Description]
+
+      - name: updated_at
+        description: '"updated_at" contains the timestamp of the last update for an
+          assessment item option. [GenAI Description]'

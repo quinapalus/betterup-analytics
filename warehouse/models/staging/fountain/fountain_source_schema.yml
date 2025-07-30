@@ -1,0 +1,15 @@
+version: 2
+
+sources:
+  - name: fountain
+    schema: tap_fountain
+    database: raw
+    tables:
+      - name: applicants
+        identifier: applicant
+
+      - name: transitions
+        identifier: transition
+      
+      - name: funnels
+        identifier: funnel

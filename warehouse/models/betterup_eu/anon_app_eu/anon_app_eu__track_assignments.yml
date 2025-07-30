@@ -1,0 +1,87 @@
+version: 2
+
+models:
+  - name: anon_app_eu__track_assignments
+
+    columns:
+      - name: id
+        tests:
+          - unique
+          - not_null
+
+        description: The 'id' column contains a unique ID for each track assignment.
+          [GenAI Description]
+      - name: care
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['true', 'false']
+
+        description: The 'care' column is a boolean value indicating whether or not
+          the assignment provides personalized care support. [GenAI Description]
+      - name: created_at
+        tests:
+          - not_null
+        description: The "created_at" column stores the date and time when the track
+          assignment was created. [GenAI Description]
+      - name: ends_on
+        description: The 'ends_on' column stores the date when the assignment of a
+          track to a user ends. [GenAI Description]
+      - name: extended_network
+        description: Extended network is a boolean column indicating if an extended
+          network is enabled for a given track assignment in the EU region. [GenAI
+          Description]
+      - name: hidden
+        description: The 'hidden' column indicates whether the track assignment should
+          be hidden from view. [GenAI Description]
+      - name: id
+        description: The 'id' column contains a unique ID for each track assignment.
+          [GenAI Description]
+      - name: minutes_limit
+        description: The 'minutes_limit' column indicates the maximum number of minutes
+          allowed in a track assignment for the user in EU. [GenAI Description]
+      - name: minutes_used
+        description: The 'minutes_used' column contains the amount of time spent by
+          the user on the track. [GenAI Description]
+      - name: on_demand
+        description: The 'on_demand' column indicates whether the usage of the track
+          is on-demand rather than scheduled. [GenAI Description]
+      - name: peer
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['true', 'false']
+        description: The 'peer' column contains data about an assigned peer coach.
+          [GenAI Description]
+      - name: primary_coaching_enabled
+        description: This column indicates whether primary coaching is enabled for
+          the track assignment. [GenAI Description]
+      - name: primary_coaching_starts_at
+        description: The 'primary_coaching_starts_at' column stores the date a primary
+          coaching plan begins. [GenAI Description]
+      - name: program_change_notifications_enabled
+
+        description: This column indicates whether user notification settings are
+          enabled for program changes. [GenAI Description]
+      - name: track_id
+        tests:
+          - not_null
+        description: The 'track_id' column holds the unique ID of the track that a
+          user belongs to. [GenAI Description]
+      - name: updated_at
+        tests:
+          - not_null
+        description: The 'updated_at' column contains the timestamp indicating when
+          the record was last updated. [GenAI Description]
+      - name: user_id
+        tests:
+          - not_null
+        description: The 'user_id' column stores the identifier of the user associated
+          with a track assignment. [GenAI Description]
+    description: The DBT model anon_app_eu__track_assignments stores data related
+      to track assignments for a European application. This model contains information
+      related to care, extended network, hidden fields, minutes used/limit, on demand,
+      peer, primary coaching enabled/started, program change notifications and user
+      id. It also stores the created_at and updated_at columns which track the lifecycle
+      of the assignment. It is created based on the data from a source table, and
+      is suitable for use in tracking, reporting, and analytics. [GenAI Description]

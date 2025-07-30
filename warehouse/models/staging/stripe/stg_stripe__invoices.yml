@@ -1,0 +1,11 @@
+version: 2
+
+models:
+  - name: stg_stripe__invoices
+    description: Any transaction that flows in or out of Betterup Stripe Account.
+    columns:
+      - name: stripe_invoice_id
+        description: Primary key
+        tests:
+          - unique
+          - not_null

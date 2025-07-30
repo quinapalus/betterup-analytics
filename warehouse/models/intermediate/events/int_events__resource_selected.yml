@@ -1,0 +1,65 @@
+version: 2
+models:
+  - name: int_events__resource_selected
+    description: >
+      Resource selected events from Explore Tab aggregated (web + ios + android)
+
+    columns:
+      - name: event_id
+        description: Unique identifier of the event.
+        tests:
+          - not_null
+          - unique
+
+      - name: event_text
+        description: Human-readable name of the event.
+
+      - name: received_at
+        description: >
+          Specifies when the datapoint occurred, corrected for client-device clock
+          skew.
+          See the Segment [documentation](https://segment.com/docs/spec/common/#timestamps)
+          for more information.
+        tests:
+          - not_null
+
+      - name: platform
+        description: Client platform.
+
+      - name: user_id
+        description: >
+          Unique identfier of the User.
+
+      - name: resource_id
+        description: >
+          Unique identfier of the selected resource.
+        tests:
+          - not_null
+
+      - name: resource_rank
+        description: >
+          The placement of the selected resource within the section it is displayed.
+        tests:
+          - not_null
+
+      - name: resource_section
+        description: >
+          The section from which the resource was selected. Examples: "for-you-this-week",
+          "trending-this-week"
+
+      - name: resources_ids_in_section
+        description: >
+          Array with resource ids listed in the selected resource's section.
+        tests:
+          - not_null
+
+      - name: resources_loaded_count
+        description: >
+          The total number of resources loaded on section at the time of the event.
+        tests:
+          - not_null
+
+      - name: resource_category
+        description: >
+          The category id of the view from which the resource was selected (only for
+          category pages, not for explore landing/home view).

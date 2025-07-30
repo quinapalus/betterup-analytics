@@ -1,0 +1,29 @@
+version: 2
+
+models:
+  - name: stg_app__product_subscriptions
+    description: Product Subscriptions from the BU application.
+    columns:
+      - name: product_subscription_id
+        description: Primary key of the product subscription in the application.
+        tests:
+          - unique
+          - not_null
+
+      - name: product_id
+        description: Foreign key of the associated product.
+
+      - name: organization_id
+        description: Foreign key of the associated Organization.
+
+      - name: state
+        description: ""
+
+      - name: name
+        description: Product Subscription Name
+
+      - name: created_at
+        description: When the product subscription was created.
+
+      - name: updated_at
+        description: When the product subscription was last updated.

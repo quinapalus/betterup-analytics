@@ -1,0 +1,67 @@
+version: 2
+
+models:
+  - name: base_coach__profile_island_attributes
+    description: Contains metrics that used to be (or maybe still are) in coach_profiles.
+        This table is unique by coach because we are filtering for the appropriate "island" using a macro.
+    tests:
+      - unique:
+          column_name: (coach_profile_uuid || '-' || island)
+
+    columns:
+      - name: id
+        description: The column 'profile_island_attribute_id' is the unique ID that
+          identifies each record of data for island attributes associated with individual
+          coach profiles. [GenAI Description]
+        tests:
+          - unique
+          - not_null
+
+      - name: uuid
+        description: Contains attributes associated with individual profile islands,
+          including descriptions of members, banned organizations, and maximum memberships.
+          [GenAI Description]
+        tests:
+          - unique
+          - not_null
+
+      - name: island
+        description: The 'island' column contains string values naming the island
+          associated with the profile island attribute. [GenAI Description]
+
+
+      - name: coach_profile_uuid
+        description: The 'coach_profile_uuid' column stores the unique identifier
+          of the coach profile associated with each profile island attribute. [GenAI
+          Description]
+        tests:
+          - not_null
+          - unique
+
+      - name: appointment_buffer_enabled
+        description: The appointment_buffer_enabled column indicates whether buffer
+          times are enabled for an island. [GenAI Description]
+
+      - name: current_volunteer_member_count
+        description: The column 'current_volunteer_member_count' holds the number
+          of members currently being served by a given profile island. [GenAI Description]
+
+      - name: engaged_member_count
+        description: "'engaged_member_count' is the number of participants currently\
+          \ accessing the Island. [GenAI Description]"
+
+      - name: max_member_count
+        description: The 'max_member_count' column contains the maximum number of
+          volunteer members allowed on the island. [GenAI Description]
+
+      - name: banned_organization_ids
+        description: The 'banned_organization_ids' column contains a list of organization
+          ids to be blocked when logging into a Coach Profile Island. [GenAI Description]
+
+      - name: pending_primary_recommendation_count
+        description: This column contains the number of pending primary (coaching)
+          recommendations for the coach's profile island. [GenAI Description]
+
+      - name: pick_rate
+        description: The 'pick rate' column is the rate at which coach profiles are
+          selected for an appointment. [GenAI Description]

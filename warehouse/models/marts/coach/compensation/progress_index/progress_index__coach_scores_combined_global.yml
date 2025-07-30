@@ -1,0 +1,33 @@
+version: 2
+
+models:
+  - name: progress_index__coach_scores_combined_global
+    description: ""
+    columns:
+      - name: coach_id
+        description: ""
+        tests:
+          - unique
+          - not_null
+
+      - name: coach_uuid
+        description: ""
+
+      - name: rescaled_coach_composite_score
+        description: ""
+
+      - name: rescaled_coach_overcome_obstacles_score
+        description: ""
+
+      - name: rescaled_coach_goal_progress_score
+        description: ""
+
+      - name: rescaled_coach_self_awareness_score
+        description: ""
+
+      - name: rescaled_coach_equiped_changes_score
+        description: ""
+
+      - name: rescaled_coach_impact_development_score
+        description: ""
+

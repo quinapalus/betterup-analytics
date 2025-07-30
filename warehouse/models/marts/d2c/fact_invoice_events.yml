@@ -1,0 +1,16 @@
+version: 2
+
+models:
+  - name: fact_invoice_events
+    meta:
+      owner: "adrian.lievano@betterup.co"
+    description: >
+      A table tracking invoice events. Includes invoice creation, charge, payment
+      succeeded, etc.
+
+    columns:
+      - name: stripe_event_id
+        description: Primary key
+        tests:
+          - unique
+          - not_null

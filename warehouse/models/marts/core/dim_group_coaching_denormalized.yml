@@ -1,0 +1,54 @@
+version: 2
+
+models:
+  - name: dim_group_coaching_denormalized
+    description: >
+      A gold layer model for group coaching data.  It combines data from  group coaching
+      cohorts, group coaching registrations, group_coaching_sessions,  group coaching
+      series and group coaching curriculums.
+
+    columns:
+      - name: group_coaching_denormalized_id
+        description: Primary surrogate key
+        tests:
+          - unique
+          - not_null
+
+      - name: group_coaching_cohort_id
+        description: Unique ID for the group coaching cohort
+
+      - name: group_coaching_registration_id
+        description: Unique ID for the group coaching registration
+
+      - name: registered_at
+        description: Time of the registration
+
+      - name: canceled_at
+        description: Time of the registrations cancelation
+
+      - name: group_coaching_session_id
+        description: Time of the registrations cancelation
+
+      - name: starts_at
+        description: Time the session begins
+
+      - name: session_number
+        description: Sequential number for this session
+
+      - name: group_coaching_series_id
+        description: Unique ID for the group coaching series
+
+      - name: registration_start
+        description: Date and time members are allowed to begin joining cohorts
+
+      - name: registration_end
+        description: Date and time members are no longer allowed to join cohorts
+
+      - name: group_coaching_curriculum_id
+        description: Unique ID for the curriculum
+
+      - name: title
+        description: Translated title of the curriculum. e.g. 'Feedback to Breakthrough'
+
+      - name: intervention_type
+        description: Intervention Type of the curriculum (coaching_circle or workshop)

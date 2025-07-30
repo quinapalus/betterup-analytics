@@ -1,0 +1,171 @@
+FROM registry1.dso.mil/ironbank/opensource/debian/debian:11.7 as base
+
+ENV OPENSSL_VERSION=3.1.0
+ENV OPENSSL_SHA256=aaa925ad9828745c4cad9d9efeb273deca820f2cdcf2c3ac7d7c1212b7c497b4
+ENV OPENSSL_LIB_DIR=/usr/local/ssl/
+
+ENV PYTHON_MINOR=10
+ENV PYTHON_PATCH=11
+ENV PYTHON_VERSION=3.${PYTHON_MINOR}.${PYTHON_PATCH}
+ENV PYTHON_SHA256=f3db31b668efa983508bd67b5712898aa4247899a346f2eb745734699ccd3859
+
+COPY .fedramp/bin /opt/.fedramp/bin
+ENV PATH="/opt/.fedramp/bin:$PATH"
+RUN for f in /opt/.fedramp/bin/*; do chmod +x "$f"; done
+
+FROM base as downloader
+# wget depends on openssl
+# installing in separate stage keeps conflicting openssl out
+RUN apt-get update && apt-get install ca-certificates wget -y --no-install-recommends
+
+FROM downloader as openssl-src
+ENV OPENSSL_URL=https://www.openssl.org/source/openssl-${OPENSSL_VERSION}.tar.gz
+RUN download-src $OPENSSL_URL $OPENSSL_SHA256
+
+FROM downloader as python-src
+ENV PYTHON_URL=https://www.python.org/ftp/python/${PYTHON_VERSION}/Python-${PYTHON_VERSION}.tgz
+RUN download-src $PYTHON_URL $PYTHON_SHA256
+
+
+FROM base as python-base
+
+ENV POETPATH="/opt/.poetry-venv/bin:$PATH"
+ENV REQUIREPATH="/opt/.venv/bin:$PATH"
+ENV LANG=C.UTF-8
+ENV PATH=/usr/local/bin:$PATH
+
+RUN \
+apt-get update && \
+DEBIAN_FRONTEND=noninteractive \
+apt-get install -y --no-install-recommends \
+    build-essential \
+    checkinstall \
+    zlib1g-dev \
+    libbz2-dev \
+    libc6-dev \
+    libdb-dev \
+    libexpat1-dev \
+    libffi-dev \
+    libgdbm-dev \
+    liblzma-dev \
+    libreadline-dev \
+    libsqlite3-dev \
+    tk-dev \
+    uuid-dev \
+    xz-utils \
+    make && \
+apt-get clean && \
+rm -rf /var/lib/apt/lists/* && \
+rm -rf /var/cache/apt/archives && \
+apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false
+
+
+FROM python-base as python-fips
+
+ENV OPENSSL_FIPS=1
+# Sets python-snowflake-connector to only use openssl
+ENV SF_USE_OPENSSL_ONLY="True"
+
+COPY --from=openssl-src /downloads/ /usr/src/
+COPY --from=python-src /downloads/ /usr/src/
+COPY .fedramp/config/openssl.cnf /usr/local/ssl/openssl.cnf
+
+RUN \
+# install openssl w/ fips
+cd /usr/src/openssl-${OPENSSL_VERSION} && \
+# # > If the FIPS provider is enabled, it gets installed automatically during the normal 
+# # > installation process. Simply follow the normal procedure (configure, make, make 
+# # > test, make install) as described in the INSTALL file.
+# # https://github.com/openssl/openssl/blob/master/README-FIPS.md
+./config enable-fips && \
+make && \
+make install && \
+ldconfig /usr/local/lib64/ && \
+openssl fipsinstall && \
+    -out /usr/local/ssl/fipsmodule.cnf \
+    # exit 0 ignores error in CI/CD (Github Actions)
+    # Error message being ignored:
+    #   Can't open "/usr/local/lib/ossl-modules/fips.so" for reading, No such file or directory
+    -module /usr/local/lib/ossl-modules/fips.so; exit 0
+    # fips install is verified by /opt/test_fips.py
+
+RUN \
+# install python w/ fips
+cd /usr/src/Python-${PYTHON_VERSION} && \
+./configure --with-ensure-pip --enable-optimizations && \
+make && \
+make install && \
+make clean && \
+update-alternatives \
+    --install /usr/bin/python python /usr/local/bin/python3.${PYTHON_MINOR} 10 \
+    --force && \
+update-alternatives \
+    --install /usr/bin/pip pip /usr/local/bin/pip3.${PYTHON_MINOR} 10 --force
+
+
+# verify FIPS is enabled for python
+RUN test-fips
+
+
+FROM python-fips as requirements-base
+# Install poetry into a poetry-specific venv
+RUN python -m venv /opt/.poetry-venv
+RUN PATH=$POETPATH && pip install --upgrade pip && pip install poetry
+# Export dependencies to temp text file
+COPY poetry.lock pyproject.toml ./
+RUN PATH=$POETPATH && poetry export > /tmp/requirement.txt
+# Install dependencies into separate venv
+RUN python -m venv /opt/.venv
+ENV PATH=$REQUIREPATH
+RUN pip install --upgrade pip && \
+    pip install -r /tmp/requirement.txt --no-cache-dir
+
+
+FROM python-fips
+
+# copies only the site packeges we need to run DBT
+COPY --from=requirements-base /opt/.venv /opt/.venv
+ENV PATH=$REQUIREPATH
+COPY . /opt/warehouse/
+
+WORKDIR /opt/warehouse
+
+RUN \
+mkdir $HOME/.dbt && \
+edit-yaml-value setup.profiles.yml betterup-analytics.target prod && \
+cp /opt/warehouse/setup.profiles.yml $HOME/.dbt/profiles.yml && \
+dbt deps
+
+RUN useradd -ms /bin/sh -u 1000 dbt_user && \
+    chown -R dbt_user:dbt_user /opt/warehouse/
+
+RUN \
+# pip cleanup in both environments    
+pip uninstall setuptools -y && \
+/usr/bin/python -m pip uninstall setuptools -y && \
+pip uninstall pip -y && \
+/usr/bin/python -m pip uninstall pip -y && \
+# remove build dependencies
+apt-get remove -y perl make && \
+apt autoremove -y
+
+# remove essential debian packages that are non-essential for DBT
+RUN \
+apt-get remove -y --allow-remove-essential \
+    ncurses-bin \
+    ncurses-base \
+    libncursesw6 && \
+find / | grep ncurses | xargs rm
+
+RUN \
+apt-get remove -y --allow-remove-essential \
+    libsepol1 \
+    login \
+    passwd \
+    bash \
+    libzstd1 \
+    libssl1.1 \
+    libdb5.3
+
+USER dbt_user
+CMD ["dbt"]

@@ -1,0 +1,65 @@
+version: 2
+
+models:
+  - name: stg_sfdc__assets
+    description: "This model represents the staging table for Salesforce Assets. [GenAI Description]"
+    columns:
+      - name: asset_id
+        description: "Unique identifier of the asset record. [GenAI Description]"
+        tests:
+          - unique
+          - not_null
+
+      - name: is_deleted
+        description: "Indicates whether the asset record has been deleted or not. [GenAI Description]"
+
+      - name: name
+        description: "The name of the asset. [GenAI Description]"
+
+      - name: owner_id
+        description: "The unique identifier of the user who owns the asset. [GenAI Description]"
+
+      - name: system_modstamp
+        description: "The timestamp when the record was last modified by the system. [GenAI Description]"
+
+      - name: uuid_ts
+        description: "A combination of the asset's UUID and its system modification timestamp. [GenAI Description]"
+
+      - name: last_modified_by_id
+        description: "The unique identifier of the user who last modified the asset record. [GenAI Description]"
+
+      - name: account_id
+        description: "The unique identifier of the account associated with the asset. [GenAI Description]"
+
+      - name: created_by_id
+        description: "The unique identifier of the user who created the asset record. [GenAI Description]"
+
+      - name: created_date
+        description: "The date when the asset record was created. [GenAI Description]"
+
+      - name: is_competitor_product
+        description: "Indicates whether the asset is a competitor's product or not. [GenAI Description]"
+
+      - name: product_2_id
+        description: "The unique identifier of the product associated with the asset. [GenAI Description]"
+
+      - name: quantity
+        description: "The quantity of the asset. [GenAI Description]"
+
+      - name: last_modified_date
+        description: "The date when the asset record was last modified. [GenAI Description]"
+
+      - name: price
+        description: "The price of the asset. [GenAI Description]"
+
+      - name: received_at
+        description: "The date when the asset was received. [GenAI Description]"
+
+      - name: root_asset_id
+        description: "The unique identifier of the parent asset in case of a hierarchical structure. [GenAI Description]"
+
+      - name: last_referenced_date
+        description: "The date when the asset record was last referenced by a user. [GenAI Description]"
+
+      - name: last_viewed_date
+        description: "The date when the asset record was last viewed by a user. [GenAI Description]"

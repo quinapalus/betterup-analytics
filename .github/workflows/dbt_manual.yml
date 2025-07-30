@@ -1,0 +1,150 @@
+name: DBT Custom Job
+
+on:
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+    inputs:
+      custom_environment:
+        description: 'Destination Environment ("US Prod", "EU Prod")'
+        required: true
+        default: 'US Prod'
+      custom_target:
+        description: 'Target Environment (EG: dev)'
+        required: true
+        default: 'dev_with_pass'
+      custom_dbt_seed_flag:
+        description: 'Custom DBT Seed - Execute?'
+        type: boolean
+        required: true
+        default: false
+      custom_dbt_seed_command:
+        description: 'Custom dbt seed flags (EG: for "dbt seed --select zip_codes", enter "--select zip_codes")'
+        required: false
+        default: ''
+      custom_dbt_run_flag:
+        description: 'Custom DBT Run - Execute?'
+        type: boolean
+        required: true
+        default: true
+      custom_dbt_run_command:
+        description: 'Custom dbt run flags (EG: for "dbt run --select users", enter "--select users")'
+        required: false
+        default: ''
+      custom_dbt_test_flag:
+        description: 'Execute Custom DBT Test?'
+        type: boolean
+        required: true
+        default: false
+      custom_dbt_test_command:
+        description: 'Custom dbt test flags (EG: for "dbt test --select users", enter "--select users")'
+        required: false
+        default: ''
+      custom_dbt_snapshot_flag:
+        description: 'Execute Custom DBT Snapshot?'
+        type: boolean
+        required: true
+        default: false
+      custom_dbt_snapshot_command:
+        description: 'Custom dbt snapshot flags (EG: for "dbt snapshot --select snapshot_model_name", enter "--select snapshot_model_name")'
+        required: false
+        default: ''
+
+# Allow one concurrent deployment
+concurrency:
+  group: "dbt_us_main"
+  cancel-in-progress: false
+
+env:
+  SNOWFLAKE_USER: "DBT_GITHUB_CI_USER"
+  SNOWFLAKE_PASSWORD: ${{ secrets.DBT_GITHUB_CI_USER_PASSWORD }}
+  SNOWFLAKE_EU_USER: "DBT_GITHUB_CI_USER"
+  SNOWFLAKE_EU_PASSWORD: ${{ secrets.DBT_GITHUB_CI_USER_PASSWORD }}
+  SNOWFLAKE_SCHEMA: "GITHUB_CI_USER"
+  SNOWFLAKE_ACCOUNT: ${{ secrets.DBT_TARGET_ACCOUNT }}
+  SLACK_WEBHOOK_URL: ${{ secrets.DATA_SLACK_WEBHOOK_URL }}
+  SLACK_WEBHOOK_TYPE: INCOMING_WEBHOOK
+  GITHUB_ACTION_URL: "https://github.com/betterup/betterup-analytics/actions/workflows/dbt_manual.yml"
+  # Monte Carlo Data (MCD) Default API ID
+  MCD_DEFAULT_API_ID: ${{ secrets.MCD_DEFAULT_API_ID }}
+  # Monte Carlo Data (MCD) Default API Token
+  MCD_DEFAULT_API_TOKEN: ${{ secrets.MCD_DEFAULT_API_TOKEN }}
+  DEPLOYMENT_ENVIRONMENT: ${{ secrets.BETTERUP_ENVIRONMENT }}
+
+jobs:
+  dbt_run:
+    name: DBT Custom Job
+    strategy:
+      matrix:
+        environment: ['${{ inputs.custom_environment }}']
+
+    runs-on: ubuntu-latest
+    environment: '${{ inputs.custom_environment }}'
+    defaults:
+      run:
+        working-directory: warehouse
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - uses: actions/setup-python@v4
+        with:
+          python-version: "3.10"
+
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16
+
+      - name: Install python dependencies
+        # Retry 3 times before the install actually fails 
+        run: |
+          (echo "===== Install Attempt: 1 =====" && make installdeps) || \
+          (echo "===== Install Attempt: 2 =====" && make installdeps) || \
+          (echo "===== Install Attempt: 3 =====" && make installdeps) || \
+          (echo "===== Install python dependencies step failed =====" && exit 1)
+
+      - name: Write DBT configs
+        run: |
+          make writedbtconfig
+
+      - name: Install DBT dependencies
+        run: |
+          poetry run dbt deps --target ${{ inputs.custom_target }}
+          
+      - name: Run Custom DBT Seed
+        if:  ${{ inputs.custom_dbt_seed_flag }}
+        run: poetry run dbt seed ${{ inputs.custom_dbt_seed_command }} --target ${{ inputs.custom_target }}
+
+      - name: Run Custom DBT Models
+        id: dbt_run
+        if:  ${{ inputs.custom_dbt_run_flag }}
+        run: poetry run dbt run ${{ inputs.custom_dbt_run_command }} --target ${{ inputs.custom_target }}
+        
+      - name: Copy DBT Run Artifacts
+        if:  ${{ inputs.custom_dbt_run_flag }}
+        run: cp target/manifest.json dbtrun__manifest.json && cp target/run_results.json dbtrun__run_results.json
+
+      - name: Test dbt models
+        id: dbt_test
+        if:  ${{ inputs.custom_dbt_test_flag }}
+        run: poetry run dbt test ${{ inputs.custom_dbt_test_command }} --target ${{ inputs.custom_target }}
+
+      - name: Snapshot dbt models
+        id: dbt_snapshot
+        if:  ${{ inputs.custom_dbt_snapshot_flag }}
+        run: poetry run dbt snapshot ${{ inputs.custom_dbt_snapshot_command }} --target ${{ inputs.custom_target }}
+          
+      - name: Copy DBT Test Artifacts
+        if:  ${{ inputs.custom_dbt_test_flag }}
+        run: cp target/manifest.json ./dbttest__manifest.json && cp target/run_results.json ./dbttest__run_results.json
+
+      - name: Archive target artifacts
+        if: always()
+        uses: actions/upload-artifact@v3
+        with:
+          name: dbt-build-artifacts
+          path: |
+            warehouse/dbtrun__manifest.json
+            warehouse/dbtrun__run_results.json
+            warehouse/dbttest__manifest.json
+            warehouse/dbttest__run_results.json
+          if-no-files-found: warn

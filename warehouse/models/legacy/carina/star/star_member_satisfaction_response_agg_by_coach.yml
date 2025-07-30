@@ -1,0 +1,7 @@
+version: 2
+models:
+  - name: star_member_satisfaction_response_agg_by_coach
+    description: >
+      Member Satisfaction Response aggregated by Coach fact table, joined with full Date and
+      Assessment Item dimensions. See documentation for `fact_member_satisfaction_response_agg_by_coach`,
+      `dim_coach`, and `dim_assessment_item` for field descriptions.

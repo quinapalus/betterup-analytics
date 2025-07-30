@@ -1,0 +1,79 @@
+version: 2
+
+models:
+  - name: int_app__product_subscription_assignment_migration_audits
+    description: The DBT model int_app__product_subscription_assignment_migration_audits
+      tracks the migration of products across contracts, recording fields such as
+      when the product began/ended the new contract, the organization it belongs to,
+      and which user interacted with it. This data is meant to help identify potential
+      discrepancies between old and new contracts. [GenAI Description]
+    columns:
+      - name: migration_audits_id
+        description: The 'migration_audits_id' column stores the unique identifier
+          for the product subscription assignment migration audit record. [GenAI Description]
+        tests:
+          - unique
+          - not_null
+
+      - name: organization_id
+        description: The 'organization_id' column stores the unique identifier of
+          the organization associated with a product subscription assignment record.
+          [GenAI Description]
+
+      - name: user_id
+        description: The user_id column stores the ID of the user associated with
+          the product subscription assignment audit. [GenAI Description]
+
+      - name: contract_line_item_id
+        description: The 'contract_line_item_id' column contains the unique identifier
+          for the line item of a subscription contract. [GenAI Description]
+
+      - name: product_subscription_assignment_v1_id
+        description: This column contains the id of the product subscription assignment
+          from the previous version of a product. [GenAI Description]
+
+      - name: product_subscription_assignment_v1_product_id
+        description: This column contains the 'Product ID' that was associated with
+          the product subscription assignment in version 1. [GenAI Description]
+
+      - name: product_subscription_assignment_v1_starts_at
+        description: Column 'product_subscription_assignment_v1_starts_at' contains
+          a date indicating the start of a subscription for a v1 product. [GenAI Description]
+
+      - name: product_subscription_assignment_v1_ends_at
+        description: This column contains the end date of the product subscription
+          assignment version 1. [GenAI Description]
+
+      - name: product_subscription_assignment_v1_ended_at
+        description: This is a date and time column which records the time a product
+          subscription assignment (v1) was ended. [GenAI Description]
+
+      - name: product_subscription_assignment_v2_id
+        description: The product_subscription_assignment_v2_id column stores the id
+          of the associated updated subscription assignment. [GenAI Description]
+
+      - name: product_subscription_assignment_v2_product_id
+        description: This column identifies the product ID associated with the second
+          version of the product subscription assignment. [GenAI Description]
+
+      - name: product_subscription_assignment_v2_starts_at
+        description: Column containing the start date of the product subscription
+          assignment after the migration. [GenAI Description]
+
+      - name: product_subscription_assignment_v2_ends_at
+        description: The 'product_subscription_assignment_v2_ends_at' column contains
+          the end date of the corresponding product subscription assignment version
+          2. [GenAI Description]
+
+      - name: product_subscription_assignment_v2_ended_at
+        description: Column 'product_subscription_assignment_v2_ended_at' contains
+          the date a product subscription assignment ended in the version 2 records.
+          [GenAI Description]
+
+      - name: created_at
+        description: The 'created_at' column stores the timestamp of when the record
+          was created. [GenAI Description]
+
+      - name: updated_at
+        description: "'updated_at' is a timestamp that indicates when the record was\
+          \ last updated. [GenAI Description]"

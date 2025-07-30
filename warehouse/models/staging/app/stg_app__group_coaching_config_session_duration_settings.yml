@@ -1,0 +1,30 @@
+version: 2
+
+models:
+  - name: stg_app__group_coaching_config_session_duration_settings
+    description: ""
+    columns:
+      - name: group_coaching_config_session_duration_setting_id
+        description: ""
+        tests:
+          - unique
+          - not_null
+
+      - name: created_at
+        description: ""
+
+      - name: updated_at
+        description: ""
+
+      - name: duration_minutes
+        description: ""
+
+      - name: payment_duration_minutes
+        description: ""
+
+      - name: session_duration_configurable_id
+        description: ""
+
+      - name: session_duration_configurable_type
+        description: ""
+

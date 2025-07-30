@@ -1,0 +1,98 @@
+version: 2
+
+models:
+  - name: stg_zendesk__tickets
+    description: >
+      Contains support ticket information as synchronized through the Zendesk
+      API by Segment.
+
+    columns:
+      - name: ticket_id
+        description: Primary key
+        tests:
+          - unique
+          - not_null
+
+      - name: assignee_id
+        description: >
+          Foreign Key to the assignee associated with the ticket.
+
+      - name: group_id
+        description: >
+          Foreign Key to the group associated with the ticket.
+
+      - name: requester_id
+        description: >
+          Foreign Key to the user who requested the ticket.
+        tests:
+          - not_null
+
+      - name: submitter_id
+        description: >
+          Foreign Key to the user who submitted the ticket. Usually will
+          be the same as requester_id.
+        tests:
+          - not_null
+
+      - name: satisfaction_rating_id
+        description: >
+          Foreign Key to the satisfaction rating associated with the ticket,
+          if the option was provided.
+
+      - name: status
+        description: >
+          String denoting the status of the ticket.
+        tests:
+          - not_null
+          - accepted_values:
+              values: [hold, closed, solved, deleted, open, pending, new]
+
+      - name: priority
+        description: >
+          String denoting the priority of the ticket, if such was assigned.
+        tests:
+          - accepted_values:
+              values: [low, normal, high, urgent]
+
+      - name: reason
+        description: >
+          String denoting the reason why the ticket was submitted. Tests
+          are avoided on this variable as these tags have varied over time, and
+          the reason can remain unassigned (null) until the Care team solves the
+          ticket.
+
+      - name: satisfaction_rating_score
+        description: >
+          String denoting the satisfaction score associated with the ticket,
+          if such was offered. Unoffered means that the opportunity to rate
+          has not been offered to the user, while offered means that it was
+          offered, but the user hasn't provided a score.
+        tests:
+          - not_null
+          - accepted_values:
+              values: [unoffered, offered, good, bad]
+
+      - name: satisfaction_rating_comment
+        description: >
+          String denoting the comment associated with the satisfaction rating,
+          if such was provided.
+
+      - name: tags
+        description: Comma-separated list of support tags managed in Zendesk.
+
+      - name: created_at
+        description: >
+          Timestamp with timezone when the ticket was created.
+        tests:
+          - not_null
+
+      - name: received_at
+        description: >
+          Timestamp with timezone when the ticket hit Segment API.
+        tests:
+          - not_null
+
+      - name: updated_at
+        description: Timestamp with timezone when the ticket was last updated.
+        tests:
+          - not_null

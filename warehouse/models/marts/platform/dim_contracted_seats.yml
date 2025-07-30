@@ -1,0 +1,31 @@
+version: 2
+
+models:
+  - name: dim_contracted_seats
+    description: >
+      Contracted seats is a view that retrieves the seats per product for each contract line item in a track.
+    columns:
+      - name: track_id
+        description: Unique identifer (primary key) of the Track
+        tests:
+          - not_null
+      - name: contract_id
+        description: Unique identifier for the Contract
+        tests:
+          - not_null
+
+      - name: contract_line_item_id
+        description: Unique identifer (primary key) of the Contract Line Item. Granularity of the table.
+        tests:
+          - not_null
+          - unique
+
+      - name: product_id
+        description: Unique identifer of Product Id
+        tests:
+          - not_null
+
+      - name: starts_at
+        tests:
+          - not_null
+

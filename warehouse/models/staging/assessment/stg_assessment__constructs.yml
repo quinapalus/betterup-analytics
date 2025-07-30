@@ -1,0 +1,38 @@
+version: 2
+
+models:
+  - name: stg_assessment__constructs
+    description: "Dimension table containing one row per construct, which is `the thing being measured` in our quantification of human transformation."
+    columns:
+      - name: construct_id
+        description: "Primary key"
+        tests:
+          - unique
+          - not_null
+
+      - name: key
+        description: "Not unique, but often used throughout code base as construct identifier"
+
+      - name: name
+        description: "Readable name of construct"
+
+      - name: label_i18n
+        description: "What appears in the application frontend. JSON blob containing the label in multiple languages"
+
+      - name: scale_mean
+        description: "Construct Mean"
+
+      - name: scale_standard_deviation
+        description: "Standard deviation of this construct"
+
+      - name: scale_min_score
+        description: ""
+
+      - name: scale_max_score
+        description: ""
+
+      - name: created_at
+        description: ""
+
+      - name: updated_at
+        description: ""

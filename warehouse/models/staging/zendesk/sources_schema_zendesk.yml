@@ -1,0 +1,12 @@
+version: 2
+
+sources:
+  - name: zendesk
+    schema: segment_zendesk
+    database: raw
+    tables:
+      - name: ticket_metrics
+      - name: tickets
+      - name: users
+      - name: groups
+      - name: ticket_comments

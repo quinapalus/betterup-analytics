@@ -1,0 +1,12 @@
+#! /bin/bash
+
+# configure bash to exit on error
+set -e
+set -o pipefail
+
+mkdir -p ~/.dbt
+cp warehouse/setup.profiles.yml ~/.dbt/profiles.yml
+
+cd warehouse
+dbt deps
+cd ~

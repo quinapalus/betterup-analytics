@@ -1,0 +1,85 @@
+version: 2
+models:
+  - name: member_platform_calendar
+    description: >
+      This data model has one record per member per day with a member's track and product 
+      access. 
+      
+    columns:
+      - name: member_platform_calendar_id
+        description: Surrogate key used as the primary key.
+        tests:
+          - unique
+          - not_null
+
+      - name: DATE
+        description: Calendar date (YYYY-MM--DD format) for the given day.
+
+      - name: MEMBER_ID
+        description: Foreign Key for the associated Member.
+
+      - name: TRACK_ASSIGNMENT_ID
+        description: Foreign Key for the associated Track Assignment.
+
+      - name: TRACK_ID
+        description: Foreign Key for the associated Track.
+
+      - name: PRODUCT_SUBSCRIPTION_ASSIGNMENT_ID
+        description: Foreign Key for the associated Product Subscription Assignment.
+
+      - name: PRODUCT_SUBSCRIPTION_ID
+        description: Foreign Key for the associated Product Subscription.
+
+      - name: PRODUCT_ID
+        description: Foreign Key for the associated Product.
+
+      - name: psa_incldues_on_demand
+        description:  Boolean flag, true if the PSA has access to on demand.
+
+      - name: psa_incldues_primary_coaching
+        description: Boolean flag, true if the PSA has access to primary coaching.
+
+      - name: psa_incldues_care
+        description: Boolean flag, true if the PSA has access to care.
+
+      - name: psa_incldues_coaching_circles
+        description: Boolean flag, true if the PSA has access to coaching circles.
+
+      - name: psa_incldues_workshops
+        description: Boolean flag, true if the PSA has access to workshops.
+
+      - name: psa_incldues_extended_network
+        description: Boolean flag, true if the PSA has access to extended_network
+
+      - name: psa_incldues_foundations
+        description: Boolean flag, true if the PSA has access to foundations
+
+      - name: on_demand
+        description: Boolean flag, true at the member-daily level for access to on-demand, calculated by aggregating a members' daily PSA-level flags
+
+      - name: primary_coaching
+        description: Boolean flag, true at the member-daily level for access to primary coaching, calculated by aggregating a members' daily PSA-level flags
+
+      - name: care
+        description: Boolean flag, true at the member-daily level for access to care, calculated by aggregating a members' daily PSA-level flags
+
+      - name: coaching_circles
+        description: Boolean flag, true at the member-daily level for access to coaching circles, calculated by aggregating a members' daily PSA-level flags
+
+      - name: workshops
+        description: Boolean flag, true at the member-daily level for access to workshops, calculated by aggregating a members' daily PSA-level flags
+
+      - name: extended_network
+        description: Boolean flag, true at the member-daily level for access to extended network, calculated by aggregating a members' daily PSA-level flags
+
+      - name: foundations
+        description: Boolean flag, true at the member-daily level for access to foundations, calculated by aggregating a members' daily PSA-level flags
+
+      - name: product_group
+        description: PSA-level grouping of product flags.
+
+      - name: member_daily_product_group
+        description: Member-daily-level grouping of product flags, calculated by aggregating a members' daily PSA-level flags.
+
+      - name: v2
+        description: Refers to the MAPS (Multiple Active Product Subscriptions) work. TRUE V2 means PSA is un-spliced, and there could be multiple PSAs for a member at once.

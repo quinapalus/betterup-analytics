@@ -1,0 +1,143 @@
+version: 2
+
+models:
+  - name: stg_app__resources
+    description: The stg_app__resources model stores resources information, such as
+      title, description, content type, source, tag list and language. It also contains
+      multiple fields for internationalization of content and authors. This model
+      enables to store resources, and have them available for resource recommendation
+      algorithms. [GenAI Description]
+    columns:
+      - name: resource_id
+        description: The 'resource_id' column contains the unique identifier for each
+          resource. [GenAI Description]
+        tests:
+          - unique
+          - not_null
+
+      - name: resource_uuid
+        description: The 'resource_uuid' column stores a unique identifier for each
+          resource entry. [GenAI Description]
+        tests:
+          - unique
+          - not_null
+
+      - name: assessment_configuration_uuid
+
+        description: The column 'assessment_configuration_uuid' stores a unique identifier
+          for an assessment configuration related to the resource. [GenAI Description]
+      - name: source_i18n
+        description: "'Source_i18n' is the source data for a resource in different\
+          \ international languages, with coalescing used to prioritize different\
+          \ languages if applicable. [GenAI Description]"
+
+      - name: source
+        description: The 'source' column contains textual data associated to a resource
+          for different languages. [GenAI Description]
+
+      - name: title_i18n
+        description: "'title_i18n' is a JSON field containing localized titles of\
+          \ a resource, parsed into a string. [GenAI Description]"
+
+      - name: title
+        description: The 'title' column contains the localized title of a resource,
+          encoded as JSON and unparsed as a varchar. [GenAI Description]
+
+      - name: description_i18n
+        description: "'Description_i18n' stores the description of the resource in\
+          \ different languages, which is parsed as a varchar. [GenAI Description]"
+
+      - name: description
+        description: This column stores a localized description of a resource, parsed
+          from a JSON field. [GenAI Description]
+
+      - name: type
+        description: The 'type' column stores the type of resource. [GenAI Description]
+
+      - name: duration
+        description: The 'duration' column stores the length of time required to consume
+          the resource. [GenAI Description]
+
+      - name: language
+        description: The 'language' column stores the language of a resource. [GenAI
+          Description]
+
+      - name: retired
+        description: "'Retired' is a boolean column that indicates whether the resource\
+          \ has been retired. [GenAI Description]"
+
+      - name: hide_from_recommendation_algorithm
+        description: A boolean column which decides whether a resource should be excluded
+          from the recommendation algorithm. [GenAI Description]
+
+      - name: recommended
+        description: The 'recommended' column indicates whether the resource has been
+          recommended for use. [GenAI Description]
+
+      - name: publicly_available
+        description: The 'publicly_available' column indicates whether a resource
+          is accessible to all users or not. [GenAI Description]
+
+      - name: url
+        description: The 'url' column contains URLs for resources. [GenAI Description]
+
+      - name: audio_embed_url
+        description: The 'audio_embed_url' column contains an embeddable URL of an
+          external audio source. [GenAI Description]
+
+      - name: content_i18n
+        description: The 'content_i18n' column contains a JSON field that, when parsed,
+          returns the content for the resource in different languages. [GenAI Description]
+
+      - name: content
+        description: The 'content' column contains text from localized content for
+          the resource. [GenAI Description]
+
+      - name: content_type
+        description: The 'content_type' column holds information about the type of
+          content associated with the resource. [GenAI Description]
+
+      - name: content_modality
+        description: The 'content_modality' column indicates the type of content being
+          provided (such as audio or video). [GenAI Description]
+
+      - name: verb
+        description: The 'verb' column contains the action typically associated with
+          the resource. [GenAI Description]
+
+      - name: tag_list
+        description: The 'tag_list' column stores the cached list of resource tags.
+          [GenAI Description]
+
+      - name: creator_id
+        description: The 'creator_id' column contains the ID of the resource's creator.
+          [GenAI Description]
+
+      - name: host
+        description: The column 'host' stores the name of the entity hosting the resource.
+          [GenAI Description]
+
+      - name: author_i18n
+        description: Author_i18n stores the author name in Internationalized (i18n)
+          format, and can be retrieved in English (en), UK English (en-US), or US
+          English (en-US). [GenAI Description]
+
+      - name: author
+        description: The 'author' column holds the English author name expressed in
+          JSON. [GenAI Description]
+
+      - name: external_image_url
+        description: The 'external_image_url' column stores a URL for an external
+          image associated with a resource. [GenAI Description]
+
+      - name: ingeniux_id
+        description: The ingeniux_id is a unique identifier for the resource. [GenAI
+          Description]
+
+      - name: created_at
+        description: The 'created_at' column stores the timestamp of when the resource
+          was created. [GenAI Description]
+
+      - name: updated_at
+        description: The 'updated_at' column stores the time the resource was last
+          updated. [GenAI Description]

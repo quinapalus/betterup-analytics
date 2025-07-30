@@ -1,0 +1,43 @@
+version: 2
+
+models:
+  - name: stg_mapping__stage_buckets
+    description: "Maps stage to stage reporting buckets. Contains ordering logic for the funnel as well. This is maintained by the coach operations team.
+                       https://docs.google.com/spreadsheets/d/1EbyRq2H5gBcO6desBMw_miHhI78GWqEHMdVIii4SPCM/edit."
+    tests:
+      - dbt_utils.expression_is_true:
+          expression: "funnel_order > 0"
+    columns:
+      - name: primary_key
+        description: "Surrotage primary key from stage_name_prefix and funnel_id"
+        tests:
+          - unique
+          - not_null
+
+      - name: stage_name_prefix
+        description: "Prefix of the raw stage name in Fountain. This is used to join to stages later in the pipeline"
+        tests:
+          - not_null
+
+      - name: bucket_name
+        description: "Name of the stage bucket. This is what will be displayed in the BI layer"
+        tests:
+          #before adding a new bucket_name to the sheet coach ops needs to coordinate the update with analytics eng since there is logic in the pipeline that depends on the bucket names
+          #putting this test here so that if any uncommunicated changes are made to the google sheet we can get ahead of it
+          - accepted_values:
+              values: ["application", "administration", "readiness", "finalize", "approved", "rejected", "on_hold", "inactive", "hold_for_review"]
+          - not_null
+        
+      - name: funnel_name
+        description: "Name of the funnel."
+
+      - name: funnel_id
+        description: "Foreign key to the funnel that this stage bucket is for"
+        tests:
+          - not_null
+
+      - name: funnel_order
+        description: "Order of this stage bucket in the funnel. First stage in funnel should be 1, second stage 2 and so on."
+        tests:
+          - not_null:
+              where: "bucket_name not in ('rejected','on_hold','inactive','hold_for_review')"          

@@ -1,0 +1,44 @@
+version: 2
+
+models:
+  - name: int_app__group_coaching_appointments
+    description: The DBT model int_app__group_coaching_appointments takes data from
+      a staging table and returns information for group coaching appointments like
+      when they were created or if resources were assigned. It then sorts the records
+      using the latest created time, returning only the most recent appointment for
+      each group session and member. [GenAI Description]
+
+    columns:
+      - name: group_coaching_appointment_id
+        description: A unique identifier that links the group coaching appointment
+          record with the member, session, resources, and created and updated dates.
+          [GenAI Description]
+        tests:
+          - unique
+          - not_null
+
+      - name: created_at
+        description: The 'created_at' column stores the date and time when the appointment
+          record was created. [GenAI Description]
+
+      - name: updated_at
+        description: The 'updated_at' column stores a timestamp indicating when the
+          group coaching appointment was last updated. [GenAI Description]
+
+      - name: attempted_to_join_at
+        description: The "attempted_to_join_at" column contains the datetime a member
+          attempted to join their group coaching session. [GenAI Description]
+
+      - name: group_coaching_session_id
+        description: "'group_coaching_session_id' is the identifier for the group\
+          \ coaching session associated with this group coaching appointment. [GenAI\
+          \ Description]"
+
+      - name: member_id
+        description: The 'member_id' column stores the identifier for the member participating
+          in the group coaching session. [GenAI Description]
+
+      - name: assigned_post_session_resources_at
+        description: The 'assigned_post_session_resources_at' column contains the
+          date/time when post-session resources were assigned to a member for a group
+          coaching session. [GenAI Description]

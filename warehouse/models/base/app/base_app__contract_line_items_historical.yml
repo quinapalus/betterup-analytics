@@ -1,0 +1,48 @@
+version: 2
+
+models:
+  - name: base_app__contract_line_items_historical
+    description: ""
+    columns:
+      - name: contract_id
+      - name: created_at
+      - name: ends_at
+      - name: id
+        tests:
+          - unique
+          - not_null
+      - name: organization_id
+      - name: product_id
+      - name: salesforce_opportunity_line_item_identifier
+      - name: seats
+      - name: starts_at
+      - name: updated_at
+      - name: deployment_type
+      - name: salesforce_order_item_identifier
+      - name: sku
+      - name: product_subscription_id
+      - name: salesforce_legacy_root_id
+      - name: care_limit
+      - name: coaching_circles_limit_cadence
+      - name: transferable
+      - name: specialist_coaching_limit
+      - name: exact_specialist_verticals
+      - name: salesforce_subscription_id
+      - name: non_transfer_period
+      - name: care_limit_cadence
+      - name: primary_coaching_limit
+      - name: actual_term
+      - name: specialist_coaching_limit_cadence
+      - name: coaching_circles_limit
+      - name: on_demand_limit
+      - name: on_demand_limit_cadence
+      - name: opportunity_type
+      - name: salesforce_legacy_subscription_id
+      - name: configuration_type
+      - name: primary_coaching_limit_cadence
+      - name: subscription_terms_id
+      - name: coaching_months
+      - name: actual_coaching_days
+      - name: covered_lives
+      - name: amends_salesforce_subscription_id
+      - name: amends_id

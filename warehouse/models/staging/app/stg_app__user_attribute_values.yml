@@ -1,0 +1,27 @@
+version: 2
+
+models:
+  - name: stg_app__user_attribute_values
+    description: The DBT model stg_app__user_attribute_values is used to transform
+      data from the raw.stitch_app.user_attribute_values table, by renaming fields
+      and adding timestamps. It consists of the fields user_attribute_value_id, attribute_value,
+      created_at, and updated_at. [GenAI Description]
+    columns:
+      - name: user_attribute_value_id
+        description: "'user_attribute_value_id' is the primary key identifier for\
+          \ a user attribute value. [GenAI Description]"
+        tests:
+          - unique
+          - not_null
+
+      - name: value
+        description: This column stores the user attribute values stored in the column
+          'value' of the raw table 'user_attribute_values'. [GenAI Description]
+
+      - name: created_at
+        description: The 'created_at' column contains timestamps indicating when the
+          record was created. [GenAI Description]
+
+      - name: updated_at
+        description: A column containing the timestamp for when the user attribute
+          value was last updated. [GenAI Description]

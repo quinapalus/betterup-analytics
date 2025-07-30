@@ -1,0 +1,40 @@
+version: 2
+
+models:
+  - name: stg_app__roles
+    description: The DBT model stg_app__roles contains data from source raw.stitch_app.roles
+      about roles and their associated resources. The model has fields role_id, name,
+      resource_id, resource_type, created_at, updated_at. [GenAI Description]
+    columns:
+      - name: role_id
+        description: A column containing database IDs used to identify associated
+          roles. [GenAI Description]
+        tests:
+          - unique
+          - not_null
+
+#      - name: role_uuid
+#        description: ""
+#        tests:
+#          - unique
+#          - not_null
+
+      - name: name
+        description: The 'name' column in this model stores the name associated with
+          a role. [GenAI Description]
+
+      - name: resource_id
+        description: resource_id is the unique identifier for the resource associated
+          with a role. [GenAI Description]
+
+      - name: resource_type
+        description: The 'resource_type' column identifies the type of resource associated
+          with a role. [GenAI Description]
+
+      - name: created_at
+        description: The 'created_at' column stores the date and time a role was created.
+          [GenAI Description]
+
+      - name: updated_at
+        description: The 'updated_at' column contains the timestamp when the role
+          information has been last updated. [GenAI Description]

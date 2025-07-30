@@ -1,0 +1,35 @@
+version: 2
+models:
+  - name: dim_development_topic
+    description: >
+      Conformed Development Topic dimension. Development Topics include topic-theme taxonomy
+      used to classify topics discussed in session.
+
+    columns:
+      - name: development_topic_key
+        description: Primary Key
+        tests:
+          - unique
+          - not_null
+
+      - name: development_topic
+        description: Name of the topic, as presented to coaches.
+        tests:
+          - not_null
+
+      - name: development_theme
+        description: Parent theme associated with the development topic.
+        tests:
+          - not_null
+
+      - name: development_topic_version
+        description: Development Topic taxonomy version. Version 2.0 was introduced 7/17/2019.
+        tests:
+          - not_null
+
+      - name: app_development_topic_id
+        description: Foreign key to associated platform development_topic record. NULL if N/A.
+        tests:
+          - relationships:
+              to: ref('stg_app__development_topics')
+              field: development_topic_id

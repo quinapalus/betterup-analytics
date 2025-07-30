@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# configure bash to exit on error
+set -u
+set -eo pipefail
+
+# # Create a virtualenv to install Airflow and its requirements
+# python3 -m venv venv
+# venv/bin/pip install -r airflow/requirements.txt
+# . venv/bin/activate
+
+# Run Airflow
+airflow webserver --port $PORT --daemon && airflow scheduler

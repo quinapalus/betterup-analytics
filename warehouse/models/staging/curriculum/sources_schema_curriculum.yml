@@ -1,0 +1,19 @@
+version: 2
+
+sources:
+  - name: curriculum
+    database: raw
+    ## Schema is dynamic based on the DEPLOY_ENVIRONMENT environment variable.
+    schema: "{{ 'airbyte_app' if env_var('DEPLOYMENT_ENVIRONMENT', '') == 'US Gov' else 'stitch_curriculum' }}"
+
+
+    tables:
+      - name: solutions
+
+  - name: app
+    database: raw
+    schema: "{{ 'airbyte_app' if env_var('DEPLOYMENT_ENVIRONMENT', '') == 'US Gov' else 'stitch_app_v2' }}"
+    tables:
+      - name: specialist_verticals #this is supposed to be moved to the curriculum DB by the Coach Innovation Squad
+
+

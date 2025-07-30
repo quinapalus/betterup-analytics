@@ -1,0 +1,58 @@
+version: 2
+
+models:
+  - name: dbt__persisted_construct_scores_non_subdimension
+    description: "Persisted non-Whole Person Model subdimension construct scores."
+    columns:
+      - name: primary_key
+        tests:
+          - unique
+          - not_null
+
+      - name: assessment_id
+        description: ""
+
+      - name: construct_id
+        description: ""
+
+      - name: key
+        description: ""
+
+      - name: assessment_type
+        description: ""
+
+      - name: questions_version
+        description: ""
+
+      - name: type
+        description: ""
+
+      - name: raw_score
+        description: ""
+
+      - name: construct_reference_population_id
+        description: ""
+
+      - name: score_mean
+        description: ""
+
+      - name: score_standard_deviation
+        description: ""
+
+      - name: scale_min_score
+        description: ""
+
+      - name: scale_max_score
+        description: ""
+
+      - name: scale_mean
+        description: ""
+
+      - name: scale_standard_deviation
+        description: ""
+
+      - name: original_scale_score
+        description: ""
+
+      - name: scale_score
+        description: ""

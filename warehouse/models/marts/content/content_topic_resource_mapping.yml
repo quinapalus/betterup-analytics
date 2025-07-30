@@ -1,0 +1,15 @@
+version: 2
+
+models:
+  - name: content_topic_resource_mapping
+    description: >
+      Mapping between development topic id and associated resource ids
+
+    columns:
+      - name: development_topic_id
+        description: development topic id
+        tests:
+          - not_null
+          - unique
+      - name: resources_ids
+        description: array of associated resource ids

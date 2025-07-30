@@ -1,0 +1,86 @@
+---
+agreement_question: &agreement_question
+  options:
+    - [1, 'Strongly Disagree']
+    - [2, 'Disagree']
+    - [3, 'Neither Disagree nor Agree']
+    - [4, 'Agree']
+    - [5, 'Strongly Agree']
+
+satisfied_10_question: &satisfied_10_question
+  options:
+    - [0, 'Extremely dissatisfied']
+    - [1, 'Very dissatisfied']
+    - [2, 'Dissatisfied']
+    - [3, 'Somewhat dissatisfied']
+    - [4, 'A bit dissatisfied']
+    - [5, 'Neutral']
+    - [6, 'A bit satisfied']
+    - [7, 'Somewhat satisfied']
+    - [8, 'Satisfied']
+    - [9, 'Very satisfied']
+    - [10, 'Extremely satisfied']
+
+likelihood_10_question: &likelihood_10_question
+  options:
+    - [0, 'Extremely unlikely']
+    - [1, 'Very unlikely']
+    - [2, 'Unlikely']
+    - [3, 'Somewhat unlikely']
+    - [4, 'A bit unlikely']
+    - [5, 'Neutral']
+    - [6, 'A bit likely']
+    - [7, 'Somewhat likely']
+    - [8, 'Likely']
+    - [9, 'Very likely']
+    - [10, 'Extremely likely']
+
+questions:
+  overall_satisfaction:
+    <<: *satisfied_10_question
+    label: 'Overall, how satisfied are you with your BetterUp coaching experience?'
+    viewable_by_coach: false
+    tags:
+      - program_rating
+  net_promoter:
+    <<: *likelihood_10_question
+    label: 'In the event a friend or colleague is seeking a coach, how likely are you to recommend BetterUp?'
+    viewable_by_coach: false
+    tags:
+      - program_rating
+  use_of_time:
+    <<: *agreement_question
+    label: 'BetterUp is a valuable use of my time.'
+    viewable_by_coach: false
+    tags:
+      - program_satisfaction
+  more_effective:
+    <<: *agreement_question
+    label: 'Working with my coach has made me more effective in my job.'
+    viewable_by_coach: false
+    tags:
+      - program_satisfaction
+  meaningful_progress:
+    <<: *agreement_question
+    label: 'My coach has helped me make meaningful progress towards my goals.'
+    viewable_by_coach: false
+    tags:
+      - program_satisfaction
+  working_relationship:
+    <<: *agreement_question
+    label: 'My coach and I have a strong working relationship, characterized by mutual respect and trust.'
+    viewable_by_coach: false
+    tags:
+      - program_satisfaction
+  progress_toward_goals:
+    label: What have you learned in service of your goals?
+    tags:
+      - program_reflection
+  leveraging_strengths:
+    label: How have you leveraged your strengths to approach challenges, to grow, or to learn?
+    tags:
+      - program_reflection
+  next_steps:
+    label: What are the next steps in your journey?
+    tags:
+      - program_reflection

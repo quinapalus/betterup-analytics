@@ -1,0 +1,286 @@
+version: 2
+
+models:
+  - name: fact_coach_applications
+    description: ""
+    tests:
+      # - dbt_utils.expression_is_true:
+      #     name: application_date_is_before_administration_date
+      # #there should not be cases where application timestamp is greater than administration timestamp
+      # #if this fails that would most likely indicate  a problem with the code that sets the timestamps
+      #     expression: "first_entered_application_timestamp <= first_entered_administration_timestamp"
+      #     config:
+      #       where: "not(highest_stage_reached = 'approved' and current_stage_bucket != 'approved')"
+      #there should not be cases where administration timestamp is greater than readiness timestamp
+      #if this fails that would most likely indicate a problem with the code that sets the timestamps
+      # - dbt_utils.expression_is_true:
+      #     name: administration_date_is_before_readiness_date
+      #     expression: "first_entered_administration_timestamp <= first_entered_readiness_timestamp"
+      #     config:
+      #       where: "not(highest_stage_reached = 'approved' and current_stage_bucket != 'approved')"
+      #there should not be cases where readiness timestamp is greater than finalize timestamp
+      #if this fails that would most likely indicate a problem with the code that sets the timestamps
+      # - dbt_utils.expression_is_true:
+      #     name: readiness_date_is_before_finalize_date
+      #     expression: "first_entered_readiness_timestamp <= first_entered_finalize_timestamp"
+      #     config:
+      #       where: "not(highest_stage_reached = 'approved' and current_stage_bucket != 'approved')"
+
+      #up to one application_fallout boolean column should be true for each application
+      #if this fails it would indicate a problem with the code that sets the fallout stages
+      - dbt_utils.expression_is_true:
+          name: up_to_one_fallout_boolean_is_true
+          expression: "is_application_fallout::int+is_administration_fallout::int+is_readiness_fallout::int+is_finalize_fallout::int between 0 and 1"
+
+      #it should not be possible that an application falls out and passes through on the same stage
+      - dbt_utils.expression_is_true:
+          name: is_not_application_fallout_and_pass_through
+          expression: "not(is_application_fallout and is_application_pass_through)"
+          
+      #it should not be possible that an application falls out and passes through on the same stage
+      - dbt_utils.expression_is_true:
+          name: is_not_administration_fallout_and_pass_through
+          expression: "not(is_administration_fallout and is_administration_pass_through)"
+
+      #it should not be possible that an application falls out and passes through on the same stage
+      - dbt_utils.expression_is_true:
+          name: is_not_readiness_fallout_and_pass_through
+          expression: "not(is_readiness_fallout and is_readiness_pass_through)"
+
+      #it should not be possible that an application falls out and passes through on the same stage
+      - dbt_utils.expression_is_true:
+          name: is_not_finalize_fallout_and_pass_through
+          expression: "not(is_finalize_fallout and is_finalize_pass_through)"
+
+      #it should not be possible that an application is active and unsuccessful
+      - dbt_utils.expression_is_true:
+          name: is_not_active_and_unsuccessful
+          expression: "not(is_active_application and is_unsuccessful_application)"
+
+      #a fallout application should have one and only 1 fallout stage
+      # - dbt_utils.expression_is_true:
+      #    name: only_one_fallout_stage
+      #    expression: "is_application_fallout::int+is_administration_fallout::int+is_readiness_fallout::int+is_finalize_fallout::int = 1"
+      #    config:
+      #      where: "current_stage_bucket in ('rejected','on_hold','inactive')"
+
+      #an application that has an administration timestamp should also have an application timestamp
+      - dbt_utils.expression_is_true:
+         name: administration_timestamp_has_application_timestamp
+         expression: "not(first_entered_administration_timestamp is not null and first_entered_application_timestamp is null)"
+
+      #an application that has an readiness timestamp should also have an administration timestamp
+      - dbt_utils.expression_is_true:
+         name: readiness_timestamp_has_administration_timestamp
+         expression: "not(first_entered_readiness_timestamp is not null and first_entered_administration_timestamp is null)"
+
+      #an application that has an finalize timestamp should also have an readiness timestamp
+      - dbt_utils.expression_is_true:
+         name: finalize_timestamp_has_readiness_timestamp
+         expression: "not(first_entered_finalize_timestamp is not null and first_entered_readiness_timestamp is null)"
+
+      #an application that has an approved timestamp should also have a finalize timestamp
+      - dbt_utils.expression_is_true:
+         name: approved_timestamp_has_finalize_timestamp
+         expression: "not(first_entered_approved_timestamp is not null and first_entered_finalize_timestamp is null)"
+      
+    columns:
+      - name: fountain_application_id
+        description: "Fountain ID for this Application"
+        tests:
+          - not_null
+
+      - name: funnel_id
+        description: "ID of the funnel. Funnel is synonymous with job opening. We have this in the model as part of the primary key 
+                      because currently it is possible for an application to be part of multiple funnels."
+
+      - name: primary_key
+        description: "Surrogate primary key created from fountain_application_id and funnel_id"
+        tests:
+          - unique
+          - not_null
+
+      - name: coach_profile_id
+        description: "The unique identifier for a coach's profile."
+
+      - name: coach_profile_uuid
+        description: "The universally unique identifier for a coach's profile."
+
+      - name: current_stage_bucket
+        description: "The current stage bucket where the application is located."
+
+      - name: current_stage_bucket_funnel_order
+        description: "The order of the current stage bucket in the application funnel."
+
+      - name: is_not_on_hold
+        description: "Indicator whether the application is not on hold."
+
+      - name: highest_stage_reached
+        description: "The highest stage reached by the application in the process."
+
+      - name: days_spent_in_application_bucket
+        description: "The number of days spent by the application in the application bucket."
+
+      - name: days_spent_in_administration_bucket
+        description: "The number of days spent by the application in the administration bucket."
+
+      - name: days_spent_in_readiness_bucket
+        description: "The number of days spent by the application in the readiness bucket."
+
+      - name: days_spent_in_finalize_bucket
+        description: "The number of days spent by the application in the finalize bucket."
+
+      - name: days_spent_in_approved_bucket
+        description: "The number of days spent by the application in the approved bucket."
+
+      - name: days_spent_in_on_hold_bucket
+        description: "The number of days spent by the application in the on hold bucket."
+
+      - name: days_spent_in_rejected_bucket
+        description: "The number of days spent by the application in the rejected bucket."
+
+      - name: days_spent_in_inactive_bucket
+        description: "The number of days spent by the application in the inactive bucket."
+
+      - name: count_funnels
+        description: "The count of funnels an application has passed through."
+
+      - name: is_application_fallout
+        description: "Indicator whether the application has fallen out at the application stage."
+
+      - name: is_administration_fallout
+        description: "Indicator whether the application has fallen out at the administration stage."
+
+      - name: is_readiness_fallout
+        description: "Indicator whether the application has fallen out at the readiness stage."
+
+      - name: is_finalize_fallout
+        description: "Indicator whether the application has fallen out at the finalize stage."
+
+      - name: is_application_pass_through
+        description: "Indicator whether the application has passed through the application stage."
+
+      - name: is_administration_pass_through
+        description: "Indicator whether the application has passed through the administration stage."
+
+      - name: is_readiness_pass_through
+        description: "Indicator whether the application has passed through the readiness stage."
+
+      - name: is_finalize_pass_through
+        description: "Indicator whether the application has passed through the finalize stage."
+
+      - name: first_entered_application_timestamp
+        description: "The timestamp when the application first entered the application stage."
+        tests:
+          #there is nothing for us to learn from an application that never hits the stage buckets that the business has defined
+          #therefore, these should not be present in the final dataset
+          - not_null
+
+      - name: first_entered_administration_timestamp
+        description: "The timestamp when the application first entered the administration stage."
+
+      - name: first_entered_readiness_timestamp
+        description: "The timestamp when the application first entered the readiness stage."
+
+      - name: first_entered_finalize_timestamp
+        description: "The timestamp when the application first entered the finalize stage."
+
+      - name: first_entered_approved_timestamp
+        description: "The timestamp when the application first entered the approved stage."
+
+      - name: most_recent_rejected_timestamp
+        description: "The most recent timestamp when the application was rejected."
+
+      - name: most_recent_on_hold_timestamp
+        description: "The most recent timestamp when the application was put on hold."
+
+      - name: most_recent_inactive_timestamp
+        description: "The most recent timestamp when the application was made inactive."
+
+      - name: last_stage_bucket_changed_timestamp
+        description: "The timestamp when the application last changed stage buckets."
+
+      - name: is_active_application
+        description: "Indicator whether the application is currently active."
+
+      - name: is_unsuccessful_application
+        description: "Indicator whether the application was unsuccessful."
+
+      - name: has_ever_been_fallout
+        description: "Indicator whether the application has ever fallen out of the process."
+
+      - name: first_staffable_at
+        description: "The date when the applicant first became staffable."
+
+      - name: is_reonboard_application
+        description: "Indicator whether the application is a re-onboard application."
+
+      - name: is_staffable_application
+        description: "Indicator whether the application is staffable."
+
+      - name: days_between_entering_application_and_entering_administration
+        description: "The number of days between entering the application stage and entering the administration stage."
+
+      - name: days_between_entering_administration_and_entering_readiness
+        description: "The number of days between entering the administration stage and entering the readiness stage."
+
+      - name: days_between_entering_readiness_and_entering_finalize
+        description: "The number of days between entering the readiness stage and entering the finalize stage."
+
+      - name: days_between_entering_finalize_and_entering_approved
+        description: "The number of days between entering the finalize stage and entering the approved stage."
+
+      - name: days_between_entering_application_and_entering_approved
+        description: "The number of days between entering the application stage and entering the approved stage."
+
+      - name: days_between_entering_approved_and_first_staffable_date
+        description: "The number of days between entering the approved stage and the first staffable date."
+
+      - name: days_between_entering_application_and_rejected
+        description: "The number of days between entering the application stage and being rejected."
+
+      - name: days_between_entering_application_and_inactive
+        description: "The number of days between entering the application stage and becoming inactive."
+
+      - name: days_between_entering_application_and_on_hold
+        description: "The number of days between entering the application stage and being put on hold."
+
+      - name: days_between_entering_application_first_staffable_date
+        description: "The number of days between entering the application stage and the first staffable date."
+
+      - name: days_in_current_stage_bucket
+        description: "The number of days spent in the current stage bucket."
+
+      - name: days_since_application_started
+        description: "The number of days since the application process started."
+
+      - name: target_days_to_staffable
+        description: "The target number of days for an application to become staffable."
+
+      - name: target_staffable_date
+        description: "The target date for an application to become staffable."
+
+      - name: is_past_target_staffable_date
+        description: "Indicator whether the current date is past the target staffable date."
+
+      - name: days_between_actual_staffable_date_and_target_staffable_date
+        description: "The number of days between the actual staffable date and the target staffable date."
+
+      - name: target_days_in_current_bucket
+        description: "The target number of days for an application to stay in the current stage bucket."
+
+      - name: expected_days_to_staffable
+        description: "The expected number of days for an application to become staffable."
+
+      - name: expected_staffable_date_basic
+        description: "The basic expected date for an application to become staffable, calculated without considering potential holdups or delays."
+
+      - name: expected_staffable_date
+        description: "The expected date for an application to become staffable, calculated considering potential holdups or delays."
+      
+      - name: days_to_hire
+        description: "Our codifified definition of our time to hire metric (days from application to first staffable). 
+                      For days to hire we exclude any applicants that have ever been fallout and
+                      subtract any days that they spent in waitlist. applications that have been fallout and go on to become staffable usually have some 
+                      unusual circumstances and skew the days to hire average way up. 
+                      Waitlist is excluded since it isn't really part of the time that we spend getting an applicant through the application process"

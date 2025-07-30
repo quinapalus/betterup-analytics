@@ -1,0 +1,56 @@
+version: 2
+
+models:
+  - name: anon_eu__coach_comp__sessions
+    description: >
+      Coach Compensation Sessions from analytics to support coach insights dashboard.
+
+    columns:
+      - name: user_season_id
+        description: Surrogate Key of User UUID + Season Name. Functions as primary
+          key.
+        tests:
+          - not_null
+          - unique
+      - name: coach_id
+        tests:
+          - not_null
+
+        description: The column 'coach_id' contains the unique identifier for the
+          coach that each session belongs to. [GenAI Description]
+      - name: coach_profile_uuid
+        tests:
+          - not_null
+
+
+        description: The 'coach_profile_uuid' column contains a unique identifier
+          for each coach profile related to sessions. [GenAI Description]
+      - name: user_uuid
+        tests:
+          - not_null
+
+
+        description: The 'user_uuid' column contains a unique identifier for each
+          user in the application. [GenAI Description]
+      - name: full_name
+        description: The 'full_name' column contains the full name of an individual.
+          [GenAI Description]
+      - name: season_name
+        tests:
+          - not_null
+
+
+        description: The 'season_name' column indicates the season during which a
+          given session was held. [GenAI Description]
+      - name: lifetime_sessions
+        tests:
+          - not_null
+
+
+        description: Lifetime_sessions is the total number of sessions a user has
+          completed. [GenAI Description]
+      - name: primary_b2b_lifetime_sessions
+        tests:
+          - not_null
+        description: This column contains the total number of sessions for a customer
+          during their lifetime of business-to-business interactions. [GenAI Description]

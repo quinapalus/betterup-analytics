@@ -1,0 +1,113 @@
+version: 2
+
+models:
+  - name: fact_member_reporting_group_assignment_lead_metrics
+    description: Metrics for the Lead product at reporting group assignment level.
+
+columns:
+  - name: primary_key
+    description: Unique key of the fact table
+    tests:
+      - not_null
+      - unique
+
+  - name: member_id
+    description: ID of the member (users.id)
+    tests:
+      - not_null
+
+  - name: reporting_group_id
+    description: ID of the reporting group. More info on reporting_groups can be found here https://betterup.atlassian.net/wiki/spaces/PT/pages/2846130262/Reporting+Groups+101+How+to+use+Reporting+Groups
+    tests:
+      - not_null
+
+  - name: most_recent_reporting_group
+    description: Is this the Reporting group that the user belonged to most recently?
+    tests:
+      - not_null
+
+  - name: current_reporting_group
+    description: Does the user belong to this Reporting group currently?
+    tests:
+      - not_null
+
+  - name: member_status
+    description: Indicates which step in the product-funnel the user is. Values include invited, activated, completed_onboarding, started coaching, ended.
+    tests:
+      - not_null
+
+  - name: program_invite_at
+    description: Date when invited to a track
+    tests:
+      - not_null
+
+  - name: program_ended_at
+    description: Track assignment end date
+
+  - name: lead_access_ended_at
+    description: Date when the user's access to the lead product ended
+
+  - name: activated_at
+    description: Date when the user activated their account
+
+  - name: completed_onboarding_at
+    description: Date when the user completed onboarding on the product
+
+  - name: active_product_subscription
+    description: The product to which the member is currently subscribed
+    tests:
+      - not_null
+
+  - name: submitted_last_reflection_point_at
+    description: Date when the most recent reflection point was submitted
+
+  - name: count_completed_reflection_points
+    description: Total reflection points completed
+
+  - name: current_reflection_point_status
+    description: Whether the current reflection point was completed or not
+
+  - name: next_session_at
+    description: Date when the next coaching session is scheduled
+
+  - name: next_primary_session_at
+    description: Date when the next 1:1 coaching session is scheduled
+
+  - name: first_session_at
+    description: Date when the first coaching session is scheduled
+
+  - name: first_primary_session_at
+    description: Date when the first 1:1 coaching session is scheduled
+
+  - name: last_session_at
+    description: Date when the last coaching session is scheduled
+
+  - name: last_primary_session_at
+    description: Date when the last 1:1 coaching session is scheduled
+
+  - name: completed_session_count
+    description: Number of coaching sessions the user has completed
+
+  - name: completed_session_hours
+    description: Total hours the user has spent in sessions
+
+  - name: average_session_length_hours
+    description: Average length of session for the user in hours
+
+  - name: completed_primary_session_count
+    description: Number of primary sessions for the user
+
+  - name: completed_extended_network_session_count
+    description: Number of extended network sessions for the user
+
+  - name: completed_on_demand_session_count
+    description: Number of on demand sessions for the user
+
+  - name: completed_resource_count
+    description: Number of resources the user has completed
+
+  - name: last_engagement_at
+    description: Last time the user engaged with the platform
+
+  - name: wp_360_status
+    description: Status indicating whether Whole Person 360 is Complete or Pending Contributor Action or Pending Member Action

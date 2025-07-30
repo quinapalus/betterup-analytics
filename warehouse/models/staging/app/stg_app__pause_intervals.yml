@@ -1,0 +1,60 @@
+version: 2
+models:
+  - name: stg_app__pause_intervals
+    description: The DBT model stg_app__pause_intervals captures data about pause
+      intervals for consumer subscription and product subscription assignments. It
+      includes several fields such as pause interval ID, resume and pause scheduled
+      job ID, paused until datetime, and status. Additionally, requested early unpause
+      and paused at datetime columns are included to indicate how a pause started
+      and when an unpause was requested. The model is sourced from raw.stitch_app.pause_intervals
+      and provides a highly organized and structured output of the stored pause interval
+      data. [GenAI Description]
+    columns:
+      - name: pause_interval_id
+        description: "'pause_interval_id' is a unique identifier for a pause interval\
+          \ with associated consumer subscription, product subscription assignment,\
+          \ scheduled job information, pause and resume date/time, status of the pause,\
+          \ and early unpause request information. [GenAI Description]"
+        tests:
+          - unique
+          - not_null
+
+      - name: consumer_subscription_id
+        description: "'consumer_subscription_id' contains the unique ID for the consumer\
+          \ subscription associated with a pause interval. [GenAI Description]"
+
+      - name: product_subscription_assignment_id
+        description: "'product_subscription_assignment_id' is the assigned id of a\
+          \ subscription product. [GenAI Description]"
+
+      - name: resume_scheduled_job_id
+        description: The column 'resume_scheduled_job_id' stores the ID of a scheduled
+          job associated with when the pause interval ended. [GenAI Description]
+
+      - name: pause_scheduled_job_id
+        description: Unique numerical identifier of the related scheduled job that
+          initiated the pause. [GenAI Description]
+
+      - name: paused_until
+        description: The 'paused_until' column records the time the pause will end.
+          [GenAI Description]
+
+      - name: status
+        description: The 'status' column identifies the pause or unpause status of
+          a subscription. [GenAI Description]
+
+      - name: requested_early_unpause
+        description: "'requested_early_unpause' indicates whether an early unpause\
+          \ for a pause interval was requested. [GenAI Description]"
+
+      - name: paused_at
+        description: The 'paused_at' column stores the timestamp when the pause of
+          a consumer subscription was initiated. [GenAI Description]
+
+      - name: created_at
+        description: The 'created_at' column holds timestamps indicating when the
+          pause interval record was created. [GenAI Description]
+
+      - name: updated_at
+        description: The updated_at column stores the timestamp when the pause interval
+          was last updated. [GenAI Description]

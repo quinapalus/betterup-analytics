@@ -1,0 +1,59 @@
+version: 2
+models:
+  - name: stg_app__goal_outcomes
+    description: >
+      Application table containing goal outcome suggestions.
+      (application Object is "ObjectiveOutcome").
+
+    columns:
+      - name: goal_outcome_id
+        description: Primary key
+        tests:
+          - unique
+          - not_null
+
+      - name: description_i18n
+        description: A JSON object of description translations.
+        tests:
+          - not_null
+
+      - name: description
+        description: >
+          Description of the outcome (e.g. "I would be a more effective
+          leader"). Pulling the English version from the localized JSON
+          translations (description_i18n).
+        tests:
+          - not_null
+
+      - name: topic_theme_id
+        description: >
+          Foreign key for the topic theme for the goal outcome
+        tests:
+          - relationships:
+              to: ref('stg_app__topic_themes')
+              field: topic_theme_id
+
+      - name: collaborator_description_i18n
+        description: A JSON object of collaborator description translations.
+        tests:
+          - not_null
+
+      - name: collaborator_description
+        description: >
+          Collaborator-facing Description of the outcome (e.g. "They would be
+          a more effective leader"). Pulling the English version from the
+          localized JSON translations (description_i18n).
+        tests:
+          - not_null
+
+      - name: created_at
+        description: >
+          Time when the Rails object was created in UTC, i.e. when the
+          goal outcome was created.
+        tests:
+          - not_null
+
+      - name: updated_at
+        description: Time when the Rails object was updated in UTC.
+        tests:
+          - not_null

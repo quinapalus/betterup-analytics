@@ -1,0 +1,42 @@
+version: 2
+models:
+  - name: dim_contracts
+    description: >
+      Conformed Contract dimension. Accounts have many Contracts.
+
+    columns:
+      - name: contract_key
+        description: Primary Key
+        tests:
+          - unique
+          - not_null
+
+      - name: app_contract_id
+        description: Foreign key to the contract
+        tests:
+          - unique
+          - not_null
+
+      - name: contract_name
+        description: Name of the contract.
+
+      - name: organization_id
+        description: ID of the organization associated with the contract.
+
+      - name: created_at
+        description: When the contract was created.
+
+      - name: updated_at
+        description: When the contract was last updated.
+
+      - name: salesforce_contract_id
+        description: Salesforce ID of the contract object record in Salesforce.
+
+      - name: min_line_item_starts_at
+        description: Earliest associated line item start time.
+
+      - name: max_line_item_ends_at
+        description: >
+          Latest contract line item end time. For open ended line items, the end time for 
+          that line item is calculated as one year from the line item start time or the 
+          current_date, whichever is greater.

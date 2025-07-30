@@ -1,0 +1,10 @@
+version: 2
+
+models:
+  - name: dbt__reference_population_domain_scores
+    description: ""
+    columns:
+      - name: _unique
+        tests:
+          - not_null
+          - unique

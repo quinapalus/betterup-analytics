@@ -1,0 +1,51 @@
+version: 2
+models:
+  - name: int_track_metrics
+    description: >
+      This INT model summarizes key metrics and pieces of information that are
+      relevant to tracks. 
+
+    columns:
+      - name: track_id
+        description: Foreign key for associated member.
+        tests:
+          - not_null
+          - unique
+
+      - name: open_track_assignment_count
+        description: >
+          Integer denoting the number of open track assignments associated with
+          the track.
+        tests:
+          - not_null
+
+      - name: start_date
+        description: >
+          Timestamp in UTC indicating the start date of the track, denoted as
+          the date of earliest track assignment creation.
+
+      - name: end_date
+        description: >
+          Timestamp in UTC indicating the end date of the track, denoted as
+          the date of the latest (intended) track assignment ending time. This
+          field will be NULL if `ends_on` hasn't been populated in the Admin Panel
+          for any track assignments on that track.
+
+      - name: engaged_member_count
+        description: >
+          Integer denoting the total number of members on track that had at least
+          one session completed.
+        tests:
+          - not_null
+
+      - name: admin_panel_url
+        description: >
+          URL to the track in the Admin Panel.
+        tests:
+          - not_null
+
+      - name: partner_panel_url
+        description: >
+          URL to the track in the Partner Panel.
+        tests:
+          - not_null

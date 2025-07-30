@@ -1,0 +1,14 @@
+version: 2
+models:
+  - name: stg_app__direct_payer_configurations
+    description: This DBT model, stg_app_direct_payer_configurations, contains data
+      from the raw.stitch_app.direct_payer_configurations table, with the fields direct_payer_configuration_id
+      and stripe_pricing_plan_id. It can be used to help understand and analyze the
+      configurations of direct payers. [GenAI Description]
+    columns:
+      - name: direct_payer_configuration_id
+        description: A unique identifier for each Direct Payer Configuration stored
+          in the warehouse. [GenAI Description]
+        tests:
+          - not_null
+          - unique

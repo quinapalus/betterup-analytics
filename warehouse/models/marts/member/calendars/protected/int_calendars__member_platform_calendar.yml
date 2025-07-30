@@ -1,0 +1,149 @@
+version: 2
+
+models:
+  - name: int_calendars__member_platform_calendar
+    description: "An intermediate model for member_platform_calendar"
+    columns:
+      - name: member_platform_calendar_id
+        description: "Primary Key"
+        tests:
+          - unique
+          - not_null
+
+      - name: date
+        description: ""
+
+      - name: date_key
+        description: ""
+
+      - name: is_last_day_of_month
+        description: ""
+
+      - name: is_day_15_of_month
+        description: ""
+
+      - name: member_id
+        description: ""
+
+      - name: track_assignment_id
+        description: ""
+
+      - name: track_id
+        description: ""
+
+      - name: organization_id
+        description: ""
+
+      - name: product_subscription_assignment_id
+        description: ""
+
+      - name: has_product_subscription
+        description: ""
+
+      - name: product_subscription_id
+        description: ""
+
+      - name: product_id
+        description: ""
+
+      - name: v2
+        description: ""
+
+      - name: psa_starts_at
+        description: ""
+
+      - name: activated_at
+        description: ""
+
+      - name: has_member_activated
+        description: ""
+
+      - name: is_member_activated_on_calendar_date
+        description: ""
+
+      - name: total_days_in_tenure_since_activation
+        description: ""
+
+      - name: lead_activated_at
+        description: ""
+
+      - name: care_activated_at
+        description: ""
+
+      - name: first_invited_to_track_at
+        description: ""
+
+      - name: first_activated_at
+        description: ""
+
+      - name: has_member_ever_activated
+        description: ""
+
+      - name: coaching_cloud
+        description: ""
+
+      - name: psa_includes_on_demand
+        description: ""
+
+      - name: psa_includes_primary_coaching
+        description: ""
+
+      - name: psa_includes_care
+        description: ""
+
+      - name: psa_includes_coaching_circles
+        description: ""
+
+      - name: psa_includes_workshops
+        description: ""
+
+      - name: psa_includes_extended_network
+        description: ""
+
+      - name: psa_includes_foundations
+        description: ""
+
+      - name: product_group
+        description: ""
+
+      - name: days_since_first_activation
+        description: ""
+
+      - name: complete_months_since_first_activation
+        description: ""
+
+      - name: first_primary_coaching_access_date
+        description: ""
+
+      - name: days_since_primary_coaching_access
+        description: ""
+
+      - name: primary_coaching_access_month_number
+        description: ""
+
+      - name: complete_months_since_primary_coaching_access
+        description: ""
+
+      - name: first_care_access_date
+        description: ""
+
+      - name: days_since_care_access
+        description: ""
+
+      - name: care_access_month_number
+        description: ""
+
+      - name: complete_months_since_care_access
+        description: ""
+
+      - name: first_foundations_access_date
+        description: ""
+
+      - name: days_since_foundations_access
+        description: ""
+
+      - name: foundations_access_month_number
+        description: ""
+
+      - name: complete_months_since_foundations_access
+        description: ""

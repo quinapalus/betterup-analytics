@@ -1,0 +1,65 @@
+version: 2
+
+models:
+  - name: fact_member_reporting_group__engagement_metrics
+    description: ""
+    columns:
+      - name: primary_key
+        description: ""
+
+      - name: member_id
+        description: ""
+
+      - name: reporting_group_id
+        description: ""
+
+      - name: activated_at
+        description: ""
+
+      - name: invited_at
+        description: ""
+
+      - name: product_access_end_at
+        description: ""
+
+      - name: first_session_at
+        description: ""
+
+      - name: next_appointment_at
+        description: ""
+
+      - name: onboarding_assessment_created_at
+        description: ""
+
+      - name: onboarding_assessment_submitted_at
+        description: ""
+
+      - name: completed_sessions
+        description: ""
+
+      - name: completed_on_demand_sessions
+        description: ""
+
+      - name: completed_extended_network_sessions
+        description: ""
+
+      - name: completed_session_hours
+        description: ""
+
+      - name: average_session_length_hours
+        description: ""
+
+      - name: completed_resource_minutes
+        description: ""
+
+      - name: completed_resources
+        description: ""
+
+      - name: last_engaged_at
+        description: ""
+
+      - name: last_session_at
+        description: ""
+
+      - name: reflection_point_completed_at
+        description: ""

@@ -1,0 +1,761 @@
+reference_population_id,reference_population_key,benchmark_type,country,key,mean
+2,global_2022,country,Australia,alignment,3.90984848
+2,global_2022,country,Brazil,alignment,4.065
+2,global_2022,country,China,alignment,3.988
+2,global_2022,country,France,alignment,3.875
+2,global_2022,country,Germany,alignment,3.831
+2,global_2022,country,India,alignment,4.09581023
+2,global_2022,country,Mexico,alignment,3.993
+2,global_2022,country,Singapore,alignment,3.88505747
+2,global_2022,country,United Kingdom of Great Britain and Northern Ireland,alignment,3.8869768
+2,global_2022,country,United States of America,alignment,3.988
+2,global_2022,country,Russia,alignment,3.97166667
+2,global_2022,country,Australia,authenticity,3.73973064
+2,global_2022,country,Brazil,authenticity,3.876
+2,global_2022,country,China,authenticity,3.933
+2,global_2022,country,France,authenticity,3.804
+2,global_2022,country,Germany,authenticity,3.651
+2,global_2022,country,India,authenticity,3.68371329
+2,global_2022,country,Mexico,authenticity,3.926
+2,global_2022,country,Singapore,authenticity,3.65876437
+2,global_2022,country,United Kingdom of Great Britain and Northern Ireland,authenticity,3.6284469
+2,global_2022,country,United States of America,authenticity,3.747
+2,global_2022,country,Russia,authenticity,3.38777778
+2,global_2022,country,Australia,belonging_index,3.83911483
+2,global_2022,country,Brazil,belonging_index,3.91074681
+2,global_2022,country,China,belonging_index,3.85928962
+2,global_2022,country,France,belonging_index,3.79993252
+2,global_2022,country,Germany,belonging_index,3.81826189
+2,global_2022,country,India,belonging_index,3.966
+2,global_2022,country,Mexico,belonging_index,3.9980916
+2,global_2022,country,Singapore,belonging_index,3.69910423
+2,global_2022,country,United Kingdom of Great Britain and Northern Ireland,belonging_index,3.68668446
+2,global_2022,country,United States of America,belonging_index,3.75458665
+2,global_2022,country,Australia,burnout,3.10264228
+2,global_2022,country,Brazil,burnout,2.92503748
+2,global_2022,country,China,burnout,2.59510567
+2,global_2022,country,France,burnout,3.0613155
+2,global_2022,country,Germany,burnout,2.96549894
+2,global_2022,country,India,burnout,2.8372818
+2,global_2022,country,Mexico,burnout,2.94224422
+2,global_2022,country,Singapore,burnout,3.06421356
+2,global_2022,country,United Kingdom of Great Britain and Northern Ireland,burnout,3.14198161
+2,global_2022,country,United States of America,burnout,3.06555904
+2,global_2022,country,Australia,care_adaptive_coping,3.19828283
+2,global_2022,country,Brazil,care_adaptive_coping,3.236
+2,global_2022,country,China,care_adaptive_coping,3.291
+2,global_2022,country,France,care_adaptive_coping,3.197
+2,global_2022,country,Germany,care_adaptive_coping,3.112
+2,global_2022,country,India,care_adaptive_coping,3.22375231
+2,global_2022,country,Mexico,care_adaptive_coping,3.355
+2,global_2022,country,Singapore,care_adaptive_coping,3.19087644
+2,global_2022,country,United Kingdom of Great Britain and Northern Ireland,care_adaptive_coping,3.0910493
+2,global_2022,country,United States of America,care_adaptive_coping,3.219
+2,global_2022,country,Russia,care_adaptive_coping,3.21233333
+2,global_2022,country,Australia,care_awareness_agency,3.53272727
+2,global_2022,country,Brazil,care_awareness_agency,3.705
+2,global_2022,country,China,care_awareness_agency,3.854
+2,global_2022,country,France,care_awareness_agency,3.544
+2,global_2022,country,Germany,care_awareness_agency,3.543
+2,global_2022,country,India,care_awareness_agency,3.59802834
+2,global_2022,country,Mexico,care_awareness_agency,3.700
+2,global_2022,country,Singapore,care_awareness_agency,3.59985632
+2,global_2022,country,United Kingdom of Great Britain and Northern Ireland,care_awareness_agency,3.42785601
+2,global_2022,country,United States of America,care_awareness_agency,3.695
+2,global_2022,country,Russia,care_awareness_agency,3.675
+2,global_2022,country,Australia,care_fulfillment,3.98262626
+2,global_2022,country,Brazil,care_fulfillment,4.209
+2,global_2022,country,China,care_fulfillment,4.025
+2,global_2022,country,France,care_fulfillment,3.928
+2,global_2022,country,Germany,care_fulfillment,3.903
+2,global_2022,country,India,care_fulfillment,4.0823167
+2,global_2022,country,Mexico,care_fulfillment,4.330
+2,global_2022,country,Singapore,care_fulfillment,3.91781609
+2,global_2022,country,United Kingdom of Great Britain and Northern Ireland,care_fulfillment,3.88041846
+2,global_2022,country,United States of America,care_fulfillment,4.039
+2,global_2022,country,Russia,care_fulfillment,3.80066667
+2,global_2022,country,Australia,care_outlook,3.74969697
+2,global_2022,country,Brazil,care_outlook,3.974
+2,global_2022,country,China,care_outlook,3.841
+2,global_2022,country,France,care_outlook,3.702
+2,global_2022,country,Germany,care_outlook,3.734
+2,global_2022,country,India,care_outlook,3.8728281
+2,global_2022,country,Mexico,care_outlook,4.090
+2,global_2022,country,Singapore,care_outlook,3.73577586
+2,global_2022,country,United Kingdom of Great Britain and Northern Ireland,care_outlook,3.62058008
+2,global_2022,country,United States of America,care_outlook,3.863
+2,global_2022,country,Russia,care_outlook,3.76433333
+2,global_2022,country,Australia,care_self_care,2.82969697
+2,global_2022,country,Brazil,care_self_care,2.886
+2,global_2022,country,China,care_self_care,2.812
+2,global_2022,country,France,care_self_care,2.784
+2,global_2022,country,Germany,care_self_care,2.844
+2,global_2022,country,India,care_self_care,3.03635243
+2,global_2022,country,Mexico,care_self_care,2.825
+2,global_2022,country,Singapore,care_self_care,2.91264368
+2,global_2022,country,United Kingdom of Great Britain and Northern Ireland,care_self_care,2.65157312
+2,global_2022,country,United States of America,care_self_care,2.837
+2,global_2022,country,Russia,care_self_care,2.86533333
+2,global_2022,country,Australia,care_well_being,3.46848485
+2,global_2022,country,Brazil,care_well_being,3.611
+2,global_2022,country,China,care_well_being,3.571
+2,global_2022,country,France,care_well_being,3.438
+2,global_2022,country,Germany,care_well_being,3.437
+2,global_2022,country,India,care_well_being,3.57566715
+2,global_2022,country,Mexico,care_well_being,3.670
+2,global_2022,country,Singapore,care_well_being,3.48212045
+2,global_2022,country,United Kingdom of Great Britain and Northern Ireland,care_well_being,3.34424466
+2,global_2022,country,United States of America,care_well_being,3.539
+2,global_2022,country,Russia,care_well_being,3.46353333
+2,global_2022,country,Australia,coaching_culture_coworkers,3.7848916
+2,global_2022,country,Brazil,coaching_culture_coworkers,3.873
+2,global_2022,country,China,coaching_culture_coworkers,3.857
+2,global_2022,country,France,coaching_culture_coworkers,3.722
+2,global_2022,country,Germany,coaching_culture_coworkers,3.775
+2,global_2022,country,India,coaching_culture_coworkers,3.81992098
+2,global_2022,country,Mexico,coaching_culture_coworkers,3.857
+2,global_2022,country,Singapore,coaching_culture_coworkers,3.72775373
+2,global_2022,country,United Kingdom of Great Britain and Northern Ireland,coaching_culture_coworkers,3.71673893
+2,global_2022,country,United States of America,coaching_culture_coworkers,3.872
+2,global_2022,country,Russia,coaching_culture_coworkers,3.76722222
+2,global_2022,country,Australia,coaching_culture,3.67750678
+2,global_2022,country,Brazil,coaching_culture,3.739
+2,global_2022,country,China,coaching_culture,3.836
+2,global_2022,country,France,coaching_culture,3.593
+2,global_2022,country,Germany,coaching_culture,3.604
+2,global_2022,country,India,coaching_culture,3.74838944
+2,global_2022,country,Mexico,coaching_culture,3.773
+2,global_2022,country,Singapore,coaching_culture,3.62127225
+2,global_2022,country,United Kingdom of Great Britain and Northern Ireland,coaching_culture,3.56674047
+2,global_2022,country,United States of America,coaching_culture,3.718
+2,global_2022,country,Russia,coaching_culture,3.57069444
+2,global_2022,country,Australia,coaching_culture_org_practices,3.77371274
+2,global_2022,country,Brazil,coaching_culture_org_practices,3.755
+2,global_2022,country,China,coaching_culture_org_practices,3.914
+2,global_2022,country,France,coaching_culture_org_practices,3.665
+2,global_2022,country,Germany,coaching_culture_org_practices,3.642
+2,global_2022,country,India,coaching_culture_org_practices,3.82190357
+2,global_2022,country,Mexico,coaching_culture_org_practices,3.864
+2,global_2022,country,Singapore,coaching_culture_org_practices,3.67724868
+2,global_2022,country,United Kingdom of Great Britain and Northern Ireland,coaching_culture_org_practices,3.65832908
+2,global_2022,country,United States of America,coaching_culture_org_practices,3.740
+2,global_2022,country,Russia,coaching_culture_org_practices,3.60611111
+2,global_2022,country,Australia,coaching_culture_psy_safety,3.4447832
+2,global_2022,country,Brazil,coaching_culture_psy_safety,3.519
+2,global_2022,country,China,coaching_culture_psy_safety,3.668
+2,global_2022,country,France,coaching_culture_psy_safety,3.397
+2,global_2022,country,Germany,coaching_culture_psy_safety,3.446
+2,global_2022,country,India,coaching_culture_psy_safety,3.54010806
+2,global_2022,country,Mexico,coaching_culture_psy_safety,3.542
+2,global_2022,country,Singapore,coaching_culture_psy_safety,3.3994709
+2,global_2022,country,United Kingdom of Great Britain and Northern Ireland,coaching_culture_psy_safety,3.30015314
+2,global_2022,country,United States of America,coaching_culture_psy_safety,3.515
+2,global_2022,country,Russia,coaching_culture_psy_safety,3.43444444
+2,global_2022,country,Australia,coaching,3.5270202
+2,global_2022,country,Brazil,coaching,3.697
+2,global_2022,country,China,coaching,3.770
+2,global_2022,country,France,coaching,3.479
+2,global_2022,country,Germany,coaching,3.543
+2,global_2022,country,India,coaching,3.80329636
+2,global_2022,country,Mexico,coaching,3.791
+2,global_2022,country,Singapore,coaching,3.55531609
+2,global_2022,country,United Kingdom of Great Britain and Northern Ireland,coaching,3.52298632
+2,global_2022,country,United States of America,coaching,3.619
+2,global_2022,country,Russia,coaching,3.665
+2,global_2022,country,Australia,cognitive_agility,3.82424242
+2,global_2022,country,Brazil,cognitive_agility,3.936
+2,global_2022,country,China,cognitive_agility,3.921
+2,global_2022,country,France,cognitive_agility,3.835
+2,global_2022,country,Germany,cognitive_agility,3.791
+2,global_2022,country,India,cognitive_agility,3.83815979
+2,global_2022,country,Mexico,cognitive_agility,3.921
+2,global_2022,country,Singapore,cognitive_agility,3.81609195
+2,global_2022,country,United Kingdom of Great Britain and Northern Ireland,cognitive_agility,3.76405344
+2,global_2022,country,United States of America,cognitive_agility,3.889
+2,global_2022,country,Russia,cognitive_agility,3.77166667
+2,global_2022,country,Australia,emotional_regulation,3.47205387
+2,global_2022,country,Brazil,emotional_regulation,3.463
+2,global_2022,country,China,emotional_regulation,3.669
+2,global_2022,country,France,emotional_regulation,3.275
+2,global_2022,country,Germany,emotional_regulation,3.364
+2,global_2022,country,India,emotional_regulation,3.35520641
+2,global_2022,country,Mexico,emotional_regulation,3.640
+2,global_2022,country,Singapore,emotional_regulation,3.42935824
+2,global_2022,country,United Kingdom of Great Britain and Northern Ireland,emotional_regulation,3.366222
+2,global_2022,country,United States of America,emotional_regulation,3.644
+2,global_2022,country,Russia,emotional_regulation,3.54722222
+2,global_2022,country,Australia,empathy,4.32457912
+2,global_2022,country,Brazil,empathy,4.357
+2,global_2022,country,China,empathy,4.160
+2,global_2022,country,France,empathy,4.142
+2,global_2022,country,Germany,empathy,4.106
+2,global_2022,country,India,empathy,4.42272914
+2,global_2022,country,Mexico,empathy,4.248
+2,global_2022,country,Singapore,empathy,4.16858238
+2,global_2022,country,United Kingdom of Great Britain and Northern Ireland,empathy,4.32100017
+2,global_2022,country,United States of America,empathy,4.267
+2,global_2022,country,Russia,empathy,3.94611111
+2,global_2022,country,Australia,empowerment,3.99090909
+2,global_2022,country,Brazil,empowerment,3.932
+2,global_2022,country,China,empowerment,3.852
+2,global_2022,country,France,empowerment,3.784
+2,global_2022,country,Germany,empowerment,3.882
+2,global_2022,country,India,empowerment,4.10926268
+2,global_2022,country,Mexico,empowerment,3.958
+2,global_2022,country,Singapore,empowerment,3.95641762
+2,global_2022,country,United Kingdom of Great Britain and Northern Ireland,empowerment,3.91841905
+2,global_2022,country,United States of America,empowerment,3.924
+2,global_2022,country,Russia,empowerment,3.67666667
+2,global_2022,country,Australia,encouraging_participation,4.21262626
+2,global_2022,country,Brazil,encouraging_participation,4.254
+2,global_2022,country,China,encouraging_participation,4.241
+2,global_2022,country,France,encouraging_participation,4.149
+2,global_2022,country,Germany,encouraging_participation,4.040
+2,global_2022,country,India,encouraging_participation,4.32470733
+2,global_2022,country,Mexico,encouraging_participation,4.220
+2,global_2022,country,Singapore,encouraging_participation,4.19109195
+2,global_2022,country,United Kingdom of Great Britain and Northern Ireland,encouraging_participation,4.16044304
+2,global_2022,country,United States of America,encouraging_participation,4.195
+2,global_2022,country,Russia,encouraging_participation,3.80916667
+2,global_2022,country,Australia,engagement,3.903367
+2,global_2022,country,Brazil,engagement,3.843
+2,global_2022,country,China,engagement,3.982
+2,global_2022,country,France,engagement,3.844
+2,global_2022,country,Germany,engagement,3.807
+2,global_2022,country,India,engagement,4.09673444
+2,global_2022,country,Mexico,engagement,3.935
+2,global_2022,country,Singapore,engagement,3.81393678
+2,global_2022,country,United Kingdom of Great Britain and Northern Ireland,engagement,3.82313011
+2,global_2022,country,United States of America,engagement,3.867
+2,global_2022,country,Russia,engagement,3.89611111
+2,global_2022,country,Australia,ex_authenticity,3.73973064
+2,global_2022,country,Brazil,ex_authenticity,3.876
+2,global_2022,country,China,ex_authenticity,3.933
+2,global_2022,country,France,ex_authenticity,3.804
+2,global_2022,country,Germany,ex_authenticity,3.651
+2,global_2022,country,India,ex_authenticity,3.68371329
+2,global_2022,country,Mexico,ex_authenticity,3.926
+2,global_2022,country,Singapore,ex_authenticity,3.65876437
+2,global_2022,country,United Kingdom of Great Britain and Northern Ireland,ex_authenticity,3.6284469
+2,global_2022,country,United States of America,ex_authenticity,3.747
+2,global_2022,country,Russia,ex_authenticity,3.38777778
+2,global_2022,country,Australia,ex_belonging,3.95542047
+2,global_2022,country,Brazil,ex_belonging,4.116
+2,global_2022,country,China,ex_belonging,4.035
+2,global_2022,country,France,ex_belonging,3.812
+2,global_2022,country,Germany,ex_belonging,3.810
+2,global_2022,country,India,ex_belonging,4.13474735
+2,global_2022,country,Mexico,ex_belonging,4.190
+2,global_2022,country,Singapore,ex_belonging,3.81412104
+2,global_2022,country,United Kingdom of Great Britain and Northern Ireland,ex_belonging,3.78896517
+2,global_2022,country,United States of America,ex_belonging,3.891
+2,global_2022,country,Russia,ex_belonging,3.62333333
+2,global_2022,country,Australia,ex_engagement,3.903367
+2,global_2022,country,Brazil,ex_engagement,3.843
+2,global_2022,country,China,ex_engagement,3.982
+2,global_2022,country,France,ex_engagement,3.844
+2,global_2022,country,Germany,ex_engagement,3.807
+2,global_2022,country,India,ex_engagement,4.09673444
+2,global_2022,country,Mexico,ex_engagement,3.935
+2,global_2022,country,Singapore,ex_engagement,3.81393678
+2,global_2022,country,United Kingdom of Great Britain and Northern Ireland,ex_engagement,3.82313011
+2,global_2022,country,United States of America,ex_engagement,3.867
+2,global_2022,country,Russia,ex_engagement,3.89611111
+2,global_2022,country,Australia,ex_index,3.87668443
+2,global_2022,country,Brazil,ex_index,4.001
+2,global_2022,country,China,ex_index,3.991
+2,global_2022,country,France,ex_index,3.814
+2,global_2022,country,Germany,ex_index,3.787
+2,global_2022,country,India,ex_index,3.98173915
+2,global_2022,country,Mexico,ex_index,4.086
+2,global_2022,country,Singapore,ex_index,3.82296009
+2,global_2022,country,United Kingdom of Great Britain and Northern Ireland,ex_index,3.76473845
+2,global_2022,country,United States of America,ex_index,3.893
+2,global_2022,country,Russia,ex_index,3.72988095
+2,global_2022,country,Australia,ex_optimism,3.71262626
+2,global_2022,country,Brazil,ex_optimism,3.928
+2,global_2022,country,China,ex_optimism,3.887
+2,global_2022,country,France,ex_optimism,3.629
+2,global_2022,country,Germany,ex_optimism,3.707
+2,global_2022,country,India,ex_optimism,3.97504621
+2,global_2022,country,Mexico,ex_optimism,4.073
+2,global_2022,country,Singapore,ex_optimism,3.76472701
+2,global_2022,country,United Kingdom of Great Britain and Northern Ireland,ex_optimism,3.53660692
+2,global_2022,country,United States of America,ex_optimism,3.761
+2,global_2022,country,Russia,ex_optimism,3.82416667
+2,global_2022,country,Australia,ex_purpose_and_meaning,4.00976431
+2,global_2022,country,Brazil,ex_purpose_and_meaning,4.282
+2,global_2022,country,China,ex_purpose_and_meaning,4.142
+2,global_2022,country,France,ex_purpose_and_meaning,3.869
+2,global_2022,country,Germany,ex_purpose_and_meaning,3.852
+2,global_2022,country,India,ex_purpose_and_meaning,4.2214007
+2,global_2022,country,Mexico,ex_purpose_and_meaning,4.384
+2,global_2022,country,Singapore,ex_purpose_and_meaning,3.99113985
+2,global_2022,country,United Kingdom of Great Britain and Northern Ireland,ex_purpose_and_meaning,3.91158357
+2,global_2022,country,United States of America,ex_purpose_and_meaning,4.058
+2,global_2022,country,Russia,ex_purpose_and_meaning,3.81222222
+2,global_2022,country,Australia,ex_social_connection,3.96666667
+2,global_2022,country,Brazil,ex_social_connection,4.017
+2,global_2022,country,China,ex_social_connection,3.948
+2,global_2022,country,France,ex_social_connection,3.889
+2,global_2022,country,Germany,ex_social_connection,3.929
+2,global_2022,country,India,ex_social_connection,3.82809612
+2,global_2022,country,Mexico,ex_social_connection,4.071
+2,global_2022,country,Singapore,ex_social_connection,3.89295977
+2,global_2022,country,United Kingdom of Great Britain and Northern Ireland,ex_social_connection,3.87339703
+2,global_2022,country,United States of America,ex_social_connection,4.037
+2,global_2022,country,Russia,ex_social_connection,3.82916667
+2,global_2022,country,Australia,feedback,3.7848916
+2,global_2022,country,Brazil,feedback,3.873
+2,global_2022,country,China,feedback,3.857
+2,global_2022,country,France,feedback,3.722
+2,global_2022,country,Germany,feedback,3.775
+2,global_2022,country,India,feedback,3.81992098
+2,global_2022,country,Mexico,feedback,3.857
+2,global_2022,country,Singapore,feedback,3.72775373
+2,global_2022,country,United Kingdom of Great Britain and Northern Ireland,feedback,3.71673893
+2,global_2022,country,United States of America,feedback,3.872
+2,global_2022,country,Russia,feedback,3.76722222
+2,global_2022,country,Australia,focus,3.3959596
+2,global_2022,country,Brazil,focus,3.614
+2,global_2022,country,China,focus,3.753
+2,global_2022,country,France,focus,3.689
+2,global_2022,country,Germany,focus,3.506
+2,global_2022,country,India,focus,3.63010885
+2,global_2022,country,Mexico,focus,3.625
+2,global_2022,country,Singapore,focus,3.47509579
+2,global_2022,country,United Kingdom of Great Britain and Northern Ireland,focus,3.26703638
+2,global_2022,country,United States of America,focus,3.571
+2,global_2022,country,Russia,focus,3.81166667
+2,global_2022,country,Australia,goal_attainment,3.83787879
+2,global_2022,country,Brazil,goal_attainment,4.076
+2,global_2022,country,China,goal_attainment,3.958
+2,global_2022,country,France,goal_attainment,3.796
+2,global_2022,country,Germany,goal_attainment,3.797
+2,global_2022,country,India,goal_attainment,4.01447936
+2,global_2022,country,Mexico,goal_attainment,4.174
+2,global_2022,country,Singapore,goal_attainment,3.81932471
+2,global_2022,country,United Kingdom of Great Britain and Northern Ireland,goal_attainment,3.7611997
+2,global_2022,country,United States of America,goal_attainment,3.962
+2,global_2022,country,Russia,goal_attainment,3.85666667
+2,global_2022,country,Australia,growth_mindset,3.76531987
+2,global_2022,country,Brazil,growth_mindset,4.085
+2,global_2022,country,China,growth_mindset,3.989
+2,global_2022,country,France,growth_mindset,3.925
+2,global_2022,country,Germany,growth_mindset,3.823
+2,global_2022,country,India,growth_mindset,3.99589238
+2,global_2022,country,Mexico,growth_mindset,4.097
+2,global_2022,country,Singapore,growth_mindset,3.86637931
+2,global_2022,country,United Kingdom of Great Britain and Northern Ireland,growth_mindset,3.7112232
+2,global_2022,country,United States of America,growth_mindset,3.910
+2,global_2022,country,Russia,growth_mindset,3.75722222
+2,global_2022,country,Australia,hope,3.62289562
+2,global_2022,country,Brazil,hope,3.872
+2,global_2022,country,China,hope,3.812
+2,global_2022,country,France,hope,3.671
+2,global_2022,country,Germany,hope,3.646
+2,global_2022,country,India,hope,3.75662354
+2,global_2022,country,Mexico,hope,3.961
+2,global_2022,country,Singapore,hope,3.60488506
+2,global_2022,country,United Kingdom of Great Britain and Northern Ireland,hope,3.54391721
+2,global_2022,country,United States of America,hope,3.794
+2,global_2022,country,Russia,hope,3.76611111
+2,global_2022,country,Australia,inclusive_leadership,4.10972887
+2,global_2022,country,Brazil,inclusive_leadership,4.142
+2,global_2022,country,China,inclusive_leadership,4.055
+2,global_2022,country,France,inclusive_leadership,3.984
+2,global_2022,country,Germany,inclusive_leadership,3.956
+2,global_2022,country,India,inclusive_leadership,4.16586784
+2,global_2022,country,Mexico,inclusive_leadership,4.107
+2,global_2022,country,Singapore,inclusive_leadership,4.02094676
+2,global_2022,country,United Kingdom of Great Britain and Northern Ireland,inclusive_leadership,4.07400712
+2,global_2022,country,United States of America,inclusive_leadership,4.103
+2,global_2022,country,Russia,inclusive_leadership,3.89859649
+2,global_2022,country,Australia,intent_to_stay,4.18343496
+2,global_2022,country,Brazil,intent_to_stay,4.289
+2,global_2022,country,China,intent_to_stay,4.033
+2,global_2022,country,France,intent_to_stay,4.012
+2,global_2022,country,Germany,intent_to_stay,3.963
+2,global_2022,country,India,intent_to_stay,4.16039707
+2,global_2022,country,Mexico,intent_to_stay,4.335
+2,global_2022,country,Singapore,intent_to_stay,3.9083757
+2,global_2022,country,United Kingdom of Great Britain and Northern Ireland,intent_to_stay,4.07348913
+2,global_2022,country,United States of America,intent_to_stay,4.087
+2,global_2022,country,Russia,intent_to_stay,3.62277778
+2,global_2022,country,Australia,job_satisfaction,3.9040404
+2,global_2022,country,Brazil,job_satisfaction,4.091
+2,global_2022,country,China,job_satisfaction,3.987
+2,global_2022,country,France,job_satisfaction,3.909
+2,global_2022,country,Germany,job_satisfaction,3.858
+2,global_2022,country,India,job_satisfaction,3.95933457
+2,global_2022,country,Mexico,job_satisfaction,4.251
+2,global_2022,country,Singapore,job_satisfaction,3.83405172
+2,global_2022,country,United Kingdom of Great Britain and Northern Ireland,job_satisfaction,3.74487472
+2,global_2022,country,United States of America,job_satisfaction,3.890
+2,global_2022,country,Russia,job_satisfaction,3.87333333
+2,global_2022,country,Australia,life_satisfaction,3.88787879
+2,global_2022,country,Brazil,life_satisfaction,4.071
+2,global_2022,country,China,life_satisfaction,3.869
+2,global_2022,country,France,life_satisfaction,3.892
+2,global_2022,country,Germany,life_satisfaction,3.876
+2,global_2022,country,India,life_satisfaction,3.87731196
+2,global_2022,country,Mexico,life_satisfaction,4.233
+2,global_2022,country,Singapore,life_satisfaction,3.77406609
+2,global_2022,country,United Kingdom of Great Britain and Northern Ireland,life_satisfaction,3.76292448
+2,global_2022,country,United States of America,life_satisfaction,3.944
+2,global_2022,country,Russia,life_satisfaction,3.64083333
+2,global_2022,country,Australia,locus_of_control_internal,3.88282828
+2,global_2022,country,Brazil,locus_of_control_internal,3.887
+2,global_2022,country,China,locus_of_control_internal,3.919
+2,global_2022,country,France,locus_of_control_internal,3.618
+2,global_2022,country,Germany,locus_of_control_internal,3.821
+2,global_2022,country,India,locus_of_control_internal,3.78681454
+2,global_2022,country,Mexico,locus_of_control_internal,4.105
+2,global_2022,country,Singapore,locus_of_control_internal,3.84877874
+2,global_2022,country,United Kingdom of Great Britain and Northern Ireland,locus_of_control_internal,3.72765152
+2,global_2022,country,United States of America,locus_of_control_internal,3.832
+2,global_2022,country,Russia,locus_of_control_internal,4.06916667
+2,global_2022,country,Australia,manager_job_performance,3.53394124
+2,global_2022,country,Brazil,manager_job_performance,3.46636771
+2,global_2022,country,China,manager_job_performance,3.42602892
+2,global_2022,country,France,manager_job_performance,3.50055617
+2,global_2022,country,Germany,manager_job_performance,3.56133829
+2,global_2022,country,India,manager_job_performance,3.61509669
+2,global_2022,country,Mexico,manager_job_performance,3.49834983
+2,global_2022,country,Singapore,manager_job_performance,3.44132469
+2,global_2022,country,United Kingdom of Great Britain and Northern Ireland,manager_job_performance,3.54129379
+2,global_2022,country,United States of America,manager_job_performance,3.64066634
+2,global_2022,country,Australia,nutrition,3.65959596
+2,global_2022,country,Brazil,nutrition,3.759
+2,global_2022,country,China,nutrition,3.667
+2,global_2022,country,France,nutrition,3.756
+2,global_2022,country,Germany,nutrition,3.666
+2,global_2022,country,India,nutrition,3.54117889
+2,global_2022,country,Mexico,nutrition,3.739
+2,global_2022,country,Singapore,nutrition,3.4717433
+2,global_2022,country,United Kingdom of Great Britain and Northern Ireland,nutrition,3.59787627
+2,global_2022,country,United States of America,nutrition,3.708
+2,global_2022,country,Russia,nutrition,3.62
+2,global_2022,country,Australia,optimism,3.71262626
+2,global_2022,country,Brazil,optimism,3.928
+2,global_2022,country,China,optimism,3.887
+2,global_2022,country,France,optimism,3.629
+2,global_2022,country,Germany,optimism,3.707
+2,global_2022,country,India,optimism,3.97504621
+2,global_2022,country,Mexico,optimism,4.073
+2,global_2022,country,Singapore,optimism,3.76472701
+2,global_2022,country,United Kingdom of Great Britain and Northern Ireland,optimism,3.53660692
+2,global_2022,country,United States of America,optimism,3.761
+2,global_2022,country,Russia,optimism,3.82416667
+2,global_2022,country,Australia,perceived_organizational_support,4.00610376
+2,global_2022,country,Brazil,perceived_organizational_support,3.968
+2,global_2022,country,China,perceived_organizational_support,3.892
+2,global_2022,country,France,perceived_organizational_support,3.667
+2,global_2022,country,Germany,perceived_organizational_support,3.618
+2,global_2022,country,India,perceived_organizational_support,4.12806026
+2,global_2022,country,Mexico,perceived_organizational_support,4.028
+2,global_2022,country,Singapore,perceived_organizational_support,3.81969587
+2,global_2022,country,United Kingdom of Great Britain and Northern Ireland,perceived_organizational_support,3.84581837
+2,global_2022,country,United States of America,perceived_organizational_support,3.865
+2,global_2022,country,Russia,perceived_organizational_support,3.37333333
+2,global_2022,country,Australia,physical_activity,3.43333333
+2,global_2022,country,Brazil,physical_activity,3.482
+2,global_2022,country,China,physical_activity,3.505
+2,global_2022,country,France,physical_activity,3.325
+2,global_2022,country,Germany,physical_activity,3.368
+2,global_2022,country,India,physical_activity,3.2893818
+2,global_2022,country,Mexico,physical_activity,3.558
+2,global_2022,country,Singapore,physical_activity,3.46671456
+2,global_2022,country,United Kingdom of Great Britain and Northern Ireland,physical_activity,3.2978768
+2,global_2022,country,United States of America,physical_activity,3.484
+2,global_2022,country,Russia,physical_activity,3.38333333
+2,global_2022,country,Australia,problem_solving,3.85050505
+2,global_2022,country,Brazil,problem_solving,3.917
+2,global_2022,country,China,problem_solving,3.838
+2,global_2022,country,France,problem_solving,3.718
+2,global_2022,country,Germany,problem_solving,3.781
+2,global_2022,country,India,problem_solving,3.96118299
+2,global_2022,country,Mexico,problem_solving,3.954
+2,global_2022,country,Singapore,problem_solving,3.82902299
+2,global_2022,country,United Kingdom of Great Britain and Northern Ireland,problem_solving,3.81148092
+2,global_2022,country,United States of America,problem_solving,3.902
+2,global_2022,country,Russia,problem_solving,3.72055556
+2,global_2022,country,Australia,productivity,7.35764944
+2,global_2022,country,Brazil,productivity,7.837
+2,global_2022,country,China,productivity,7.948
+2,global_2022,country,France,productivity,7.509
+2,global_2022,country,Germany,productivity,7.326
+2,global_2022,country,India,productivity,7.8066126
+2,global_2022,country,Mexico,productivity,8.120
+2,global_2022,country,Singapore,productivity,7.36573074
+2,global_2022,country,United Kingdom of Great Britain and Northern Ireland,productivity,7.22935311
+2,global_2022,country,United States of America,productivity,7.672
+2,global_2022,country,Russia,productivity,8.13333333
+2,global_2022,country,Australia,psycap,3.65878788
+2,global_2022,country,Brazil,psycap,3.894
+2,global_2022,country,China,psycap,3.842
+2,global_2022,country,France,psycap,3.654
+2,global_2022,country,Germany,psycap,3.671
+2,global_2022,country,India,psycap,3.84399261
+2,global_2022,country,Mexico,psycap,4.006
+2,global_2022,country,Singapore,psycap,3.66882184
+2,global_2022,country,United Kingdom of Great Britain and Northern Ireland,psycap,3.54090527
+2,global_2022,country,United States of America,psycap,3.781
+2,global_2022,country,Russia,psycap,3.78933333
+2,global_2022,country,Australia,psychological_safety,3.4447832
+2,global_2022,country,Brazil,psychological_safety,3.519
+2,global_2022,country,China,psychological_safety,3.668
+2,global_2022,country,France,psychological_safety,3.397
+2,global_2022,country,Germany,psychological_safety,3.446
+2,global_2022,country,India,psychological_safety,3.54010806
+2,global_2022,country,Mexico,psychological_safety,3.542
+2,global_2022,country,Singapore,psychological_safety,3.3994709
+2,global_2022,country,United Kingdom of Great Britain and Northern Ireland,psychological_safety,3.30015314
+2,global_2022,country,United States of America,psychological_safety,3.515
+2,global_2022,country,Russia,psychological_safety,3.43444444
+2,global_2022,country,Australia,purpose_and_meaning,4.00976431
+2,global_2022,country,Brazil,purpose_and_meaning,4.282
+2,global_2022,country,China,purpose_and_meaning,4.142
+2,global_2022,country,France,purpose_and_meaning,3.869
+2,global_2022,country,Germany,purpose_and_meaning,3.852
+2,global_2022,country,India,purpose_and_meaning,4.2214007
+2,global_2022,country,Mexico,purpose_and_meaning,4.384
+2,global_2022,country,Singapore,purpose_and_meaning,3.99113985
+2,global_2022,country,United Kingdom of Great Britain and Northern Ireland,purpose_and_meaning,3.91158357
+2,global_2022,country,United States of America,purpose_and_meaning,4.058
+2,global_2022,country,Russia,purpose_and_meaning,3.81222222
+2,global_2022,country,Australia,recognition,4.05218855
+2,global_2022,country,Brazil,recognition,3.962
+2,global_2022,country,China,recognition,3.904
+2,global_2022,country,France,recognition,3.793
+2,global_2022,country,Germany,recognition,3.854
+2,global_2022,country,India,recognition,4.09529678
+2,global_2022,country,Mexico,recognition,3.956
+2,global_2022,country,Singapore,recognition,3.9375
+2,global_2022,country,United Kingdom of Great Britain and Northern Ireland,recognition,4.02668694
+2,global_2022,country,United States of America,recognition,3.977
+2,global_2022,country,Russia,recognition,3.84055556
+2,global_2022,country,Australia,relationship_building,4.17710438
+2,global_2022,country,Brazil,relationship_building,4.145
+2,global_2022,country,China,relationship_building,4.016
+2,global_2022,country,France,relationship_building,4.009
+2,global_2022,country,Germany,relationship_building,3.981
+2,global_2022,country,India,relationship_building,4.08687616
+2,global_2022,country,Mexico,relationship_building,4.145
+2,global_2022,country,Singapore,relationship_building,3.99640805
+2,global_2022,country,United Kingdom of Great Britain and Northern Ireland,relationship_building,4.13733401
+2,global_2022,country,United States of America,relationship_building,4.138
+2,global_2022,country,Russia,relationship_building,3.97722222
+2,global_2022,country,Australia,resilience,3.61986532
+2,global_2022,country,Brazil,resilience,3.693
+2,global_2022,country,China,resilience,3.831
+2,global_2022,country,France,resilience,3.607
+2,global_2022,country,Germany,resilience,3.554
+2,global_2022,country,India,resilience,3.59129185
+2,global_2022,country,Mexico,resilience,3.882
+2,global_2022,country,Singapore,resilience,3.60560345
+2,global_2022,country,United Kingdom of Great Britain and Northern Ireland,resilience,3.50636325
+2,global_2022,country,United States of America,resilience,3.671
+2,global_2022,country,Russia,resilience,3.38444444
+2,global_2022,country,Australia,rest,3.24074074
+2,global_2022,country,Brazil,rest,3.351
+2,global_2022,country,China,rest,3.588
+2,global_2022,country,France,rest,3.181
+2,global_2022,country,Germany,rest,3.297
+2,global_2022,country,India,rest,3.2559047
+2,global_2022,country,Mexico,rest,3.391
+2,global_2022,country,Singapore,rest,3.30268199
+2,global_2022,country,United Kingdom of Great Britain and Northern Ireland,rest,3.1312584
+2,global_2022,country,United States of America,rest,3.448
+2,global_2022,country,Russia,rest,3.51833333
+2,global_2022,country,Australia,rix,3.91428571
+2,global_2022,country,Brazil,rix,4.003
+2,global_2022,country,China,rix,3.980
+2,global_2022,country,France,rix,3.851
+2,global_2022,country,Germany,rix,3.831
+2,global_2022,country,India,rix,3.99638894
+2,global_2022,country,Mexico,rix,4.042
+2,global_2022,country,Singapore,rix,3.90142652
+2,global_2022,country,United Kingdom of Great Britain and Northern Ireland,rix,3.84710255
+2,global_2022,country,United States of America,rix,3.954
+2,global_2022,country,Russia,rix,3.74444444
+2,global_2022,country,Australia,sales_excellence,3.74455668
+2,global_2022,country,Brazil,sales_excellence,3.866
+2,global_2022,country,China,sales_excellence,3.892
+2,global_2022,country,France,sales_excellence,3.743
+2,global_2022,country,Germany,sales_excellence,3.699
+2,global_2022,country,India,sales_excellence,3.80936819
+2,global_2022,country,Mexico,sales_excellence,3.899
+2,global_2022,country,Singapore,sales_excellence,3.73208014
+2,global_2022,country,United Kingdom of Great Britain and Northern Ireland,sales_excellence,3.66936673
+2,global_2022,country,United States of America,sales_excellence,3.852
+2,global_2022,country,Russia,sales_excellence,3.83416667
+2,global_2022,country,Australia,self_awareness,3.60782828
+2,global_2022,country,Brazil,self_awareness,3.750
+2,global_2022,country,China,self_awareness,3.560
+2,global_2022,country,France,self_awareness,3.628
+2,global_2022,country,Germany,self_awareness,3.542
+2,global_2022,country,India,self_awareness,3.67637092
+2,global_2022,country,Mexico,self_awareness,3.630
+2,global_2022,country,Singapore,self_awareness,3.63541667
+2,global_2022,country,United Kingdom of Great Britain and Northern Ireland,self_awareness,3.5319234
+2,global_2022,country,United States of America,self_awareness,3.644
+2,global_2022,country,Russia,self_awareness,3.65
+2,global_2022,country,Australia,self_compassion,2.6040404
+2,global_2022,country,Brazil,self_compassion,2.540
+2,global_2022,country,China,self_compassion,2.643
+2,global_2022,country,France,self_compassion,2.473
+2,global_2022,country,Germany,self_compassion,2.659
+2,global_2022,country,India,self_compassion,2.83292257
+2,global_2022,country,Mexico,self_compassion,2.688
+2,global_2022,country,Singapore,self_compassion,2.66714559
+2,global_2022,country,United Kingdom of Great Britain and Northern Ireland,self_compassion,2.37805185
+2,global_2022,country,United States of America,self_compassion,2.578
+2,global_2022,country,Russia,self_compassion,2.58055556
+2,global_2022,country,Australia,self_efficacy,3.96111111
+2,global_2022,country,Brazil,self_efficacy,4.071
+2,global_2022,country,China,self_efficacy,3.882
+2,global_2022,country,France,self_efficacy,3.788
+2,global_2022,country,Germany,self_efficacy,3.854
+2,global_2022,country,India,self_efficacy,3.88077634
+2,global_2022,country,Mexico,self_efficacy,4.238
+2,global_2022,country,Singapore,self_efficacy,3.87643678
+2,global_2022,country,United Kingdom of Great Britain and Northern Ireland,self_efficacy,3.86258195
+2,global_2022,country,United States of America,self_efficacy,4.110
+2,global_2022,country,Russia,self_efficacy,3.69083333
+2,global_2022,country,Australia,sense_of_belonging,3.95542047
+2,global_2022,country,Brazil,sense_of_belonging,4.116
+2,global_2022,country,China,sense_of_belonging,4.035
+2,global_2022,country,France,sense_of_belonging,3.812
+2,global_2022,country,Germany,sense_of_belonging,3.810
+2,global_2022,country,India,sense_of_belonging,4.13474735
+2,global_2022,country,Mexico,sense_of_belonging,4.190
+2,global_2022,country,Singapore,sense_of_belonging,3.81412104
+2,global_2022,country,United Kingdom of Great Britain and Northern Ireland,sense_of_belonging,3.78896517
+2,global_2022,country,United States of America,sense_of_belonging,3.891
+2,global_2022,country,Russia,sense_of_belonging,3.62333333
+2,global_2022,country,Australia,social_connection,3.96666667
+2,global_2022,country,Brazil,social_connection,4.017
+2,global_2022,country,China,social_connection,3.948
+2,global_2022,country,France,social_connection,3.889
+2,global_2022,country,Germany,social_connection,3.929
+2,global_2022,country,India,social_connection,3.82809612
+2,global_2022,country,Mexico,social_connection,4.071
+2,global_2022,country,Singapore,social_connection,3.89295977
+2,global_2022,country,United Kingdom of Great Britain and Northern Ireland,social_connection,3.87339703
+2,global_2022,country,United States of America,social_connection,4.037
+2,global_2022,country,Russia,social_connection,3.82916667
+2,global_2022,country,Australia,strategic_planning,3.57727273
+2,global_2022,country,Brazil,strategic_planning,3.930
+2,global_2022,country,China,strategic_planning,4.015
+2,global_2022,country,France,strategic_planning,3.721
+2,global_2022,country,Germany,strategic_planning,3.667
+2,global_2022,country,India,strategic_planning,3.72704868
+2,global_2022,country,Mexico,strategic_planning,4.113
+2,global_2022,country,Singapore,strategic_planning,3.74317529
+2,global_2022,country,United Kingdom of Great Britain and Northern Ireland,strategic_planning,3.45562279
+2,global_2022,country,United States of America,strategic_planning,3.829
+2,global_2022,country,Russia,strategic_planning,3.9025
+2,global_2022,country,Australia,stress_management,2.80858586
+2,global_2022,country,Brazil,stress_management,2.787
+2,global_2022,country,China,stress_management,2.861
+2,global_2022,country,France,stress_management,2.821
+2,global_2022,country,Germany,stress_management,2.716
+2,global_2022,country,India,stress_management,2.89087546
+2,global_2022,country,Mexico,stress_management,2.878
+2,global_2022,country,Singapore,stress_management,2.81321839
+2,global_2022,country,United Kingdom of Great Britain and Northern Ireland,stress_management,2.71403197
+2,global_2022,country,United States of America,stress_management,2.814
+2,global_2022,country,Russia,stress_management,3.02083333
+2,global_2022,country,Australia,team_agility,3.90752033
+2,global_2022,country,Brazil,team_agility,3.84107946
+2,global_2022,country,China,team_agility,3.7753059
+2,global_2022,country,France,team_agility,3.85730212
+2,global_2022,country,Germany,team_agility,3.84121083
+2,global_2022,country,India,team_agility,3.97256858
+2,global_2022,country,Mexico,team_agility,3.94554455
+2,global_2022,country,Singapore,team_agility,3.8044733
+2,global_2022,country,United Kingdom of Great Britain and Northern Ireland,team_agility,3.91649642
+2,global_2022,country,United States of America,team_agility,3.93122707
+2,global_2022,country,Australia,team_cohesion,3.9745935
+2,global_2022,country,Brazil,team_cohesion,3.98950525
+2,global_2022,country,China,team_cohesion,3.96774194
+2,global_2022,country,France,team_cohesion,4.02341137
+2,global_2022,country,Germany,team_cohesion,4.01911843
+2,global_2022,country,India,team_cohesion,3.7032419
+2,global_2022,country,Mexico,team_cohesion,3.98019802
+2,global_2022,country,Singapore,team_cohesion,3.8989899
+2,global_2022,country,United Kingdom of Great Britain and Northern Ireland,team_cohesion,3.97165475
+2,global_2022,country,United States of America,team_cohesion,3.97320687
+2,global_2022,country,Australia,team_conflict,2.0254065
+2,global_2022,country,Brazil,team_conflict,2.01049475
+2,global_2022,country,China,team_conflict,2.03225806
+2,global_2022,country,France,team_conflict,1.97658863
+2,global_2022,country,Germany,team_conflict,1.98088157
+2,global_2022,country,India,team_conflict,2.2967581
+2,global_2022,country,Mexico,team_conflict,2.01980198
+2,global_2022,country,Singapore,team_conflict,2.1010101
+2,global_2022,country,United Kingdom of Great Britain and Northern Ireland,team_conflict,2.02834525
+2,global_2022,country,United States of America,team_conflict,2.02679313
+2,global_2022,country,Australia,team_feedback,3.7848916
+2,global_2022,country,Brazil,team_feedback,3.77111444
+2,global_2022,country,China,team_feedback,3.7415647
+2,global_2022,country,France,team_feedback,3.75325158
+2,global_2022,country,Germany,team_feedback,3.79731638
+2,global_2022,country,India,team_feedback,3.81992098
+2,global_2022,country,Mexico,team_feedback,3.70895113
+2,global_2022,country,Singapore,team_feedback,3.72775373
+2,global_2022,country,United Kingdom of Great Britain and Northern Ireland,team_feedback,3.71673893
+2,global_2022,country,United States of America,team_feedback,3.81644786
+2,global_2022,country,Australia,team_innovation,3.67174797
+2,global_2022,country,Brazil,team_innovation,3.53223388
+2,global_2022,country,China,team_innovation,3.58954394
+2,global_2022,country,France,team_innovation,3.57413601
+2,global_2022,country,Germany,team_innovation,3.60116835
+2,global_2022,country,India,team_innovation,3.73690773
+2,global_2022,country,Mexico,team_innovation,3.62046205
+2,global_2022,country,Singapore,team_innovation,3.55699856
+2,global_2022,country,United Kingdom of Great Britain and Northern Ireland,team_innovation,3.63100102
+2,global_2022,country,United States of America,team_innovation,3.65261239
+2,global_2022,country,Australia,team_performance,3.84397163
+2,global_2022,country,Brazil,team_performance,3.7309417
+2,global_2022,country,China,team_performance,3.81979978
+2,global_2022,country,France,team_performance,3.6974416
+2,global_2022,country,Germany,team_performance,3.78863516
+2,global_2022,country,India,team_performance,4.0349345
+2,global_2022,country,Mexico,team_performance,3.82838284
+2,global_2022,country,Singapore,team_performance,3.82361411
+2,global_2022,country,United Kingdom of Great Britain and Northern Ireland,team_performance,3.81718231
+2,global_2022,country,United States of America,team_performance,3.85200184
+2,global_2022,country,Australia,team_risk_taking,3.57113821
+2,global_2022,country,Brazil,team_risk_taking,3.62968516
+2,global_2022,country,China,team_risk_taking,3.64849833
+2,global_2022,country,France,team_risk_taking,3.66220736
+2,global_2022,country,Germany,team_risk_taking,3.55868295
+2,global_2022,country,India,team_risk_taking,3.74064838
+2,global_2022,country,Mexico,team_risk_taking,3.74092409
+2,global_2022,country,Singapore,team_risk_taking,3.62914863
+2,global_2022,country,United Kingdom of Great Britain and Northern Ireland,team_risk_taking,3.52093973
+2,global_2022,country,United States of America,team_risk_taking,3.57580024
+2,global_2022,country,Australia,wellbeing,3.55389378
+2,global_2022,country,Brazil,wellbeing,3.646
+2,global_2022,country,China,wellbeing,3.692
+2,global_2022,country,France,wellbeing,3.537
+2,global_2022,country,Germany,wellbeing,3.530
+2,global_2022,country,India,wellbeing,3.56960759
+2,global_2022,country,Mexico,wellbeing,3.696
+2,global_2022,country,Singapore,wellbeing,3.53680015
+2,global_2022,country,United Kingdom of Great Britain and Northern Ireland,wellbeing,3.44939957
+2,global_2022,country,United States of America,wellbeing,3.637
+2,global_2022,country,Russia,wellbeing,3.55365591
+2,global_2022,country,Australia,work_life_balance,3.05505051
+2,global_2022,country,Brazil,work_life_balance,3.074
+2,global_2022,country,China,work_life_balance,2.918
+2,global_2022,country,France,work_life_balance,3.044
+2,global_2022,country,Germany,work_life_balance,2.949
+2,global_2022,country,India,work_life_balance,2.96611214
+2,global_2022,country,Mexico,work_life_balance,3.081
+2,global_2022,country,Singapore,work_life_balance,3.07722701
+2,global_2022,country,United Kingdom of Great Britain and Northern Ireland,work_life_balance,2.90898734
+2,global_2022,country,United States of America,work_life_balance,3.083
+2,global_2022,country,Russia,work_life_balance,3.34583333

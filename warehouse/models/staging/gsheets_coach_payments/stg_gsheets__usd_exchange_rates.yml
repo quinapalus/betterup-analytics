@@ -1,0 +1,58 @@
+version: 2
+models:
+  - name: stg_gsheets__usd_exchange_rates
+    description: >
+      Historical exchange rate data captured in Google Sheets and maintained by the
+      Coach Enablement and Finance team.
+      The data is updated with each dbt run, so any updates can be controlled directly
+      in Google Sheets.
+
+    columns:
+      - name: primary_key
+        description: The 'primary_key' column is the hashed version of the combination
+          of month_key and currency in the data set. [GenAI Description]
+        tests:
+          - not_null
+          - unique
+
+      - name: month_key
+        description: >
+          String denoting the month and year in YYYYMM format.
+        tests:
+          - not_null
+
+      - name: month_key_formatted
+        description: >
+          String denoting the month and year in YYYY-MM format.
+        tests:
+          - not_null
+
+      - name: currency
+        description: >
+          ISO 4217 Alpha code for the local currency associated with the payment
+          through Shortlist.
+        tests:
+          - not_null
+        
+      - name: exchange_rate
+        description: >
+          Decimal number denoting the historical exchange rate to USD for the particular
+          currency.
+        tests:
+          - not_null
+
+      - name: gross_exchange_rate
+        description: >
+          Decimal number denoting the historical *gross* exchange rate to USD for
+          the particular
+          currency, which includes Shortlist markup fees (1% for USD as local currency,
+          and 3% for
+          other currencies).
+        tests:
+          - not_null
+
+      - name: markup_rate
+        description: >
+          Decimal number denoting the Shortlist markup fee (0.01 or 0.03).
+        tests:
+          - not_null

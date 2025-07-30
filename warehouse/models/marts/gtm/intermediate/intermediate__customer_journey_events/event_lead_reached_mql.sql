@@ -1,0 +1,55 @@
+with full_circle_lead_journeys as (
+    select * from {{ ref('int_campaign_members_with_campaigns') }}
+)
+
+select
+    sfdc_person_id,
+    sfdc_account_id,
+    null as sfdc_opportunity_id,
+    mql_date as event_at,
+    'lead reached mql' as event_name,
+    'Campaign Member' as associated_record_type,
+    sfdc_campaign_member_id as associated_record_id,
+    object_construct(
+        'campaign_name',campaign_name,
+        'channel',channel,
+        'super_channel',super_channel,
+        'management_targets_super_channel',super_channel,
+        'marketing_program',marketing_program,
+        'campaign_sourced_by',campaign_sourced_by,
+        'tactic',tactic,
+        'campaign_type',campaign_type,
+        'audience',audience,
+        'content_title',content_title,
+        'mql_marketing_segment',mql_marketing_segment,
+        'campaign_member_status',campaign_member_status,
+        'parent_campaign_name',parent_campaign_name,
+        'parent_campaign_channel',parent_campaign_channel,
+        'parent_campaign_super_channel',parent_campaign_super_channel,
+        'parent_campaign_marketing_program',parent_campaign_marketing_program,
+        'parent_campaign_sourced_by',parent_campaign_sourced_by,
+        'parent_campaign_tactic',parent_campaign_tactic,
+        'parent_campaign_type',parent_campaign_type,
+        'parent_campaign_audience',parent_campaign_audience,
+        'parent_campaign_content_title',parent_campaign_content_title,
+        'utm_campaign',utm_campaign,
+        'utm_content',utm_content,
+        'utm_medium',utm_medium,
+        'utm_source',utm_source,
+        'utm_term',utm_term,
+        'referrer_page',referrer_page,
+        'response_timestamp', response_timestamp,
+        'response_status',response_status,
+        'management_targets_target','MQL',
+        'inquiry_date',inquiry_date,
+        'mql_date',mql_date,
+        'mql_timestamp',mql_timestamp,
+        'sal_date',sal_date,
+        'sal_timestamp',sal_timestamp,
+        'fm_date',fm_date,
+        'fm_timestamp',fm_timestamp,
+        'inquiry_date_15_day_offset',inquiry_date_15_day_offset,
+        'mql_date_15_day_offset',mql_date_15_day_offset
+    ) as attributes
+
+from full_circle_lead_journeys where mql_date is not null

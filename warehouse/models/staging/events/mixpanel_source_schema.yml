@@ -1,0 +1,9 @@
+version: 2
+
+sources:
+  - name: mixpanel
+    schema: stitch_mixpanel
+    database: raw
+    tables:
+      - name: events
+        identifier: mixpanel_export

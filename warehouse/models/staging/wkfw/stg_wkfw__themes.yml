@@ -1,0 +1,36 @@
+version: 2
+
+models:
+  - name: stg_wkfw__themes
+    description: This DBT model, stg_wkfw__themes, stores and organizes data related
+      to themes from the raw.stitch_app_viva_staging.themes table. It contains fields
+      for the theme_id, theme_key, start_date, end_date, created_at, and updated_at
+      information, and can be used to find data related to themes and when they were
+      created and updated. [GenAI Description]
+    columns:
+      - name: theme_id
+        description: The column 'theme_id' is the unique identifier for each theme
+          in the dataset. [GenAI Description]
+        tests:
+          - not_null
+          - unique
+
+      - name: theme_key
+        description: The 'theme_key' column contains unique identifiers for individual
+          themes. [GenAI Description]
+
+      - name: start_date
+        description: '"start_date" stores the start date and time for the given theme,
+          in UTC format. [GenAI Description]'
+
+      - name: end_date
+        description: The 'end_date' column stores the timestamp of the end of a theme.
+          [GenAI Description]
+
+      - name: created_at
+        description: The 'created_at' column contains a timestamp representing the
+          date and time at which the theme was created. [GenAI Description]
+
+      - name: updated_at
+        description: "'updated_at' is the timestamp for when the record was updated.\
+          \ [GenAI Description]"

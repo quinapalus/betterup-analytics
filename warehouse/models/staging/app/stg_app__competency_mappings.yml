@@ -1,0 +1,33 @@
+version: 2
+
+models:
+  - name: stg_app__competency_mappings
+    description: The DBT stg_app__competency_mappings model contains data about an
+      organization's competency mappings, including the mapping name, its corresponding
+      organization_id, and the timestamps for when it was created and last updated.
+      [GenAI Description]
+    columns:
+      - name: competency_mapping_id
+        description: The competency_mapping_id column is the unique identifier generated
+          for each competency mapping. [GenAI Description]
+        tests:
+          - unique
+          - not_null
+
+      - name: organization_id
+        description: The 'organization_id' column stores the ID of the organization
+          associated with the competency mapping. [GenAI Description]
+        tests:
+          - not_null
+
+      - name: competency_mapping_name
+        description: The column 'competency_mapping_name' is the name associated with
+          each competency mapping. [GenAI Description]
+
+      - name: created_at
+        description: The 'created_at' column is a timestamp which stores the date
+          and time an entry was created. [GenAI Description]
+
+      - name: updated_at
+        description: The 'updated_at' column contains the latest timestamp for when
+          the competency mapping was updated. [GenAI Description]

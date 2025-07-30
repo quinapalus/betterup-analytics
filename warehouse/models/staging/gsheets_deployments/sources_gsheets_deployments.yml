@@ -1,0 +1,11 @@
+version: 2
+
+sources:
+  - name: gsheets_deployments
+    database: raw
+    schema: "{{ 'airbyte_gsheets_deployments' if env_var('DEPLOYMENT_ENVIRONMENT', '') == 'US Gov' else 'stitch_gsheets_deployments' }}"
+    loader: "{{ 'airbyte' if env_var('DEPLOYMENT_ENVIRONMENT', '') == 'US Gov' else 'stitch' }}"
+
+    tables:
+      - name: bu_deployment_types
+      - name: bu_event_type_accounting_categories

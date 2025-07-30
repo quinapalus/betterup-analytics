@@ -1,0 +1,17 @@
+montecarlo:
+  custom_sql:
+    - sql: |
+        select *
+        from analytics.analytics.fact_reporting_group_engagement_metrics
+        where 1 = 0
+      description: |
+        Placeholder for future monitors
+      comparisons:
+        - type: threshold
+          operator: GT
+          threshold_value: 0
+      schedule:
+        type: fixed
+        interval_minutes: 120
+        start_time: "2023-03-28T19:00:00"
+      labels: [pad]

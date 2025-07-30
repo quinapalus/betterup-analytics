@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "bu-zendesk-to-s3"
+version = "0.1.0"
+description = ""
+authors = ["Lisa Xie <rui.xie@betterup.co>"]
+readme = "README.md"
+packages = [{include = "bu_zendesk_to_s3"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+tap-zendesk = "^1.7.5"
+
+[tool.poetry.group.dev.dependencies]
+mock = "^5.0.1"
+pylint = "^2.15.10"
+pytest = "^7.2.1"
+pytest-cov = "^4.0.0"
+pytest-mock = "^3.10.0"
+
+[tool.poetry.scripts]
+create-zendesk-configs = "bu_zendesk_to_s3.configs:create_zendesk_configs"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

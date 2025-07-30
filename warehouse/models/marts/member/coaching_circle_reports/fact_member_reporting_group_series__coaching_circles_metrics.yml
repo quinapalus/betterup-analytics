@@ -1,0 +1,53 @@
+version: 2
+
+models:
+  - name: fact_member_reporting_group_series__coaching_circles_metrics
+    description: ""
+    columns:
+      - name: primary_key
+        description: "NEEDS FIXIN' Primary key: composite of over half the columns in the table"
+        tests:
+          - not_null
+          - unique
+
+      - name: member_id
+        description: ""
+
+      - name: reporting_group_id
+        description: ""
+
+      - name: track_name
+        description: ""
+
+      - name: series_id
+        description: ""
+
+      - name: track_assignment_ended_at
+        description: ""
+
+      - name: activation_status
+        description: ""
+
+      - name: circles_access_started_at
+        description: ""
+
+      - name: circles_access_ended_at
+        description: ""
+
+      - name: associated_record_id
+        description: ""
+
+      - name: registered_at
+        description: ""
+
+      - name: registration_starts_at
+        description: ""
+
+      - name: registration_ends_at
+        description: ""
+
+      - name: activated_at
+        description: ""
+
+      - name: onboarded_at
+        description: ""

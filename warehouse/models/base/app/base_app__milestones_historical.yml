@@ -1,0 +1,19 @@
+version: 2
+
+models:
+  - name: base_app__milestones_historical
+    description: ""
+    columns:
+      - name: associated_record_id
+      - name: associated_record_type
+      - name: completed_at
+      - name: context
+      - name: created_at
+      - name: id
+        tests:
+          - unique
+          - not_null
+      - name: locked
+      - name: type
+      - name: updated_at
+      - name: user_id

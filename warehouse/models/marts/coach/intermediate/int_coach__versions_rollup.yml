@@ -1,0 +1,27 @@
+version: 2
+
+models:
+  - name: int_coach__versions_rollup
+    description: >
+      This model comes from the versions table, filtered for specific updates made
+      to CoachProfiles.
+      It finds the min and max dates for when coach availability is entered and removed.
+      There is one row per coach profile uuid.
+    columns:
+      - name: coach_profile_uuid
+        description: The 'coach_profile_uuid' column stores a unique user identifier
+          of a coach, alongside their first and last staffable date. [GenAI Description]
+        tests:
+          - unique
+          - not_null
+
+      - name: first_staffable_at
+        description: "'first_staffable_at' stores the time when a coach is determined\
+          \ to be staffable, based on their staffable state and staffable values.\
+          \ [GenAI Description]"
+
+      - name: last_staffable_at
+        description: The 'last_staffable_at' column contains the latest date each
+          coach was staffable before being offboarded voluntarily or involuntarily.
+          [GenAI Description]
+

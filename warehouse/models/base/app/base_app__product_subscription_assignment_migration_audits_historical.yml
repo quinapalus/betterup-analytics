@@ -1,0 +1,25 @@
+version: 2
+
+models:
+  - name: base_app__product_subscription_assignment_migration_audits_historical
+    description: ""
+    columns:
+      - name: contract_line_item_id
+      - name: created_at
+      - name: id
+        tests:
+          - unique
+          - not_null
+      - name: organization_id
+      - name: product_subscription_assignment_v1_ended_at
+      - name: product_subscription_assignment_v1_ends_at
+      - name: product_subscription_assignment_v1_id
+      - name: product_subscription_assignment_v1_product_id
+      - name: product_subscription_assignment_v1_starts_at
+      - name: product_subscription_assignment_v2_ended_at
+      - name: product_subscription_assignment_v2_ends_at
+      - name: product_subscription_assignment_v2_id
+      - name: product_subscription_assignment_v2_product_id
+      - name: product_subscription_assignment_v2_starts_at
+      - name: updated_at
+      - name: user_id

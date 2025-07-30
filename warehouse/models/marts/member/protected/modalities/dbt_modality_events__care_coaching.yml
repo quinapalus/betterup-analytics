@@ -1,0 +1,23 @@
+version: 2
+
+models:
+  - name: dbt_modality_events__care_coaching
+    description: The dbt_modality_events__care_coaching model contains fields for
+      modality, event_name, and _grain. It provides event-level information for care
+      coaching modalities that contain the event names of completed care_appointment
+      and completed secondary_appointment, as well as information on selected care
+      coach and selected secondary coach. [GenAI Description]
+    columns:
+      - name: modality
+        description: The column 'modality' identifies the type of care delivery; in
+          this case, the modality is 'care_coaching'. [GenAI Description]
+
+      - name: event_name
+        description: The 'event_name' column contains names of events related to the
+          'care_coaching' modality. [GenAI Description]
+      - name: _grain
+        description: The "_grain" column is a unique identifier generated as an MD5
+          hash of the modality and event_name columns. [GenAI Description]
+        tests:
+          - unique
+          - not_null

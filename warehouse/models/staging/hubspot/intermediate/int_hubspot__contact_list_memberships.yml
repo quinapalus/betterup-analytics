@@ -1,0 +1,11 @@
+version: 2
+models:
+  - name: int_hubspot__contact_list_memberships
+    description: >
+      Contains all lists that contacts are active in. It is a mapping table between a contact_list and a contact_Id. 
+    columns:
+      - name: _unique
+        description: Unique identifier
+        tests:
+          - unique
+          - not_null

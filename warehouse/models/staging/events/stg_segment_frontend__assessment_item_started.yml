@@ -1,0 +1,60 @@
+version: 2
+
+models:
+  - name: stg_segment_frontend__assessment_item_started
+    description: This model stores data on user interactions with assessments. It
+      contains the user ID, information about the assessment page, platform, assessment
+      ID, order index, key, event, and a timestamp of when the event occurred. This
+      model is used to analyze user behavior related to taking assessments. [GenAI
+      Description]
+    columns:
+      - name: id
+        description: The 'id' column is a unique identifier for each row. [GenAI Description]
+        tests:
+          - unique
+          - not_null
+
+      - name: user_id
+        description: This column stores the unique identifier for the user who triggered
+          the event. [GenAI Description]
+
+      - name: page_name
+        description: The 'page_name' column stores the name of the page associated
+          with the assessment item started. [GenAI Description]
+
+      - name: page_url
+        description: The 'page_url' column contains the URL of the page the user accessed.
+          [GenAI Description]
+
+      - name: context_page_title
+        description: The column 'context_page_title' stores the title of the webpage
+          that the assessment is taking place on. [GenAI Description]
+
+      - name: context_page_url
+        description: The 'context_page_url' column stores the URL of the page on which
+          the assessment item started. [GenAI Description]
+
+      - name: platform
+        description: The platform column specifies the device platform (iOS, Android,
+          web, etc.) the user was on when the event occurred. [GenAI Description]
+
+      - name: assessment_id
+        description: "'assessment_id' is a unique identifier for each assessment attempted.\
+          \ [GenAI Description]"
+
+      - name: item_order_index
+        description: The 'item_order_index' column stores the order index of the assessment
+          item. [GenAI Description]
+
+      - name: key
+        description: The "key" column contains a unique identifier for individual
+          assessment items. [GenAI Description]
+
+      - name: event
+        description: The 'event' column contains the type of action taken for the
+          assessment item. [GenAI Description]
+
+      - name: event_at
+        description: event_at is the timestamp of when the event associated with the
+          assessment item started. [GenAI Description]
+

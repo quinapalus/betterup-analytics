@@ -1,0 +1,87 @@
+version: 2
+models:
+  - name: dbt_billable_events
+    description: >
+      This protected model augments each billable event with session type and requested session length. The model
+      should be used to support any downstream models, such as `dbt_coach_payments_local_currency',
+      which rely on both billable events and session data.
+
+    columns:
+      - name: billable_event_id
+        description: >
+          Denormalized foreign key to the billable event associated with the payment.
+        tests:
+          - unique
+          - not_null
+          - relationships:
+              to: ref('app_billable_events')
+              field: billable_event_id
+
+      - name: associated_record_id
+        description: >
+          Object class for polymorphic foreign relationship to associated record.
+          Note: Does not apply to non-application related events, i.e. `associated_record_type IS NULL` for `event_type IN ('launch_call', 'training_session', 'training_stipend', 'incentive', 'event_adjustments', 'miscellaneous')`.
+          `associated_record_type` is also `NULL` for `event_type = late_cancellation` prior to implementation of [#6701](https://github.com/betterup/betterup-app/pull/6701)
+          (soft delete sessions released 2/5/2018).
+
+      - name: coach_id
+        description: >
+          Denormalized foreign key to the coach associated with the billable event.
+        tests:
+          - not_null
+          - relationships:
+              to: ref('int_app__users')
+              field: user_id
+
+      - name: member_id
+        description: >
+          Denormalized foreign key to the member associated with the billable event.
+        tests:
+          - relationships:
+              to: ref('int_app__users')
+              field: user_id
+
+      - name: track_id
+        description: >
+           Denormalized foreign key to the track associated with the billable event.
+
+      - name: event_type
+        description: >
+          String denoting the type of event associated with the billable event. Accepted
+          values can be seen in `app_billable_events` documentation.
+        tests:
+          - not_null
+
+      - name: augmented_event_type
+        description: >
+          String denoting the augmented type of event associated with the
+          billable event. Reflection point events are not augmented with any information.
+          Launch call- and training-based event types are also not augmented.
+        tests:
+          - not_null
+
+      - name: event_at
+        description: >
+          Timestamp denoting when the event associated with the billable event occurred.
+        tests:
+          - not_null
+
+      - name: session_requested_length
+        description: >
+          Integer denoting the requested length for the session. NULL if the event type is not
+          `completed_sessions`.
+
+      - name: usage_minutes
+        description: >
+          The length of the event reported in minutes. Should only be non-zero for
+          session-related events (`completed_sessions`, `late_cancellation`, `late_reschedules`, `missed_session`).
+        tests:
+          - not_null
+
+      - name: sent_to_processor_at
+        description: >
+          Timestamp denoting when the event was sent to Shortlist in UTC.
+
+      - name: response_body
+        description: >
+          API response from Shortlist.

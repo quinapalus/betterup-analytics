@@ -1,0 +1,2 @@
+version: 1
+default_resource: 'betterup-us-snowflake-1'

@@ -1,0 +1,11 @@
+version: 2
+
+models:
+  - name: dim_accounts_snapshot
+    meta:
+      owner: "xavier.mafe@betterup.co"
+    columns:
+      - name: "history_primary_key"
+        tests:
+          - unique
+          - not_null

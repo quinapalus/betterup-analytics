@@ -1,0 +1,19 @@
+version: 2
+
+models:
+  - name: int_iai_lagging_indicators
+    description: ""
+    columns:
+      - name: primary_key
+        description: ""
+        tests:
+          - unique
+          - not_null
+      - name: reporting_group_id
+        description: ""
+      - name: member_id
+        description: ""
+      - name: avg_use_of_time_rating
+        description: ""
+      - name: percent_growth_from_reference
+        description: ""

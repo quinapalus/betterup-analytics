@@ -1,0 +1,15 @@
+version: 2
+
+models:
+  - name: base_app__activity_notes_historical
+    description: ""
+    columns:
+      - name: activity_id
+      - name: created_at
+      - name: id
+        tests:
+          - unique
+          - not_null
+      - name: text
+      - name: updated_at
+      - name: user_id

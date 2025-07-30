@@ -1,0 +1,11 @@
+#!/bin/sh
+
+set -e
+
+# Move data to anonymous db
+dbt run --models models/betterup_gov/
+
+# Test data in anonymous db
+dbt test --models models/betterup_gov/
+
+exit 0

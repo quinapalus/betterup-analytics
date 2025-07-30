@@ -1,0 +1,27 @@
+version: 2
+
+models:
+  - name: base_app__activities_historical
+    description: ""
+    columns:
+      - name: completed_at
+      - name: created_at
+      - name: creator_id
+      - name: favorited_at
+      - name: feedback
+      - name: id
+        tests:
+          - unique
+          - not_null
+      - name: position
+      - name: rating
+      - name: resource_id
+      - name: updated_at
+      - name: user_id
+      - name: viewed_at
+      - name: rating_scale
+      - name: target_path
+      - name: objective_id
+      - name: associated_record_type
+      - name: associated_record_id
+      - name: resource_uuid

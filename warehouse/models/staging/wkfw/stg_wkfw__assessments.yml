@@ -1,0 +1,39 @@
+version: 2
+
+models:
+  - name: stg_wkfw__assessments
+    description: The DBT Model stg_wkfw__assessments stores assessment data for users,
+      such as responses, metadata like creation date, and the assessment configuration
+      used. The data is pulled from the raw.stitch_app_viva_staging.assessments table
+      and formatted into the model. [GenAI Description]
+    columns:
+      - name: assessment_id
+        description: "'assessment_id' is the unique identifier for each record in\
+          \ the assessments table. [GenAI Description]"
+        tests:
+          - not_null
+          - unique
+
+      - name: assessment_configuration_id
+        description: The assessment_configuration_id column stores a unique ID associated
+          with an assessment configuration. [GenAI Description]
+
+      - name: user_id
+        description: The 'user_id' column contains the unique identifier of the user
+          who completed the assessment. [GenAI Description]
+
+      - name: responses
+        description: The 'responses' column stores the answers a user has provided
+          for an assessment. [GenAI Description]
+
+      - name: submitted_at
+        description: The 'submitted_at' column holds a timestamp of when the assessment
+          was submitted. [GenAI Description]
+
+      - name: created_at
+        description: The column 'created_at' contains a timestamp value representing
+          the date and time of when the assessment was created. [GenAI Description]
+
+      - name: updated_at
+        description: The 'updated_at' column stores the last date and time that the
+          assessment was updated. [GenAI Description]

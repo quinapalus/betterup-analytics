@@ -1,0 +1,41 @@
+version: 2
+
+models:
+  - name: dim_organizations
+    description: "This table represents BetterUp partner organizations. Each row represents one partner organizations"
+    columns:
+      - name: organization_id
+        description: "Unique identifier for organizations"
+        tests:
+          - unique
+          - not_null
+
+      - name: organization_name
+        description: "Name of the organization as they appear in app"
+
+      - name: sfdc_account_id
+        description: "Foreign key to Salesforce account record"
+
+      - name: created_at
+        description: "Date that the organization was created in app"
+
+      - name: updated_at
+        description: "Timestamp of the last time that the organization was updated in app"
+
+      - name: product_subscriptions_enabled_at
+        description: ""
+
+      - name: risk_tier
+        description: ""
+
+      - name: account_segment
+        description: ""
+
+      - name: is_eligible_for_concurrent_seats
+        description: ""
+
+      - name: v2_psa_enabled_at
+        description: ""
+
+      - name: reference_population_id
+        description: ""

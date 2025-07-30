@@ -1,0 +1,9 @@
+version: 2
+
+sources:
+  - name: gsheets_metric_monitoring_metric_tables
+    database: raw
+    schema: stitch_gsheets_metric_monitoring_metric_tables
+
+    tables:
+      - name: monthly_sessions

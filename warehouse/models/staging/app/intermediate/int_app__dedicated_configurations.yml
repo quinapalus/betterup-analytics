@@ -1,0 +1,16 @@
+version: 2
+
+models:
+  - name: int_app__dedicated_configurations
+    description: The DBT Model int_app__dedicated_configurations pulls data from multiple
+      sources for dedicated configuration assignments, and then filters to the latest
+      configurations for each Track that are connected to Experiences. It uses a surrogate
+      key to uniquely identify the combination of track IDs and dedicated configuration
+      IDs and contains all of the relevant data in each field. [GenAI Description]
+
+    columns:
+      - name: int_app__dedicated_configurations_id
+        description: Surrogate primary key
+        tests:
+          - not_null
+          - unique

@@ -1,0 +1,58 @@
+version: 2
+
+models:
+  - name: int_app__admin_configurations
+    description: DBT Model int_app__admin_configurations stores and tracks configuration
+      data associated with a customer's experience track, including fields for customer
+      goals, deployment type, deployment cadence, internal notes, key satisfaction
+      drivers, member orientation, and WPM behavior goals. Related parent models store
+      and track information about the relevant experience configuration assignments.
+      This model is used to better understand customer experiences and track their
+      progress. [GenAI Description]
+    columns:
+      - name: track_id
+        description: The 'track_id' column contains an identifier for the associated
+          experience configuration. [GenAI Description]
+
+      - name: admin_configuration_id
+        description: The admin_configuration_id is an identifier for the user-defined
+          configurations used by an administrator on their account. [GenAI Description]
+
+      - name: customer_goals
+        description: The 'customer_goals' column contains customer goals associated
+          with each track. [GenAI Description]
+
+      - name: deployment_type
+        description: The 'deployment_type' column contains the deployment type for
+          the related experience configuration assignment. [GenAI Description]
+
+      - name: deployment_cadence
+        description: The 'deployment_cadence' column stores the deployment frequency
+          for the experience configured. [GenAI Description]
+
+      - name: internal_notes
+        description: The column 'internal_notes' stores any extra notes about the
+          related admin configuration. [GenAI Description]
+
+      - name: key_satisfaction_driver
+        description: This column stores key drivers of customer satisfaction. [GenAI
+          Description]
+
+      - name: launches_on
+        description: The 'launches_on' column stores the date when an experience configuration
+          was launched. [GenAI Description]
+
+      - name: member_orientation
+        description: This model stores an orientation setting for each member, which
+          determines what type of experience they will have. [GenAI Description]
+
+      - name: wpm_behavior_goals
+        description: The column 'wpm_behavior_goals' contains the WPM behavior goals
+          for an experience configuration. [GenAI Description]
+
+      - name: primary_key
+        description: The primary_key column is a surrogate key created from the combination
+          of the track_id and admin_configuration_id columns. [GenAI Description]
+        tests:
+          - unique
+          - not_null

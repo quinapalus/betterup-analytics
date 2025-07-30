@@ -1,0 +1,18 @@
+version: 2
+
+models:
+  - name: base_app__account_authorizations_historical
+    description: ""
+    columns:
+      - name: access_token
+      - name: access_token_expires_at
+      - name: created_at
+      - name: id
+        tests:
+          - unique
+          - not_null
+      - name: provider
+      - name: refresh_token
+      - name: uid
+      - name: updated_at
+      - name: user_id

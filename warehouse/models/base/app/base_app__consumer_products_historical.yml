@@ -1,0 +1,23 @@
+version: 2
+
+models:
+  - name: base_app__consumer_products_historical
+    description: ""
+    columns:
+      - name: care
+      - name: created_at
+      - name: description
+      - name: id
+        tests:
+          - unique
+          - not_null
+      - name: name
+      - name: product_id
+      - name: recommended
+      - name: sessions_per_month
+      - name: stripe_product_id
+      - name: updated_at
+      - name: visible
+      - name: best_value
+      - name: upfront_default
+      - name: upfront_description

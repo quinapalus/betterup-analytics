@@ -1,0 +1,63 @@
+version: 2
+
+models:
+  - name: stg_app__care_configurations
+    description: The DBT model stg_app__care_configurations represents data from the
+      raw.stitch_app.care_configurations table. It includes fields such as care_configuration_id,
+      member_levels, languages, staffing_risk_levels, staffing_tiers, staffing_industries,
+      cached_tag_list, cached_account_tag_list, cached_certification_tag_list, cached_focus_tag_list,
+      cached_postgrad_tag_list, cached_product_tag_list, cached_professional_tag_list,
+      cached_segment_tag_list, and client_limit. The model is used to store, track,
+      and analyze data related to various care configurations. [GenAI Description]
+    columns:
+      - name: care_configuration_id
+        description: The 'care_configuration_id' column is the unique identifier for
+          a care configuration. [GenAI Description]
+        tests:
+          - unique
+          - not_null
+
+      - name: member_levels
+        description: The 'member_levels' column stores information regarding the different
+          member levels of the care configurations. [GenAI Description]
+      - name: languages
+        description: The 'languages' column stores a list of languages a care configuration
+          applies to. [GenAI Description]
+      - name: staffing_risk_levels
+        description: This column contains the risk levels associated with the staffing
+          of the care configurations. [GenAI Description]
+      - name: staffing_tiers
+        description: "'staffing_tiers' represents the tiers assigned to each care\
+          \ provider/staff on a case by case basis. [GenAI Description]"
+      - name: staffing_industries
+        description: The column 'staffing_industries' contains a list of industries
+          that the staffing services cover. [GenAI Description]
+      - name: cached_tag_list
+        description: The 'cached_tag_list' column contains a list of tags associated
+          with the care configuration. [GenAI Description]
+      - name: cached_account_tag_list
+        description: The 'cached_account_tag_list' column stores the tag list associated
+          with each care configuration account. [GenAI Description]
+      - name: cached_certification_tag_list
+        description: The column 'cached_certification_tag_list' lists the certifications
+          of healthcare practitioners associated with each care configuration. [GenAI
+          Description]
+      - name: cached_focus_tag_list
+        description: "'cached_focus_tag_list' stores a list of tags related to the\
+          \ focus of care in the care configuration. [GenAI Description]"
+      - name: cached_postgrad_tag_list
+        description: The 'cached_postgrad_tag_list' column stores a list of post-graduate
+          educational Tags associated with each Care Configuration. [GenAI Description]
+      - name: cached_product_tag_list
+        description: The 'cached_product_tag_list' column stores a list of product
+          tags associated with a particular care configuration. [GenAI Description]
+      - name: cached_professional_tag_list
+        description: The 'cached_professional_tag_list' column contains a cached list
+          of professional tags associated with a care configuration. [GenAI Description]
+      - name: cached_segment_tag_list
+        description: The 'cached_segment_tag_list' column contains a list of tags
+          associated with the segments influencing the care configuration. [GenAI
+          Description]
+      - name: client_limit
+        description: The 'client_limit' column stores the maximum number of clients
+          a healthcare organization can support. [GenAI Description]

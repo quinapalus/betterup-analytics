@@ -1,0 +1,54 @@
+version: 2
+
+models:
+  - name: dbt_features__member_testimonials
+    description: The dbt_features__member_testimonials model provides information
+      about the member testimonials collected during appointments. It has fields related
+      to the unique identification of the member and testimonial, the timestamp when
+      the testimonial was collected, the classification of the testimonial, and the
+      type of feature collected. The model also includes attributes associated with
+      the testimonial, such as the development topic, the text of the testimonial,
+      and the translation key. [GenAI Description]
+    columns:
+
+      - name: unique_id
+        description: The 'unique_id' column holds a unique identifier (surrogate key)
+          generated from combination of the member_id, appointment_id, and testimonial_id.
+          [GenAI Description]
+        tests:
+          - not_null
+          - unique
+
+      - name: member_id
+        description: The member_id column stores the unique identifier of each member.
+          [GenAI Description]
+
+      - name: associated_record_id
+        description: The 'associated_record_id' column stores the ID of the testimonial
+          associated with a given member. [GenAI Description]
+
+      - name: associated_record_type
+        description: This column identifies the type of record associated with a testimonial,
+          e.g. Appointment. [GenAI Description]
+
+      - name: feature_collected_at
+        description: The 'feature_collected_at' column indicates when the featured
+          testimonial was collected. [GenAI Description]
+
+      - name: feature_key
+        description: The 'feature_key' column contains the type of feature that is
+          being collected, in this case a member testimonial. [GenAI Description]
+
+      - name: classification
+        description: The 'classification' column stores the translation key for the
+          development topic associated with the testimonial. [GenAI Description]
+
+      - name: feature_attributes
+        description: "'feature_attributes' contains information such as the translation\
+          \ key, testimonial, development topic key, and development topic name for\
+          \ each appointment. [GenAI Description]"
+
+      - name: feature_type
+        description: The 'feature_type' column stores the type of content collected
+          in the model, which is "testimonial" for member testimonials. [GenAI Description]
+

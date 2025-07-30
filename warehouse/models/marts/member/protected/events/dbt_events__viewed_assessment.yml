@@ -1,0 +1,49 @@
+version: 2
+
+models:
+  - name: dbt_events__viewed_assessment
+    description: This model contains data about assessments that have been viewed
+      on the platform by users. It contains information like the timestamp of when
+      the assessment was viewed, the associated record type, the associated record
+      id, and other related attributes. The data is sourced from the engagement_events
+      and assessments models, and joined to generate a single table of distinct viewed
+      assessments. [GenAI Description]
+    columns:
+      - name: dbt_events__viewed_assessment_id
+        description: Primary Key, concatenation of 'member_id', 'event_object', 'event_at',  'associated_record_id'
+        tests:
+          - unique
+          - not_null
+
+      - name: member_id
+        description: The 'member_id' column identifies the user associated with the
+          assessed material. [GenAI Description]
+
+      - name: event_at
+        description: The 'event_at' column stores the timestamp of when an assessment
+          was viewed. [GenAI Description]
+
+      - name: event_action
+        description: The 'event_action' column records the type of action that took
+          place (e.g. 'viewed') related to an assessment. [GenAI Description]
+
+      - name: event_object
+        description: The 'event_object' column identifies an event as relating to
+          an assessment. [GenAI Description]
+
+      - name: event_action_and_object
+        description: The column 'event_action_and_object' contains text that combines
+          the event action with the type of object viewed - e.g. 'viewed assessment'.
+          [GenAI Description]
+
+      - name: associated_record_type
+        description: The 'associated_record_type' column indicates what type of record
+          the event is associated with. [GenAI Description]
+
+      - name: associated_record_id
+        description: The 'associated_record_id' column contains the assessment ID
+          associated with a 'viewed' event. [GenAI Description]
+
+      - name: attributes
+        description: The 'attributes' column contains an object whose keys and values
+          provide additional information about the event. [GenAI Description]

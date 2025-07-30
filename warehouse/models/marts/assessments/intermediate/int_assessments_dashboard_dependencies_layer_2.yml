@@ -1,0 +1,166 @@
+version: 2
+
+
+
+belonging: &belonging_index
+  - 'belonging_1'
+  - 'belonging_2'
+  - 'belonging_3'
+  - 'belonging_4'
+
+care_well_being: &care_well_being_index
+  - 'cognitive_agility_3'
+  - 'emotional_regulation_3'
+  - 'focus_2'
+  - 'goal_attainment_1'
+  - 'hope_2'
+  - 'hope_3'
+  - 'life_satisfaction_1'
+  - 'life_satisfaction_2'
+  - 'optimism_1'
+  - 'optimism_2'
+  - 'purpose_and_meaning_2'
+  - 'purpose_and_meaning_3'
+  - 'resilience_1'
+  - 'resilience_2'
+  - 'rest_2'
+  - 'self_awareness_2'
+  - 'self_awareness_4'
+  - 'self_compassion_1'
+  - 'self_compassion_2'
+  - 'self_compassion_3'
+  - 'self_efficacy_2'
+  - 'social_connection_3'
+  - 'stress_management_2'
+  - 'stress_management_3'
+
+coaching_culture: &coaching_culture_index
+  - 'coaching_culture_about_coworkers_1'
+  - 'coaching_culture_about_coworkers_2'
+  - 'coaching_culture_about_coworkers_4'
+  - 'coaching_culture_about_manager_1'
+  - 'coaching_culture_about_manager_2'
+  - 'coaching_culture_about_manager_3'
+  - 'coaching_culture_organizational_practices_1'
+  - 'coaching_culture_organizational_practices_2'
+  - 'coaching_culture_organizational_practices_3'
+  - 'coaching_culture_psychological_safety_1'
+  - 'coaching_culture_psychological_safety_2'
+  - 'coaching_culture_psychological_safety_3'
+
+employee_experience: &employee_experience_index
+  - 'authenticity_1'
+  - 'authenticity_2'
+  - 'authenticity_3'
+  - 'engagement_1'
+  - 'engagement_2'
+  - 'engagement_3'
+  - 'layer2_sense_of_belonging_at_work'
+  - 'optimism_1'
+  - 'optimism_2'
+  - 'purpose_and_meaning_1'
+  - 'purpose_and_meaning_2'
+  - 'purpose_and_meaning_3'
+  - 'social_connection_2'
+  - 'social_connection_3'
+
+productivity: &productivity_index
+  - 'layer2_member_rated_productivity'
+
+resilience_innovation: &resilience_innovation_index
+  - 'cognitive_agility_1'
+  - 'cognitive_agility_2'
+  - 'cognitive_agility_3'
+  - 'empathy_1'
+  - 'empathy_2'
+  - 'empathy_3'
+  - 'empowerment_%_1'
+  - 'empowerment_%_2'
+  - 'empowerment_%_3'
+  - 'encouraging_participation_%_1'
+  - 'encouraging_participation_%_2'
+  - 'encouraging_participation_%_3'
+  - 'encouraging_participation_%_4'
+  - 'problem_solving_%_2'
+  - 'problem_solving_1'
+  - 'problem_solving_3'
+  - 'resilience_1'
+  - 'resilience_2'
+  - 'resilience_3'
+  - 'strategic_planning_2'
+  - 'strategic_planning_3'
+
+team_insights: &team_insight_metrics 
+  - 'coaching_culture_about_coworkers_1'
+  - 'coaching_culture_about_coworkers_2'
+  - 'coaching_culture_about_coworkers_4'
+  - 'team_insights_agility'
+  - 'team_insights_conflict'
+  - 'team_insights_innovation'
+  - 'team_insights_risk_taking'
+
+
+
+models:
+
+  - name: int_assessments_dashboard_dependencies_layer_2
+    description: 'Testing model for downstream Layer 2 QBR dashboard in LookerML'
+
+    columns:
+
+      - name: primary_key
+        description: A primary key formed of (assessment_id, item_key, assessment_item_id)
+        tests:
+        - not_null
+        - unique
+
+    tests:
+
+      - items_in_assessments_of_type:
+          item_keys: *belonging_index
+          assessment_types:
+            - "Assessments::OnboardingAssessment"
+            - "Assessments::PrimaryCoachingModalitySetupAssessment"
+            - "Assessments::WholePersonAssessment"
+            - "Assessments::WholePersonProgramCheckinAssessment"
+
+      - items_in_assessments_of_type:
+          item_keys: *care_well_being_index
+          assessment_types:
+            - "Assessments::WholePersonAssessment"
+            - "Assessments::WholePersonProgramCheckinAssessment"
+
+      - items_in_assessments_of_type:
+          item_keys: *coaching_culture_index
+          assessment_types:
+            - "Assessments::OnboardingAssessment"
+            - "Assessments::PrimaryCoachingModalitySetupAssessment"
+            - "Assessments::WholePersonProgramCheckinAssessment"
+
+      - items_in_assessments_of_type:
+          item_keys: *employee_experience_index
+          assessment_types:
+            - "Assessments::OnboardingAssessment"
+            - "Assessments::PrimaryCoachingModalitySetupAssessment"
+            - "Assessments::WholePersonAssessment"
+            - "Assessments::WholePersonProgramCheckinAssessment"
+      
+      - items_in_assessments_of_type:
+          item_keys: *productivity_index
+          assessment_types:
+            - "Assessments::OnboardingAssessment"
+            - "Assessments::PrimaryCoachingModalitySetupAssessment"
+            - "Assessments::WholePersonProgramCheckinAssessment"
+
+      - items_in_assessments_of_type:
+          item_keys: *resilience_innovation_index
+          assessment_types:
+            - "Assessments::WholePersonAssessment"
+            - "Assessments::WholePersonProgramCheckinAssessment"
+      
+      - items_in_assessments_of_type:
+          item_keys: *team_insight_metrics
+          assessment_types:
+            - "Assessments::OnboardingAssessment"
+            - "Assessments::PrimaryCoachingModalitySetupAssessment"
+            - "Assessments::WholePersonProgramCheckinAssessment"

@@ -1,0 +1,192 @@
+version: 2
+
+models:
+  - name: stg_amplitude__events
+    description: >
+      Events from Amplitude. More information can be found at  https://www.docs.developers.amplitude.com/data/destinations/snowflake/
+      or  https://help.amplitude.com/hc/en-us/articles/229313067#Raw-Data-Fields
+    columns:
+      - name: adid
+        description: >
+          (Android) Google Play Services advertising ID (ADID).  Example: AEBE52E7-03EE-455A-B3C4-E57283966239
+
+      - name: amplitude_attribution_ids
+        description: This column holds the attribution ids associated with each event,
+          for use in tracking advertising campaigns. [GenAI Description]
+
+      - name: amplitude_event_type
+        description: >
+          Amplitude specific identifiers based on events Amplitude generates.  This
+          is a legacy field so event_type should suffice for all queries
+
+      - name: amplitude_id
+        description: >
+          The original Amplitude ID for the user. Use this field to automatically  handle
+          merged users. Example: 2234540891
+
+      - name: app
+        description: "Project ID found in your project's Settings page. Example: 123456"
+
+      - name: city
+        description: 'City. Example: “San Francisco”'
+
+      - name: client_event_time
+        description: >
+          Local timestamp (UTC) of when the device logged the event.  Example: 2015-08-10T12:00:00.000000
+
+      - name: client_upload_time
+        description: >
+          The local timestamp (UTC) of when the device uploaded the event.  Example:
+          2015-08-10T12:00:00.000000
+
+      - name: country
+        description: 'Country. Example: “United States“'
+
+      - name: data
+        description: >
+          Dictionary where certain fields such as first_event and merged_amplitude_id  are
+          stored
+
+      - name: device_brand
+        description: 'Device brand. Example: Apple'
+
+      - name: device_carrier
+        description: 'Device Carrier. Example: Verizon'
+
+      - name: device_family
+        description: 'Device family. Example: Apple iPhone'
+
+      - name: device_id
+        description: >
+          The device specific identifier. Example: C8F9E604-F01A-4BD9-95C6-8E5357DF265D
+
+      - name: device_manufacturer
+        description: 'Device manufacturer. Example: Apple'
+
+      - name: device_model
+        description: 'Device model. Example: iPad Mini'
+
+      - name: device_type
+        description: 'Device type. Example: Apple iPhone 5s'
+
+      - name: dma
+        description: >
+          Designated marketing area (DMA). Example; San Francisco-Oakland-San Jose,
+          CA
+
+      - name: event_id
+        description: 'A counter that distinguishes events. Example: 1'
+      - name: event_properties
+        description: The 'event_properties' column contains a JSON object with additional
+          data related to the event. [GenAI Description]
+
+      - name: event_time
+        description: '{{ doc("amplitude_event_time") }}'
+        tests:
+          - not_null
+
+      - name: event_type
+        description: The 'event_type' column is a categorical attribute that specifies
+          the kind of event that was captured. [GenAI Description]
+
+      - name: followed_an_identify
+        description: >
+          True if there was an identify event between this current SDK event and the  last
+          SDK event seen. Example: True
+
+      - name: group_properties
+        description: The 'group_properties' column stores the values associated with
+          any 'group_types' on the associated events. [GenAI Description]
+
+      - name: groups
+        description: Group types
+
+      - name: idfa
+        description: >
+          (iOS) Identifier for Advertiser. Example: AEBE52E7-03EE-455A-B3C4-E57283966239
+
+      - name: ip_address
+        description: 'IP address. Example: “123.11.111.11“'
+
+      - name: is_attribution_event
+        description: The 'is_attribution_event' column indicates whether a specific
+          event is associated with an attribution. [GenAI Description]
+
+      - name: language
+        description: The 'language' column stores the language of the device for which
+          the event was performed. [GenAI Description]
+
+      - name: library
+        description: This column contains information about the library used to generate
+          a particular event. [GenAI Description]
+
+      - name: location_lat
+        description: 'Latitude. Example: 12.3456789'
+
+      - name: location_lng
+        description: 'Longitude. Example: -123.4567890'
+
+      - name: os_name
+        description: 'OS name. Example: ios'
+
+      - name: os_version
+        description: OS version
+
+      - name: paying
+        description: >
+          True if the user has ever logged any revenue, otherwise (none). Note: The  property
+          value can be modified via the Identify API. Example: true
+
+      - name: platform
+        description: "'platform' describes the platform (e.g. Android/iOS/Web) on\
+          \ which the event occurred. [GenAI Description]"
+
+      - name: processed_time
+        description: The 'processed_time' column in this model contains a timestamp
+          of when the event was processed for use. [GenAI Description]
+
+      - name: region
+        description: 'Region. Example: California'
+
+      - name: sample_rate
+        description: The sample_rate column stores the sampling rate with which the
+          event was collected. [GenAI Description]
+
+      - name: server_received_time
+        description: >
+          Amplitude timestamp (UTC) when Amplitude's servers receive the event.
+
+      - name: server_upload_time
+        description: >
+          Amplitude timestamp (UTC) when the event is ingested into Amplitude's ingestion
+          system. This timestamp is not used to calculate event_time, but it is available  to
+          reference in the raw data.
+
+      - name: session_id
+        description: >
+          The session start time in milliseconds since epoch. Example: 1396381378123
+
+      - name: start_version
+        description: 'App version the user was first tracked on. Example: 1.0.0'
+
+      - name: user_creation_time
+        description: >
+          event_time (UTC) of the user's first event. Example: 2015-08-10T12:00:00.000000
+
+      - name: user_id
+        description: '{{ doc("amplitude_user_id") }}'
+
+      - name: user_properties
+        description: '{{ doc("amplitude_user_properties") }}'
+
+      - name: uuid
+        description: >
+          A unique identifier per row (event sent).  Example: bf0b9b2a-304d-11e6-934f-22000b56058f
+        tests:
+          - unique:
+              config:
+                severity: warn
+          - not_null
+
+      - name: version_name
+        description: 'The app version. Example: 1.0.0'

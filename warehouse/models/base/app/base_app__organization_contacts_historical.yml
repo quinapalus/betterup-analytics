@@ -1,0 +1,13 @@
+version: 2
+
+models:
+  - name: base_app__organization_contacts_historical
+    description: ""
+    columns:
+      - name: contact_type
+      - name: id
+        tests:
+          - unique
+          - not_null
+      - name: organization_id
+      - name: user_id

@@ -1,0 +1,39 @@
+reason_key,reason_sanitized_key,text
+__dc.extension_requests__,extension_requests,Extension requests
+dm/csm_escalations,dm_csm_escalations,DM & CSM escalations
+coach_best_practices,coach_best_practices,Coach best practices
+__dc.coach_profile_roster__,coach_profile_roster,Coach profile & roster
+__dc.program_details__,program_details,Program Details
+__dc.tech_issue__,tech_issue,Tech issue
+__dc.activities_resources__,activities_and_resources,Activities & resources
+outside_of_betterup,outside_of_betterup,Outside of Betterup
+coach_development,coach_development,Coach development
+reflection_points,reflection_points,Reflection points
+coach_quality,coach_quality,Coach quality
+__dc.coach_quality__,coach_quality,Coach quality
+sales_trial,sales_trial,Sales trial
+coach_compensation,coach_compensation,Coach compensation
+coach_offboarding,coach_offboarding,Coach offboarding
+logging_into_my_account,logging_into_my_account,Logging into my account
+account_access,logging_into_my_account,Logging into my account
+account_settings,my_account_settings,My account settings
+my_account_settings,my_account_settings,My account settings
+i_member_crisis,i_am_in_crisis,I am in crisis
+member_in_crisis,member_in_crisis,Member in crisis
+coach_member_crisis,a_member_im_coaching_is_in_crisis,A member I'm coaching is in crisis
+bu_video,bu_video,BetterUp video
+selecting_coach,selecting_a_coach,Selecting a coach
+selecting_a_coach,selecting_a_coach,Selecting a coach
+scheduling_availability,scheduling_sessions_and_availability,Scheduling sessions and availability
+messaging_activities_reports,messaging_activities_and_reports,Messaging activities and reports
+messaging/settings/activities/reports,messaging_activities_and_reports,Messaging activities and reports
+assessments,assessments,Assessments(IE 360 or WP)
+ethics_privacy,ethics_and_privacy,Ethics and privacy
+program_changes_extensions,program_changes_and_extensions,Program Changes and Extensions
+coach_dev_practices,coach_dev_and_best_practices,Coach development and best practices
+i_d_like_to_share_my_feedback,id_like_to_share_my_feedback,I'd like to share my feedback
+feedback,id_like_to_share_my_feedback,I'd like to share my feedback
+other_reason,other,Other
+i__or_a_member__is_in_crisis,deprecated,Deprecated Reason
+coach_onboarding,im_applying_to_be_a_coach,I'm applying to be a coach
+X,unknown,Unknown

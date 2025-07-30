@@ -1,0 +1,27 @@
+sink:
+  type: "datahub-rest"
+  config:
+    server: "https://betterup.acryl.io/gms"
+    token: ${DATAHUB_TOKEN}
+    timeout_sec: 5
+
+source:
+  type: "dbt"
+  config:
+    manifest_path: "./target/manifest.json"
+    catalog_path: "./target/catalog.json"
+    test_results_path: "./target/run_results.json" # optional for recording dbt test results after running dbt test
+    target_platform: "snowflake" # e.g. bigquery/postgres/etc.
+
+    meta_mapping:
+      team_owner:
+        match: "analytics_eng_group|data_ops_group"
+        operation: "add_owner"
+        config:
+          owner_type: group
+          owner: "{{ $match }}"
+      owner:
+        match: ".*"
+        operation: "add_owner"
+        config:
+          owner_type: user

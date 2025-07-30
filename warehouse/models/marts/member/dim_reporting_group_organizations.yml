@@ -1,0 +1,31 @@
+version: 2
+
+models:
+  - name: dim_reporting_group_organizations
+    description: This DBT model enables tracking the relationships between reporting
+      groups and organizations. It contains the relevant fields including a unique
+      reporting_group_organization_id, as well as dates of when the information was
+      created and updated. [GenAI Description]
+    columns:
+      - name: reporting_group_organization_id
+        description: The 'reporting_group_organization_id' column contains the unique
+          identifier linking a reporting group to an organization. [GenAI Description]
+        tests:
+          - not_null
+          - unique
+
+      - name: reporting_group_id
+        description: The 'reporting_group_id' column holds the ID of a reporting group
+          related to each organization. [GenAI Description]
+
+      - name: organization_id
+        description: The column 'organization_id' stores the unique identifier for
+          the organization associated with a given reporting group. [GenAI Description]
+
+      - name: created_at
+        description: The 'created_at' column tracks the date and time when a row was
+          inserted into the table. [GenAI Description]
+
+      - name: updated_at
+        description: This column contains timestamps indicating when a row was last
+          updated. [GenAI Description]

@@ -1,0 +1,15 @@
+version: 2
+
+models:
+  - name: int_customers
+    meta:
+      owner: "adrian.lievano@betterup.co"
+    description: >
+      A joined table between Stripe customer and App users. 
+
+    columns:
+      - name: stripe_customer_id
+        description: Primary key
+        tests:
+          - unique
+          - not_null

@@ -1,0 +1,19 @@
+version: 2
+
+models:
+  - name: dim_users
+    description: >
+      BetterUp user_id across all business units.
+    columns:
+      - name: user_id
+        description: Unique id for this table's granularity.
+        tests:
+          - unique
+          - not_null
+      - name: first_touch_channel_attribution
+        description: Categories manually defined by business and analytics teams at
+          BetterUp
+        tests:
+          - accepted_values:
+              values: [referral, bing, email, facebook, google, linkedin, organic,
+                other, unlabeled]

@@ -1,0 +1,26 @@
+version: 2
+
+models:
+  - name: int_app__dimension_benchmark_scores_reference_population_1
+    description: ""
+    columns:
+      - name: dimension_benchmark_key
+        description: ""
+        tests:
+          - unique
+          - not_null
+
+      - name: dimension_key
+        description: ""
+
+      - name: whole_person_model_version
+        description: ""
+
+      - name: industry
+        description: ""
+
+      - name: level
+        description: ""
+
+      - name: mean
+        description: ""

@@ -1,0 +1,77 @@
+version: 2
+models:
+  - name: dbt_coach_nps_assessment_response
+    description: >
+      Protected model that combines `fact_coach_satisfaction_response` and `fact_coach_qualitative_item_response`
+      into a single dataset. Grain is one row per assessment. The purpose of this dataset is to assign sequence
+      and reverse sequence to each assessment so that pre- and post-scores can easily be identified in downstream
+      `fact` tables.
+
+    columns:
+      - name: date_key
+        description: Foreign key to conformed Date dimension.
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_date')
+              field: date_key
+
+      - name: coach_app_coach_id
+        description: Foreign key to the associated coach.
+        tests:
+          - not_null
+          - relationships:
+              to: ref('int_app__users')
+              field: user_id
+
+      - name: coach_raw_promoter_score
+        description: >
+          Coach raw promoter score.
+        tests:
+          - not_null
+
+      - name: coach_net_promoter_score
+        description: >
+          Coach NPS score.
+        tests:
+          - not_null
+
+      - name: coach_qualitative_feedback
+        description: >
+          Coach qualitative feedback in the NPS assessment. NULL if the coach did not provide
+          any feedback.
+
+      - name: coach_net_promoter_score_category
+        description: >
+          Sanitized response category based on the coach response. For NPS items,
+          response categories are "Promoter", "Neutral", and "Detractor".
+
+      - name: assessment_sequence
+        description: >
+          Integer denoting the sequence of the assessment, with number 1 representing
+          the earliest submitted assessment per coach.
+        tests:
+          - not_null
+
+      - name: is_most_recent_assessment
+        description: >
+          Boolean denoting if `assessment_reverse_sequence` is equal to 1.
+        tests:
+          - not_null
+          - accepted_values:
+              values: [true, false]
+
+      - name: app_assessment_id
+        description: >
+          Foreign key to the assessment that's associated with the coach response.
+        tests:
+          - not_null
+          - relationships:
+              to: ref('int_app__assessments')
+              field: assessment_id
+
+      - name: app_assessment_submitted_at
+        description: >
+          UTC timestamp denoting when the assessment was submitted.
+        tests:
+          - not_null

@@ -1,0 +1,68 @@
+version: 2
+
+models:
+  - name: stg_wkfw__viva_user_profiles
+    description: The stg_wkfw__viva_user_profiles model stores user profiles data
+      from an Active Directory source. It has fields such as user_id, user_email,
+      surname, job_title, given_name, department, employee_id, display_name, organization_name,
+      office_location, and preferred_language. It has a timestamp column for when
+      the data was created and last updated. [GenAI Description]
+    columns:
+      - name: viva_user_profiles_id
+        description: The 'viva_user_profiles_id' column stores the unique identifier
+          for Viva user profiles. [GenAI Description]
+        tests:
+          - not_null
+          - unique
+
+      - name: user_id
+        description: The user_id column stores the unique identifier of each user.
+          [GenAI Description]
+
+      - name: user_email
+        description: The 'user_email' column contains the email address of the user
+          pulled from the Active Directory profile. [GenAI Description]
+
+      - name: surname
+        description: The surname of a user parsed from their Active Directory profile.
+          [GenAI Description]
+
+      - name: job_title
+        description: The 'job_title' column contains the job titles of users imported
+          from the Viva data source. [GenAI Description]
+
+      - name: given_name
+        description: The 'given_name' column contains the given names of the user
+          stored in the Active Directory profile attributes. [GenAI Description]
+
+      - name: department
+        description: The 'department' column contains information about the user's
+          department in their organization. [GenAI Description]
+
+      - name: employee_id
+        description: The employee identifier stored in the Active Directory profile
+          of the user. [GenAI Description]
+
+      - name: display_name
+        description: The 'display_name' column stores the display name associated
+          with a user's active directory profile. [GenAI Description]
+
+      - name: organization_name
+        description: The 'organization_name' column contains the name of the organization
+          associated with a particular Viva user profile. [GenAI Description]
+
+      - name: office_location
+        description: The column 'office_location' stores the office location of each
+          user, as provided from their Active Directory profile. [GenAI Description]
+
+      - name: preferred_language
+        description: The column 'preferred_language' contains a string indicating
+          the preferred language of the user. [GenAI Description]
+
+      - name: created_at
+        description: The 'created_at' column stores the datetime that a user profile
+          was created. [GenAI Description]
+
+      - name: updated_at
+        description: The updated_at column contains dates and times for when things
+          were last updated in the viva user profiles table. [GenAI Description]

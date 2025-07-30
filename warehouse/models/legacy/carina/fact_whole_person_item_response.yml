@@ -1,0 +1,186 @@
+version: 2
+models:
+  - name: fact_whole_person_item_response
+    description: >
+      Fact table for item responses, both by member and contributors, across all WPM
+      assessments -- onboarding, reflection point, 180, and 360 -- compared to baseline
+      and latest assessment item responses. Similar to the case of protected model, assessments
+      in this table are limited to external deployments and assessments that have been submitted by the
+      member (onboarding, RP), or either the member or a contributor (180, 360). Note that
+      the 180/360 final reports need not be generated for a contributor to be included in this
+      table.
+
+    columns:
+      - name: primary_key
+        description: Surrogate primary_key
+        tests:
+          - not_null
+          - unique
+
+      - name: member_key
+        description: Foreign key to conformed Member dimension.
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_member')
+              field: member_key
+
+      - name: date_key
+        description: >
+         Foreign key to conformed Date dimension for the date the current
+         assessment was submitted.
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_date')
+              field: date_key
+
+      - name: account_key
+        description: >
+          Foreign key to conformed Account dimension for the account the member was
+          associated with on the day the current assessment was submitted.
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_account')
+              field: account_key
+
+      - name: deployment_key
+        description: >
+          Foreign key to conformed Deployment dimension for the deployment associated
+          with the item response.
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_deployment')
+              field: deployment_key
+
+      - name: app_member_assessment_id
+        description: >
+          Foreign key to the parent member assessment that's associated with the
+          item response in the current assessment.
+        tests:
+          - not_null
+
+      - name: app_creator_assessment_id
+        description: >
+          Foreign key to the current assessment -- submitted either by member or a
+          contributor -- that's associated with the item response.
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dei_member_assessments')
+              field: assessment_id
+
+      - name: assessment_name
+        description: >
+          String denoting the type of current WPM assessment. The naming convention in this
+          column has been adjusted from the original one seen in base-layer assessment
+          tables for easier interpretation.
+        tests:
+          - not_null
+          - accepted_values:
+              values: [WPM 1.0 Baseline, WPM 1.0 Reflection Point, WPM 1.0 360, WPM 1.0 180, WPM 2.0 Baseline, WPM 2.0 Reflection Point, WPM 2.0 360, WPM 2.0 180]
+
+      - name: creator_role
+        description: >
+          String denoting the profile of the creator associated with the
+          current assessment.
+        tests:
+          - not_null
+          - accepted_values:
+              values: [self, manager, direct_report, other_coworker]
+
+      - name: app_creator_submitted_at
+        description: >
+          Timestamp denoting when the creator submitted the current assessment.
+        tests:
+          - not_null
+
+      - name: item_key
+        description: Primary Key
+        tests:
+          - not_null
+
+      - name: item_response
+        description: >
+          Integer denoting the member's or the contributor's response to the
+          prompt in the current WPM assessment.
+        tests:
+          - not_null
+
+      - name: baseline_assessment_name
+        description: >
+          String denoting the type of baseline WPM assessment.
+        tests:
+          - accepted_values:
+              values: [WPM 1.0 Baseline, WPM 1.0 Reflection Point, WPM 1.0 360, WPM 1.0 180, WPM 2.0 Baseline, WPM 2.0 Reflection Point, WPM 2.0 360, WPM 2.0 180]
+
+      - name: baseline_assessment_date_key
+        description: >
+          Foreign key to conformed Date dimension for the date the baseline
+          assessment was submitted.
+        tests:
+          - relationships:
+              to: ref('dim_date')
+              field: date_key
+
+      - name: baseline_app_creator_submitted_at
+        description: >
+          Timestamp denoting when the baseline assessment was submitted.
+
+      - name: baseline_days_before_current
+        description: >
+          Integer denoting how many days have passed between the baseline and
+          the current assessment.
+
+      - name: baseline_creator_role
+        description: >
+          String denoting the profile of the creator associated with the
+          baseline assessment. Can only be self.
+        tests:
+          - accepted_values:
+              values: [self]
+
+      - name: baseline_item_response
+        description: >
+          Integer denoting the member's response to the prompt
+          in the baseline WPM assessment.
+
+      - name: latest_assessment_name
+        description: >
+          String denoting the type of the latest WPM assessment.
+        tests:
+          - accepted_values:
+              values: [WPM 1.0 Baseline, WPM 1.0 Reflection Point, WPM 1.0 360, WPM 1.0 180, WPM 2.0 Baseline, WPM 2.0 Reflection Point, WPM 2.0 360, WPM 2.0 180]
+
+      - name: latest_assessment_date_key
+        description: >
+          Foreign key to conformed Date dimension for the date the latest
+          assessment was submitted.
+        tests:
+          - relationships:
+              to: ref('dim_date')
+              field: date_key
+
+      - name: latest_app_creator_submitted_at
+        description: >
+          Timestamp denoting when the latest assessment was submitted.
+
+      - name: latest_days_before_current
+        description: >
+          Integer denoting how many days have passed between the latest and
+          the current assessment.
+
+      - name: latest_creator_role
+        description: >
+          String denoting the profile of the creator associated with the
+          latest assessment. Can only be self.
+        tests:
+          - accepted_values:
+              values: [self]
+
+      - name: latest_item_response
+        description: >
+          Integer denoting the member's response to the prompt
+          in the baseline WPM assessment.

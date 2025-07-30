@@ -1,0 +1,43 @@
+version: 2
+
+models:
+  - name: stg_app__user_attribute_fields
+    description: UserAttribute Field associates an Organization's fields to their
+      cooresponding UserAttributes, and optionally to a UserAttributeInternalField
+    columns:
+      - name: user_attribute_field_id
+        description: Unique identifer of the user attribute.
+        tests:
+          - unique
+          - not_null
+
+      - name: organization_id
+        description: Foreign Key to associated Organization.
+
+      - name: user_attribute_internal_field_id
+        description: Foreign Key to associated UserAttributeInternalField.
+
+      - name: field_name
+        description: Name of the field.
+
+      - name: display_name
+        description: The column 'display_name' contains user attribute field display
+          name. [GenAI Description]
+
+      - name: filterable
+        description: Boolean specifying if filterable.
+
+      - name: exportable
+        description: The 'exportable' column stores a boolean value indicating whether
+          a user attribute field is exportable or not. [GenAI Description]
+
+      - name: archived
+        description: The 'archived' column represents a boolean value indicating whether
+          the user_attribute_field has been archived. [GenAI Description]
+
+      - name: created_at
+        description: Time when the Rails object was created in UTC, i.e. when the
+          user account was created.
+
+      - name: updated_at
+        description: Time when the Rails object was updated in UTC.

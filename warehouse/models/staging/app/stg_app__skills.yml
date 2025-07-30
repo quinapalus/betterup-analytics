@@ -1,0 +1,57 @@
+version: 2
+models:
+  - name: stg_app__skills
+    description: >
+      Application table containing Skills used in betterup-app for
+      classifying resources and activities.
+
+    columns:
+      - name: skill_id
+        description: Primary key
+        tests:
+          - unique
+          - not_null
+
+      - name: name_i18n
+        description: A JSON object of skill translations.
+        tests:
+          - not_null
+
+      - name: name
+        description: >
+          Name of the skill (e.g. "Emotional Regulation").
+          Pulling the English version from the localized
+          JSON translations (name_i18n).
+        tests:
+          - not_null
+
+      - name: overview_i18n
+        description: A JSON object of skill overview.
+        tests:
+          - not_null
+
+      - name: overview
+        description: >
+          Overview of the skill.
+          Pulling the English version from the localized
+          JSON translations (overview_i18n).
+        tests:
+          - not_null
+
+      - name: subdimension
+        description: Subdimension key associated with the skill.
+
+      - name: wpm_versions
+        description: Whole Person Model versions.
+
+      - name: created_at
+        description: >
+          Time when the Rails object was created in UTC, i.e. when the
+          skill was created.
+        tests:
+          - not_null
+
+      - name: updated_at
+        description: Time when the Rails object was updated in UTC.
+        tests:
+          - not_null

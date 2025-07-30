@@ -1,0 +1,18 @@
+version: 2
+
+models:
+  - name: member_identify_ai_score_calculation
+    description: calculates the score for each member based on the weights of the work life events.
+    columns:
+      - name: primary_key
+        description: Name of the work life event (wle)
+        tests:
+          - unique
+          - not_null
+
+      - name: reporting_group_id
+        description: ""
+      - name: member_id
+        description: ""
+      - name: score
+        description: ""

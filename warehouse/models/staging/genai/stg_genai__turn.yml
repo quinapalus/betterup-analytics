@@ -1,0 +1,26 @@
+version: 2
+
+models:
+  - name: stg_genai__turn
+    description: Turn table for GenAI
+
+    columns:
+      - name: turn_id
+        description: Unique identifier of Turn
+        tests:
+          - unique
+          - not_null
+
+      - name: conversation_id
+
+      - name: is_flagged
+
+      - name: model_prompt
+
+      - name: model_response
+
+      - name: user_text
+
+      - name: created_at
+
+      - name: updated_at

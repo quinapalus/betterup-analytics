@@ -1,0 +1,49 @@
+version: 2
+
+models:
+  - name: stg_coach__coach_profile_pay_rates
+    description: Coach Profiles Pay Rates
+
+    columns:
+      - name: coach_profile_pay_rate_id
+        description: Unique identifier of Coach Profiles Pay Rate
+        tests:
+          - unique
+          - not_null
+
+      - name: adjustment_usd
+        description: '"The adjustment_usd column stores the user-defined pay rate
+          adjustment in US Dollars for a particular coach." [GenAI Description]'
+      - name: base_pay_rate_id
+
+        description: This column holds the unique ID of the base pay rate used by
+          a coach in a given coaching profile. [GenAI Description]
+
+      - name: coach_profile_uuid
+        tests:
+          - not_null
+        description: This column stores the unique identifier of a coach profile to
+          be associated with their pay rate. [GenAI Description]
+
+      - name: created_at
+        tests:
+          - not_null
+
+        description: The 'created_at' column records when a coach profile pay rate
+          was created. [GenAI Description]
+      - name: updated_at
+        tests:
+          - not_null
+
+        description: "'updated_at' contains a timestamp of when the record was last\
+          \ updated. [GenAI Description]"
+      - name: adjustment_usd_backup
+
+        description: "'adjustment_usd_backup' is a backup field used to store the\
+          \ amount of the US dollar adjustment to a coach's pay rate. [GenAI Description]"
+      - name: coach_profile_pay_rate_uuid
+        tests:
+          - not_null
+          - unique
+        description: The 'coach_profile_pay_rate_uuid' is the unique identifier for
+          the profile pay rate of each coach. [GenAI Description]

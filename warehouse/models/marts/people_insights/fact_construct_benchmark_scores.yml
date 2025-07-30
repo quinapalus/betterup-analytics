@@ -1,0 +1,26 @@
+version: 2
+
+models:
+  - name: fact_construct_benchmark_scores
+    description: ""
+    columns:
+      - name: primary_key
+        description: ""
+        tests:
+          - unique
+          - not_null
+
+      - name: whole_person_model_version
+        description: ""
+
+      - name: industry
+        description: ""
+
+      - name: employee_level
+        description: ""
+
+      - name: construct_key
+        description: ""
+
+      - name: scale_score
+        description: ""

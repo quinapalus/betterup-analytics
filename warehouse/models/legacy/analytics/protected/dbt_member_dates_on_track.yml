@@ -1,0 +1,39 @@
+version: 2
+models:
+  - name: dbt_member_dates_on_track
+    description: >
+      This model expands track assignments to create a row for every day a member was
+      open on a given track.
+
+    columns:
+      - name: member_id
+        description: Foreign key for associated member.
+        tests:
+          - not_null
+          - relationships:
+              to: ref('int_app__users')
+              field: user_id
+
+      - name: track_id
+        description: Foreign key for associated track for given member on given day.
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_tracks')
+              field: track_id
+
+      - name: track_assignment_id
+        description: Foreign key for associated track_assigment for given member on given day.
+        tests:
+          - not_null
+          - relationships:
+              to: ref('stg_app__track_assignments') 
+              field: track_assignment_id
+
+      - name: date_day
+        description: >
+          SQL date for every day the member was open on associated track_assignment. Includes
+          a row for the day the track_assignment was created, up through the last full day
+          the member was open on the track_assignment.
+        tests:
+          - not_null

@@ -1,0 +1,114 @@
+version: 2
+models:
+  - name: fact_assessments
+    description: >
+      Assessments completed by Users.
+
+    columns:
+      - name: assessment_id
+        description: Unique identifer of the Assessment
+        tests:
+          - unique
+          - not_null
+
+      - name: user_id
+        description: ""
+
+      - name: creator_id
+        description: ""
+
+      - name: track_assignment_id
+        description: ""
+
+      - name: track_id
+        description: ""
+
+      - name: associated_record_id
+        description: ""
+
+      - name: associated_record_type
+        description: ""
+
+      - name: assessment_configuration_id
+        description: "If this is a custom assessment, this will be populated. NULL for code-based assessments."
+
+      - name: assessment_configuration_uuid
+        description: "UUID added for EU cluster. If this is a custom assessment, this will be populated. NULL for code-based assessments."
+
+      - name: title_en
+        description: ""
+
+      - name: type
+        description: "If this is a code-based assessment, this will be populated. NULL for custom assessments."
+
+      - name: responses
+        description: ""
+
+      - name: parent_id
+        description: ""
+
+      - name: questions_version
+        description: ""
+
+      - name: submitted_at
+        description: ""
+
+      - name: expires_at
+        description: ""
+
+      - name: report_generated_at
+        description: ""
+
+      - name: created_at
+        description: ""
+
+      - name: updated_at
+        description: ""
+
+      - name: shared_with_coach
+        description: ""
+
+      - name: assessment_name
+        description: ""
+
+      - name: user_role
+        description: ""
+
+      - name: assessment_description
+        description: ""
+
+      - name: is_primary_reflection_point
+        description: ""
+
+      - name: is_onboarding
+        description: ""
+
+      - name: is_duplicate_assessment
+        description: >
+            An assessment is considered a duplicate if there has been another assessment of the same type
+            submitted by the same member less than 24 hours earlier. Designed with Whole Person Model
+            assessments in mind for growth analysis use cases.
+
+      - name: assessment_sequence_by_user
+        description: "The ranked order of assessments taken by a user in chronological order, where 1 is the first assessment (across any track / assessment type)"
+
+      - name: assessment_reverse_sequence_by_user
+        description: "The ranked order of assessments taken by a user in reverse-chronological order, where 1 is the most recent assessment (across any track / assessment type)"
+
+      - name: assessment_sequence_by_user_and_type
+        description: "The ranked order of assessments taken by a user in chronological order, per assessment type, where 1 is the first assessment of that type"
+
+      - name: assessment_reverse_sequence_by_user_and_type
+        description: "The ranked order of assessments taken by a user in reverse-chronological order, per assessment type, where 1 is the most recent assessment of that type"
+
+      - name: assessment_sequence_by_onboarding_or_rp
+        description: "The ranked order of assessments taken by a user in chronological order, per Onboarding assessment or Reflection Point, where 1 is the first Onboarding or Reflection Point assessment."
+
+      - name: assessment_reverse_sequence_by_onboarding_or_rp
+        description: "The ranked order of assessments taken by a user in reverse-chronological order, per Onboarding assessment or Reflection Point, where 1 is the most recent Onboarding or Reflection Point assessment."
+
+      - name: days_between_member_activated_and_assessment_submitted
+        description: "Days between when a member activated on the platform and when the member submitted assessment"
+
+      - name: complete_months_between_member_activated_and_assessment_submitted
+        description: "Complete months between when a member activated on the platform and when the member submitted assessment"

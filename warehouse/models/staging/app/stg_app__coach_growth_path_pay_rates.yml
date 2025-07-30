@@ -1,0 +1,39 @@
+version: 2
+
+models:
+  - name: stg_app__coach_growth_path_pay_rates
+    description: Coach Growth Path Pay Rates
+
+    columns:
+      - name: coach_growth_path_pay_rate_id
+        description: Unique identifier of Coach Growth Path Pay Rates
+        tests:
+          - unique
+          - not_null
+
+      - name: amount_usd
+        description: The 'amount_usd' column stores the monetary amount of the pay
+          rate for each given coach tier. [GenAI Description]
+      - name: tier
+        description: The 'tier' column in the growth_path_pay_rates table contains
+          the level the pay rate correlates to. [GenAI Description]
+      - name: name
+        description: The 'name' column in the 'stg_app__coach_growth_path_pay_rates'
+          table holds the name of the growth path pay rate. [GenAI Description]
+      - name: created_at
+        tests:
+          - not_null
+        description: The 'created_at' column contains timestamps representing the
+          date/time when the applicable record within the dataset was created. [GenAI
+          Description]
+      - name: updated_at
+        tests:
+          - not_null
+        description: The column 'updated_at' is a timestamp tracking the last time
+          this record was updated. [GenAI Description]
+      - name: coaching_cloud
+        description: Column 'coaching_cloud' is a boolean value indicating if a pay
+          rate is associated with Coaching Cloud services. [GenAI Description]
+      - name: coach_growth_path_pay_rate_uuid
+        description: A column with a UUID for coach growth path pay rate records.
+          [GenAI Description]

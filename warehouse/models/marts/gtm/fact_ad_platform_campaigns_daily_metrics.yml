@@ -1,0 +1,61 @@
+version: 2
+
+models:
+  - name: fact_ad_platform_campaigns_daily_metrics
+    meta:
+      owner: "xavier.mafe@betterup.co"
+    description: "This fact table contains a daily snapshot of ad platform performance at the campaign level. 
+                  The grain of this fact table is 1 row per campaign, per day"
+    columns:
+      - name: primary_key
+        description: The 'primary_key' column is a unique key for identifying each
+          point in the table, made up of the columns 'date', 'campaign_name', 'ad_words_campaign_type',
+          'campaign_id', 'traffic_source', 'media_type', 'ad_account_name', and 'data_source_type_name'.
+          [GenAI Description]
+        tests:
+          - not_null
+          - unique
+
+      - name: date
+        description: Date of the snapshot
+        tests:
+          - not_null
+
+      - name: campaign_name
+        description: Name of the campaign as it appears in the ad platform
+        tests:
+          - not_null
+
+      - name: ad_words_campaign_type
+        description: Primary serving target for ads in the campaign. Only applies
+          to Google Ads campaigns
+
+      - name: campaign_id
+        description: ID of the campaign as it appears in the ad platform. Values can
+          be not null for Bing traffic source.
+
+      - name: traffic_source
+        description: Source of the traffic. In other words, the name of the ad platform
+          ie Google, LinkedIn etc
+
+      - name: media_type
+        description: The media_type column of this table stores the type of platform
+          used for an advertisement (e.g. search, display, video). [GenAI Description]
+
+      - name: ad_account_name
+        description: Name of the ad account as it appears in the ad platform. We have
+          multiple accounts for each platform. For example, B2B and D2C each have
+          their own LI account
+
+      - name: data_source_type_name
+        description: The column 'data_source_type_name' stores the type of data source
+          for the daily advertising platform performance metrics. [GenAI Description]
+
+      - name: cost
+        description: Amount spent on this campaign in USD
+
+      - name: clicks
+        description: Number of clicks for this campaign
+
+      - name: impressions
+        description: Number of impressions for this campaign

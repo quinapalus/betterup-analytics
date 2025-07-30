@@ -1,0 +1,54 @@
+version: 2
+
+models:
+  - name: int_wkfw__scores
+    description: The int_wkfw__scores model is a data structure used to store score
+      information for assessments taken by users. It contains fields score_id, assessment_id,
+      construct_id, raw_score, scale_score, z_score, created_at, updated_at, user_id,
+      and assessment_configuration_id. The data stored in int_wkfw__scores
+      is used to provide insights into a user's performance on an assessment. [GenAI Description]
+    columns:
+      - name: score_id
+        description: The 'score_id' column in 'model.warehouse.int_wkfw__scores' stores
+          a unique identifier for each score record. [GenAI Description]
+        tests:
+          - not_null
+          - unique
+
+      - name: assessment_id
+        description: The 'assessment_id' column contains the unique identifier assigned
+          to an assessment. [GenAI Description]
+
+      - name: construct_id
+        description: The 'construct_id' column contains a unique identifier for the
+          assessment construct being measured. [GenAI Description]
+
+      - name: raw_score
+        description: The 'raw_score' column contains the scores of individual questions
+          on assessments. [GenAI Description]
+
+      - name: scale_score
+        description: The column 'scale_score' is a numeric score which measures a
+          student's performance on assessment items. [GenAI Description]
+
+      - name: z_score
+        description: The 'z_score' column stores the normalized score of a user's
+          assessment result relative to the assessment's reference population. [GenAI
+          Description]
+
+      - name: created_at
+        description: The 'created_at' column stores the date and time when a score
+          was created. [GenAI Description]
+
+      - name: updated_at
+        description: The 'updated_at' column stores the date and time when a score
+          was last updated. [GenAI Description]
+
+      - name: user_id
+        description: The user_id column stores the ID of the account associated with
+          an assessment. [GenAI Description]
+
+      - name: assessment_configuration_id
+        description: The column 'assessment_configuration_id' holds the unique identification
+          number of the assessment configuration for each assessment record. [GenAI
+          Description]

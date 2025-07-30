@@ -1,0 +1,17 @@
+item_key,item_prompt,scale,item_notes
+av_quality_rating,Were you satisfied with the technical quality of your session?,1-Not at all;2-Not really;3-Somewhat;4-Mostly;5-Absolutely,
+feedback,Anything else you'd like to say about this session?,text_response,
+insight_rating,Did you gain a valuable insight or takeaway?,1-Strongly Disagree;2-Disagree;3-Neither Disagree nor Agree;4-Agree;5-Strongly Agree,[Pre-March-2019] 1-Not at all;2-Not really;3-Somewhat;4-Mostly;5-Absolutely
+listening_rating,"Did you feel heard, understood, and respected?",1-Not at all;2-Not really;3-Somewhat;4-Mostly;5-Absolutely,
+ran_out_of_discussion_items,Did you run out of things to discuss during this session?,Yes;No;I’m Not Sure,
+relevance_rating,Did you focus on the topics you wanted to work on and talk about?,1-Not at all;2-Not really;3-Somewhat;4-Mostly;5-Absolutely,
+session_overall_emotional,How was this session overall?,Life Changing;Amazing;Good;Okay;Not Great;I’m Not Sure,
+session_was_valuable,Was this session a valuable use of your time?,1-Strongly Disagree;2-Disagree;3-Neither Disagree nor Agree;4-Agree;5-Strongly Agree,[Pre-March-2019] Yes;No;I’m Not Sure
+will_attend_in_next_month,Do you think you will attend another session in the next month?,Yes;No;I’m Not Sure,
+ease_of_use_rating,Is it clear to you how to use BetterUp?,1-Not at all;2-Not really;3-Somewhat;4-Mostly;5-Absolutely,
+layer2_member_rated_goal_progress,With 0 as no progress toward your coaching goal(s) and 10 as achieving your goal(s) where do you stand today?,1-No Progress;[...];10-Goal Achievement,
+layer2_utility_rating,This session will help me be more effective at work,1-Strongly Disagree;2-Disagree;3-Neither Disagree nor Agree;4-Agree;5-Strongly Agree,
+covid_well_being,Compared to two weeks ago how is your current well-being?,1-Much Worse;2-Somewhat Worse;3-About the Same;4-Somewhat Better;5-Much Better,[Post-March-2020]COVID-19-specific temporary question
+covid_work_situation,Since your last BetterUp session which of the following changes have you experienced at work?,shift_to_remote_work: "Shift to remote work";return_to_non_remote_work: "Return to non-remote work";return_to_normal_work_environment: "Return to normal work environment";reduced_hours: "Reduced hours"; increased_hours: "Increased hours";laid_off_or_furloughed: "Laid off / furloughed";return_from_layoff_or_furloughed: "Return from layoff / furlough";new_leadership: "New leadership responsibilities";no_change: "No Change";other_change: "Other change",[Post-March-2020]COVID-19-specific temporary question
+covid_resource_beneficial,Since your last BetterUp session what employer-provided offering/resource/change/or action has been the most beneficial for your well-being?,text_response,[Post-March-2020]COVID-19-specific temporary question
+covid_disruptive,How disruptive is COVID-19 currently to your productivity?,1-Not at all;2-Slightly;3-Moderately;4-Quite a bit;5-Extremely,[Post-March-2020]COVID-19-specific temporary question

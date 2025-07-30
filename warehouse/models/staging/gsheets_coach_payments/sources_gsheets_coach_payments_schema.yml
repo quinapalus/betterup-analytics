@@ -1,0 +1,11 @@
+version: 2
+
+sources:
+  - name: gsheets_coach_payments
+    database: raw
+    schema: "{{ 'airbyte_gsheets_coach_payments' if env_var('DEPLOYMENT_ENVIRONMENT', '') == 'US Gov' else 'stitch_gsheets_coach_payments' }}"
+    loader: "{{ 'airbyte' if env_var('DEPLOYMENT_ENVIRONMENT', '') == 'US Gov' else 'stitch' }}"
+
+    tables:
+      - name: usd_exchange_rates
+      - name: fixed_annual_usd_exchange_rates

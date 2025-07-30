@@ -1,0 +1,51 @@
+version: 2
+
+models:
+  - name: dbt_events__registered_group_coaching
+    description: The dbt_events__registered_group_coaching model tracks the registration
+      activity of members in group coaching events. It includes fields such as member_id,
+      event_at, event_action, event_object, event_action_and_object, associated_record_type,
+      associated_record_id, attributes, and related tables such as from stg_app__group_coaching_registrations,
+      stg_app__group_coaching_cohorts, stg_app__group_coaching_series, stg_app__group_coaching_sessions,
+      and stg_app__group_coaching_curriculums. The data includes information such
+      as group_coaching_cohort_id, group_coaching_series_id, group_coaching_cohort_session_count,
+      group_coaching_cohort_first_session_starts_at, group_coaching_cohort_last_session_starts_at,
+      and group_coaching_curriculum_title. [GenAI Description]
+    columns:
+
+      - name: member_id
+        description: member_id is the unique identifier of each individual user who
+          is registered for group coaching. [GenAI Description]
+
+      - name: event_at
+        description: The event_at column displays the date and time that a registrant
+          registered for a group coaching session. [GenAI Description]
+
+      - name: event_action
+        description: The 'event_action' column records the type of event that happened,
+          such as registering for a group coaching series. [GenAI Description]
+
+      - name: event_object
+        description: The 'event_object' column identifies the type of group coaching
+          intervention associated with the registration event. [GenAI Description]
+
+      - name: event_action_and_object
+        description: This column contains concatenated text of an event action and
+          event object for a registered group coaching event. [GenAI Description]
+
+      - name: associated_record_type
+        description: The 'associated_record_type' column stores the type of associated
+          record associated with a Group Coaching Registration. [GenAI Description]
+
+      - name: associated_record_id
+        description: The column 'associated_record_id' holds the primary key identifier
+          for the associated 'GroupCoachingRegistration' record. [GenAI Description]
+        tests:
+          - unique
+          - not_null
+
+      - name: attributes
+        description: The 'attributes' column contains additional context information
+          associated with a group coaching registration such as the group coaching
+          cohort ID, series ID, number of sessions, start and end dates, and curriculum
+          title. [GenAI Description]

@@ -1,0 +1,489 @@
+---
+# default configuration for agreement questions
+agreement_question: &agreement_question
+  options:
+    - [1, 'Strongly Disagree']
+    - [2, 'Disagree']
+    - [3, 'Neither Disagree nor Agree']
+    - [4, 'Agree']
+    - [5, 'Strongly Agree']
+
+questions:
+  finds_work_meaningful:
+    <<: *agreement_question
+    label: 'I have found my work to be meaningful.'
+    subdimension: purpose
+  feels_inspired:
+    <<: *agreement_question
+    label: 'I have felt inspired by my work.'
+    subdimension: purpose
+  feels_sense_of_purpose:
+    <<: *agreement_question
+    label: 'I have felt a sense of purpose at work.'
+    subdimension: purpose
+
+  feels_fully_immersed:
+    <<: *agreement_question
+    label: 'I have felt fully immersed in my work.'
+    subdimension: engagement
+  enjoys_work:
+    <<: *agreement_question
+    label: 'I have enjoyed my work.'
+    subdimension: engagement
+  feels_motivated:
+    <<: *agreement_question
+    label: 'I have felt motivated to do my best at work.'
+    subdimension: engagement
+
+  feels_burned_out:
+    <<: *agreement_question
+    label: 'I have felt burned out by my work.'
+    subdimension: burnout
+    inverse: true
+  feels_emotionally_drained:
+    <<: *agreement_question
+    label: 'I have felt emotionally drained by my work.'
+    subdimension: burnout
+    inverse: true
+  dreads_going_to_work:
+    <<: *agreement_question
+    label: 'I have dreaded going to work.'
+    subdimension: burnout
+    inverse: true
+
+  struggles_with_stress:
+    <<: *agreement_question
+    label: 'I have struggled to cope with stress.'
+    subdimension: stress
+    inverse: true
+  angers_over_inconveniences:
+    <<: *agreement_question
+    label: 'I have gotten angry over small inconveniences.'
+    subdimension: stress
+    inverse: true
+  feels_irritable:
+    <<: *agreement_question
+    label: 'I have felt irritable.'
+    subdimension: stress
+    inverse: true
+
+  stays_focused_throughout_the_day:
+    <<: *agreement_question
+    label: Throughout the day I can stay focused on what I want to accomplish without getting distracted.
+    subdimension: focus
+  focuses_without_distraction:
+    <<: *agreement_question
+    label: 'It is easy for me to focus my attention on one thing for long periods of time.'
+    subdimension: focus
+  can_refocus_after_distraction:
+    <<: *agreement_question
+    label: When I get distracted it is easy for me to refocus my attention.
+    subdimension: focus
+
+  finds_self_absorbed:
+    <<: *agreement_question
+    label: 'I often “get lost” in my work.'
+    subdimension: flow
+  becomes_absorbed_by_work:
+    <<: *agreement_question
+    label: I often find myself completely absorbed in my work.
+    subdimension: flow
+  loses_track_of_time:
+    <<: *agreement_question
+    label: 'When I am working intensely I lose track of time.'
+    subdimension: flow
+
+  acts_according_to_values:
+    <<: *agreement_question
+    label: 'I always act in accordance with my values.'
+    subdimension: values
+  finds_values_important:
+    <<: *agreement_question
+    label: My values are very important to me.
+    subdimension: values
+  understands_core_values:
+    <<: *agreement_question
+    label: I have a clear understanding of my core values.
+    subdimension: values
+
+  thinks_about_non_current_events:
+    <<: *agreement_question
+    label: 'I often find myself thinking about something other than what is happening right in front of me.'
+    subdimension: mindfulness
+    inverse: true
+  distracted_by_non_current_events:
+    <<: *agreement_question
+    label: 'I often get distracted thinking about past or future events.'
+    subdimension: mindfulness
+    inverse: true
+  acts_on_autopilot:
+    <<: *agreement_question
+    label: 'I find myself going through my day on autopilot.'
+    subdimension: mindfulness
+    inverse: true
+
+  controls_emotions:
+    <<: *agreement_question
+    label: 'It is easy for me to control my emotions.'
+    subdimension: emotional_regulation
+  emotions_do_not_get_the_best_of_them:
+    <<: *agreement_question
+    label: It is unusual for me to let my emotions get the best of me.
+    subdimension: emotional_regulation
+  emotions_do_not_control_behavior:
+    <<: *agreement_question
+    label: I never let my emotions control my behavior.
+    subdimension: emotional_regulation
+
+  gets_back_on_track:
+    <<: *agreement_question
+    label: 'It is easy for me to get back on track when something goes wrong.'
+    subdimension: resilience
+  recovers_from_stressful_experiences:
+    <<: *agreement_question
+    label: 'I recover quickly after stressful experiences.'
+    subdimension: resilience
+  copes_with_setbacks:
+    <<: *agreement_question
+    label: 'It is easy for me to cope with setbacks.'
+    subdimension: resilience
+
+  likes_to_stretch_capabilities:
+    <<: *agreement_question
+    label: 'I like activities that stretch what I am capable of.'
+    subdimension: growth_mindset
+  enjoys_challenging_projects:
+    <<: *agreement_question
+    label: I enjoy challenging projects.
+    subdimension: growth_mindset
+  enjoys_learning_from_projects:
+    <<: *agreement_question
+    label: I enjoy taking on projects that allow me to learn something new.
+    subdimension: growth_mindset
+
+  can_achieve_anything:
+    <<: *agreement_question
+    label: 'I can achieve anything that I set my mind to.'
+    subdimension: sense_of_control
+  believes_can_achieve_things_they_want:
+    <<: *agreement_question
+    label: I believe I can achieve the things that I want in life.
+    subdimension: sense_of_control
+  believes_has_control_over_life:
+    <<: *agreement_question
+    label: I believe that I have complete control over my own life.
+    subdimension: sense_of_control
+
+  believes_it_is_better_to_try_and_fail:
+    <<: *agreement_question
+    label: 'I believe it is better to try and fail than to not try at all.'
+    subdimension: risk_tolerance
+  expects_mistakes_for_new_projects:
+    <<: *agreement_question
+    label: I expect to make mistakes when I am trying something new
+    subdimension: risk_tolerance
+  believes_growth_requires_risks:
+    <<: *agreement_question
+    label: I believe that growth requires taking risks that may result in failure.
+    subdimension: risk_tolerance
+
+  team_openly_discusses_problems:
+    <<: *agreement_question
+    label: 'I make sure team members are able to openly discuss problems and tough issues.'
+    subdimension: open_communication
+  ensures_others_are_comfortable_providing_feedback:
+    <<: *agreement_question
+    label: During team discussions, I make sure others feel comfortable giving me feedback.
+    subdimension: open_communication
+  encourages_team_to_ask_for_help:
+    <<: *agreement_question
+    label: I encourage members of my team to ask for my help when they need it.
+    subdimension: open_communication
+  help_find_best_possible_solution:
+    <<: *agreement_question
+    label: 'I help my coworkers openly discuss problems to find the best possible solution.'
+    subdimension: open_communication
+    tags:
+      - long_form
+  share_important_information:
+    <<: *agreement_question
+    label: 'I always share important information with my coworkers.'
+    subdimension: open_communication
+    tags:
+      - long_form
+  talk_about_working_together_effectively:
+    <<: *agreement_question
+    label: 'I have conversations with my coworkers about how we can work together most effectively.'
+    subdimension: open_communication
+    tags:
+      - long_form
+
+  encourages_others_to_share_ideas:
+    <<: *agreement_question
+    label: During team discussions, I encourage others to share their ideas.
+    subdimension: participation
+  encourages_others_to_participate_in_discussions:
+    <<: *agreement_question
+    label: I encourage team members who do not often speak up to participate in discussions.
+    subdimension: participation
+  includes_team_in_discussions:
+    <<: *agreement_question
+    label: 'I make sure that all team members are involved in important discussions that impact them.'
+    subdimension: participation
+
+  has_high_quality_relationships_with_coworkers:
+    <<: *agreement_question
+    label: 'I have high quality relationships with my coworkers.'
+    subdimension: positive_relationships
+  knows_coworkers_personally:
+    <<: *agreement_question
+    label: I get to know my coworkers on a personal level.
+    subdimension: positive_relationships
+  trusts_coworkers:
+    <<: *agreement_question
+    label: I have a high level of trust with my coworkers.
+    subdimension: positive_relationships
+  foster_positive_relationships:
+    <<: *agreement_question
+    label: 'I care about fostering positive relationships with my coworkers.'
+    subdimension: positive_relationships
+    tags:
+      - long_form
+  concern_for_well_being:
+    <<: *agreement_question
+    label: 'I express concern for my coworkers’ personal well-being.'
+    subdimension: positive_relationships
+    tags:
+      - long_form
+
+  cultivates_trust:
+    <<: *agreement_question
+    label: 'I make efforts to cultivate trust amongst my team members.'
+    subdimension: trust_climate
+  coworkers_can_discuss_problems:
+    <<: *agreement_question
+    label: My coworkers feel comfortable bringing problems to me when they arise.
+    subdimension: trust_climate
+  prevents_cliques_on_teams:
+    <<: *agreement_question
+    label: I make efforts to ensure that there is not an "in-group" and an "out-group" on my team.
+    subdimension: trust_climate
+  encourage_taking_calculated_risks:
+    <<: *agreement_question
+    label: 'I encourage others on my team to take calculated risks.'
+    subdimension: trust_climate
+    tags:
+      - long_form
+  encourage_admitting_mistakes:
+    <<: *agreement_question
+    label: 'I encourage coworkers to feel comfortable admitting when they have made a mistake.'
+    subdimension: trust_climate
+    tags:
+      - long_form
+  ensure_no_deliberate_undermining_of_efforts:
+    <<: *agreement_question
+    label: "I make sure no one on my team deliberately undermines another team member's efforts."
+    subdimension: trust_climate
+    tags:
+      - long_form
+
+  expresses_energy_and_passion:
+    <<: *agreement_question
+    label: 'I express energy/passion at work so that it spreads throughout our team.'
+    subdimension: inspire
+  inspires_coworkers_to_think_creatively:
+    <<: *agreement_question
+    label: I inspire my coworkers to think about their work in new and exciting ways.
+    subdimension: inspire
+  communicates_vision_to_coworkers:
+    <<: *agreement_question
+    label: I communicate my vision for the future to my coworkers.
+    subdimension: inspire
+  get_people_excited:
+    <<: *agreement_question
+    label: 'I have the ability to get other people excited about their work.'
+    subdimension: inspire
+    tags:
+      - long_form
+  core_values_guide_decisions:
+    <<: *agreement_question
+    label: 'I often speak to coworkers about the core values that guide my decisions.'
+    subdimension: inspire
+    tags:
+      - long_form
+  show_positive_impact:
+    <<: *agreement_question
+    label: 'I show my coworkers when their work has a positive impact on others.'
+    subdimension: inspire
+    tags:
+      - long_form
+
+  has_open_conversations:
+    <<: *agreement_question
+    label: 'I have open conversations with my team members about how they can be more effective in their role.'
+    subdimension: coaching
+  helps_coworkers_craft_career_goals:
+    <<: *agreement_question
+    label: I help coworkers think through their long-term career goals.
+    subdimension: coaching
+  suggests_coworkers_growth_opportunities:
+    <<: *agreement_question
+    label: I suggest opportunities to my coworkers that will help them grow and develop.
+    subdimension: coaching
+  set_specific_goals:
+    <<: *agreement_question
+    label: 'I help my team set specific goals to improve performance.'
+    subdimension: coaching
+    tags:
+      - long_form
+  provide_regular_feedback_to_guide:
+    <<: *agreement_question
+    label: 'I provide regular feedback to my coworkers to help guide their work.'
+    subdimension: coaching
+    tags:
+      - long_form
+  help_stimulate_thinking:
+    <<: *agreement_question
+    label: 'I use open-ended questions to help stimulate the thinking of my coworkers.'
+    subdimension: coaching
+    tags:
+      - long_form
+
+  acknowledges_individuals:
+    <<: *agreement_question
+    label: 'I acknowledge individuals on my team when they produce high quality work.'
+    subdimension: recognizing
+  acknowledges_team_for_great_work:
+    <<: *agreement_question
+    label: I acknowledge my team collectively when we produce high quality work.
+    subdimension: recognizing
+  acknowledges_coworker_for_effort:
+    <<: *agreement_question
+    label: When a coworker works particularly hard, I make a point of acknowledging their extra effort.
+    subdimension: recognizing
+  encourage_high_quality_work:
+    <<: *agreement_question
+    label: 'I provide encouragement to team members who have been producing high quality work.'
+    subdimension: recognizing
+    tags:
+      - long_form
+  celebrate_success:
+    <<: *agreement_question
+    label: 'I make sure my coworkers take advantage of opportunities to celebrate successes.'
+    subdimension: recognizing
+    tags:
+      - long_form
+
+  allows_team_to_decide_best_way:
+    <<: *agreement_question
+    label: 'I allow my team members to decide the best way to complete their job tasks.'
+    subdimension: ownership
+  gives_coworkers_autonomy:
+    <<: *agreement_question
+    label: I give my coworkers the autonomy to make important decisions on their own.
+    subdimension: ownership
+  helps_coworkers_feel_ownership:
+    <<: *agreement_question
+    label: I help my coworkers feel ownership over the work they do.
+    subdimension: ownership
+
+  ensures_clear_understanding_of_responsibilities:
+    <<: *agreement_question
+    label: 'I make sure that everyone on my team has a clear understanding of their responsibilities.'
+    subdimension: alignment
+  ensures_coworkers_have_resources:
+    <<: *agreement_question
+    label: I make sure that my coworkers have everything they need to be successful.
+    subdimension: alignment
+  ensures_coworkers_understand_goals:
+    <<: *agreement_question
+    label: I make sure my coworkers have a clear understanding of what we are trying to achieve.
+    subdimension: alignment
+  make_available:
+    <<: *agreement_question
+    label: 'I make myself available to my coworkers so I can answer their questions'
+    subdimension: alignment
+    tags:
+      - long_form
+  overcome_obstacles:
+    <<: *agreement_question
+    label: 'I help my coworkers overcome obstacles so they can be successful.'
+    subdimension: alignment
+    tags:
+      - long_form
+
+  finds_creative_ways_to_solve_problems:
+    <<: *agreement_question
+    label: 'I am good at finding creative ways to help my team solve problems.'
+    subdimension: problem_solving
+  discusses_problem_solving_with_coworkers:
+    <<: *agreement_question
+    label: I regularly have open discussions with my coworkers about how we can solve problems most effectively.
+    subdimension: problem_solving
+  develops_strategies_with_coworkers:
+    <<: *agreement_question
+    label: I am good at working with coworkers to develop successful strategies.
+    subdimension: problem_solving
+  collect_relevant_information:
+    <<: *agreement_question
+    label: 'I make sure to collect all relevant information before making important decisions.'
+    subdimension: problem_solving
+    tags:
+      - long_form
+
+
+  provides_feedback:
+    <<: *agreement_question
+    label: 'I provide feedback to coworkers that helps them perform tasks more effectively.'
+    subdimension: feedback
+  compliments_team_members:
+    <<: *agreement_question
+    label: I let my team members know what they are doing well so they can continue to build on their strengths.
+    subdimension: feedback
+  provides_feedback_to_coworkers:
+    <<: *agreement_question
+    label: I provide feedback on what coworkers can do better in the future, rather than pointing out their mistakes.
+    subdimension: feedback
+  help_track_progress:
+    <<: *agreement_question
+    label: 'I help my team track progress toward our goals.'
+    subdimension: feedback
+    tags:
+      - long_form
+  provide_constructive_feedback:
+    <<: *agreement_question
+    label: 'I provide regular constructive feedback to members of my team.'
+    subdimension: feedback
+    tags:
+      - long_form
+
+  uses_logic_to_persuade:
+    <<: *agreement_question
+    label: 'I use logic, rather than just my opinion, to convince others of my ideas.'
+    subdimension: influence
+  uses_goal_alignment_to_persuade:
+    <<: *agreement_question
+    label: To persuade others, I explain how my proposed ideas align with team goals.
+    subdimension: influence
+  asks_for_input_on_new_ideas:
+    <<: *agreement_question
+    label: I ask others for their input to get them onboard with new ideas.
+    subdimension: influence
+  provide_evidence_when_influencing:
+    <<: *agreement_question
+    label: 'I provide evidence to support my arguments when influencing others.'
+    subdimension: influence
+    tags:
+      - long_form
+  appeal_to_core_values:
+    <<: *agreement_question
+    label: 'I appeal to core values and ideals to get others on my side.'
+    subdimension: influence
+    tags:
+      - long_form
+  get_onboard_with_ideas:
+    <<: *agreement_question
+    label: 'I am able to get co-workers onboard with my ideas.'
+    subdimension: influence
+    tags:
+      - long_form

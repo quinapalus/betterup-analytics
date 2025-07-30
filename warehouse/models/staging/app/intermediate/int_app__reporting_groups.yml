@@ -1,0 +1,39 @@
+version: 2
+
+models:
+  - name: int_app__reporting_groups
+    description: The DBT model int_app__reporting_groups is used to retrieve active
+      reporting groups from a staging table. It collects the reporting_group_id, created_at,
+      updated_at, name, product_type, and associated_record_type fields for each reporting
+      group. [GenAI Description]
+
+    columns:
+      - name: reporting_group_id
+        description: The 'reporting_group_id' column contains the IDs of reporting
+          groups associated with a given product type and associated record type.
+          [GenAI Description]
+        tests:
+          - unique
+          - not_null
+
+      - name: created_at
+        description: The 'created_at' column of the DBT model holds the date and time
+          when the record was initially created. [GenAI Description]
+
+      - name: updated_at
+        description: The 'updated_at' column contains the date and time when the reporting
+          group record was last updated. [GenAI Description]
+
+      - name: name
+        description: The 'name' column stores the name of a reporting group. [GenAI
+          Description]
+
+      - name: product_type
+        description: The 'product_type' column indicates the product category associated
+          with each reporting group. [GenAI Description]
+
+      - name: associated_record_type
+        description: The 'associated_record_type' column identifies the type of record
+          associated with the reporting group. [GenAI Description]
+
+

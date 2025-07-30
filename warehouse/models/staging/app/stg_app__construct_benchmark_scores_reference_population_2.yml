@@ -1,0 +1,44 @@
+version: 2
+
+models:
+  - name: stg_app__construct_benchmark_scores_reference_population_2
+    description: "The new (as of 2022) global benchmarks corresponding to reference_population_id = 2. This table unions the different reference populations (industry, country) on top of each other and adds a column 'benchmark_type' to distinguish them."
+    columns:
+      - name: primary_key
+        description: "Composite key of benchmark type + key"
+        tests:
+          - not_null
+          - unique
+
+      - name: reference_population_key
+        description: ""
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['global_2022']
+
+      - name: benchmark_population_type
+        description: "The population (or combination of populations) represented by this benchmark. Ex: country, industry, industry_level (the latter means the intersection of 2 populations, by industry and level)"
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['country', 'industry', 'level', 'industry_level']
+
+      - name: country
+        description: ""
+
+      - name: industry
+        description: ""
+
+      - name: level
+        description: ""
+
+      - name: key
+        description: ""
+        tests:
+          - not_null
+
+      - name: mean
+        description: ""
+        tests:
+          - not_null

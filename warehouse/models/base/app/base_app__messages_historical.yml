@@ -1,0 +1,27 @@
+version: 2
+
+models:
+  - name: base_app__messages_historical
+    description: ""
+    columns:
+      - name: attachment
+      - name: attachment_content_type
+      - name: attachment_filename
+      - name: attachment_status
+      - name: body
+      - name: client_uuid
+      - name: coach_assignment_id
+      - name: created_at
+      - name: created_from
+      - name: id
+        tests:
+          - unique
+          - not_null
+      - name: read_by_recipient_at
+      - name: recipient_id
+      - name: response_message_id
+      - name: sender_id
+      - name: updated_at
+      - name: conversation_participant_id
+      - name: internal
+      - name: generated_message_id

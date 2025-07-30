@@ -1,0 +1,54 @@
+version: 2
+
+models:
+  - name: stg_app__care_profiles
+    description: The stg_app__care_profiles model stores core information on users'
+      care profiles, such as wellness_score_onboarding, mood_count and various time
+      attributes, giving insights into users' wellbeing to optimize care services.
+      [GenAI Description]
+    columns:
+      - name: care_profile_id
+        description: Unique ID for Care Profiles
+        tests:
+          - unique
+          - not_null
+
+      - name: wellness_score_onboarding
+        description: The 'wellness_score_onboarding' column contains the initial wellness
+          score of a customer when they onboard Care. [GenAI Description]
+
+      - name: mood_count
+        description: The 'mood_count' column holds the number of mood responses entered
+          by the user. [GenAI Description]
+
+      - name: current_mood_score
+        description: The column 'current_mood_score' stores the most recent self-reported
+          care profile's score for their overall mood. [GenAI Description]
+
+      - name: current_wellness_score
+        description: The column 'current_wellness_score' contains the current wellness
+          score of the user. [GenAI Description]
+
+      - name: completed_care_onboarding_at
+        description: The 'completed_care_onboarding_at' column holds the timestamp
+          representing when onboarding for care was completed. [GenAI Description]
+
+      - name: created_at
+        description: "'created_at' is a timestamp column indicating when the related\
+          \ care profile was created. [GenAI Description]"
+
+      - name: skipped_care_onboarding_at
+        description: The 'skipped_care_onboarding_at' column holds the timestamp when
+          an onboarding process was skipped. [GenAI Description]
+
+      - name: updated_at
+        description: The 'updated_at' column contains a timestamp recording the time
+          of the last update to the care profile. [GenAI Description]
+
+      - name: mood_last_updated_at
+        description: "\"mood_last_updated_at\" is a timestamp of when the CARE Profile's\
+          \ mood score was last updated. [GenAI Description]"
+
+      - name: current_wellness_score_at
+        description: This column contains the timestamp of when the current wellness
+          score was last updated. [GenAI Description]

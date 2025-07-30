@@ -1,0 +1,47 @@
+version: 2
+
+models:
+  - name: dbt_events__selected_focus_area
+    description: Members that have selected a focus area.
+
+    columns:
+      - name: primary_key
+        description: Composite Primary Key, MemberID + EventAt + AssociatedRecordID
+          + AssociatedRecordType
+        tests:
+          - not_null
+          - unique
+
+      - name: member_id
+        description: ID of the member (users.id)
+        tests:
+          - not_null
+
+      - name: event_at
+        description: Date when event was created
+        tests:
+          - not_null
+
+      - name: event_action
+        description: The event behavior that happened
+
+      - name: event_object
+        description: The abstract business object associated with the event
+        tests:
+          - not_null
+
+      - name: event_action_and_object
+        description: Concatenation of event action and event object
+
+      - name: associated_record_type
+        description: Type of the associated_record_id. Here it is 'Track Assignment'
+        tests:
+          - not_null
+
+      - name: associated_record_id
+        description: Associated 'Track Assignment' id
+        tests:
+          - not_null
+
+      - name: attributes
+        description: Extra fields associated with the event

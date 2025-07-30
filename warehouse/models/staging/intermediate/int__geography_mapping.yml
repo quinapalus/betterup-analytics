@@ -1,0 +1,26 @@
+version: 2
+
+models:
+  - name: int__geography_mapping
+    description: ""
+    columns:
+      - name: time_zone
+        description: ""
+
+      - name: time_zone_iana
+        description: ""
+
+      - name: country_code
+        description: ""
+
+      - name: country_name
+        description: ""
+
+      - name: region
+        description: ""
+
+      - name: subregion
+        description: ""
+
+      - name: geo
+        description: ""

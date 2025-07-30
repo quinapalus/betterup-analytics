@@ -1,0 +1,70 @@
+name: Run SQLFluff Linter
+
+on: [pull_request]
+
+jobs:
+  #This job runs SQLFluff with a specific set of rules
+  #note the dialect is set to Snowflake.
+  lint_project: 
+    name: Run SQLFluff Linter
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: warehouse
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - uses: actions/setup-python@v4
+        with:
+          python-version: "3.10"
+
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16
+
+      - name: Install python dependencies
+        # Retry 3 times before the install actually fails 
+        run: |
+          (echo "===== Install Attempt: 1 =====" && make installdeps) || \
+          (echo "===== Install Attempt: 2 =====" && make installdeps) || \
+          (echo "===== Install Attempt: 3 =====" && make installdeps) || \
+          (echo "===== Install python dependencies step failed =====" && exit 1)
+      
+      - name: Set SQLFluff Config Path Variable
+        id: set_config_path
+        run: |
+          echo "SQLFLUFF_CONFIG_PATH=warehouse/.sqlfluff" >> "$GITHUB_ENV"
+      
+      - name: Add sqlfluff to PATH
+        run: echo "export PATH=$PATH:~/.local/bin" >> "$GITHUB_ENV"
+
+      - name: Upload SQLFluff Config
+        uses: actions/upload-artifact@v2
+        with:
+          name: sqlfluff-config
+          path: ${{ env.SQLFLUFF_CONFIG_PATH }}
+
+      - name: Get changed files
+        id: get_file_changes
+        uses: trilom/file-changes-action@v1.2.4
+        with: 
+          output: ' '
+
+      - name: Get New and Changed Models
+        id: get_files_to_lint
+        shell: bash
+        run: |
+          lintees="$(echo "${{ steps.get_file_changes.outputs.files_modified }}" |
+            tr -s ' ' '\n' |
+            grep -E '/models/.*[.]sql$' |
+            sed -e 's/warehouse\///g' -e 's/ $//' |
+            tr -s '\n' ' ' || true)"
+          echo "lintees=$lintees" >> "$GITHUB_OUTPUT"
+
+      - name: Lint DBT Models
+        if: "steps.get_files_to_lint.outputs.lintees != ''"
+        shell: bash
+        run: |
+          lintees="${{ steps.get_files_to_lint.outputs.lintees }}"
+          poetry run sqlfluff lint --config ./.sqlfluff $lintees || true

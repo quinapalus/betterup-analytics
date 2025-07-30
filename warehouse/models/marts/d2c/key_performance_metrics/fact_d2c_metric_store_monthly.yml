@@ -1,0 +1,63 @@
+version: 2
+
+models:
+  - name: fact_d2c_metric_store_monthly
+    meta:
+      owner: "adrian.lievano@betterup.co"
+    description: "A finalized table storing monthly direct to consumer key performance metrics, along with stakeholder set targets."
+    columns:
+      - name: _unique
+        description: "Primary key of this table. Sets the grain to month and metric_name, ensuring no metric has multiple values and/or targets"
+        tests:
+          - unique
+          - not_null
+
+      - name: metric_name_id
+        description: "Surrogate key on the manually written metric_name"
+
+      - name: month
+        description: "calendar month that the metric is calculated"
+        tests: 
+          - not_null
+
+      - name: metric_name
+        description: "Name of the business metric"
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['gross_margin', 
+                      'blended_cost_per_subscription', 
+                      'session_utilization', 
+                      'operational_revenue', 
+                      'gross_margin_ltv_to_cac_ratio', 
+                      'average_revenue_per_user', 
+                      'average_forecasted_12_month_revenue_per_subscription', 
+                      'end_of_month_active_subscriptions',
+                      'created_subscriptions',
+                      'ended_subscriptions',
+                      'total_12_month_forecasted_ltv_contribution',
+                      'digital_marketing_spend',
+                      'coach_cost',
+                      'retained_subscriptions_at_31_days_from_created',
+                      'retained_subscriptions_at_61_days_from_created',
+                      'retained_subscriptions_at_91_days_from_created',
+                      'retention_rate_at_31_days_from_created',
+                      'retention_rate_at_61_days_from_created',
+                      'retention_rate_at_91_days_from_created']
+
+      - name: metric_value
+        description: "The computed value of the metric"
+
+      - name: previous_metric_value
+        description: "The previous month computed value of the metric"
+
+      - name: target_metric_value
+        description: >
+          The manually set target for a given metric by business stakeholders. This is stored in a google sheet, located at 
+          https://docs.google.com/spreadsheets/d/1cyqXixB94Jn7__bU4mM09egT_Y9Wh4tOxb1KN5HPlqM/edit#gid=0
+
+      - name: metric_target_value_percent_obtained
+        description: "The percentage of the calculated metric relative to the set target. If greater than 100%, the computed metric exceeded BetterUp set targets."
+
+      - name: month_over_month_metric_percent_change
+        description: "A percent change calculation to track month over month fluctuations in computed metric values"

@@ -1,0 +1,36 @@
+version: 2
+models:
+  - name: dbt_contract_opportunities
+    description: >
+      Presents the valid Contract models and creates a row for each unique (contract_id, opportunity id) pair.
+      Contains only Contracts that have a name defined.
+
+    columns:
+      - name: contract_id
+        description: Unique identifier for the contract
+        tests:
+          - not_null
+
+      - name: name
+        description: Name of the Contract
+        tests:
+          - not_null
+
+      - name: sfdc_opportunity_id
+        description: Salesforce opportunity identifer that belongs to this Contract
+        tests:
+          - relationships:
+              to: ref('int_sfdc__opportunities')
+              field: sfdc_opportunity_id
+
+      - name: organization_id
+        description: Which organization this Contract belongs to
+
+      - name: sfdc_account_id
+        description: Which Salesforce Account this Contract belongs to
+        tests:
+            - relationships:
+                to: ref('stg_sfdc__accounts')
+                field: sfdc_account_id
+                config:
+                  where: "sfdc_account_id <> '123456789123456789'"

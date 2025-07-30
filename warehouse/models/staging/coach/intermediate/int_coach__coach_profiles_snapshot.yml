@@ -1,0 +1,106 @@
+version: 2
+
+models:
+  - name: int_coach__coach_profiles_snapshot
+    description: ""
+    tests:
+#     - testing that Coach Profile UUID and coach ID are 1:1
+      - unique:
+          column_name: "(coach_id || '-' || valid_from || '-' || valid_to)"
+
+    columns:
+      - name: history_primary_key
+        description: "Snapshot model primary key is concatenated Coach Profile UUID + snapshot valid to / from timestamps"
+        tests:
+          - unique
+          - not_null
+
+      - name: coach_profile_id
+        description: ""
+
+      - name: coach_profile_uuid
+        description: ""
+
+      - name: coach_id
+        description: ""
+
+      - name: user_uuid
+        description: ""
+
+      - name: created_at
+        description: ""
+
+      - name: updated_at
+        description: ""
+
+      - name: is_primary_coach
+        description: ""
+
+      - name: is_consumer
+        description: ""
+
+      - name: is_on_demand_coach
+        description: ""
+
+      - name: is_qa_coach
+        description: ""
+
+      - name: is_care_coach
+        description: ""
+
+      - name: is_peer_coach
+        description: ""
+
+      - name: is_group_coach
+        description: ""
+
+      - name: hiring_tier
+        description: ""
+
+      - name: segment_priority_level
+        description: ""
+
+      - name: staffing_languages
+        description: ""
+
+      - name: staffing_tier
+        description: ""
+
+      - name: coaching_cloud
+        description: ""
+
+      - name: coaching_varieties
+        description: ""
+
+      - name: staffable_state
+        description: ""
+
+      - name: is_eea_eligible
+        description: ""
+
+      - name: is_fed_eligible
+        description: ""
+
+      - name: preferred_weekly_hours
+        description: ""
+      
+      - name: preferred_weekly_hours_updated_at
+        description: ""
+
+      - name: max_member_count
+        description: ""
+
+      - name: valid_from
+        description: ""
+
+      - name: valid_to
+        description: ""
+
+      - name: is_current_version
+        description: ""
+
+      - name: version
+        description: ""
+
+      - name: is_last_snapshot_of_day
+        description: ""

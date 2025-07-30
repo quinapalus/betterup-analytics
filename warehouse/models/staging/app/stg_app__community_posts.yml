@@ -1,0 +1,55 @@
+version: 2
+models:
+  - name: stg_app__community_posts
+    description: The stg_app__community_posts model stores data related to user-created
+      posts in an online community platform. The model contains fields for each post's
+      unique ID, the group to which the post belongs, the user who created the post,
+      the body of the post, the number of comments, and image status. Additionally,
+      each post is given timestamps for when it was created, deleted, published, can
+      be last edited, and updated. [GenAI Description]
+    columns:
+      - name: community_post_id
+        description: The community_post_id column stores the ID of a community post.
+          [GenAI Description]
+        tests:
+          - unique
+          - not_null
+
+      - name: group_id
+        description: "'group_id' represents the id of the group associated with a\
+          \ community post. [GenAI Description]"
+
+      - name: user_id
+        description: The user_id column stores the unique identifier of the user who
+          created the post. [GenAI Description]
+
+      - name: body
+        description: The 'body' column holds the content of app community posts. [GenAI
+          Description]
+
+      - name: comments_count
+        description: The number of comments associated with each post. [GenAI Description]
+
+      - name: image_status
+        description: "'image_status' indicates whether an image is present in the\
+          \ community post. [GenAI Description]"
+
+      - name: created_at
+        description: The 'created_at' column contains the timestamp of when the post
+          in the community was created. [GenAI Description]
+
+      - name: deleted_at
+        description: The 'deleted_at' column stores a timestamp of when the community
+          post was deleted. [GenAI Description]
+
+      - name: published_at
+        description: The "published_at" column stores the timestamp of when the community
+          post was published. [GenAI Description]
+
+      - name: last_edited_at
+        description: last_edited_at is the timestamp of when the post was last edited.
+          [GenAI Description]
+
+      - name: updated_at
+        description: The 'updated_at' column contains the timestamp of the last update
+          made to the community post. [GenAI Description]

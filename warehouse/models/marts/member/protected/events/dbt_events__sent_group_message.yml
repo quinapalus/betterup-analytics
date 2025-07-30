@@ -1,0 +1,51 @@
+version: 2
+
+models:
+  - name: dbt_events__sent_group_message
+    description: dbt_events__sent_group_message is a model that consists of records
+      of the events of a user sending a group message in a coaching cohort. It includes
+      fields for the user's unique ID, the event's timestamp, the event action (e.g.
+      'sent'), the event object (e.g. 'group_message'), a combination of the event
+      action and object, the associated record type of the event (e.g. 'GroupCoachingCohort'),
+      the associated record ID of the event, and attributes of the event. [GenAI Description]
+    columns:
+      - name: _unique
+        description: The '_unique' column is a surrogate key generated from the combination
+          of member_id, event_at, event_object, and associated_record_id columns.
+          [GenAI Description]
+        tests:
+          - unique
+          - not_null
+
+      - name: member_id
+        description: "'member_id' is the unique identifier of the user associated\
+          \ with an engagement event. [GenAI Description]"
+
+      - name: event_at
+        description: The 'event_at' column contains the date and time a member sent
+          a group message. [GenAI Description]
+
+      - name: event_action
+        description: The 'event_action' column captures the type of action performed
+          by a user with relation to an eventable object. [GenAI Description]
+
+      - name: event_object
+        description: This column defines the type of action performed in the event,
+          which in this case is sending a group message. [GenAI Description]
+
+      - name: event_action_and_object
+        description: The column 'event_action_and_object' stores a single value combining
+          the event action (verb) and event object, created from the 'verb' and 'eventable_subject'
+          columns. [GenAI Description]
+
+      - name: associated_record_type
+        description: The 'associated_record_type' column contains the type of associated
+          record connected to each event generated. [GenAI Description]
+
+      - name: associated_record_id
+        description: The 'associated_record_id' column stores the unique identifier
+          of the GroupCoachingCohort associated with each event. [GenAI Description]
+
+      - name: attributes
+        description: The 'attributes' column contains an object constructed from eventable
+          attributes related to group messages sent. [GenAI Description]

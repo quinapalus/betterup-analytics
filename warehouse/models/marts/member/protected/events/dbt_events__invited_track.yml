@@ -1,0 +1,51 @@
+version: 2
+
+models:
+  - name: dbt_events__invited_track
+    description: dbt_events__invited_track is a model which captures events related
+      to members being invited to tracks. The model contains dbt_events__invited_track_id,
+      member_id, event_at, event_action, event_object, event_action_and_object, associated_record_type,
+      associated_record_id, and attributes fields. It has relationships to one or
+      more parent models, containing descriptions of said models. The raw SQL code
+      is used to create the model, which captures events involving members being invited
+      to tracks and the associated information related to them. [GenAI Description]
+    columns:
+      - name: dbt_events__invited_track_id
+        description: Surrogate key of MEMBER_ID, ASSOCIATED_RECORD_ID (TRACK_ASSIGNMENT_ID)
+        tests:
+          - not_null
+          - unique
+
+      - name: member_id
+        description: The 'member_id' column contains a unique identifier for the member
+          who is assigned to a track. [GenAI Description]
+
+      - name: event_at
+        description: The 'event_at' column stores the datetime when the user was invited
+          to the track. [GenAI Description]
+
+      - name: event_action
+        description: The column 'event_action' contains the action taken, 'invited',
+          for each record of data in the associated model, 'TrackAssignment'. [GenAI
+          Description]
+
+      - name: event_object
+        description: The column 'event_object' contains the object associated with
+          the event, which is "track" in this case. [GenAI Description]
+
+      - name: event_action_and_object
+        description: This column combines the event action and object into one field,
+          providing the action taken on the event object. [GenAI Description]
+
+      - name: associated_record_type
+        description: The 'associated_record_type' column provides the record type
+          associated with each tracked event entry, such as 'TrackAssignment'. [GenAI
+          Description]
+
+      - name: associated_record_id
+        description: The 'associated_record_id' column contains the Track Assignment
+          ID of the invited track associated with each member. [GenAI Description]
+
+      - name: attributes
+        description: The 'attributes' column contains information about a track assignment,
+          such as the number of assignments and if the member is open. [GenAI Description]

@@ -1,0 +1,7 @@
+creation_rules:
+  - path_regex: 'gov-prod(.*).values.yaml$'
+    kms: "arn:aws-us-gov:kms:us-gov-west-1:042954701138:key/0b5818fd-089e-4e36-b700-8082c8fa8a2c"
+  - path_regex: 'gov-stage(.*).values.yaml$'
+    kms: "arn:aws-us-gov:kms:us-gov-west-1:042958689892:key/4a7d896d-6737-4d60-8d7f-6f299ba3ee29"
+  - path_regex: 'gov-dev(.*).values.yaml$'
+    kms: "arn:aws-us-gov:kms:us-gov-west-1:042958689892:key/760fb6d7-6946-4d0a-b6b5-2e32e82858b0"

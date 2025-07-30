@@ -1,0 +1,26 @@
+version: 2
+
+sources:
+  - name: app
+    database: raw
+    ## Schema is dynamic based on the DEPLOY_ENVIRONMENT environment variable.
+    schema: "{{ 'airbyte_app' if env_var('DEPLOYMENT_ENVIRONMENT', '') == 'US Gov' else 'stitch_app_v2' }}"
+
+# tables listed below must match the source (raw) table names
+    tables:
+      - name: coach_profile_specialist_verticals #this is supposed to be moved to a centralized DB by the Coach Innovation Squad
+
+
+  - name: coach
+    database: raw
+    ## Schema is dynamic based on the DEPLOY_ENVIRONMENT environment variable.
+    schema: "{{ 'airbyte_coach' if env_var('DEPLOYMENT_ENVIRONMENT', '') == 'US Gov' else 'stitch_coach' }}"
+
+    tables:
+      - name: coach_profile_solutions
+      - name: coach_qualifications
+      - name: coach_profiles
+      - name: coach_growth_path_pay_rates
+      - name: profile_island_attributes
+      - name: base_pay_rates
+      - name: coach_profile_pay_rates

@@ -1,0 +1,261 @@
+version: 2
+
+sources:
+  - name: app
+    database: raw
+    ## Schema is dynamic based on the DEPLOY_ENVIRONMENT environment variable.
+    ## But defaults to 'stitch_app' if not set.
+    schema: "{{ 'airbyte_app' if env_var('DEPLOYMENT_ENVIRONMENT', '') == 'US Gov' else 'stitch_app_v2' }}"
+
+# tables listed below must match the source (raw) table names
+    tables:
+      - name: account_requests
+      - name: active_storage_attachments
+      - name: activities
+      - name: activity_notes
+      - name: admin_configurations
+      - name: appointments
+      - name: aspiration_timeframes
+      - name: aspirations
+      - name: assessment_contributors
+      - name: assessment_item_responses
+      - name: assessments
+      - name: billable_events
+      - name: calls
+      - name: call_events
+      - name: care_configurations
+      - name: care_profiles
+      - name: care_topics
+      - name: care_topic_selections
+      - name: client_notes_development_topics
+      - name: client_notes
+      - name: coach_assignments
+      - name: coach_configurations
+      - name: coach_growth_path_pay_rates
+      - name: coach_recommendations
+      - name: coach_recommendation_sets
+      - name: competency_mappings
+      - name: community_posts
+      - name: community_groups
+      - name: community_comments
+      - name: comms_notifications
+      - name: comms_mailer_deliveries
+      - name: connect_configurations
+      - name: consumer_gift_cards
+      - name: consumer_products
+      - name: construct_item_mappings
+      - name: consumer_subscriptions
+      - name: contracts
+      - name: contract_line_items
+      - name: conversations
+      - name: conversation_participants
+      - name: cpq2_migration_statuses
+      - name: dedicated_configurations
+      - name: development_topics
+      - name: direct_payer_configurations
+      - name: engagement_events
+      - name: experience_configuration_assignments
+      - name: feedback_requests
+      - name: feedback_contributors
+      - name: generated_messages
+      - name: goal_check_ins
+        identifier: objective_check_ins
+      - name: goal_check_in_emotions
+        identifier: objective_check_in_emotions
+      - name: goal_skills
+        identifier: skill_objectives
+      - name: goals
+        identifier: objectives
+      - name: goal_actions
+        identifier: objective_actions
+      - name: goal_obstacles
+        identifier: objective_obstacles
+      - name: goal_outcomes
+        identifier: objective_outcomes
+      - name: group_coaching_appointments
+      - name: group_coaching_cohorts
+      - name: group_coaching_config_session_duration_settings
+      - name: group_coaching_curriculum_skills
+      - name: group_coaching_curriculums
+      - name: group_coaching_registrations
+      - name: group_coaching_series
+      - name: group_coaching_series_tracks
+      - name: group_coaching_series_track_assignments
+      - name: group_coaching_sessions
+      - name: group_coaching_session_curriculums
+      - name: groups
+      - name: growth_focus_area_selections
+      - name: growth_focus_areas
+      - name: growth_maps
+      - name: hcm_sync_runs
+      - name: integration_events
+      - name: invitations
+      - name: item_mappings
+      - name: lead_metadata_attributes
+      - name: manager_feedback_flows
+      - name: member_profiles
+      - name: mentor_assignments
+      - name: messages
+      - name: member_configurations
+      - name: milestones
+      - name: notes
+      - name: on_demand_configurations
+      - name: one_on_one_relationships
+      - name: one_on_one_topics
+      - name: organizations
+      - name: organization_contacts
+      - name: partner_configurations
+      - name: pause_intervals
+      - name: products
+      - name: product_subscription_assignments
+      - name: product_subscription_assignment_extension_logs
+      - name: program_journey_assignments
+      - name: product_subscription_assignment_migration_audits
+      - name: product_subscriptions
+      - name: reactions
+      - name: recommendation_indicators
+      - name: reporting_group_engagement_metrics
+      - name: reflection_points
+      - name: reporting_groups
+      - name: reporting_group_organizations
+      - name: reporting_group_records
+      - name: resource_development_topics
+      - name: resource_list_items
+      - name: resource_lists
+      - name: resource_skills
+      - name: resources
+      - name: roles
+      - name: scheduled_invitations
+      - name: scheduled_jobs
+      - name: scores
+      - name: second_versions
+      - name: session_credits
+      - name: sessions
+        identifier: appointments
+      - name: session_recordings
+      - name: skill_progressions
+      - name: skills
+      - name: story_coaching_episodes
+      - name: testimonials
+      - name: subscription_terms
+      - name: timeslots
+      - name: tracks
+      - name: track_assignments
+      - name: user_attribute_fields
+      - name: user_attribute_imports
+      - name: user_attribute_internal_fields
+      - name: user_attribute_records
+      - name: user_attribute_values
+      - name: user_attributes
+      - name: user_groups
+      - name: users
+      - name: users_roles
+      - name: user_role_changes
+      - name: workday_configurations
+      - name: member_goals
+        identifier: goals
+      - name: member_goal_actions
+        identifier: goal_actions
+
+  - name: app_archive
+    database: raw
+    schema: app_archive
+    tables:
+      - name: versions
+      - name: versions_coach_profile
+      - name: call_events
+      - name: versions_coach_profile_pay_rates
+      - name: account_authorizations
+      - name: account_requests
+      - name: active_storage_attachments
+      - name: activities
+      - name: activity_notes
+      - name: appointments
+      - name: assessment_contributors
+      - name: assessment_item_responses
+      - name: assessments
+      - name: billable_event_imports
+      - name: billable_events
+      - name: client_notes
+      - name: coach_assignments
+      - name: coach_profile_specialist_verticals
+      - name: coach_recommendations
+      - name: comms_notifications
+      - name: construct_item_mappings
+      - name: consumer_product_prices
+      - name: consumer_products
+      - name: contract_line_items
+      - name: contracts
+      - name: conversation_participants
+      - name: conversations
+      - name: experience_configuration_assignments
+      - name: explore_categories
+      - name: group_coaching_appointments
+      - name: group_coaching_cohorts
+      - name: group_coaching_curriculum_skills
+      - name: group_coaching_registrations
+      - name: group_coaching_series_tracks
+      - name: group_coaching_session_curriculums
+      - name: group_coaching_sessions
+      - name: groups
+      - name: growth_focus_area_selections
+      - name: growth_focus_area_skills
+      - name: growth_maps
+      - name: growth_plan_items
+      - name: hcm_sftp_configurations
+      - name: invitations
+      - name: item_mappings
+      - name: linked_accounts
+      - name: member_development_topics
+      - name: messages
+      - name: milestones
+      - name: notes
+      - name: nylas_accounts
+      - name: nylas_event_timeslots
+      - name: nylas_events
+      - name: objectives
+      - name: organization_contacts
+      - name: pause_intervals
+      - name: product_subscription_assignment_migration_audits
+      - name: product_subscription_assignments
+      - name: program_journey_stages
+      - name: reflection_points
+      - name: reporting_group_engagement_metrics
+      - name: reporting_group_organizations
+      - name: reporting_group_records
+      - name: reporting_groups
+      - name: resource_assets
+      - name: resource_development_topics
+      - name: resource_list_items
+      - name: resource_lists
+      - name: resource_recommendations
+      - name: resource_skills
+      - name: roles
+      - name: scores
+      - name: second_versions
+      - name: session_recordings
+      - name: skill_objectives
+      - name: taggings
+      - name: tags
+      - name: timeslots
+      - name: track_assignment_specialist_verticals
+      - name: track_assignments
+      - name: tracks_specialist_verticals
+      - name: user_attribute_records
+      - name: user_attribute_values
+      - name: user_attributes
+      - name: user_groups
+      - name: users
+      - name: users_roles
+
+  - name: p2pc
+    database: raw
+    schema: p2pc
+    tables:
+      - name: call_events
+
+  - name: app_temp
+    database: raw
+    schema: "{{ 'airbyte_app' if env_var('DEPLOYMENT_ENVIRONMENT', '') == 'US Gov' else 'stitch_app_temp' }}"
+    tables:
+      - name: coach_recommendation_sets

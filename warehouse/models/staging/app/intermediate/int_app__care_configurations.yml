@@ -1,0 +1,14 @@
+version: 2
+
+models:
+  - name: int_app__care_configurations
+    columns:
+      - name: primary_key
+        description: Unique identifier
+        tests:
+          - not_null
+          - unique
+    description: This model stores data on assigned Care Configurations by Track ID.
+      It is derived from two source datasets, stg_app__care_configurations and stg_app__experience_configuration_assignments,
+      and the model outputs fields like Track ID, Care Configuration ID, and more.
+      It is used for classification purposes. [GenAI Description]

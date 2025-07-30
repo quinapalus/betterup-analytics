@@ -1,0 +1,28 @@
+version: 2
+
+models:
+  - name: int_fountain__applicant_attributes
+    description: "Stores coach application attributes that have a many to one relationship with applications. Language, ethnicities and certifications are examples of these attributes.
+                  The grain is one row per application, per attribuite per attribute value"
+    columns:
+      - name: applicant_id
+        description: "ID of the applicant"
+        tests:
+          - not_null
+
+      - name: attribute_name
+        description: "Name of the attribute"
+        tests:
+          - accepted_values:
+              values: ['Coaching Languages','Race Ethnicity','Coaching Credential']
+
+      - name: attribute_value
+        description: "Value of the attribute"
+        tests:
+          - not_null
+
+      - name: primary_key
+        description: "Surrogate primary key created from applicant_id, attribute_name and attribute_value."
+        tests:
+          - unique
+          - not_null

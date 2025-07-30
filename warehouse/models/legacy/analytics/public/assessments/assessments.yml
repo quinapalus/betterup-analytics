@@ -1,0 +1,89 @@
+version: 2
+
+models:
+  - name: assessments
+    description: The DBT Model Assessments allow users to capture data and insights
+      from assessments offered through applications, as well as store and link assessment-specific
+      information to users for reporting purposes. The model includes fields such
+      as assessment ID, creator ID, type, creation and expiration dates, user ID,
+      associated record type, and responses. It also has relationships with the parent
+      models, such as assessment name or user role, for better understanding of the
+      data stored. [GenAI Description]
+    columns:
+      - name: assessment_id
+        description: The 'assessment_id' column is a unique identifier for each assessment
+          record. [GenAI Description]
+        tests:
+          - unique
+          - not_null
+
+      - name: creator_id
+        description: The 'creator_id' column contains the unique identifier for the
+          creator of the assessment. [GenAI Description]
+
+      - name: type
+        description: The 'type' column stores the type of assessment being taken.
+          [GenAI Description]
+
+      - name: questions_version
+        description: The "questions_version" column stores the version of the assessment
+          that the subject responded to. [GenAI Description]
+
+      - name: created_at
+        description: The 'created_at' column contains the timestamp for when the assessment
+          was created. [GenAI Description]
+
+      - name: submitted_at
+        description: The 'submitted_at' column contains the timestamp of when an assessment
+          was submitted. [GenAI Description]
+
+      - name: expires_at
+        description: The column 'expires_at' stores the expiration date for the assessments
+          in the model. [GenAI Description]
+
+      - name: updated_at
+        description: The 'updated_at' column is a timestamp value denoting when an
+          entry in the assessments table was last updated. [GenAI Description]
+
+      - name: parent_id
+        description: parent_id is the unique identifier of the parent assessment associated
+          with each assessment. [GenAI Description]
+
+      - name: report_generated_at
+        description: The report_generated_at column contains the date and time when
+          a given assessment report was generated. [GenAI Description]
+
+      - name: assessment_configuration_id
+        description: The 'assessment_configuration_id' column identifies a specific
+          assessment configuration associated with each assessment record. [GenAI
+          Description]
+
+      - name: user_id
+        description: The 'user_id' column in the 'assessments' model stores the unique
+          identifier for the user who submitted the assessment. [GenAI Description]
+
+      - name: associated_record_type
+        description: The 'associated_record_type' column in the 'assessments' model
+          stores the type of a related record associated with the assessment. [GenAI
+          Description]
+
+      - name: associated_record_id
+        description: The 'associated_record_id' column stores the unique identifier
+          for the entity with which an assessment is associated. [GenAI Description]
+
+      - name: assessment_name
+        description: The 'assessment_name' column in this model stores the name of
+          an assessment, as it appears in the related GSheets Assessments model. [GenAI
+          Description]
+
+      - name: user_role
+        description: The 'user_role' column contains the user role for the corresponding
+          assessment. [GenAI Description]
+
+      - name: responses
+        description: The 'responses' column contains the answers submitted by users
+          for a given assessment. [GenAI Description]
+
+      - name: track_assignment_id
+        description: The 'track_assignment_id' column in the 'assessments' model stores
+          a unique identifier associated with an assessment. [GenAI Description]

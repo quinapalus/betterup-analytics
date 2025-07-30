@@ -1,0 +1,36 @@
+version: 2
+
+models:
+  - name: stg_sfdc__record_types
+    description: For documentation on the Salesforce record type Sobject read https://developer.salesforce.com/docs/atlas.en-us.object_reference.meta/object_reference/sforce_api_objects_recordtype.htm
+    columns:
+      - name: sfdc_record_type_id
+        description: The 'sfdc_record_type_id' column contains the Salesforce Record
+          Type ID. [GenAI Description]
+        tests:
+          - unique
+          - not_null
+
+      - name: record_type_created_by_id
+        description: "'record_type_created_by_id' is the ID of the user who created\
+          \ the record type. [GenAI Description]"
+
+      - name: record_type_name
+        description: The 'record_type_name' column contains the name of the Salesforce
+          Record Type. [GenAI Description]
+
+      - name: record_type_developer_name
+        description: The 'record_type_developer_name' column contains the developer-friendly
+          name of a Salesforce record type. [GenAI Description]
+
+      - name: sobject_type
+        description: The 'sobject_type' column identifies the Salesforce object to
+          which a record type applies. [GenAI Description]
+
+      - name: namespace_prefix
+        description: Namespace prefix indicates the organization the record type belongs
+          to. [GenAI Description]
+
+      - name: is_active_record_type
+        description: The 'is_active_record_type' column contains boolean values that
+          indicate whether the record type is active or not. [GenAI Description]

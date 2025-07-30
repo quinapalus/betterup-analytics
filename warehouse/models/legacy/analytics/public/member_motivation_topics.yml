@@ -1,0 +1,104 @@
+version: 2
+
+models:
+  - name: member_motivation_topics
+    description: >
+      Calculate motivation-level metrics and proximal themes for each member
+
+    columns:
+      - name: member_motivation_topic_id
+        description: >
+          Surrogate key for this table made from a combination of member_id and 
+          topic_theme_id.
+        tests:
+          - not_null
+          - unique
+
+      - name: assessment_id
+        description: ""
+      
+      - name: member_id
+        description: Foreign key to Member associated with the given motivation.
+        tests:
+          - not_null
+
+      - name: topic_theme_id
+        description: Foreign key to associated Development Topic Theme.
+        tests:
+          - not_null
+          - relationships:
+              to: ref('stg_app__topic_themes')
+              field: topic_theme_id
+      
+      - name: motivation
+        description: ""
+
+      - name: proximal_themes_category
+        description: >
+          Helper label field, useful for grouping motivations with 4, 5, 6, 7 proximal 
+          themes into a single '4 or more' bucket.
+
+      - name: proximal_themes_count
+        description: >
+          Total number of themes that are classified with relative distance <= 0.10 for 
+          the associated motivation.
+
+      - name: relative_distance_to_next_topic_theme
+        description: >
+          Convenience field that calculates the delta in `relative_distance` between
+          the associated theme and the next closest theme for a given motivation.
+          Useful if you're trying to filter for motivations with the largest delta
+          between the 'primary' topic theme and next closest (secondary) topic theme.
+
+      - name: ranked_topic_theme_label
+        description: >
+          Convenience label with format: '[rank]: [Topic Theme Name] [relative distance
+           (for non-primary themes)]'
+
+      - name: ranked_theme_list
+        description: >
+          Ranked list of all development themes for the given motivation. Numbers in 
+          parentheses represent the relative distance for the given theme compared to the 
+          primary theme.
+
+      - name: topic_theme_rank
+        description: >
+          Rank of the associated topic theme for a given motivation. The "primary"
+          theme will have rank = 1, next closest theme will have rank = 2, and so on.
+        tests:
+          - not_null
+
+      - name: topic_score
+        description: ""
+
+      - name: is_motivation_resonably_focused
+        description: >
+          True, if the associated motivation is classified with 3 or fewer proximal themes
+      
+      - name: is_relevant_topic_theme
+        description: >
+          True, when motivation is reasonably focused *and* associated topic theme has 
+          relative distance <= 0.10
+
+      - name: is_primary_topic_theme
+        description: >
+          True, if the topic theme is classified as the primary theme for the given 
+          motivation, i.e. rank = 1.
+
+      - name: is_proximal_topic_theme
+        description: >
+          True, when relative_distance for associated development topic theme is <= 0.10
+        
+      - name: classified_date
+        description: >
+          Date when the motivation was classified. Note this does not represent the date 
+          when the motivation was submitted by the member.
+
+      - name: scored_at
+        description: ""
+
+      - name: scored_date
+        description: ""
+
+      - name: submitted_at
+        description: ""

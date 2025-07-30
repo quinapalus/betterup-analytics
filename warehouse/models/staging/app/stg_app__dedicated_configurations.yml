@@ -1,0 +1,93 @@
+version: 2
+
+models:
+  - name: stg_app__dedicated_configurations
+    description: This DBT model stores fields related to dedicated configurations
+      for a app. It contains fields such as dedicated_configuration_id, member_levels,
+      languages, staffing_risk_levels, staffing_tiers, staffing_industries, num_reflection_points,
+      reflection_point_interval_days, reflection_point_interval_appointments, one_month_survey_enabled,
+      cached_tag_list, cached_account_tag_list, cached_certification_tag_list, cached_focus_tag_list,
+      cached_postgrad_tag_list, cached_product_tag_list, cached_professional_tag_list,
+      cached_segment_tag_list, and client_limit. [GenAI Description]
+    columns:
+      - name: dedicated_configuration_id
+        description: "'dedicated_configuration_id' is the unique identifier assigned\
+          \ to each configuration, with various settings related to members, languages,\
+          \ staffing, and surveys. [GenAI Description]"
+        tests:
+          - unique
+          - not_null
+
+      - name: member_levels
+        description: "'The 'member_levels' column specifies the membership level of\
+          \ a given dedicated configuration.' [GenAI Description]"
+
+      - name: languages
+        description: The 'languages' column contains a list of the languages supported
+          by the dedicated configurations. [GenAI Description]
+
+      - name: staffing_risk_levels
+        description: The 'staffing_risk_levels' column holds values that indicate
+          the level of risk associated with each staffing configuration. [GenAI Description]
+
+      - name: staffing_tiers
+        description: The 'staffing_tiers' column defines different levels of staffing
+          such as basic, intermediate, and advanced. [GenAI Description]
+
+      - name: staffing_industries
+        description: The 'staffing_industries' column contains a list of industries
+          where staff will be requested to fill roles. [GenAI Description]
+
+      - name: num_reflection_points
+        description: "'num_reflection_points' denotes the number of times a customer\
+          \ is asked a reflection point question over the course of their program.\
+          \ [GenAI Description]"
+
+      - name: reflection_point_interval_days
+        description: The 'reflection_point_interval_days' column contains the number
+          of days between reflection points for dedicated members. [GenAI Description]
+
+      - name: reflection_point_interval_appointments
+        description: The column 'reflection_point_interval_appointments' specifies
+          the amount of appointments to be made between reflection points. [GenAI
+          Description]
+
+      - name: one_month_survey_enabled
+        description: The 'one_month_survey_enabled' column indicates whether or not
+          survey functionality is enabled for a given member. [GenAI Description]
+
+      - name: cached_tag_list
+        description: "'cached_tag_list' stores the list of all tags associated with\
+          \ this dedicated configurations record. [GenAI Description]"
+
+      - name: cached_account_tag_list
+        description: The 'cached_account_tag_list' column holds a cached list of account
+          tags associated with a dedicated configuration. [GenAI Description]
+
+      - name: cached_certification_tag_list
+        description: This column contains a comma-separated list of all certification
+          tags associated with a dedicated configuration. [GenAI Description]
+
+      - name: cached_focus_tag_list
+        description: This column contains the list of focus tags associated with each
+          dedicated configuration. [GenAI Description]
+
+      - name: cached_postgrad_tag_list
+        description: This column contains a list of all postgraduate tags associated
+          with the dedicated configuration. [GenAI Description]
+
+      - name: cached_product_tag_list
+        description: The 'cached_product_tag_list' column contains a comma-separated
+          list of product tags relevant to the dedicated configuration. [GenAI Description]
+
+      - name: cached_professional_tag_list
+        description: The column 'cached_professional_tag_list' stores a cached list
+          of professional tags associated with the profile. [GenAI Description]
+
+      - name: cached_segment_tag_list
+        description: The 'cached_segment_tag_list' column contains a list of segment
+          tags for a dedicated configuration. [GenAI Description]
+
+      - name: client_limit
+        description: '"client_limit" represents the maximum number of clients that
+          can be associated with a dedicated configuration. [GenAI Description]'

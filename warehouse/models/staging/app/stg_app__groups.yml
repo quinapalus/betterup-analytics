@@ -1,0 +1,38 @@
+version: 2
+models:
+  - name: stg_app__groups
+    description: The DBT model stg_app__groups is used to store information from the
+      raw.stitch_app.groups table, including group_id, organization_id, user_groups_count,
+      migration_version, type, created_at and updated_at. [GenAI Description]
+    columns:
+      - name: group_id
+        description: "'group_id' is a unique identifier for a group with various attributes\
+          \ such as organization_id, user_groups_count, type, created_at, and updated_at.\
+          \ [GenAI Description]"
+        tests:
+          - unique
+          - not_null
+
+      - name: organization_id
+        description: The 'organization_id' column stores the unique identifier of
+          the organization associated with the group. [GenAI Description]
+
+      - name: user_groups_count
+        description: The column 'user_groups_count' records the number of users in
+          a particular group. [GenAI Description]
+
+      - name: migration_version
+        description: The 'migration_version' column records the version of the group
+          at the time of migration. [GenAI Description]
+
+      - name: type
+        description: The 'type' column stores the category of each group, e.g. 'user',
+          'pro', etc. [GenAI Description]
+
+      - name: created_at
+        description: The 'created_at' column stores the timestamp of when the group
+          was created. [GenAI Description]
+
+      - name: updated_at
+        description: "'updated_at' records the timestamp when the record was last\
+          \ updated. [GenAI Description]"

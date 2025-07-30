@@ -1,0 +1,16 @@
+version: 2
+
+models:
+  - name: stg_csv__iana_tz_info
+    description: ""
+    columns:
+      - name: country_code_iso
+        description: ""
+
+      - name: tz_iana
+        description: ""
+        tests:
+          - not_null
+          - unique
+
+

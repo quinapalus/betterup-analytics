@@ -1,0 +1,27 @@
+version: 2
+models:
+  - name: stg_app__organization_contacts
+    description: DBT Model stg_app__organization_contacts is a staging layer representation
+      of raw data which stores information about user contacts within an organization.
+      The model contains the organization_contact_id, organization_id, user_id, and
+      contact_type fields to track which users are associated with which organization,
+      and their contact types. [GenAI Description]
+    columns:
+      - name: organization_contact_id
+        description: The column 'organization_contact_id' is the unique identifier
+          for an organization contact. [GenAI Description]
+        tests:
+          - unique
+          - not_null
+
+      - name: organization_id
+        description: Organization ID is a foreign key referencing the organization
+          a contact belongs to. [GenAI Description]
+
+      - name: user_id
+        description: User ID of the contact associated with the organization. [GenAI
+          Description]
+
+      - name: contact_type
+        description: The 'contact_type' column indicates the type of contact held
+          by a user (e.g. Primary, Secondary, Admin). [GenAI Description]

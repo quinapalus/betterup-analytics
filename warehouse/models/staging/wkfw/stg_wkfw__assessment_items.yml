@@ -1,0 +1,53 @@
+version: 2
+
+models:
+  - name: stg_wkfw__assessment_items
+    description: The stg_wkfw__assessment_items DBT model stores information pertaining
+      to questionnaire items. It contains fields such as 'assessment_item_id', 'is_reverse',
+      'is_skippable', 'position', 'prompt', 'question_key', 'question_type', and 'subheading_i18n',
+      as well as the created_at and updated_at timestamps. It also includes English
+      translations of the subheading and prompt fields, so they are human readable.
+      This model can be used to create a query of questionnaire items. [GenAI Description]
+    columns:
+      - name: assessment_item_id
+        description: The assessment_item_id column stores the unique identifier of
+          each assessment item. [GenAI Description]
+        tests:
+          - not_null
+          - unique
+
+      - name: is_reverse
+        description: The 'is_reverse' column indicates whether the question is answered
+          in reverse (where a "yes" answer indicates a negative outcome). [GenAI Description]
+
+      - name: is_skippable
+        description: The is_skippable column indicates if a particular assessment
+          item can be skipped. [GenAI Description]
+
+      - name: position
+        description: The 'position' column denotes the position of a particular assessment
+          item in the assessment. [GenAI Description]
+
+      - name: prompt
+        description: The "prompt" column is the associated text to the assessment
+          item, extracted from its prompt_i18n field. [GenAI Description]
+
+      - name: question_key
+        description: The "question_key" column stores the unique key associated with
+          each assessment item. [GenAI Description]
+
+      - name: question_type
+        description: The 'question_type' column identifies the type of question used
+          in an assessment. [GenAI Description]
+
+      - name: subheading_i18n
+        description: The 'subheading_i18n' column contains internationalized subheadings
+          in JSON format, with optionally English versions parsed out. [GenAI Description]
+
+      - name: created_at
+        description: The 'created_at' column stores the timestamp of when a particular
+          assessment item was created. [GenAI Description]
+
+      - name: updated_at
+        description: "'updated_at' is a timestamp column tracking the date and time\
+          \ of the last update of an assessment item. [GenAI Description]"

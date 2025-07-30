@@ -1,0 +1,48 @@
+version: 2
+
+models:
+  - name: dbt_member_reporting_group_assignment_lead__onboarding_metrics
+    description: ""
+    columns:
+      - name: member_reporting_group_assignment_key
+        description: ""
+        tests:
+           - not_null
+           - unique
+
+      - name: member_id
+        description: ""
+        tests:
+           - not_null
+
+      - name: reporting_group_id
+        description: ""
+        tests:
+           - not_null        
+
+      - name: associated_assignment_id
+        description: ""
+        tests:
+           - not_null  
+
+      - name: first_psa_starts_at
+        description: ""
+
+      - name: program_invite_at
+        description: ""
+
+      - name: lead_access_ended_at
+        description: ""
+
+      - name: program_ended_at
+        description: ""
+
+      - name: activated_at
+        description: ""
+
+      - name: completed_onboarding_at
+        description: ""
+
+      - name: product_name
+        description: ""
+        

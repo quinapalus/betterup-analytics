@@ -1,0 +1,32 @@
+version: 2
+
+models:
+  - name: stg_app__versions_delete
+    description: This model stores information on destroyed records dervied from the `app_versions` table
+      for more efficient filtering in places where we need to remove destroyed records from
+      raw Stitch tables. Note that `Notification` records are excluded from this table due to
+      high volume of destroyed records and lack of any reporting needs on that table.Subset of Versions, DELETE Type Records Only
+
+    columns:
+      - name: version_id
+        description: Unique identifier of Versions
+        tests:
+          - unique
+          - not_null
+      - name: destroyed_at
+        description: UTC timestamp for when the record was destroyed.
+      - name: event
+      - name: item_id
+        description: Primary key of the destroyed record
+      - name: item_type
+        description: Rails class name for the destroyed record
+      - name: object
+      - name: object_changes
+      - name: user_agent
+      - name: whodunnit
+        description: Foreign key to `app_users` table, if record was detroyed by a user.
+      - name: whodunnit_job
+      - name: impersonated
+      - name: impersonated_user_id
+      - name: request_id
+      - name: whodunnit_jid

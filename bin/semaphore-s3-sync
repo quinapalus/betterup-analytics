@@ -1,0 +1,19 @@
+#!/bin/bash
+
+set -e
+set -o pipefail
+
+
+(
+  cd packages/target-s3
+  poetry install
+)
+
+(
+  cd packages/bu-tap-semaphore
+  poetry install 
+  poetry run create-semaphore-configs --token "$SEMAPHORE_TOKEN"
+  poetry run bu-tap-semaphore --config semaphore.json | (cd ../target-s3 && poetry run target-s3 -b "${SEMAPHORE_AWS_BUCKET}")
+)
+
+echo 'Done.'

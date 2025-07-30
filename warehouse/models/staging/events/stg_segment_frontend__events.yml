@@ -1,0 +1,73 @@
+version: 2
+models:
+  - name: stg_segment_frontend__events
+    description: >
+      Analytic events from Segment that were generated from the `betterup-app` frontend.
+
+    columns:
+      - name: event_id
+        description: Unique identifier of the event.
+        tests:
+          - unique
+          - not_null
+
+      - name: user_id
+        description: >
+          Unique identfier of the User. If `null` then the user has not been `identified`
+          when the event occurred.
+
+      - name: event_at
+        description: >
+          Specifies when the datapoint occurred, corrected for client-device clock skew.
+          See the Segment [documentation](https://segment.com/docs/spec/common/#timestamps) for more information.
+        tests:
+          - not_null
+
+      - name: event
+        description: Name of the event.
+
+      - name: event_text
+        description:
+          Human-readable name of the event.
+
+      - name: platform
+        description: Client platform, i.e. 'web'.
+
+      - name: context_library_version
+        description: Version of the library the generated the event.
+
+      - name: context_library_name
+        description: Name of the library that generated the event.
+
+      - name: context_campaign_medium
+        description: UTM campaign medium that resulted in the event call.
+
+      - name: context_campaign_name
+        description: UTM campaign name that resulted in the event call.
+
+      - name: context_campaign_source
+        description: UTM campaign source that resulted in the event call.
+
+      - name: context_campaign_term
+        description: UTM campaign term that resulted in the event call.
+
+      - name: context_page_path
+        description: Path of the page the event originated from (e.g. `"/frontend/calls/225987"`)
+
+      - name: context_page_referrer
+        description: URL of the referrer to this page.
+
+      - name: context_page_search
+        description: Seach parameters provided to the page
+
+      - name: context_page_title
+        description: Title of the page.
+
+      - name: context_page_url
+        description: Absolute URL of the page.
+
+      - name: context_user_agent
+        description: User agent of the client browser.
+
+      - name: anonymous_user_token
+        description: UUID assigned to the User in situations where an `identify` call has yet to be made.

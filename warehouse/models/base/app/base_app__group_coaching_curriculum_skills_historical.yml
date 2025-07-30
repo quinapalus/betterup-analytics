@@ -1,0 +1,14 @@
+version: 2
+
+models:
+  - name: base_app__group_coaching_curriculum_skills_historical
+    description: ""
+    columns:
+      - name: created_at
+      - name: group_coaching_curriculum_id
+      - name: id
+        tests:
+          - unique
+          - not_null
+      - name: skill_id
+      - name: updated_at

@@ -1,0 +1,268 @@
+version: 2
+
+models:
+  - name: anon_app_eu__tracks
+
+    columns:
+      - name: id
+        tests:
+          - unique
+          - not_null
+
+        description: The 'id' column contains unique identifiers for each track record.
+          [GenAI Description]
+        description: A boolean option to allow for weekly 45 minutes long recurring
+          sessions. [GenAI Description]
+      - name: cached_certification_tag_list
+        description: The 'cached_certification_tag_list' column is a list of certification
+          tags associated with a track. [GenAI Description]
+      - name: cached_focus_tag_list
+        description: Column 'cached_focus_tag_list' contains a cached list of focus
+          tags associated with the track. [GenAI Description]
+      - name: cached_professional_tag_list
+        description: Contains a list of professional-related\
+          \ tags associated with the track. [GenAI Description]
+      - name: care
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['true', 'false']
+        description: The 'care' column stores information on whether the track provides
+          care options to members. [GenAI Description]
+      - name: client_limit
+        description: The maximum count of clients allowed for a\
+          \ given track. [GenAI Description]
+      - name: coach_recommender_service_enabled
+        description: The column 'coach_recommender_service_enabled' indicates whether
+          the coach recommender service is enabled for this particular track. [GenAI
+          Description]
+      - name: coaching_cloud
+        tests:
+          - not_null
+        description: A boolean column indicating whether the track supports Coaching
+          Cloud chat rooms and activities. [GenAI Description]
+      - name: community
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['true', 'false']
+        description: The 'community' column indicates whether the track is open to
+          the general community or not. [GenAI Description]
+      - name: created_at
+        tests:
+          - not_null
+        description: The 'created_at' column contains a timestamp indicating when
+          a track was created. [GenAI Description]
+      - name: crisis_support_markdown_i18n
+        description: A column that stores multimedia\
+          \ content of text, images, and videos related to crisis support. [GenAI\
+          \ Description]
+      - name: customer_goals
+        description: The 'customer_goals' column contains user-defined goals they
+          wish to achieve in their coaching track. [GenAI Description]
+      - name: default_product_subscription_ends_at
+        description: The column 'default_product_subscription_ends_at' stores the
+          date/time when the default product subscription for this track was set to
+          expire. [GenAI Description]
+      - name: default_product_subscription_id
+        description: The 'default_product_subscription_id' column is an identifier
+          for the subscription associated with a track. [GenAI Description]
+      - name: default_resource_list_id
+        description: The column 'default_resource_list_id' holds the identifier of
+          the default resource list attached to the track. [GenAI Description]
+      - name: deployment_type
+        description: Provides information on the deployment mode\
+          \ of a particular track. [GenAI Description]
+      - name: disable_confirmation_email
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['true', 'false']
+        description: Indicates whether confirmation\
+          \ emails are disabled or not for this track. [GenAI Description]
+      - name: downloadable
+        description: The 'downloadable' column specifies whether this track can be
+          downloaded or not. [GenAI Description]
+      - name: eap_instructions_markdown_i18n
+        description: Contains language-specific\
+          \ instructions related to a track's Employee Assistance Program (EAP) feature.\
+          \ [GenAI Description]
+      - name: ends_on
+        description: The 'ends_on' column stores the end date for a track. [GenAI
+          Description]
+      - name: estimated_seat_count
+        description: Estimated seat count represents the estimated number of seats
+          owned by an organization for the track/program. [GenAI Description]
+      - name: extended_network
+        description: Column identifies which external companies\
+          \ are part of the track. [GenAI Description]
+      - name: external_resource_video_links
+        description: The external_resource_video_links column stores URLs associated
+          with external video resources related to the track. [GenAI Description]
+      - name: features
+        description: The 'features' column in this model contains a list of features
+          that are part of an EU Track. [GenAI Description]
+      - name: global_staffing_enabled
+        description: This column indicates if staffing from a global network of coaches
+          is enabled for the track. [GenAI Description]
+      - name: includes_behavioral_assessments
+        description: The 'includes_behavioral_assessments' column indicates whether
+          or not the track includes behavioral assessments. [GenAI Description]
+      - name: internal_notes
+        description: The 'internal_notes' column provides additional notes about the
+          track that are only viewable to internal users. [GenAI Description]
+      - name: launches_on
+        description: The 'launches_on' column tracks the date a track will launch.
+          [GenAI Description]
+      - name: manager_feedback_enabled
+        description: This column indicates if manager feedback is enabled or not in
+          the app. [GenAI Description]
+      - name: manager_required_360
+        description: Indicates whether managers are required\
+          \ to complete a 360-degree assessment when a Whole Person 360 program is\
+          \ enabled. [GenAI Description]
+      - name: member_levels
+        description: The 'member_levels' column contains the different tiers of membership
+          offered by the program under the track. [GenAI Description]
+      - name: minutes_limit
+        description: The minutes_limit column indicates the duration limit of individual
+          sessions for the track. [GenAI Description]
+      - name: minutes_used
+        description: The 'minutes_used' column stores the total number of minutes
+          used for a track. [GenAI Description]
+      - name: name
+        tests:
+          - not_null
+        description: The 'name' column stores human friendly names associated with
+          each customer track. [GenAI Description]
+      - name: num_reflection_points
+        tests:
+          - not_null
+        description: The 'num_reflection_points' column defines the number of reflection
+          points generated in the application. [GenAI Description]
+      - name: on_demand
+        description: Indicates whether the DBT model supports on-demand\
+          \ services. [GenAI Description]
+      - name: onboarding_assessment_type
+        description: Column contains type of assessment tool used for online onboarding
+          with the product. [GenAI Description]
+      - name: one_month_survey_enabled
+        description: Indicates whether a survey will be\
+          \ sent out one month after launch. [GenAI Description]
+      - name: organization_id
+        description: Refers to the ID of the organization associated\
+          \ with the track. [GenAI Description]
+      - name: overview
+        description: The overview column stores a textual, general description about
+          the track. [GenAI Description]
+      - name: peer
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['true', 'false']
+        description: The 'peer' column indicates whether clients and coaches can be
+          matched in a peer-to-peer coaching relationship. [GenAI Description]
+      - name: primary_coaching_enabled
+        description: A boolean field indicating whether primary coaching is enabled
+          for the track. [GenAI Description]
+      - name: program_briefing_automatic_payment
+        description: program_briefing_automatic_payment indicates whether a program
+          has automatic payment enabled for its briefing sessions. [GenAI Description]
+      - name: pulse_subdimensions
+        description: Is a list of metrics used to measure the\
+          \ progress of participants in a track program. [GenAI Description]
+      - name: reflection_point_interval_days
+        description: Is a column that indicates\
+          \ the frequency of reflection points recommended for users of this track.\
+          \ [GenAI Description]
+      - name: request_seats
+        description: The 'request_seats' column contains the amount of requested seats
+          for a track. [GenAI Description]
+      - name: restricted
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['true', 'false']
+        description: The 'restricted' column indicates whether the track is available
+          or restricted. [GenAI Description]
+      - name: salesforce_opportunity_identifier
+        description: The 'salesforce_opportunity_identifier' column stores the Salesforce
+          ID of the specific opportunity associated with a particular track. [GenAI
+          Description]
+      - name: salesforce_program_identifier
+        description: The 'salesforce_program_identifier' column identifies the program
+          associated with a Salesforce Opportunity Code. [GenAI Description]
+      - name: session_count
+        description: session_count is an aggregate column in the model, representing
+          the total number of sessions associated with each track. [GenAI Description]
+      - name: solution_id
+        description: The solution_id column contains a unique identifier for the track.
+          [GenAI Description]
+      - name: staffing_industries
+        description: The 'staffing_industries' column indicates the industries of
+          the staff, such as healthcare or finance, associated with the program. [GenAI
+          Description]
+      - name: staffing_risk_levels
+        description: The 'staffing_risk_levels' column is used to categorize levels
+          of staffing risk. [GenAI Description]
+      - name: staffing_tiers
+        description: The 'staffing_tiers' column stores the different tier levels
+          of the program. [GenAI Description]
+      - name: subscription_terms
+        description: The 'subscription_terms' column contains information about the
+          terms and requirements of a subscription related to the track. [GenAI Description]
+      - name: supported_session_lengths
+        description: The column 'supported_session_lengths' specifies the lengths
+          of sessions which are allowed in the model. [GenAI Description]
+      - name: track_assignments_activate_on_invite
+        description: This column specifies whether track assignments are activated
+          immediately upon an invite. [GenAI Description]
+      - name: track_template
+        description: The 'track_template' column stores the template used to instantiate
+          Tracks. [GenAI Description]
+      - name: updated_at
+        tests:
+          - not_null
+        description: The 'updated_at' column contains the date and time this record
+          was last modified. [GenAI Description]
+      - name: use_cases
+        description: The use_cases column contains the business use cases applicable
+          to the tracks within the organization. [GenAI Description]
+      - name: use_experience_configs
+        description: Stores whether program-wide Experience\
+          \ Config settings are enabled for the Track. [GenAI Description]
+      - name: valid_for_coaching
+        description: The valid_for_coaching column shows whether or not a track is
+          valid for coaching. [GenAI Description]
+      - name: videochat_recording_enabled
+        description: The 'videochat_recording_enabled' column specifies whether videochat
+          recording is enabled in tracks in the EU region. [GenAI Description]
+      - name: videochat_storage_persistence_enabled
+        description: Indicates whether the storage of videochat sessions is persistent.
+          [GenAI Description]
+      - name: videochat_transcription_enabled
+        description: The column 'videochat_transcription_enabled' indicates whether
+          transcription of video chats is enabled or not. [GenAI Description]
+      - name: whole_person180_enabled
+        description: The column 'whole_person180_enabled' indicates whether Whole
+          Person 180 is enabled for a given track on the EU region. [GenAI Description]
+      - name: whole_person360_enabled
+        description: The column 'whole_person360_enabled' indicates whether Whole
+          Person 360 is enabled for the track in question. [GenAI Description]
+      - name: whole_person360_manager_included
+        description: The 'whole_person360_manager_included' column indicates whether
+          the 360 WholePerson Evaluation survey includes a manager component or not.
+          [GenAI Description]
+      - name: whole_person_model_2
+        description: The column whole_person_model_2 contains information about the
+          model of whole person development used in the track. [GenAI Description]
+      - name: wpm_behavior_goals
+        description: Indicates the type of goals or objectives
+          set for people in the track. [GenAI Description]
+    description: The anon_app_eu__tracks model contains data about an app used for
+      coaching and self-improvement in Europe, such as minutes used and limits, care
+      and coaching methods, content for crisis support, customer goals, assessment
+      types, recommended seats, features, deployment types, staff industries, terms
+      of subscription, video chat capabilities, and Whole Person model settings. It
+      also contains relationships and raw SQL code to allow it to access sources of
+      this data. [GenAI Description]

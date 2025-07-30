@@ -1,0 +1,30 @@
+version: 2
+
+models:
+  - name: base_app__track_assignments_historical
+    description: ""
+    columns:
+      - name: created_at
+      - name: ended_at
+      - name: ended_reason
+      - name: ends_on
+      - name: extended_network
+      - name: hidden
+      - name: id
+        tests:
+          - unique
+          - not_null
+      - name: minutes_limit
+      - name: minutes_used
+      - name: on_demand
+      - name: primary_coaching_enabled
+      - name: primary_coaching_ends_at
+      - name: program_change_notifications_enabled
+      - name: track_id
+      - name: updated_at
+      - name: user_id
+      - name: primary_coaching_starts_at
+      - name: team_insights_dashboard
+      - name: care
+      - name: peer
+      - name: community

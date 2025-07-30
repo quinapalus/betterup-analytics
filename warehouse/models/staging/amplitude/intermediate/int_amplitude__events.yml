@@ -1,0 +1,16 @@
+version: 2
+
+models:
+  - name: int_amplitude__events
+    description: >
+      Amplitude experiment events, filtering records less than 24 hours from the current
+      date.
+    columns:
+      - name: uuid
+        description: >
+          A unique identifier per row (event sent). 
+        tests:
+          - unique:
+              config:
+                severity: warn
+          - not_null

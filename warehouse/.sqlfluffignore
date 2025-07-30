@@ -1,0 +1,14 @@
+# ignore snapshots
+snapshots/
+
+#ignore target
+target/
+
+
+#other
+dbt_packages/
+logs/
+macros/
+utils/
+analyses/
+config/

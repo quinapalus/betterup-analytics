@@ -1,0 +1,34 @@
+# Order is important; the last matching pattern takes precedence.
+# default route to data-operations-squad
+* @betterup/data-operations-squad
+
+
+# route to analytics-eng
+/*.md @betterup/analytics-eng 
+/warehouse/ @betterup/analytics-eng
+/montecarlo/  @betterup/analytics-eng
+# Phone numbers are provided for cases requiring urgent PR Review.
+
+# Taylor O’Meara - (916) 380-2080
+# Xavier Mafe - (678) 412-8525
+# Karolina Wypisniak - (415) 200-9824
+# Talia Brown - (954) 816-9834
+# Tanner Corbin - (405) 488-4733
+# Adrian Lievano - (786) 515-4282
+
+# routes warehouse deployment files to data ops
+/warehouse/.fedramp @betterup/data-operations-squad
+/warehouse/Makefile @betterup/data-operations-squad
+
+# routes DBT dependency and config files to both analytics and data ops
+/warehouse/pyproject.toml @betterup/analytics-eng @betterup/data-operations-squad
+/warehouse/poetry.lock @betterup/analytics-eng @betterup/data-operations-squad
+/warehouse/selectors.yml @betterup/analytics-eng @betterup/data-operations-squad
+/warehouse/setup.profiles.yml @betterup/analytics-eng @betterup/data-operations-squad
+/warehouse/packages.yml @betterup/analytics-eng @betterup/data-operations-squad
+/warehouse/.github/workflows/ @betterup/analytics-eng @betterup/data-operations-squad
+# routes changes to dbt specific workflow files to analytics engineering team only
+/warehouse/.github/workflows/dbt* @betterup/analytics-eng
+
+# routes warehouse config to snowflake-admins
+/warehouse/config/ @betterup/snowflake-admins

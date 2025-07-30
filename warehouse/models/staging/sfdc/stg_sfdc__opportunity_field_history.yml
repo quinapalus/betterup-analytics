@@ -1,0 +1,39 @@
+version: 2
+
+models:
+  - name: stg_sfdc__opportunity_field_history
+    description: This table has the field history for Salesforce opportunity fields
+      that have field history tracking turned on Salesforce docs - https://developer.salesforce.com/docs/atlas.en-us.object_reference.meta/object_reference/sforce_api_objects_opportunityfieldhistory.htm
+    columns:
+      - name: sfdc_opportunity_field_history_id
+        tests:
+          - unique
+          - not_null
+        description: The column 'sfdc_opportunity_field_history_id' is the ID that
+          identifies the changes made to Salesforce opportunity fields. [GenAI Description]
+
+      - name: sfdc_opportunity_id
+        tests:
+          - not_null
+        description: The 'sfdc_opportunity_id' column contains the Salesforce ID of
+          the relating opportunity. [GenAI Description]
+
+      - name: field
+        description: The 'field' column contains the name of the field in Salesforce
+          which has had a new or old value changed. [GenAI Description]
+
+      - name: new_value
+        description: The 'new_value' column holds the most recently set value for
+          a set of Opportunity fields. [GenAI Description]
+
+      - name: old_value
+        description: The column 'old_value' stores the previous value of a field associated
+          with an opportunity before a change was made. [GenAI Description]
+
+      - name: is_deleted
+        description: The 'is_deleted' column stores a boolean value indicating whether
+          the opportunity field history has been deleted. [GenAI Description]
+
+      - name: created_at
+        description: The 'created_at' column holds a timestamp representing when the
+          Opportunity Field History record was created. [GenAI Description]

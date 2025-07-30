@@ -1,0 +1,9 @@
+version: 2
+
+sources:
+  - name: analytics_eu_read_only
+    database: eu_anonymized
+    schema: anon_app_eu
+
+    tables:
+      - name: anon_app_eu__users

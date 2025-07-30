@@ -1,0 +1,35 @@
+version: 2
+
+models:
+  - name: stg_assessment__reference_populations
+    description: This DBT model contains reference population data and stores it in
+      the form of key-value pairs for reference points. It includes a reference_population_id,
+      key, description, created_at and updated_at fields, allowing users to store
+      and retrieve related information efficiently. The model is populated with data
+      from the raw.stitch_assessment.reference_populations table. [GenAI Description]
+    columns:
+      - name: reference_population_id
+        description: '"reference_population_id" is the primary identifier for each
+          record in the table, and is used to link other tables to this data. [GenAI
+          Description]'
+        tests:
+          - unique
+          - not_null
+
+      - name: key
+        description: The 'key' column in the 'stg_assessment__reference_populations'
+          DBT model contains a unique identifier for each reference population. [GenAI
+          Description]
+
+      - name: description
+        description: Description of reference populations from the Stitch Assessment
+          data, including the unique identifier, key, and timestamp fields. [GenAI
+          Description]
+
+      - name: created_at
+        description: The 'created_at' column holds timestamps of when the reference
+          population record was created. [GenAI Description]
+
+      - name: updated_at
+        description: The updated_at column records the timestamp of the last updates
+          made to the record. [GenAI Description]

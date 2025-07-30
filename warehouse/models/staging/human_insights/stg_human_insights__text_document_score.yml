@@ -1,0 +1,43 @@
+version: 2
+
+models:
+  - name: stg_human_insights__text_document_score
+    description: >
+      Contains scores of the NLP models for the text documents
+
+    columns:
+      - name: document_score_id
+        description: Unique identifier (primary key) of the score entry
+        tests:
+          - not_null
+          - unique
+
+      - name: text_document_id
+        description: ID of the document that this score is associated with
+        tests:
+          - not_null
+
+      - name: model
+        description: Name of the model that generated this score
+        tests:
+          - not_null
+
+      - name: label
+        description: Label from the given model
+        tests:
+          - not_null
+
+      - name: score
+        description: Score for the label from the given model
+        tests:
+          - not_null
+
+      - name: rank
+        description: Order of the labels for the given model
+        tests:
+          - not_null
+
+      - name: created_at
+        description: Timestamp denoting when the document score landed in Snowflake
+        tests:
+          - not_null

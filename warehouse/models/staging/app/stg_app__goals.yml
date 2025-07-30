@@ -1,0 +1,102 @@
+version: 2
+models:
+  - name: stg_app__goals
+    description: >
+      Application table containing goal information for members
+      (application Object is "Objective").
+
+    columns:
+      - name: goal_id
+        description: Primary key
+        tests:
+          - unique
+          - not_null
+
+      - name: member_id
+        description: >
+          Foreign key for the member that owns the goal
+
+      - name: description
+        description: >
+          Description of the goal
+
+      - name: topic_theme_id
+        description: >
+          Foreign key for the topic theme for the goal
+        tests:
+          - relationships:
+              to: ref('stg_app__topic_themes')
+              field: topic_theme_id
+
+      - name: goal_outcome_id
+        description: >
+          Foreign key for the goal outcome
+
+      - name: goal_outcome_custom_text
+        description: >
+          Custom goal outcome text the member can enter if they do not want to
+          choose from a system-provided goal outcome
+
+      - name: goal_obstacle_id
+        description: >
+          Foreign key for the goal obstacle
+
+      - name: goal_obstacle_custom_text
+        description: >
+          Custom goal obstacle text the member can enter if they do not want to
+          choose from a system-provided goal obstacle
+
+      - name: goal_action_id
+        description: >
+          Foreign key for the goal action
+
+      - name: goal_action_custom_text
+        description: >
+          Custom goal action text the member can enter if they do not want to
+          choose from a system-provided goal action
+
+      - name: development_topic_id
+        description: >
+          Foreign key for the development topic for the goal
+
+      - name: completed_at
+        description: >
+          Time when the goal was marked completed in UTC
+
+      - name: creator_id
+        description: >
+          Foreign key for the user that created the goal
+
+      - name: ends_at
+        description: >
+          Time when the goal is expected to be completed in UTC
+
+      - name: shared_with_manager
+        description: >
+          Boolean indicating whether the goal is shared with the member's manager
+
+      - name: last_member_progress_response_percent
+        description: >
+          Cached integer value of the member's last response of the completion
+          percentage of the goal
+
+      - name: archived_at
+        description: >
+          Time when the goal was archived in UTC
+
+      - name: last_manager_progress_response_percent
+        description: >
+          Cached integer value of the manager's last response of the completion
+          percentage of the goal
+
+      - name: created_at
+        description: >
+          Time when the Rails object was created in UTC, i.e. when the
+          goal was created.
+        tests:
+          - not_null
+
+      - name: updated_at
+        description: Time when the Rails object was updated in UTC.
+        tests:
+          - not_null

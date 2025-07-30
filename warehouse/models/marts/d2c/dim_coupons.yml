@@ -1,0 +1,14 @@
+version: 2
+
+models:
+  - name: dim_coupons
+    meta:
+      owner: "adrian.lievano@betterup.co"
+    description: >
+      A table tracking all coupons and gift cards from the app and stripe
+    columns:
+      - name: stripe_coupon_id
+        description: Primary key
+        tests:
+          - unique
+          - not_null

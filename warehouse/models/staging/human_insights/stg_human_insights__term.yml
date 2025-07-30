@@ -1,0 +1,44 @@
+version: 2
+
+models:
+  - name: stg_human_insights__term
+    description: >
+      Terms extracted from sentences in the text documents
+
+    columns:
+      - name: term_id
+        description: Unique identifier (primary key) of the term
+        tests:
+          - not_null
+          - unique
+
+      - name: text_document_id
+        description: ID of the document that this term is associated with
+        tests:
+          - not_null
+
+      - name: sentence_id
+        description: ID of the sentence that this term is associated with
+
+      - name: term
+        description: The term
+        tests:
+          - not_null
+
+      - name: term_type
+        description: Type of the term
+        tests:
+          - not_null
+
+      - name: topic
+        description: The topic which the term belongs to
+        tests:
+          - not_null
+
+      - name: phrase
+        description: The phrase which the term belongs to
+
+      - name: created_at
+        description: Timestamp denoting when the term landed in Snowflake
+        tests:
+          - not_null

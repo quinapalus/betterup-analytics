@@ -1,0 +1,20 @@
+version: 2
+models:
+  - name: dbt_users_global_roles
+    description: >
+      Internal warehouse helper model that contains a row for every user-global
+      role pair. Global roles are roles in `app_roles` that are not scoped to a
+      specific resource, e.g. `member`, `partner`, `coach`, etc. Global roles
+      generally determine which features a user has access to when they are
+      logged in to the platform.
+
+    columns:
+      - name: user_id
+        description: Foreign key to associated user.
+        tests:
+          - not_null
+
+      - name: role
+        description: Name of the curriculum role
+        tests:
+          - not_null

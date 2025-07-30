@@ -1,0 +1,21 @@
+version: 2
+
+models:
+  - name: base_app__reflection_points_historical
+    description: ""
+    columns:
+      - name: canceled_at
+      - name: coach_assessment_id
+      - name: coach_assignment_id
+      - name: coach_due_at
+      - name: created_at
+      - name: eligible_at
+      - name: id
+        tests:
+          - unique
+          - not_null
+      - name: met_prerequisites_at
+      - name: track_assignment_id
+      - name: upcoming_at
+      - name: updated_at
+      - name: user_assessment_id

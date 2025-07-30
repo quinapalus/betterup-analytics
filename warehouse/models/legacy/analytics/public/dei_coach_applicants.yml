@@ -1,0 +1,163 @@
+version: 2
+models:
+  - name: dei_coach_applicants
+    description: >
+      This model integrates data from Fountain and the application into a unified view of
+      coach applicants, with similar fields as `dei_coaches`.
+    
+    columns:
+      - name: fountain_applicant_id
+        description: Primary key
+        tests:
+          - not_null
+          - unique
+
+      - name: coach_id
+        description: Foreign key to application coach_id.
+
+      - name: email
+        description: Primary email associated with the applicant's Fountain account.
+
+      - name: first_name
+        description: First name of the applicant.
+
+      - name: last_name
+        description: First name of the applicant.
+
+      - name: secondary_email
+        description: Secondary email associated with the applicant's Fountain account.
+
+      - name: time_zone
+        description: >
+          Time zone provided by the applicant. Matches Rails-style time zone for
+          applicants starting later 2018.
+
+      - name: tz_iana
+        description: Olson time zone (e.g. `America/Denver`).
+
+      - name: country
+        description: Country provided by the applicant.
+
+      - name: country_code
+        description: >
+          The 2-letter ISO 3166 country code based on mapping from applicant's time
+          zone.
+
+      - name: country_name
+        description: Human-readable country name for corresponding ISO `country_code`.
+
+      - name: subregion_m49
+        description: UN M49 subregion based on mapping from applicant's time zone.
+
+      - name: geo
+        description: Geographic region for the given applicant, based on timezone to region mapping.
+        tests:
+          - accepted_values:
+              values: [NORAM, LATAM, EMEA, APAC]
+
+      - name: priority_language
+        description: >
+          ISO 639-1 Alpha-2 code for highest ranked language the applicant can coach in, selected
+          from the list of priority languages in `data/bu_priority_staffing_languages.csv`.
+          Value will be `Other` if applicant has non-English, non-priority language, `en` only
+          if English is their only coaching language, and `Unknown` if coaching languages
+          haven't been provided by applicant yet.
+        tests:
+          - not_null
+
+      - name: staffing_languages
+        description: >
+          Array of ISO 639-1 Alpha-2 codes for all languages the applicant is qualified to
+          coach in. `NULL` if coaching languages haven't been provided by applicant yet.
+
+      - name: coaching_cloud
+        description: >
+          Array of applicable clouds for the particular coach. Note that the field is NULL
+          for applicants before `s3-train` stage.
+
+      - name: stage_name
+        description: >
+          High level operational category for the applicant. S1 - Review, S2 - Contract,
+          S3 - Train, S4 - Finalize.
+        tests:
+          - not_null
+          - accepted_values:
+              values: [s1-review, s2-contract, s3-train, s4-finalize, hired, rejected]
+
+      - name: fountain_active
+        description: >
+          Indication of how many days have passed since the applicant was last
+          transitioned within Fountain.
+        tests:
+          - not_null
+          - accepted_values:
+              values: [last-60, last-90, last-90+]
+
+      - name: fountain_funnel
+        description: >
+          Name of the funnel (ie. Opening) that the applicant is in within Fountain.
+          Typically there are separate funnels for 2018 Primary Coaches, 2019 Primary Coaches,
+          and each Extended Network vertical.
+        tests:
+          - not_null
+
+      - name: fountain_stage
+        description: >
+          Name of the specific stage the applicant is currently in within Fountain. Stage names are easily mutable within Fountain and tend to differ between the different funnels.
+        tests:
+          - not_null
+
+      - name: s1_review_started_at
+        description: Timestamp when the applicant started their application.
+
+      - name: s2_contract_started_at
+        description: >
+          Timestamp when the applicant transitioned into Stage 2 - Review. Implemented as
+          the time when they entered the Background Check Fountain stage within their given funnel.
+
+      - name: s3_train_started_at
+        description: >
+          Timestamp when the applicant transitioned into Stage 3 - Train. Implemented as
+          the time when a BetterUp platform account was created for the applicant.
+
+      - name: s4_finalize_started_at
+        description: >
+          Timestamp when the applicant transitioned into Stage 4 - Finalize. Implemented as
+          the time when the applicant entered the `Hold Until MT 2.0 Complete` Fountain stage.
+          Note: currently only applies to Primary coaches.
+
+      - name: staffable_state
+        description: >
+          Denormalized `staffable_state` from `dei_coaches` if applicant has an associated
+          platform account.
+
+      - name: staffed_at
+        description: >
+          Timestamp when the applicant successfully completed Stage 3 - Train. Implemented as
+          the time when their BetterUp platform account was first marked "staffable" in the
+          Global Staffing system (valid for coaches staffed after 1/10/2019).
+
+      - name: last_transitioned_at
+        description: >
+          Timestamp when the applicant last transitioned between a Fountain funnel stage.
+
+      - name: inspiring_matrix
+        description: Coach hiring Inspiring matrix classification.
+
+      - name: inspiring_application_tier
+        description: Coach hiring Inspiring matrix score.
+
+      - name: thriving_matrix
+        description: Coach hiring Thriving matrix classification.
+
+      - name: thriving_application_tier
+        description: Coach hiring Thriving matrix score.
+
+      - name: coach_interview_tier
+        description: Coach hiring interview score (1-5).
+
+      - name: vip_status
+        description: Coach hiring VIP label for important applicants.
+
+      - name: high_priority
+        description: Coach hiring high priority label for specific criteria based on launch requirements.

@@ -1,0 +1,37 @@
+version: 2
+models:
+  - name: int_app__versions_destroyed_records
+    description: >
+      This model stores information on destroyed records dervied from the `app_versions`
+      table
+      for more efficient filtering in places where we need to remove destroyed records
+      from
+      raw Stitch tables. Note that `Notification` records are excluded from this table
+      due to
+      high volume of destroyed records and lack of any reporting needs on that table.
+
+    columns:
+      - name: version_id
+        description: Primary Key
+        tests:
+          - unique
+          - not_null
+
+      - name: item_type
+        description: Rails class name for the destroyed record
+        tests:
+          - not_null
+
+      - name: item_id
+        description: Primary key of the destroyed record
+        tests:
+          - not_null
+
+      - name: destroyed_at
+        description: UTC timestamp for when the record was destroyed.
+        tests:
+          - not_null
+
+      - name: whodunnit
+        description: Foreign key to `app_users` table, if record was detroyed by a
+          user.

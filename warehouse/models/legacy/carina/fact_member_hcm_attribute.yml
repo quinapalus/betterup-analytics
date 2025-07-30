@@ -1,0 +1,49 @@
+version: 2
+models:
+  - name: fact_member_hcm_attribute
+    description: >
+      Fact table for member-level HCM attributes. Grain of this table is one row per member
+      per HCM field. HCM fields are limited to the fields that we've whitelisted in
+      `data/carina_hcm_attribute_fields.csv` for data privacy and protection.
+
+    columns:
+      - name: id
+        description: Surrogate Primary key for this table, Combination of member_key and account_key and internal_field_name.
+        tests:
+          - unique
+          - not_null
+          
+      - name: member_key
+        description: Foreign key to conformed Member dimension.
+        tests:
+          - not_null
+
+      - name: account_key
+        description: >
+          Foreign key to conformed Account dimension for the organization that supplied
+          the HCM data.
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_account')
+              field: account_key
+
+      - name: internal_field_name
+        description: >
+          BetterUp-specific, internal field name for the specific partner's HCM field.
+        tests:
+          - not_null
+
+      - name: hcm_field_name
+        description: >
+          Partner-specific, HCM field name.
+        tests:
+          - not_null
+
+      - name: value
+        description: >
+          Corresponding member value. If 'other', the original
+          values did not have a sufficient number of members and was
+          therefore masked for data privacy and protection.
+        tests:
+          - not_null

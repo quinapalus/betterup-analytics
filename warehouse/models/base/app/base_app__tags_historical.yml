@@ -1,0 +1,13 @@
+version: 2
+
+models:
+  - name: base_app__tags_historical
+    description: ""
+    columns:
+      - name: id
+        tests:
+          - unique
+          - not_null
+      - name: name
+      - name: taggings_count
+      - name: uuid

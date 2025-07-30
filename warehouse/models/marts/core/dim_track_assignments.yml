@@ -1,0 +1,126 @@
+version: 2
+
+models:
+  - name: dim_track_assignments
+    description: >
+      Track_assignments associate members with tracks. Enriched with track, member, and
+      organization attributes.
+
+    columns:
+      - name: track_assignment_id
+        description: Unique identifer (primary key) of the Track Assignment
+        tests:
+          - unique
+          - not_null
+
+      - name: created_at
+        description: >
+          Time when the Rails object was created in UTC, i.e. when the
+          track assignment was created.
+
+      - name: ended_at
+        description: Timestamp when the member's track assignment was ended. NULL if the
+          track assignment is currently unended (i.e. open)
+
+      - name: ends_on
+        description: Timestamp when the member's track assignment is scheduled to end.
+
+      - name: ended_reason
+        description: Enumerated value set for ended track_assignments
+
+      - name: is_extended_network_coaching_enabled
+        description: Boolean flag, true if member is eligible for Extended Network coaching.
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['true', 'false']
+
+      - name: is_hidden
+        description: Boolean flag indicating whether the track assignment is hidden from 
+          partners and coaches (soft-delete). Set manually by platform admins.
+
+      - name: is_visible
+        description: ""
+
+      - name: is_open
+        description: ""
+
+      - name: minutes_limit
+        description: ""
+
+      - name: minutes_used
+        description: Number of minutes of coaching used on the current track assignment.
+
+      - name: is_on_demand_coaching_enabled
+        description: Boolean flag, true if member is eligible for On Demand coaching.
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['true', 'false']
+
+      - name: is_primary_coaching_enabled
+        description: Boolean flag, true if member is eligible for Primary coaching.
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['true', 'false']
+
+      - name: is_program_change_notifications_enabled
+        description: ""
+
+      - name: track_id
+        description: Foreign Key for the associated Track
+        tests:
+          - not_null
+
+      - name: updated_at
+        description: Time when the Rails object was updated in UTC.
+
+      - name: member_id
+        description: Foreign Key for the associated Member
+        tests:
+          - not_null
+
+      - name: primary_coaching_starts_at
+        description: ""
+
+      - name: is_care_coaching_enabled
+        description: ""
+
+      - name: is_peer_coaching_enabled
+        description: ""
+
+#      - name: is_community_coaching_enabled --this column does not exist anymore in the postgres DB
+
+      - name: is_activated
+        description: Has the track assignment been activated.
+
+      - name: level
+        description: "Current member job level"
+
+      - name: job_function
+        description: "Current member job function"        
+
+      - name: region
+        description: "Current member region"
+
+      - name: country_name
+        description: "Current member country name"
+
+      - name: activated_at
+        description: ""
+
+      - name: member_first_invited_to_track_at
+        description: "An invite is defined as when a member was first assigned to the track"
+
+      - name: track_name
+        description: ""
+
+      - name: program_name
+        description: ""
+
+      - name: organization_name
+        description: ""
+      
+      - name: days_to_activate
+        description: ""

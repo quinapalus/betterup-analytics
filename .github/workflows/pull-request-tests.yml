@@ -1,0 +1,67 @@
+# This workflow executes several linters on changed files based on languages used in your code base whenever
+# you push a code or open a pull request.
+#
+# You can adjust the behavior by modifying this file.
+# For more information, see:
+# https://github.com/github/super-linter
+name: Pull Request Tests
+
+on:
+  pull_request:
+    branches: [ "main" ]
+    types: [opened, edited, synchronize, reopened]
+
+concurrency:
+  group: ${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  check-pr-title:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Enforce PR title
+        uses: deepakputhraya/action-pr-title@v1.0.2
+        with:
+          regex: '\[[A-Z]{2,}-\d+\].*|Bump.*' # Regex the title should match.
+          min_length: 5 # Min length of the title
+          max_length: 200 # Max length of the title
+          github_token: ${{ github.token }}
+
+      - name: Comment on PR if title does not meet requirements
+        if: ${{ failure() }}
+        uses: thollander/actions-comment-pull-request@v2
+        with:
+          message: |
+            :warning: PR Title needs match the format:
+            [DATA-1234] Some descriptive PR title
+
+  run-lint:
+    needs: check-pr-title
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+        with:
+          # Full git history is needed to get a proper list of changed files within `super-linter`
+          fetch-depth: 0
+
+      - name: Lint Code Base
+        uses: super-linter/super-linter/slim@v5
+        env:
+          VALIDATE_ALL_CODEBASE: false
+          DEFAULT_BRANCH: "main"
+          VALIDATE_GITHUB_ACTIONS: true
+          FILTER_REGEX_EXCLUDE: (/github/workspace/.github/workflows/update_sfdc*|/charts/*)
+          # https://www.shellcheck.net/wiki/SC2129
+          # This linter error is a false positive. It thinks $GITHUB_ENV is a normal file
+          SHELLCHECK_OPTS: -e SC2129
+          VALIDATE_JSON: true
+          VALIDATE_YAML: true
+          VALIDATE_PYTHON_PYLINT: true
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      
+      - name: Lint Helm Charts
+        run: |
+          for c in charts/*; do
+            helm lint "$c"
+          done

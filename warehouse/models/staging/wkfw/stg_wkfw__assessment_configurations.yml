@@ -1,0 +1,42 @@
+version: 2
+
+models:
+  - name: stg_wkfw__assessment_configurations
+    description: dbt model stg_wkfw__assessment_configurations is a staging model
+      that stores data from the raw assessment_configurations dataset. It contains
+      6 fields (assessment_configuration_id, theme_key, description, subtitle, title,
+      created_at, updated_at) containing various information related to the assessment
+      configurations, including different titles and subtitles in different languages.
+      The model does not have any relationships to other models. [GenAI Description]
+    columns:
+      - name: assessment_configuration_id
+        description: The 'assessment_configuration_id' column stores the unique identifier
+          for each row in the Assessment Configurations table. [GenAI Description]
+        tests:
+          - not_null
+          - unique
+
+      - name: theme_key
+        description: The "theme_key" column stores the unique identifier of the assessment
+          configuration. [GenAI Description]
+
+      - name: description
+        description: The "description" column holds an English version of description
+          details retrieved from the raw.stitch_app_viva_staging.assessment_configurations
+          table. [GenAI Description]
+
+      - name: subtitle
+        description: The 'subtitle' column contains the subtitle in English that is
+          associated with an assessment configuration. [GenAI Description]
+
+      - name: title
+        description: '"title" is the title of the assessment configuration in English
+          as parsed from the title_i18n field. [GenAI Description]'
+
+      - name: created_at
+        description: The 'created_at' column stores a timestamp of when the assessment
+          configuration was created. [GenAI Description]
+
+      - name: updated_at
+        description: The 'updated_at' column contains timestamp data on when changes
+          were made to assessment configurations. [GenAI Description]

@@ -1,0 +1,46 @@
+version: 2
+
+models:
+  - name: dbt_events__viewed_insights
+    description: Event for viewing insights
+    columns:
+      - name: member_eventable_id
+        description: The 'member_eventable_id' column is a surrogate key generated
+          from the user_id, eventable_id, and event_at columns, used to identify events
+          that a specific user has viewed. [GenAI Description]
+        tests:
+          - unique
+          - not_null
+
+      - name: member_id
+        description: The 'member_id' column holds the identification number for each
+          member associated with a viewed insights event. [GenAI Description]
+
+      - name: event_at
+        description: The event_at column contains the timestamps for when a user viewed
+          a member insights dashboard. [GenAI Description]
+
+      - name: event_action
+        description: The 'event_action' column contains the type of action taken by
+          the user (e.g. 'viewed'), used to describe events related to user insights.
+          [GenAI Description]
+
+      - name: event_object
+        description: The 'event_object' column contains the object of the view events
+          being tracked in the warehouse for the user. [GenAI Description]
+
+      - name: event_action_and_object
+        description: This column contains a text combination of the user's event action
+          and object, such as 'viewed member_insights_dashboard'. [GenAI Description]
+
+      - name: associated_record_type
+        description: The 'associated_record_type' column records the type of the associated
+          record (e.g. 'User') associated with the user engagement event. [GenAI Description]
+
+      - name: associated_record_id
+        description: The 'associated_record_id' column stores the unique identifier
+          for the related record associated with the event. [GenAI Description]
+
+      - name: attributes
+        description: The 'attributes' column contains metadata about the event recorded
+          in the table. [GenAI Description]

@@ -1,0 +1,21 @@
+version: 2
+
+models:
+  - name: base_app__item_mappings_historical
+    description: ""
+    columns:
+      - name: created_at
+      - name: description
+      - name: external_name
+      - name: external_tag
+      - name: id
+        tests:
+          - unique
+          - not_null
+      - name: internal_names
+      - name: mapping_type
+      - name: organization_id
+      - name: track_id
+      - name: updated_at
+      - name: competency_mapping_id
+

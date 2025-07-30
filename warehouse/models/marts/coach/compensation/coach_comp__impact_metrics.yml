@@ -1,0 +1,20 @@
+version: 2
+
+models:
+  - name: coach_comp__impact_metrics
+    description: All metrics combined for coach compensation
+
+    columns:
+      - name: user_season_id
+        description: Surrogate Key of User UUID + Season Name. Functions as primary key.
+        tests:
+          - not_null
+          - unique
+      - name: coach_id
+        tests:
+          - not_null
+      - name: coach_profile_uuid
+#        tests:
+#          - not_null
+      - name: full_name
+      - name: season_name

@@ -1,0 +1,29 @@
+version: 2
+
+models:
+  - name: dbt_member_reporting_group__manager_engagement_metrics
+    description: "Manager Engagement Metrics By Reporting Group"
+    columns:
+      - name: member_reporting_group_manager_key
+        description: "Primary key"
+        tests:
+          - unique
+          - not_null        
+
+      - name: member_id
+        description: "Member ID"
+
+      - name: manager_id
+        description: "Manager ID"
+
+      - name: reporting_group_id
+        description: "Reporting Group ID"
+
+      - name: manager_invited_at
+        description: "Date Manager was Invited"
+
+      - name: manager_feedback_submitted_at
+        description: "Date Manager Feedback was submitted"
+
+      - name: manager_growth_assessment_submitted_at
+        description: "Date Manager Growth Assessment was Submitted"

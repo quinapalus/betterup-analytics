@@ -1,0 +1,18 @@
+version: 2
+
+models:
+  - name: int_app__connect_configurations
+
+    description: The int_app__connect_configurations model is an intermediate data
+      layer used to track unique configurations applied to user experiences. It retrieves
+      the most recent configuration from stg_app__connect_configurations and applies
+      it to the stg_app__experience_configuration_assignments table. It contains track_id,
+      connect_configuration_id, and other fields relating to the configuration, and
+      produces a unique primary key for each track. [GenAI Description]
+columns:
+
+  - name: primary_key
+    description: Unique identifier
+    tests:
+      - not_null
+      - unique

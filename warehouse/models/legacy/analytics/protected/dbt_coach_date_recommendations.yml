@@ -1,0 +1,23 @@
+version: 2
+models:
+  - name: dbt_coach_date_recommendations
+    description: >
+      This protected aggregates the number of coach recommendations per day for each
+      coach.
+      The purpose of the model is to build the day-by-day coach recommendations &
+      selection model.
+
+    columns:
+      - name: coach_id
+        description: Primary Key.
+
+      - name: date_day
+        description: >
+          SQL date for every day on which the coach had at least one recommendation.
+
+      - name: recommendation_count
+        description: >
+          Integer denoting the number of coach recommendations for each coach
+          on the particular date day. Always equal or greater than 1.
+        tests:
+          - not_null

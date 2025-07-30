@@ -1,0 +1,30 @@
+version: 2
+models:
+  - name: dbt_member_dates_with_primary_coach
+    description: >
+      This model expands primary coach assignments to create a row for every day a
+      member was
+      matched with a primary coach.
+
+    columns:
+      - name: member_id
+        description: Foreign key for associated member.
+        tests:
+          - not_null
+
+      - name: primary_coach_id
+        description: Foreign key for associated primary coach matched with the member.
+        tests:
+          - not_null
+          - relationships:
+              to: ref('int_app__users')
+              field: user_id
+
+      - name: date_day
+        description: >
+          SQL date for every day the member was matched with a primary coach. Includes
+          a row for the day the coach_assignment was created, up through the last
+          full day
+          the member was matched with a primary coach.
+        tests:
+          - not_null

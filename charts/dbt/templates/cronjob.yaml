@@ -1,0 +1,13 @@
+{{ if .Values.cronjob.enabled }}
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: {{ include "dbt.fullname" . }}
+  labels:
+    {{- include "dbt.labels" . | nindent 4 }}
+spec:
+  schedule: {{ .Values.schedule }}
+  jobTemplate:
+    spec:
+      {{- include "dbt.jobSpec" . | nindent 8 }}
+{{ end }}

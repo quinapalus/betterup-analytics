@@ -1,0 +1,61 @@
+version: 2
+models:
+  - name: stg_app__comms_notifications
+    description: The DBT model stg_app__comms_notifications stores data from the raw.stitch_app.comms_notifications
+      table about notifications sent by the parent application, including recipient
+      information, parameters, content, expiration date, notification type, and a
+      unique identifier. It contains fields for comms_notification_id, recipient_global_id,
+      context, expires_at, subject, uuid, recipient_uuid, params, notification_type,
+      digest, only_deliver_once, created_at, and updated_at. [GenAI Description]
+    columns:
+      - name: comms_notification_id
+        description: The column 'comms_notification_id' stores the unique identifier
+          for a specific communication notification. [GenAI Description]
+        tests:
+          - unique
+          - not_null
+
+      - name: context
+        description: The 'context' column holds data about the environment associated
+          with the notification. [GenAI Description]
+
+      - name: expires_at
+        description: The 'expires_at' column contains a timestamp data type that denotes
+          when the notification will no longer be relevant. [GenAI Description]
+
+      - name: subject
+        description: The 'subject' column contains the subject line of the communication
+          notification. [GenAI Description]
+
+      - name: uuid
+        description: The column 'uuid' stores a universally unique identifier for
+          each notification. [GenAI Description]
+
+      - name: recipient_uuid
+        description: "'recipient_uuid' contains a unique identifier for the recipient\
+          \ of the comms notifications. [GenAI Description]"
+
+      - name: params
+        description: The 'params' column contains additional information about the
+          notifications, such as content and recipient formats. [GenAI Description]
+
+      - name: notification_type
+        description: This column indicates the type of notification that the recipient
+          will receive. [GenAI Description]
+
+      - name: digest
+        description: The 'digest' column contains a hashed string that checks for
+          uniqueness and can be used to verify the integrity of notifications. [GenAI
+          Description]
+
+      - name: only_deliver_once
+        description: The 'only_deliver_once' column indicates whether the notification
+          should only be delivered once. [GenAI Description]
+
+      - name: created_at
+        description: The 'created_at' column contains a timestamp of when the notification
+          was created. [GenAI Description]
+
+      - name: updated_at
+        description: The 'updated_at' column captures the last time the notification
+          was updated. [GenAI Description]

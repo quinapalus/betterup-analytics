@@ -1,0 +1,62 @@
+version: 2
+
+models:
+  - name: dbt__whole_person_subdimensions
+    description: DBT model dbt__whole_person_subdimensions provides a breakdown of
+      the behavioral, outcome, and mindset subdimensions of the Whole Person model
+      organized by each domain, dimension, and subdimension. This model contains fields
+      such as primary_key, domain_key, domain, dimension_key, dimension, whole_person_model_version,
+      construct_id, subdimension_key, name, category, category_key, and visible_to_partner.
+      [GenAI Description]
+    columns:
+      - name: primary_key
+        description: Surrogate key of WPM version and construct ID
+        tests:
+          - unique
+          - not_null
+
+      - name: domain_key
+        description: The 'domain_key' column stores a unique identifier for the domain,
+          either a behavior or mindset/outcome category. [GenAI Description]
+
+      - name: domain
+        description: The 'domain' column contains the domain keys and names of either
+          behaviors or mindset/outcome categories. [GenAI Description]
+
+      - name: dimension_key
+        description: "'dimension_key' contains an identifier for the subdimension\
+          \ of either a behavior domain or a mindset/outcome category. [GenAI Description]"
+
+      - name: dimension
+        description: The 'dimension' column provides the domain (category or actual
+          behavior) and dimension (subdimension or actual behavior) associated with
+          a particular Whole Person model version. [GenAI Description]
+
+      - name: whole_person_model_version
+        description: The 'whole_person_model_version column' stores the version of
+          the Whole Person Model being used. [GenAI Description]
+
+      - name: construct_id
+        description: The 'construct_id' column stores a unique ID associated with
+          each domain, category, dimension, and subdimension. [GenAI Description]
+
+      - name: subdimension_key
+        description: The 'subdimension_key' column stores the assigned identifier
+          for each subdimension within the model. [GenAI Description]
+
+      - name: name
+        description: The 'name' column stores the subdimension name that corresponds
+          to a construct specific to a behavior domain. [GenAI Description]
+
+      - name: category
+        description: The column 'category' distinguishes between behaviors and mindset/outcome
+          subdimensions. [GenAI Description]
+
+      - name: category_key
+        description: "'category_key' refers to either the category or the sub-dimension\
+          \ when the category is \"Mindset/Outcome\". [GenAI Description]"
+
+      - name: visible_to_partner
+        description: The column 'visible_to_partner' contains a boolean value indicating
+          the visibility of each sub-dimension to stakeholders. [GenAI Description]
+

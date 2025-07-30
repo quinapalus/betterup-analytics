@@ -1,0 +1,23 @@
+openapi: 3.0.1
+info:
+  title: Segment
+  description: Segment is an E/L system that loads events data to Snowflake.
+  x-cortex-git:
+    github:
+      repository: betterup/betterup-analytics
+  x-cortex-tag: betterup-analytics-segment
+  x-cortex-type: service
+  x-cortex-link:
+  - name: Data Ops Confluence
+    type: documentation
+    url: https://betterup.atlassian.net/wiki/spaces/DATAOPS/overview
+  x-cortex-owners:
+  - name: betterup/data-operations-squad
+    type: GROUP
+  - type: SLACK
+    channel: squad-data-ops
+  x-cortex-service-groups:
+  - external-system
+  - tier-2
+  x-cortex-custom-metadata:
+    codeowner-path: .github/CODEOWNERS

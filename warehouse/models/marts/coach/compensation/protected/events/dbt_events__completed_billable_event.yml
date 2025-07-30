@@ -1,0 +1,30 @@
+version: 2
+
+models:
+  - name: dbt_events__completed_billable_event
+    description: ""
+
+    columns:
+      - name: associated_record_id
+        description: ""
+        tests:
+          - unique
+          - not_null
+
+      - name: event_at
+        description: ""
+
+      - name: event_action
+        description: ""
+
+      - name: event_object
+        description: ""
+
+      - name: event_action_and_object
+        description: ""
+
+      - name: associated_record_type
+        description: ""
+
+      - name: attributes
+        description: ""

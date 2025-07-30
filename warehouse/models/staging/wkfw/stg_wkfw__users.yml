@@ -1,0 +1,38 @@
+version: 2
+
+models:
+  - name: stg_wkfw__users
+    description: DBT model stg_wkfw__users stores user information from an external
+      data source such as an app or platform. It contains user_id, email, created_at
+      and updated_at fields which represent the respective user properties. This data
+      model is used for making insights and analytics about user activities. [GenAI
+      Description]
+    columns:
+      - name: user_id
+        description: user_id is a unique identifier for each user. [GenAI Description]
+        tests:
+          - not_null
+          - unique
+
+      - name: email
+        description: The 'email' column contains the user's email address. [GenAI
+          Description]
+
+      - name: email_domain
+        description: The email domain extracted from the user's email address.
+
+      - name: created_at
+        description: The 'created_at' column stores the user's account creation date
+          and time in a timestamp_ntz format. [GenAI Description]
+
+      - name: updated_at
+        description: "\"The 'updated_at' column stores timestamps to indicate the\
+          \ time when a user's information was last updated.\" [GenAI Description]"
+
+      - name: accepted_terms_at
+        description: "Timestamp when the user agreed to the terms of service and
+          privacy policy."
+
+      - name: verified_email_at
+        description: "Timestamp when the user first authenticated through the magic
+          link email."

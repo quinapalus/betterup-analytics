@@ -1,0 +1,35 @@
+version: 2
+
+models:
+  - name: dbt_features__session_topics
+    description: ""
+    columns:
+      - name: session_topics_id
+        description: "Surrogate unique key comprised of member_id, associated_record_id and classification"
+        tests:
+          - unique
+          - not_null
+
+      - name: member_id
+        description: ""
+
+      - name: associated_record_id
+        description: ""
+
+      - name: associated_record_type
+        description: ""
+
+      - name: feature_collected_at
+        description: ""
+
+      - name: feature_key
+        description: ""
+
+      - name: classification
+        description: ""
+
+      - name: feature_attributes
+        description: ""
+
+      - name: feature_type
+        description: ""

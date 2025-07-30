@@ -1,0 +1,111 @@
+version: 2
+
+sources:
+  - name: segment_android
+    schema: segment_betterup_android_prod
+    database: raw
+    tables:
+      - name: events
+        identifier: tracks
+      - name: page_views
+        identifier: page_viewed
+      - name: resource_selected
+
+  - name: segment_backend
+    schema: segment_betterup_app_prod
+    database: raw
+    tables:
+      - name: events
+        identifier: tracks
+      - name: events_resource_served
+        identifier: resource_served
+      - name: identifies
+      - name: assessment_created
+      - name: assessment_completed
+      - name: growth_map_created
+      - name: growth_recommendation_updated
+      - name: aspiration_created
+      - name: assessment_item_response_submitted
+      - name: looker_request
+      - name: user_confirmed
+      - name: user_created
+      - name: subscription_created
+      - name: subscription_plan_switch
+      - name: user_title_updated
+      - name: care_modality_setup_completed
+      - name: user_notification_preference_changed
+
+  - name: segment_braze
+    schema: braze_prod
+    database: raw
+    tables:
+      - name: application_uninstalled
+      - name: campaign_control_group_entered
+      - name: campaign_converted
+      - name: canvas_converted
+
+      - name: canvas_entered
+      - name: email_bounced
+      - name: email_delivered
+      - name: email_link_clicked
+      - name: email_marked_as_spam
+      - name: email_opened
+      - name: email_sent
+      - name: email_soft_bounced
+      - name: in_app_message_clicked
+      - name: in_app_message_viewed
+      - name: ios_foreground_push_opened
+      - name: push_notification_bounced
+      - name: push_notification_sent
+      - name: push_notification_tapped
+      - name: sms_delivered
+      - name: sms_delivery_failed
+      - name: sms_inbound_received
+      - name: sms_rejected
+      - name: sms_sent
+      - name: sms_sent_to_carrier
+      - name: subscription_group_state_changed
+      - name: tracks
+      - name: unsubscribed
+      - name: webhook_sent
+
+  - name: segment_frontend
+    schema: segment_betterup_app_frontend_prod
+    database: raw
+    tables:
+      - name: events
+        identifier: tracks
+      - name: page_views
+        identifier: page_viewed
+      - name: resource_selected
+      - name: recommended_item_selected
+      - name: assessment_item_started
+      - name: add_aspiration_feedback_submitted
+      - name: assessment_shared_with_coaches
+
+  - name: segment_ios
+    schema: segment_betterup_ios_prod
+    database: raw
+    tables:
+      - name: events
+        identifier: tracks
+      - name: page_views
+        identifier: page_viewed
+      - name: resource_selected
+
+  - name: segment_sendgrid
+    schema: segment_sendgrid
+    database: raw
+    tables:
+      - name: _open
+      - name: activity
+      - name: bounce
+      - name: click
+      - name: deferred
+      - name: delivered
+      - name: dropped
+      - name: group_resubscribe
+      - name: group_unsubscribe
+      - name: processed
+      - name: spamreport
+      - name: unsubscribe

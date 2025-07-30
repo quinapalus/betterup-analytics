@@ -1,0 +1,28 @@
+version: 2
+
+models:
+  - name: int_track_roles
+    description: The int_track_roles model stores information on the roles of track
+      admin, deployment coordinator, and deployment owner for a particular track.
+      It contains fields int_track_roles_id, track_id, role, and name. The int_track_roles_id
+      acts as a primary key for the model and links each role to a particular track.
+      The data for this model is sourced from multiple parent models and then aggregated
+      into the int_track_roles model. [GenAI Description]
+    columns:
+      - name: int_track_roles_id
+        description: Surrogate Primary Key
+        tests:
+          - unique
+          - not_null
+
+      - name: track_id
+        description: This column contains the track identifier associated with each
+          user's role within a track. [GenAI Description]
+
+      - name: role
+        description: The 'role' column stores the role that a user holds in relation
+          to a specific Track. [GenAI Description]
+
+      - name: name
+        description: The 'name' column contains the full name of user associated with
+          the track. [GenAI Description]

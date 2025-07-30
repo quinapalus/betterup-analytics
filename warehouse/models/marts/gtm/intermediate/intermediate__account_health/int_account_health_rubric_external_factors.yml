@@ -1,0 +1,42 @@
+version: 2
+
+models:
+  - name: int_account_health_rubric_external_factors
+    description: "Drivers and overall score calculations for the external factors rubric of the account health score. 
+                  More detail here https://betterup.atlassian.net/wiki/spaces/AN/pages/3148087318/External+Factors+Health+Score+Calculation"
+    columns:
+      - name: sfdc_account_id
+        description: ""
+        tests:
+          - unique
+          - not_null
+
+      - name: account_health_rubric_external_factors_driver_industry
+        description: ""
+        tests:
+          - accepted_values:
+              #test that only these values exist
+              values: ['Good','Okay','Poor']
+          - dbt_expectations.expect_column_distinct_values_to_contain_set:
+              #test that these values actually exist at least once
+              value_set: ['Good','Okay','Poor']
+
+      - name: account_health_rubric_external_factors_driver_annual_revenue
+        description: ""
+        tests:
+          - accepted_values:
+              #test that only these values exist
+              values: ['Good','Okay','Poor']
+          - dbt_expectations.expect_column_distinct_values_to_contain_set:
+              #test that these values actually exist at least once
+              value_set: ['Good','Okay','Poor']
+
+      - name: account_health_rubric_external_factors_overall_score
+        description: ""
+        tests:
+          - accepted_values:
+              #test that only these values exist
+              values: ['Good','Okay','Poor','Not Enough Data']
+          - dbt_expectations.expect_column_distinct_values_to_contain_set:
+              #test that these values actually exist at least once
+              value_set: ['Good','Okay','Poor','Not Enough Data']

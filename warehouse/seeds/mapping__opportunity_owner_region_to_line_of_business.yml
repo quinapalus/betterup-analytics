@@ -1,0 +1,13 @@
+version: 2
+
+seeds:
+  - name: mapping__opportunity_owner_region_to_line_of_business
+    description: "A mapping of opportunity owner region (a Salesforce field) to Line of Business, a key dimension in revops reporting"
+    columns:
+      - name: opportunity_owner_region
+        tests:
+          - unique
+          - not_null
+      - name: line_of_business
+        tests:
+          - not_null

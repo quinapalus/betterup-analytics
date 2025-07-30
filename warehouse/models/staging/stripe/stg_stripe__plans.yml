@@ -1,0 +1,24 @@
+version: 2
+
+models:
+  - name: stg_stripe__plans
+    description: Plans define the base price, currency, and billing cycle for recurring
+      purchases of products. Products help you track inventory or provisioning, and
+      plans help you track pricing.
+    columns:
+      - name: stripe_plan_id
+        description: Primary key
+        tests:
+          - unique
+          - not_null
+
+      - name: stripe_product_id
+        description: The product whose pricing this plan determines.
+        tests:
+          - not_null
+
+      - name: is_active
+        description: Determines if the plan can be used for new purchases.
+
+      - name: interval
+        description: The frequency at which a subscription is billed.

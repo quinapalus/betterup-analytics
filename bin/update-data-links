@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# configure bash to exit on error
+set -e
+set -o pipefail
+
+# Create a virtualenv to install the bu-dw-configuration package
+python3 -m venv venv
+venv/bin/pip install packages/bu-dw-configuration
+
+venv/bin/update-data-links warehouse/data_links.yml $DATABASE_URL

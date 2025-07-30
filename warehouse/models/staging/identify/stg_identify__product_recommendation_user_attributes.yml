@@ -1,0 +1,51 @@
+version: 2
+
+models:
+  - name: stg_identify__product_recommendation_user_attributes
+    description: The DBT model product_recommendation_user_attributes stores information
+      about attributes associated with users that are used to provide more tailored
+      product recommendations. It contains fields for user_id, created_at, updated_at,
+      id, value_float, value_string, attribute_name, and attribute_type.
+      [GenAI Description]
+
+    columns:
+      - name: unique_id
+        tests:
+          - not_null
+          - unique
+
+        description: A unique identifier for each combination of product recommendation
+          attributes. [GenAI Description]
+      - name: user_id
+        description: The 'user_id' column stores the unique identifier associated
+          with each user. [GenAI Description]
+
+      - name: created_at
+        description: The 'created_at' column stores the timestamp of when the user
+          attribute was created. [GenAI Description]
+
+      - name: updated_at
+        description: The 'updated_at' column contains a timestamp indicating when
+          the value of a particular product recommendation attribute last changed.
+          [GenAI Description]
+
+      - name: id
+        description: The 'id' column contains a unique identifier for a given user
+          attribute. [GenAI Description]
+
+      - name: value_float
+        description: "'value_float' is a numerical value for a particular user attribute.\
+          \ [GenAI Description]"
+
+      - name: value_string
+        description: The 'value_string' column stores the text value of an attribute
+          associated with a particular user. [GenAI Description]
+
+      - name: attribute_name
+        description: The 'attribute_name' column stores the name of a specific user
+          attribute. [GenAI Description]
+
+      - name: attribute_type
+        description: The 'attribute_type' column stores the data type of the value
+          stored in the 'value_float' and 'value_string' columns. [GenAI Description]
+

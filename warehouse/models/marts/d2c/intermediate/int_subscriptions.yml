@@ -1,0 +1,119 @@
+version: 2
+
+models:
+  - name: int_subscriptions
+    meta:
+      owner: "adrian.lievano@betterup.co"
+    description: >
+      A table tracking all subscriptions from Stripe without voided or unsuccessfully processed subscriptions.
+
+    columns:
+      - name: stripe_subscription_id
+        description: Primary key
+        tests:
+          - unique
+          - not_null
+      - name: stripe_customer_id
+        description: ""
+
+      - name: stripe_subscription_item_id_array
+        description: ""
+
+      - name: stripe_latest_invoice_id
+        description: ""
+
+      - name: stripe_plan_id
+        description: ""
+
+      - name: stripe_product_id
+        description: ""
+
+      - name: count_of_subscription_item
+        description: ""
+
+      - name: days_until_due
+        description: ""
+
+      - name: plan_object
+        description: ""
+
+      - name: billing
+        description: ""
+
+      - name: billing_cycle_anchor
+        description: ""
+
+      - name: collection_method
+        description: ""
+
+      - name: default_payment_method
+        description: ""
+
+      - name: discount
+        description: ""
+
+      - name: invoice_customer_balance_settings
+        description: ""
+
+      - name: is_cancel_at_period_end
+        description: ""
+
+      - name: created_at
+        description: ""
+
+      - name: started_at
+        description: ""
+
+      - name: ended_at
+        description: ""
+
+      - name: canceled_at
+        description: ""
+
+      - name: cancel_at
+        description: ""
+
+      - name: current_period_end_at
+        description: ""
+
+      - name: current_period_start_at
+        description: ""
+
+      - name: trial_end_at
+        description: ""
+
+      - name: trial_start_at
+        description: ""
+
+      - name: updated_at
+        description: ""
+
+      - name: is_livemode
+        description: ""
+
+      - name: metadata
+        description: ""
+
+      - name: object
+        description: ""
+
+      - name: quantity
+        description: ""
+
+      - name: start
+        description: ""
+
+      - name: status
+        description: ""
+
+      - name: pause_collection
+        description: ""
+
+      - name: default_source
+        description: ""
+
+      - name: arr_product_subscription_assignment_id
+        description: ""
+
+      - name: has_created_a_product_subscription_assignment
+        description: ""

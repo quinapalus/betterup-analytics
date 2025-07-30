@@ -1,0 +1,35 @@
+version: 2
+
+models:
+  - name: int_group_coaching_attendance
+    description: "Group Coaching Attendance"
+    columns:
+        - name: primary_key
+          description: Composite Primary Key of Member ID, Cohort ID, Series ID, and Session ID
+          tests:
+            - not_null
+            - unique
+        - name: status
+          description: Status of the member's attendance
+        - name: group_coaching_cohort_id
+          description: ID of the Group Coaching Cohort
+        - name: intervention_type
+          description: Type of intervention 
+        - name: group_coaching_series_id
+          description: ID of the Group Coaching Series
+        - name: group_coaching_session_id
+          description: ID of the Group Coaching Session
+        - name: session_date
+          description: Date of the Group Coaching Session
+        - name: session_order
+          description: Order of the Group Coaching Session
+        - name: member_id
+          description: ID of the member
+        - name: member_registered
+          description: Member Registration
+        - name: member_attempted_to_join
+          description: Member Attempted to Join
+        - name: max_registrants
+          description: Maximum number of registrants
+        - name: min_registrants
+          description: Minimum number of registrants

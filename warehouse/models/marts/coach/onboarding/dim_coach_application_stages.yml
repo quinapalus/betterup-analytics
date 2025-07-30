@@ -1,0 +1,24 @@
+version: 2
+
+models:
+  - name: dim_coach_application_stages
+    description: "This has all stages that are used in all Fountain funnels. The grain is one row per stage."
+    columns:
+      - name: funnel_id
+        description: "ID of the funnel that the stage is part of"
+
+      - name: stage_id
+        description: "Unique ID of the stage. This is the primary key"
+        tests:
+          - unique
+          - not_null
+
+      - name: stage_title
+        description: "Name of the stage"
+
+      - name: stage_type
+        description: "Type of stage. Stage types documented here https://support.fountain.com/hc/en-us/sections/360003685151-Stage-Types"
+      
+      - name: stage_name_prefix
+        description: This takes all the characters that come before the first space in the stage name. This will be used to join to stage buckets in the intermediate model
+

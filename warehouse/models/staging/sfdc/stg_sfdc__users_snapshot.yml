@@ -1,0 +1,18 @@
+version: 2
+
+models:
+  - name: stg_sfdc__users_snapshot
+    columns:
+      - name: history_primary_key
+        tests:
+          - unique
+          - not_null
+      - name: sfdc_user_id
+        tests:
+          - not_null
+      - name: user_role_id
+        description: Foreign key of the user role for the user.
+        tests:
+          - relationships:
+              to: ref('stg_sfdc__user_roles')
+              field: sfdc_user_role_id

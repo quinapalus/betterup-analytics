@@ -1,0 +1,312 @@
+version: 2
+
+models:
+  - name: int_coach__coach_profiles
+    description: >
+      This intermediate model corresponds to the Coach Profiles application table,
+      but it also joins users to get helpful coach info (like coach ID and name),
+      and it joins Profile Island Attributes to coalesce / overwrite Coach Profile
+      data
+      with data from the island.
+
+    columns:
+      - name: coach_profile_id
+        tests:
+          - unique
+          - not_null
+
+        description: The 'coach_profile_id' column contains a unique ID assigned to
+          each coach profile. [GenAI Description]
+      - name: coach_profile_uuid
+        tests:
+          - unique
+          - not_null
+
+        description: "'coach_profile_uuid' is a universally unique identifier (UUID)\
+          \ used to link a coach profile record with a user record. [GenAI Description]"
+      - name: coach_id
+        description: "User ID from users table"
+        tests:
+          - unique
+          - not_null
+
+      - name: user_uuid
+        description: "User/coach UUID from users table"
+        tests:
+          - unique
+          - not_null
+
+      - name: first_name
+        description: Column 'first_name' contains the given name of the related user.
+          [GenAI Description]
+      - name: last_name
+        description: The 'last_name' column contains the last name of coaches associated
+          with a coach profile. [GenAI Description]
+      - name: full_name
+        description: The 'full_name' column contains the concatenation of a coach's
+          first name and last name. [GenAI Description]
+      - name: email
+        description: The 'email' column contains the email address of the coach associated
+          with the coach profile. [GenAI Description]
+      - name: days_since_hire
+        description: "Number of days between the created date for the coach (from the users table) and today's date"
+      - name: coach_bio
+        description: The column 'coach_bio' contains the bio of the coach, which includes
+          their qualifications, experiences, coaching styles and preferences. [GenAI
+          Description]
+      - name: endorsement
+        description: The 'endorsement' column contains a coach's endorsement from
+          a customer or supervisor. [GenAI Description]
+      - name: experience_highlight
+        description: The 'experience_highlight' column contains a summary of a coach's
+          professional experiences. [GenAI Description]
+      - name: outlook
+        description: Outlook is a field containing the coach outlook value; this field
+          indicates the coach's outlook on coaching situations. [GenAI Description]
+      - name: has_invoices_with_shortlist
+        description: This column indicates whether a coach profile has invoices related
+          to occasions where the coach was shortlisted for a session. [GenAI Description]
+      - name: last_book_read
+        description: The 'last_book_read' column of this model contains information
+          about the last book a coach has read. [GenAI Description]
+      - name: coach_style_words
+        description: "A description of the column 'coach_style_words' in the 'int_coach__coach_profiles'\
+          \ DBT model: A list of words describing the coach's style. [GenAI Description]"
+      - name: most_grateful_for
+        description: "'most_grateful_for' contains the coach's most gratifying moment\
+          \ in coaching. [GenAI Description]"
+      - name: greatest_accomplishment
+        description: The 'greatest_accomplishment' column records the single greatest
+          accomplishment of each coach profile. [GenAI Description]
+      - name: max_member_count
+        description: "'max_member_count' is the maximum number of members allowed\
+          \ to connect to a coach. [GenAI Description]"
+      - name: currency_code
+        description: The 'currency_code' column stores the currency code associated
+          with a coach profile. [GenAI Description]
+      - name: pick_rate
+
+        description: pick_rate is a measure of how quickly a coach is being picked
+          to fill member coach assignments. [GenAI Description]
+      - name: staffable_state
+        description: '{{ doc("int_coach__coach_profiles__staffable_states") }}'
+        tests:
+          - not_null
+
+      - name: fountain_applicant_id
+        description: "'fountain_applicant_id' is the ID of the Fountain applicant\
+          \ associated with the coach profile. [GenAI Description]"
+      - name: staffing_languages
+
+        description: This column stores the languages the coach is staffing for. [GenAI
+          Description]
+      - name: account_qualifications
+        description: Specific “pool” of coaches hand-selected for a specific account/organization
+          (eg mars, accenture)
+
+      - name: has_appointment_buffer_enabled
+
+        description: The column 'has_appointment_buffer_enabled' contains a boolean
+          value indicating the availability of booking buffering for the coach profile.
+          [GenAI Description]
+      - name: certification_qualifications
+        description: Coach has received a type of coaching certification (eg ICF ACC,
+          ICF PCC, BCC)
+
+      - name: focus_qualifications
+        description: Coach has 2+ years experience coaching on a particular focus
+          area (eg new parents, career, women in leadership)
+
+      - name: postgrad_qualifications
+        description: Coach has received a type of postgraduate degree (eg PhD, MAPP,
+          MBA)
+
+      - name: product_qualifications
+        description: Coach has completed a specific product training (eg 360, wpm2)
+
+      - name: professional_qualifications
+        description: Coach has received a type of professional license (eg LCP, LMFT,
+          LMHC)
+
+      - name: segment_qualifications
+        description: Coach has been selected to coach a specific segment of BU members
+          (eg employees, friends & family, trial)
+
+      - name: additional_qualifications
+        description: '"additional_qualifications" stores an array of extra qualifications
+          specific to a coach profile. [GenAI Description]'
+      - name: staffing_qualifications
+        description: This is every coach profile array-type field aggregated into
+          a single array. This appears to be a legacy field.
+      - name: coaching_varieties
+        description: "This is a cleaned version of this array field. For some coaching_varieties, the raw version
+        from coach_profiles is a concatenated 'specialist_vertical_' + specialist_vertical_id (ex: 'specialist_vertical_9'),
+        but in this cleaned version we join to specialist_verticals to replace that with the actual specialist vertical key
+        (ex: 'navigating_uncertainty')"
+      - name: staffing_member_levels
+        description: "'staffing_member_levels' column describes the qualifications\
+          \ and skill level of the coach including accredited coaching, certified\
+          \ coaching, and management experience. [GenAI Description]"
+      - name: staffing_tier
+        description: The 'staffing_tier'  column contains the tier ranking associated
+          with the coach provided by the hiring team. [GenAI Description]
+      - name: staffing_industries
+        description: The column 'staffing_industries' contains the industries where
+          a coach has experience. [GenAI Description]
+      - name: staffing_risk_level
+
+        description: The 'staffing_risk_level' column indicates the risk level of
+          the coach's staffing engagement with Fountain. [GenAI Description]
+      - name: is_primary_coach
+        description: Whether the coach is eligible for primary (a.k.a. core) coaching
+        tests:
+          - not_null
+
+      - name: coaching_cloud
+        description: Array of applicable clouds for the particular coach.
+        tests:
+          - not_null
+
+      - name: is_qa_coach
+        description: If true, this coach will only be staffed on tracks with deployment_type
+          = 'qa'
+        tests:
+          - not_null
+
+      - name: is_on_demand_coach
+        description: Whether the coach is eligible for on-demand coaching
+        tests:
+          - not_null
+
+      - name: is_group_coach
+
+        description: The 'is_group_coach' column is a boolean field indicating whether
+          or not the coach is a group coach. [GenAI Description]
+      - name: banned_organization_ids
+        description: Array of organization_id's that a coach is banned from working
+          with. During coach recommendation, members are prevented from seeing coaches
+          who are banned from working with the organization to which they belong.
+
+      - name: has_clinical_experience
+        description: Whether the coach has clinical experience as a counselor or therapist
+
+      - name: accredited_coaching
+        description: Whether the coach completed an Accredited Coach Training Program
+          (ACTP)
+
+      - name: coaching_hours
+        description: Estimated number of hours of professional coaching the coach
+          has completed
+
+      - name: management_work_years
+        description: Years of people management experience the coach has in a corporate
+          environment
+
+      - name: clinical_hours
+        description: Estimated the number of hours of supervised clinical work the
+          coach has completed
+
+      - name: clinical_years
+        description: Years of professional experience the coach has as a counselor/therapist
+
+      - name: clinical_corporate_years
+        description: Years of experience the coach has providing counseling or therapy
+          to clients who have been corporate leaders (manager level or above)
+
+      - name: country_of_residence
+        description: Country in which the coach currently resides. This information
+          is gathered during coach onboading, and captured in the BU admin panel afterward.
+          Data is collected in all caps and iso alpha-2 format. Admin presents a dropdown
+          list of all the country options.
+
+      - name: experience_country
+        description: Any other countries in which the coach has lived and is familiar
+          with workplace culture
+
+      - name: industry_coaching_experience
+        description: The extent of the coach's experience coaching individuals in
+          listed industries
+
+      - name: industry_work_experience
+        description: Industries that the coach has experience working in outside of
+          coaching. Minimum of 3 years working experience, or any management experience.
+
+      - name: additional_certifications
+        description: Additional certifications the coach holds
+
+      - name: professional_work_years
+        description: Years of professional work experience the coach has outside of
+          coaching
+
+      - name: vp_leadership_years
+        description: Total years of professional leadership experience the coach has
+          at the VP level or above
+
+      - name: new_member
+        description: Rating of the coach's comfort working with coachees new to coaching
+          Very comfortable (5), Somewhat comfortable (4), Neutral (3), Somewhat uncomfortable
+          (2), Not at all comfortable (1)
+
+      - name: short_engagement
+        description: Rating of the coach's comfort working with brief, short-term
+          engagements Very comfortable (5), Somewhat comfortable (4), Neutral (3),
+          Somewhat uncomfortable (2), Not at all comfortable (1)
+
+      - name: resistant_member
+        description: Rating of the coach's comfort working with coachees resistant
+          to coaching Very comfortable (5), Somewhat comfortable (4), Neutral (3),
+          Somewhat uncomfortable (2), Not at all comfortable (1)
+
+      - name: coaching_style
+        description: The coach's natural, or primary coaching style
+
+      - name: accountability_style
+        description: The coach's natural, or primary approach to supporting members'
+          goals
+
+      - name: exec_experience_org_size
+        description: Sizes of organizations the coach has coached leaders at a VP
+          level or above
+
+      - name: function_coaching_experience
+        description: Experience coaching individuals in specified role types and functions
+
+      - name: function_work_experience
+        description: Role types or functions the coach has experience working in outside
+          of coaching. Minimum of 3 years working experience, or any management experience.
+
+      - name: vp_leadership_org_size
+        description: Sizes of organizations the coach has had professional leadership
+          experience at a VP level or above
+
+      - name: topic_experience
+        description: 1:1 coaching topics the coach has significant experience or expertise
+          supporting
+
+      - name: engaged_member_count
+        description: Number of ongoing coach assignments -- across all types of coaching
+          -- where the member has last_engaged_at within 30 days. This is computed
+          within the production app and replicated directly from there -- not computed
+          in the warehouse.
+
+      - name: current_volunteer_member_count
+        description: Current number of volunteer members assigned to the coach as
+          part of Galen project, if the coach is enabled for volunteer coaching.
+
+      - name: segment_priority_level
+        description: P1, P2, or P3 indicating a coach's level of priority during recommendation
+          with P1 high and P3 low.
+
+      - name: updated_at
+
+        description: "'updated_at' is a timestamp field used to record when a coach\
+          \ profile was last updated. [GenAI Description]"
+      - name: created_at
+        description: "'created_at' is the date and time when the coach profile was\
+          \ created. [GenAI Description]"
+
+      - name: preferred_weekly_hours
+        description: ""
+      
+      - name: preferred_weekly_hours_updated_at
+        description: ""

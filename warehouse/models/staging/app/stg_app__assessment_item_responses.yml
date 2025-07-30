@@ -1,0 +1,31 @@
+version: 2
+
+models:
+  - name: stg_app__assessment_item_responses
+    description: Mapping table recording which assessment items a member responded
+      to when completing an assessment
+    columns:
+      - name: assessment_item_response_id
+        description: The assessment_item_response_id is the unique identifier for
+          an assessment item response. [GenAI Description]
+
+      - name: assessment_id
+        description: The 'assessment_id' column holds the unique identifier for the
+          assessment related to each assessment item response. [GenAI Description]
+
+      - name: assessment_item_id
+        description: "'assessment_item_id' is a foreign key that links each assessment_item_response\
+          \ with the corresponding assessment item. [GenAI Description]"
+
+      - name: assessment_item_uuid
+        description: "'assessment_item_uuid' is a unique identifier used to identify\
+          \ an assessment item response. [GenAI Description]"
+
+      - name: created_at
+        description: The 'created_at' column stores the timestamp when a new assessment
+          item response was created. [GenAI Description]
+
+      - name: updated_at
+        description: '"updated_at" is a timestamp value indicating when the response
+          to an assessment item was last updated. [GenAI Description]'
+

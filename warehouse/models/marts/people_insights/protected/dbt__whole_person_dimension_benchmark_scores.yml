@@ -1,0 +1,11 @@
+version: 2
+
+models:
+  - name: dbt__whole_person_dimension_benchmark_scores
+    description: ""
+    columns:
+      - name: _unique
+        description: Surrogate key created from dimension key, Whole persion model version, industry, employee level
+        tests:
+          - unique
+          - not_null

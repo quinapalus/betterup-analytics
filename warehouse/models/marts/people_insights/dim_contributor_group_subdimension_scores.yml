@@ -1,0 +1,32 @@
+version: 2
+
+models:
+  - name: dim_contributor_group_subdimension_scores
+    description: ""
+    columns:
+      - name: primary_key
+        description: ""
+        tests:
+          - unique
+          - not_null
+
+      - name: parent_assessment_id
+        description: ""
+
+      - name: assessment_id
+        description: ""
+
+      - name: contributor_role
+        description: ""
+
+      - name: construct_key
+        description: ""
+
+      - name: contributor_id
+        description: ""
+
+      - name: scale_score
+        description: ""
+
+      - name: scale_score_mean
+        description: ""

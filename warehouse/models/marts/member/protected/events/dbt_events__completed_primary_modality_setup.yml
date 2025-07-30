@@ -1,0 +1,46 @@
+version: 2
+
+models:
+  - name: dbt_events__completed_primary_modality_setup
+    description: DBT model dbt_events__completed_primary_modality_setup is a record
+      of each completed primary modality setup action for all users in the database.
+      It contains user_id, event_at, event_action, event_object, event_action_and_object,
+      associated_record_type, associated_record_id, and attributes fields, each of
+      which is used to track an associated record that was created or modified. All
+      details are stored in the attributes field for further analysis. [GenAI Description]
+    columns:
+      - name: member_id
+        description: The column 'member_id' refers to the user_id of an individual
+          user. [GenAI Description]
+        tests:
+          - unique
+          - not_null
+
+      - name: event_at
+        description: The column 'event_at' stores the time the user completed their
+          primary modality setup. [GenAI Description]
+
+      - name: event_action
+        description: The column 'event_action' indicates the action taken by the user,
+          which in this case is 'completed'. [GenAI Description]
+
+      - name: event_object
+        description: The 'event_object' column contains the value 'primary_modality_setup'
+          associated with events of the action 'completed'. [GenAI Description]
+
+      - name: event_action_and_object
+        description: The column 'event_action_and_object' is a combination of the
+          'event_action' and 'event_object' columns, allowing for easy identification
+          of the event that occurred. [GenAI Description]
+
+      - name: associated_record_type
+        description: This column contains the type of associated record related to
+          the event e.g. 'User'. [GenAI Description]
+
+      - name: associated_record_id
+        description: The column 'associated_record_id' holds the user ID associated
+          with each event. [GenAI Description]
+
+      - name: attributes
+        description: The 'attributes' column holds an object containing user-defined
+          informational key-value pairs. [GenAI Description]

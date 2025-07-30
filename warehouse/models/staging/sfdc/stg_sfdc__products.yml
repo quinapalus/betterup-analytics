@@ -1,0 +1,39 @@
+version: 2
+models:
+  - name: stg_sfdc__products
+    description: >
+      Salesforce Product models. For more information, check out the [Salesforce Account
+      documentation](https://developer.salesforce.com/docs/atlas.en-us.api.meta/api/sforce_api_objects_product2.htm)
+
+    columns:
+      - name: sfdc_product_id
+        description: Unique identifier in Salesforce for the Product
+        tests:
+          - not_null
+          - unique
+
+      - name: name
+        description: Name the Product
+        tests:
+          - not_null
+
+      - name: product_code
+        description: Short-hand code for the Product
+
+      - name: type
+        description: Type of the product sold (e.g. `Seat`, `One-time`)
+
+      - name: family
+        description: Which product family this Product belongs to (e.g. `ARR`, `NRR`)
+
+      - name: created_at
+        description: When the account was created in Salesforce
+        tests:
+          - not_null
+
+      - name: description
+        description: Description of the account
+
+      - name: is_active
+        description: True if the Product is active. Inactive products are often hidden
+          from the Salesforce interface.

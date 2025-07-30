@@ -1,0 +1,47 @@
+version: 2
+
+models:
+  - name: int_app__group_coaching_cohorts
+    description: ""
+    columns:
+      - name: group_coaching_cohort_id
+        description: ""
+        tests:
+          - unique
+          - not_null
+
+      - name: group_coaching_series_id
+        description: ""
+
+      - name: coach_id
+        description: ""
+
+      - name: session_duration_minutes
+        description: ""
+
+      - name: remaining_seats
+        description: ""
+
+      - name: seat_capacity
+        description: ""
+
+      - name: min_seat_count
+        description: ""
+
+      - name: is_live_session
+        description: ""
+
+      - name: first_session_starts_at
+        description: ""
+
+      - name: ended_at
+        description: ""
+
+      - name: canceled_at
+        description: ""
+
+      - name: created_at
+        description: ""
+
+      - name: updated_at
+        description: ""

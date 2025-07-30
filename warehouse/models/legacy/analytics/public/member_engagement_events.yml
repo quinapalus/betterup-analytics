@@ -1,0 +1,48 @@
+version: 2
+
+models:
+  - name: member_engagement_events
+    description: The DBT model member_engagement_events tracks and aggregates the
+      engagement events of users across numerous sources to determine user engagement
+      over time. This model contains the fields engagement_event_id, date, date_key,
+      user_id, eventable_id, eventable_type, verb, eventable_subject, event_at and
+      event_sequence and is populated using raw SQL code from the parent models stg_app__engagement_events
+      and stg_app__appointments. This model enables the gathering of meaningful and
+      actionable insights into user engagement trends. [GenAI Description]
+    columns:
+      - name: engagement_event_id
+        description: "'engagement_event_id' is a unique identifier for each engagement\
+          \ event associated with a user. [GenAI Description]"
+        tests:
+          - unique
+          - not_null
+
+      - name: date
+        description: The "date" column contains the date of an event for the associated
+          engagement. [GenAI Description]
+      - name: date_key
+        description: "'date_key' is a column that contains the date of an event in\
+          \ 8-digit numeric format (YYYYMMDD). [GenAI Description]"
+      - name: user_id
+        description: The 'user_id' column is used to uniquely identify each member
+          engaging with the App. [GenAI Description]
+      - name: eventable_id
+        description: eventable_id is the ID of the item related to each event (e.g.
+          an Appointment ID). [GenAI Description]
+      - name: eventable_type
+        description: The 'eventable_type' column in this model stores the type of
+          event that is being tracked, such as 'Appointment' or 'PostEventInvite'.
+          [GenAI Description]
+      - name: verb
+        description: The 'verb' column stores the type of action taken by the user.
+          [GenAI Description]
+      - name: eventable_subject
+        description: The column 'eventable_subject' stores the subject associated
+          with the eventable (such as an appointment or session) the event refers
+          to. [GenAI Description]
+      - name: event_at
+        description: This field represents the date and time of the event. [GenAI
+          Description]
+      - name: event_sequence
+        description: This column contains a numerical sequence that indicates the
+          order in which engagements events occurred for each user. [GenAI Description]

@@ -1,0 +1,37 @@
+version: 2
+
+models:
+  - name: dim_wkfw_users
+    description: The dim_wkfw_users model provides user information for users that register on
+      journey.betterup.co. It is sourced from staging data and leverages the parent tables for
+      the workflow users model.
+    columns:
+      - name: user_id
+        description: The 'user_id' column contains the unique identifier for each
+          user in the database. [GenAI Description]
+        tests:
+          - not_null
+          - unique
+
+      - name: email
+        description: The column 'email' stores the email address associated with
+          each user. [GenAI Description]
+
+      - name: email_domain
+        description: The email domain extracted from the user's email address.
+
+      - name: accepted_terms_at
+        description: "Timestamp when the user agreed to the terms of service and
+          privacy policy."
+
+      - name: verified_email_at
+        description: "Timestamp when the user first authenticated through the magic
+          link email."
+
+      - name: created_at
+        description: This column refers to the date and time that the user record
+          was created. [GenAI Description]
+
+      - name: updated_at
+        description: This column stores the timestamp of the last update made to the
+          user record. [GenAI Description]

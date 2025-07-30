@@ -1,0 +1,31 @@
+version: 2
+
+models:
+  - name: stg_app__resource_list_items
+    description: The stg_app__resource_list_items DBT model stores data related to
+      which resources are associated with specific resource lists. It is composed
+      of the fields resource_list_item_id, resource_list_id, resource_id, created_at,
+      updated_at, and the parent models. [GenAI Description]
+    columns:
+      - name: resource_list_item_id
+        description: The 'resource_list_item_id' column stores the unique ID of a
+          record in the 'resource_list_items' table. [GenAI Description]
+        tests:
+          - unique
+          - not_null
+
+      - name: resource_list_id
+        description: The 'resource_list_id' column stores the ID of the parent resource
+          list associated with each list item. [GenAI Description]
+
+      - name: resource_id
+        description: The 'resource_id' column stores the unique IDs of the external
+          resource associated with a resource list item. [GenAI Description]
+
+      - name: created_at
+        description: The created_at column contains timestamp information indicating
+          when the resource list item was created. [GenAI Description]
+
+      - name: updated_at
+        description: The 'updated_at' column contains a timestamp for when the record
+          was last updated. [GenAI Description]

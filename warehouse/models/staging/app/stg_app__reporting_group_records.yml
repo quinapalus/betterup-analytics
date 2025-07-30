@@ -1,0 +1,11 @@
+version: 2
+
+models:
+    - name: stg_app__reporting_group_records
+
+      columns:
+          - name: reporting_group_record_id
+            description: Primary key
+            tests:
+                - unique
+                - not_null

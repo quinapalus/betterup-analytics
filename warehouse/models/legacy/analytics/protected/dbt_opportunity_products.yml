@@ -1,0 +1,21 @@
+version: 2
+models:
+  - name: dbt_opportunity_products
+    description: >
+      Sums up the units sold under an opportunity.
+
+    columns:
+      - name: sfdc_opportunity_id
+        description: Foreign key for associated member.
+        tests:
+          - not_null
+
+      - name: seats_purchased
+        description: Total number of seats that were purchased
+        tests:
+          - not_null
+
+      - name: hours_purchased
+        description: Total number of hours purchased
+        tests:
+          - not_null

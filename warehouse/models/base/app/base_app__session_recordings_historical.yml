@@ -1,0 +1,16 @@
+version: 2
+
+models:
+  - name: base_app__session_recordings_historical
+    description: ""
+    columns:
+      - name: call_id
+      - name: created_at
+      - name: ext_archive_id
+      - name: id
+        tests:
+          - unique
+          - not_null
+      - name: status
+      - name: updated_at
+      - name: video_metadata

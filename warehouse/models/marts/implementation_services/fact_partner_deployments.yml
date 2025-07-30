@@ -1,0 +1,105 @@
+version: 2
+
+models:
+  - name: fact_partner_deployments
+    description: "Each record represents one deployment. This originates from the Launch Request Salesforce object."
+    columns:
+      - name: partner_deployment_id
+        description: "AKA launch_request_id"
+        tests:
+          - unique
+          - not_null
+
+      - name: sfdc_opportunity_id
+        description: ""
+        tests:
+          - not_null
+
+      - name: partner_deployment_id_created_by_id
+        description: "AKA launch_request_created_by_id"
+
+      - name: deployment_manager_id
+        description: ""
+
+      - name: sfdc_record_type_id
+        description: ""
+        tests:
+          - relationships:
+              to: ref('stg_sfdc__record_types')
+              field: sfdc_record_type_id
+
+      - name: partner_deployment_name
+        description: ""
+
+      - name: status
+        description: ""
+
+      - name: deployment_manager_customer_interaction_hours
+        description: ""
+
+      - name: deployment_manager_internal_coordination_hours
+        description: ""
+
+      - name: deployment_manager_technical_configuration_hours
+        description: ""
+
+      - name: deployment_manager_member_orientation_prep_hours
+        description: ""
+
+      - name: specialist_on_demand_circles_licenses
+        description: ""
+
+      - name: executive_specialist_on_demand_circles_licenses
+        description: ""
+
+      - name: coaching_circles_within_company_licenses
+        description: ""
+
+      - name: connect_beta_licenses
+        description: ""
+
+      - name: lead_specialist_on_demand_licenses
+        description: ""
+
+      - name: lead_executive_one_to_one_on_demand_licenses
+        description: ""
+
+      - name: care_licenses
+        description: ""
+
+      - name: one_to_one_coaching_only_licenses
+        description: ""
+
+      - name: coaching_circles_multi_company_licenses
+        description: ""
+
+      - name: lead_sales_performance_licenses
+        description: ""
+
+      - name: created_at
+        description: ""
+
+      - name: proposed_launch_date
+        description: ""
+
+      - name: is_deleted
+        description: ""
+
+      - name: sfdc_account_id
+        description: ""
+        tests:
+
+      - name: record_type_name
+        description: ""
+
+      - name: total_licenses
+        description: ""
+
+      - name: total_deployment_manager_hours
+        description: ""
+
+      - name: count_of_partner_deployments
+        description: ""
+
+      - name: is_self_serve_diy_deployment
+        description: "True if Customer will be utilizing self-serve guides, false otherwise"

@@ -1,0 +1,20 @@
+version: 2
+
+models:
+  - name: base_app__pause_intervals_historical
+    description: ""
+    columns:
+      - name: consumer_subscription_id
+      - name: created_at
+      - name: id
+        tests:
+          - unique
+          - not_null
+      - name: paused_at
+      - name: paused_until
+      - name: product_subscription_assignment_id
+      - name: status
+      - name: updated_at
+      - name: requested_early_unpause
+      - name: resume_scheduled_job_id
+      - name: pause_scheduled_job_id

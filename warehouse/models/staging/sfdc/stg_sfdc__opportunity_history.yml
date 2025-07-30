@@ -1,0 +1,45 @@
+version: 2
+models:
+  - name: stg_sfdc__opportunity_history
+    description: >
+      Salesforce Opportunity History model. This model represents the history of a
+      change to the
+      Amount, Probability, Stage, or Close Date fields of an Opportunity. A new record
+      is added when any of these fields
+      have been changed. For more information, check out the [Salesforce Opportunity
+      History documentation](https://developer.salesforce.com/docs/atlas.en-us.api.meta/api/sforce_api_objects_opportunityhistory.htm)
+
+    columns:
+      - name: sfdc_opportunity_history_id
+        description: Primary Key associated with Opportunity History change record.
+        tests:
+          - unique
+          - not_null
+
+      - name: sfdc_opportunity_id
+        description: Unique identifier of the Salesforce Opportunity.
+        tests:
+          - not_null
+
+      - name: created_at
+        description: >
+          Timestamp denoting when the object change occurred in Salesforce.
+        tests:
+          - not_null
+
+      - name: amount
+        description: Amount of the opportunity at the time of the history record.
+
+      - name: stage_name
+        description: Stage the opportunity was in for this history record.
+
+      - name: close_date
+        description: Expected close date of the opported at the time of this history
+          record.
+
+      - name: is_deleted
+        description: Boolean denoting if this opportunity history record has been
+          deleted in SFDC.
+
+
+

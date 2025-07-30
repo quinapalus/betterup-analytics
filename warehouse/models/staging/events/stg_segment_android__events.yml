@@ -1,0 +1,103 @@
+version: 2
+models:
+  - name: stg_segment_android__events
+    description: >
+      Analytic events from Segment that were generated from the `betterup-ios` application.
+      See (this Google spreadsheet)[https://docs.google.com/spreadsheets/d/1UwkyWm0cu80LjocG58C0pVA5SB1t36FgoefmStgkXbc/edit#gid=578995358]
+      for a list of tracked events.
+
+    columns:
+      - name: event_id
+        description: Unique identifier of the event.
+        tests:
+          - not_null
+          - unique
+
+      - name: user_id
+        description: Unique identfier of the User.
+
+      - name: event_at
+        description: >
+          Specifies when the datapoint occurred (in UTC), corrected for client-device clock skew.
+          See the Segment [documentation](https://segment.com/docs/spec/common/#timestamps) for more information.
+        tests:
+          - not_null
+
+      - name: event
+        description: Name of the event.
+
+      - name: event_text
+        description: Human-readable name of the event.
+
+      - name: platform
+        description: Client platform, i.e. 'Android'.
+
+      - name: context_library_version
+        description: Version of the library the generated the event.
+
+      - name: context_library_name
+        description: Name of the library that generated the event.
+
+      - name: context_app_build
+        description: Build number of the application.
+
+      - name: context_app_name
+        description: Name of the Android application.
+
+      - name: context_app_namespace
+
+      - name: context_app_version
+        description: Version of the Android application.
+
+      - name: context_device_ad_tracking_enabled
+
+      - name: context_device_id
+        description: Unique identifer of the device.
+
+      - name: context_device_manufacturer
+        description: Who manufactured the device (e.g. `samsung`).
+
+      - name: context_device_model
+        description: Device model (e.g. `SM-G965F`).
+
+      - name: context_device_type
+        description: Type of device (e.g. `android`).
+
+      - name: context_library_name
+        description: Name of the analytics library used. For Segment, this value should be `analytics-android`.
+
+      - name: context_library_version
+        description: Version of the analytics library used (e.g. `3.6.10`).
+
+      - name: context_locale
+        description: Locale of the device (e.g. `en_US`).
+
+      - name: context_network_bluetooth
+        description: True if the device has a Bluetooth connection.
+
+      - name: context_network_cellular
+        description: True iff the device has a cellular connection.
+
+      - name: context_network_wifi
+        description: True iff the device has a WiFi connection.
+
+      - name: context_os_name
+        description: Operating system name (e.g. `Android`).
+
+      - name: context_os_version
+        description: Operating system version (e.g. `8.0.0`).
+
+      - name: context_screen_density
+        description: Pixel density of the device's screen.
+
+      - name: context_screen_height
+        description: Height of the device's screen in pixels.
+
+      - name: context_screen_width
+        description: Width of the device's screen in pixels.
+
+      - name: context_tz_iana
+        description: Olson time zone (e.g. `America/Denver`).
+
+      - name: anonymous_user_token
+        description: UUID assigned to the User before an `identify` call is made.

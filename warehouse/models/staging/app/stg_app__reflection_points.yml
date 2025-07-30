@@ -1,0 +1,63 @@
+version: 2
+
+models:
+  - name: stg_app__reflection_points
+    description: DBT stg_app__reflection_points is a staging model that contains data
+      related to users' reflection points. It provides fields such as reflection_point_id,
+      coach_assignment_id, track_assignment_id, met_prerequisites_at, upcoming_at,
+      eligible_at, coach_due_at, canceled_at, coach_assessment_id, and member_assessment_id.
+      It contains parent models, and is authored in SQL. This model is intended to
+      store and manage data related to users' reflection points. [GenAI Description]
+    columns:
+      - name: reflection_point_id
+        description: The 'reflection_point_id' column stores the unique identifier
+          for a reflection point. [GenAI Description]
+        tests:
+          - unique
+          - not_null
+
+      - name: coach_assignment_id
+        description: The coach_assignment_id column holds the ID of the assignment
+          that the coach was given relating to a particular reflection point. [GenAI
+          Description]
+
+      - name: track_assignment_id
+        description: "'track_assignment_id' is a unique identifier for a track assignment\
+          \ associated with a given reflection point. [GenAI Description]"
+
+      - name: met_prerequisites_at
+        description: The 'met_prerequisites_at' column holds the timestamp of when
+          a reflection point has achieved its prerequisite goals. [GenAI Description]
+
+      - name: upcoming_at
+        description: The 'upcoming_at' column includes a timestamp for when the reflection
+          point is set to be available. [GenAI Description]
+
+      - name: eligible_at
+        description: The eligible_at column stores the date and time when a reflection
+          point becomes eligible to be included in a coach's list of reflection points.
+          [GenAI Description]
+
+      - name: coach_due_at
+        description: coach_due_at stores a timestamp for when a coach assessment is
+          due for a reflection point. [GenAI Description]
+
+      - name: canceled_at
+        description: The 'canceled_at' column stores a timestamp of when a reflection
+          point was canceled. [GenAI Description]
+
+      - name: coach_assessment_id
+        description: The coach_assessment_id column identifies the assessment assigned
+          to a coach. [GenAI Description]
+
+      - name: member_assessment_id
+        description: The column 'member_assessment_id' is the user's assessment associated
+          with the reflection point. [GenAI Description]
+
+      - name: created_at
+        description: The "created_at" column captures the timestamp of when the record
+          was created. [GenAI Description]
+
+      - name: updated_at
+        description: The timestamp of when the reflection point record was last updated.
+          [GenAI Description]

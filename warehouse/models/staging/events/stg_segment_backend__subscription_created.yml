@@ -1,0 +1,175 @@
+version: 2
+
+models:
+  - name: stg_segment_backend__subscription_created
+    description: The DBT model stg_segment_backend__subscription_created stores data
+      collected from a Segment Backend event about subscription creations. This model
+      contains a variety of fields about the user, the product they purchased, subscription
+      details, and other deployment and event-related data. This dataset can be used
+      to better understand purchasing trends, activities, and customer behavior. [GenAI
+      Description]
+    columns:
+      - name: id
+        description: Unique primary key
+        tests:
+          - unique
+          - not_null
+
+      - name: has_primary_coach
+        description: "'has_primary_coach' is a boolean column indicating whether a\
+          \ subscription was created with a primary coach. [GenAI Description]"
+
+      - name: original_timestamp
+        description: original_timestamp is the timestamp taken from the original Subscription
+          Created event. [GenAI Description]
+
+      - name: received_at
+        description: "'received_at' is a date/time field recording when the event\
+          \ occurred. [GenAI Description]"
+
+      - name: user_id
+        description: The 'user_id' column in the DBT model stores the unique identifier
+          of the user that created the subscription. [GenAI Description]
+
+      - name: context_library_name
+        description: "'context_library_name' is a field which holds the name of the\
+          \ library used when generating a subscription. [GenAI Description]"
+
+      - name: context_library_version
+        description: "'context_library_version' stores a version of context library\
+          \ used for the subscription event. [GenAI Description]"
+
+      - name: event_text
+        description: The 'event_text' column contains a textual description of the
+          event that triggered the subscription. [GenAI Description]
+
+      - name: deployment_type
+        description: The 'deployment_type' column contains the deployment type of
+          the subscription created. [GenAI Description]
+
+      - name: event
+        description: The 'event' column stores the type of event associated with a
+          subscription created. [GenAI Description]
+
+      - name: sent_at
+        description: sent_at is a timestamp indicating when an event was sent from
+          Segment to HubSpot. [GenAI Description]
+
+      - name: track_id
+        description: "'track_id' is a unique identifier associated with an event from\
+          \ the Segment backend data. [GenAI Description]"
+
+      - name: uuid_ts
+        description: "'uuid_ts' is a universal unique identifier connected to a timestamp\
+          \ used to uniquely identify events. [GenAI Description]"
+
+      - name: timestamp
+        description: The 'timestamp' column in this DBT model stores a UNIX timestamp
+          reflecting the exact time the subscription was created. [GenAI Description]
+
+      - name: track_assignment_id
+        description: The 'track_assignment_id' column stores the unique identifier
+          for each track assignment assigned for the subscription. [GenAI Description]
+
+      - name: consumer_product_id
+        description: The consumer_product_id column identifies the product associated
+          with a subscription created event. [GenAI Description]
+
+      - name: consumer_product_price_nickname
+        description: The column 'consumer_product_price_nickname' contains the nicknames
+          associated with product prices. [GenAI Description]
+
+      - name: consumer_product_price_stripe_price_id
+        description: The column 'consumer_product_price_stripe_price_id' contains
+          the Stripe-specific identification associated with the product's price.
+          [GenAI Description]
+
+      - name: consumer_product_price_unit_amount
+        description: consumer_product_price_unit_amount is the cost of the consumer's
+          product per unit. [GenAI Description]
+
+      - name: consumer_product_stripe_product_id
+        description: The 'consumer_product_stripe_product_id' column contains the
+          Stripe ID associated with a product bought by the consumer. [GenAI Description]
+
+      - name: consumer_product_price_id
+        description: The consumer_product_price_id identifies the price of the consumer
+          product. [GenAI Description]
+
+      - name: consumer_product_name
+        description: The 'consumer_product_name' column contains the name of the product
+          associated with the subscription created. [GenAI Description]
+
+      - name: consumer_product_price_recurring_interval
+        description: "'consumer_product_price_recurring_interval' stores the time\
+          \ interval (in months) between recurring payments. [GenAI Description]"
+
+      - name: consumer_product_price_recurring_interval_count
+        description: "'consumer_product_price_recurring_interval_count' is the count\
+          \ of an interval used to charge a recurring subscription price for a consumer\
+          \ product. [GenAI Description]"
+
+      - name: consumer_product_price_currency
+        description: The column 'consumer_product_price_currency' records the currency
+          denomination of the subscription created. [GenAI Description]
+
+      - name: consumer_product_sessions_per_month
+        description: "'consumer_product_sessions_per_month' is the number of sessions\
+          \ allotted for a customer's subscription product each month. [GenAI Description]"
+
+      - name: consumer_subscription_trial_ends_on
+        description: "'consumer_subscription_trial_ends_on' contains the date when\
+          \ the consumer's trial period ends. [GenAI Description]"
+
+      - name: consumer_subscription_trial
+        description: The'consumer_subscription_trial' column contains boolean values
+          indicating whether a trial period is associated to the consumer's subscription.
+          [GenAI Description]
+
+      - name: upfront_subscription_state
+        description: "'upfront_subscription_state' is a column that determines the\
+          \ state of the subscription contract. [GenAI Description]"
+
+      - name: hubspot_contact_id
+        description: The 'hubspot_contact_id' column contains the ID of a contact
+          in Hubspot. [GenAI Description]
+
+      - name: product_subscription_assignment_id
+        description: The product_subscription_assignment_id is a unique identifier
+          for a specific assignment of a product subscription. [GenAI Description]
+
+      - name: product_subscription_id
+        description: The 'product_subscription_id' column contains a unique identifier
+          for the product subscription assigned to a given user. [GenAI Description]
+
+      - name: product_id
+        description: The product_id column stores the unique identifier of the product
+          associated with a subscription. [GenAI Description]
+
+      - name: browser_name
+        description: The 'browser_name' column in this DBT model stores the name of
+          the web browser used when creating a subscription. [GenAI Description]
+
+      - name: browser_version
+        description: "'browser_version' is the version of the browser that the event\
+          \ was created on. [GenAI Description]"
+
+      - name: platform_version
+        description: The 'platform_version' column stores the version of a platform
+          the event was created on. [GenAI Description]
+
+      - name: device_name
+        description: The 'device_name' column contains the name of the device used
+          to create the subscription. [GenAI Description]
+
+      - name: platform_name
+        description: '"platform_name" is the name of the platform (operating system)
+          from which the event was fired. [GenAI Description]'
+
+      - name: app_version
+        description: "'app_version' is the app version of the user's device, which\
+          \ is tracked in this model. [GenAI Description]"
+
+      - name: app_build
+        description: The app_build column contains the build version of the app in
+          which an event was triggered. [GenAI Description]

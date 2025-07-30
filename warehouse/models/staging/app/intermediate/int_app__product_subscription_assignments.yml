@@ -1,0 +1,69 @@
+version: 2
+
+models:
+  - name: int_app__product_subscription_assignments
+    description: The int_app__product_subscription_assignments DBT model provides
+      a filtered list of product subscription assignments that are still active or
+      pending cancellation. It contains Product Subscription Assignment-specific attributes
+      such as product_subscription_assignment_id, product_subscription_id, starts_at,
+      ended_at, ends_at, and requested_cancellation_at as well as data related to
+      the Stripe payment service such as stripe_subscription_id, stripe_data, stripe_customer_id,
+      v2. [GenAI Description]
+    columns:
+      - name: product_subscription_assignment_id
+        description: The 'product_subscription_assignment_id' column stores the unique
+          identifier for each product subscription assignment record. [GenAI Description]
+        tests:
+          - unique
+          - not_null
+
+      - name: product_subscription_id
+        description: "'product_subscription_id' refers to a unique identifier for\
+          \ a product-based subscription assigned to a member. [GenAI Description]"
+
+      - name: member_id
+        description: The 'member_id' column stores the identifier of a user assigned
+          to a product subscription. [GenAI Description]
+
+      - name: stripe_subscription_id
+        description: The 'stripe_subscription_id' column stores the unique identifier
+          of the Stripe subscription associated with each product subscription assignment.
+          [GenAI Description]
+
+      - name: stripe_data
+        description: The 'stripe_data' column stores information from a stripe customer,
+          such as payment history or subscription status. [GenAI Description]
+
+      - name: stripe_customer_id
+        description: "'stripe_customer_id' is the unique identifier associated with\
+          \ a customer on the Stripe payments platform. [GenAI Description]"
+
+      - name: v2
+        description: The column 'v2' contains additional data related to each product
+          subscription assignment. [GenAI Description]
+
+      - name: created_at
+        description: "'created_at' stores the date and time on which the product subscription\
+          \ assignment was created. [GenAI Description]"
+
+      - name: updated_at
+        description: The 'updated_at' column stores the timestamp of when a record
+          in the 'product_subscription_assignments' table was last updated. [GenAI
+          Description]
+
+      - name: starts_at
+        description: The 'starts_at' column contains the date and time when the product
+          subscription assignment is active. [GenAI Description]
+
+      - name: ended_at
+        description: The 'ended_at' column stores the date and time at which the product
+          subscription assignment ended. [GenAI Description]
+
+      - name: ends_at
+        description: The 'ends_at' column stores a date and time indicating when the
+          product subscription assignment will end. [GenAI Description]
+
+      - name: requested_cancellation_at
+        description: The requested_cancellation_at column stores the date and time
+          at which the associated subscription request has been sent for cancellation.
+          [GenAI Description]

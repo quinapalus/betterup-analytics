@@ -1,0 +1,55 @@
+rating_question: &rating_question
+  options:
+    - [1, 'Not at all']
+    - [2, 'Not really']
+    - [3, 'Somewhat']
+    - [4, 'Mostly']
+    - [5, 'Absolutely']
+
+yes_no_question: &yes_no_question
+  options:
+    - ['Yes', 'Yes']
+    - ['No', 'No']
+    - ["I’m Not Sure", "I’m Not Sure"]
+
+questions:
+  appointment_id: {}
+  listening_rating:
+    <<: *rating_question
+    label: Did you feel heard, understood, and respected?
+    tags:
+      - first_session
+      - post_first_session
+  insight_rating:
+    <<: *rating_question
+    label: Did you gain a valuable insight or takeaway?
+    tags:
+      - first_session
+  relevance_rating:
+    <<: *rating_question
+    label: Did you focus on the topics you wanted to work on and talk about?
+    tags:
+      - post_first_session
+  av_quality_rating:
+    <<: *rating_question
+    label: Were you satisfied with the technical quality of your session?
+  feedback:
+    label: Anything else you'd like to say about this session?
+  session_was_valuable:
+    <<: *yes_no_question
+    label: Was this session a valuable use of your time?
+  ran_out_of_discussion_items:
+    <<: *yes_no_question
+    label: Did you run out of things to discuss during this session?
+  session_overall_emotional:
+    label: How was this session overall?
+    options:
+      - ['Life Changing', 'Life Changing']
+      - ['Amazing', 'Amazing']
+      - ['Good', 'Good']
+      - ['Okay', 'Okay']
+      - ['Not Great', 'Not Great']
+      - ["I’m Not Sure", "I’m Not Sure"]
+  will_attend_in_next_month:
+    <<: *yes_no_question
+    label: Do you think you will attend another session in the next month?

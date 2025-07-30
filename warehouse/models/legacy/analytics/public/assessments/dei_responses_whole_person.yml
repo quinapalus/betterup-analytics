@@ -1,0 +1,108 @@
+version: 2
+models:
+  - name: dei_responses_whole_person
+    description: >
+      This table contains assessment items for the Whole Person Assessment at onboarding
+      and during RP. The WPM assessments shown in this table are those assessments
+      that had all WPM questions answered; in other words, any erroneous WPM Assessments
+      are filtered out.
+
+    columns:
+      - name: assessment_item_key
+        description: >
+          Primary key: combination of assessment id and item key
+        tests:
+          - not_null
+          - unique
+
+      - name: source
+        description: >
+          String that specifies whether the WPM assessment was taken at onboarding
+          or at RP.
+        tests:
+          - not_null
+
+      - name: assessment_id
+        description: Foreign key to associated assessment.
+        tests:
+          - not_null
+
+      - name: created_at
+        description: >
+          Timestamp that denotes when the assessment was initiated.
+        tests:
+          - not_null
+
+      - name: item_key
+        description: >
+          String that denotes the item key associated with the question in
+          the assessment.
+        tests:
+          - not_null
+
+      - name: item_response
+        description: >
+          Integer that represents the member's response to a question in the assessment.
+        tests:
+          - not_null
+
+      - name: sequence
+        description: >
+          Integer that represents the sequence of the assessment for the user.
+        tests:
+           - not_null
+
+      - name: submitted_at
+        description: >
+          Timestamp that denotes when the assessment was submitted.
+        tests:
+           - not_null
+
+      - name: member_id
+        description: Denormalized foreign key to associated user.
+        tests:
+           - not_null
+
+      - name: track_id
+        description: >
+          Foreign key to associated track. NULL if the assessment
+          was submitted before January 20, 2018 due to existence
+          of overlapping track assignments. 
+
+      - name: dimension
+        description: >
+          String that denotes the WPM dimension associated with the item key.
+        tests:
+           - not_null
+
+      - name: factor
+        description: >
+          String that denotes the WPM factor associated with the item key.
+        tests:
+           - not_null
+
+      - name: item_prompt
+        description: >
+          String that denotes the WPM prompt associated with the item key.
+        tests:
+           - not_null
+
+      - name: reverse_scored
+        description: >
+          Boolean that denotes whether the question is reversely scored.
+        tests:
+           - not_null
+           - accepted_values:
+                values: ['TRUE', 'FALSE']
+
+      - name: scale
+        description: >
+          String that denotes the scoring scale associated with the item key.
+        tests:
+           - not_null
+
+      - name: subdimension
+        description: >
+          String that denotes the subdimension associated with the item key.
+        tests:
+           - not_null

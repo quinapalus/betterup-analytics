@@ -1,0 +1,62 @@
+version: 2
+
+models:
+  - name: stg_app__user_attribute_records
+    description: >
+      UserAttribute Record model represents a single row ingested from a
+      UserAttribute Import.
+
+    columns:
+      - name: user_attribute_record_id
+        description: Unique identifer of the user attribute import.
+        tests:
+          - unique
+          - not_null
+      - name: data
+        description: Raw data of the ingested UserAttribute Import row.
+      - name: source_id
+        description: The 'source_id' column stores the unique identifier associated
+          with each user attribute record. [GenAI Description]
+      - name: user_id
+        description: '"user_id" is the unique identifier for the user in the source
+          system. [GenAI Description]'
+      - name: source_type
+        description: The 'source_type' column records the source from which a user
+          was imported. [GenAI Description]
+      - name: email
+        description: The 'email' column stores an email address entered by a user.
+          [GenAI Description]
+      - name: dry_run
+        description: '"dry_run" is a Boolean value that indicates whether an individual
+          user attribute record was a test or an actual record. [GenAI Description]'
+      - name: user_provision_status
+        description: This column stores the provisioning status of a user such as
+          pending, provisioned, or declined. [GenAI Description]
+      - name: user_ending_status
+        description: Column 'user_ending_status' indicates the outcome of user attribute
+          transformation and computation, whether it is successful or if an error
+          occurred. [GenAI Description]
+      - name: user_ending_message
+        description: Contains the text of a message, usually a status update, related
+          to the user provisioning or removal process. [GenAI Description]
+      - name: user_removal_status
+        description: The user_removal_status column stores the status value of user
+          removal. [GenAI Description]
+      - name: user_provision_message
+        description: The column 'user_provision_message' is a string value which stores
+          a message related to the user's provisioning status. [GenAI Description]
+      - name: user_removal_message
+        description: The user_removal_message column contains the message associated
+          with the user removal action. [GenAI Description]
+      - name: processed_at
+        description: Time when the Rails object was processed in UTC.
+      - name: created_at
+        description: >
+          Time when the Rails object was created in UTC, i.e. when the
+          user account was created.
+        tests:
+          - not_null
+      - name: updated_at
+        description: Time when the Rails object was updated in UTC.
+        tests:
+          - not_null

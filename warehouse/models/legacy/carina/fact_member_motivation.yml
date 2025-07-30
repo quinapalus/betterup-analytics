@@ -1,0 +1,77 @@
+version: 2
+models:
+  - name: fact_member_motivation
+    description: >
+      Fact table for classified member motivations, with one row per motivation.
+
+    columns:
+      - name: member_key
+        description: Foreign key to conformed Member dimension.
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_member')
+              field: member_key
+
+      - name: account_key
+        description: >
+          Foreign key to conformed Account dimension.
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_account')
+              field: account_key
+
+      - name: date_key
+        description: >
+          Foreign key to conformed Date dimension for the date the member
+          submitted their motivation.
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_date')
+              field: date_key
+
+      - name: motivation_text
+        description: >
+          Motivation text as submitted by the member.
+        tests:
+          - not_null
+
+      - name: word_count
+        description: >
+          Number of words in the member's motivation. Calculated by counting
+          whitespace characters so will not be accurate for some character-based
+          languages, e.g. Chinese.
+        tests:
+          - not_null
+
+      - name: ranked_topic_themes
+        description: >
+          Ordered list (comma-seperated) of Topic Themes that passed our
+          relevance filter.
+        tests:
+          - not_null
+
+      - name: ranked_topic_theme_count
+        description: >
+          Number of Topic Themes that passed our relevance filter for the
+          associated motivation.
+        tests:
+          - not_null
+
+      - name: primary_topic_theme
+        description: >
+          Primary Topic Theme for the associated motivation.
+        tests:
+          - not_null
+
+      - name: relative_distance_to_secondary_topic_theme
+        description: >
+          Numerical value representing the distance between the primary
+          topic theme and the secondary topic theme for the associated motivation.
+          Higher numbers represent a larger distance. Useful if you're trying to
+          filter for motivations with strongest association with the primary topic
+          theme.
+        tests:
+          - not_null

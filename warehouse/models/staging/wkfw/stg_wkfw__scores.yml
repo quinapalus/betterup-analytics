@@ -1,0 +1,44 @@
+version: 2
+
+models:
+  - name: stg_wkfw__scores
+    description: The DBT model stg_wkfw__scores is a structured dataset containing
+      scores on assessments and different constructs, such as raw score, scaled score,
+      and Z-score. It is generated from data stored in the raw.stitch_app_viva_staging.scores
+      table and stores each individual score's unique ID, assessment ID, construct
+      ID, and scores, along with when the score was created and updated. [GenAI Description]
+    columns:
+      - name: score_id
+        description: The score_id column contains a unique identifier used to track
+          records in the scores table. [GenAI Description]
+        tests:
+          - not_null
+          - unique
+
+      - name: assessment_id
+        description: The 'assessment_id' column stores the identifier of an assessment
+          associated with the score. [GenAI Description]
+
+      - name: construct_id
+        description: The 'construct_id' column references the associated construct
+          being measured by the score. [GenAI Description]
+
+      - name: raw_score
+        description: The 'raw_score' column contains the un-transformed score from
+          an assessment, out of a possible total. [GenAI Description]
+
+      - name: scale_score
+        description: The 'scale_score' column contains the numerical score value for
+          a given assessment construct on a standardized scale. [GenAI Description]
+
+      - name: z_score
+        description: The 'z_score' column contains the transformed, normalized raw
+          score of an assessment. [GenAI Description]
+
+      - name: created_at
+        description: The 'created_at' column stores the date and time when a score
+          was first recorded. [GenAI Description]
+
+      - name: updated_at
+        description: The 'updated_at' column stores timestamps for the last date and
+          time the score was updated. [GenAI Description]

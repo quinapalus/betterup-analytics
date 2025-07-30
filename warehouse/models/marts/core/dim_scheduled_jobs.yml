@@ -1,0 +1,52 @@
+version: 2
+
+models:
+  - name: dim_scheduled_jobs
+    description: This table contains information about ScheduledJobs run in betterup-app.
+    columns:
+      - name: scheduled_job_id
+        description: Unique identifier for scheduled_jobs
+        tests:
+          - unique
+          - not_null
+
+      - name: job_type
+        description: This column contains the type of job each entry represents. [GenAI
+          Description]
+
+      - name: perform_at
+        description: The 'perform_at' column stores the time at which a scheduled
+          job should be executed. [GenAI Description]
+
+      - name: scheduling_user_id
+        description: Identifies the user who scheduled a job. [GenAI Description]
+
+      - name: sidekiq_job_id
+        description: Column containing the unique identifier of a scheduled job in
+          Sidekiq. [GenAI Description]
+
+      - name: enqueued_at
+        description: End time of the job's most recent queueing event. [GenAI Description]
+
+      - name: started_at
+        description: Column indicating the start time of a scheduled job. [GenAI Description]
+
+      - name: completed_at
+        description: The 'completed_at' column stores the timestamp for when a scheduled
+          job finished execution. [GenAI Description]
+
+      - name: status
+        description: The 'status' column indicates the current state of the scheduled
+          job. [GenAI Description]
+
+      - name: message
+        description: "'message' column contains descriptive job-related messages.\
+          \ [GenAI Description]"
+
+      - name: created_at
+        description: This column stores the date and time that the job was created.
+          [GenAI Description]
+
+      - name: updated_at
+        description: This column represents the date and time that a job was most
+          recently updated. [GenAI Description]

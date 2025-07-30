@@ -1,0 +1,20 @@
+version: 2
+
+models:
+  - name: stg_genai__emotion
+    description: Emotion table for GenAI
+
+    columns:
+      - name: emotion_id
+        description: Unique identifier of Emotion
+        tests:
+          - unique
+          - not_null
+
+      - name: chosen_emotion
+
+      - name: internal_session_id
+
+      - name: created_at
+
+      - name: updated_at

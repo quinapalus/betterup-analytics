@@ -1,0 +1,19 @@
+version: 2
+
+models:
+  - name: int_member__legacy
+    description: >
+      This table tracks logic created in legacy table, dim_member, to serve as a temporary table. 
+    columns:
+      - name: _unique
+        description: "Unique id for this table's granularity."
+        tests:
+          - unique
+          - not_null
+      - name: app_member_id
+        description: >
+          legacy reference to member id. This column originally NOT unique. This
+          refactored version of dim_member ensures uniqueness on this column.
+        tests:
+          - unique
+          - not_null

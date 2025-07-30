@@ -1,0 +1,114 @@
+version: 2
+
+models:
+  - name: int_app__coach_assignments
+    description: >
+      In this intermediate model, we remove deleted records.
+      We also do a qualify statement to exclude duplicate models that are created
+      for a single
+      member+coach combination in a single day. (TBD the reason this happens in the
+      data.)
+    columns:
+      - name: coach_assignment_id
+        description: Column containing a unique numerical identifier for each coach
+          assignment record. [GenAI Description]
+        tests:
+          - unique
+          - not_null
+
+      - name: coach_id
+        description: The 'coach_id' column identifies the coach associated with a
+          particular coach-member relationship. [GenAI Description]
+
+      - name: coach_recommendation_id
+        description: "'coach_recommendation_id' is the identifier for a recommended\
+          \ coach assigned to a user. [GenAI Description]"
+
+      - name: created_at
+        description: The 'created_at' column contains the timestamp for when the coach
+          assignment was created. [GenAI Description]
+
+      - name: ended_at
+        description: Contains the date and time of when a coach assignment ended.
+          [GenAI Description]
+
+      - name: ended_reason
+        description: The 'ended_reason' column contains the reason why a coach assignment
+          was ended. [GenAI Description]
+
+      - name: last_appointment_id
+        description: The last_appointment_id column stores the ID of the last appointment
+          instance associated with each coach assignment. [GenAI Description]
+
+      - name: next_appointment_id
+        description: The 'next_appointment_id' column contains the Appointment ID
+          associated with the next appointment in the member's coach assignment. [GenAI
+          Description]
+
+      - name: role
+        description: The 'role' column indicates the type of role assigned to the
+          coach in the coaching relationship. [GenAI Description]
+
+      - name: specialist_vertical_uuid
+        description: 'This column contains a unique identifier that is linked to a
+          particular specialist vertical (example: mental health, career advice, etc.).
+          [GenAI Description]'
+
+      - name: specialist_vertical_id
+        description: This column contains the identifier for a given specialist's
+          vertical. [GenAI Description]
+
+      - name: updated_at
+        description: The 'updated_at' column contains the timestamp of when the coach
+          assignment was last modified. [GenAI Description]
+
+      - name: member_id
+        description: The 'member_id' column contains the unique identifier for the
+          member involved in the coach assignment. [GenAI Description]
+
+      - name: user_unread_message_count
+        description: The column 'user_unread_message_count' holds the count of unread
+          messages from the user to the coach for an active coach assignment. [GenAI
+          Description]
+
+      - name: coaching_cloud
+        description: The 'coaching_cloud' column contains a boolean flag representing
+          whether the coaching assignment occurs within the Coaching Cloud or directly
+          through the TennoCoach platform. [GenAI Description]
+
+      - name: member_last_active_at
+        description: Column 'member_last_active_at' measures the date and time when
+          the member in the coach assignment was last active. [GenAI Description]
+
+      - name: coach_unread_message_count
+        description: The 'coach_unread_message_count' column contains the number of
+          unread messages between a coach and a member in a given coach assignment.
+          [GenAI Description]
+
+      - name: last_message_sent_at
+        description: A timestamp indicating the date and time of the last message
+          sent between therapist and patient in this coach-client relationship. [GenAI
+          Description]
+
+      - name: last_message_id
+        description: "'last_message_id' contains the ID of the last message sent in\
+          \ the platform for that coach-member pair. [GenAI Description]"
+
+      - name: next_appointment_at
+        description: The 'next_appointment_at' column is the timestamp of the next
+          scheduled appointment, indicating when a coach assigned to a client is expected
+          to follow up. [GenAI Description]
+
+      - name: group_coaching_registration_id
+        description: The column 'group_coaching_registration_id' stores the unique
+          identifier of the group coaching registration that the coach assignment
+          is connected to. [GenAI Description]
+
+      - name: debrief360
+        description: This column stores flag indicating whether a 360 debrief was
+          sent to the coach. [GenAI Description]
+
+      - name: coach_assignment_ended
+        description: A column indicating whether or not the coach assignment has been
+          concluded. [GenAI Description]
+

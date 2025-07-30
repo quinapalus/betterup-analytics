@@ -1,0 +1,13 @@
+version: 2
+
+models:
+  - name: fact_amplitude_invoice_paid_events
+    description: >
+      A specific set of amplitude paid invoice events that are used as the source of truth for D2C revenue reporting.
+    columns:
+      - name: uuid
+        description: >
+          A unique identifier per row (event sent). 
+        tests:
+          - unique
+          - not_null

@@ -1,0 +1,66 @@
+version: 2
+models:
+  - name: stg_app__invitations
+    description: The DBT model stg_app__invitations contains data related to sent
+      invitations. It includes fields such as the invitation ID, associated object
+      ID, invited user ID, and more. It tracks when invitations were sent, accepted,
+      created, and updated. It has relationships to other models that store associated
+      data. [GenAI Description]
+    columns:
+      - name: invitation_id
+        description: A unique identifier for an invitation. [GenAI Description]
+        tests:
+          - unique
+          - not_null
+
+      - name: associated_object_id
+        description: "'associated_object_id' is the ID associated with the inviting\
+          \ user, invited user, or other type of associated object. [GenAI Description]"
+
+      - name: invited_user_id
+        description: "'invited_user_id' is the identifier of the user being invited\
+          \ to use the software. [GenAI Description]"
+
+      - name: invite_track_id
+        description: Invite_track_id is a unique identifier used to track individual
+          invitations. [GenAI Description]
+
+      - name: inviting_user_id
+        description: The 'inviting_user_id' column stores the user ID of the person
+          who sent the invitation. [GenAI Description]
+
+      - name: invitee_email
+        description: "'invitee_email' includes the email address of the user who was\
+          \ sent an invitation. [GenAI Description]"
+
+      - name: type
+        description: The 'type' column contains information on the kind of invitation
+          created. [GenAI Description]
+
+      - name: language
+        description: The 'language' column stores a string representing the language
+          of the invitation. [GenAI Description]
+
+      - name: gclid
+        description: "'gclid' is a Google click identifier that allows tracking of\
+          \ a user's interactions with a website. [GenAI Description]"
+
+      - name: utm_params
+        description: The 'utm_params' column stores all UTM parameters attached to
+          an invitation. [GenAI Description]
+
+      - name: associated_object_type
+        description: The column 'associated_object_type' stores the type of object
+          associated with an invitation. [GenAI Description]
+
+      - name: accepted_at
+        description: The 'accepted_at' column holds a timestamp for when the invitation
+          was accepted. [GenAI Description]
+
+      - name: created_at
+        description: The 'created_at' column stores the timestamp when a new invitation
+          record was created. [GenAI Description]
+
+      - name: updated_at
+        description: This column contains the timestamp, in a timezone-sensitive format,
+          indicating the last time the invitation was updated. [GenAI Description]

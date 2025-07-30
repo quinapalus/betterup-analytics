@@ -1,0 +1,8 @@
+version: 2
+models:
+  - name: star_member_satisfaction_response
+    description: >
+      Member Satisfaction Response fact table, joined with full Coach, Member, Date, Account, Deployment and
+      Assessment Item dimensions. See documentation for `fact_member_satisfaction_response`,`dim_coach`,
+      and `dim_members`, `dim_date`, `dim_account`, `dim_deployment`, `dim_member_deployment`,
+      and `dim_assessment_item` field descriptions.

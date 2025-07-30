@@ -1,0 +1,37 @@
+version: 2
+
+models:
+  - name: stg_zendesk__users
+    description: >
+      Contains user information on users as synchronized through
+      the Zendesk API by Segment.
+
+    columns:
+      - name: user_id
+        description: Primary key
+        tests:
+          - unique
+          - not_null
+
+      - name: app_user_id
+        description: >
+          Foreign Key to BetterUp's internal users table for those Zendesk users
+          who are associated with BetterUp's platform. No tests on this variable
+          as the table contains rare instances of Zendesk users with a BU-specific
+          ID
+          who are not in BetterUp's system and are filtered out in higher-layer
+          models.
+
+      - name: zendesk_role
+        description: >
+          String denoting Zendesk-specific role assigned to the user.
+        tests:
+          - not_null
+          - accepted_values:
+              values: [admin, agent, end-user]
+
+      - name: locale
+        description: >
+          String denoting the user's locale.
+        tests:
+          - not_null

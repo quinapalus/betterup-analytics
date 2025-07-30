@@ -1,0 +1,146 @@
+version: 2
+
+models:
+  - name: dim_members
+    description: ""
+    columns:
+      - name: member_id
+        description: ID of the member in the application.
+        tests:
+          - unique
+          - not_null
+
+      - name: manager_id
+        description: Unique id of the member's manager
+
+      - name: inviter_id
+        description: ""
+
+      - name: next_session_id
+        description: ""
+
+      - name: organization_id
+        description: ID of the member's organization at the time the account was created.
+
+      - name: member_profile_id
+        description: ""
+
+      - name: email
+        description: Member email address
+
+      - name: first_name
+        description: Member's first name.
+
+      - name: last_name
+        description: Member's last name.
+
+      - name: member_name
+        description: Member full name.
+
+      - name: motivation
+        description: Motivation text submitted by the member.
+
+      - name: language
+        description: >
+          The language the member wants to experience the BetterUp application in.
+
+      - name: coaching_language
+        description: The language the member desires their coach to speak fluently.
+
+      - name: job_function
+        description: >
+          Self-selected job-function by member during onboarding from dropdown list 
+          (available for members that onboarded starting April 2019).
+
+      - name: state
+        description: Member residing state.
+
+      - name: time_zone
+        description: Member time zone.
+
+      - name: tz_iana
+        description: IANA/Olson time zones (e.g. America/Denver).
+
+      - name: country_code
+        description: >
+          The 2-letter ISO 3166 country code based on approximate mapping from the 
+          member's time zone.
+
+      - name: country_name
+        description: Human-readable country name for the corresponding ISO country code.
+
+      - name: subregion_m49
+        description: Geographic subregion based on timezone to UN M.49 subregion.
+
+      - name: geo
+        description: >
+          Geographic region based on timezone to region mapping, e.g. APAC, EMEA, NORAM,
+          LATAM.
+
+      - name: level
+        description: >
+          Member's professional level i.e individual-contributor, frontline-manager, 
+          manager-of-managers.
+
+      - name: upfront_subscription_state
+        description: >
+          Just for D2C. Tells whether the user was showed upfront-subscription option 
+          during sign-up. If yes, whether they used it or skipped it.
+
+      - name: is_on_converged_platform
+        description: Yes if the member has the converged platform feature flag on.
+
+      - name: is_call_recording_allowed
+        description: Yes, if the member has agreed to allow videocall recording.
+
+      - name: is_activated
+        description: True, if the member is activated.
+
+      - name: is_confirmed
+        description: True, if the member is confirmed.
+
+      - name: is_onboarded
+        description: True, if the member is onboarded.
+      
+      - name: has_previously_received_coaching
+        description: > 
+         True if member responded yes to the previous_coaching question on most recent onboarding assessment. 
+         False otherwise.
+
+      - name: created_at
+        description: When the member account was created in the application.
+
+      - name: confirmed_at
+        description: When the member first set their password.
+
+      - name: activated_at
+        description: When the member was activated in the application.
+
+      - name: care_confirmed_at
+        description: >
+          Date that the member activates their first Product Subscription Assignment with 
+          Care access. If Care access is granted post Lead activation, this date will be 
+          different than Lead Activated Date
+
+      - name: lead_confirmed_at
+        description: >
+          Date that the member activates their first Product Subscription Assignment with
+          Lead access
+
+      - name: confirmation_sent_at
+        description: ""
+
+      - name: completed_member_onboarding_at
+        description: When the member completed member onboarding.
+
+      - name: deactivated_at
+        description: When the member was deactivated from the platform.
+
+      - name: last_engaged_at
+        description: ""
+
+      - name: last_usage_at
+        description: ""
+      
+      - name: updated_at
+        description: ""

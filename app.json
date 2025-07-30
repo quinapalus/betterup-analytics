@@ -1,0 +1,13 @@
+{
+  "name": "betterup-analytics",
+  "repository": "https://github.com/betterup/betterup-analytics",
+  "addons": [
+  ],
+  "buildpacks": [
+    {
+      "url": "https://github.com/heroku/heroku-buildpack-python.git"
+    }
+  ],
+  "env": {
+  }
+}

@@ -1,0 +1,50 @@
+version: 2
+
+snapshots:
+  - name: snapshot_coach__timeslots
+    description: >
+      Snapshot model of Coach Profile staging model.
+      One record per day per timeslot ID that existed on that day.
+      More docs here: https://betterup.atlassian.net/wiki/spaces/DATA/pages/3345450158/Coach+Snapshot+Data+Model
+    tests:
+      - unique:
+          column_name: "(id || '-' || dbt_valid_from || '-' || dbt_valid_to)"
+    columns:
+      - name: id
+        description: ""
+
+      - name: user_id
+        description: ""
+
+      - name: created_at
+        description: ""
+
+      - name: updated_at
+        description: ""
+
+      - name: starts_at
+        description: ""
+
+      - name: ends_at
+        description: ""
+
+      - name: available_minutes
+        description: ""
+
+      - name: external_unavailable_minutes
+        description: ""
+
+      - name: timeslot_minutes
+        description: ""
+
+      - name: dbt_scd_id
+        description: ""
+
+      - name: dbt_updated_at
+        description: ""
+
+      - name: dbt_valid_from
+        description: ""
+
+      - name: dbt_valid_to
+        description: ""

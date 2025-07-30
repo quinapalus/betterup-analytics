@@ -1,0 +1,14 @@
+version: 2
+
+models:
+  - name: int_opportunity_closed_lost_dropout_stage
+    description: "This model generates the Close Lost Dropout stage field for opportunities"
+    columns:
+      - name: sfdc_opportunity_id
+        tests:
+          - not_null
+          - unique
+        description: ""
+
+      - name: closed_lost_dropout_stage
+        description: ""

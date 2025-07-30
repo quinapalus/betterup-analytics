@@ -1,0 +1,45 @@
+name: DBT PR Test
+
+on:
+  # Allows you to reference this workflow from another workflow
+  workflow_call:
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+  
+  # Executes this test when Pull Requests are made against the Main branch
+  pull_request:
+    branches:    
+      - main
+    paths-ignore:
+      - 'warehouse/**'
+
+# Allow one concurrent deployment per Pull Request. Cancel In-Progress Workflow if PR Changes trigger another Test.
+concurrency:
+  group: ci-${{ github.event.pull_request.id }}
+  cancel-in-progress: true
+
+env:
+  SNOWFLAKE_USER: "DBT_GITHUB_CI_USER"
+  SNOWFLAKE_PASSWORD: ${{ secrets.DBT_GITHUB_CI_USER_PASSWORD }}
+  SNOWFLAKE_ACCOUNT: ${{ secrets.DBT_TARGET_ACCOUNT }}
+  SLACK_WEBHOOK_URL: ${{ secrets.DATA_SLACK_WEBHOOK_URL }}
+  SLACK_WEBHOOK_TYPE: INCOMING_WEBHOOK
+  GITHUB_ACTION_URL: "https://github.com/betterup/betterup-analytics/actions/workflows/dbt_pr_tests.yml"
+  PR_ID: ${{ github.event.pull_request.id }}
+  PR_AUTHOR: ${{ github.event.pull_request.user.login }}
+  DBT_PROJECT_EVALUATOR_SEVERITY: "error"
+  COMMIT_SHA: ${{ github.sha }}
+  DEPLOYMENT_ENVIRONMENT: ${{ secrets.BETTERUP_ENVIRONMENT }}
+
+jobs:
+     
+  dbt_pr_test:
+    strategy:
+      matrix:
+        environment: ['US Prod','EU Prod']
+
+    name: DBT PR Test 
+    runs-on: ubuntu-latest
+    steps:
+      - run: 'echo "No build required"'

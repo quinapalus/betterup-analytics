@@ -1,0 +1,7 @@
+python-dotenv
+pandas
+psycopg2-binary
+requests
+arrow
+click
+click-log

@@ -1,0 +1,11 @@
+version: 2
+
+models:
+  - name: stg_stripe__events_new
+    description: Events stored in Stripe
+    columns:
+      - name: stripe_event_id
+        description: Primary key
+        tests:
+          - unique
+          - not_null

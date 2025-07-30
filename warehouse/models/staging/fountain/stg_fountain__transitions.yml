@@ -1,0 +1,33 @@
+version: 2
+
+models:
+  - name: stg_fountain__transitions
+    description: >
+      Contains the stage transition history of all Fountain candidates.
+    columns:
+
+      - name: primary_key
+        description: Surrogate primary key
+        tests:
+          - not_null
+          - unique
+
+      - name: fountain_applicant_id
+        description: Unique identifier (as provisioned by Fountain)
+        tests:
+          - not_null
+
+      - name: stage_id
+        description: |
+          Unique ID of the stage that the candidate transitioned into.
+          Helps to distinguish between funnels with similarly named stages.
+
+      - name: stage_name
+        description: Name of the stage that the candidate transitioned into.
+        tests:
+          - not_null
+
+      - name: created_at
+        description: Date that the candidate transitioned into the stage.
+        tests:
+          - not_null

@@ -1,0 +1,23 @@
+version: 2
+
+models:
+  - name: dim_member_modality_events
+    description: The DBT model dim_member_modality_events consolidates event data
+      from multiple modality models into a single table, combining the modality and
+      event name fields into a single primary key. It is useful for tracking a member's
+      usage of each modality and its related events. [GenAI Description]
+    columns:
+      - name: primary_key
+        description: The primary key is a surrogate key generated from the modality
+          and event name fields. [GenAI Description]
+        tests:
+          - unique
+          - not_null
+
+      - name: modality
+        description: The 'modality' column contains descriptions of events, such as
+          'care coaching', 'care guide', 'content', and 'group coaching'. [GenAI Description]
+
+      - name: event_name
+        description: The column 'event_name' provides the name of the modality-specific
+          event being tracked. [GenAI Description]

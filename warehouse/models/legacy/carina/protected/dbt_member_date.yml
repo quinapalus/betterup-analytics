@@ -1,0 +1,104 @@
+version: 2
+models:
+  - name: dbt_member_date
+    description: >
+      This table contains member, date, and account keys that can be used to build other
+      fact tables focused on daily member events. For each member-track pair, the date keys
+      are listed from the date of invite to date of closure on track (or up to today's date,
+      in case the member is still open on the track).
+
+    columns:
+      - name: date_key
+        description: Foreign key to conformed Date dimension.
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_date')
+              field: date_key
+
+      - name: member_key
+        description: Foreign key to conformed Member dimension.
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_member')
+              field: member_key
+
+      - name: member_deployment_key
+        description: Foreign key to conformed Member-Deployment dimension.
+        tests:
+          - not_null
+
+      - name: account_key
+        description: >
+          Foreign key to conformed Account dimension associated with the track on
+          which the member was open on that particular day.
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_account')
+              field: account_key
+
+      - name: contract_key
+        description: >
+          Foreign key to conformed contract dimension associated with the track on
+          which the member was open on that particular day.
+        tests:
+          - not_null
+
+      - name: deployment_key
+        description: >
+          Foreign key to conformed Deployment dimension for the deployment associated
+          with the member on that particular day.
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_deployment')
+              field: deployment_key
+
+      - name: days_since_invite
+        description: >
+          Integer that indicates the member's age (as ordinal number of the day) on the track,
+          with date of invite considered as the zeroth day. In case of interrupted track
+          assignments, the sequencing remains continuous and ignores any gaps between the date
+          of closure and the date of re-opening.
+        tests:
+          - not_null
+
+      - name: days_until_end_date_on_deployment
+        description: >
+          Integer denoting how many days are left until member's end date on deployment. For members
+          that have ended their deployment, `ended_at` is used instead of `ended_on`. Note that this
+          field can be NULL in cases when `ends_on` is not populated (you should reach out to Deployment Management)
+          and the member is still open. If `ends_on` is populated after you reach out to Deployment Management,
+          note that this model will retroactively populate relevant fields since it's not an incremental model.
+          Note that, since the last day on deployment is NOT included in the datespine, the last full day
+          on deployment will always have 1 day left until the end.
+
+      - name: is_activated
+        description: >
+          Boolean indicating if the member was post-activation on that particular day.
+        tests:
+          - not_null
+          - accepted_values:
+              values: [true, false]
+
+      - name: has_upcoming_session
+        description: >
+          Boolean indicating if the member had an upcoming session as of that particular day.
+        tests:
+          - not_null
+          - accepted_values:
+              values: [true, false]
+
+      - name: app_primary_coach_id
+        description: Denormalized foreign key to matched primary coach.
+
+      - name: is_matched_with_primary_coach
+        description: >
+          Boolean specifying whether the member was matched with a primary coach
+          on that day.
+        tests:
+           - not_null
+           - accepted_values:
+              values: ['true', 'false']

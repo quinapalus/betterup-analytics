@@ -1,0 +1,19 @@
+#!/bin/bash
+
+set -e
+set -o pipefail
+
+(
+  cd packages/target-s3
+  poetry install
+)
+
+(
+  cd packages/bu-tap-looker
+  poetry install
+  hash -r
+  poetry run create-looker-configs
+  poetry run bu-tap-looker --config looker.json | (cd ../target-s3 && poetry run target-s3 -b "${LOOKER_AWS_BUCKET}")
+)
+
+echo 'Done.'

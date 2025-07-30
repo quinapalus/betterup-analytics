@@ -1,0 +1,30 @@
+version: 2
+
+models:
+  - name: stg_coach__coach_qualifications
+    description: This DBT model provides information on individual coach qualifications.
+      It stores coach_qualification_id, category, and name as well as the timestamps
+      created_at and updated_at when the qualification was added/updated. [GenAI Description]
+
+    columns:
+      - name: coach_qualification_id
+        description: Unique Identifier
+        tests:
+          - unique
+          - not_null
+
+      - name: created_at
+        description: Timestamp for when the coach qualification was created. [GenAI
+          Description]
+
+      - name: updated_at
+        description: The column 'updated_at' records the timestamp of the most recent
+          update to the coach qualifications. [GenAI Description]
+
+      - name: category
+        description: "'Category' contains the classification of qualifications. [GenAI\
+          \ Description]"
+
+      - name: name
+        description: The 'name' column stores the names of qualifications held by
+          the coaches. [GenAI Description]

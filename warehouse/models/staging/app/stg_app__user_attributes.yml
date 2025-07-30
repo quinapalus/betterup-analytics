@@ -1,0 +1,34 @@
+version: 2
+
+models:
+  - name: stg_app__user_attributes
+    description: UserAttribute model associates a value to a UserAttribute Field for
+      a User
+    columns:
+      - name: user_attribute_id
+        description: Unique identifer of the user attribute import.
+        tests:
+          - unique
+          - not_null
+
+      - name: user_attribute_field_id
+        description: Foreign Key to associated UserAttribute Field.
+
+      - name: user_attribute_record_id
+        description: Foreign Key to associated UserAttribute Value.
+
+      - name: user_attribute_value_id
+        description: Foreign Key to associated UserAttribute Record.
+
+      - name: user_id
+        description: Foreign Key to associated User.
+
+      - name: value
+        description: String value of the UserAttribute.
+
+      - name: created_at
+        description: Time when the Rails object was created in UTC, i.e. when the
+          user account was created.
+
+      - name: updated_at
+        description: Time when the Rails object was updated in UTC.

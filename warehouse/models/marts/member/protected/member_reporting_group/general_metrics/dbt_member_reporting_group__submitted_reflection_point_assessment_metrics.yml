@@ -1,0 +1,24 @@
+version: 2
+
+models:
+  - name: dbt_member_reporting_group__submitted_reflection_point_assessment_metrics
+    description: ""
+    columns:
+      - name: primary_key
+        description: "Primary key is concatenated member ID and reporting group ID"
+        tests:
+          - unique
+          - not_null
+
+      - name: member_id
+        description: ""
+
+      - name: reporting_group_id
+        description: ""
+
+      - name: submitted_last_reflection_point_at
+        description: ""
+
+      - name: count_completed_reflection_points
+        description: ""
+

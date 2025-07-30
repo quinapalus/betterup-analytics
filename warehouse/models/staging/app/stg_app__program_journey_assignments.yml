@@ -1,0 +1,41 @@
+version: 2
+
+models:
+  - name: stg_app__program_journey_assignments
+    description: DBT Model stg_app__program_journey_assignments stores the data on
+      user's assignment to the particular program journey stages. It includes basic
+      information like user_id, program_journey_stage_id, start/ending timestamps
+      for the journey, and related timestamps. This model can be used to track the
+      program viewing progress of the users. [GenAI Description]
+    columns:
+      - name: program_journey_assignment_id
+        description: The column 'program_journey_assignment_id' is the identifier
+          for an assignment to a user in a particular program journey stage. [GenAI
+          Description]
+        tests:
+          - unique
+          - not_null
+
+      - name: user_id
+        description: The user_id column contains a unique identifier for each user
+          associated with a program journey assignment. [GenAI Description]
+
+      - name: program_journey_stage_id
+        description: The program_journey_stage_id column identifies the stage in the
+          program journey to which the user was assigned. [GenAI Description]
+
+      - name: next_stage_at
+        description: The 'next_stage_at' column contains timestamps showing when the
+          user will proceed to the next program journey stage. [GenAI Description]
+
+      - name: ended_at
+        description: The 'ended_at' column stores a timestamp that indicates when
+          the program assignment completed. [GenAI Description]
+
+      - name: created_at
+        description: The 'created_at' column stores the timestamp of when the program
+          journey was created. [GenAI Description]
+
+      - name: updated_at
+        description: '"updated_at" column contains a timestamp, indicating the date
+          and time when the assignment record has been last updated. [GenAI Description]'

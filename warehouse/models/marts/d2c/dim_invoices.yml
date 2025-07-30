@@ -1,0 +1,15 @@
+version: 2
+
+models:
+  - name: dim_invoices
+    meta:
+      owner: "adrian.lievano@betterup.co"
+    description: >
+      A table tracking all invoices from stripe
+
+    columns:
+      - name: stripe_invoice_id
+        description: Primary key
+        tests:
+          - unique
+          - not_null

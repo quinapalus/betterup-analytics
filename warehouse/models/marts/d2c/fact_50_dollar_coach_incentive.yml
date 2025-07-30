@@ -1,0 +1,71 @@
+version: 2
+
+models:
+  - name: fact_50_dollar_coach_incentive
+    meta:
+      owner: "adrian.lievano@betterup.co"
+    description: >
+      This model contains data to support analysis/reporting for the 50 Dollar
+      Coach Incentive program started in 2020.  For each D2C member that a coach retains 
+      for 90 days, the coach will receive a 50 dollar incentive.  The logic specific to 
+      identifying coaches who meet the criteria is in this model.
+
+    columns:
+      - name: member_id
+        description: ""
+
+      - name: coach_id
+        description: ""
+
+      - name: first_appointment_with_coach_date
+        description: >
+          The first D2C appointment with a specific coach. If the member has
+          used a specific coach multiple times, this will be the first ever D2C 
+          appointment with that coach.
+
+      - name: last_appointment_with_coach_date
+        description: >
+          The last D2C appointment with a specific coach. If the member has
+          used a specific coach multiple times, this will be the last D2C appointment
+          with that coach.
+
+      - name: coach_assignment_ended_at
+        description: >
+          The date the coach assignment ended.  This is used in the incentive_days_count
+          calculation.  
+
+      - name: incentive_days_count
+        description: >
+          The number of days since the member's first appointment on a D2C track
+          with a specific coach.  If a member changes coaches, this field is reset to 0.  
+          However, it will pick up where it left off if the member changes back to a 
+          previous coach.
+
+      - name: appointment_complete_at
+        description: ""
+
+      - name: appointment_starts_at
+        description: ""
+
+      - name: subscription_start_date
+        description: >
+          The date the D2C product subscription assignment started.
+
+      - name: subscription_end_date
+        description: >
+          The date the D2C product subscription assignment ended.
+
+      - name: will_reach_90_days_date
+        description: >
+          The date the member will reach the 90 days incentive.  This date could be in the
+          future (which would mean the incentive has not yet been met) or it could be in 
+          the past (which would mean the incentive has been met).
+      
+      - name: date_incentive_was_met
+        description: >
+          The date the member reached the 90 days incentive.  If null, the member/coach
+          did not reach the incentive.
+      
+      - name: number_of_appointments
+        description: >
+          The number of completed, primary, D2C appointments between the member and coach.

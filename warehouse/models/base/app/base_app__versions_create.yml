@@ -1,0 +1,25 @@
+version: 2
+
+models:
+  - name: base_app__versions_create
+    description: Versions
+
+    columns:
+      - name: version_id
+        description: Unique identifier of Versions
+        tests:
+          - unique
+          - not_null
+      - name: version_created_at
+      - name: event
+      - name: item_id
+      - name: item_type
+      - name: object
+      - name: object_changes
+      - name: user_agent
+      - name: whodunnit
+      - name: whodunnit_job
+      - name: impersonated
+      - name: impersonated_user_id
+      - name: request_id
+      - name: whodunnit_jid

@@ -1,0 +1,20 @@
+version: 2
+
+models:
+  - name: base_app__explore_categories_historical
+    description: ""
+    columns:
+      - name: created_at
+      - name: description
+      - name: id
+        tests:
+          - unique
+          - not_null
+      - name: resource_link_params
+      - name: title
+      - name: updated_at
+      - name: categorizable_type
+      - name: categorizable_id
+      - name: description_i18n
+      - name: title_i18n
+      - name: translation_key

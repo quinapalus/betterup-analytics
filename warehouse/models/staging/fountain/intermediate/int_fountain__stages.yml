@@ -1,0 +1,29 @@
+version: 2
+
+models:
+  - name: int_fountain__stages
+    description: ""
+    columns:
+      - name: funnel_id
+        description: ""
+
+      - name: stage_id
+        description: ""
+        tests:
+          - unique
+          - not_null
+
+      - name: stage_title
+        description: ""
+
+      - name: stage_type
+        description: ""
+
+      - name: stage_name_prefix
+        description: ""
+
+      - name: bucket_name
+        description: ""
+
+      - name: funnel_order
+        description: ""

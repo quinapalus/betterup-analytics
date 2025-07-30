@@ -1,0 +1,32 @@
+version: 2
+
+models:
+  - name: maps_product_subscription_assignments_mapping
+    description: ""
+    columns:
+      - name: maps_product_subscription_assignments_mapping_id
+        description: Primary Key
+        tests:
+          - unique
+          - not_null
+
+      - name: organization_id
+        description: ""
+
+      - name: product_subscription_assignment_v1_id
+        description: ""
+
+      - name: product_subscription_assignment_v2_id
+        description: ""
+
+      - name: v2_starts_at
+        description: ""
+
+      - name: v2_ends_at
+        description: ""
+
+      - name: v2_ended_at
+        description: ""
+
+      - name: coach_assignment_role
+        description: ""

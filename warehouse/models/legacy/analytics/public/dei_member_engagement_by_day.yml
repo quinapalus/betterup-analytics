@@ -1,0 +1,81 @@
+version: 2
+models:
+  - name: dei_member_engagement_by_day
+    description: >
+      This table contains information about historical daily member engagement,
+      since the member's day of invite to the track.
+
+    columns:
+      - name: member_id
+        description: Denormalized foreign key to associated member.
+        tests:
+          - not_null
+
+      - name: track_id
+        description: Denormalized foreign key to associated track.
+        tests:
+          - not_null
+
+      - name: primary_coach_id
+        description: Denormalized foreign key to matched primary coach.
+        tests:
+          - relationships:
+              to: ref('int_app__users')
+              field: user_id
+
+      - name: date_day
+        description: >
+          Timestamp of the day associated with member's activity on the track.
+        tests:
+          - not_null
+
+      - name: has_upcoming
+        description: >
+          Boolean specifying whether the member had a session scheduled on that
+          day.
+        tests:
+           - not_null
+           - accepted_values:
+              values: ['true', 'false']
+
+      - name: is_matched_with_primary_coach
+        description: >
+          Boolean specifying whether the member was matched with a primary coach
+          on that day.
+        tests:
+           - not_null
+           - accepted_values:
+              values: ['true', 'false']
+
+      - name: completed_session_count_track_to_date
+        description: >
+          Integer denoting the total number of completed sessions up to that date
+          by the member on the track.
+        tests:
+           - not_null
+
+      - name: organization_id
+        description: >
+          Foreign key for associated organization for given member on given day, denormalized
+          from the associated track_id.
+        tests:
+          - not_null
+
+      - name: sfdc_account_id
+        description: >
+          Foreign key for associated Salesforce Account for given member on given day, denormalized
+          from the associated track_id.
+
+      - name: is_external
+        description: Boolean indicating whether associated track is an external deployment.
+        tests:
+          - not_null
+          - accepted_values:
+              values: [true, false]
+
+      - name: is_revenue_generating
+        description: Boolean indicating whether associated track is part of a paid deployment.
+        tests:
+          - not_null
+          - accepted_values:
+              values: [true, false]

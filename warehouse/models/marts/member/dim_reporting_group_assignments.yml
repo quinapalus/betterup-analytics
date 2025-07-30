@@ -1,0 +1,41 @@
+version: 2
+
+models:
+  - name: dim_reporting_group_assignments
+    description: ""
+    columns:
+      - name: primary_key
+        description: Primary key
+        tests:
+          - unique
+          - not_null
+
+      - name: reporting_group_id
+        description: ""
+
+      - name: reporting_group_name
+        description: ""
+
+      - name: associated_record_type
+        description: ""
+
+      - name: associated_record_id
+        description: ""
+
+      - name: associated_assignment_id
+        description: ""
+
+      - name: member_id
+        description: ""
+
+      - name: starts_at
+        description: ""
+
+      - name: ended_at
+        description: ""
+      
+      - name: updated_at
+        description: ""
+
+      - name: member_is_open
+        description: ""

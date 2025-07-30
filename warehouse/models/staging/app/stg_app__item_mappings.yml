@@ -1,0 +1,40 @@
+version: 2
+
+models:
+  - name: stg_app__item_mappings
+    description: >
+      Maps external names, such as leadership comptencies, to
+      internal names, like Whole Person Model subdimensions.
+
+    columns:
+      - name: item_mapping_id
+        description: Unique identifer of the item mapping.
+        tests:
+          - not_null
+          - unique
+
+      - name: mapping_type
+        description: The type of the mapping
+        tests:
+          - accepted_values:
+              values: [wpm_subdimension]
+              severity: warn
+
+      - name: external_tag
+        description: Tag-like version of the human-readable name
+        tests:
+          - not_null
+
+      - name: external_name
+        description: Human-readable name to be mapped
+        tests:
+          - not_null
+
+      - name: internal_names
+        description: Array of names that `external_name` maps to.
+
+      - name: created_at
+        description: When the mapping was created
+
+      - name: updated_at
+        description: When the mapping was last updated.

@@ -1,0 +1,26 @@
+version: 2
+
+models:
+  - name: stg_app__growth_maps
+    description: DBT model stg_app__growth_maps stores growth map IDs, member IDs,
+      and timestamps for maps created and updated. It derives its data from the raw.stitch_app.growth_maps
+      source table. [GenAI Description]
+    columns:
+      - name: growth_map_id
+        description: The 'growth_map_id' column stores the unique identifier of a
+          growth map. [GenAI Description]
+        tests:
+          - not_null
+          - unique
+
+      - name: member_id
+        description: The member_id column stores the user_id of the growth map. [GenAI
+          Description]
+
+      - name: created_at
+        description: "'created_at' is a timestamp representing when the growth map\
+          \ was created. [GenAI Description]"
+
+      - name: updated_at
+        description: "'updated_at' holds the timestamp of the last time the record\
+          \ was updated. [GenAI Description]"

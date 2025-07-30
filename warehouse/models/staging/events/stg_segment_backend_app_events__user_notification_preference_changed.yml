@@ -1,0 +1,48 @@
+version: 2
+models:
+  - name: stg_segment_backend_app_events__user_notification_preference_changed
+    description: Segment events for user notification preference changes.
+
+    columns:
+      - name: id
+        description: The event's ID.
+        tests:
+          - unique
+          - not_null
+      - name: saved_changes_email_enabled
+        description: A JSON array of the saved changes to a user's notification preferences
+          email_enabled field.
+      - name: email_unsubscribed
+        description: Boolean indicating whether the user has unsubscribed from all
+          emails of this category.
+      - name: email_resubscribed
+        description: Boolean indicating whether the user has resubscribed to all emails
+          of this category.
+      - name: timestamp
+        description: Timestamp of the event.
+        tests:
+          - not_null
+      - name: user_id
+        description: The user's ID.
+        tests:
+          - not_null
+      - name: event_text
+        description: The event's text sent to segment.
+        tests:
+          - not_null
+      - name: original_timestamp
+        description: Original timestamp of the event. (segment docs say to use timestamp
+          instead of this)
+        tests:
+          - not_null
+      - name: received_at
+        description: Timestamp of when the event was received by segment, which is
+          how segment orders events.
+        tests:
+          - not_null
+      - name: comms_tracking_uuid
+        description: UUID of the comms tracking event associated with this event.
+      - name: notification_preference_category
+        description: The category of the notification preference that was changed.
+        tests:
+          - not_null

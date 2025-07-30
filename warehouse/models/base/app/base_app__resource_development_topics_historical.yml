@@ -1,0 +1,15 @@
+version: 2
+
+models:
+  - name: base_app__resource_development_topics_historical
+    description: ""
+    columns:
+      - name: created_at
+      - name: development_topic_id
+      - name: id
+        tests:
+          - unique
+          - not_null
+      - name: resource_id
+      - name: updated_at
+      - name: resource_uuid

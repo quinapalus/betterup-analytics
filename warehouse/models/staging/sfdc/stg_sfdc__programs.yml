@@ -1,0 +1,294 @@
+version: 2
+
+models:
+  - name: stg_sfdc__programs
+    description: The stg_sfdc__programs DBT model stores data related to Salesforce
+      programs such as name, record type, program resources, and related dates. It
+      contains fields for program settings and expected outcomes, such as provision
+      of dedicated licenses, engagement of executive sponsors, and improvement in
+      customer experience. It also contains fields for tracking progress towards program
+      goals, such as success plan link and big why. [GenAI Description]
+    columns:
+      - name: sfdc_program_id
+        description: Primary Key
+        tests:
+          - unique
+          - not_null
+
+      - name: sfdc_program_name
+        description: "'Sfdc_program_name' refers to the name of a Salesforce Program.\
+          \ [GenAI Description]"
+
+      - name: outcomes_bu_measured_c
+        description: "'outcomes_bu_measured_c' column contains descriptions of the\
+          \ ways in which the business outcomes of a program are measured. [GenAI\
+          \ Description]"
+
+      - name: program_resources_c
+        description: "'stpg_sfdc__programs' contains a column 'program_resources_c'\
+          \ which contains program resources information for each program. [GenAI\
+          \ Description]"
+
+      - name: record_type_id
+        description: The record_type_id column identifies the type of record associated
+          with the program. [GenAI Description]
+
+      - name: system_modstamp
+        description: System_modstamp is a timestamp containing the date and time when
+          the record was last modified on Salesforce. [GenAI Description]
+
+      - name: next_rp_readiness_date_c
+        description: The column 'next_rp_readiness_date_c' contains dates for the
+          next readiness program. [GenAI Description]
+
+      - name: opportunity_c
+        description: opportunity_c stores the ID of any related Opportunity records.
+          [GenAI Description]
+
+      - name: participate_in_the_bu_community_c
+        description: This column provides a boolean indication of whether the program
+          participates in the associated Salesforce BU (Business Unit) community or
+          not. [GenAI Description]
+
+      - name: securing_exposure_to_senior_leadership_c
+        description: "'Securing Exposure to Senior Leadership C' is a boolean field\
+          \ that indicates whether a program has secured exposure to senior leadership\
+          \ within the business. [GenAI Description]"
+
+      - name: dedicated_executive_licenses_c
+        description: The column 'dedicated_executive_licenses_c' records the number
+          of licenses dedicated to executive users. [GenAI Description]
+
+      - name: dedicated_licenses_c
+        description: The 'dedicated_licenses_c' column stores data on the number of
+          dedicated licenses purchased as part of a program. [GenAI Description]
+
+      - name: established_cadence_of_interaction_c
+        description: "'established_cadence_of_interaction_c' records whether a program\
+          \ has established a predetermined frequency of contact with its members.\
+          \ [GenAI Description]"
+
+      - name: timely_execution_of_launch_deliverables_c
+        description: The column 'timely_execution_of_launch_deliverables_c' stores
+          a boolean value indicating whether launch deliverables are being executed
+          in a timely manner. [GenAI Description]
+
+      - name: actively_managing_activation_engagement_c
+        description: This column holds a boolean value indicating whether the program
+          is managing activation and engagement efforts. [GenAI Description]
+
+      - name: population_focus_c
+        description: The population_focus_c column contains information about the
+          target population who will be using the program. [GenAI Description]
+
+      - name: business_catalyst_c
+        description: The 'business_catalyst_c' column contains data related to the
+          program's ability to further the business objectives of the organization.
+          [GenAI Description]
+
+      - name: contract_start_date_c
+        description: The column 'contract_start_date_c' holds the start date of a
+          contract. [GenAI Description]
+
+      - name: main_contact_c
+        description: "'main_contact_c' holds the main contact associated with the\
+          \ program. [GenAI Description]"
+
+      - name: success_plan_link_c
+        description: This column contains the links to the success plan documents
+          associated with each program. [GenAI Description]
+
+      - name: they_can_express_what_is_working_and_why_c
+        description: The column 'they_can_express_what_is_working_and_why_c' captures
+          the ability of program managers to present evidence and articulate why a
+          particular program or initiative is successful. [GenAI Description]
+
+      - name: co_creation_of_biz_case_or_roi_calc_c
+        description: This column holds a value indicating if the customer has collaborated
+          with Segment on creating a business case or calculating a return on investment.
+          [GenAI Description]
+
+      - name: impact_mindset_skill_behavior_changes_c
+        description: This column captures changes in mindset, skills and behaviour
+          related to the impact of the program. [GenAI Description]
+
+      - name: program_goals_c
+        description: The 'program_goals_c' column contains the goals of a program
+          as specified by the customer. [GenAI Description]
+
+      - name: uuid_ts
+        description: "'uuid_ts' is a timestamp representing the unique identifier\
+          \ of a program record. [GenAI Description]"
+
+      - name: next_qbr_date_c
+        description: The next_qbr_date_c column contains the next scheduled date for
+          a quarterly review meeting. [GenAI Description]
+
+      - name: received_at
+        description: "'Received_at' is a timestamp representing when the program data\
+          \ was last updated. [GenAI Description]"
+
+      - name: sharing_info_with_other_stakeholders_c
+        description: This column captures whether or not information is being shared
+          with other stakeholders. [GenAI Description]
+
+      - name: clearly_articulates_problem_need_c
+        description: This column holds information about whether the program has been
+          able to clearly articulate the problem or need they aim to address. [GenAI
+          Description]
+
+      - name: cohort_structure_and_timing_c
+        description: This column contains information about the structure and associated
+          timing of each program cohort. [GenAI Description]
+
+      - name: created_date
+        description: The created_date column contains the timestamp for when the record
+          was created. [GenAI Description]
+
+      - name: program_summary_c
+        description: The 'program_summary_c' column contains a brief summary of the
+          program. [GenAI Description]
+
+      - name: special_success_plan_notes_c
+        description: The 'special_success_plan_notes_c' column contains any additional
+          comments, observations, or notes related to the success plan for the program.
+          [GenAI Description]
+
+      - name: asking_for_help_to_justify_new_use_cases_c
+        description: Column 'asking_for_help_to_justify_new_use_cases_c' tracks if
+          help is requested to justify new use cases for a program. [GenAI Description]
+
+      - name: broadening_audience_for_value_story_c
+        description: '"Tracks whether program stakeholders are broadening the reach
+          of the value story." [GenAI Description]'
+
+      - name: can_articulate_their_big_why_c
+        description: This column holds information indicating whether the program
+          can articulate its big why. [GenAI Description]
+
+      - name: explore_ask_good_q_s_about_behavior_data_c
+        description: Explores asking good questions about behavior data. [GenAI Description]
+
+      - name: connecting_members_growth_to_prog_goals_c
+        description: The 'connecting_members_growth_to_prog_goals_c' column captures
+          whether members' growth is connected to program goals. [GenAI Description]
+
+      - name: outcomes_customer_measured_c
+        description: The column 'outcomes_customer_measured_c' displays the customer
+          outcomes or measures that have been linked with this program. [GenAI Description]
+
+      - name: exploring_new_opportunities_c
+        description: This column indicates if the program is exploring opportunities
+          for new ideas or methods. [GenAI Description]
+
+      - name: funding_source_c
+        description: "'funding_source_c' is a field that records the source of funding\
+          \ received by the program. [GenAI Description]"
+
+      - name: is_deleted
+        description: "'is_deleted' indicates whether the program record has been deleted.\
+          \ [GenAI Description]"
+
+      - name: last_modified_by_id
+        description: The ID of the user who most recently modified the record. [GenAI
+          Description]
+
+      - name: last_modified_date
+        description: The 'last_modified_date' column contains the timestamp of when
+          the row was last modified. [GenAI Description]
+
+      - name: moving_beyond_activation_engagement_c
+        description: The column 'moving_beyond_activation_engagement_c' captures a
+          value indicating whether the program is progressing beyond initial engagement
+          and into a more established implementation. [GenAI Description]
+
+      - name: program_id_c
+        description: "'program_id_c' holds the unique ID of a program in Salesforce's\
+          \ records. [GenAI Description]"
+
+      - name: big_why_c
+        description: The column 'big_why_c' is used to explain the rationale behind
+          the program and to articulate the primary purpose of why the program exists.
+          [GenAI Description]
+
+      - name: contract_end_date_c
+        description: "'contract_end_date_c' stores the end date of the program contract.\
+          \ [GenAI Description]"
+
+      - name: desired_outcome_c
+        description: The desired_outcome_c column contains the desired outcome associated
+          with a program in Salesforce. [GenAI Description]
+
+      - name: impact_member_experience_c
+        description: This column represents the impact that the program has had on
+          members' experiences. [GenAI Description]
+
+      - name: links_to_tracks_c
+        description: The 'links_to_tracks_c' column contains URLs to dedicated resources
+          that relate to the programs stored in the model. [GenAI Description]
+
+      - name: account_c
+        description: "'account_c' holds an external ID to the customer who owns the\
+          \ Program. [GenAI Description]"
+
+      - name: created_by_id
+        description: The 'created_by_id' column stores the Salesforce ID of the user
+          who created the program. [GenAI Description]
+
+      - name: other_licenses_c
+        description: "'other_licenses_c' is a field containing multiple numerical\
+          \ values that refer to the usage of other licenses for a program. [GenAI\
+          \ Description]"
+
+      - name: engaged_with_tl_beyond_use_case_c
+        description: This column indicates if the customer has been engaged with a
+          Trust Leader (TL) beyond the identified use case. [GenAI Description]
+
+      - name: engaging_executive_sponsor_c
+        description: This column indicates whether there is an executive sponsor engaged
+          in the program. [GenAI Description]
+
+      - name: context_challenges_opportunities_needs_c
+        description: This column contains information about the customer context,
+          challenges, opportunities and needs related to the program. [GenAI Description]
+
+      - name: customer_journey_scene_c
+        description: "'customer_journey_scene_c' is a column that stores data about\
+          \ customer journeys. [GenAI Description]"
+
+      - name: group_licenses_c
+        description: The column 'group_licenses_c' in the DBT model 'stg_sfdc__programs'
+          stores the number of specialized licenses available. [GenAI Description]
+
+      - name: key_features_in_use_c
+        description: "'key_features_in_use_c' contains a description of the key features\
+          \ being used for the program. [GenAI Description]"
+
+      - name: solution_c
+        description: Solution_c stores the overall solution or solution set that the
+          program or purpose has implemented or is developing. [GenAI Description]
+
+      - name: last_referenced_date
+        description: The 'last_referenced_date' column stores timestamps reflecting
+          the date of the last time the record was referenced or looked at. [GenAI
+          Description]
+
+      - name: last_viewed_date
+        description: The 'last_viewed_date' column stores a timestamp of when the
+          program was last accessed. [GenAI Description]
+
+      - name: last_activity_date
+        description: The 'last_activity_date' column stores the date of the last activity
+          for a program. [GenAI Description]
+
+      - name: basic_licenses_c
+        description: Column 'basic_licenses_c' is a count of software licenses needed
+          to access and use the program. [GenAI Description]
+
+      - name: standard_licenses_c
+        description: The 'standard_licenses_c' column stores the number of standard
+          licenses associated with the program. [GenAI Description]
+
+      - name: foundations_licenses_c
+        description: This column contains the amount of licenses dedicated to Foundation
+          account holders. [GenAI Description]

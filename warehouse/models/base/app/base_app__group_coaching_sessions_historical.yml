@@ -1,0 +1,28 @@
+version: 2
+
+models:
+  - name: base_app__group_coaching_sessions_historical
+    description: ""
+    columns:
+      - name: created_at
+      - name: ends_at
+      - name: group_coaching_cohort_id
+      - name: id
+        tests:
+          - unique
+          - not_null
+      - name: starts_at
+      - name: updated_at
+      - name: session_number
+      - name: ended_at
+      - name: uuid
+      - name: timeslot_id
+      - name: coach_id
+      - name: nylas_event_id
+      - name: session_url
+      - name: mobile_session_url
+      - name: started_at
+      - name: remote_video_identifier
+      - name: post_session_survey_resource_id
+      - name: post_session_survey_resource_uuid
+      - name: session_curriculum_id

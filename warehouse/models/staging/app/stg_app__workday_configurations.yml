@@ -1,0 +1,115 @@
+version: 2
+models:
+  - name: stg_app__workday_configurations
+    description: DBT model stg_app__workday_configurations stores authenticated user
+      configurations for connecting to the Workday cloud service. It contains 25 fields
+      related to a user's organizational and team-level information, security settings,
+      synchronization preferences, encryption keys, and provisioning options. [GenAI Description]
+    columns:
+      - name: workday_configuration_id
+        description: The 'workday_configuration_id' column holds the unique unique
+          identifier for a Workday configuration record. [GenAI Description]
+        tests:
+          - unique
+          - not_null
+
+      - name: organization_id
+        description: The 'organization_id' column stores the unique ID of the associated
+          organization record. [GenAI Description]
+
+      - name: integration_system_id
+        description: The 'integration_system_id' column stores the identifier of the
+          integration system associated with the configuration. [GenAI Description]
+
+      - name: rest_api_client_id
+        description: The 'rest_api_client_id' column holds the identifier for the
+          REST API client used by the Workday integration system. [GenAI Description]
+
+      - name: raas_api_client_id
+        description: The 'raas_api_client_id' column holds a unique identifier for
+          the user's REST Application Access Service API client. [GenAI Description]
+
+      - name: deactivate_on_termination
+        description: The 'deactivate_on_termination' column indicates whether or not
+          to deactivate users when they are terminated in the workplace. [GenAI Description]
+
+      - name: exclude_contingent_workers
+        description: This column indicates whether or not contingent workers should
+          be excluded when retrieving information from the Workday integration. [GenAI
+          Description]
+
+      - name: host
+        description: The 'host' column stores the domain URL from which the data is
+          accessed on Workday. [GenAI Description]
+
+      - name: tenant
+        description: The tenant column holds information about the user's account
+          tenant. [GenAI Description]
+
+      - name: username
+        description: The 'username' column holds a username unique to the Workday
+          application. [GenAI Description]
+
+      - name: country_value
+        description: The 'country_value' column provides a user-defined value to specify
+          a country associated with a organization. [GenAI Description]
+
+      - name: country_key
+        description: The column 'country_key' stores the country code of the connected
+          Workday organization. [GenAI Description]
+
+      - name: provision_new_users
+        description: This column indicates if users should be provisioned during the
+          workday synchronization process. [GenAI Description]
+
+      - name: use_work_email_only
+        description: "'use_work_email_only' indicates whether or not only the user's\
+          \ work email is used for provisioning. [GenAI Description]"
+
+      - name: integration_document_name
+        description: "'integration_document_name' is the name of a document used for\
+          \ integration purposes. [GenAI Description]"
+
+      - name: integration_document_field_name
+        description: The 'integration_document_field_name' column is a text field
+          that stores the field name of an integration document. [GenAI Description]
+
+      - name: enc_password
+        description: "'enc_password' stores an encrypted version of the Workday suite\
+          \ API password. [GenAI Description]"
+
+      - name: provision_only_new_hires
+        description: The boolean field, 'provision_only_new_hires', indicates if a
+          new hire should be provisioned in the Workday system. [GenAI Description]
+
+      - name: invitation_flow
+        description: The 'invitation_flow' column stores values that define how a
+          new employee should be invited to Workday. [GenAI Description]
+
+      - name: rest_api_keypair
+        description: Contains a pair of keys used to authenticate an organization's
+          account with Workday's REST API. [GenAI Description]
+
+      - name: x509_cert
+        description: The x509_cert column stores a X.509 digital certificate used
+          for authentication when connecting to the Workday REST API. [GenAI Description]
+
+      - name: enable_outcomes
+        description: The 'enable_outcomes' column indicates whether the outcomes for
+          workday configurations are enabled or not. [GenAI Description]
+
+      - name: outcomes_report_url
+        description: The outcomes_report_url column stores a URL used to access an
+          outcomes report from Workday. [GenAI Description]
+
+      - name: raas_x509_cert
+        description: The raas_x509_cert column stores a X.509 certificate for use
+          with Workday's Records as a Service API. [GenAI Description]
+
+      - name: created_at
+        description: The 'created_at' column contains a timestamp representing the
+          time the Workday configuration record was created. [GenAI Description]
+
+      - name: updated_at
+        description: The column 'updated_at' stores the timestamp when the row was
+          most recently updated. [GenAI Description]

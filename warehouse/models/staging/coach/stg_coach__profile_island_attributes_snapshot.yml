@@ -1,0 +1,59 @@
+version: 2
+
+models:
+  - name: stg_coach__profile_island_attributes_snapshot
+    description: >
+      Staging model for snapshot of Profile Island Attributes.
+      More docs here: https://betterup.atlassian.net/wiki/spaces/DATA/pages/3345450158/Coach+Snapshot+Data+Model
+
+    columns:
+      - name: history_primary_key
+        description: "Snapshot model primary key is concatenated profile_island_attribute_uuid + snapshot valid to / from timestamps"
+        tests:
+          - unique
+          - not_null
+
+      - name: profile_island_attribute_id
+        description: ""
+
+      - name: profile_island_attribute_uuid
+        description: ""
+
+      - name: coach_profile_uuid
+        description: ""
+
+      - name: island
+        description: ""
+
+      - name: appointment_buffer_enabled
+        description: ""
+
+      - name: current_volunteer_member_count
+        description: ""
+
+      - name: engaged_member_count
+        description: ""
+
+      - name: max_member_count
+        description: ""
+
+      - name: banned_organization_ids
+        description: ""
+
+      - name: pending_primary_recommendation_count
+        description: ""
+
+      - name: pick_rate
+        description: ""
+
+      - name: created_at
+        description: ""
+
+      - name: updated_at
+        description: ""
+
+      - name: valid_from
+        description: ""
+
+      - name: valid_to
+        description: ""

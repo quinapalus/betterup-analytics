@@ -1,0 +1,13 @@
+version: 2
+models:
+  - name: star_whole_person_subdimension_benchmark_score
+    description: >
+      Whole Person Model Subdimension Benchmark Score fact table, joined with full WPM
+      Subdimension dimension. See documentation for `fact_whole_person_subdimension_benchmark_score`
+      and `dim_whole_person_subdimension` for field descriptions.
+    columns:
+      - name: _unique
+        description: Primary Key
+        tests:
+          - not_null
+          - unique

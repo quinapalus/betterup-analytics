@@ -1,0 +1,45 @@
+version: 2
+
+models:
+  - name: base_app__call_events_historical
+    description: This DBT model captures historical call events by storing records
+      of each call event, like contact method, user id, event name, and associated
+      event data, with associated created_at and updated_at time stamps. It is sourced
+      from an app_archive table, allowing for analysis of call events in their historical
+      context. [GenAI Description]
+    columns:
+      - name: id
+        description: The 'id' column contains unique identifiers for each archived
+          call event. [GenAI Description]
+        tests:
+          - unique
+          - not_null
+
+      - name: created_at
+        description: The 'created_at' column reflects the time when the Call Event
+          was created as recorded in the archive. [GenAI Description]
+
+      - name: updated_at
+        description: A date/time column indicating when a record was last updated.
+          [GenAI Description]
+
+      - name: call_id
+        description: The 'call_id' column stores a unique identifier for each call
+          event. [GenAI Description]
+
+      - name: contact_method
+        description: The 'contact_method' column specifies the contact method used
+          by a user. [GenAI Description]
+
+      - name: data
+        description: The 'data' column contains data related to historical call events.
+          [GenAI Description]
+
+      - name: event_name
+        description: The 'event_name' column contains the name of an event as it happened
+          in the call events. [GenAI Description]
+
+      - name: user_id
+        description: The user_id column contains a unique identifier for each user
+          associated with the archived call events data. [GenAI Description]
+

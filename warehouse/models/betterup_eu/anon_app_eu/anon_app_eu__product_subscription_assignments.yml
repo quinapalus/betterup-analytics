@@ -1,0 +1,58 @@
+version: 2
+
+models:
+  - name: anon_app_eu__product_subscription_assignments
+
+    columns:
+      - name: id
+        tests:
+          - unique
+          - not_null
+
+        description: The 'id' column stores a unique identifier for each product subscription
+          assignment. [GenAI Description]
+      - name: change_notifications_enabled
+        description: The 'change_notifications_enabled' column contains a binary flag
+          to indicate if a user wishes to receive product subscription change notifications.
+          [GenAI Description]
+      - name: created_at
+        description: The 'created_at' column stores the timestamp of when the product
+          subscription assignment was created. [GenAI Description]
+      - name: ends_at
+        description: The 'ends_at' column contains the date when the product subscription
+          assignment will end. [GenAI Description]
+      - name: id
+        description: The 'id' column stores a unique identifier for each product subscription
+          assignment. [GenAI Description]
+      - name: product_subscription_id
+        tests:
+          - not_null
+        description: The 'product_subscription_id' column contains the unique identifier
+          for the user's assigned product subscription. [GenAI Description]
+      - name: started_at
+        description: The 'started_at' column holds the date and time when a product
+          subscription assignment began. [GenAI Description]
+      - name: starts_at
+        tests:
+          - not_null
+        description: The 'starts_at' column is the start date of the product subscription
+          assignmet. [GenAI Description]
+      - name: updated_at
+        tests:
+          - not_null
+        description: The 'updated_at' column contains the timestamp of when the product
+          subscription assignment details were last updated. [GenAI Description]
+      - name: user_id
+        tests:
+          - not_null
+        description: The 'user_id' column is used to store a unique identifier of
+          the user associated with the product subscription. [GenAI Description]
+      - name: v2
+        description: A boolean column indicating whether or not certain user\
+          \ actions on a product subscription assignment have been completed. [GenAI\
+          \ Description]
+    description: The anon_app_eu__product_subscription_assignments DBT model stores
+      information about product subscription assignments related to the app_eu database.
+      It includes fields id, change_notifications_enabled, created_at, ends_at, product_subscription_id,
+      started_at, starts_at, updated_at, user_id, and v2, and is formed via SQL code.
+      [GenAI Description]

@@ -1,0 +1,34 @@
+version: 2
+
+models:
+  - name: stg_app__recommendation_indicators
+    description: The DBT model stg_app__recommendation_indicators is an intermediary
+      step of a data transformation process that allows us to collect, rename, and
+      store the associated data about each recommendation indicator. It contains fields
+      such as recommendation_indicator_id, created_at, updated_at, indicator_name,
+      and weight. It facilitates simple and efficient processing and navigation of
+      data, thereby making the data easier to interpret and use for subsequent analyses.
+      [GenAI Description]
+    columns:
+      - name: recommendation_indicator_id
+        description: The 'recommendation_indicator_id' column contains a unique identifier
+          for a recommendation indicator. [GenAI Description]
+        tests:
+          - unique
+          - not_null
+
+      - name: created_at
+        description: The 'created_at' column stores the timestamp when the recommendation
+          indicator was created. [GenAI Description]
+
+      - name: updated_at
+        description: The column 'updated_at' contains timestamps denoting when the
+          record for the recommendation indicator was last updated. [GenAI Description]
+
+      - name: indicator_name
+        description: The 'indicator_name' column contains the name of each recommendation
+          indicator. [GenAI Description]
+
+      - name: weight
+        description: The weight column contains the relative weight assigned to the
+          indicator. [GenAI Description]

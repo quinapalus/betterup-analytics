@@ -1,0 +1,12 @@
+version: 2
+
+models:
+  - name: base_app__nylas_event_timeslots_historical
+    description: ""
+    columns:
+      - name: id
+        tests:
+          - unique
+          - not_null
+      - name: nylas_event_id
+      - name: timeslot_id

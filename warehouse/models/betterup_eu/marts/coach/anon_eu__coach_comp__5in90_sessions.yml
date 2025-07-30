@@ -1,0 +1,53 @@
+version: 2
+
+models:
+  - name: anon_eu__coach_comp__5in90_sessions
+    description: >
+      Coach Compensation 5 in 90 table from analytics to support coach insights dashboard.
+
+    columns:
+      - name: user_season_id
+        description: Surrogate Key of User UUID + Season Name. Functions as primary
+          key.
+        tests:
+          - not_null
+          - unique
+
+      - name: coach_id
+        tests:
+          - not_null
+
+        description: The 'coach_id' column contains the unique identifiers of coaches
+          who facilitated five-in-ninety sessions. [GenAI Description]
+      - name: coach_profile_uuid
+        tests:
+          - not_null
+
+        description: The 'coach_profile_uuid' column stores unique identifiers for
+          the coaches associated with a given 5in90 session. [GenAI Description]
+      - name: user_uuid
+        tests:
+          - not_null
+
+        description: The 'user_uuid' column contains the unique identifier for each
+          user accessing the 5in90_sessions service. [GenAI Description]
+      - name: full_name
+        description: The 'full_name' column contains the full name of an individual
+          coach. [GenAI Description]
+      - name: season_name
+        tests:
+          - not_null
+
+        description: The column 'season_name' represents the season (e.g. summer,
+          winter, fall) in which the data was collected. [GenAI Description]
+      - name: primary_b2b_first_time_sessions
+        tests:
+          - not_null
+
+        description: "'primary_b2b_first_time_sessions' counts the number of times\
+          \ a business user has initiated a session on the platform for the first\
+          \ time. [GenAI Description]"
+      - name: primary_b2b_5_in_90_sessions
+        tests:
+          - not_null
+        description: Count of primary B2B sessions in the last 90 days. [GenAI Description]

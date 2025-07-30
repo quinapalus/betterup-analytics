@@ -1,0 +1,11 @@
+version: 2
+
+models:
+  - name: stg_app__consumer_products
+    description: Mapping table between BetterUp internal app consumer products and Stripe products
+    columns:
+      - name: app_consumer_product_id
+        description: BetterUp internal app consumer product id.
+        tests:
+          - unique
+          - not_null

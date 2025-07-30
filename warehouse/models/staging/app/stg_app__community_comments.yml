@@ -1,0 +1,59 @@
+version: 2
+models:
+  - name: stg_app__community_comments
+    description: This DBT model stores data about the comments posted by users on
+      the community posts. It contains the fields to identify the comment (comment_id,
+      user_id, post_id) and the content of the comment (body, nested_level, child_comments_count).
+      The model also holds the times of creation, last edit, publication and deletion
+      of the comments, if applicable. [GenAI Description]
+    columns:
+      - name: community_comment_id
+        description: "'community_comment_id' is a unique identifier for individual\
+          \ comments in a community forum. [GenAI Description]"
+        tests:
+          - unique
+          - not_null
+
+      - name: user_id
+        description: The user_id column contains the unique identifier of the user
+          who submitted the comment. [GenAI Description]
+
+      - name: post_id
+        description: The 'post_id' column identifies the post for the given comment.
+          [GenAI Description]
+
+      - name: parent_comment_id
+        description: The parent_comment_id column stores the ID of the comment to
+          which a comment is in response. [GenAI Description]
+
+      - name: body
+        description: The 'body' column contains the text content of each comment.
+          [GenAI Description]
+
+      - name: nested_level
+        description: The 'nested_level' column indicates the depth of a comment, relative
+          to the top-level comments in the discussion thread. [GenAI Description]
+
+      - name: child_comments_count
+        description: The 'child_comments_count' column holds the count of comments
+          made in reply to a specific comment. [GenAI Description]
+
+      - name: deleted_at
+        description: The 'deleted_at' column contains a datetime value indicating
+          when the Community Comment was deleted. [GenAI Description]
+
+      - name: published_at
+        description: The column 'published_at' stores a timestamp for when the community
+          comment was officially published. [GenAI Description]
+
+      - name: last_edited_at
+        description: The 'last_edited_at' column stores the ISO formatted timestamp
+          of when the comment was last edited. [GenAI Description]
+
+      - name: created_at
+        description: The 'created_at' column stores the date and time when the comment
+          was created. [GenAI Description]
+
+      - name: updated_at
+        description: "'updated_at' is a timestamp representing the most recent update\
+          \ made to the comment. [GenAI Description]"

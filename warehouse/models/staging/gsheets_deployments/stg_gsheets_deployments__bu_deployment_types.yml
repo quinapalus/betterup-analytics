@@ -1,0 +1,50 @@
+version: 2
+models:
+  - name: stg_gsheets_deployments__bu_deployment_types
+    description: >
+      BetterUp deployment types as captured in Google Sheets and maintained by Operations
+      team.
+      The data is updated with each dbt run, so any updates can be controlled directly
+      in Google Sheets.
+
+    columns:
+      - name: _unique
+        tests:
+          - unique
+          - not_null
+        description: This column contains a unique identifier generated from the deployment
+          type and deployment name. [GenAI Description]
+      - name: deployment_type
+        description: >
+          Deployment type as specified in the app.
+        tests:
+          - not_null
+
+      - name: deployment_name
+        description: >
+          Full name of the deployment.
+        tests:
+          - not_null
+
+      - name: accounting_category
+        description: >
+          Ledger Account associated with the deployment for accounting purposes.
+
+      - name: is_revenue_generating
+        description: >
+          Boolean denoting if the deployment is revenue-generating.
+        tests:
+          - not_null
+
+      - name: is_external
+        description: >
+          Boolean denoting if the deployment is external, i.e. used by
+          members outside BetterUp.
+        tests:
+          - not_null
+
+      - name: is_sales_trial
+        description: >
+          Boolean denoting if the deployment is a Sales Trial.
+        tests:
+          - not_null

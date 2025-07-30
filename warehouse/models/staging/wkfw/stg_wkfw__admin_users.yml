@@ -1,0 +1,27 @@
+version: 2
+
+models:
+  - name: stg_wkfw__admin_users
+    description: DBT Model stg_wkfw__admin_users is a staging model that contains
+      records of admin users. This model contains fields of admin_user_id, email,
+      created_at, and updated_at. This model is constructed from 
+      the raw.stitch_app_viva_staging.admin_users table. [GenAI Description]
+    columns:
+      - name: admin_user_id
+        description: The 'admin_user_id' column stores the unique ID for each record
+          of admin user data. [GenAI Description]
+        tests:
+          - not_null
+          - unique
+
+      - name: email
+        description: The email column contains the email address of an administrative
+          user. [GenAI Description]
+
+      - name: created_at
+        description: The 'created_at' column stores the date and time when the user
+          was created. [GenAI Description]
+
+      - name: updated_at
+        description: The 'updated_at' column holds the timestamp of the user's last
+          update. [GenAI Description]

@@ -1,0 +1,15 @@
+version: 2
+
+models:
+  - name: base_app__growth_focus_area_skills_historical
+    description: ""
+    columns:
+      - name: created_at
+      - name: growth_focus_area_id
+      - name: id
+        tests:
+          - unique
+          - not_null
+      - name: skill_id
+      - name: updated_at
+      - name: uuid

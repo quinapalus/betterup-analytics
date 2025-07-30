@@ -1,0 +1,14 @@
+version: 2
+models:
+  - name: dbt_whole_person_benchmarks
+    description: >
+      This protected model adds the conformed `whole_person_subdimension_key` to
+      the benchmark data defined in `data/bu_whole_person_benchmarks.csv` to
+      facilitate joining benchmark data with the `dim_whole_person_subdimension`
+      dimension.
+
+    columns:
+      - name: whole_person_subdimension_key
+        description: Primary Key for the subdimension.
+        tests:
+          - not_null

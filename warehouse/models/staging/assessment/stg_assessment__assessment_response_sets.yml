@@ -1,0 +1,32 @@
+version: 2
+
+models:
+  - name: stg_assessment__assessment_response_sets
+    description: The DBT model stg_assessment__assessment_response_sets stores information
+      about assessment results responses, including a unique assessment_response_set_id,
+      item_type, key, as well as timestamps when each record was created and last
+      updated. [GenAI Description]
+    columns:
+      - name: assessment_response_set_id
+        description: The assessment_response_set_id is an ID for an assessment response
+          set, containing associated key, item type and timestamp details. [GenAI
+          Description]
+        tests:
+          - unique
+          - not_null
+
+      - name: key
+        description: The 'key' column is a unique identifier for an assessment response
+          set. [GenAI Description]
+
+      - name: item_type
+        description: The item_type column stores the type of assessment items associated
+          with each response set. [GenAI Description]
+
+      - name: created_at
+        description: The 'created_at' column contains a timestamp of when the assessment
+          response set was created. [GenAI Description]
+
+      - name: updated_at
+        description: The column 'updated_at' stores timestamp values that represent
+          when the assessment response sets data was last updated. [GenAI Description]

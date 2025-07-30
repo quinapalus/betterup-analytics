@@ -1,0 +1,38 @@
+version: 2
+
+models:
+  - name: int_people_insights__assessment_response_sets
+    description: This DBT model aggregates, selects, and filters assessment responses
+      from staging tables. It contains the assessment_response_set_id, key, item_type,
+      created_at, and updated_at fields, as well as response_set_number_of_options
+      which is a derived count of number of possible options in a set. This model
+      is for the EU region. [GenAI Description]
+    columns:
+      - name: assessment_response_set_id
+        description: The 'assessment_response_set_id' is a unique identifier for each
+          assessment response set, along with a key, item type, create and update
+          times, and the number of possible options in the set. [GenAI Description]
+        tests:
+          - unique
+          - not_null
+
+      - name: key
+        description: The 'key' column is an identifier associated with an assessment
+          response set. [GenAI Description]
+
+      - name: item_type
+        description: The 'item_type' column stores the type of assessment item associated
+          with a response set. [GenAI Description]
+
+      - name: created_at
+        description: The 'created_at' column records the date and time of when the
+          assessment response set was created. [GenAI Description]
+
+      - name: updated_at
+        description: The column 'updated_at' stores the date and time when the record
+          was last updated. [GenAI Description]
+
+      - name: response_set_number_of_options
+        description: 'The number of options that are presented for this assessment
+          item. Having this field allows us to know more about the scale of the item.
+          Ex: 11'

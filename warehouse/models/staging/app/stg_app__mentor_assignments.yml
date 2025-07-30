@@ -1,0 +1,47 @@
+version: 2
+models:
+  - name: stg_app__mentor_assignments
+    description: The DBT model stg_app__mentor_assignments is built from a source
+      table that captures mentor and mentee relationships, storing the IDs of each,
+      the assigned conversation, and when the relationship started and ended. This
+      model stores all the available data in a cleaned-up format with the appropriate
+      date and time fields. [GenAI Description]
+    columns:
+      - name: mentor_assignment_id
+        description: The mentor_assignment_id is a unique identifier for a mentor-mentee
+          assignment relationship. [GenAI Description]
+        tests:
+          - unique
+          - not_null
+
+      - name: mentee_id
+        description: The 'mentee_id' column stores the identification number of the
+          mentee related to the mentor assignment. [GenAI Description]
+
+      - name: mentor_id
+        description: The column 'mentor_id' stores the unique ID of each mentor assigned
+          to a mentee. [GenAI Description]
+
+      - name: mentee_program_assignment_id
+        description: The 'mentee_program_assignment_id' column holds the ID of the
+          program assignment of the mentee. [GenAI Description]
+
+      - name: mentor_program_assignment_id
+        description: The 'mentor_program_assignment_id' column refers to the unique
+          identifier of the mentor's program assignment. [GenAI Description]
+
+      - name: conversation_id
+        description: "'conversation_id' is the ID of the conversation between the\
+          \ mentee and mentor. [GenAI Description]"
+
+      - name: ended_at
+        description: The ended_at column contains the timestamp of when the mentor-mentee
+          pairing ended. [GenAI Description]
+
+      - name: created_at
+        description: "'created_at' stores the time and date when the record was created.\
+          \ [GenAI Description]"
+
+      - name: updated_at
+        description: The column 'updated_at' contains the date and time when the mentor
+          assignment data was last modified. [GenAI Description]

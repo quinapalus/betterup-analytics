@@ -1,0 +1,79 @@
+name: DBT Freshness
+
+on:
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+  # Run on schedule at minute 15 past every 2nd hour.
+  schedule:
+    - cron:  '0 0 * * *'
+
+env:
+  SNOWFLAKE_USER: 'DBT_GITHUB_CI_USER'
+  SNOWFLAKE_PASSWORD: ${{ secrets.DBT_GITHUB_CI_USER_PASSWORD }}
+  BU_SLACK_BOT_TOKEN: ${{ secrets.BU_SLACK_BOT_TOKEN }}
+  SLACK_WEBHOOK_URL: ${{ secrets.DATA_SLACK_WEBHOOK_URL }}
+  SLACK_WEBHOOK_TYPE: INCOMING_WEBHOOK
+  GITHUB_ACTION_URL: "https://github.com/betterup/betterup-analytics/actions/workflows/dbt_freshness.yml"
+
+
+jobs:
+  dbt_source_freshness:
+    name: DBT Source Freshness 
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: warehouse
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16
+
+      - name: Install python dependencies
+        # Retry 3 times before the install actually fails 
+        run: |
+          (echo "===== Install Attempt: 1 =====" && make installdeps) || \
+          (echo "===== Install Attempt: 2 =====" && make installdeps) || \
+          (echo "===== Install Attempt: 3 =====" && make installdeps) || \
+          (echo "===== Install python dependencies step failed =====" && exit 1)
+
+      - name: Write DBT configs
+        run: |
+          make writedbtconfig
+
+      - name: Install DBT dependencies
+        run: |
+          poetry run dbt deps --target prod
+
+      - name: Run dbt source freshness
+        run: poetry run dbt source freshness --target prod
+
+      - name: Archive target artifacts
+        if: always()
+        uses: actions/upload-artifact@v3
+        with:
+          name: dbt-build-artifacts
+          path: |
+            warehouse/target
+
+      - name: Send GitHub Action data to Slack workflow
+        id: send-slack-notification
+        uses: slackapi/slack-github-action@v1.23.0
+        if: failure()
+        with:
+          # Slack API Reference: 
+          # https://api.slack.com/messaging/composing
+          # https://api.slack.com/reference/messaging/payload
+          payload: |
+            {
+              "channel": "warroom-data",
+              "icon_emoji": ":dbt-logo:",
+              "text": "DBT Freshness Failure: ${{ github.workflow }} <${{ env.GITHUB_ACTION_URL }}|View here.>"
+            }

@@ -1,0 +1,49 @@
+version: 2
+models:
+  - name: member_programs
+    description: This is a day-of pull for member_platform_calendar to yield 1 person per row
+
+    columns:
+      - name: _unique
+        tests:
+          - unique
+          - not_null
+
+      - name: DATE
+        description: Calendar date (YYYY-MM--DD format) for today's date.
+
+      - name: MEMBER_ID
+        description: Foreign Key for the associated Member.
+
+      - name: TRACK_ASSIGNMENT_ID
+        description: Foreign Key for the associated Track Assignment.
+
+      - name: TRACK_ID
+        description: Foreign Key for the associated Track.
+
+      - name: PRODUCT_SUBSCRIPTION_ASSIGNMENT_ID
+        description: Foreign Key for the associated Product Subscription Assignment.
+
+      - name: PRODUCT_SUBSCRIPTION_ID
+        description: Foreign Key for the associated Product Subscription.
+
+      - name: PRODUCT_ID
+        description: Foreign Key for the associated Product.
+
+      - name: ON_DEMAND
+        description:  Boolean flag, true if the member has access to on demand.
+
+      - name: PRIMARY_COACHING
+        description: Boolean flag, true if the member has access to primary coaching.
+
+      - name: CARE
+        description: Boolean flag, true if the member has access to care.
+
+      - name: COACHING_CIRCLES
+        description: Boolean flag, true if the member has access to coaching circles.
+
+      - name: WORKSHOPS
+        description: Boolean flag, true if the member has access to workshops.
+
+      - name: v2
+        description: Refers to the MAPS (Multiple Active Product Subscriptions) work. TRUE V2 means PSA is un-spliced, and there could be multiple PSAs for a member at once.

@@ -1,0 +1,19 @@
+version: 2
+
+sources:
+  - name: salesforce_service
+    schema: salesforce_service
+    database: analytics
+
+models:
+  - name: sfdc_account_health_fields
+    description: >
+      Model that pulls data from Snowflake to update account health fields in Salesforce
+      basis.
+
+    columns:
+      - name: sfdc_account_id
+        description: Primary Key to the associated SFDC account.
+        tests:
+          - not_null
+          - unique

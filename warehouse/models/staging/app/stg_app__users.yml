@@ -1,0 +1,274 @@
+version: 2
+
+models:
+  - name: stg_app__users
+    description: Source Users view from App
+
+    columns:
+      - name: user_id
+        tests:
+          - unique
+          - not_null
+
+        description: "'user_id' is the unique identifier assigned to a user. [GenAI\
+          \ Description]"
+      - name: user_uuid
+        tests:
+          - unique
+          - not_null
+
+        description: "'user_uuid' is a unique identifier for a user that maps to the\
+          \ 'id' column in the source table. [GenAI Description]"
+      - name: created_at
+        description: "'created_at' is the timestamp of the user's creation date. [GenAI\
+          \ Description]"
+      - name: updated_at
+#      - name: coach_id --this column does not exist anymore in the postgres DB
+        description: "'updated_at' stores a timestamp representing when the user data\
+          \ was last updated. [GenAI Description]"
+      - name: coach_profile_id
+        description: "'coach_profile_id' is the U.S. profile ID associated with the\
+          \ user's coach. [GenAI Description]"
+      - name: coach_profile_uuid
+        description: '"coach_profile_uuid" contains the unique identifier associated
+          with the coach profile of the user. [GenAI Description]'
+      - name: manager_id
+        description: '"manager_id" is a foreign key referencing the ID of the manager
+          of the user. [GenAI Description]'
+      - name: member_profile_id
+        description: "'member_profile_id' is an identifier for the associated user\
+          \ profile. [GenAI Description]"
+      - name: apple_id
+        description: The 'apple_id' column stores the Apple ID (if present) associated
+          with a user. [GenAI Description]
+      - name: bluejeans_id
+        description: "'bluejeans_id' is an identifier for the user on the BlueJean's\
+          \ platform. [GenAI Description]"
+      - name: inviter_id
+        description: 'inviter_id: Unique identification number of the user who invited
+          the user to join the platform. [GenAI Description]'
+      - name: consumer_id
+        description: "'consumer_id' is the ID of the consumer for a user's account.\
+          \ [GenAI Description]"
+      - name: next_session_id
+        description: "'next_session_id' is the unique identifier for the next appointment\
+          \  associated with this user. [GenAI Description]"
+      - name: organization_id
+        description: The 'organization_id' column represents the unique ID for an
+          organization associated with a user. [GenAI Description]
+      - name: care_profile_id
+        description: "'care_profile_id' is an ID assigned for a user with identification\
+          \ information and account activity records. [GenAI Description]"
+      - name: hubspot_contact_id
+        description: "'hubspot_contact_id' is the ID assigned to the user by HubSpot\
+          \ to track contacts in a marketing hub. [GenAI Description]"
+      - name: zoom_id
+        description: "'zoom_id' is the Zoom User ID associated with the user. [GenAI\
+          \ Description]"
+      - name: skype_id
+        description: Skype_id is a unique identifier for a user for the purposes of
+          connecting with a Skype account. [GenAI Description]
+      - name: first_name
+        description: Column 'first_name' is a string containing the first name of
+          a user. [GenAI Description]
+      - name: last_name
+#      - name: last_active_at --this column does not exist anymore in the postgres DB
+        description: The 'last_name' column contains the user's last name. [GenAI
+          Description]
+      - name: last_appointment_at
+        description: The 'last_appointment_at' column stores the timestamp of the
+          user's last appointment. [GenAI Description]
+      - name: last_sign_in_at
+        description: "'last_sign_in_at' is a timestamp column indicating the time\
+          \ of the last user sign-in. [GenAI Description]"
+      - name: last_engaged_at
+        description: "'last_engaged_at' captures the most recent date/time a user\
+          \ has interacted with the system. [GenAI Description]"
+      - name: locked_at
+        description: "\"locked_at\" is a timestamp for the user's account lock date.\
+          \ [GenAI Description]"
+      - name: accepted_organization_terms_at
+        description: "'accepted_organization_terms_at' is the timestamp of when the\
+          \ user accepted terms and conditions associated with the organization. [GenAI\
+          \ Description]"
+      - name: accepted_terms_at
+        description: "'accepted_terms_at' is a timestamp column containing the date\
+          \ and time when the user accepted the terms and conditions. [GenAI Description]"
+      - name: completed_member_onboarding_at
+        description: "'completed_member_onboarding_at' is a timestamp column that\
+          \ tracks when a member completed onboarding. [GenAI Description]"
+      - name: confirmation_sent_at
+        description: "confirmation_sent_at: Timestamp of when the user's confirmation\
+          \ was sent out. [GenAI Description]"
+      - name: confirmed_at
+        description: "'confirmed_at' is a timestamp of when the user's account was\
+          \ confirmed. [GenAI Description]"
+      - name: current_sign_in_at
+        description: "'current_sign_in_at' stores the timestamp of the current sign-in\
+          \ for the user. [GenAI Description]"
+      - name: deactivated_at
+        description: "'deactivated_at' stores the time the user record was deactivated.\
+          \ [GenAI Description]"
+      - name: care_confirmed_at
+        description: care_confirmed_at is the timestamp at which the user has confirmed
+          their participation in care. [GenAI Description]
+      - name: lead_confirmed_at
+      - name: completed_primary_modality_setup_at
+        description: "'completed_primary_modality_setup_at' contains the timestamp\
+          \ of when a user completed the primary setup of their modality. [GenAI Description]"
+      - name: previously_completed_onboarding_at
+        description: '"previously_completed_onboarding_at" is a timestamp indicating
+          when a user previously completed onboarding. [GenAI Description]'
+      - name: confirmed_through_nurture_at
+        description: "'confirmed_through_nurture_at' is a timestamp column that indicates\
+          \ the confirmations made through nurture processes. [GenAI Description]"
+      - name: completed_account_creation_at
+        description: The 'completed_account_creation_at' column contains the date
+          and time when a user's account was completed. [GenAI Description]
+      - name: remember_created_at
+        description: This column stores a timestamp of when the user remembered their
+          account credentials upon login. [GenAI Description]
+      - name: reset_password_sent_at
+        description: "'reset_password_sent_at' contains the timestamp when the user\
+          \ requested to reset their password. [GenAI Description]"
+      - name: next_partner_nps_at
+        description: "'next_partner_nps_at' is a timestamp column that stores the\
+          \ date and time of when the next NPS survey should be sent to the user.\
+          \ [GenAI Description]"
+      - name: last_sign_in_ip
+        description: A column containing the last IP address the user signed in from.
+          [GenAI Description]
+      - name: current_sign_in_ip
+        description: "'current_sign_in_ip' is a column that stores the IP address\
+          \ for the user's current sign-in action. [GenAI Description]"
+      - name: appointments_count
+        description: The 'appointments_count' column records the total number of appointments
+          booked by a user. [GenAI Description]
+      - name: channel
+        description: The 'channel' column stores the source of the user. [GenAI Description]
+      - name: coaching_language
+        description: The 'coaching_language' column stores the preferred language
+          for coaching. [GenAI Description]
+      - name: completed_appointments_count
+        description: Column 'completed_appointments_count' is the number of appointments
+          completed by the user. [GenAI Description]
+      - name: confirmation_token
+        description: "'confirmation_token' is a token provided when a user is created,\
+          \ used to verify the account. [GenAI Description]"
+      - name: current_member_count
+        description: "'current_member_count' is the total count of current members\
+          \ for a user. [GenAI Description]"
+      - name: email
+        description: The 'email' column stores the users' email addresses. [GenAI
+          Description]
+      - name: email_messages_enabled
+        description: This column indicates whether email messaging is enabled for
+          a user. [GenAI Description]
+      - name: encrypted_password
+        description: "'encrypted_password' is the encrypted password stored for each\
+          \ user account. [GenAI Description]"
+      - name: failed_attempts
+        description: "'failed_attempts' is a column containing the number of failed\
+          \ attempts the user has made to sign into the system. [GenAI Description]"
+      - name: language
+        description: The 'language' column stores the language preference of the user.
+          [GenAI Description]
+      - name: motivation
+        description: The 'motivation' column holds user-provided information about
+          their individual motivation for receiving coaching. [GenAI Description]
+      - name: pending_primary_recommendation_count
+        description: The 'pending_primary_recommendation_count' column contains the
+          total number of pending primary recommendations associated with each user.
+          [GenAI Description]
+      - name: phone
+        description: "'Phone' is a column containing the phone number of the user.\
+          \ [GenAI Description]"
+      - name: preferred_contact_method
+        description: The preferred_contact_method column stores a user's preferred
+          contact method. [GenAI Description]
+      - name: reset_password_token
+        description: The 'reset_password_token' column stores a randomly generated
+          security token used for authorizing a user's password reset. [GenAI Description]
+      - name: sign_in_count
+        description: '"sign_in_count" is the count of user sign-ins. [GenAI Description]'
+      - name: sms_enabled
+        description: The 'sms_enabled' column indicates if a user has opted to have
+          SMS notifications enabled or disabled. [GenAI Description]
+      - name: time_zone
+        description: "' time_zone ' column contains the timezone associated with the\
+          \ user. [GenAI Description]"
+      - name: title
+        description: The 'title' column contains the job title of the user. [GenAI
+          Description]
+      - name: unlock_token
+        description: "'unlock_token' stores a user's unique alphanumeric token used\
+          \ for unlocking their account. [GenAI Description]"
+      - name: webex_url
+        description: The 'webex_url' column stores a URL linking to a user's Webex
+          account. [GenAI Description]
+      - name: ux_state
+        description: "'ux_state' is a user's state or situation, including any user\
+          \ controlled changes in the organization or related application. [GenAI\
+          \ Description]"
+      - name: account_type
+        description: The 'account_type' column stores the type of account (e.g. standard,
+          plus, premium) associated with each user. [GenAI Description]
+      - name: record_free_calls
+        description: "'record_free_calls' indicates if free calls are permitted or\
+          \ not for the user. [GenAI Description]"
+      - name: sticky_flash_messages
+        description: "'sticky_flash_messages' stores whether a user should be shown\
+          \ a sticky flash message or not. [GenAI Description]"
+      - name: is_call_recording_allowed
+        description: The column 'is_call_recording_allowed' indicates whether or not
+          call recording is enabled for the user. [GenAI Description]
+      - name: normalized_phone
+        description: '"normalized_phone" is a column containing the phone number in
+          a normalized format of a user in the source table. [GenAI Description]'
+      - name: microsoft_teams_url
+        description: The 'microsoft_teams_url' column stores the URL for a user's
+          Microsoft Teams account. [GenAI Description]
+      - name: state
+        description: The 'state' column stores the US state of the user. [GenAI Description]
+      - name: country
+        description: The 'country' column stores the country associated with user's
+          account. [GenAI Description]
+      - name: current_mentor_count
+        description: '"current_mentor_count" is a column containing the integer count
+          of mentors associated with the user. [GenAI Description]'
+      - name: current_mentee_count
+        description: The 'current_mentee_count' column contains the number of mentees
+          currently assigned to the user. [GenAI Description]
+      - name: alternate_email
+        description: The 'alternate_email' column contains an alternative email address
+          for the user. [GenAI Description]
+      - name: last_sign_in_user_agent
+        description: "'last_sign_in_user_agent' stores the user agent of the user\
+          \ as recorded during the last sign in. [GenAI Description]"
+      - name: current_sign_in_user_agent
+        description: The 'current_sign_in_user_agent' column contains the user agent
+          data from the current sign-in session. [GenAI Description]
+      - name: slack_messages_enabled
+        description: A boolean indicator of whether Slack messages are enabled for
+          a user. [GenAI Description]
+      - name: upfront_subscription_state
+        description: "'upfront_subscription_state' is a field to store the subscription\
+          \ status of a user for upfront payment. [GenAI Description]"
+      - name: aspirations_count
+        description: "'aspirations_count' is the number of aspirations a user has.\
+          \ [GenAI Description]"
+      - name: teams_messages_enabled
+        description: The 'teams_messages_enabled' column indicates whether members
+          are able to receive messages via Microsoft Teams. [GenAI Description]
+      - name: account_change_notifications_enabled
+        description: The column 'account_change_notifications_enabled' records whether
+          the user has enabled/disabled account change notifications. [GenAI Description]
+      - name: sso_preferred
+        description: The 'sso_preferred' column indicates whether single sign-on (SSO)
+          is the preferred authentication option for a user. [GenAI Description]
+      - name: current_mentee_program_assignment_count
+        description: The 'current_mentee_program_assignment_count' column gives the
+          number of mentee program assignments associated with the user. [GenAI Description]
+      - name: current_mentor_program_assignment_count
+        description: "'current_mentor_program_assignment_count' is the number of mentor\
+          \ programs that a user is currently assigned to. [GenAI Description]"

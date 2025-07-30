@@ -1,0 +1,150 @@
+version: 2
+models:
+  - name: fact_whole_person_assessment
+    description: >
+      Fact table for Whole Person Model assessments, currently for Onboarding, Reflection Point, 180, and 360 assessments (designed to support Pulse assessments as well). Assessments in this table are limited to external deployments and assessments that have been completed (i.e. full member-facing report generated).
+
+    columns:
+#      - name: unique_id --impossible to create a unique key
+#        tests:
+#          - unique
+#          - not_null
+
+      - name: member_key
+        description: Foreign key to conformed Member dimension.
+        tests:
+          - not_null
+
+      - name: date_key
+        description: >
+         Foreign key to conformed Date dimension for the date the member report was
+         generated for the associated assessment.
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_date')
+              field: date_key
+
+      - name: account_key
+        description: >
+          Foreign key to conformed Account dimension for the account the member was
+          associated with on the day the current assessment was completed.
+        tests:
+          - not_null
+
+      - name: deployment_key
+        description: >
+          Foreign key to conformed Deployment dimension for the deployment associated
+          with the assessment.
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_deployment')
+              field: deployment_key
+
+      - name: member_deployment_key
+        description: Foreign key to conformed Member-Deployment dimension.
+        tests:
+          - not_null
+
+      - name: whole_person_model_version
+        description: WPM version for the associated assessment.
+        tests:
+          - not_null
+          - accepted_values:
+              values: [WPM 1.0, WPM 2.0]
+
+      - name: assessment_name
+        description: >
+          String denoting the type of current WPM assessment.
+        tests:
+          - not_null
+    
+      - name: app_assessment_id
+        description: >
+          Foreign key to the assessment that's associated with the subdimension scores.
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dei_member_assessments')
+              field: assessment_id
+
+      - name: report_generated_at
+        description: >
+          Timestamp denoting when the full assessment report was generated. For onboarding
+          and reflection point reports, report_generated_at is an alias of submitted_at.
+        tests:
+          - not_null
+
+      - name: account_assessment_sequence
+        description: >
+          Integer that represents the sequence of the assessment for the member scoped
+          to `assessment_name` and `account`
+        tests:
+          - not_null
+
+      - name: deployment_assessment_sequence
+        description: >
+          Integer that represents the sequence of the assessment for the member scoped
+          to `assessment_name` and `deployment_key`
+        tests:
+          - not_null
+
+      - name: account_wpm_sequence
+        description: >
+          Integer that represents the sequence of the assessment for the member scoped
+          to `account` and version of Whole Person Model.
+        tests:
+          - not_null
+
+      - name: member_wpm_sequence
+        description: >
+          Integer that represents the sequence of the assessment for the member scoped
+          to version of Whole Person Model.
+        tests:
+          - not_null
+
+      - name: deployment_wpm_sequence
+        description: >
+          Integer that represents the sequence of the assessment for the member scoped
+          to `deployment_key` and version of Whole Person Model.
+        tests:
+          - not_null
+
+      - name: deployment_assessment_reverse_sequence
+        description: >
+          Integer that represents the reverse sequence of the assessment for the member scoped
+          to `assessment_name` and `deployment_key`. Specifically, the most recent
+          assessment submitted will have a reverse sequence = 1.
+        tests:
+          - not_null
+
+      - name: is_baseline_assessment
+        description: "Yes, if the associated assessment is a Baseline (Onboarding) assessment."
+      
+      - name: is_any_reflection_point
+        description: "Yes, if the associated assessment is a Reflection Point assessment."
+        
+      - name: is_primary_coaching_reflection_point
+        description: "Yes, if the associated assessment is a Primary Coaching Reflection Point assessment."
+        
+      - name: is_group_coaching_reflection_point
+        description: "Yes, if the associated assessment is a Group Coaching Reflection Point assessment."
+        
+      - name: is_first_baseline_assessment
+        description: "Yes, if the assessment is the earliest Baseline assessment submitted by the member on the given Track."
+        
+      - name: is_first_primary_coaching_reflection_point
+        description: "Yes, if the assessment is the earliest Primary Coaching Reflection Point submitted by the member on the given Track."
+        
+      - name: is_first_group_coaching_reflection_point
+        description: "Yes, if the assessment is the earliest Group Coaching Reflection Point submitted by the member on the given Track."
+        
+      - name: is_most_recent_primary_coaching_reflection_point
+        description: "Yes, if the assessment is the most recent Primary Coaching Reflection Point submitted by the member on the given Track."
+        
+      - name: is_most_recent_group_coaching_reflection_point
+        description: "Yes, if the assessment is the most recent Group Coaching Reflection Point submitted by the member on the given Track."
+        
+      - name: is_most_recent_reflection_point
+        description: "Yes, if the assessment is the most recent Reflection Point (Primary or Group) submitted by the member on the given Track."

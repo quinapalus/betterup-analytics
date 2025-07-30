@@ -1,0 +1,417 @@
+version: 2
+models:
+  - name: fact_coach_recommendation_metric_snapshot
+    description: >
+      This aggregated fact table sources from the atomic `fact_coach_recommendation_metric` table and aggregates
+      relevant recommendation metrics over different time periods, in addition to surfacing important dates, such
+      as first and last days of recommendation and selection. Grain of the table is one row per coach.
+
+    columns:
+      - name: coach_app_coach_id
+        description: >
+          Denormalized foreign key to the coach associated with the coach
+          recommendation.
+        tests:
+          - unique
+          - not_null
+
+      - name: recommendation_count_t14d
+        description: >
+          Integer denoting the number of recommendations in the last 14 days.
+        tests:
+          - not_null
+
+      - name: recommendation_count_t21d
+        description: >
+          Integer denoting the number of recommendations in the last 21 days.
+        tests:
+          - not_null
+
+      - name: recommendation_count_t30d
+        description: >
+          Integer denoting the number of recommendations in the last 30 days.
+        tests:
+          - not_null
+
+      - name: recommendation_count_t60d
+        description: >
+          Integer denoting the number of recommendations in the last 60 days.
+        tests:
+          - not_null
+
+      - name: recommendation_count_t90d
+        description: >
+          Integer denoting the number of recommendations in the last 90 days.
+        tests:
+          - not_null
+
+      - name: recommendation_first_position_count_t14d
+        description: >
+          Integer denoting the number of recommendations in the last 14 days, with coach
+          presented in the first position.
+        tests:
+          - not_null
+
+      - name: recommendation_second_position_count_t14d
+        description: >
+          Integer denoting the number of recommendations in the last 14 days, with coach
+          presented in the second position.
+        tests:
+          - not_null
+
+      - name: recommendation_third_position_count_t14d
+        description: >
+          Integer denoting the number of recommendations in the last 14 days, with coach
+          presented in the third position.
+        tests:
+          - not_null
+
+      - name: recommendation_other_position_count_t14d
+        description: >
+          Integer denoting the number of recommendations in the last 14 days, with coach
+          presented in a position other than the first three.
+        tests:
+          - not_null
+
+      - name: recommendation_first_position_count_t21d
+        description: >
+          Integer denoting the number of recommendations in the last 21 days, with coach
+          presented in the first position.
+        tests:
+          - not_null
+
+      - name: recommendation_second_position_count_t21d
+        description: >
+          Integer denoting the number of recommendations in the last 21 days, with coach
+          presented in the second position.
+        tests:
+          - not_null
+
+      - name: recommendation_third_position_count_t21d
+        description: >
+          Integer denoting the number of recommendations in the last 21 days, with coach
+          presented in the third position.
+        tests:
+          - not_null
+
+      - name: recommendation_other_position_count_t21d
+        description: >
+          Integer denoting the number of recommendations in the last 21 days, with coach
+          presented in a position other than the first three.
+        tests:
+          - not_null
+
+      - name: recommendation_first_position_count_t30d
+        description: >
+          Integer denoting the number of recommendations in the last 30 days, with coach
+          presented in the first position.
+        tests:
+          - not_null
+
+      - name: recommendation_second_position_count_t30d
+        description: >
+          Integer denoting the number of recommendations in the last 30 days, with coach
+          presented in the second position.
+        tests:
+          - not_null
+
+      - name: recommendation_third_position_count_t30d
+        description: >
+          Integer denoting the number of recommendations in the last 30 days, with coach
+          presented in the third position.
+        tests:
+          - not_null
+
+      - name: recommendation_other_position_count_t30d
+        description: >
+          Integer denoting the number of recommendations in the last 30 days, with coach
+          presented in a position other than the first three.
+        tests:
+          - not_null
+
+      - name: recommendation_first_position_count_t60d
+        description: >
+          Integer denoting the number of recommendations in the last 60 days, with coach
+          presented in the first position.
+        tests:
+          - not_null
+
+      - name: recommendation_second_position_count_t60d
+        description: >
+          Integer denoting the number of recommendations in the last 60 days, with coach
+          presented in the second position.
+        tests:
+          - not_null
+
+      - name: recommendation_third_position_count_t60d
+        description: >
+          Integer denoting the number of recommendations in the last 60 days, with coach
+          presented in the third position.
+        tests:
+          - not_null
+
+      - name: recommendation_other_position_count_t60d
+        description: >
+          Integer denoting the number of recommendations in the last 60 days, with coach
+          presented in a position other than the first three.
+        tests:
+          - not_null
+
+      - name: recommendation_first_position_count_t90d
+        description: >
+          Integer denoting the number of recommendations in the last 90 days, with coach
+          presented in the first position.
+        tests:
+          - not_null
+
+      - name: recommendation_second_position_count_t90d
+        description: >
+          Integer denoting the number of recommendations in the last 90 days, with coach
+          presented in the second position.
+        tests:
+          - not_null
+
+      - name: recommendation_third_position_count_t90d
+        description: >
+          Integer denoting the number of recommendations in the last 90 days, with coach
+          presented in the third position.
+        tests:
+          - not_null
+
+      - name: recommendation_other_position_count_t90d
+        description: >
+          Integer denoting the number of recommendations in the last 90 days, with coach
+          presented in a position other than the first three.
+        tests:
+          - not_null
+
+      - name: selection_after_recommendation_count_t14d
+        description: >
+          Integer denoting the number of selections in the last 14 days, which followed
+          from recommendations in the last 14 days.
+        tests:
+          - not_null
+
+      - name: selection_after_recommendation_count_t21d
+        description: >
+          Integer denoting the number of selections in the last 21 days, which followed
+          from recommendations in the last 21 days.
+        tests:
+          - not_null
+
+      - name: selection_after_recommendation_count_t30d
+        description: >
+          Integer denoting the number of selections in the last 30 days, which followed
+          from recommendations in the last 30 days.
+        tests:
+          - not_null
+
+      - name: selection_after_recommendation_count_t60d
+        description: >
+          Integer denoting the number of selections in the last 60 days, which followed
+          from recommendations in the last 60 days.
+        tests:
+          - not_null
+
+      - name: selection_after_recommendation_count_t90d
+        description: >
+          Integer denoting the number of selections in the last 90 days, which followed
+          from recommendations in the last 90 days.
+        tests:
+          - not_null
+
+      - name: selection_after_recommendation_first_position_count_t14d
+        description: >
+          Integer denoting the number of selections in the last 14 days, which followed
+          from recommendations in the last 14 days, with coach presented in the first position.
+        tests:
+          - not_null
+
+      - name: selection_after_recommendation_second_position_count_t14d
+        description: >
+          Integer denoting the number of selections in the last 14 days, which followed
+          from recommendations in the last 14 days, with coach presented in the second position.
+        tests:
+          - not_null
+
+      - name: selection_after_recommendation_third_position_count_t14d
+        description: >
+          Integer denoting the number of selections in the last 14 days, which followed
+          from recommendations in the last 14 days, with coach presented in the third position.
+        tests:
+          - not_null
+
+      - name: selection_after_recommendation_other_position_count_t14d
+        description: >
+          Integer denoting the number of selections in the last 14 days, which followed
+          from recommendations in the last 14 days, with coach presented in a position other
+          than the first three.
+        tests:
+          - not_null
+
+      - name: selection_after_recommendation_first_position_count_t21d
+        description: >
+          Integer denoting the number of selections in the last 21 days, which followed
+          from recommendations in the last 21 days, with coach presented in the first position.
+        tests:
+          - not_null
+
+      - name: selection_after_recommendation_second_position_count_t21d
+        description: >
+          Integer denoting the number of selections in the last 21 days, which followed
+          from recommendations in the last 21 days, with coach presented in the second position.
+        tests:
+          - not_null
+
+      - name: selection_after_recommendation_third_position_count_t21d
+        description: >
+          Integer denoting the number of selections in the last 21 days, which followed
+          from recommendations in the last 21 days, with coach presented in the third position.
+        tests:
+          - not_null
+
+      - name: selection_after_recommendation_other_position_count_t21d
+        description: >
+          Integer denoting the number of selections in the last 21 days, which followed
+          from recommendations in the last 21 days, with coach presented in a position other
+          than the first three.
+        tests:
+          - not_null
+
+      - name: selection_after_recommendation_first_position_count_t30d
+        description: >
+          Integer denoting the number of selections in the last 30 days, which followed
+          from recommendations in the last 30 days, with coach presented in the first position.
+        tests:
+          - not_null
+
+      - name: selection_after_recommendation_second_position_count_t30d
+        description: >
+          Integer denoting the number of selections in the last 30 days, which followed
+          from recommendations in the last 30 days, with coach presented in the second position.
+        tests:
+          - not_null
+
+      - name: selection_after_recommendation_third_position_count_t30d
+        description: >
+          Integer denoting the number of selections in the last 30 days, which followed
+          from recommendations in the last 30 days, with coach presented in the third position.
+        tests:
+          - not_null
+
+      - name: selection_after_recommendation_other_position_count_t30d
+        description: >
+          Integer denoting the number of selections in the last 30 days, which followed
+          from recommendations in the last 30 days, with coach presented in a position other
+          than the first three.
+        tests:
+          - not_null
+
+      - name: selection_after_recommendation_first_position_count_t60d
+        description: >
+          Integer denoting the number of selections in the last 60 days, which followed
+          from recommendations in the last 60 days, with coach presented in the first position.
+        tests:
+          - not_null
+
+      - name: selection_after_recommendation_second_position_count_t60d
+        description: >
+          Integer denoting the number of selections in the last 60 days, which followed
+          from recommendations in the last 60 days, with coach presented in the second position.
+        tests:
+          - not_null
+
+      - name: selection_after_recommendation_third_position_count_t60d
+        description: >
+          Integer denoting the number of selections in the last 60 days, which followed
+          from recommendations in the last 60 days, with coach presented in the third position.
+        tests:
+          - not_null
+
+      - name: selection_after_recommendation_other_position_count_t60d
+        description: >
+          Integer denoting the number of selections in the last 60 days, which followed
+          from recommendations in the last 60 days, with coach presented in a position other
+          than the first three.
+        tests:
+          - not_null
+
+      - name: selection_after_recommendation_first_position_count_t90d
+        description: >
+          Integer denoting the number of selections in the last 90 days, which followed
+          from recommendations in the last 90 days, with coach presented in the first position.
+        tests:
+          - not_null
+
+      - name: selection_after_recommendation_second_position_count_t90d
+        description: >
+          Integer denoting the number of selections in the last 90 days, which followed
+          from recommendations in the last 90 days, with coach presented in the second position.
+        tests:
+          - not_null
+
+      - name: selection_after_recommendation_third_position_count_t90d
+        description: >
+          Integer denoting the number of selections in the last 90 days, which followed
+          from recommendations in the last 90 days, with coach presented in the third position.
+        tests:
+          - not_null
+
+      - name: selection_after_recommendation_other_position_count_t90d
+        description: >
+          Integer denoting the number of selections in the last 90 days, which followed
+          from recommendations in the last 90 days, with coach presented in a position other
+          than the first three.
+        tests:
+          - not_null
+
+      - name: selection_count_t14d
+        description: >
+          Integer denoting the number of selection in the last 14 days, independent of the
+          timeline of recommendations.
+        tests:
+          - not_null
+
+      - name: selection_count_t21d
+        description: >
+          Integer denoting the number of selection in the last 21 days, independent of the
+          timeline of recommendations.
+        tests:
+          - not_null
+
+      - name: selection_count_t30d
+        description: >
+          Integer denoting the number of selection in the last 30 days, independent of the
+          timeline of recommendations.
+        tests:
+          - not_null
+
+      - name: selection_count_t60d
+        description: >
+          Integer denoting the number of selection in the last 60 days, independent of the
+          timeline of recommendations.
+        tests:
+          - not_null
+
+      - name: selection_count_t90d
+        description: >
+          Integer denoting the number of selection in the last 90 days, independent of the
+          timeline of recommendations.
+        tests:
+          - not_null
+
+      - name: first_coach_recommended_date
+        description: >
+          UTC timestamp denoting when the coach was first recommended. NULL if never recommended.
+
+      - name: last_coach_recommended_date
+        description: >
+          UTC timestamp denoting when the coach was last recommended. NULL if never recommended.
+
+      - name: first_coach_selected_date
+        description: >
+          UTC timestamp denoting when the coach was first selected. NULL if never selected.
+
+      - name: last_coach_selected_date
+        description: >
+          UTC timestamp denoting when the coach was last selected. NULL if never selected.

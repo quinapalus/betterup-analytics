@@ -1,0 +1,35 @@
+version: 2
+
+models:
+  - name: stg_human_insights__text_document
+    description: >
+      Document sent to be scored by the text scoring pipeline
+
+    columns:
+      - name: document_id
+        description: Unique identifier (primary key) for the document
+        tests:
+          - not_null
+          - unique
+
+      - name: text
+        description: The text to be scored
+        tests:
+          - not_null
+
+      - name: client_key
+        description: Encrypted key of the client that submitted the document
+
+      - name: client_correlation_id
+        description: User-provided string identifier to identify this text as part
+          of a document
+
+      - name: client_correlation_parent_id
+        description: User-provided string identifier to identify this document as
+          part of a group of several documents
+
+      - name: num_sentences
+        description: Number of sentences in the text
+
+      - name: created_at
+        description: Timestamp denoting when the document landed in Snowflake

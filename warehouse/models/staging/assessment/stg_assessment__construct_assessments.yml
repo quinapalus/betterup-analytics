@@ -1,0 +1,26 @@
+version: 2
+
+models:
+  - name: stg_assessment__construct_assessments
+    description: >
+      Only for derived constructs, this is a mapping table of which constructs are visible on which assessment types.
+      Full ERD of assessment / constructs schema here: https://betterup.atlassian.net/wiki/spaces/DATA/pages/3156443540/Assessments+Schema
+    columns:
+      - name: construct_assessment_id
+        description: ""
+        tests:
+          - unique
+          - not_null
+
+      - name: construct_id
+        description: ""
+
+      - name: assessment_type
+        description: ""
+
+      - name: created_at
+        description: ""
+
+      - name: updated_at
+        description: ""
+

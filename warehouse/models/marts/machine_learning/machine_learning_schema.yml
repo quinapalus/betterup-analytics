@@ -1,0 +1,8 @@
+version: 2
+
+sources:
+  - name: machine_learning
+    schema: machine_learning
+    database: analytics
+    tables:
+      - name: motivation_topics

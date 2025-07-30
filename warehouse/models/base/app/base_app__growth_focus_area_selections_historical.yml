@@ -1,0 +1,15 @@
+version: 2
+
+models:
+  - name: base_app__growth_focus_area_selections_historical
+    description: ""
+    columns:
+      - name: created_at
+      - name: growth_focus_area_id
+      - name: growth_map_id
+      - name: id
+        tests:
+          - unique
+          - not_null
+      - name: satisfaction
+      - name: updated_at

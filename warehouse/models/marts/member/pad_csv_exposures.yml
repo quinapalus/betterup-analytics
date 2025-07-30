@@ -1,0 +1,18 @@
+version: 2
+
+exposures:
+
+  - name: pad_csvs
+    type: dashboard
+    url: https://betterup.looker.com/folders/8931
+    description: >
+      Exposure for PAD Lead and Coaching Circles CSVs
+
+    depends_on:
+      - ref('fact_member_reporting_group_assignment_lead_metrics_v2')
+      - ref('fact_member_reporting_group_lead_metrics_v2')
+      - ref('fact_member_reporting_group_series__coaching_circles_metrics')
+
+    owner:
+      name: Leonard Acha
+      email: leonard.acha@betterup.co

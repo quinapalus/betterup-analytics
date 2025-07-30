@@ -1,0 +1,11 @@
+version: 2
+
+models:
+  - name: dbt_events__invited_group_coaching_series
+    description: ""
+    columns:
+      - name: _unique
+        description: "Surrogate Primary Key"
+        tests:
+          - unique
+          - not_null

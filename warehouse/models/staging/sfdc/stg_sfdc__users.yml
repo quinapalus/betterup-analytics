@@ -1,0 +1,34 @@
+version: 2
+models:
+  - name: stg_sfdc__users
+    description: >
+      Salesforce User models. For more information, check out the [Salesforce User
+      documentation](https://developer.salesforce.com/docs/atlas.en-us.api.meta/api/sforce_api_objects_user.htm)
+
+    columns:
+      - name: sfdc_user_id
+        description: Unique identifier in Salesforce
+        tests:
+          - not_null
+          - unique
+
+      - name: first_name
+        description: The User's first name.
+        tests:
+          - not_null
+
+      - name: last_name
+        description: The User's last name.
+        tests:
+          - not_null
+
+      - name: name
+        description: The User's full name.
+        tests:
+          - not_null
+
+      - name: manager_id
+        description: User ID for the user's manager.
+
+      - name: sfdc_user_role_id
+        description: Foreign key of the user role for the user.

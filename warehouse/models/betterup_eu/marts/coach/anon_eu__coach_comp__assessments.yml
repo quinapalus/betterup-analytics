@@ -1,0 +1,64 @@
+version: 2
+
+models:
+  - name: anon_eu__coach_comp__assessments
+    description: >
+      Coach Compensation Assessments table from analytics to support coach insights
+      dashboard.
+
+    columns:
+      - name: user_season_id
+        description: Surrogate Key of User UUID + Season Name. Functions as primary
+          key.
+        tests:
+          - not_null
+          - unique
+      - name: coach_id
+        tests:
+          - not_null
+
+        description: "'coach_id' is a column that stores the unique identifier for\
+          \ the coach who is associated with each assessment. [GenAI Description]"
+      - name: coach_profile_uuid
+        tests:
+          - not_null
+
+        description: The 'coach_profile_uuid' column stores the unique identifier
+          for each coach in the assessments dataset. [GenAI Description]
+      - name: user_uuid
+        tests:
+          - not_null
+
+        description: The column 'user_uuid' is an identifier for a unique user. [GenAI
+          Description]
+      - name: full_name
+        description: The 'full_name' column contains a user's full name. [GenAI Description]
+      - name: season_name
+        tests:
+          - not_null
+
+        description: The 'season_name' column stores the season during which the assessment
+          was completed. [GenAI Description]
+      - name: lifetime_assessments
+        tests:
+          - not_null
+
+        description: Lifetime_assessments stores the total number of assessments completed
+          by a user over their lifetime. [GenAI Description]
+      - name: primary_b2b_assessments
+        tests:
+          - not_null
+
+        description: This column contains results from primary business-to-business
+          assessments. [GenAI Description]
+      - name: lifetime_lca_assessments
+        tests:
+          - not_null
+
+        description: The 'lifetime_lca_assessments' column provides the total number
+          of assessments an individual completed in their lifetime. [GenAI Description]
+      - name: primary_b2b_lca_assessments
+        tests:
+          - not_null
+        description: This column contains the primary assessment scores for business-to-business
+          (B2B) Learning and Coaching (LCA) assessments. [GenAI Description]

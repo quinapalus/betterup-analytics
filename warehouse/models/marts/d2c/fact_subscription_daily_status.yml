@@ -1,0 +1,16 @@
+version: 2
+
+models:
+  - name: fact_subscription_daily_status
+    meta:
+      owner: "adrian.lievano@betterup.co"
+    description: >
+      A table tracking daily subscription statuses between the subscription start
+      date up until the current date. 
+
+    columns:
+      - name: _unique
+        description: Primary key
+        tests:
+          - unique
+          - not_null

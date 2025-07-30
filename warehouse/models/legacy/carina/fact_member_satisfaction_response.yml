@@ -1,0 +1,131 @@
+version: 2
+models:
+  - name: fact_member_satisfaction_response
+    description: >
+      Fact table for member responses to satisfaction, post-session, and one-month survey tems. Grain is one
+      row per member response to a given item prompt. Facts are limited to responses submitted during
+      paid external deployments for all assessment items, and post-session items specifically are
+      limited to assessments submitted after Mar 8, 2019 when post-session items changed.
+
+    columns:
+      - name: date_key
+        description: Foreign key to conformed Date dimension.
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_date')
+              field: date_key
+
+      - name: member_key
+        description: Foreign key to conformed Member dimension.
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_members')
+              field: member_key
+
+      - name: coach_key
+        description: Foreign key to conformed Coach dimension.
+        tests:
+           - relationships:
+              to: ref('dim_coach')
+              field: coach_key
+
+      - name: account_key
+        description: >
+          Foreign key to conformed Account dimension for the account the member was
+          associated with on the day the item response was submitted.
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_account')
+              field: account_key
+
+      - name: deployment_key
+        description: >
+          Foreign key to conformed Deployment dimension for the track the member was
+          associated with on the day the item response was submitted.
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_deployment')
+              field: deployment_key
+
+      - name: member_deployment_key
+        description: Foreign key to conformed Member-Deployment dimension.
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_member_deployment')
+              field: member_deployment_key
+
+      - name: assessment_item_key
+        description: Foreign key to conformed Assessment Item dimension.
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_assessment_item')
+              field: assessment_item_key
+
+      - name: assessment_item_category
+        description: General category of the given assessment item.
+        tests:
+          - not_null
+          - accepted_values:
+              values: [Member Satisfaction, Post-Session Satisfaction, One Month Survey]
+
+      - name: assessment_item_score
+        description: >
+          Scored response across relevant dimensions. This field should typically
+          always be populated, but with the addition of COVID-19 questions in March 2020, the field
+          will be NULL for `covid_work_situation` question, which offers a multiple-choice categorical answer.
+
+      - name: member_response
+        description: >
+          Actual member response selected from list of response choices. Note:
+          `assessment_item_score` should be used for summary statistics instead of
+          the `member_response` values.
+        tests:
+          - not_null
+
+      - name: member_response_category
+        description: >
+          Sanitized response category based on item type and member response. For NPS items,
+          response categories are "Promoter", "Neutral", and "Detractor". For agreement scale
+          items, response categories are "Agree and Strongly Agree", "Neutral", and "Disagree
+          and Strongly Disagree". This field is typically used to filter or aggregate data in
+          the visualization layer. Values are NULL if response category mapping is not defined
+          for the given item.
+
+      - name: days_since_invite
+        description: >
+          Integer denoting how many days have passed between the assessment date and
+          the invite date on the track.
+        tests:
+          - not_null
+
+      - name: days_since_activation
+        description: >
+          Integer denoting how many days have passed between the assessment date and
+          the activation date.
+#        tests:
+#          - not_null
+
+      - name: completed_session_count_track_to_date
+        description: >
+          Integer denoting the total number of completed sessions up to that date
+          by the member on the track.
+        tests:
+           - not_null
+
+      - name: app_assessment_id
+        description: >
+          Foreign key to the assessment that's associated with the member's response.
+        tests:
+          - not_null
+
+      - name: account_item_n
+        description: >
+          Integer denoting the number of responses per assessment item key per account.
+        tests:
+          - not_null

@@ -1,0 +1,9 @@
+version: 2
+
+models:
+  - name: int_sfdc__opportunities_snapshot_formula_fields
+    columns:
+      - name: history_primary_key
+        tests:
+          - unique
+          - not_null

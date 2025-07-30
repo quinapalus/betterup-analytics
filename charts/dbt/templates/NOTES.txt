@@ -1,0 +1,9 @@
+See your DBT cronjob here by running:
+
+$ kubectl get cronjob -n {{ .Release.Namespace }}
+
+Start a `dbt run` job manually with
+
+$ kubectl create job --from cronjobs/{{ include "dbt.fullname" . }} dbt-run -n {{ .Release.Namespace}}
+
+The next DBT job will be created based on your schedule — {{ .Values.schedule }}.

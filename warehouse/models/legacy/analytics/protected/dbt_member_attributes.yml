@@ -1,0 +1,46 @@
+version: 2
+models:
+  - name: dbt_member_attributes
+    description: >
+      This table contains mapping of external member attribute categories to BetterUp's
+      internal ones. In this protected model, empty and inactive attribute values
+      are not
+      surfaced, and attribute values with an insufficient number of members are not
+      masked,
+      pushing that level of protection to downstream models.
+
+    columns:
+      - name: member_id
+        description: Denormalized foreign key to associated member.
+        tests:
+          - not_null
+          - relationships:
+              to: ref('int_app__users')
+              field: user_id
+
+      - name: organization_id
+        description: Denormalized foreign key to associated organization.
+        tests:
+          - not_null
+          - relationships:
+              to: ref('stg_app__organizations')
+              field: organization_id
+
+      - name: category_name_partner
+        description: >
+          Partner-specific, external member attribute category.
+        tests:
+          - not_null
+
+      - name: category_name
+        description: >
+          BetterUp-specific, internal member attribute category mapped to
+          the partner's external member attribute category.
+        tests:
+          - not_null
+
+      - name: value
+        description: >
+          Corresponding member attribute value.
+        tests:
+          - not_null

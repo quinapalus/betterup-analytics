@@ -1,0 +1,83 @@
+version: 2
+models:
+  - name: stg_app__assessments
+    description: >
+      Assessments completed by Users.
+    tests:
+      # Test that all WPM assessments that have been migrated to 2.0 have valid questions_version
+      - dbt_utils.expression_is_true:
+          expression: CASE WHEN type IN ('Assessments::WholePersonAssessment', 'Assessments::WholePerson360Assessment',
+            'Assessments::WholePerson360ContributorAssessment', 'Assessments::WholePerson180Assessment',
+            'Assessments::WholePerson180ContributorAssessment', 'Assessments::WholePersonProgramCheckinAssessment')
+            THEN questions_version IS NOT NULL AND questions_version IN ('1.0', '2.0')
+            ELSE true END
+
+    columns:
+      - name: assessment_id
+        description: Unique identifer of the Assessment
+        tests:
+          - unique
+          - not_null
+      - name: assessment_configuration_id
+        description: A unique numeric identifier for an assessment's configuration.
+          [GenAI Description]
+      - name: assessment_configuration_uuid
+
+        description: "'assessment_configuration_uuid' contains a unique identifier\
+          \ for the assessment configuration associated with the assessment. [GenAI\
+          \ Description]"
+      - name: user_id
+        description: Unique identifer of the User who completed the assessment.
+        tests:
+          - not_null
+
+      - name: creator_id
+        description: Unique identifer of the User who created the Assessment.
+
+      - name: type
+        description: Type of the Assessment
+
+      - name: associated_record_type
+        description: Object class for polymorphic foreign relationship to associated
+          record.
+
+      - name: associated_record_id
+        description: Foreign key for polymorphic relationship to associated record.
+
+      - name: responses
+        description: Reponses by the User to the Assessment.
+        tests:
+          - not_null
+
+      - name: submitted_at
+        description: When the Assessment was submitted.
+
+      - name: parent_id
+        description: >
+          Self-referencing foreign key to `assessment_id`. Used to join 180/360
+          contributors assessments to parent self-assessment object.
+
+      - name: expires_at
+        description: When the Assessment expires.
+
+      - name: report_generated_at
+
+        description: The timestamp when a report was generated for an assessment.
+          [GenAI Description]
+      - name: questions_version
+        description: Version of the Assessment questions.
+
+      - name: created_at
+        description: >
+          When the Assessment was created.
+
+      - name: updated_at
+        description: >
+          When the Assessment was updated.
+
+      - name: assessment_response
+        description: Response of the member who completed the assessment (ie Life
+          Changing, Amazing etc).
+
+      - name: assessment_response_score
+        description: Numerical encoding of the assessment_response.

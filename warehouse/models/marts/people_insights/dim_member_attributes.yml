@@ -1,0 +1,70 @@
+version: 2
+
+models:
+  - name: dim_member_attributes
+    description: A table of member attributes from the BU app. Archived attributes
+      are filtered out.
+
+    columns:
+      - name: user_attribute_id
+        description: Unique ID for the primary UserAttribute record.
+        tests:
+          - unique
+          - not_null
+
+      - name: member_id
+        description: >
+          Foreign Key for the member associated with the given UserAttribute record.
+
+      - name: user_attribute_field_id
+        description: Foreign key to associated UserAttributeValue record.
+
+      - name: field_name
+        description: >
+          Organization-specific field associated with the given member attribute,
+          e.g.  Business Unit, Work Location, etc.
+
+      - name: display_field_name
+        description: >
+          Name of the field as displayed in PAD. Uses `display_name` if available,  otherwise
+          defaults to `field_name`.
+
+      - name: internal_field_name
+        description: >
+          Name of the associated internal field associated with the given organization-
+          specific field. NULL if org-specific field isn't mapped to an internal field.
+
+      - name: internal_field_description
+        description: >
+          Short description of the internal field, if mapping to internal field exists.
+
+      - name: organization_id
+        description: Foreign key to the organization associated with the given field.
+
+      - name: filterable
+        description: >
+          True, if field is available to be used as a filter in PAD for aggregated
+          member data.
+          reporting.
+
+      - name: exportable
+        description: >
+          True, if the field is available to be used as a filter in PAD on member-level
+          datasets.
+
+      - name: user_attribute_value_id
+        description: Foreign key to associated UserAttributeValue record.
+
+      - name: attribute_value
+        description: >
+          Member's attribute value within the associated field, e.g. 'Finance' or  'Engineering'
+          for Business Unit field.
+
+      - name: created_at
+        description: >
+          Timestamp when the member attribute was created (uploaded). For a given  member-field
+          pair, only the most recent value is used.
+
+      - name: updated_at
+        description: >
+          Timestamp when the member attribute was last updated. 

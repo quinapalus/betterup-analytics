@@ -1,0 +1,19 @@
+#! /bin/bash
+
+# configure bash to exit on error
+set -e
+set -o pipefail
+
+# Run dbt seed to add CSV files to warehouse.
+cd warehouse
+mkdir -p ~/.dbt
+cp setup.profiles.yml ~/.dbt/profiles.yml
+dbt deps
+
+echo "Running dbt seed..."
+dbt seed --target $DBT_TARGET
+echo "Finished running dbt seed."
+
+echo "Checking in with Dead Man's Snitch"
+curl $DBT_SEED_SNITCH_URL
+echo "Done."

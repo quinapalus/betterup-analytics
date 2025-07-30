@@ -1,0 +1,90 @@
+version: 2
+
+models:
+  - name: track_product__joined
+    description: ""
+
+    columns:
+      - name: track_product_joined_id
+        description: Surrogate key used as a primary key.
+        tests:
+          - unique
+          - not_null
+
+      - name: date
+        description: ""
+
+      - name: date_key
+        description: ""
+
+      - name: is_last_day_of_month
+        description: ""
+
+      - name: member_id
+        description: ""
+
+      - name: track_assignment_id
+        description: ""
+
+      - name: track_id
+        description: ""
+
+      - name: organization_id
+        description: ""
+
+      - name: product_subscription_assignment_id
+        description: ""
+
+      - name: psa_starts_at
+        description: ""
+
+      - name: product_subscription_id
+        description: ""
+
+      - name: product_id
+        description: ""
+
+      - name: v2
+        description: ""
+
+      - name: activated_at
+        description: ""
+
+      - name: total_days_in_tenure_since_activation
+        description: ""
+
+      - name: lead_activated_at
+        description: ""
+
+      - name: care_activated_at
+        description: ""
+
+      - name: first_invited_to_track_at
+        description: ""
+
+      - name: first_activated_at
+        description: ""
+
+      - name: coaching_cloud
+        description: ""
+
+      - name: on_demand
+        description: ""
+
+      - name: primary_coaching
+        description: ""
+
+      - name: care
+        description: ""
+
+      - name: coaching_circles
+        description: ""
+
+      - name: workshops
+        description: ""
+
+      - name: extended_network
+        description: ""
+
+      - name: foundations
+        description: ""

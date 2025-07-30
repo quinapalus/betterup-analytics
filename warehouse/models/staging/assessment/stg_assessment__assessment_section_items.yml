@@ -1,0 +1,27 @@
+version: 2
+
+models:
+  - name: stg_assessment__assessment_section_items
+    description: Assessment Section Items
+
+    columns:
+      - name: assessment_section_item_id
+        description: Unique identifier of Assessment Section Item
+        tests:
+          - unique
+          - not_null
+      - name: assessment_item_id
+        description: The assessment_item_id column stores unique identifiers for individual
+          assessment items within an assessment section. [GenAI Description]
+      - name: assessment_section_id
+        description: The 'assessment_section_id' column stores the section identification
+          number associated with each assessment item. [GenAI Description]
+      - name: position
+        description: The "position" column is a numerical value representing the order
+          of an assessment item within a given assessment section. [GenAI Description]
+      - name: created_at
+        description: The 'created_at' column is the timestamp when the assessment
+          section item was created. [GenAI Description]
+      - name: updated_at
+        description: The 'updated_at' column stores the last time an assessment section
+          item was updated. [GenAI Description]

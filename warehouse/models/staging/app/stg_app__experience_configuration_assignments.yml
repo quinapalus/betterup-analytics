@@ -1,0 +1,40 @@
+version: 2
+
+models:
+  - name: stg_app__experience_configuration_assignments
+    description: The stg_app__experience_configuration_assignments model stores and
+      organizes configurations and templates related to experiences. It contains fields
+      for experience_configuration_assignment_id, configurable_id, configurable_type,
+      template, track_id, created_at, and updated_at. It is used to create, update,
+      and delete configurations associated with experiences. [GenAI Description]
+    columns:
+      - name: experience_configuration_assignment_id
+        description: The experience_configuration_assignment_id is the unique identifier
+          of an experience configuration assignment. [GenAI Description]
+        tests:
+          - not_null
+          - unique
+
+      - name: configurable_id
+        description: '"configurable_id" is a foreign key reference to the entity to
+          which this experience configuration assignment is attached. [GenAI Description]'
+
+      - name: configurable_type
+        description: The 'configurable_type' column indicates the type of configurable
+          the assignment is attached to. [GenAI Description]
+
+      - name: template
+        description: The 'template' column in this model stores the name of the experience
+          configuration template being assigned. [GenAI Description]
+
+      - name: track_id
+        description: The 'track_id' column stores the unique identifier for a particular
+          experience configuration assignment. [GenAI Description]
+
+      - name: created_at
+        description: "'created_at' is a date column that stores the date and time\
+          \ when a record was created. [GenAI Description]"
+
+      - name: updated_at
+        description: The column "updated_at" stores the date and time when the record
+          was last modified. [GenAI Description]

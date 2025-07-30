@@ -1,0 +1,130 @@
+version: 2
+
+models:
+  - name: stg_segment_backend__user_confirmed
+    description: The stg_segment_backend__user_confirmed model stores data about users
+      confirming (defined by the 'confirmed_at' field) their information. It includes
+      fields to track user_id, uuid_ts, context_library_name, event, name, timestamp,
+      event_text, original_timestamp, deployment_type, track_assignment_id, track_id,
+      product_id, product_subscription_assignment_id, product_subscription_id, hubspot_contact_id,
+      platform_name, platform_version, browser_name, browser_version, device_name,
+      app_build, app_version, as well as the received_at and confirmed_at of the event.
+      This model is used to get the most recent (defined by 'rn =1') user confirmation
+      event. [GenAI Description]
+    columns:
+      - name: id
+        description: The 'id' column is a unique identifier for each row. [GenAI Description]
+        tests:
+          - unique
+          - not_null
+
+      - name: received_at
+        description: The 'received_at' column stores the timestamp of when the Segment
+          backend user confirmation event was received. [GenAI Description]
+
+      - name: user_id
+        description: The 'user_id' column identifies a unique user. [GenAI Description]
+
+      - name: uuid_ts
+        description: "'uuid_ts' is a unique identifier for each user confirmation\
+          \ event. [GenAI Description]"
+
+      - name: confirmed_at
+        description: "'confirmed_at' represents the timestamp at which a user's account\
+          \ was confirmed. [GenAI Description]"
+
+      - name: context_library_name
+        description: The 'context_library_name' column stores the name of the library
+          used by the user’s device. [GenAI Description]
+
+      - name: event
+        description: The 'event' column stores the event name of the user confirmation.
+          [GenAI Description]
+
+      - name: name
+        description: The 'name' column holds the name of the user associated with
+          a given confirmed_at timestamp. [GenAI Description]
+
+      - name: sent_at
+        description: The 'sent_at' column contains the time a user confirmation was
+          sent. [GenAI Description]
+
+      - name: timestamp
+        description: The 'timestamp' column contains the time that the user was first
+          confirmed. [GenAI Description]
+
+      - name: context_library_version
+        description: The 'context_library_version' column contains the version of
+          the software library used for the user confirmation event. [GenAI Description]
+
+      - name: event_text
+        description: "'event_text' is a text field containing a description of the\
+          \ user's confirmed event. [GenAI Description]"
+
+      - name: original_timestamp
+        description: The 'original_timestamp' column holds the original timestamp
+          of when a user was confirmed. [GenAI Description]
+
+      - name: has_primary_coach
+        description: "'has_primary_coach' is a Boolean indicating if the user has\
+          \ a primary coach or not. [GenAI Description]"
+
+      - name: deployment_type
+        description: The column 'deployment_type' represents the type of confirmation
+          event for a user. [GenAI Description]
+
+      - name: track_assignment_id
+        description: The 'track_assignment_id' column contains a unique identifier
+          that is used to track created user assignments. [GenAI Description]
+
+      - name: track_id
+        description: The 'track_id' column holds a unique identifier for each user
+          confirmation event. [GenAI Description]
+
+      - name: product_id
+        description: "'product_id' is a unique identifier for the product associated\
+          \ with the 'user_confirmed' event. [GenAI Description]"
+
+      - name: product_subscription_assignment_id
+        description: This column contains an ID linking a user to a product subscription.
+          [GenAI Description]
+
+      - name: product_subscription_id
+        description: The 'product_subscription_id' column identifies the unique subscription
+          of a user associated with a product. [GenAI Description]
+
+      - name: hubspot_contact_id
+        description: The column 'hubspot_contact_id' stores the unique identifier
+          for a user. [GenAI Description]
+
+      - name: platform_name
+        description: Platform name indicates the platform where the user confirmed.
+          [GenAI Description]
+
+      - name: platform_version
+        description: The 'platform_version' column contains the version information
+          of the user-confirmed platform. [GenAI Description]
+
+      - name: browser_name
+        description: The 'browser_name' column stores the browser name of the user
+          when they confirmed their account. [GenAI Description]
+
+      - name: browser_version
+        description: The 'browser_version' column contains the version of the user's
+          web browser. [GenAI Description]
+
+      - name: device_name
+        description: The 'device_name' column stores the device type used by a user
+          when confirming their account. [GenAI Description]
+
+      - name: app_build
+        description: The 'app_build' column contains the version of the application
+          the user is running. [GenAI Description]
+
+      - name: app_version
+        description: The app_version column contains the version of the app used by
+          the user. [GenAI Description]
+
+      - name: rn
+        description: rn is a row number associated with each user, ordered by their
+          confirmed_at value. [GenAI Description]

@@ -1,0 +1,112 @@
+version: 2
+models:
+  - name: dbt_coach_payments_local_currency
+    description: >
+      This protected model unpacks the amount of money paid out to coaches in local
+      currency for each billable event associated with a payment.
+
+    columns:
+      - name: shl_payment_id
+        description: Primary Key based on Shortlist-designated Payment ID.
+        tests:
+          - unique
+          - not_null
+
+      - name: billable_event_id
+        description: >
+          Denormalized foreign key to the billable event associated with the payment.
+        tests:
+          - unique
+          - not_null
+          - relationships:
+              to: ref('app_billable_events')
+              field: billable_event_id
+
+      - name: coach_id
+        description: >
+          Denormalized foreign key to the coach associated with the payment.
+        tests:
+          - not_null
+          - relationships:
+              to: ref('int_app__users')
+              field: user_id
+
+      - name: member_id
+        description: >
+          Denormalized foreign key to the member associated with event for
+          which the coach was paid.
+
+      - name: track_id
+        description: >
+           Denormalized foreign key to the track associated with the coach's payment.
+           Note that this field can be NULL for launch_call, training_session, and
+           training_stipend event types.
+
+      - name: event_type
+        description: >
+          String denoting the type of event associated with the payment.
+        tests:
+          - not_null
+
+      - name: augmented_event_type
+        description: >
+          String denoting the augmented type of event associated with the
+          billable event.
+        tests:
+          - not_null
+
+      - name: is_coach_cost_manual_upload
+        description: >
+          String denoting whether the cost associated with the event type is a
+          manual upload by the finance team.
+        tests:
+          - not_null
+          - accepted_values:
+              values: [true, false]
+
+      - name: event_at
+        description: >
+          Timestamp denoting when the event associated with the payment occurred.
+        tests:
+          - not_null
+
+      - name: event_reported_at
+        description: >
+          Timestamp denoting when the event was reported by the finance team. Particularly,
+          if the event was manually uploaded by the finance team, `sent_to_processor_at` reflects
+          when the upload occurred, not when the actual event occurred (which is always in the prior month).
+          For manual uploads, therefore, `event_reported_at` is always equal to `sent_to_processor_at` - 1 month.
+          This is done to facilitate reporting on data in the `carina` layer.
+        tests:
+          - not_null
+
+      - name: session_requested_length
+        description: >
+          Integer denoting the requested length for the session. NULL if the event type is not
+          `completed_sessions`.
+
+      - name: usage_minutes
+        description: >
+          The length of the event reported in minutes. Should only be non-zero for
+          session-related events (`completed_sessions`, `late_cancellation`, `late_reschedules`, `missed_session`).
+        tests:
+          - not_null
+
+      - name: sent_to_processor_at
+        description: >
+          Timestamp denoting when the event was sent to Shortlist in UTC.
+        tests:
+          - not_null
+
+      - name: shl_payment_local_amount
+        description: >
+          Amount paid out to coaches in local currency through Shortlist.
+        tests:
+          - not_null
+
+      - name: shl_payment_local_currency
+        description: >
+          ISO 4217 Alpha code for the local currency associated with the payment
+          through Shortlist.
+        tests:
+          - not_null

@@ -1,0 +1,11 @@
+version: 2
+models:
+  - name: stg_hubspot__form_submissions
+    description: >
+      Contains all hubspot form submissions
+    columns:
+      - name: hubspot_form_submission_id
+        description: Unique identifier
+        tests:
+          - unique
+          - not_null

@@ -1,0 +1,17 @@
+version: 2
+
+models:
+  - name: base_app__assessment_contributors_historical
+    description: ""
+    columns:
+      - name: assessment_id
+      - name: contributor_id
+      - name: created_at
+      - name: email
+      - name: id
+        tests:
+          - unique
+          - not_null
+      - name: response_assessment_id
+      - name: role
+      - name: updated_at

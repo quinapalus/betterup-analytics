@@ -1,0 +1,48 @@
+version: 2
+
+models:
+  - name: stg_assessment__assessment_response_options
+    description: This DBT model contains records of assessment response options and
+      their associated properties. It provides fields such as response option ID,
+      set ID, position, value, and label, as well as their creation and update timestamps.
+      [GenAI Description]
+    columns:
+      - name: assessment_response_option_id
+        description: The assessment_response_option_id column stores unique IDs identifying
+          individual responses within assessment response sets. [GenAI Description]
+        tests:
+          - unique
+          - not_null
+
+      - name: assessment_response_set_id
+        description: The 'assessment_response_set_id' column contains the identifiers
+          of the sets of responses to the assessments. [GenAI Description]
+
+      - name: position
+        description: The 'position' column contains an integer representing the position
+          of the assessment response option in an assessment response set. [GenAI
+          Description]
+
+      - name: translation_key
+        description: The 'translation_key' column identifies a unique code that is
+          associated with an assessment response option. [GenAI Description]
+
+      - name: value
+        description: The 'value' column contains the numerical value for each assessmment
+          response option. [GenAI Description]
+
+      - name: label_i18n
+        description: The 'label_i18n' column contains translations of the response
+          option labels, stored as a JSON object. [GenAI Description]
+
+      - name: label
+        description: The 'label' column contains the English localized label of the
+          assessment response option. [GenAI Description]
+
+      - name: created_at
+        description: "'created_at' is a timestamp of when the assessment response\
+          \ option was created. [GenAI Description]"
+
+      - name: updated_at
+        description: The 'updated_at' column indicates when a particular assessment
+          response option was last updated. [GenAI Description]

@@ -1,0 +1,56 @@
+version: 2
+models:
+  - name: dim_marketing_leads
+    description: >
+      Contains all unique marketing leads from Hubspot and future marketing platforms that BetterUp may implement.
+    columns:
+      - name: marketing_lead_id
+        description: Primary key
+        tests:
+          - unique
+          - not_null
+          
+      - name: hubspot_contact_id
+        description: ""
+
+      - name: utm_adset_id
+        description: ""
+
+      - name: utm_adgroup_id
+        description: ""
+
+      - name: utm_campaign_id
+        description: ""
+
+      - name: email
+        description: ""
+
+      - name: contact_company_name
+        description: ""
+
+      - name: current_count_of_form_submissions
+        description: ""
+
+      - name: current_count_of_list_memberships
+        description: ""
+
+      - name: utm_creative
+        description: ""
+
+      - name: utm_medium
+        description: ""
+
+      - name: utm_source
+        description: ""
+
+      - name: utm_term
+        description: ""
+
+      - name: utm_content
+        description: ""
+
+      - name: added_at
+        description: ""
+
+      - name: last_modified_at
+        description: ""

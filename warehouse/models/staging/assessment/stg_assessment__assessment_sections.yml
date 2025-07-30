@@ -1,0 +1,21 @@
+version: 2
+
+models:
+  - name: stg_assessment__assessment_sections
+    description: Assessment Sections
+
+    columns:
+      - name: assessment_section_id
+        description: Unique identifier of Assessment Section
+        tests:
+          - unique
+          - not_null
+      - name: key
+        description: The 'key' column is a unique identifier for each assessment section.
+          [GenAI Description]
+      - name: created_at
+        description: The column 'created_at' stores the timestamp of when the assessment
+          section was created. [GenAI Description]
+      - name: updated_at
+        description: Contains the timestamp of when the record was last updated. [GenAI
+          Description]

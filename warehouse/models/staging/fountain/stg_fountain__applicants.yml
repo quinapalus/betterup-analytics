@@ -1,0 +1,257 @@
+version: 2
+
+models:
+  - name: stg_fountain__applicants
+    description: >
+      Contains basic applicant information as synchronized from
+      Fountain.
+    columns:
+      - name: fountain_applicant_id
+        description: Unique identifier (as provisioned by Fountain)
+        tests:
+          - unique
+          - not_null
+
+      - name: first_name
+        description: Applicant's first name.
+
+      - name: last_name
+        description: Applicant's last name.
+
+      - name: primary_email
+        description: |
+          Applicant's email address. BetterUp email if one has been assigned.
+          Otherwise, holds their personal email.
+        tests:
+          - not_null
+
+      - name: phone
+        description: Applicant's phone number.
+        tests:
+          - not_null
+
+      - name: funnel
+        description: Which funnel the applicant applied from.
+        tests:
+          - not_null
+
+      - name: stage
+        description: |
+          Which stage of the application process the applicant
+          is currently in.
+        tests:
+          - not_null
+
+      - name: created_at
+        description: Time when the applicant information was created in Fountain.
+        tests:
+          - not_null
+
+      - name: last_transitioned_at
+        description: Time of the last transition in Fountain.
+        tests:
+          - not_null
+
+      - name: city
+        description: |
+          City the applicant lives in (can be empty). Field may include the state
+          the applicant lives in as well depending on cohort as Fountain settings
+          have changed over time.
+
+      - name: country
+        description: Country the applicants lives in (can be empty).
+
+      - name: green_state
+        description: |
+          Manually coded field indicating whether the applicant lives in a
+          state with data privacy laws that are friendly to recording
+          coaching sessions on the platform. (can be empty)
+
+      - name: time_zone
+        description: The timezone the applicant lives in.
+
+      - name: referrer
+        description: Person who referred the applicant to BetterUp, if any.
+
+      - name: previous_applicant
+        description: Has been a previous applicant before.
+
+      - name: candidate_pipeline
+        description: How the applicant first heard about BetterUp.
+
+      - name: receive_automated_emails
+        description: Will the applicant receive automated emails from Fountain.
+
+      - name: inspiring_matrix
+        description: Coach hiring Inspiring matrix classification.
+
+      - name: inspiring_application_tier
+        description: Coach hiring Inspiring matrix score.
+
+      - name: thriving_matrix
+        description: Coach hiring Thriving matrix classification.
+
+      - name: thriving_application_tier
+        description: Coach hiring Thriving matrix score.
+
+      - name: coach_interview_tier
+        description: Coach hiring interview score (1-5).
+
+      - name: vip_status
+        description: Coach hiring VIP label for important applicants.
+
+      - name: high_priority
+        description: Coach hiring high priority label for specific criteria based
+          on launch requirements.
+
+      - name: coaching_credential
+        description: What credentials the applicant has attained.
+
+      - name: additional_certifications
+        description: Additional certifications that the applicant holds.
+
+      - name: secondary_email
+        description: This column stores an optional email address given by the applicant
+          for communicating with them. [GenAI Description]
+
+      - name: statement_of_interest
+        description: The 'statement_of_interest' column contains the applicant's short
+          description of their interest in coaching with the company. [GenAI Description]
+
+      - name: coaching_background_and_clients
+        description: This column contains information about a applicant's coaching
+          background and clients, such as their professional coaching hours, training
+          institute, and coaching certification. [GenAI Description]
+
+      - name: describe_coaching_style_in_three_words
+        description: Describes the coaching style in three words, such as directive,
+          collaborative, or compassionate. [GenAI Description]
+
+      - name: explain_coaching_to_a_new_client
+        description: This column is for the client to provide an explanation of coaching,
+          such as how it can help someone achieve their goals. [GenAI Description]
+
+      - name: how_would_you_build_rapport_with_clients
+        description: This column stores the applicant's response to the question of
+          how they would build rapport with their clients. [GenAI Description]
+
+      - name: how_do_you_handle_disengaged_clients
+        description: This column captures the way that applicants handle disengaged
+          clients. [GenAI Description]
+
+      - name: how_do_you_stay_updated_on_evidence_based_practices
+        description: This column tracks the strategies that the applicant uses to
+          stay updated on evidence-based practices. [GenAI Description]
+
+      - name: tell_us_something_youve_learned_recently
+        description: 'Description: This column stores information about something
+          the applicant has recently learned. [GenAI Description]'
+
+      - name: anything_else
+        description: The 'anything_else' column captures any additional free-form
+          information applicants provide. [GenAI Description]
+
+      - name: coaching_languages
+        description: The column 'coaching_languages' stores the languages spoken by
+          applicants. [GenAI Description]
+
+      - name: adv_deg_tier
+        description: "'adv_deg_tier' indicates the tier of advanced degrees a applicant\
+          \ holds. [GenAI Description]"
+
+      - name: postgraduate_degrees
+        description: This column contains postgraduate degree information such as
+          field of study and related coursework. [GenAI Description]
+
+      - name: postgraduate_degree_field
+        description: The 'postgraduate_degree_field' column contains the field or
+          industry of a postgraduate degree the applicant holds. [GenAI Description]
+
+      - name: current_coursework
+        description: The 'current_coursework' column stores the current courses the
+          applicant is taking and studying. [GenAI Description]
+
+      - name: completed_courses
+        description: '"completed_courses" is a text field that contains all coursework
+          completed by the applicant. [GenAI Description]'
+
+      - name: semesters_of_graduate_study
+        description: The 'semesters_of_graduate_study' column stores the number of
+          semesters of applicable graduate study completed by an applicant. [GenAI
+          Description]
+
+      - name: coach_cert_tier
+        description: The 'coach_cert_tier' column contains the tier level of the applicant's
+          coaching certification. [GenAI Description]
+
+      - name: coach_training_institute
+        description: The 'coach_training_institute' column holds the name of the institute
+          where a coach obtained their training. [GenAI Description]
+
+      - name: coaching_certifications
+        description: "'coaching_certifications' contains the coaching certifications\
+          \ held by the applicant. [GenAI Description]"
+
+      - name: non_icf_cert
+        description: "'non_icf_cert' holds a boolean value indicating whether or not\
+          \ the applicant has a certification from the International Coach Federation.\
+          \ [GenAI Description]"
+
+      - name: coach_training_completed
+        description: "'coach_training_completed' indicates whether the applicant has\
+          \ completed any coach training courses. [GenAI Description]"
+
+      - name: coach_training_program
+        description: The 'coach_training_program' column holds the name of a training
+          program a coach has received. [GenAI Description]
+
+      - name: coach_hrs_tier
+        description: "'coach_hrs_tier' is a field that stores the tier number associated\
+          \ with the number of professional coaching hours the applicant has. [GenAI\
+          \ Description]"
+
+      - name: professional_coaching_hours
+        description: This column indicates the total number of professional coaching
+          hours of the applicant. [GenAI Description]
+
+      - name: counseling_hrs_tier
+        description: '"counseling_hrs_tier" is an indicator of the amount of supervised
+          clinical experience held by the applicant. [GenAI Description]'
+
+      - name: supervised_clinical_hours
+        description: This column stores the total supervised clinical hours that a
+          particular applicant has accrued. [GenAI Description]
+
+      - name: professional_license_type
+        description: The 'professional_license_type' column stores the type of professional
+          license held by a fountain applicant. [GenAI Description]
+
+      - name: member_level
+        description: The member_level column contains the membership level of the
+          applicant. [GenAI Description]
+
+      - name: corporate_or_professional_experience
+        description: The column 'corporate_or_professional_experience' contains information
+          about the applicant's prior experience working professionally in an organization.
+          [GenAI Description]
+
+      - name: coaching_techniques
+        description: The column 'coaching_techniques' stores details of techniques
+          used by the applicant when coaching. [GenAI Description]
+
+      - name: coaching_industries
+        description: The 'coaching_industries' column stores information about the
+          industries in which the applicant has work experience as a coach. [GenAI
+          Description]
+
+      - name: working_industries
+        description: The column 'working_industries' contains a list of industries
+          the applicant has worked in professionally. [GenAI Description]
+
+      - name: focus_area
+        description: This column contains text indicating an applicant's area of focus
+          for professional coaching. [GenAI Description]
+
+      - name: mbti_certified
+        description: The 'mbti_certified' column indicates whether the applicant has
+          a Myers-Briggs Type Indicator certification. [GenAI Description]

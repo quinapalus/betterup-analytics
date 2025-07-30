@@ -1,0 +1,13 @@
+version: 2
+
+models:
+  - name: int_amplitude__invoice_events
+    description: >
+      Amplitude invoice related events.
+    columns:
+      - name: uuid
+        description: >
+          A unique identifier per row (event sent). 
+        tests:
+          - unique
+          - not_null

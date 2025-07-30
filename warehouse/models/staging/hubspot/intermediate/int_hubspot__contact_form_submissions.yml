@@ -1,0 +1,11 @@
+version: 2
+models:
+  - name: int_hubspot__contact_form_submissions
+    description: >
+      Contains all form_submissions by contacts. It is a mapping table between a form submission and contact.
+    columns:
+      - name: _unique
+        description: Surrogate key combining hubspot contact and form subsmission id 
+        tests:
+          - unique
+          - not_null

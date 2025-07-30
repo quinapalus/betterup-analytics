@@ -1,0 +1,34 @@
+version: 2
+
+models:
+  - name: dim_subscription_products
+    meta:
+      owner: "adrian.lievano@betterup.co"
+    description: >
+      A table tracking all products from Stripe
+
+    columns:
+      - name: stripe_product_id
+        description: Primary key
+        tests:
+          - unique
+          - not_null
+
+      - name: name
+        description: name of the product from Stripe
+
+      - name: is_active
+        description: The column 'is_active' is a boolean value that indicates whether
+          the product is active or not. [GenAI Description]
+
+      - name: type
+        description: The 'type' column indicates the type of product a Stripe user
+          has. [GenAI Description]
+
+      - name: created_at
+        description: The created_at column holds timestamps for when the Stripe product
+          was initially created. [GenAI Description]
+
+      - name: updated_at
+        description: The column 'updated_at' contains the timestamp of when the product
+          was last updated. [GenAI Description]

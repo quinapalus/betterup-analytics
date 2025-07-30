@@ -1,0 +1,38 @@
+version: 2
+
+models:
+  - name: stg_identify__product_recommendation_attributes
+    description: ""
+    columns:
+      - name: user_id
+        description: ""
+
+      - name: product_id
+        description: ""
+
+      - name: product_recommendation_id
+        description: ""
+
+      - name: attribute_name
+        description: ""
+
+      - name: value_float
+        description: ""
+
+      - name: value_string
+        description: ""
+
+      - name: attribute_type
+        description: ""
+
+      - name: id
+        description: ""
+        tests:
+          - not_null
+          - unique
+
+      - name: created_at
+        description: ""
+
+      - name: updated_at
+        description: ""

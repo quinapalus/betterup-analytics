@@ -1,0 +1,15 @@
+#!/bin/bash
+
+# configure bash to exit on error
+set -e
+set -o pipefail
+
+cd packages/bu-tap-fountain
+poetry install
+poetry run create-configs
+
+
+poetry run bu-tap-fountain -c fountain.json | poetry run target-snowflake -c snowflake.json
+
+
+echo "Done."

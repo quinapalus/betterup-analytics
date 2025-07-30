@@ -1,0 +1,17 @@
+version: 2
+
+models:
+  - name: base_app__user_groups_historical
+    description: ""
+    columns:
+      - name: created_at
+      - name: group_id
+      - name: id
+        tests:
+          - unique
+          - not_null
+      - name: role
+      - name: updated_at
+      - name: user_id
+      - name: migration_version
+

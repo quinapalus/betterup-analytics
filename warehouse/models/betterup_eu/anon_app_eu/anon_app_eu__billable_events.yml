@@ -1,0 +1,72 @@
+version: 2
+
+models:
+  - name: anon_app_eu__billable_events
+    description: >
+      Billable Events table from app with removed PII.
+      Application table containing records of all application activities that *may*
+      be paid out to coaches. `billable_events` is responsible for the interface between
+      the application and our external coach payment processor. Note: not all `billable_events`
+      result in external payments, but all external payments orginate from a `billable_event`.
+      The model removes billable events that have been deleted from the Admin Panel.
+
+    columns:
+      - name: id
+        description: Primary key
+        tests:
+          - unique
+          - not_null
+
+      - name: amount_due
+        tests:
+          - not_null
+        description: The column 'amount_due' stores the total cost of a billable event.
+          [GenAI Description]
+      - name: associated_record_id
+        description: The 'associated_record_id' column contains a unique identifier
+          that is related to the type of billable event recorded. [GenAI Description]
+      - name: associated_record_type
+        description: The 'associated_record_type' column identifies the type of record
+          associated with the billable event. [GenAI Description]
+      - name: coach_id
+        description: The column 'coach_id' is the ID that identifies a particular
+          coach associated with a billable event. [GenAI Description]
+      - name: coach_profile_pay_rate_id
+        description: The column 'coach_profile_pay_rate_id' is a foreign key referencing
+          the rate used for payment of a coach providing services. [GenAI Description]
+      - name: coaching_cloud
+        description: The 'coaching_cloud' column in this model represents the type
+          and source of a coaching event. [GenAI Description]
+      - name: coaching_type
+        description: The 'coaching_type' column provides information about the type
+          of coaching service that was provided. [GenAI Description]
+      - name: created_at
+        tests:
+          - not_null
+        description: The 'created_at' column stores the date and time when a record
+          was created. [GenAI Description]
+      - name: currency_code
+        tests:
+          - not_null
+        description: The 'currency_code' column stores the currency used for each
+          transaction for the events contained in the table. [GenAI Description]
+      - name: event_at
+        description: The column 'event_at' stores the timestamp of when the event
+          took place. [GenAI Description]
+      - name: event_type
+        description: The 'event_type' column records the type of event associated
+          with a billable event. [GenAI Description]
+      - name: notes
+        description: The column 'notes' contains any additional information related
+          to the billable event. [GenAI Description]
+      - name: units
+        description: The 'units' column stores the number of events associated with
+          a billable entry. [GenAI Description]
+      - name: updated_at
+        tests:
+          - not_null
+        description: The 'updated_at' column holds the timestamp when record has been
+          last updated. [GenAI Description]
+      - name: usage_minutes
+        description: The 'usage_minutes' column stores the number of minutes spent
+          on a single billable event. [GenAI Description]

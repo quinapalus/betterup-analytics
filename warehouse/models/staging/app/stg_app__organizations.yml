@@ -1,0 +1,73 @@
+version: 2
+
+models:
+  - name: stg_app__organizations
+    description: Represents an Organization that BetterUp is deployed at
+
+    columns:
+      - name: organization_id
+        description: Unique identifier for the Organization
+        tests:
+          - unique
+          - not_null
+
+      - name: created_at
+        description: When the Organization was created
+
+      - name: name
+        description: Name of the Organization
+
+      - name: sfdc_account_id
+        description: Salesforce Account identifier for this organization
+
+      - name: terms_of_service
+        description: This column contains the list of terms of service for the organization.
+          [GenAI Description]
+      - name: updated_at
+        description: When the Organization was last updated
+      - name: risk_tier
+        description: "'risk_tier' is an integer value indicating the risk associated\
+          \ with an organization. [GenAI Description]"
+      - name: account_segment
+        description: "'account_segment' is an attribute that groups accounts into\
+          \ distinct segments. [GenAI Description]"
+      - name: email_domain_list
+#      - name: product_subscriptions_enabled --this column does not exist anymore in the postgres DB
+        description: This column contains a list of email domains associated with
+          the organization. [GenAI Description]
+      - name: product_subscriptions_enabled_at
+        description: '"product_subscriptions_enabled_at" is a timestamp-based field
+          storing when a product subscription was enabled for an organization. [GenAI
+          Description]'
+      - name: admin_access_allowed
+        description: This column indicates if the organization has allowed its user
+          to access administrative features. [GenAI Description]
+      - name: has_labs_data
+        description: The column 'has_labs_data' indicates whether the organization
+          owns labs data. [GenAI Description]
+      - name: features
+        description: The 'features' column lists the features enabled for the organization.
+          [GenAI Description]
+      - name: messaging_restricted
+        description: The "messaging_restricted" column indicates if messaging is restricted
+          in this organization. [GenAI Description]
+      - name: default_base_experience_track_id
+        description: The column 'default_base_experience_track_id' stores the default
+          experience track identifier for the organization. [GenAI Description]
+      - name: users_account_change_notifications_default
+        description: This column indicates whether users receive notifications as
+          the default when their accounts are changed. [GenAI Description]
+      - name: reference_population_id
+        description: Reference population id for this organization
+      - name: disable_phone_number
+        description: This column indicates whether a phone number has been disabled
+          for an organization. [GenAI Description]
+      - name: partner_integration_settings_enabled
+        description: This column indicates whether a partner has enabled integration
+          settings for the organization. [GenAI Description]
+      - name: organization_uuid
+        description: The 'organization_uuid' column contains unique identifiers for
+          each organization. [GenAI Description]
+      - name: v2_psa_enabled_at
+        description: The column 'v2_psa_enabled_at' stores a timestamp indicating
+          when v2 Purchasing and Subscription Ability was enabled. [GenAI Description]

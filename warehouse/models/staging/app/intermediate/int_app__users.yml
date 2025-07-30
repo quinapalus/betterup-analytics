@@ -1,0 +1,89 @@
+version: 2
+
+models:
+  - name: int_app__users
+    description: Intermediate Users view that also contains user role
+
+    columns:
+      - name: user_id
+        tests:
+          - unique
+          - not_null
+        description: The 'user_id' column stores unique IDs for each individual user
+          in the app. [GenAI Description]
+      - name: time_zone
+        description: The 'time_zone' column contains the time zone setting of a user.
+          [GenAI Description]
+      - name: confirmed_at
+        description: "'confirmed_at' is the date time stamp when the user was first\
+          \ created. [GenAI Description]"
+      - name: confirmation_sent_at
+        description: This column contains the timestamp of when the user's account
+          confirmation was sent. [GenAI Description]
+      - name: current_sign_in_at
+        description: This column contains timestamps of when the user last signed
+          in to the application. [GenAI Description]
+      - name: completed_member_onboarding_at
+        description: The 'completed_member_onboarding_at' column stores the date and
+          time a user finished onboarding as a member. [GenAI Description]
+      - name: completed_account_creation_at
+        description: "'completed_account_creation_at' is a timestamp indicating when\
+          \ a user's account was created. [GenAI Description]"
+      - name: completed_primary_modality_setup_at
+        description: The 'completed_primary_modality_setup_at' column indicates the
+          date when the user completed the primary modality setup. [GenAI Description]
+      - name: deactivated_at
+        description: Column reresents the timestamp when the user account was deactivated.
+          [GenAI Description]
+      - name: next_session_id
+        description: The 'next_session_id' column contains the unique identifiers
+          for the next user session. [GenAI Description]
+      - name: last_engaged_at
+        description: last_engaged_at is the most recent activity time of a user, which
+          includes their last sign in time, last engaged time, and date the user confirmed.
+          [GenAI Description]
+      - name: inviter_id
+        description: The 'inviter_id' column stores the identifier for the user that
+          invited a given user to the platform. [GenAI Description]
+      - name: language
+        description: The 'language' column stores the language preference of the user.
+          [GenAI Description]
+      - name: email
+        description: The email column contains user email addresses. [GenAI Description]
+      - name: coaching_language
+        description: The 'coaching_language' column has the language preference of
+          the user that has to be used for coaching messages. [GenAI Description]
+      - name: roles
+        description: The 'roles' column contains an array of global roles assigned
+          to each user. [GenAI Description]
+      - name: title
+        description: The title column stores the user's title/job position. [GenAI
+          Description]
+      - name: state
+        description: The 'state' column contains information on the user's current
+          status, such as whether or not they are on vacation, temporary leave from
+          work, etc. [GenAI Description]
+      - name: organization_id
+        description: The organization_id column holds the identification number for
+          the organization associated with the user. [GenAI Description]
+      - name: manager_id
+        description: "'manager_id' is a unique identifier for the manager associated\
+          \ with the user. [GenAI Description]"
+      - name: pending_primary_recommendation_count
+        description: The column 'pending_primary_recommendation_count' stores the
+          count of pending primary recommendations made by each user. [GenAI Description]
+      - name: member_profile_id
+        description: The 'member_profile_id' column represents the user's unique identifier
+          for their profile. [GenAI Description]
+      - name: is_call_recording_allowed
+        description: This column indicates whether call recording is enabled for the
+          user. [GenAI Description]
+      - name: care_profile_id
+        description: The 'care_profile_id' column stores a unique identifier for each
+          user's unique care profile. [GenAI Description]
+      - name: created_at
+        description: The 'created_at' column stores the timestamp when a user account
+          was first created. [GenAI Description]
+      - name: updated_at
+        description: The 'updated_at' column contains timestamps when the users' information
+          was last updated. [GenAI Description]

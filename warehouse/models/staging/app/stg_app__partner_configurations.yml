@@ -1,0 +1,28 @@
+version: 2
+
+models:
+  - name: stg_app__partner_configurations
+    description: This DBT model stores information related to partner configurations,
+      including a unique partner configuration identifier, indications of whether
+      the configuration can be downloaded, the associated competency mapping ID and
+      the partner emails associated with the configuration. [GenAI Description]
+    columns:
+      - name: partner_configuration_id
+        description: Partner Configuration ID assigns a unique identifier to each
+          partner configuration. [GenAI Description]
+        tests:
+          - unique
+          - not_null
+
+      - name: downloadable
+        description: This column stores whether an assessment associated with the
+          partner_configurations table is capable of being downloaded in some medium.
+          [GenAI Description]
+
+      - name: competency_mapping_id
+        description: The 'competency_mapping_id' column stores the ID associated with
+          a partner configuration's associated competency mapping. [GenAI Description]
+
+      - name: partner_emails
+        description: The column 'partner_emails' stores email addresses associated
+          with each partner configuration. [GenAI Description]

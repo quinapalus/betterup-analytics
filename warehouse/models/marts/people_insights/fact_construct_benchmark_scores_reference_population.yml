@@ -1,0 +1,46 @@
+version: 2
+
+models:
+  - name: fact_construct_benchmark_scores_reference_population
+    description: "Construct benchmark scores, both legacy and new (as of 2022) curriculum. One row per reference_population_id, population combination (country, industry, level, industry_level), and key."
+    columns:
+      - name: primary_key
+        description: "Composite key of reference_population_key + population combination (country, industry, level, industry_level) + key + construct type"
+        tests:
+          - not_null
+          - unique
+
+      - name: reference_population_id
+        description: "Foreign key to reference_populations table."
+
+      - name: reference_population_key
+        description: "1 corresponds to the legacy benchmarks and 2 corresponds to the new (as of 2022) curriculum benchmarks."
+
+      - name: benchmark_population_type
+        description: "The population (or combination of populations) represented by this benchmark. Ex: country, industry, industry_level (the latter means the intersection of 2 populations, by industry and level)"
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['country', 'industry', 'level', 'industry_level']
+
+      - name: country
+        description: ""
+
+      - name: industry
+        description: ""
+
+      - name: level
+        description: "Employee level"
+
+      - name: key
+        description: ""
+        tests:
+          - not_null
+
+      - name: construct_type
+        description: ""
+
+      - name: mean
+        description: "Benchmark scale score mean"
+        tests:
+          - not_null

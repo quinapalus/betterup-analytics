@@ -1,0 +1,62 @@
+version: 2
+models:
+  - name: dbt_coach_recommendations
+    description: >
+      This protected model sanitizes the base coach recommendations model and expands
+      it
+      with information on associated coach assignments.
+
+    columns:
+      - name: coach_recommendation_id
+        description: Primary Key.
+
+      - name: coach_id
+        description: >
+          Denormalized foreign key to the coach associated with the coach
+          recommendation.
+
+      - name: member_id
+        description: >
+          Denormalized foreign key to the member associated with the coach
+          recommendation.
+
+      - name: recommended_at
+        description: >
+          UTC timestamp denoting when the coach was surfaced to the member.
+
+      - name: algorithm
+        description: >
+          String denoting which algorithm was used to make the coach recommendation.
+
+      - name: position
+        description: >
+          Integer denoting the position of the coach in the associated recommendation
+          set.
+
+      - name: overall_score
+        description: >
+          Float number denoting the matchmaking score output by the recommender algorithm.
+
+      - name: is_coach_selected
+        description: >
+          Boolean denoting if the recommendation was followed by a selection.
+        tests:
+          - not_null
+          - accepted_values:
+              values: [true, false]
+
+      - name: selected_at
+        description: >
+          UTC timestamp denoting when the coach was selected by the member. NULL if
+          there
+          was no selection.
+
+      - name: coach_assignment_ended
+        description: >
+          Boolean denoting if the coach assignment ended; in other words,
+          is the member still matched to the coach as part of this coach assignment?
+
+      - name: coach_assignment_duration_days
+        description: >-
+          The column 'coach_assignment_duration_days' stores the duration of a given
+          coach assignment in days. [GenAI Description]

@@ -1,0 +1,1340 @@
+version: 2
+
+models:
+  - name: stg_sfdc__opportunities
+    description: ""
+    columns:
+      - name: id
+        description: ""
+        tests:
+          - unique
+          - not_null
+
+      - name: stage_4_budget_proposal_r_c
+        description: ""
+
+      - name: channel_c
+        description: ""
+
+      - name: fcrm_fcr_admin_update_counter_c
+        description: ""
+
+      - name: last_order_sow_activity_date_c
+        description: ""
+
+      - name: ops_exception_request_detail_c
+        description: ""
+
+      - name: fcrm_fcr_admin_originating_contact_c
+        description: ""
+
+      - name: sbs_resource_c
+        description: ""
+
+      - name: trial_requested_c
+        description: ""
+
+      - name: accounting_adj_de_book_c
+        description: ""
+
+      - name: associated_e_vp_content_c
+        description: ""
+
+      - name: default_resource_list_c
+        description: ""
+
+      - name: stage_2_timing_r_est_deployment_da_c
+        description: ""
+
+      - name: system_modstamp
+        description: ""
+
+      - name: tactic_c
+        description: ""
+
+      - name: trials_extended_trial_offered_c
+        description: ""
+
+      - name: closed_lost_dropout_stage_c
+        description: ""
+
+      - name: cq_sbs_close_estimation_c
+        description: ""
+
+      - name: specific_coaching_requests_c
+        description: ""
+
+      - name: stage_4_authority_exec_sponsor_r_c
+        description: ""
+
+      - name: start_date_per_agreement_c
+        description: ""
+
+      - name: business_case_roi_c
+        description: ""
+
+      - name: fcrm_fcr_campaign_attribution_c
+        description: ""
+
+      - name: last_modified_date
+        description: ""
+
+      - name: order_sow_status_c
+        description: ""
+
+      - name: stage_4_budget_verbal_confirmation_r_c
+        description: ""
+
+      - name: stage_5_use_case_c
+        description: ""
+
+      - name: win_reason_c
+        description: ""
+
+      - name: created_date
+        description: ""
+
+      - name: minimum_number_of_employees_c
+        description: ""
+
+      - name: primary_competitor_c
+        description: ""
+
+      - name: stage_4_authority_procurement_r_c
+        description: ""
+
+      - name: bu_resource_c
+        description: ""
+
+      - name: fcrm_fcr_admin_cmarchive_c
+        description: ""
+
+      - name: sdr_lead_owner_c
+        description: ""
+
+      - name: prod_exception_request_detail_c
+        description: ""
+
+      - name: use_case_c
+        description: ""
+
+      - name: date_redlining_initiated_c
+        description: ""
+
+      - name: exceptions_approved_by_c
+        description: ""
+
+      - name: form_of_agreement_c
+        description: ""
+
+      - name: is_won
+        description: ""
+
+      - name: fcrm_fcr_first_campaign_touch_c
+        description: ""
+
+      - name: lead_source
+        description: ""
+
+      - name: smb_additional_info_partner_motivations_c
+        description: ""
+
+      - name: smbnumber_of_members_by_region_c
+        description: ""
+
+      - name: trial_results_delivered_c
+        description: ""
+
+      - name: business_value_c
+        description: ""
+
+      - name: description
+        description: ""
+
+      - name: security_review_status_c
+        description: ""
+
+      - name: stage_2_c
+        description: ""
+
+      - name: coach_tier_c
+        description: ""
+
+      - name: value_c
+        description: ""
+
+      - name: end_date_per_agreement_c
+        description: ""
+
+      - name: smb_manager_feedback_enabled_c
+        description: ""
+
+      - name: stage_6_authority_legal_r_c
+        description: ""
+
+      - name: use_case_reconfirmation_date_c
+        description: ""
+
+      - name: last_activity_date
+        description: ""
+
+      - name: opportunity_id_18_digit_c
+        description: ""
+
+      - name: personal_value_c
+        description: ""
+
+      - name: smb_deployment_cadence_c
+        description: ""
+
+      - name: invoicing_c
+        description: ""
+
+      - name: programs_exception_request_detail_c
+        description: ""
+
+      - name: stage_6_authority_info_security_r_c
+        description: ""
+
+      - name: stage_5_authority_contract_signer_r_c
+        description: ""
+
+      - name: stage_6_timing_signed_order_r_c
+        description: ""
+
+      - name: power_c
+        description: ""
+
+      - name: tfc_date_c
+        description: ""
+
+      - name: expected_deployment_date_c
+        description: ""
+
+      - name: opportunity_rm_c
+        description: ""
+
+      - name: smb_number_of_reflection_points_c
+        description: ""
+
+      - name: solutions_c
+        description: ""
+
+      - name: stage_6_authority_procurement_r_c
+        description: ""
+
+      - name: trial_criteria_c
+        description: ""
+
+      - name: vision_match_identified_c
+        description: ""
+
+      - name: personal_value_v_2_c
+        description: ""
+
+      - name: pricing_discount_offered_c
+        description: ""
+
+      - name: received_at
+        description: ""
+
+      - name: renewal_date_c
+        description: ""
+
+      - name: pricing_split_billing_offered_c
+        description: ""
+
+      - name: ops_exception_request_c
+        description: ""
+
+      - name: cfcr_stg2_date_c
+        description: ""
+
+      - name: discovery_completed_c
+        description: ""
+
+      - name: fiscal_year
+        description: ""
+
+      - name: campaign_id
+        description: ""
+
+      - name: close_date
+        description: ""
+
+      - name: mkto_si_marketo_analyzer_c
+        description: ""
+
+      - name: stage_2_budget_c
+        description: ""
+
+      - name: fcrm_fcr_response_id_c
+        description: ""
+
+      - name: member_hours_limit_of_hours_c
+        description: ""
+
+      - name: red_flags_c
+        description: ""
+
+      - name: stage_5_coachee_member_levels_c
+        description: ""
+
+      - name: value_prompter_link_c
+        description: ""
+
+      - name: war_room_deal_c
+        description: ""
+
+      - name: last_master_agreement_activity_date_c
+        description: ""
+
+      - name: other_program_design_notes_c
+        description: ""
+
+      - name: our_competitive_differentiators_c
+        description: ""
+
+      - name: sbs_next_steps_c
+        description: ""
+
+      - name: smb_additional_requirements_c
+        description: ""
+
+      - name: is_closed
+        description: ""
+
+      - name: is_deleted
+        description: ""
+
+      - name: master_agreement_status_c
+        description: ""
+
+      - name: name
+        description: ""
+
+      - name: dscorgpkg_converted_from_discoverorg_data_c
+        description: ""
+
+      - name: last_viewed_date
+        description: ""
+
+      - name: rfp_based_opportunity_c
+        description: ""
+
+      - name: win_story_c
+        description: ""
+
+      - name: vs_associated_e_vp_c
+        description: ""
+
+      - name: business_issue_c
+        description: ""
+
+      - name: cfcr_stg3_date_c
+        description: ""
+
+      - name: cp_notes_c
+        description: ""
+
+      - name: stage_4_timing_mutual_close_date_r_c
+        description: ""
+
+      - name: has_overdue_task
+        description: ""
+
+      - name: smb_key_satisfaction_driver_c
+        description: ""
+
+      - name: value_proposition_delivered_c
+        description: ""
+
+      - name: whole_person_360_enabled_c
+        description: ""
+
+      - name: has_opportunity_line_item
+        description: ""
+
+      - name: next_step
+        description: ""
+
+      - name: business_value_v_2_c
+        description: ""
+
+      - name: count_c
+        description: ""
+
+      - name: stage_5_authority_info_security_r_c
+        description: ""
+
+      - name: custom_program_design_c
+        description: ""
+
+      - name: scenario_c
+        description: ""
+
+      - name: smb_engagement_type_c
+        description: ""
+
+      - name: data_quality_description_c
+        description: ""
+
+      - name: sbs_first_involvement_date_c
+        description: ""
+
+      - name: programs_exceptions_request_c
+        description: ""
+
+      - name: roi_analysis_completed_c
+        description: ""
+
+      - name: start_date_c
+        description: ""
+
+      - name: compelling_event_c
+        description: ""
+
+      - name: lead_source_detail_c
+        description: ""
+
+      - name: opportunity_type_c
+        description: ""
+
+      - name: paperwork_initiated_date_c
+        description: ""
+
+      - name: cfcr_exclude_from_campaign_influence_c
+        description: ""
+
+      - name: custom_whole_person_mapping_created_c
+        description: ""
+
+      - name: smb_extended_network_c
+        description: ""
+
+      - name: uuid_ts
+        description: ""
+
+      - name: differentiated_problems_c
+        description: ""
+
+      - name: fiscal
+        description: ""
+
+      - name: video_chat_recording_enabled_c
+        description: ""
+
+      - name: lost_reason_detail_c
+        description: ""
+
+      - name: stage_4_need_importance_r_c
+        description: ""
+
+      - name: stage_5_authority_legal_r_c
+        description: ""
+
+      - name: push_counter_c
+        description: ""
+
+      - name: stage_4_authority_it_security_r_c
+        description: ""
+
+      - name: stage_5_authority_procurement_r_c
+        description: ""
+
+      - name: fiscal_quarter
+        description: ""
+
+      - name: last_modified_by_id
+        description: ""
+
+      - name: stage_3_authority_r_c
+        description: ""
+
+      - name: stage_3_need_flex_c
+        description: ""
+
+      - name: owner_id
+        description: ""
+
+      - name: owner_region_c
+        description: ""
+
+      - name: stage_2_value_prompter_started_c
+        description: ""
+
+      - name: stage_4_timing_mutual_close_plan_r_c
+        description: ""
+
+      - name: social_selling_generated_c
+        description: ""
+
+      - name: cfcr_stg4_date_c
+        description: ""
+
+      - name: first_meeting_generated_by_c
+        description: ""
+
+      - name: lost_reason_c
+        description: ""
+
+      - name: lost_reason_val_c
+        description: ""
+
+      - name: created_by_id
+        description: ""
+
+      - name: program_design_description_c
+        description: ""
+
+      - name: stage_4_need_seats_hours_c
+        description: ""
+
+      - name: vision_match_differentiated_c
+        description: ""
+
+      - name: acquisition_program_c
+        description: ""
+
+      - name: cfcr_velocity_won_c
+        description: ""
+
+      - name: stage_2_budget_r_c
+        description: ""
+
+      - name: stage_e_budget_r_c
+        description: ""
+
+      - name: stage_5_budget_order_form_r_c
+        description: ""
+
+      - name: business_issue_v_2_c
+        description: ""
+
+      - name: forecast_category
+        description: ""
+
+      - name: stage_2_authority_r_c
+        description: ""
+
+      - name: stage_4_authority_legal_r_c
+        description: ""
+
+      - name: pricing_opt_out_offered_c
+        description: ""
+
+      - name: account_id
+        description: ""
+
+      - name: associated_organisation_chart_c
+        description: ""
+
+      - name: next_call_date_c
+        description: ""
+
+      - name: next_steps_c
+        description: ""
+
+      - name: decision_criteria_c
+        description: ""
+
+      - name: stage_1_timing_c
+        description: ""
+
+      - name: stage_3_need_unlimited_c
+        description: ""
+
+      - name: stage_4_need_competency_model_r_c
+        description: ""
+
+      - name: stage_5_timing_deployment_r_c
+        description: ""
+
+      - name: lid_is_influenced_c
+        description: ""
+
+      - name: product_exception_request_c
+        description: ""
+
+      - name: smb_sfdc_opportunity_identifier_c
+        description: ""
+
+      - name: data_security_review_initiated_date_c
+        description: ""
+
+      - name: exception_discussion_outcome_c
+        description: ""
+
+      - name: opp_close_plan_created_c
+        description: ""
+
+      - name: sbs_resource_2_c
+        description: ""
+
+      - name: amount
+        description: ""
+
+      - name: bu_differentiation_validated_by_customer_c
+        description: ""
+
+      - name: publisher_c
+        description: ""
+
+      - name: record_type_id
+        description: ""
+
+      - name: cfcr_stg6_date_c
+        description: ""
+
+      - name: executive_sponsor_c
+        description: ""
+
+      - name: fcrm_fcr_last_campaign_touch_c
+        description: ""
+
+      - name: plan_c
+        description: ""
+
+      - name: do_not_alert_c
+        description: ""
+
+      - name: last_referenced_date
+        description: ""
+
+      - name: super_channel_c
+        description: ""
+
+      - name: paperwork_next_step_c
+        description: ""
+
+      - name: stage_1_authority_c
+        description: ""
+
+      - name: competitive_status_c
+        description: ""
+
+      - name: trials_single_session_offered_c
+        description: ""
+
+      - name: type
+        description: ""
+
+      - name: proposal_delivered_to_client_c
+        description: ""
+
+      - name: sbs_involvement_stage_c
+        description: ""
+
+      - name: smb_enforce_hours_limit_c
+        description: ""
+
+      - name: vision_match_v_2_c
+        description: ""
+
+      - name: stage_1_need_c
+        description: ""
+
+      - name: cfcr_stg5_date_c
+        description: ""
+
+      - name: type_c
+        description: ""
+
+      - name: pricebook_2_id
+        description: ""
+
+      - name: acquisition_date_c
+        description: ""
+
+      - name: data_quality_score_c
+        description: ""
+
+      - name: has_open_activity
+        description: ""
+
+      - name: on_demand_c
+        description: ""
+
+      - name: forecast_category_name
+        description: ""
+
+      - name: rm_resource_c
+        description: ""
+
+      - name: stage_6_authority_signer_r_c
+        description: ""
+
+      - name: budget_confirmed_c
+        description: ""
+
+      - name: custom_whole_person_mapping_description_c
+        description: ""
+
+      - name: expected_revenue
+        description: ""
+
+      - name: flagged_c
+        description: ""
+
+      - name: smb_program_length_days_c
+        description: ""
+
+      - name: stage_name
+        description: ""
+
+      - name: current_coaching_approach_c
+        description: ""
+
+      - name: dscorgpkg_attributed_to_discover_org_c
+        description: ""
+
+      - name: probability
+        description: ""
+
+      - name: smb_includes_behavioral_assessments_c
+        description: ""
+
+      - name: subscription_start_date_c
+        description: ""
+
+      - name: subscription_end_date_c
+        description: ""
+
+      - name: opp_owner_region_c
+        description: ""
+
+      - name: sales_region_c
+        description: ""
+
+      - name: forecast_category_c
+        description: ""
+
+      - name: acv_c
+        description: ""
+
+      - name: tcv_c
+        description: ""
+
+      - name: global_account_manager_c
+        description: ""
+
+      - name: csm_c
+        description: ""
+
+      - name: validated_for_booking_c
+        description: ""
+
+      - name: buapp_contract_id_c
+        description: ""
+
+      - name: billing_address_c
+        description: ""
+
+      - name: opportunity_source_c
+        description: ""
+
+      - name: in_vp_forecast_c
+        description: ""
+
+      - name: trial_end_date_c
+        description: ""
+
+      - name: trial_start_date_c
+        description: ""
+
+      - name: arr_finance_c
+        description: ""
+
+      - name: planned_contract_start_date_finance_c
+        description: ""
+
+      - name: planned_contract_end_date_finance_c
+        description: ""
+
+      - name: plan_renewal_amount_c
+        description: ""
+
+      - name: new_business_deal_score_c
+        description: ""
+
+      - name: renewal_risk_score_c
+        description: ""
+
+      - name: funding_budget_c
+        description: ""
+
+      - name: prime_hq_coaching_circles_c
+        description: ""
+
+      - name: ae_hold_expiration_c
+        description: ""
+
+      - name: standard_deployment_c
+        description: ""
+
+      - name: better_up_selected_as_vendor_c
+        description: ""
+
+      - name: highest_champion_level_c
+        description: ""
+
+      - name: how_many_champions_c
+        description: ""
+
+      - name: partner_c
+        description: ""
+
+      - name: related_to_opportunity_owner_c
+        description: ""
+
+      - name: big_deal_potential_c
+        description: ""
+
+      - name: proposed_date_to_deliver_business_case_c
+        description: ""
+
+      - name: sc_support_level_c
+        description: ""
+
+      - name: enter_launch_date_c
+        description: ""
+
+      - name: new_platform_first_c
+        description: ""
+
+      - name: buying_catalyst_c
+        description: ""
+
+      - name: secondary_solution_c
+        description: ""
+
+      - name: days_late_c
+        description: ""
+
+      - name: days_remaining_c
+        description: ""
+
+      - name: expected_end_date_c
+        description: ""
+
+      - name: closed_won_date_c
+        description: ""
+
+      - name: describe_problem_and_desired_outcome_c
+        description: ""
+
+      - name: formal_buying_process_c
+        description: ""
+
+      - name: ae_hold_approved_timestamp_c
+        description: ""
+
+      - name: catalyst_identified_c
+        description: ""
+
+      - name: funding_c
+        description: ""
+
+      - name: member_count_c
+        description: ""
+
+      - name: stakeholder_strategy_c
+        description: ""
+
+      - name: bill_to_id_c
+        description: ""
+
+      - name: total_member_count_c
+        description: ""
+
+      - name: close_plan_agreed_c
+        description: ""
+
+      - name: count_as_sc_support_c
+        description: ""
+
+      - name: rvp_reviewed_c
+        description: ""
+
+      - name: billing_phone_c
+        description: ""
+
+      - name: primary_solutions_consultant_old_c
+        description: ""
+
+      - name: budget_c
+        description: ""
+
+      - name: commercial_proporsal_scope_c
+        description: ""
+
+      - name: unique_licensing_c
+        description: ""
+
+      - name: extended_network_c
+        description: ""
+
+      - name: premier_buhq_en_od_c
+        description: ""
+
+      - name: proposed_date_to_send_contract_package_c
+        description: ""
+
+      - name: annual_contract_value_acv_c
+        description: ""
+
+      - name: joint_engagement_plan_attached_c
+        description: ""
+
+      - name: premium_c
+        description: ""
+
+      - name: is_split
+        description: ""
+
+      - name: rvp_trial_approval_c
+        description: ""
+
+      - name: if_no_when_will_we_know_the_decision_c
+        description: ""
+
+      - name: joint_engagement_plan_picklist_c
+        description: ""
+
+      - name: opportunity_sc_secondary_c
+        description: ""
+
+      - name: plan_to_solidify_close_date_c
+        description: ""
+
+      - name: business_case_c
+        description: ""
+
+      - name: identified_customer_problem_c
+        description: ""
+
+      - name: name_and_title_of_sponsor_c
+        description: ""
+
+      - name: deployment_c
+        description: ""
+
+      - name: sc_next_steps_c
+        description: ""
+
+      - name: multi_program_c
+        description: ""
+
+      - name: sc_flag_c
+        description: ""
+
+      - name: status_c
+        description: ""
+
+      - name: approver_svp_c
+        description: ""
+
+      - name: path_to_securing_meeting_c
+        description: ""
+
+      - name: contract_in_process_c
+        description: ""
+
+      - name: multithreaded_c
+        description: ""
+
+      - name: owner_s_manager_email_c
+        description: ""
+
+      - name: primary_coaching_1_1_only_legacy_c
+        description: ""
+
+      - name: date_next_steps_for_scope_pricing_c
+        description: ""
+
+      - name: post_covid_discussion_c
+        description: ""
+
+      - name: primary_solution_c
+        description: ""
+
+      - name: current_sc_support_activity_c
+        description: ""
+
+      - name: location_c
+        description: ""
+
+      - name: oldest_case_date_on_opps_c
+        description: ""
+
+      - name: proposed_date_steps_to_confirm_launch_c
+        description: ""
+
+      - name: bu_executive_sponsor_c
+        description: ""
+
+      - name: bu_or_customer_paper_c
+        description: ""
+
+      - name: business_case_roi_picklist_c
+        description: ""
+
+      - name: multi_year_agreement_c
+        description: ""
+
+      - name: non_standard_notes_c
+        description: ""
+
+      - name: related_opportunity_c
+        description: ""
+
+      - name: on_demand_coaching_c
+        description: ""
+
+      - name: sc_involvement_stage_c
+        description: ""
+
+      - name: sc_support_tier_c
+        description: ""
+
+      - name: unique_differentiators_c
+        description: ""
+
+      - name: most_likely_scope_c
+        description: ""
+
+      - name: competitor_c
+        description: ""
+
+      - name: request_trial_c
+        description: ""
+
+      - name: single_threaded_and_plan_to_expand_dmu_c
+        description: ""
+
+      - name: special_use_cases_c
+        description: ""
+
+      - name: consolidated_renewal_opp_c
+        description: ""
+
+      - name: do_not_alert_troops_ai_c
+        description: ""
+
+      - name: related_to_opportunity_start_date_c
+        description: ""
+
+      - name: approver_rvp_c
+        description: ""
+
+      - name: qualification_score_c
+        description: ""
+
+      - name: c_level_c
+        description: ""
+
+      - name: customer_executive_sponsor_c
+        description: ""
+
+      - name: bu_sponsor_name_c
+        description: ""
+
+      - name: location_international_c
+        description: ""
+
+      - name: joint_engagement_plan_c
+        description: ""
+
+      - name: plan_if_deal_isnt_closed_by_close_date_c
+        description: ""
+
+      - name: ae_hold_approved_c
+        description: ""
+
+      - name: compelling_close_date_c
+        description: ""
+
+      - name: contracting_c
+        description: ""
+
+      - name: field_cloud_c
+        description: ""
+
+      - name: sc_support_type_c
+        description: ""
+
+      - name: specialized_coach_readiness_c
+        description: ""
+
+      - name: describe_differentiation_c
+        description: ""
+
+      - name: tcv_of_products_c
+        description: ""
+
+      - name: bill_to_name_c
+        description: ""
+
+      - name: related_to_opportunity_id_18_digit_c
+        description: ""
+
+      - name: plan_to_uncover_approval_and_budget_c
+        description: ""
+
+      - name: proposed_date_to_present_jep_c
+        description: ""
+
+      - name: size_250_members_c
+        description: ""
+
+      - name: languages_non_english_c
+        description: ""
+
+      - name: opportunity_sc_c
+        description: ""
+
+      - name: sc_first_involvement_date_c
+        description: ""
+
+      - name: specific_coach_certifications_c
+        description: ""
+
+      - name: related_to_opportunity_end_date_c
+        description: ""
+
+      - name: calculated_term_c
+        description: ""
+
+      - name: proposed_sponsor_introduction_plan_c
+        description: ""
+
+      - name: total_users_c
+        description: ""
+
+      - name: executive_cloud_c
+        description: ""
+
+      - name: proposed_solution_c
+        description: ""
+
+      - name: marketing_program_c
+        description: ""
+
+      - name: custom_coach_readiness_c
+        description: ""
+
+      - name: tcv_entered_c
+        description: ""
+
+      - name: business_catalyst_details_c
+        description: ""
+
+      - name: competitors_c
+        description: ""
+
+      - name: select_competitors_c
+        description: ""
+
+      - name: estimated_start_date_c
+        description: ""
+
+      - name: estimated_end_date_c
+        description: ""
+
+      - name: big_deal_amount_c
+        description: ""
+
+      - name: business_case_checkbox_c
+        description: ""
+
+      - name: buhq_hq_only_c
+        description: ""
+
+      - name: count_as_sc_support_detail_c
+        description: ""
+
+      - name: trial_feedback_c
+        description: ""
+
+      - name: trial_success_criteria_c
+        description: ""
+
+      - name: trial_read_out_date_c
+        description: ""
+
+      - name: trial_population_c
+        description: ""
+
+      - name: trial_format_c
+        description: ""
+
+      - name: referring_coach_c
+        description: ""
+
+      - name: billing_contact_name_c
+        description: ""
+
+      - name: order_number_c
+        description: ""
+
+      - name: executive_sponsor_old_c
+        description: ""
+
+      - name: date_launched_c
+        description: ""
+
+      - name: contract_expiry_date_c
+        description: ""
+
+      - name: contract_num_c
+        description: ""
+
+      - name: billing_email_c
+        description: ""
+
+      - name: grace_period_date_c
+        description: ""
+
+      - name: design_session_deck_c
+        description: ""
+
+      - name: expansion_amount_c
+        description: ""
+
+      - name: challenge_solution_and_use_case_c
+        description: ""
+
+      - name: renewal_amount_c
+        description: ""
+
+      - name: potential_pull_forward_c
+        description: ""
+
+      - name: x1_st_year_acv_c
+        description: ""
+
+      - name: risk_status_c
+        description: ""
+
+      - name: initial_jep_sent_date_c
+        description: ""
+
+      - name: jep_link_c
+        description: ""
+
+      - name: initiated_renewal_planning_survey_c
+        description: ""
+
+      - name: discussed_renewal_plans_c
+        description: ""
+
+      - name: likelihood_to_renew_c
+        description: ""
+
+      - name: likelihood_to_renew_reasons_c
+        description: ""
+
+      - name: currency_iso_code
+        description: ""
+
+      - name: initial_proposal_sent_date_c
+        description: ""
+
+      - name: risk_reason_c
+        description: ""
+
+      - name: risk_amount_c
+        description: ""
+
+      - name: proposal_link_c
+        description: ""
+
+      - name: stg1_date_c
+        description: ""
+
+      - name: new_business_amount_c
+        description: ""
+
+      - name: new_bus_expand_1_yacv_c
+        description: ""
+
+      - name: care_total_booking_c
+        description: ""
+
+      - name: expected_nbex_c
+        description: ""
+
+      - name: fm_date_c
+        description: ""
+
+      - name: fm_non_completion_reason_c
+        description: ""
+
+      - name: cfo_finance_approved_roi_c
+        description: ""
+
+      - name: decision_process_score_c
+        description: ""
+
+      - name: champion_score_c
+        description: ""
+
+      - name: better_up_executive_sponsor_c
+        description: ""
+
+      - name: decision_criteria_score_c
+        description: ""
+
+      - name: identify_pain_score_c
+        description: ""
+
+      - name: competition_score_c
+        description: ""
+
+      - name: economic_buyer_score_c
+        description: ""
+
+      - name: qualification_source_c
+        description: ""
+
+      - name: sales_stage_c
+        description: ""
+
+      - name: paper_process_score_c
+        description: ""
+
+      - name: reporting_stage_c
+        description: ""
+
+      - name: metric_score_c
+        description: ""
+
+      - name: operations_internal_score_c
+        description: ""
+
+      - name: meddpicco_scoring_completion_c
+        description: ""
+
+      - name: meddpicco_score_c
+        description: ""
+
+      - name: bu_app_instance_c
+        description: ""
+
+      - name: deal_size_c
+        description: ""
+
+      - name: upside_potential_c
+        description: ""
+
+      - name: potential_value_size_formula_c
+        description: ""
+
+      - name: potential_value_c
+        description: ""
+
+      - name: deal_size_bucket_c
+        description: ""
+
+      - name: potential_size_bucket_field_c
+        description: ""

@@ -1,0 +1,23 @@
+version: 2
+models:
+  - name: star_coach_network_daily_snapshot
+    description: >
+      Coach Network Daily Snapshot fact table including work rate, joined with full Coach and
+      Date dimensions, and selected fields from the Date dimension for application and hire
+      dates. See documentation for `fact_coach_network_daily_snapshot`,
+      `fact_coach_work_rate_daily_snapshot`, `dim_coach`, and `dim_date` for field descriptions.
+
+    columns:
+      - name: _unique
+        tests:
+          - unique
+          - not_null
+
+      - name: is_current_date
+        description: >
+          Boolean indicating if the associated row is from the current date, e.g. at 5a UTC on
+          8/13/2019, `is_current_date` will be `true` for rows where `date_key = 20190813`.
+        tests:
+          - not_null
+          - accepted_values:
+              values: [true, false]

@@ -1,0 +1,22 @@
+version: 2
+
+models:
+  - name: member_identify_ai_statistics_score_threshold_by_rg
+    description: Calculates mean, median for member scores per reporting group.
+
+    columns:
+      - name: primary_key
+        description: ""
+        tests:
+          - unique
+          - not_null
+
+      - name: avg_score
+        description: mean of the member scores per reporting group.
+        tests:
+          - not_null
+
+      - name: median_score
+        description: median of the member scores per reporting group.
+        tests:
+          - not_null

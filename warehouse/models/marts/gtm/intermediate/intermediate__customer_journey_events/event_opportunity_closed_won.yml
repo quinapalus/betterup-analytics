@@ -1,0 +1,10 @@
+version: 2
+
+models:
+
+  - name: event_opportunity_closed_won
+    columns:
+      - name: "sfdc_opportunity_id"
+        tests:
+          - unique
+          - not_null

@@ -1,0 +1,23 @@
+version: 2
+
+models:
+  - name: dbt_funnels__foundations
+    description: The dbt_funnels__foundations model tracks the conversion funnel from
+      'invited foundations_product' to 'activated foundations_user' to 'completed
+      converged_onboarding' for users of the 'foundations' product. The model contains
+      the fields funnel_type, event_name, and funnel_stage. [GenAI Description]
+    columns:
+      - name: funnel_type
+        description: The 'funnel_type' column stores the type of funnel determining
+          the stages and events involved. [GenAI Description]
+
+      - name: event_name
+        description: The column 'event_name' contains the different events associated
+          with the foundations funnel. [GenAI Description]
+        tests:
+          - unique
+          - not_null
+
+      - name: funnel_stage
+        description: The 'funnel_stage' column identifies the stage in the funnel
+          at which an event occurred. [GenAI Description]

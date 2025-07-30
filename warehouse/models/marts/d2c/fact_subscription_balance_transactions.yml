@@ -1,0 +1,16 @@
+version: 2
+
+models:
+  - name: fact_subscription_balance_transactions
+    meta:
+      owner: "adrian.lievano@betterup.co"
+    description: >
+      A table tracking charges, refunds applied to various invoices, subscriptions
+      by BetterUp customers.
+
+    columns:
+      - name: stripe_balance_transaction_id
+        description: Primary key
+        tests:
+          - unique
+          - not_null

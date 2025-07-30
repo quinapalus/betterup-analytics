@@ -1,0 +1,27 @@
+version: 2
+models:
+  - name: stg_app__client_notes_development_topics
+    description: >
+      Join table for many-to-many relationship between `stg_app__client_notes` and
+      `stg_app__development_topics`, used to represent the `development_topics`
+      selected by a coach for a given session.
+
+    columns:
+      - name: client_notes_development_topic_id
+        description: Primary Key for given relationship, not used as a foreign key
+          in practice.
+        tests:
+          - not_null
+          - unique
+
+      - name: client_note_id
+        description: Foreign Key representing the associated `stg_app__client_notes`
+          record.
+        tests:
+          - not_null
+
+      - name: development_topic_id
+        description: Foreign Key representing the associated `stg_app__development_topics`
+          record.
+        tests:
+          - not_null

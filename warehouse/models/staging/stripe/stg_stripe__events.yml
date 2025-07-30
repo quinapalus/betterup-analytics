@@ -1,0 +1,36 @@
+version: 2
+
+models:
+  - name: stg_stripe__events
+    description: >
+      Events are Stripe's way of letting you know when something interesting happens
+      in  our account. When an interesting event occurs, Stripe creates a new Event
+      object.
+      More information can be found here - https://stripe.com/docs/api/events
+    columns:
+      - name: id
+        description: Unique identifier for the event object.
+        tests:
+          - unique
+          - not_null
+
+      - name: created
+        description: >
+          Time at which the object was created. Measured in seconds since the Unix
+          epoch.
+
+      - name: type
+        description: >
+          Description of the event (e.g., invoice.created or charge.refunded).
+
+      - name: stripe_subscription_id
+        description: The 'stripe_subscription_id' column contains a unique identifier
+          of a customer's Stripe subscription. [GenAI Description]
+
+      - name: customer_email
+        description: The 'customer_email' column stores the email address associated
+          with a customer. [GenAI Description]
+
+      - name: customer_id
+        description: The 'customer_id' column holds the unique customer identifier
+          associated with each event. [GenAI Description]

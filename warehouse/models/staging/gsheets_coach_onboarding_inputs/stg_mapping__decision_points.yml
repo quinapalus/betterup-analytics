@@ -1,0 +1,33 @@
+version: 2
+
+models:
+  - name: stg_mapping__decision_points
+    description: "Contains the decision point stages that the coach operations team is interested in for coach applications. This is maintained by the coach operations team.
+                  https://docs.google.com/spreadsheets/d/1EbyRq2H5gBcO6desBMw_miHhI78GWqEHMdVIii4SPCM/edit#gid=1437735253"
+    columns:
+      - name: primary_key
+        description: "Unique surrogate key created from fountain funnel ID and stage ID"
+        tests:
+          - unique
+          - not_null
+
+      - name: decision_point_stage_name
+        description: "Name of the stage as it exists in Fountan"
+        tests:
+          - not_null
+
+      - name: stage_id
+        description: "Fountain ID of the stage"
+        tests:
+          - not_null
+
+      - name: funnel_name
+        description: "Name of the funnel as it exists in Fountain"
+
+      - name: funnel_id
+        description: "Fountain ID of the Funnel"
+        tests:
+          - not_null
+
+      - name: decision_point_stage_name_cleaned
+        description: ""

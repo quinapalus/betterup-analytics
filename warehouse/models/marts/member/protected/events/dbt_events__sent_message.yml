@@ -1,0 +1,18 @@
+version: 2
+
+models:
+  - name: dbt_events__sent_message
+    description: The dbt_events__sent_message model contains data about sent message
+      events that have been tracked. It uniquely identifies messages based on the
+      member_id, event_at, event_action_and_object, and associated_record_id fields.
+      The associated_record_type field can uniquely identify the type of record related
+      to the message being sent. The attributes field contains additional data associated
+      with the event. [GenAI Description]
+    columns:
+      - name: _unique
+        tests:
+          - unique
+          - not_null
+        description: The '_unique' column is a surrogate key generated using a combination
+          of member_id, event_at, event_action_and_object, and associated_record_id.
+          [GenAI Description]

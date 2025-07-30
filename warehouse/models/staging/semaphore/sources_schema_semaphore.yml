@@ -1,0 +1,8 @@
+version: 2
+
+sources:
+  - name: semaphore
+    schema: tap_semaphore
+    database: raw
+    tables:
+      - name: job

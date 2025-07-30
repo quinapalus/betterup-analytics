@@ -1,0 +1,27 @@
+version: 2
+
+models:
+  - name: int_iai_statistics_score_by_rg
+    description: Calculates mean, median, mode for member scores per reporting group.
+
+    columns:
+      - name: reporting_group_id
+        description: reporting group id
+        tests:
+          - unique
+          - not_null
+
+      - name: avg_score
+        description: mean of the member scores per reporting group.
+        tests:
+          - not_null
+
+      - name: median_score
+        description: median of the member scores per reporting group.
+        tests:
+          - not_null
+
+      - name: mode_score
+        description: mode of the member scores per reporting group.
+        tests:
+          - not_null

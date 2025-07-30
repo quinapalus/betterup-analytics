@@ -1,0 +1,78 @@
+version: 2
+models:
+  - name: dim_coach_assignments
+    description: >
+      This protected model sanitizes overlapping coach assignments with same date
+      of creation
+      by choosing the assignment with an open end date (or the most recent end date).
+
+    columns:
+      - name: coach_assignment_id
+        description: Primary Key.
+        tests:
+          - unique
+          - not_null
+
+      - name: member_id
+        description: >
+          Denormalized foreign key to the member associated with the coach
+          assignment.
+        tests:
+          - not_null
+
+      - name: coach_id
+        description: >
+          Denormalized foreign key to the coach associated with the coach
+          assignment.
+        tests:
+          - not_null
+          - relationships:
+              to: ref('int_app__users')
+              field: user_id
+
+      - name: created_at
+        description: >
+          Timestamp denoting when the coach assignment was created.
+        tests:
+          - not_null
+
+      - name: ended_at
+        description: >
+          Timestamp denoting when the coach assignment ended.
+
+      - name: is_coach_assignment_ended
+        description: >
+          Boolean denoting if the coach assignment ended; in other words,
+          is the member still matched to the coach as part of this coach assignment?
+        tests:
+          - not_null
+          - accepted_values:
+              values: [true, false]
+
+      - name: coach_assignment_duration_days
+        description: >
+          Integer denoting how long the coach assignment has been active in number
+          of days.
+        tests:
+          - not_null
+
+      - name: role
+        description: >
+          String denoting the type of coaching associated with the
+          coach assignment.
+
+      - name: is_group_coaching_assignment
+        description: >
+          True if assignment is a group coaching assignment.
+
+      - name: coach_recommendation_id
+        description: >
+          Foreign key to the associated recommendation. NULL if not preceded by
+          a recommendation (such as manual match).
+
+      - name: group_coaching_registration_id
+        description: >
+          ID of the group coaching registration associated with this assignment (blank for
+           non-group assignments)
+
+

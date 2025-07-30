@@ -1,0 +1,11 @@
+version: 2
+models:
+  - name: stg_hubspot__contact_lists
+    description: >
+      Contains all unique hubspot contact lists
+    columns:
+      - name: hubspot_contact_list_id
+        description: Unique identifier
+        tests:
+          - unique
+          - not_null

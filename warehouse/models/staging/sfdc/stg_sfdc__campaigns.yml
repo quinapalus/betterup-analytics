@@ -1,0 +1,286 @@
+version: 2
+
+models:
+  - name: stg_sfdc__campaigns
+    description: The DBT model stg_sfdc__campaigns consolidates Salesforce Campaign
+      data and provides fields such as sfdc_campaign_id, parent_sfdc_campaign_id,
+      publisher, campaign_name, channel, super_channel, marketing_program, campaign_sourced_by,
+      tactic, campaign_type, audience, content_title, budgeted_cost, currency_iso_code,
+      and is_deleted. It also provides an additional column 'super_channel', which
+      consolidates the 'super_channel_raw' values into a formatted version. [GenAI
+      Description]
+    columns:
+      - name: sfdc_campaign_id
+        tests:
+          - unique
+          - not_null
+        description: The 'sfdc_campaign_id' column contains the ID of the Salesforce
+          marketing campaign. [GenAI Description]
+
+      - name: parent_sfdc_campaign_id
+        description: ""
+
+      - name: publisher
+        description: ""
+
+      - name: campaign_name
+        description: ""
+
+      - name: channel
+        description: ""
+
+      - name: super_channel_raw
+        description: ""
+
+      - name: super_channel
+        description: ""
+
+      - name: marketing_program
+        description: ""
+
+      - name: campaign_sourced_by
+        description: ""
+
+      - name: tactic
+        description: ""
+
+      - name: campaign_type
+        description: ""
+
+      - name: audience
+        description: ""
+
+      - name: content_title
+        description: ""
+
+      - name: budgeted_cost
+        description: ""
+
+      - name: currency_iso_code
+        description: ""
+
+      - name: is_deleted
+        description: ""
+
+      - name: actual_cost
+        description: ""
+
+      - name: amount_all_opportunities
+        description: ""
+
+      - name: amount_won_opportunities
+        description: ""
+
+      - name: budget_category_c
+        description: ""
+
+      - name: campaign_briefing_c
+        description: ""
+
+      - name: campaign_plan_c
+        description: ""
+
+      - name: campaign_resources_c
+        description: ""
+
+      - name: cfcr_exclude_from_campaign_influence_c
+        description: ""
+
+      - name: cfcr_fccrm_campaign_threshold_c
+        description: ""
+
+      - name: content_desciption_c
+        description: ""
+
+      - name: count_c
+        description: ""
+
+      - name: created_by_id
+        description: ""
+
+      - name: current_fm_to_opportunity_conv_rate_c
+        description: ""
+
+      - name: current_prospect_to_fm_conversion_rate_c
+        description: ""
+
+      - name: current_win_rate_c
+        description: ""
+
+      - name: data_quality_description_c
+        description: ""
+
+      - name: data_quality_score_c
+        description: ""
+
+      - name: description
+        description: ""
+
+      - name: dscorgpkg_suppress_from_discover_org_c
+        description: ""
+
+      - name: end_date
+        description: ""
+
+      - name: expected_first_meetings_c
+        description: ""
+
+      - name: expected_new_bookings_c
+        description: ""
+
+      - name: expected_new_customers_c
+        description: ""
+
+      - name: expected_new_opportuntiies_c
+        description: ""
+
+      - name: expected_participants_c
+        description: ""
+
+      - name: expected_response
+        description: ""
+
+      - name: expected_revenue
+        description: ""
+
+      - name: fcrm_fcr_bypass_nurture_timeout_c
+        description: ""
+
+      - name: fcrm_fcr_campaign_precedence_c
+        description: ""
+
+      - name: fcrm_fcr_campaign_sourced_by_c
+        description: ""
+
+      - name: fcrm_fcr_cascade_parent_id_c
+        description: ""
+
+      - name: fcrm_fcr_cascade_parent_c
+        description: ""
+
+      - name: fcrm_fcr_closed_op_revenue_model_1_c
+        description: ""
+
+      - name: fcrm_fcr_closed_op_revenue_model_2_c
+        description: ""
+
+      - name: fcrm_fcr_closed_op_revenue_model_3_c
+        description: ""
+
+      - name: fcrm_fcr_cost_per_response_c
+        description: ""
+
+      - name: fcrm_fcr_cost_per_response_with_repeats_c
+        description: ""
+
+      - name: fcrm_fcr_lost_op_revenue_model_1_c
+        description: ""
+
+      - name: fcrm_fcr_lost_op_revenue_model_2_c
+        description: ""
+
+      - name: fcrm_fcr_lost_op_revenue_model_3_c
+        description: ""
+
+      - name: fcrm_fcr_net_new_names_c
+        description: ""
+
+      - name: fcrm_fcr_net_new_response_ratio_c
+        description: ""
+
+      - name: fcrm_fcr_open_op_revenue_model_1_c
+        description: ""
+
+      - name: fcrm_fcr_open_op_revenue_model_2_c
+        description: ""
+
+      - name: fcrm_fcr_open_op_revenue_model_3_c
+        description: ""
+
+      - name: fcrm_fcr_qr_s_c
+        description: ""
+
+      - name: fcrm_fcr_qr_to_opportunity_ratio_c
+        description: ""
+
+      - name: fcrm_fcr_qualified_responses_with_repeats_c
+        description: ""
+
+      - name: fcrm_fcr_repeat_campaign_number_c
+        description: ""
+
+      - name: fcrm_fcr_repeat_response_timeout_segments_c
+        description: ""
+
+      - name: fcrm_fcr_repeat_responses_allowed_c
+        description: ""
+
+      - name: fcrm_fcr_responses_to_won_c
+        description: ""
+
+      - name: fcrm_fcr_total_responses_with_repeats_c
+        description: ""
+
+      - name: fcrm_fcr_total_op_revenue_model_1_c
+        description: ""
+
+      - name: fcrm_fcr_total_op_revenue_model_2_c
+        description: ""
+
+      - name: fcrm_fcr_total_op_revenue_model_3_c
+        description: ""
+
+      - name: fcrm_me_exclude_from_reactivation_c
+        description: ""
+
+      - name: fcsc_fcdsc_capture_digital_touch_data_c
+        description: ""
+
+      - name: highspot_campaign_page_c
+        description: ""
+
+      - name: is_active
+        description: ""
+
+      - name: last_modified_by_id
+        description: ""
+
+      - name: number_of_contacts
+        description: ""
+
+      - name: number_of_converted_leads
+        description: ""
+
+      - name: number_of_leads
+        description: ""
+
+      - name: number_of_opportunities
+        description: ""
+
+      - name: number_of_responses
+        description: ""
+
+      - name: number_of_won_opportunities
+        description: ""
+
+      - name: number_sent
+        description: ""
+
+      - name: owner_id
+        description: ""
+
+      - name: region_c
+        description: ""
+
+      - name: registration_page_c
+        description: ""
+
+      - name: start_date
+        description: ""
+
+      - name: status
+        description: ""
+
+      - name: sub_region_c
+        description: ""
+

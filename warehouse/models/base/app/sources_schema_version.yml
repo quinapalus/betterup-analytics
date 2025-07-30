@@ -1,0 +1,10 @@
+version: 2
+
+sources:
+  - name: version
+    database: raw
+    ## Schema is dynamic based on the DEPLOY_ENVIRONMENT environment variable.
+    schema: "{{ 'airbyte_version' if env_var('DEPLOYMENT_ENVIRONMENT', '') == 'US Gov' else 'stitch_version' }}"
+
+    tables:
+      - name: versions

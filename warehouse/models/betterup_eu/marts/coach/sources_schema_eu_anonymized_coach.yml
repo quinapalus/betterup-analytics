@@ -1,0 +1,13 @@
+version: 2
+
+sources:
+  - name: analytics_eu
+    database: analytics
+    schema: coach
+    loader: stitch
+
+    tables:
+      - name: coach_comp__5in90_sessions
+      - name: coach_comp__sessions
+      - name: coach_comp__assessments
+      - name: progress_index__metadata

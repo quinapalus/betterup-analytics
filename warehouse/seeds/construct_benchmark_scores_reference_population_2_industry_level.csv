@@ -1,0 +1,1471 @@
+reference_population_id,reference_population_key,benchmark_type,industry,level,key,mean
+2,global_2022,industry_level,Education Industry,Individual Contributor,alignment,4.110
+2,global_2022,industry_level,Education Industry,Individual Contributor,authenticity,3.602
+2,global_2022,industry_level,Education Industry,Individual Contributor,belonging_index,3.571
+2,global_2022,industry_level,Education Industry,Individual Contributor,burnout,2.940
+2,global_2022,industry_level,Education Industry,Individual Contributor,care_adaptive_coping,3.318
+2,global_2022,industry_level,Education Industry,Individual Contributor,care_awareness_agency,3.804
+2,global_2022,industry_level,Education Industry,Individual Contributor,care_fulfillment,4.079
+2,global_2022,industry_level,Education Industry,Individual Contributor,care_outlook,4.006
+2,global_2022,industry_level,Education Industry,Individual Contributor,care_self_care,3.049
+2,global_2022,industry_level,Education Industry,Individual Contributor,care_well_being,3.659
+2,global_2022,industry_level,Education Industry,Individual Contributor,coaching,3.615
+2,global_2022,industry_level,Education Industry,Individual Contributor,coaching_culture,3.556
+2,global_2022,industry_level,Education Industry,Individual Contributor,coaching_culture_coworkers,3.766
+2,global_2022,industry_level,Education Industry,Individual Contributor,coaching_culture_org_practices,3.494
+2,global_2022,industry_level,Education Industry,Individual Contributor,coaching_culture_psy_safety,3.374
+2,global_2022,industry_level,Education Industry,Individual Contributor,cognitive_agility,3.953
+2,global_2022,industry_level,Education Industry,Individual Contributor,emotional_regulation,3.566
+2,global_2022,industry_level,Education Industry,Individual Contributor,empathy,4.460
+2,global_2022,industry_level,Education Industry,Individual Contributor,empowerment,3.903
+2,global_2022,industry_level,Education Industry,Individual Contributor,encouraging_participation,4.043
+2,global_2022,industry_level,Education Industry,Individual Contributor,engagement,3.779
+2,global_2022,industry_level,Education Industry,Individual Contributor,ex_authenticity,3.602
+2,global_2022,industry_level,Education Industry,Individual Contributor,ex_belonging,3.683
+2,global_2022,industry_level,Education Industry,Individual Contributor,ex_engagement,3.779
+2,global_2022,industry_level,Education Industry,Individual Contributor,ex_index,3.865
+2,global_2022,industry_level,Education Industry,Individual Contributor,ex_optimism,3.890
+2,global_2022,industry_level,Education Industry,Individual Contributor,ex_purpose_and_meaning,4.108
+2,global_2022,industry_level,Education Industry,Individual Contributor,ex_social_connection,4.086
+2,global_2022,industry_level,Education Industry,Individual Contributor,feedback,3.766
+2,global_2022,industry_level,Education Industry,Individual Contributor,focus,3.764
+2,global_2022,industry_level,Education Industry,Individual Contributor,goal_attainment,4.182
+2,global_2022,industry_level,Education Industry,Individual Contributor,growth_mindset,4.061
+2,global_2022,industry_level,Education Industry,Individual Contributor,hope,3.916
+2,global_2022,industry_level,Education Industry,Individual Contributor,inclusive_leadership,4.106
+2,global_2022,industry_level,Education Industry,Individual Contributor,intent_to_stay,3.612
+2,global_2022,industry_level,Education Industry,Individual Contributor,job_satisfaction,3.751
+2,global_2022,industry_level,Education Industry,Individual Contributor,life_satisfaction,3.921
+2,global_2022,industry_level,Education Industry,Individual Contributor,locus_of_control_internal,3.890
+2,global_2022,industry_level,Education Industry,Individual Contributor,manager_job_performance,3.761
+2,global_2022,industry_level,Education Industry,Individual Contributor,nutrition,3.591
+2,global_2022,industry_level,Education Industry,Individual Contributor,optimism,3.890
+2,global_2022,industry_level,Education Industry,Individual Contributor,perceived_organizational_support,3.645
+2,global_2022,industry_level,Education Industry,Individual Contributor,physical_activity,3.289
+2,global_2022,industry_level,Education Industry,Individual Contributor,problem_solving,4.011
+2,global_2022,industry_level,Education Industry,Individual Contributor,productivity,7.600
+2,global_2022,industry_level,Education Industry,Individual Contributor,psycap,3.905
+2,global_2022,industry_level,Education Industry,Individual Contributor,psychological_safety,3.374
+2,global_2022,industry_level,Education Industry,Individual Contributor,purpose_and_meaning,4.108
+2,global_2022,industry_level,Education Industry,Individual Contributor,recognition,4.035
+2,global_2022,industry_level,Education Industry,Individual Contributor,relationship_building,3.912
+2,global_2022,industry_level,Education Industry,Individual Contributor,resilience,3.654
+2,global_2022,industry_level,Education Industry,Individual Contributor,rest,3.386
+2,global_2022,industry_level,Education Industry,Individual Contributor,rix,4.025
+2,global_2022,industry_level,Education Industry,Individual Contributor,sales_excellence,3.907
+2,global_2022,industry_level,Education Industry,Individual Contributor,self_awareness,3.866
+2,global_2022,industry_level,Education Industry,Individual Contributor,self_compassion,2.706
+2,global_2022,industry_level,Education Industry,Individual Contributor,self_efficacy,4.328
+2,global_2022,industry_level,Education Industry,Individual Contributor,sense_of_belonging,3.683
+2,global_2022,industry_level,Education Industry,Individual Contributor,social_connection,4.086
+2,global_2022,industry_level,Education Industry,Individual Contributor,strategic_planning,4.150
+2,global_2022,industry_level,Education Industry,Individual Contributor,stress_management,2.905
+2,global_2022,industry_level,Education Industry,Individual Contributor,team_agility,3.840
+2,global_2022,industry_level,Education Industry,Individual Contributor,team_cohesion,3.718
+2,global_2022,industry_level,Education Industry,Individual Contributor,team_conflict,2.282
+2,global_2022,industry_level,Education Industry,Individual Contributor,team_feedback,3.766
+2,global_2022,industry_level,Education Industry,Individual Contributor,team_innovation,3.586
+2,global_2022,industry_level,Education Industry,Individual Contributor,team_performance,3.769
+2,global_2022,industry_level,Education Industry,Individual Contributor,team_risk_taking,3.344
+2,global_2022,industry_level,Education Industry,Individual Contributor,well_being,3.659
+2,global_2022,industry_level,Education Industry,Individual Contributor,work_life_balance,3.478
+2,global_2022,industry_level,Education Industry,Manager,alignment,4.088
+2,global_2022,industry_level,Education Industry,Manager,authenticity,3.666
+2,global_2022,industry_level,Education Industry,Manager,belonging_index,3.821
+2,global_2022,industry_level,Education Industry,Manager,burnout,3.119
+2,global_2022,industry_level,Education Industry,Manager,care_adaptive_coping,3.280
+2,global_2022,industry_level,Education Industry,Manager,care_awareness_agency,3.688
+2,global_2022,industry_level,Education Industry,Manager,care_fulfillment,4.123
+2,global_2022,industry_level,Education Industry,Manager,care_outlook,3.936
+2,global_2022,industry_level,Education Industry,Manager,care_self_care,3.024
+2,global_2022,industry_level,Education Industry,Manager,care_well_being,3.619
+2,global_2022,industry_level,Education Industry,Manager,coaching,3.814
+2,global_2022,industry_level,Education Industry,Manager,coaching_culture,3.512
+2,global_2022,industry_level,Education Industry,Manager,coaching_culture_coworkers,3.834
+2,global_2022,industry_level,Education Industry,Manager,coaching_culture_org_practices,3.502
+2,global_2022,industry_level,Education Industry,Manager,coaching_culture_psy_safety,3.237
+2,global_2022,industry_level,Education Industry,Manager,cognitive_agility,3.945
+2,global_2022,industry_level,Education Industry,Manager,emotional_regulation,3.590
+2,global_2022,industry_level,Education Industry,Manager,empathy,4.359
+2,global_2022,industry_level,Education Industry,Manager,empowerment,4.042
+2,global_2022,industry_level,Education Industry,Manager,encouraging_participation,4.354
+2,global_2022,industry_level,Education Industry,Manager,engagement,3.946
+2,global_2022,industry_level,Education Industry,Manager,ex_authenticity,3.666
+2,global_2022,industry_level,Education Industry,Manager,ex_belonging,3.862
+2,global_2022,industry_level,Education Industry,Manager,ex_engagement,3.946
+2,global_2022,industry_level,Education Industry,Manager,ex_index,3.932
+2,global_2022,industry_level,Education Industry,Manager,ex_optimism,3.815
+2,global_2022,industry_level,Education Industry,Manager,ex_purpose_and_meaning,4.223
+2,global_2022,industry_level,Education Industry,Manager,ex_social_connection,4.025
+2,global_2022,industry_level,Education Industry,Manager,feedback,3.834
+2,global_2022,industry_level,Education Industry,Manager,focus,3.641
+2,global_2022,industry_level,Education Industry,Manager,goal_attainment,4.040
+2,global_2022,industry_level,Education Industry,Manager,growth_mindset,4.057
+2,global_2022,industry_level,Education Industry,Manager,hope,3.867
+2,global_2022,industry_level,Education Industry,Manager,inclusive_leadership,4.207
+2,global_2022,industry_level,Education Industry,Manager,intent_to_stay,3.893
+2,global_2022,industry_level,Education Industry,Manager,job_satisfaction,3.861
+2,global_2022,industry_level,Education Industry,Manager,life_satisfaction,3.947
+2,global_2022,industry_level,Education Industry,Manager,locus_of_control_internal,3.872
+2,global_2022,industry_level,Education Industry,Manager,manager_job_performance,3.743
+2,global_2022,industry_level,Education Industry,Manager,nutrition,3.621
+2,global_2022,industry_level,Education Industry,Manager,optimism,3.815
+2,global_2022,industry_level,Education Industry,Manager,perceived_organizational_support,3.751
+2,global_2022,industry_level,Education Industry,Manager,physical_activity,3.317
+2,global_2022,industry_level,Education Industry,Manager,problem_solving,4.058
+2,global_2022,industry_level,Education Industry,Manager,productivity,7.705
+2,global_2022,industry_level,Education Industry,Manager,psycap,3.846
+2,global_2022,industry_level,Education Industry,Manager,psychological_safety,3.237
+2,global_2022,industry_level,Education Industry,Manager,purpose_and_meaning,4.223
+2,global_2022,industry_level,Education Industry,Manager,recognition,4.154
+2,global_2022,industry_level,Education Industry,Manager,relationship_building,4.194
+2,global_2022,industry_level,Education Industry,Manager,resilience,3.689
+2,global_2022,industry_level,Education Industry,Manager,rest,3.308
+2,global_2022,industry_level,Education Industry,Manager,rix,4.055
+2,global_2022,industry_level,Education Industry,Manager,sales_excellence,3.908
+2,global_2022,industry_level,Education Industry,Manager,self_awareness,3.796
+2,global_2022,industry_level,Education Industry,Manager,self_compassion,2.712
+2,global_2022,industry_level,Education Industry,Manager,self_efficacy,4.192
+2,global_2022,industry_level,Education Industry,Manager,sense_of_belonging,3.862
+2,global_2022,industry_level,Education Industry,Manager,social_connection,4.025
+2,global_2022,industry_level,Education Industry,Manager,strategic_planning,3.943
+2,global_2022,industry_level,Education Industry,Manager,stress_management,2.833
+2,global_2022,industry_level,Education Industry,Manager,team_agility,3.895
+2,global_2022,industry_level,Education Industry,Manager,team_cohesion,3.798
+2,global_2022,industry_level,Education Industry,Manager,team_conflict,2.202
+2,global_2022,industry_level,Education Industry,Manager,team_feedback,3.834
+2,global_2022,industry_level,Education Industry,Manager,team_innovation,3.658
+2,global_2022,industry_level,Education Industry,Manager,team_performance,3.927
+2,global_2022,industry_level,Education Industry,Manager,team_risk_taking,3.543
+2,global_2022,industry_level,Education Industry,Manager,well_being,3.626
+2,global_2022,industry_level,Education Industry,Manager,work_life_balance,3.070
+2,global_2022,industry_level,Energy Industry,Manager,alignment,3.845
+2,global_2022,industry_level,Energy Industry,Manager,authenticity,3.512
+2,global_2022,industry_level,Energy Industry,Manager,belonging_index,3.662
+2,global_2022,industry_level,Energy Industry,Manager,burnout,3.118
+2,global_2022,industry_level,Energy Industry,Manager,care_adaptive_coping,3.254
+2,global_2022,industry_level,Energy Industry,Manager,care_awareness_agency,3.518
+2,global_2022,industry_level,Energy Industry,Manager,care_fulfillment,4.002
+2,global_2022,industry_level,Energy Industry,Manager,care_outlook,3.805
+2,global_2022,industry_level,Energy Industry,Manager,care_self_care,2.947
+2,global_2022,industry_level,Energy Industry,Manager,care_well_being,3.515
+2,global_2022,industry_level,Energy Industry,Manager,coaching,3.483
+2,global_2022,industry_level,Energy Industry,Manager,coaching_culture,3.592
+2,global_2022,industry_level,Energy Industry,Manager,coaching_culture_coworkers,3.721
+2,global_2022,industry_level,Energy Industry,Manager,coaching_culture_org_practices,3.644
+2,global_2022,industry_level,Energy Industry,Manager,coaching_culture_psy_safety,3.387
+2,global_2022,industry_level,Energy Industry,Manager,cognitive_agility,3.815
+2,global_2022,industry_level,Energy Industry,Manager,emotional_regulation,3.575
+2,global_2022,industry_level,Energy Industry,Manager,empathy,4.137
+2,global_2022,industry_level,Energy Industry,Manager,empowerment,3.911
+2,global_2022,industry_level,Energy Industry,Manager,encouraging_participation,4.146
+2,global_2022,industry_level,Energy Industry,Manager,engagement,3.779
+2,global_2022,industry_level,Energy Industry,Manager,ex_authenticity,3.512
+2,global_2022,industry_level,Energy Industry,Manager,ex_belonging,3.810
+2,global_2022,industry_level,Energy Industry,Manager,ex_engagement,3.779
+2,global_2022,industry_level,Energy Industry,Manager,ex_index,3.794
+2,global_2022,industry_level,Energy Industry,Manager,ex_optimism,3.710
+2,global_2022,industry_level,Energy Industry,Manager,ex_purpose_and_meaning,4.070
+2,global_2022,industry_level,Energy Industry,Manager,ex_social_connection,3.897
+2,global_2022,industry_level,Energy Industry,Manager,feedback,3.721
+2,global_2022,industry_level,Energy Industry,Manager,focus,3.400
+2,global_2022,industry_level,Energy Industry,Manager,goal_attainment,3.887
+2,global_2022,industry_level,Energy Industry,Manager,growth_mindset,3.678
+2,global_2022,industry_level,Energy Industry,Manager,hope,3.718
+2,global_2022,industry_level,Energy Industry,Manager,inclusive_leadership,4.014
+2,global_2022,industry_level,Energy Industry,Manager,intent_to_stay,4.261
+2,global_2022,industry_level,Energy Industry,Manager,job_satisfaction,3.889
+2,global_2022,industry_level,Energy Industry,Manager,life_satisfaction,3.917
+2,global_2022,industry_level,Energy Industry,Manager,locus_of_control_internal,3.889
+2,global_2022,industry_level,Energy Industry,Manager,manager_job_performance,3.441
+2,global_2022,industry_level,Energy Industry,Manager,nutrition,3.301
+2,global_2022,industry_level,Energy Industry,Manager,optimism,3.710
+2,global_2022,industry_level,Energy Industry,Manager,perceived_organizational_support,3.643
+2,global_2022,industry_level,Energy Industry,Manager,physical_activity,3.081
+2,global_2022,industry_level,Energy Industry,Manager,problem_solving,3.839
+2,global_2022,industry_level,Energy Industry,Manager,productivity,7.756
+2,global_2022,industry_level,Energy Industry,Manager,psycap,3.715
+2,global_2022,industry_level,Energy Industry,Manager,psychological_safety,3.387
+2,global_2022,industry_level,Energy Industry,Manager,purpose_and_meaning,4.070
+2,global_2022,industry_level,Energy Industry,Manager,recognition,3.926
+2,global_2022,industry_level,Energy Industry,Manager,relationship_building,4.109
+2,global_2022,industry_level,Energy Industry,Manager,resilience,3.656
+2,global_2022,industry_level,Energy Industry,Manager,rest,3.105
+2,global_2022,industry_level,Energy Industry,Manager,rix,3.884
+2,global_2022,industry_level,Energy Industry,Manager,sales_excellence,3.747
+2,global_2022,industry_level,Energy Industry,Manager,self_awareness,3.727
+2,global_2022,industry_level,Energy Industry,Manager,self_compassion,2.640
+2,global_2022,industry_level,Energy Industry,Manager,self_efficacy,4.079
+2,global_2022,industry_level,Energy Industry,Manager,sense_of_belonging,3.810
+2,global_2022,industry_level,Energy Industry,Manager,social_connection,3.897
+2,global_2022,industry_level,Energy Industry,Manager,strategic_planning,3.682
+2,global_2022,industry_level,Energy Industry,Manager,stress_management,2.910
+2,global_2022,industry_level,Energy Industry,Manager,team_agility,3.867
+2,global_2022,industry_level,Energy Industry,Manager,team_cohesion,3.820
+2,global_2022,industry_level,Energy Industry,Manager,team_conflict,2.180
+2,global_2022,industry_level,Energy Industry,Manager,team_feedback,3.721
+2,global_2022,industry_level,Energy Industry,Manager,team_innovation,3.555
+2,global_2022,industry_level,Energy Industry,Manager,team_performance,3.759
+2,global_2022,industry_level,Energy Industry,Manager,team_risk_taking,3.316
+2,global_2022,industry_level,Energy Industry,Manager,well_being,3.447
+2,global_2022,industry_level,Energy Industry,Manager,work_life_balance,2.921
+2,global_2022,industry_level,Financial Services Industry,Individual Contributor,alignment,3.885
+2,global_2022,industry_level,Financial Services Industry,Individual Contributor,authenticity,3.606
+2,global_2022,industry_level,Financial Services Industry,Individual Contributor,belonging_index,3.721
+2,global_2022,industry_level,Financial Services Industry,Individual Contributor,burnout,2.948
+2,global_2022,industry_level,Financial Services Industry,Individual Contributor,care_adaptive_coping,3.085
+2,global_2022,industry_level,Financial Services Industry,Individual Contributor,care_awareness_agency,3.545
+2,global_2022,industry_level,Financial Services Industry,Individual Contributor,care_fulfillment,3.899
+2,global_2022,industry_level,Financial Services Industry,Individual Contributor,care_outlook,3.696
+2,global_2022,industry_level,Financial Services Industry,Individual Contributor,care_self_care,2.768
+2,global_2022,industry_level,Financial Services Industry,Individual Contributor,care_well_being,3.411
+2,global_2022,industry_level,Financial Services Industry,Individual Contributor,coaching,3.390
+2,global_2022,industry_level,Financial Services Industry,Individual Contributor,coaching_culture,3.624
+2,global_2022,industry_level,Financial Services Industry,Individual Contributor,coaching_culture_coworkers,3.766
+2,global_2022,industry_level,Financial Services Industry,Individual Contributor,coaching_culture_org_practices,3.687
+2,global_2022,industry_level,Financial Services Industry,Individual Contributor,coaching_culture_psy_safety,3.306
+2,global_2022,industry_level,Financial Services Industry,Individual Contributor,cognitive_agility,3.780
+2,global_2022,industry_level,Financial Services Industry,Individual Contributor,emotional_regulation,3.421
+2,global_2022,industry_level,Financial Services Industry,Individual Contributor,empathy,4.325
+2,global_2022,industry_level,Financial Services Industry,Individual Contributor,empowerment,3.831
+2,global_2022,industry_level,Financial Services Industry,Individual Contributor,encouraging_participation,4.015
+2,global_2022,industry_level,Financial Services Industry,Individual Contributor,engagement,3.725
+2,global_2022,industry_level,Financial Services Industry,Individual Contributor,ex_authenticity,3.606
+2,global_2022,industry_level,Financial Services Industry,Individual Contributor,ex_belonging,3.839
+2,global_2022,industry_level,Financial Services Industry,Individual Contributor,ex_engagement,3.725
+2,global_2022,industry_level,Financial Services Industry,Individual Contributor,ex_index,3.762
+2,global_2022,industry_level,Financial Services Industry,Individual Contributor,ex_optimism,3.599
+2,global_2022,industry_level,Financial Services Industry,Individual Contributor,ex_purpose_and_meaning,3.897
+2,global_2022,industry_level,Financial Services Industry,Individual Contributor,ex_social_connection,3.972
+2,global_2022,industry_level,Financial Services Industry,Individual Contributor,feedback,3.766
+2,global_2022,industry_level,Financial Services Industry,Individual Contributor,focus,3.397
+2,global_2022,industry_level,Financial Services Industry,Individual Contributor,goal_attainment,3.842
+2,global_2022,industry_level,Financial Services Industry,Individual Contributor,growth_mindset,3.851
+2,global_2022,industry_level,Financial Services Industry,Individual Contributor,hope,3.623
+2,global_2022,industry_level,Financial Services Industry,Individual Contributor,inclusive_leadership,4.020
+2,global_2022,industry_level,Financial Services Industry,Individual Contributor,intent_to_stay,4.101
+2,global_2022,industry_level,Financial Services Industry,Individual Contributor,job_satisfaction,3.742
+2,global_2022,industry_level,Financial Services Industry,Individual Contributor,life_satisfaction,3.810
+2,global_2022,industry_level,Financial Services Industry,Individual Contributor,locus_of_control_internal,3.759
+2,global_2022,industry_level,Financial Services Industry,Individual Contributor,manager_job_performance,3.666
+2,global_2022,industry_level,Financial Services Industry,Individual Contributor,nutrition,3.667
+2,global_2022,industry_level,Financial Services Industry,Individual Contributor,optimism,3.599
+2,global_2022,industry_level,Financial Services Industry,Individual Contributor,perceived_organizational_support,3.987
+2,global_2022,industry_level,Financial Services Industry,Individual Contributor,physical_activity,3.360
+2,global_2022,industry_level,Financial Services Industry,Individual Contributor,problem_solving,3.811
+2,global_2022,industry_level,Financial Services Industry,Individual Contributor,productivity,7.187
+2,global_2022,industry_level,Financial Services Industry,Individual Contributor,psycap,3.613
+2,global_2022,industry_level,Financial Services Industry,Individual Contributor,psychological_safety,3.306
+2,global_2022,industry_level,Financial Services Industry,Individual Contributor,purpose_and_meaning,3.897
+2,global_2022,industry_level,Financial Services Industry,Individual Contributor,recognition,3.956
+2,global_2022,industry_level,Financial Services Industry,Individual Contributor,relationship_building,3.999
+2,global_2022,industry_level,Financial Services Industry,Individual Contributor,resilience,3.485
+2,global_2022,industry_level,Financial Services Industry,Individual Contributor,rest,3.257
+2,global_2022,industry_level,Financial Services Industry,Individual Contributor,rix,3.834
+2,global_2022,industry_level,Financial Services Industry,Individual Contributor,sales_excellence,3.695
+2,global_2022,industry_level,Financial Services Industry,Individual Contributor,self_awareness,3.603
+2,global_2022,industry_level,Financial Services Industry,Individual Contributor,self_compassion,2.485
+2,global_2022,industry_level,Financial Services Industry,Individual Contributor,self_efficacy,3.986
+2,global_2022,industry_level,Financial Services Industry,Individual Contributor,sense_of_belonging,3.839
+2,global_2022,industry_level,Financial Services Industry,Individual Contributor,social_connection,3.972
+2,global_2022,industry_level,Financial Services Industry,Individual Contributor,strategic_planning,3.588
+2,global_2022,industry_level,Financial Services Industry,Individual Contributor,stress_management,2.768
+2,global_2022,industry_level,Financial Services Industry,Individual Contributor,team_agility,3.871
+2,global_2022,industry_level,Financial Services Industry,Individual Contributor,team_cohesion,3.960
+2,global_2022,industry_level,Financial Services Industry,Individual Contributor,team_conflict,2.040
+2,global_2022,industry_level,Financial Services Industry,Individual Contributor,team_feedback,3.766
+2,global_2022,industry_level,Financial Services Industry,Individual Contributor,team_innovation,3.592
+2,global_2022,industry_level,Financial Services Industry,Individual Contributor,team_performance,3.853
+2,global_2022,industry_level,Financial Services Industry,Individual Contributor,team_risk_taking,3.525
+2,global_2022,industry_level,Financial Services Industry,Individual Contributor,well_being,3.516
+2,global_2022,industry_level,Financial Services Industry,Individual Contributor,work_life_balance,3.199
+2,global_2022,industry_level,Financial Services Industry,Manager,alignment,4.032
+2,global_2022,industry_level,Financial Services Industry,Manager,authenticity,3.796
+2,global_2022,industry_level,Financial Services Industry,Manager,belonging_index,3.844
+2,global_2022,industry_level,Financial Services Industry,Manager,burnout,3.090
+2,global_2022,industry_level,Financial Services Industry,Manager,care_adaptive_coping,3.147
+2,global_2022,industry_level,Financial Services Industry,Manager,care_awareness_agency,3.701
+2,global_2022,industry_level,Financial Services Industry,Manager,care_fulfillment,4.046
+2,global_2022,industry_level,Financial Services Industry,Manager,care_outlook,3.883
+2,global_2022,industry_level,Financial Services Industry,Manager,care_self_care,2.684
+2,global_2022,industry_level,Financial Services Industry,Manager,care_well_being,3.500
+2,global_2022,industry_level,Financial Services Industry,Manager,coaching,3.796
+2,global_2022,industry_level,Financial Services Industry,Manager,coaching_culture,3.788
+2,global_2022,industry_level,Financial Services Industry,Manager,coaching_culture_coworkers,3.918
+2,global_2022,industry_level,Financial Services Industry,Manager,coaching_culture_org_practices,3.869
+2,global_2022,industry_level,Financial Services Industry,Manager,coaching_culture_psy_safety,3.585
+2,global_2022,industry_level,Financial Services Industry,Manager,cognitive_agility,3.918
+2,global_2022,industry_level,Financial Services Industry,Manager,emotional_regulation,3.670
+2,global_2022,industry_level,Financial Services Industry,Manager,empathy,4.234
+2,global_2022,industry_level,Financial Services Industry,Manager,empowerment,3.998
+2,global_2022,industry_level,Financial Services Industry,Manager,encouraging_participation,4.277
+2,global_2022,industry_level,Financial Services Industry,Manager,engagement,3.938
+2,global_2022,industry_level,Financial Services Industry,Manager,ex_authenticity,3.796
+2,global_2022,industry_level,Financial Services Industry,Manager,ex_belonging,3.995
+2,global_2022,industry_level,Financial Services Industry,Manager,ex_engagement,3.938
+2,global_2022,industry_level,Financial Services Industry,Manager,ex_index,3.937
+2,global_2022,industry_level,Financial Services Industry,Manager,ex_optimism,3.840
+2,global_2022,industry_level,Financial Services Industry,Manager,ex_purpose_and_meaning,4.074
+2,global_2022,industry_level,Financial Services Industry,Manager,ex_social_connection,4.007
+2,global_2022,industry_level,Financial Services Industry,Manager,feedback,3.918
+2,global_2022,industry_level,Financial Services Industry,Manager,focus,3.619
+2,global_2022,industry_level,Financial Services Industry,Manager,goal_attainment,3.950
+2,global_2022,industry_level,Financial Services Industry,Manager,growth_mindset,3.921
+2,global_2022,industry_level,Financial Services Industry,Manager,hope,3.827
+2,global_2022,industry_level,Financial Services Industry,Manager,inclusive_leadership,4.138
+2,global_2022,industry_level,Financial Services Industry,Manager,intent_to_stay,4.137
+2,global_2022,industry_level,Financial Services Industry,Manager,job_satisfaction,3.937
+2,global_2022,industry_level,Financial Services Industry,Manager,life_satisfaction,3.957
+2,global_2022,industry_level,Financial Services Industry,Manager,locus_of_control_internal,3.877
+2,global_2022,industry_level,Financial Services Industry,Manager,manager_job_performance,3.650
+2,global_2022,industry_level,Financial Services Industry,Manager,nutrition,3.764
+2,global_2022,industry_level,Financial Services Industry,Manager,optimism,3.840
+2,global_2022,industry_level,Financial Services Industry,Manager,perceived_organizational_support,3.997
+2,global_2022,industry_level,Financial Services Industry,Manager,physical_activity,3.550
+2,global_2022,industry_level,Financial Services Industry,Manager,problem_solving,3.955
+2,global_2022,industry_level,Financial Services Industry,Manager,productivity,7.668
+2,global_2022,industry_level,Financial Services Industry,Manager,psycap,3.832
+2,global_2022,industry_level,Financial Services Industry,Manager,psychological_safety,3.585
+2,global_2022,industry_level,Financial Services Industry,Manager,purpose_and_meaning,4.074
+2,global_2022,industry_level,Financial Services Industry,Manager,recognition,4.025
+2,global_2022,industry_level,Financial Services Industry,Manager,relationship_building,4.194
+2,global_2022,industry_level,Financial Services Industry,Manager,resilience,3.740
+2,global_2022,industry_level,Financial Services Industry,Manager,rest,3.467
+2,global_2022,industry_level,Financial Services Industry,Manager,rix,3.991
+2,global_2022,industry_level,Financial Services Industry,Manager,sales_excellence,3.887
+2,global_2022,industry_level,Financial Services Industry,Manager,self_awareness,3.547
+2,global_2022,industry_level,Financial Services Industry,Manager,self_compassion,2.470
+2,global_2022,industry_level,Financial Services Industry,Manager,self_efficacy,4.022
+2,global_2022,industry_level,Financial Services Industry,Manager,sense_of_belonging,3.995
+2,global_2022,industry_level,Financial Services Industry,Manager,social_connection,4.007
+2,global_2022,industry_level,Financial Services Industry,Manager,strategic_planning,3.817
+2,global_2022,industry_level,Financial Services Industry,Manager,stress_management,2.680
+2,global_2022,industry_level,Financial Services Industry,Manager,team_agility,3.931
+2,global_2022,industry_level,Financial Services Industry,Manager,team_cohesion,4.018
+2,global_2022,industry_level,Financial Services Industry,Manager,team_conflict,1.982
+2,global_2022,industry_level,Financial Services Industry,Manager,team_feedback,3.823
+2,global_2022,industry_level,Financial Services Industry,Manager,team_innovation,3.670
+2,global_2022,industry_level,Financial Services Industry,Manager,team_performance,3.893
+2,global_2022,industry_level,Financial Services Industry,Manager,team_risk_taking,3.605
+2,global_2022,industry_level,Financial Services Industry,Manager,well_being,3.649
+2,global_2022,industry_level,Financial Services Industry,Manager,work_life_balance,2.847
+2,global_2022,industry_level,Government and Public Sector,Manager,alignment,4.001
+2,global_2022,industry_level,Government and Public Sector,Manager,authenticity,3.568
+2,global_2022,industry_level,Government and Public Sector,Manager,belonging_index,3.907
+2,global_2022,industry_level,Government and Public Sector,Manager,burnout,3.182
+2,global_2022,industry_level,Government and Public Sector,Manager,care_adaptive_coping,3.303
+2,global_2022,industry_level,Government and Public Sector,Manager,care_awareness_agency,3.598
+2,global_2022,industry_level,Government and Public Sector,Manager,care_fulfillment,4.164
+2,global_2022,industry_level,Government and Public Sector,Manager,care_outlook,3.878
+2,global_2022,industry_level,Government and Public Sector,Manager,care_self_care,3.040
+2,global_2022,industry_level,Government and Public Sector,Manager,care_well_being,3.604
+2,global_2022,industry_level,Government and Public Sector,Manager,coaching,3.634
+2,global_2022,industry_level,Government and Public Sector,Manager,coaching_culture,3.598
+2,global_2022,industry_level,Government and Public Sector,Manager,coaching_culture_coworkers,3.792
+2,global_2022,industry_level,Government and Public Sector,Manager,coaching_culture_org_practices,3.596
+2,global_2022,industry_level,Government and Public Sector,Manager,coaching_culture_psy_safety,3.388
+2,global_2022,industry_level,Government and Public Sector,Manager,cognitive_agility,3.865
+2,global_2022,industry_level,Government and Public Sector,Manager,emotional_regulation,3.657
+2,global_2022,industry_level,Government and Public Sector,Manager,empathy,4.182
+2,global_2022,industry_level,Government and Public Sector,Manager,empowerment,4.097
+2,global_2022,industry_level,Government and Public Sector,Manager,encouraging_participation,4.285
+2,global_2022,industry_level,Government and Public Sector,Manager,engagement,3.863
+2,global_2022,industry_level,Government and Public Sector,Manager,ex_authenticity,3.568
+2,global_2022,industry_level,Government and Public Sector,Manager,ex_belonging,3.966
+2,global_2022,industry_level,Government and Public Sector,Manager,ex_engagement,3.863
+2,global_2022,industry_level,Government and Public Sector,Manager,ex_index,3.899
+2,global_2022,industry_level,Government and Public Sector,Manager,ex_optimism,3.740
+2,global_2022,industry_level,Government and Public Sector,Manager,ex_purpose_and_meaning,4.297
+2,global_2022,industry_level,Government and Public Sector,Manager,ex_social_connection,4.021
+2,global_2022,industry_level,Government and Public Sector,Manager,feedback,3.792
+2,global_2022,industry_level,Government and Public Sector,Manager,focus,3.370
+2,global_2022,industry_level,Government and Public Sector,Manager,goal_attainment,3.954
+2,global_2022,industry_level,Government and Public Sector,Manager,growth_mindset,3.748
+2,global_2022,industry_level,Government and Public Sector,Manager,hope,3.819
+2,global_2022,industry_level,Government and Public Sector,Manager,inclusive_leadership,4.117
+2,global_2022,industry_level,Government and Public Sector,Manager,intent_to_stay,4.193
+2,global_2022,industry_level,Government and Public Sector,Manager,job_satisfaction,4.033
+2,global_2022,industry_level,Government and Public Sector,Manager,life_satisfaction,4.029
+2,global_2022,industry_level,Government and Public Sector,Manager,locus_of_control_internal,3.799
+2,global_2022,industry_level,Government and Public Sector,Manager,manager_job_performance,3.915
+2,global_2022,industry_level,Government and Public Sector,Manager,nutrition,3.496
+2,global_2022,industry_level,Government and Public Sector,Manager,optimism,3.740
+2,global_2022,industry_level,Government and Public Sector,Manager,perceived_organizational_support,3.828
+2,global_2022,industry_level,Government and Public Sector,Manager,physical_activity,3.308
+2,global_2022,industry_level,Government and Public Sector,Manager,problem_solving,3.940
+2,global_2022,industry_level,Government and Public Sector,Manager,productivity,7.593
+2,global_2022,industry_level,Government and Public Sector,Manager,psycap,3.787
+2,global_2022,industry_level,Government and Public Sector,Manager,psychological_safety,3.388
+2,global_2022,industry_level,Government and Public Sector,Manager,purpose_and_meaning,4.297
+2,global_2022,industry_level,Government and Public Sector,Manager,recognition,4.055
+2,global_2022,industry_level,Government and Public Sector,Manager,relationship_building,4.123
+2,global_2022,industry_level,Government and Public Sector,Manager,resilience,3.673
+2,global_2022,industry_level,Government and Public Sector,Manager,rest,3.239
+2,global_2022,industry_level,Government and Public Sector,Manager,rix,3.963
+2,global_2022,industry_level,Government and Public Sector,Manager,sales_excellence,3.800
+2,global_2022,industry_level,Government and Public Sector,Manager,self_awareness,3.759
+2,global_2022,industry_level,Government and Public Sector,Manager,self_compassion,2.780
+2,global_2022,industry_level,Government and Public Sector,Manager,self_efficacy,4.140
+2,global_2022,industry_level,Government and Public Sector,Manager,sense_of_belonging,3.966
+2,global_2022,industry_level,Government and Public Sector,Manager,social_connection,4.021
+2,global_2022,industry_level,Government and Public Sector,Manager,strategic_planning,3.716
+2,global_2022,industry_level,Government and Public Sector,Manager,stress_management,3.010
+2,global_2022,industry_level,Government and Public Sector,Manager,team_agility,3.948
+2,global_2022,industry_level,Government and Public Sector,Manager,team_cohesion,3.821
+2,global_2022,industry_level,Government and Public Sector,Manager,team_conflict,2.179
+2,global_2022,industry_level,Government and Public Sector,Manager,team_feedback,3.792
+2,global_2022,industry_level,Government and Public Sector,Manager,team_innovation,3.693
+2,global_2022,industry_level,Government and Public Sector,Manager,team_performance,3.984
+2,global_2022,industry_level,Government and Public Sector,Manager,team_risk_taking,3.578
+2,global_2022,industry_level,Government and Public Sector,Manager,well_being,3.544
+2,global_2022,industry_level,Government and Public Sector,Manager,work_life_balance,3.017
+2,global_2022,industry_level,Healthcare/Health Services Industry,Manager,alignment,3.970
+2,global_2022,industry_level,Healthcare/Health Services Industry,Manager,authenticity,3.711
+2,global_2022,industry_level,Healthcare/Health Services Industry,Manager,belonging_index,3.818
+2,global_2022,industry_level,Healthcare/Health Services Industry,Manager,burnout,3.174
+2,global_2022,industry_level,Healthcare/Health Services Industry,Manager,care_adaptive_coping,3.277
+2,global_2022,industry_level,Healthcare/Health Services Industry,Manager,care_awareness_agency,3.679
+2,global_2022,industry_level,Healthcare/Health Services Industry,Manager,care_fulfillment,4.174
+2,global_2022,industry_level,Healthcare/Health Services Industry,Manager,care_outlook,3.902
+2,global_2022,industry_level,Healthcare/Health Services Industry,Manager,care_self_care,2.927
+2,global_2022,industry_level,Healthcare/Health Services Industry,Manager,care_well_being,3.601
+2,global_2022,industry_level,Healthcare/Health Services Industry,Manager,coaching,3.654
+2,global_2022,industry_level,Healthcare/Health Services Industry,Manager,coaching_culture,3.730
+2,global_2022,industry_level,Healthcare/Health Services Industry,Manager,coaching_culture_coworkers,3.842
+2,global_2022,industry_level,Healthcare/Health Services Industry,Manager,coaching_culture_org_practices,3.713
+2,global_2022,industry_level,Healthcare/Health Services Industry,Manager,coaching_culture_psy_safety,3.544
+2,global_2022,industry_level,Healthcare/Health Services Industry,Manager,cognitive_agility,3.844
+2,global_2022,industry_level,Healthcare/Health Services Industry,Manager,emotional_regulation,3.728
+2,global_2022,industry_level,Healthcare/Health Services Industry,Manager,empathy,4.336
+2,global_2022,industry_level,Healthcare/Health Services Industry,Manager,empowerment,3.968
+2,global_2022,industry_level,Healthcare/Health Services Industry,Manager,encouraging_participation,4.278
+2,global_2022,industry_level,Healthcare/Health Services Industry,Manager,engagement,3.950
+2,global_2022,industry_level,Healthcare/Health Services Industry,Manager,ex_authenticity,3.711
+2,global_2022,industry_level,Healthcare/Health Services Industry,Manager,ex_belonging,3.918
+2,global_2022,industry_level,Healthcare/Health Services Industry,Manager,ex_engagement,3.950
+2,global_2022,industry_level,Healthcare/Health Services Industry,Manager,ex_index,3.974
+2,global_2022,industry_level,Healthcare/Health Services Industry,Manager,ex_optimism,3.812
+2,global_2022,industry_level,Healthcare/Health Services Industry,Manager,ex_purpose_and_meaning,4.299
+2,global_2022,industry_level,Healthcare/Health Services Industry,Manager,ex_social_connection,4.108
+2,global_2022,industry_level,Healthcare/Health Services Industry,Manager,feedback,3.842
+2,global_2022,industry_level,Healthcare/Health Services Industry,Manager,focus,3.573
+2,global_2022,industry_level,Healthcare/Health Services Industry,Manager,goal_attainment,4.003
+2,global_2022,industry_level,Healthcare/Health Services Industry,Manager,growth_mindset,3.912
+2,global_2022,industry_level,Healthcare/Health Services Industry,Manager,hope,3.805
+2,global_2022,industry_level,Healthcare/Health Services Industry,Manager,inclusive_leadership,4.145
+2,global_2022,industry_level,Healthcare/Health Services Industry,Manager,intent_to_stay,4.209
+2,global_2022,industry_level,Healthcare/Health Services Industry,Manager,job_satisfaction,3.981
+2,global_2022,industry_level,Healthcare/Health Services Industry,Manager,life_satisfaction,4.041
+2,global_2022,industry_level,Healthcare/Health Services Industry,Manager,locus_of_control_internal,3.900
+2,global_2022,industry_level,Healthcare/Health Services Industry,Manager,manager_job_performance,3.618
+2,global_2022,industry_level,Healthcare/Health Services Industry,Manager,nutrition,3.617
+2,global_2022,industry_level,Healthcare/Health Services Industry,Manager,optimism,3.812
+2,global_2022,industry_level,Healthcare/Health Services Industry,Manager,perceived_organizational_support,3.797
+2,global_2022,industry_level,Healthcare/Health Services Industry,Manager,physical_activity,3.304
+2,global_2022,industry_level,Healthcare/Health Services Industry,Manager,problem_solving,3.916
+2,global_2022,industry_level,Healthcare/Health Services Industry,Manager,productivity,7.994
+2,global_2022,industry_level,Healthcare/Health Services Industry,Manager,psycap,3.808
+2,global_2022,industry_level,Healthcare/Health Services Industry,Manager,psychological_safety,3.544
+2,global_2022,industry_level,Healthcare/Health Services Industry,Manager,purpose_and_meaning,4.299
+2,global_2022,industry_level,Healthcare/Health Services Industry,Manager,recognition,3.985
+2,global_2022,industry_level,Healthcare/Health Services Industry,Manager,relationship_building,4.196
+2,global_2022,industry_level,Healthcare/Health Services Industry,Manager,resilience,3.723
+2,global_2022,industry_level,Healthcare/Health Services Industry,Manager,rest,3.345
+2,global_2022,industry_level,Healthcare/Health Services Industry,Manager,rix,3.998
+2,global_2022,industry_level,Healthcare/Health Services Industry,Manager,sales_excellence,3.875
+2,global_2022,industry_level,Healthcare/Health Services Industry,Manager,self_awareness,3.724
+2,global_2022,industry_level,Healthcare/Health Services Industry,Manager,self_compassion,2.651
+2,global_2022,industry_level,Healthcare/Health Services Industry,Manager,self_efficacy,4.115
+2,global_2022,industry_level,Healthcare/Health Services Industry,Manager,sense_of_belonging,3.918
+2,global_2022,industry_level,Healthcare/Health Services Industry,Manager,social_connection,4.108
+2,global_2022,industry_level,Healthcare/Health Services Industry,Manager,strategic_planning,3.923
+2,global_2022,industry_level,Healthcare/Health Services Industry,Manager,stress_management,2.869
+2,global_2022,industry_level,Healthcare/Health Services Industry,Manager,team_agility,3.904
+2,global_2022,industry_level,Healthcare/Health Services Industry,Manager,team_cohesion,3.762
+2,global_2022,industry_level,Healthcare/Health Services Industry,Manager,team_conflict,2.238
+2,global_2022,industry_level,Healthcare/Health Services Industry,Manager,team_feedback,3.797
+2,global_2022,industry_level,Healthcare/Health Services Industry,Manager,team_innovation,3.601
+2,global_2022,industry_level,Healthcare/Health Services Industry,Manager,team_performance,3.846
+2,global_2022,industry_level,Healthcare/Health Services Industry,Manager,team_risk_taking,3.446
+2,global_2022,industry_level,Healthcare/Health Services Industry,Manager,well_being,3.625
+2,global_2022,industry_level,Healthcare/Health Services Industry,Manager,work_life_balance,3.049
+2,global_2022,industry_level,Insurance Industry,Manager,alignment,4.030
+2,global_2022,industry_level,Insurance Industry,Manager,authenticity,3.738
+2,global_2022,industry_level,Insurance Industry,Manager,belonging_index,3.846
+2,global_2022,industry_level,Insurance Industry,Manager,burnout,2.986
+2,global_2022,industry_level,Insurance Industry,Manager,care_adaptive_coping,3.296
+2,global_2022,industry_level,Insurance Industry,Manager,care_awareness_agency,3.640
+2,global_2022,industry_level,Insurance Industry,Manager,care_fulfillment,4.120
+2,global_2022,industry_level,Insurance Industry,Manager,care_outlook,3.888
+2,global_2022,industry_level,Insurance Industry,Manager,care_self_care,3.016
+2,global_2022,industry_level,Insurance Industry,Manager,care_well_being,3.603
+2,global_2022,industry_level,Insurance Industry,Manager,coaching,3.717
+2,global_2022,industry_level,Insurance Industry,Manager,coaching_culture,3.735
+2,global_2022,industry_level,Insurance Industry,Manager,coaching_culture_coworkers,3.889
+2,global_2022,industry_level,Insurance Industry,Manager,coaching_culture_org_practices,3.871
+2,global_2022,industry_level,Insurance Industry,Manager,coaching_culture_psy_safety,3.363
+2,global_2022,industry_level,Insurance Industry,Manager,cognitive_agility,3.858
+2,global_2022,industry_level,Insurance Industry,Manager,emotional_regulation,3.631
+2,global_2022,industry_level,Insurance Industry,Manager,empathy,4.365
+2,global_2022,industry_level,Insurance Industry,Manager,empowerment,4.060
+2,global_2022,industry_level,Insurance Industry,Manager,encouraging_participation,4.334
+2,global_2022,industry_level,Insurance Industry,Manager,engagement,3.890
+2,global_2022,industry_level,Insurance Industry,Manager,ex_authenticity,3.738
+2,global_2022,industry_level,Insurance Industry,Manager,ex_belonging,3.958
+2,global_2022,industry_level,Insurance Industry,Manager,ex_engagement,3.890
+2,global_2022,industry_level,Insurance Industry,Manager,ex_index,3.936
+2,global_2022,industry_level,Insurance Industry,Manager,ex_optimism,3.798
+2,global_2022,industry_level,Insurance Industry,Manager,ex_purpose_and_meaning,4.163
+2,global_2022,industry_level,Insurance Industry,Manager,ex_social_connection,4.088
+2,global_2022,industry_level,Insurance Industry,Manager,feedback,3.889
+2,global_2022,industry_level,Insurance Industry,Manager,focus,3.506
+2,global_2022,industry_level,Insurance Industry,Manager,goal_attainment,4.040
+2,global_2022,industry_level,Insurance Industry,Manager,growth_mindset,3.807
+2,global_2022,industry_level,Insurance Industry,Manager,hope,3.773
+2,global_2022,industry_level,Insurance Industry,Manager,inclusive_leadership,4.201
+2,global_2022,industry_level,Insurance Industry,Manager,intent_to_stay,4.424
+2,global_2022,industry_level,Insurance Industry,Manager,job_satisfaction,3.976
+2,global_2022,industry_level,Insurance Industry,Manager,life_satisfaction,4.012
+2,global_2022,industry_level,Insurance Industry,Manager,locus_of_control_internal,3.898
+2,global_2022,industry_level,Insurance Industry,Manager,manager_job_performance,3.624
+2,global_2022,industry_level,Insurance Industry,Manager,nutrition,3.579
+2,global_2022,industry_level,Insurance Industry,Manager,optimism,3.798
+2,global_2022,industry_level,Insurance Industry,Manager,perceived_organizational_support,3.938
+2,global_2022,industry_level,Insurance Industry,Manager,physical_activity,3.439
+2,global_2022,industry_level,Insurance Industry,Manager,problem_solving,3.908
+2,global_2022,industry_level,Insurance Industry,Manager,productivity,7.824
+2,global_2022,industry_level,Insurance Industry,Manager,psycap,3.783
+2,global_2022,industry_level,Insurance Industry,Manager,psychological_safety,3.363
+2,global_2022,industry_level,Insurance Industry,Manager,purpose_and_meaning,4.163
+2,global_2022,industry_level,Insurance Industry,Manager,recognition,4.066
+2,global_2022,industry_level,Insurance Industry,Manager,relationship_building,4.302
+2,global_2022,industry_level,Insurance Industry,Manager,resilience,3.692
+2,global_2022,industry_level,Insurance Industry,Manager,rest,3.275
+2,global_2022,industry_level,Insurance Industry,Manager,rix,3.999
+2,global_2022,industry_level,Insurance Industry,Manager,sales_excellence,3.865
+2,global_2022,industry_level,Insurance Industry,Manager,self_awareness,3.799
+2,global_2022,industry_level,Insurance Industry,Manager,self_compassion,2.700
+2,global_2022,industry_level,Insurance Industry,Manager,self_efficacy,4.144
+2,global_2022,industry_level,Insurance Industry,Manager,sense_of_belonging,3.958
+2,global_2022,industry_level,Insurance Industry,Manager,social_connection,4.088
+2,global_2022,industry_level,Insurance Industry,Manager,strategic_planning,3.777
+2,global_2022,industry_level,Insurance Industry,Manager,stress_management,2.955
+2,global_2022,industry_level,Insurance Industry,Manager,team_agility,3.919
+2,global_2022,industry_level,Insurance Industry,Manager,team_cohesion,4.130
+2,global_2022,industry_level,Insurance Industry,Manager,team_conflict,1.870
+2,global_2022,industry_level,Insurance Industry,Manager,team_feedback,3.889
+2,global_2022,industry_level,Insurance Industry,Manager,team_innovation,3.609
+2,global_2022,industry_level,Insurance Industry,Manager,team_performance,3.782
+2,global_2022,industry_level,Insurance Industry,Manager,team_risk_taking,3.483
+2,global_2022,industry_level,Insurance Industry,Manager,well_being,3.613
+2,global_2022,industry_level,Insurance Industry,Manager,work_life_balance,3.286
+2,global_2022,industry_level,Leisure and Hospitality Industry,Manager,alignment,4.053
+2,global_2022,industry_level,Leisure and Hospitality Industry,Manager,authenticity,3.782
+2,global_2022,industry_level,Leisure and Hospitality Industry,Manager,belonging_index,3.963
+2,global_2022,industry_level,Leisure and Hospitality Industry,Manager,burnout,3.025
+2,global_2022,industry_level,Leisure and Hospitality Industry,Manager,care_adaptive_coping,3.265
+2,global_2022,industry_level,Leisure and Hospitality Industry,Manager,care_awareness_agency,3.637
+2,global_2022,industry_level,Leisure and Hospitality Industry,Manager,care_fulfillment,4.139
+2,global_2022,industry_level,Leisure and Hospitality Industry,Manager,care_outlook,3.927
+2,global_2022,industry_level,Leisure and Hospitality Industry,Manager,care_self_care,3.055
+2,global_2022,industry_level,Leisure and Hospitality Industry,Manager,care_well_being,3.617
+2,global_2022,industry_level,Leisure and Hospitality Industry,Manager,coaching,3.735
+2,global_2022,industry_level,Leisure and Hospitality Industry,Manager,coaching_culture,3.718
+2,global_2022,industry_level,Leisure and Hospitality Industry,Manager,coaching_culture_coworkers,3.866
+2,global_2022,industry_level,Leisure and Hospitality Industry,Manager,coaching_culture_org_practices,3.773
+2,global_2022,industry_level,Leisure and Hospitality Industry,Manager,coaching_culture_psy_safety,3.491
+2,global_2022,industry_level,Leisure and Hospitality Industry,Manager,cognitive_agility,3.973
+2,global_2022,industry_level,Leisure and Hospitality Industry,Manager,emotional_regulation,3.693
+2,global_2022,industry_level,Leisure and Hospitality Industry,Manager,empathy,4.336
+2,global_2022,industry_level,Leisure and Hospitality Industry,Manager,empowerment,4.016
+2,global_2022,industry_level,Leisure and Hospitality Industry,Manager,encouraging_participation,4.307
+2,global_2022,industry_level,Leisure and Hospitality Industry,Manager,engagement,3.986
+2,global_2022,industry_level,Leisure and Hospitality Industry,Manager,ex_authenticity,3.782
+2,global_2022,industry_level,Leisure and Hospitality Industry,Manager,ex_belonging,4.067
+2,global_2022,industry_level,Leisure and Hospitality Industry,Manager,ex_engagement,3.986
+2,global_2022,industry_level,Leisure and Hospitality Industry,Manager,ex_index,3.986
+2,global_2022,industry_level,Leisure and Hospitality Industry,Manager,ex_optimism,3.817
+2,global_2022,industry_level,Leisure and Hospitality Industry,Manager,ex_purpose_and_meaning,4.213
+2,global_2022,industry_level,Leisure and Hospitality Industry,Manager,ex_social_connection,4.078
+2,global_2022,industry_level,Leisure and Hospitality Industry,Manager,feedback,3.866
+2,global_2022,industry_level,Leisure and Hospitality Industry,Manager,focus,3.501
+2,global_2022,industry_level,Leisure and Hospitality Industry,Manager,goal_attainment,4.014
+2,global_2022,industry_level,Leisure and Hospitality Industry,Manager,growth_mindset,3.870
+2,global_2022,industry_level,Leisure and Hospitality Industry,Manager,hope,3.801
+2,global_2022,industry_level,Leisure and Hospitality Industry,Manager,inclusive_leadership,4.191
+2,global_2022,industry_level,Leisure and Hospitality Industry,Manager,intent_to_stay,4.339
+2,global_2022,industry_level,Leisure and Hospitality Industry,Manager,job_satisfaction,4.042
+2,global_2022,industry_level,Leisure and Hospitality Industry,Manager,life_satisfaction,3.971
+2,global_2022,industry_level,Leisure and Hospitality Industry,Manager,locus_of_control_internal,3.934
+2,global_2022,industry_level,Leisure and Hospitality Industry,Manager,manager_job_performance,3.641
+2,global_2022,industry_level,Leisure and Hospitality Industry,Manager,nutrition,3.629
+2,global_2022,industry_level,Leisure and Hospitality Industry,Manager,optimism,3.817
+2,global_2022,industry_level,Leisure and Hospitality Industry,Manager,perceived_organizational_support,3.931
+2,global_2022,industry_level,Leisure and Hospitality Industry,Manager,physical_activity,3.292
+2,global_2022,industry_level,Leisure and Hospitality Industry,Manager,problem_solving,4.004
+2,global_2022,industry_level,Leisure and Hospitality Industry,Manager,productivity,7.831
+2,global_2022,industry_level,Leisure and Hospitality Industry,Manager,psycap,3.807
+2,global_2022,industry_level,Leisure and Hospitality Industry,Manager,psychological_safety,3.491
+2,global_2022,industry_level,Leisure and Hospitality Industry,Manager,purpose_and_meaning,4.213
+2,global_2022,industry_level,Leisure and Hospitality Industry,Manager,recognition,4.050
+2,global_2022,industry_level,Leisure and Hospitality Industry,Manager,relationship_building,4.291
+2,global_2022,industry_level,Leisure and Hospitality Industry,Manager,resilience,3.727
+2,global_2022,industry_level,Leisure and Hospitality Industry,Manager,rest,3.198
+2,global_2022,industry_level,Leisure and Hospitality Industry,Manager,rix,4.034
+2,global_2022,industry_level,Leisure and Hospitality Industry,Manager,sales_excellence,3.908
+2,global_2022,industry_level,Leisure and Hospitality Industry,Manager,self_awareness,3.891
+2,global_2022,industry_level,Leisure and Hospitality Industry,Manager,self_compassion,2.665
+2,global_2022,industry_level,Leisure and Hospitality Industry,Manager,self_efficacy,4.225
+2,global_2022,industry_level,Leisure and Hospitality Industry,Manager,sense_of_belonging,4.067
+2,global_2022,industry_level,Leisure and Hospitality Industry,Manager,social_connection,4.078
+2,global_2022,industry_level,Leisure and Hospitality Industry,Manager,strategic_planning,3.878
+2,global_2022,industry_level,Leisure and Hospitality Industry,Manager,stress_management,2.834
+2,global_2022,industry_level,Leisure and Hospitality Industry,Manager,team_agility,4.090
+2,global_2022,industry_level,Leisure and Hospitality Industry,Manager,team_cohesion,4.085
+2,global_2022,industry_level,Leisure and Hospitality Industry,Manager,team_conflict,1.915
+2,global_2022,industry_level,Leisure and Hospitality Industry,Manager,team_feedback,3.866
+2,global_2022,industry_level,Leisure and Hospitality Industry,Manager,team_innovation,3.712
+2,global_2022,industry_level,Leisure and Hospitality Industry,Manager,team_performance,3.847
+2,global_2022,industry_level,Leisure and Hospitality Industry,Manager,team_risk_taking,3.635
+2,global_2022,industry_level,Leisure and Hospitality Industry,Manager,well_being,3.617
+2,global_2022,industry_level,Leisure and Hospitality Industry,Manager,work_life_balance,3.001
+2,global_2022,industry_level,Manufacturing Industry,Individual Contributor,alignment,3.843
+2,global_2022,industry_level,Manufacturing Industry,Individual Contributor,authenticity,3.652
+2,global_2022,industry_level,Manufacturing Industry,Individual Contributor,belonging_index,3.724
+2,global_2022,industry_level,Manufacturing Industry,Individual Contributor,burnout,2.821
+2,global_2022,industry_level,Manufacturing Industry,Individual Contributor,care_adaptive_coping,3.148
+2,global_2022,industry_level,Manufacturing Industry,Individual Contributor,care_awareness_agency,3.549
+2,global_2022,industry_level,Manufacturing Industry,Individual Contributor,care_fulfillment,3.967
+2,global_2022,industry_level,Manufacturing Industry,Individual Contributor,care_outlook,3.714
+2,global_2022,industry_level,Manufacturing Industry,Individual Contributor,care_self_care,2.821
+2,global_2022,industry_level,Manufacturing Industry,Individual Contributor,care_well_being,3.451
+2,global_2022,industry_level,Manufacturing Industry,Individual Contributor,coaching,3.330
+2,global_2022,industry_level,Manufacturing Industry,Individual Contributor,coaching_culture,3.620
+2,global_2022,industry_level,Manufacturing Industry,Individual Contributor,coaching_culture_coworkers,3.743
+2,global_2022,industry_level,Manufacturing Industry,Individual Contributor,coaching_culture_org_practices,3.626
+2,global_2022,industry_level,Manufacturing Industry,Individual Contributor,coaching_culture_psy_safety,3.314
+2,global_2022,industry_level,Manufacturing Industry,Individual Contributor,cognitive_agility,3.790
+2,global_2022,industry_level,Manufacturing Industry,Individual Contributor,emotional_regulation,3.349
+2,global_2022,industry_level,Manufacturing Industry,Individual Contributor,empathy,4.288
+2,global_2022,industry_level,Manufacturing Industry,Individual Contributor,empowerment,3.782
+2,global_2022,industry_level,Manufacturing Industry,Individual Contributor,encouraging_participation,4.012
+2,global_2022,industry_level,Manufacturing Industry,Individual Contributor,engagement,3.766
+2,global_2022,industry_level,Manufacturing Industry,Individual Contributor,ex_authenticity,3.652
+2,global_2022,industry_level,Manufacturing Industry,Individual Contributor,ex_belonging,3.845
+2,global_2022,industry_level,Manufacturing Industry,Individual Contributor,ex_engagement,3.766
+2,global_2022,industry_level,Manufacturing Industry,Individual Contributor,ex_index,3.803
+2,global_2022,industry_level,Manufacturing Industry,Individual Contributor,ex_optimism,3.650
+2,global_2022,industry_level,Manufacturing Industry,Individual Contributor,ex_purpose_and_meaning,3.996
+2,global_2022,industry_level,Manufacturing Industry,Individual Contributor,ex_social_connection,3.928
+2,global_2022,industry_level,Manufacturing Industry,Individual Contributor,feedback,3.743
+2,global_2022,industry_level,Manufacturing Industry,Individual Contributor,focus,3.445
+2,global_2022,industry_level,Manufacturing Industry,Individual Contributor,goal_attainment,3.862
+2,global_2022,industry_level,Manufacturing Industry,Individual Contributor,growth_mindset,3.902
+2,global_2022,industry_level,Manufacturing Industry,Individual Contributor,hope,3.617
+2,global_2022,industry_level,Manufacturing Industry,Individual Contributor,inclusive_leadership,3.985
+2,global_2022,industry_level,Manufacturing Industry,Individual Contributor,intent_to_stay,4.152
+2,global_2022,industry_level,Manufacturing Industry,Individual Contributor,job_satisfaction,3.810
+2,global_2022,industry_level,Manufacturing Industry,Individual Contributor,life_satisfaction,3.862
+2,global_2022,industry_level,Manufacturing Industry,Individual Contributor,locus_of_control_internal,3.777
+2,global_2022,industry_level,Manufacturing Industry,Individual Contributor,manager_job_performance,3.545
+2,global_2022,industry_level,Manufacturing Industry,Individual Contributor,nutrition,3.656
+2,global_2022,industry_level,Manufacturing Industry,Individual Contributor,optimism,3.650
+2,global_2022,industry_level,Manufacturing Industry,Individual Contributor,perceived_organizational_support,3.912
+2,global_2022,industry_level,Manufacturing Industry,Individual Contributor,physical_activity,3.310
+2,global_2022,industry_level,Manufacturing Industry,Individual Contributor,problem_solving,3.806
+2,global_2022,industry_level,Manufacturing Industry,Individual Contributor,productivity,7.501
+2,global_2022,industry_level,Manufacturing Industry,Individual Contributor,psycap,3.630
+2,global_2022,industry_level,Manufacturing Industry,Individual Contributor,psychological_safety,3.314
+2,global_2022,industry_level,Manufacturing Industry,Individual Contributor,purpose_and_meaning,3.996
+2,global_2022,industry_level,Manufacturing Industry,Individual Contributor,recognition,3.914
+2,global_2022,industry_level,Manufacturing Industry,Individual Contributor,relationship_building,3.948
+2,global_2022,industry_level,Manufacturing Industry,Individual Contributor,resilience,3.520
+2,global_2022,industry_level,Manufacturing Industry,Individual Contributor,rest,3.254
+2,global_2022,industry_level,Manufacturing Industry,Individual Contributor,rix,3.833
+2,global_2022,industry_level,Manufacturing Industry,Individual Contributor,sales_excellence,3.680
+2,global_2022,industry_level,Manufacturing Industry,Individual Contributor,self_awareness,3.603
+2,global_2022,industry_level,Manufacturing Industry,Individual Contributor,self_compassion,2.560
+2,global_2022,industry_level,Manufacturing Industry,Individual Contributor,self_efficacy,3.984
+2,global_2022,industry_level,Manufacturing Industry,Individual Contributor,sense_of_belonging,3.845
+2,global_2022,industry_level,Manufacturing Industry,Individual Contributor,social_connection,3.928
+2,global_2022,industry_level,Manufacturing Industry,Individual Contributor,strategic_planning,3.634
+2,global_2022,industry_level,Manufacturing Industry,Individual Contributor,stress_management,2.822
+2,global_2022,industry_level,Manufacturing Industry,Individual Contributor,team_agility,3.891
+2,global_2022,industry_level,Manufacturing Industry,Individual Contributor,team_cohesion,3.962
+2,global_2022,industry_level,Manufacturing Industry,Individual Contributor,team_conflict,2.038
+2,global_2022,industry_level,Manufacturing Industry,Individual Contributor,team_feedback,3.743
+2,global_2022,industry_level,Manufacturing Industry,Individual Contributor,team_innovation,3.620
+2,global_2022,industry_level,Manufacturing Industry,Individual Contributor,team_performance,3.816
+2,global_2022,industry_level,Manufacturing Industry,Individual Contributor,team_risk_taking,3.581
+2,global_2022,industry_level,Manufacturing Industry,Individual Contributor,well_being,3.517
+2,global_2022,industry_level,Manufacturing Industry,Individual Contributor,work_life_balance,3.188
+2,global_2022,industry_level,Manufacturing Industry,Manager,alignment,3.990
+2,global_2022,industry_level,Manufacturing Industry,Manager,authenticity,3.778
+2,global_2022,industry_level,Manufacturing Industry,Manager,belonging_index,3.906
+2,global_2022,industry_level,Manufacturing Industry,Manager,burnout,2.956
+2,global_2022,industry_level,Manufacturing Industry,Manager,care_adaptive_coping,3.299
+2,global_2022,industry_level,Manufacturing Industry,Manager,care_awareness_agency,3.685
+2,global_2022,industry_level,Manufacturing Industry,Manager,care_fulfillment,4.087
+2,global_2022,industry_level,Manufacturing Industry,Manager,care_outlook,3.897
+2,global_2022,industry_level,Manufacturing Industry,Manager,care_self_care,2.917
+2,global_2022,industry_level,Manufacturing Industry,Manager,care_well_being,3.585
+2,global_2022,industry_level,Manufacturing Industry,Manager,coaching,3.695
+2,global_2022,industry_level,Manufacturing Industry,Manager,coaching_culture,3.718
+2,global_2022,industry_level,Manufacturing Industry,Manager,coaching_culture_coworkers,3.842
+2,global_2022,industry_level,Manufacturing Industry,Manager,coaching_culture_org_practices,3.769
+2,global_2022,industry_level,Manufacturing Industry,Manager,coaching_culture_psy_safety,3.493
+2,global_2022,industry_level,Manufacturing Industry,Manager,cognitive_agility,3.887
+2,global_2022,industry_level,Manufacturing Industry,Manager,emotional_regulation,3.617
+2,global_2022,industry_level,Manufacturing Industry,Manager,empathy,4.170
+2,global_2022,industry_level,Manufacturing Industry,Manager,empowerment,3.931
+2,global_2022,industry_level,Manufacturing Industry,Manager,encouraging_participation,4.235
+2,global_2022,industry_level,Manufacturing Industry,Manager,engagement,3.945
+2,global_2022,industry_level,Manufacturing Industry,Manager,ex_authenticity,3.778
+2,global_2022,industry_level,Manufacturing Industry,Manager,ex_belonging,4.004
+2,global_2022,industry_level,Manufacturing Industry,Manager,ex_engagement,3.945
+2,global_2022,industry_level,Manufacturing Industry,Manager,ex_index,3.949
+2,global_2022,industry_level,Manufacturing Industry,Manager,ex_optimism,3.848
+2,global_2022,industry_level,Manufacturing Industry,Manager,ex_purpose_and_meaning,4.148
+2,global_2022,industry_level,Manufacturing Industry,Manager,ex_social_connection,3.989
+2,global_2022,industry_level,Manufacturing Industry,Manager,feedback,3.842
+2,global_2022,industry_level,Manufacturing Industry,Manager,focus,3.635
+2,global_2022,industry_level,Manufacturing Industry,Manager,goal_attainment,3.997
+2,global_2022,industry_level,Manufacturing Industry,Manager,growth_mindset,3.942
+2,global_2022,industry_level,Manufacturing Industry,Manager,hope,3.839
+2,global_2022,industry_level,Manufacturing Industry,Manager,inclusive_leadership,4.086
+2,global_2022,industry_level,Manufacturing Industry,Manager,intent_to_stay,4.185
+2,global_2022,industry_level,Manufacturing Industry,Manager,job_satisfaction,4.043
+2,global_2022,industry_level,Manufacturing Industry,Manager,life_satisfaction,3.976
+2,global_2022,industry_level,Manufacturing Industry,Manager,locus_of_control_internal,3.929
+2,global_2022,industry_level,Manufacturing Industry,Manager,manager_job_performance,3.513
+2,global_2022,industry_level,Manufacturing Industry,Manager,nutrition,3.733
+2,global_2022,industry_level,Manufacturing Industry,Manager,optimism,3.848
+2,global_2022,industry_level,Manufacturing Industry,Manager,perceived_organizational_support,3.853
+2,global_2022,industry_level,Manufacturing Industry,Manager,physical_activity,3.487
+2,global_2022,industry_level,Manufacturing Industry,Manager,problem_solving,3.867
+2,global_2022,industry_level,Manufacturing Industry,Manager,productivity,7.905
+2,global_2022,industry_level,Manufacturing Industry,Manager,psycap,3.843
+2,global_2022,industry_level,Manufacturing Industry,Manager,psychological_safety,3.493
+2,global_2022,industry_level,Manufacturing Industry,Manager,purpose_and_meaning,4.148
+2,global_2022,industry_level,Manufacturing Industry,Manager,recognition,3.923
+2,global_2022,industry_level,Manufacturing Industry,Manager,relationship_building,4.159
+2,global_2022,industry_level,Manufacturing Industry,Manager,resilience,3.709
+2,global_2022,industry_level,Manufacturing Industry,Manager,rest,3.409
+2,global_2022,industry_level,Manufacturing Industry,Manager,rix,3.953
+2,global_2022,industry_level,Manufacturing Industry,Manager,sales_excellence,3.867
+2,global_2022,industry_level,Manufacturing Industry,Manager,self_awareness,3.694
+2,global_2022,industry_level,Manufacturing Industry,Manager,self_compassion,2.669
+2,global_2022,industry_level,Manufacturing Industry,Manager,self_efficacy,4.011
+2,global_2022,industry_level,Manufacturing Industry,Manager,sense_of_belonging,4.004
+2,global_2022,industry_level,Manufacturing Industry,Manager,social_connection,3.989
+2,global_2022,industry_level,Manufacturing Industry,Manager,strategic_planning,3.875
+2,global_2022,industry_level,Manufacturing Industry,Manager,stress_management,2.928
+2,global_2022,industry_level,Manufacturing Industry,Manager,team_agility,3.914
+2,global_2022,industry_level,Manufacturing Industry,Manager,team_cohesion,3.984
+2,global_2022,industry_level,Manufacturing Industry,Manager,team_conflict,2.016
+2,global_2022,industry_level,Manufacturing Industry,Manager,team_feedback,3.783
+2,global_2022,industry_level,Manufacturing Industry,Manager,team_innovation,3.609
+2,global_2022,industry_level,Manufacturing Industry,Manager,team_performance,3.819
+2,global_2022,industry_level,Manufacturing Industry,Manager,team_risk_taking,3.628
+2,global_2022,industry_level,Manufacturing Industry,Manager,well_being,3.641
+2,global_2022,industry_level,Manufacturing Industry,Manager,work_life_balance,3.040
+2,global_2022,industry_level,Other,Individual Contributor,alignment,3.783
+2,global_2022,industry_level,Other,Individual Contributor,authenticity,3.526
+2,global_2022,industry_level,Other,Individual Contributor,belonging_index,3.666
+2,global_2022,industry_level,Other,Individual Contributor,burnout,3.108
+2,global_2022,industry_level,Other,Individual Contributor,care_adaptive_coping,3.066
+2,global_2022,industry_level,Other,Individual Contributor,care_awareness_agency,3.533
+2,global_2022,industry_level,Other,Individual Contributor,care_fulfillment,3.922
+2,global_2022,industry_level,Other,Individual Contributor,care_outlook,3.695
+2,global_2022,industry_level,Other,Individual Contributor,care_self_care,2.703
+2,global_2022,industry_level,Other,Individual Contributor,care_well_being,3.394
+2,global_2022,industry_level,Other,Individual Contributor,coaching,3.272
+2,global_2022,industry_level,Other,Individual Contributor,coaching_culture,3.544
+2,global_2022,industry_level,Other,Individual Contributor,coaching_culture_coworkers,3.685
+2,global_2022,industry_level,Other,Individual Contributor,coaching_culture_org_practices,3.531
+2,global_2022,industry_level,Other,Individual Contributor,coaching_culture_psy_safety,3.322
+2,global_2022,industry_level,Other,Individual Contributor,cognitive_agility,3.679
+2,global_2022,industry_level,Other,Individual Contributor,emotional_regulation,3.309
+2,global_2022,industry_level,Other,Individual Contributor,empathy,4.189
+2,global_2022,industry_level,Other,Individual Contributor,empowerment,3.685
+2,global_2022,industry_level,Other,Individual Contributor,encouraging_participation,3.845
+2,global_2022,industry_level,Other,Individual Contributor,engagement,3.673
+2,global_2022,industry_level,Other,Individual Contributor,ex_authenticity,3.526
+2,global_2022,industry_level,Other,Individual Contributor,ex_belonging,3.779
+2,global_2022,industry_level,Other,Individual Contributor,ex_engagement,3.673
+2,global_2022,industry_level,Other,Individual Contributor,ex_index,3.750
+2,global_2022,industry_level,Other,Individual Contributor,ex_optimism,3.677
+2,global_2022,industry_level,Other,Individual Contributor,ex_purpose_and_meaning,3.986
+2,global_2022,industry_level,Other,Individual Contributor,ex_social_connection,3.913
+2,global_2022,industry_level,Other,Individual Contributor,feedback,3.685
+2,global_2022,industry_level,Other,Individual Contributor,focus,3.439
+2,global_2022,industry_level,Other,Individual Contributor,goal_attainment,3.814
+2,global_2022,industry_level,Other,Individual Contributor,growth_mindset,3.741
+2,global_2022,industry_level,Other,Individual Contributor,hope,3.588
+2,global_2022,industry_level,Other,Individual Contributor,inclusive_leadership,3.889
+2,global_2022,industry_level,Other,Individual Contributor,intent_to_stay,4.035
+2,global_2022,industry_level,Other,Individual Contributor,job_satisfaction,3.784
+2,global_2022,industry_level,Other,Individual Contributor,life_satisfaction,3.791
+2,global_2022,industry_level,Other,Individual Contributor,locus_of_control_internal,3.703
+2,global_2022,industry_level,Other,Individual Contributor,manager_job_performance,3.505
+2,global_2022,industry_level,Other,Individual Contributor,nutrition,3.547
+2,global_2022,industry_level,Other,Individual Contributor,optimism,3.677
+2,global_2022,industry_level,Other,Individual Contributor,perceived_organizational_support,3.732
+2,global_2022,industry_level,Other,Individual Contributor,physical_activity,3.268
+2,global_2022,industry_level,Other,Individual Contributor,problem_solving,3.675
+2,global_2022,industry_level,Other,Individual Contributor,productivity,7.430
+2,global_2022,industry_level,Other,Individual Contributor,psycap,3.623
+2,global_2022,industry_level,Other,Individual Contributor,psychological_safety,3.322
+2,global_2022,industry_level,Other,Individual Contributor,purpose_and_meaning,3.986
+2,global_2022,industry_level,Other,Individual Contributor,recognition,3.780
+2,global_2022,industry_level,Other,Individual Contributor,relationship_building,3.880
+2,global_2022,industry_level,Other,Individual Contributor,resilience,3.416
+2,global_2022,industry_level,Other,Individual Contributor,rest,3.276
+2,global_2022,industry_level,Other,Individual Contributor,rix,3.732
+2,global_2022,industry_level,Other,Individual Contributor,sales_excellence,3.629
+2,global_2022,industry_level,Other,Individual Contributor,self_awareness,3.482
+2,global_2022,industry_level,Other,Individual Contributor,self_compassion,2.471
+2,global_2022,industry_level,Other,Individual Contributor,self_efficacy,3.889
+2,global_2022,industry_level,Other,Individual Contributor,sense_of_belonging,3.779
+2,global_2022,industry_level,Other,Individual Contributor,social_connection,3.913
+2,global_2022,industry_level,Other,Individual Contributor,strategic_planning,3.635
+2,global_2022,industry_level,Other,Individual Contributor,stress_management,2.739
+2,global_2022,industry_level,Other,Individual Contributor,team_agility,3.772
+2,global_2022,industry_level,Other,Individual Contributor,team_cohesion,3.805
+2,global_2022,industry_level,Other,Individual Contributor,team_conflict,2.195
+2,global_2022,industry_level,Other,Individual Contributor,team_feedback,3.723
+2,global_2022,industry_level,Other,Individual Contributor,team_innovation,3.525
+2,global_2022,industry_level,Other,Individual Contributor,team_performance,3.744
+2,global_2022,industry_level,Other,Individual Contributor,team_risk_taking,3.490
+2,global_2022,industry_level,Other,Individual Contributor,well_being,3.458
+2,global_2022,industry_level,Other,Individual Contributor,work_life_balance,3.275
+2,global_2022,industry_level,Other,Manager,alignment,3.932
+2,global_2022,industry_level,Other,Manager,authenticity,3.668
+2,global_2022,industry_level,Other,Manager,belonging_index,3.805
+2,global_2022,industry_level,Other,Manager,burnout,3.168
+2,global_2022,industry_level,Other,Manager,care_adaptive_coping,3.199
+2,global_2022,industry_level,Other,Manager,care_awareness_agency,3.606
+2,global_2022,industry_level,Other,Manager,care_fulfillment,4.081
+2,global_2022,industry_level,Other,Manager,care_outlook,3.850
+2,global_2022,industry_level,Other,Manager,care_self_care,2.830
+2,global_2022,industry_level,Other,Manager,care_well_being,3.522
+2,global_2022,industry_level,Other,Manager,coaching,3.601
+2,global_2022,industry_level,Other,Manager,coaching_culture,3.648
+2,global_2022,industry_level,Other,Manager,coaching_culture_coworkers,3.811
+2,global_2022,industry_level,Other,Manager,coaching_culture_org_practices,3.665
+2,global_2022,industry_level,Other,Manager,coaching_culture_psy_safety,3.458
+2,global_2022,industry_level,Other,Manager,cognitive_agility,3.836
+2,global_2022,industry_level,Other,Manager,emotional_regulation,3.515
+2,global_2022,industry_level,Other,Manager,empathy,4.180
+2,global_2022,industry_level,Other,Manager,empowerment,3.847
+2,global_2022,industry_level,Other,Manager,encouraging_participation,4.196
+2,global_2022,industry_level,Other,Manager,engagement,3.870
+2,global_2022,industry_level,Other,Manager,ex_authenticity,3.668
+2,global_2022,industry_level,Other,Manager,ex_belonging,3.924
+2,global_2022,industry_level,Other,Manager,ex_engagement,3.870
+2,global_2022,industry_level,Other,Manager,ex_index,3.895
+2,global_2022,industry_level,Other,Manager,ex_optimism,3.763
+2,global_2022,industry_level,Other,Manager,ex_purpose_and_meaning,4.192
+2,global_2022,industry_level,Other,Manager,ex_social_connection,3.951
+2,global_2022,industry_level,Other,Manager,feedback,3.811
+2,global_2022,industry_level,Other,Manager,focus,3.565
+2,global_2022,industry_level,Other,Manager,goal_attainment,3.933
+2,global_2022,industry_level,Other,Manager,growth_mindset,3.869
+2,global_2022,industry_level,Other,Manager,hope,3.786
+2,global_2022,industry_level,Other,Manager,inclusive_leadership,4.056
+2,global_2022,industry_level,Other,Manager,intent_to_stay,4.152
+2,global_2022,industry_level,Other,Manager,job_satisfaction,3.997
+2,global_2022,industry_level,Other,Manager,life_satisfaction,3.929
+2,global_2022,industry_level,Other,Manager,locus_of_control_internal,3.794
+2,global_2022,industry_level,Other,Manager,manager_job_performance,3.555
+2,global_2022,industry_level,Other,Manager,nutrition,3.620
+2,global_2022,industry_level,Other,Manager,optimism,3.763
+2,global_2022,industry_level,Other,Manager,perceived_organizational_support,3.820
+2,global_2022,industry_level,Other,Manager,physical_activity,3.360
+2,global_2022,industry_level,Other,Manager,problem_solving,3.855
+2,global_2022,industry_level,Other,Manager,productivity,7.796
+2,global_2022,industry_level,Other,Manager,psycap,3.777
+2,global_2022,industry_level,Other,Manager,psychological_safety,3.458
+2,global_2022,industry_level,Other,Manager,purpose_and_meaning,4.192
+2,global_2022,industry_level,Other,Manager,recognition,3.943
+2,global_2022,industry_level,Other,Manager,relationship_building,4.092
+2,global_2022,industry_level,Other,Manager,resilience,3.627
+2,global_2022,industry_level,Other,Manager,rest,3.317
+2,global_2022,industry_level,Other,Manager,rix,3.907
+2,global_2022,industry_level,Other,Manager,sales_excellence,3.798
+2,global_2022,industry_level,Other,Manager,self_awareness,3.616
+2,global_2022,industry_level,Other,Manager,self_compassion,2.575
+2,global_2022,industry_level,Other,Manager,self_efficacy,4.038
+2,global_2022,industry_level,Other,Manager,sense_of_belonging,3.924
+2,global_2022,industry_level,Other,Manager,social_connection,3.951
+2,global_2022,industry_level,Other,Manager,strategic_planning,3.807
+2,global_2022,industry_level,Other,Manager,stress_management,2.803
+2,global_2022,industry_level,Other,Manager,team_agility,3.867
+2,global_2022,industry_level,Other,Manager,team_cohesion,3.830
+2,global_2022,industry_level,Other,Manager,team_conflict,2.170
+2,global_2022,industry_level,Other,Manager,team_feedback,3.754
+2,global_2022,industry_level,Other,Manager,team_innovation,3.560
+2,global_2022,industry_level,Other,Manager,team_performance,3.813
+2,global_2022,industry_level,Other,Manager,team_risk_taking,3.543
+2,global_2022,industry_level,Other,Manager,well_being,3.562
+2,global_2022,industry_level,Other,Manager,work_life_balance,2.978
+2,global_2022,industry_level,Professional and Business Services,Individual Contributor,alignment,3.860
+2,global_2022,industry_level,Professional and Business Services,Individual Contributor,authenticity,3.631
+2,global_2022,industry_level,Professional and Business Services,Individual Contributor,belonging_index,3.659
+2,global_2022,industry_level,Professional and Business Services,Individual Contributor,burnout,2.939
+2,global_2022,industry_level,Professional and Business Services,Individual Contributor,care_adaptive_coping,3.050
+2,global_2022,industry_level,Professional and Business Services,Individual Contributor,care_awareness_agency,3.522
+2,global_2022,industry_level,Professional and Business Services,Individual Contributor,care_fulfillment,3.870
+2,global_2022,industry_level,Professional and Business Services,Individual Contributor,care_outlook,3.681
+2,global_2022,industry_level,Professional and Business Services,Individual Contributor,care_self_care,2.747
+2,global_2022,industry_level,Professional and Business Services,Individual Contributor,care_well_being,3.386
+2,global_2022,industry_level,Professional and Business Services,Individual Contributor,coaching,3.381
+2,global_2022,industry_level,Professional and Business Services,Individual Contributor,coaching_culture,3.626
+2,global_2022,industry_level,Professional and Business Services,Individual Contributor,coaching_culture_coworkers,3.774
+2,global_2022,industry_level,Professional and Business Services,Individual Contributor,coaching_culture_org_practices,3.669
+2,global_2022,industry_level,Professional and Business Services,Individual Contributor,coaching_culture_psy_safety,3.332
+2,global_2022,industry_level,Professional and Business Services,Individual Contributor,cognitive_agility,3.763
+2,global_2022,industry_level,Professional and Business Services,Individual Contributor,emotional_regulation,3.341
+2,global_2022,industry_level,Professional and Business Services,Individual Contributor,empathy,4.294
+2,global_2022,industry_level,Professional and Business Services,Individual Contributor,empowerment,3.818
+2,global_2022,industry_level,Professional and Business Services,Individual Contributor,encouraging_participation,3.997
+2,global_2022,industry_level,Professional and Business Services,Individual Contributor,engagement,3.717
+2,global_2022,industry_level,Professional and Business Services,Individual Contributor,ex_authenticity,3.631
+2,global_2022,industry_level,Professional and Business Services,Individual Contributor,ex_belonging,3.769
+2,global_2022,industry_level,Professional and Business Services,Individual Contributor,ex_engagement,3.717
+2,global_2022,industry_level,Professional and Business Services,Individual Contributor,ex_index,3.756
+2,global_2022,industry_level,Professional and Business Services,Individual Contributor,ex_optimism,3.598
+2,global_2022,industry_level,Professional and Business Services,Individual Contributor,ex_purpose_and_meaning,3.886
+2,global_2022,industry_level,Professional and Business Services,Individual Contributor,ex_social_connection,3.956
+2,global_2022,industry_level,Professional and Business Services,Individual Contributor,feedback,3.774
+2,global_2022,industry_level,Professional and Business Services,Individual Contributor,focus,3.376
+2,global_2022,industry_level,Professional and Business Services,Individual Contributor,goal_attainment,3.824
+2,global_2022,industry_level,Professional and Business Services,Individual Contributor,growth_mindset,3.833
+2,global_2022,industry_level,Professional and Business Services,Individual Contributor,hope,3.587
+2,global_2022,industry_level,Professional and Business Services,Individual Contributor,inclusive_leadership,4.004
+2,global_2022,industry_level,Professional and Business Services,Individual Contributor,intent_to_stay,4.052
+2,global_2022,industry_level,Professional and Business Services,Individual Contributor,job_satisfaction,3.724
+2,global_2022,industry_level,Professional and Business Services,Individual Contributor,life_satisfaction,3.751
+2,global_2022,industry_level,Professional and Business Services,Individual Contributor,locus_of_control_internal,3.750
+2,global_2022,industry_level,Professional and Business Services,Individual Contributor,manager_job_performance,3.556
+2,global_2022,industry_level,Professional and Business Services,Individual Contributor,nutrition,3.687
+2,global_2022,industry_level,Professional and Business Services,Individual Contributor,optimism,3.598
+2,global_2022,industry_level,Professional and Business Services,Individual Contributor,perceived_organizational_support,3.873
+2,global_2022,industry_level,Professional and Business Services,Individual Contributor,physical_activity,3.371
+2,global_2022,industry_level,Professional and Business Services,Individual Contributor,problem_solving,3.803
+2,global_2022,industry_level,Professional and Business Services,Individual Contributor,productivity,7.378
+2,global_2022,industry_level,Professional and Business Services,Individual Contributor,psycap,3.591
+2,global_2022,industry_level,Professional and Business Services,Individual Contributor,psychological_safety,3.332
+2,global_2022,industry_level,Professional and Business Services,Individual Contributor,purpose_and_meaning,3.886
+2,global_2022,industry_level,Professional and Business Services,Individual Contributor,recognition,3.987
+2,global_2022,industry_level,Professional and Business Services,Individual Contributor,relationship_building,3.962
+2,global_2022,industry_level,Professional and Business Services,Individual Contributor,resilience,3.435
+2,global_2022,industry_level,Professional and Business Services,Individual Contributor,rest,3.220
+2,global_2022,industry_level,Professional and Business Services,Individual Contributor,rix,3.813
+2,global_2022,industry_level,Professional and Business Services,Individual Contributor,sales_excellence,3.663
+2,global_2022,industry_level,Professional and Business Services,Individual Contributor,self_awareness,3.556
+2,global_2022,industry_level,Professional and Business Services,Individual Contributor,self_compassion,2.498
+2,global_2022,industry_level,Professional and Business Services,Individual Contributor,self_efficacy,3.965
+2,global_2022,industry_level,Professional and Business Services,Individual Contributor,sense_of_belonging,3.769
+2,global_2022,industry_level,Professional and Business Services,Individual Contributor,social_connection,3.956
+2,global_2022,industry_level,Professional and Business Services,Individual Contributor,strategic_planning,3.583
+2,global_2022,industry_level,Professional and Business Services,Individual Contributor,stress_management,2.726
+2,global_2022,industry_level,Professional and Business Services,Individual Contributor,team_agility,3.867
+2,global_2022,industry_level,Professional and Business Services,Individual Contributor,team_cohesion,3.988
+2,global_2022,industry_level,Professional and Business Services,Individual Contributor,team_conflict,2.013
+2,global_2022,industry_level,Professional and Business Services,Individual Contributor,team_feedback,3.774
+2,global_2022,industry_level,Professional and Business Services,Individual Contributor,team_innovation,3.635
+2,global_2022,industry_level,Professional and Business Services,Individual Contributor,team_performance,3.793
+2,global_2022,industry_level,Professional and Business Services,Individual Contributor,team_risk_taking,3.533
+2,global_2022,industry_level,Professional and Business Services,Individual Contributor,well_being,3.504
+2,global_2022,industry_level,Professional and Business Services,Individual Contributor,work_life_balance,3.126
+2,global_2022,industry_level,Professional and Business Services,Manager,alignment,4.026
+2,global_2022,industry_level,Professional and Business Services,Manager,authenticity,3.751
+2,global_2022,industry_level,Professional and Business Services,Manager,belonging_index,3.842
+2,global_2022,industry_level,Professional and Business Services,Manager,burnout,3.122
+2,global_2022,industry_level,Professional and Business Services,Manager,care_adaptive_coping,3.165
+2,global_2022,industry_level,Professional and Business Services,Manager,care_awareness_agency,3.561
+2,global_2022,industry_level,Professional and Business Services,Manager,care_fulfillment,4.006
+2,global_2022,industry_level,Professional and Business Services,Manager,care_outlook,3.809
+2,global_2022,industry_level,Professional and Business Services,Manager,care_self_care,2.937
+2,global_2022,industry_level,Professional and Business Services,Manager,care_well_being,3.508
+2,global_2022,industry_level,Professional and Business Services,Manager,coaching,3.733
+2,global_2022,industry_level,Professional and Business Services,Manager,coaching_culture,3.662
+2,global_2022,industry_level,Professional and Business Services,Manager,coaching_culture_coworkers,3.826
+2,global_2022,industry_level,Professional and Business Services,Manager,coaching_culture_org_practices,3.781
+2,global_2022,industry_level,Professional and Business Services,Manager,coaching_culture_psy_safety,3.379
+2,global_2022,industry_level,Professional and Business Services,Manager,cognitive_agility,3.866
+2,global_2022,industry_level,Professional and Business Services,Manager,emotional_regulation,3.481
+2,global_2022,industry_level,Professional and Business Services,Manager,empathy,4.292
+2,global_2022,industry_level,Professional and Business Services,Manager,empowerment,4.042
+2,global_2022,industry_level,Professional and Business Services,Manager,encouraging_participation,4.300
+2,global_2022,industry_level,Professional and Business Services,Manager,engagement,3.888
+2,global_2022,industry_level,Professional and Business Services,Manager,ex_authenticity,3.751
+2,global_2022,industry_level,Professional and Business Services,Manager,ex_belonging,3.961
+2,global_2022,industry_level,Professional and Business Services,Manager,ex_engagement,3.888
+2,global_2022,industry_level,Professional and Business Services,Manager,ex_index,3.886
+2,global_2022,industry_level,Professional and Business Services,Manager,ex_optimism,3.722
+2,global_2022,industry_level,Professional and Business Services,Manager,ex_purpose_and_meaning,4.027
+2,global_2022,industry_level,Professional and Business Services,Manager,ex_social_connection,4.002
+2,global_2022,industry_level,Professional and Business Services,Manager,feedback,3.826
+2,global_2022,industry_level,Professional and Business Services,Manager,focus,3.447
+2,global_2022,industry_level,Professional and Business Services,Manager,goal_attainment,3.878
+2,global_2022,industry_level,Professional and Business Services,Manager,growth_mindset,3.865
+2,global_2022,industry_level,Professional and Business Services,Manager,hope,3.719
+2,global_2022,industry_level,Professional and Business Services,Manager,inclusive_leadership,4.160
+2,global_2022,industry_level,Professional and Business Services,Manager,intent_to_stay,4.148
+2,global_2022,industry_level,Professional and Business Services,Manager,job_satisfaction,3.888
+2,global_2022,industry_level,Professional and Business Services,Manager,life_satisfaction,3.905
+2,global_2022,industry_level,Professional and Business Services,Manager,locus_of_control_internal,3.813
+2,global_2022,industry_level,Professional and Business Services,Manager,manager_job_performance,3.610
+2,global_2022,industry_level,Professional and Business Services,Manager,nutrition,3.639
+2,global_2022,industry_level,Professional and Business Services,Manager,optimism,3.722
+2,global_2022,industry_level,Professional and Business Services,Manager,perceived_organizational_support,3.848
+2,global_2022,industry_level,Professional and Business Services,Manager,physical_activity,3.309
+2,global_2022,industry_level,Professional and Business Services,Manager,problem_solving,3.938
+2,global_2022,industry_level,Professional and Business Services,Manager,productivity,7.712
+2,global_2022,industry_level,Professional and Business Services,Manager,psycap,3.720
+2,global_2022,industry_level,Professional and Business Services,Manager,psychological_safety,3.379
+2,global_2022,industry_level,Professional and Business Services,Manager,purpose_and_meaning,4.027
+2,global_2022,industry_level,Professional and Business Services,Manager,recognition,4.085
+2,global_2022,industry_level,Professional and Business Services,Manager,relationship_building,4.200
+2,global_2022,industry_level,Professional and Business Services,Manager,resilience,3.610
+2,global_2022,industry_level,Professional and Business Services,Manager,rest,3.212
+2,global_2022,industry_level,Professional and Business Services,Manager,rix,3.961
+2,global_2022,industry_level,Professional and Business Services,Manager,sales_excellence,3.802
+2,global_2022,industry_level,Professional and Business Services,Manager,self_awareness,3.715
+2,global_2022,industry_level,Professional and Business Services,Manager,self_compassion,2.650
+2,global_2022,industry_level,Professional and Business Services,Manager,self_efficacy,4.031
+2,global_2022,industry_level,Professional and Business Services,Manager,sense_of_belonging,3.961
+2,global_2022,industry_level,Professional and Business Services,Manager,social_connection,4.002
+2,global_2022,industry_level,Professional and Business Services,Manager,strategic_planning,3.678
+2,global_2022,industry_level,Professional and Business Services,Manager,stress_management,2.753
+2,global_2022,industry_level,Professional and Business Services,Manager,team_agility,3.932
+2,global_2022,industry_level,Professional and Business Services,Manager,team_cohesion,3.973
+2,global_2022,industry_level,Professional and Business Services,Manager,team_conflict,2.027
+2,global_2022,industry_level,Professional and Business Services,Manager,team_feedback,3.826
+2,global_2022,industry_level,Professional and Business Services,Manager,team_innovation,3.662
+2,global_2022,industry_level,Professional and Business Services,Manager,team_performance,3.873
+2,global_2022,industry_level,Professional and Business Services,Manager,team_risk_taking,3.613
+2,global_2022,industry_level,Professional and Business Services,Manager,well_being,3.558
+2,global_2022,industry_level,Professional and Business Services,Manager,work_life_balance,2.891
+2,global_2022,industry_level,Retail Industry,Manager,alignment,3.973
+2,global_2022,industry_level,Retail Industry,Manager,authenticity,3.741
+2,global_2022,industry_level,Retail Industry,Manager,belonging_index,3.855
+2,global_2022,industry_level,Retail Industry,Manager,burnout,3.101
+2,global_2022,industry_level,Retail Industry,Manager,care_adaptive_coping,3.215
+2,global_2022,industry_level,Retail Industry,Manager,care_awareness_agency,3.610
+2,global_2022,industry_level,Retail Industry,Manager,care_fulfillment,4.009
+2,global_2022,industry_level,Retail Industry,Manager,care_outlook,3.833
+2,global_2022,industry_level,Retail Industry,Manager,care_self_care,2.887
+2,global_2022,industry_level,Retail Industry,Manager,care_well_being,3.519
+2,global_2022,industry_level,Retail Industry,Manager,coaching,3.669
+2,global_2022,industry_level,Retail Industry,Manager,coaching_culture,3.595
+2,global_2022,industry_level,Retail Industry,Manager,coaching_culture_coworkers,3.841
+2,global_2022,industry_level,Retail Industry,Manager,coaching_culture_org_practices,3.559
+2,global_2022,industry_level,Retail Industry,Manager,coaching_culture_psy_safety,3.351
+2,global_2022,industry_level,Retail Industry,Manager,cognitive_agility,3.890
+2,global_2022,industry_level,Retail Industry,Manager,emotional_regulation,3.585
+2,global_2022,industry_level,Retail Industry,Manager,empathy,4.198
+2,global_2022,industry_level,Retail Industry,Manager,empowerment,3.885
+2,global_2022,industry_level,Retail Industry,Manager,encouraging_participation,4.224
+2,global_2022,industry_level,Retail Industry,Manager,engagement,3.963
+2,global_2022,industry_level,Retail Industry,Manager,ex_authenticity,3.741
+2,global_2022,industry_level,Retail Industry,Manager,ex_belonging,3.897
+2,global_2022,industry_level,Retail Industry,Manager,ex_engagement,3.963
+2,global_2022,industry_level,Retail Industry,Manager,ex_index,3.902
+2,global_2022,industry_level,Retail Industry,Manager,ex_optimism,3.757
+2,global_2022,industry_level,Retail Industry,Manager,ex_purpose_and_meaning,4.043
+2,global_2022,industry_level,Retail Industry,Manager,ex_social_connection,3.990
+2,global_2022,industry_level,Retail Industry,Manager,feedback,3.841
+2,global_2022,industry_level,Retail Industry,Manager,focus,3.529
+2,global_2022,industry_level,Retail Industry,Manager,goal_attainment,3.879
+2,global_2022,industry_level,Retail Industry,Manager,growth_mindset,3.863
+2,global_2022,industry_level,Retail Industry,Manager,hope,3.775
+2,global_2022,industry_level,Retail Industry,Manager,inclusive_leadership,4.090
+2,global_2022,industry_level,Retail Industry,Manager,intent_to_stay,4.036
+2,global_2022,industry_level,Retail Industry,Manager,job_satisfaction,3.896
+2,global_2022,industry_level,Retail Industry,Manager,life_satisfaction,3.900
+2,global_2022,industry_level,Retail Industry,Manager,locus_of_control_internal,3.906
+2,global_2022,industry_level,Retail Industry,Manager,manager_job_performance,3.568
+2,global_2022,industry_level,Retail Industry,Manager,nutrition,3.647
+2,global_2022,industry_level,Retail Industry,Manager,optimism,3.757
+2,global_2022,industry_level,Retail Industry,Manager,perceived_organizational_support,3.683
+2,global_2022,industry_level,Retail Industry,Manager,physical_activity,3.362
+2,global_2022,industry_level,Retail Industry,Manager,problem_solving,3.905
+2,global_2022,industry_level,Retail Industry,Manager,productivity,7.811
+2,global_2022,industry_level,Retail Industry,Manager,psycap,3.768
+2,global_2022,industry_level,Retail Industry,Manager,psychological_safety,3.351
+2,global_2022,industry_level,Retail Industry,Manager,purpose_and_meaning,4.043
+2,global_2022,industry_level,Retail Industry,Manager,recognition,3.942
+2,global_2022,industry_level,Retail Industry,Manager,relationship_building,4.171
+2,global_2022,industry_level,Retail Industry,Manager,resilience,3.677
+2,global_2022,industry_level,Retail Industry,Manager,rest,3.268
+2,global_2022,industry_level,Retail Industry,Manager,rix,3.937
+2,global_2022,industry_level,Retail Industry,Manager,sales_excellence,3.832
+2,global_2022,industry_level,Retail Industry,Manager,self_awareness,3.684
+2,global_2022,industry_level,Retail Industry,Manager,self_compassion,2.618
+2,global_2022,industry_level,Retail Industry,Manager,self_efficacy,4.017
+2,global_2022,industry_level,Retail Industry,Manager,sense_of_belonging,3.897
+2,global_2022,industry_level,Retail Industry,Manager,social_connection,3.990
+2,global_2022,industry_level,Retail Industry,Manager,strategic_planning,3.781
+2,global_2022,industry_level,Retail Industry,Manager,stress_management,2.788
+2,global_2022,industry_level,Retail Industry,Manager,team_agility,3.984
+2,global_2022,industry_level,Retail Industry,Manager,team_cohesion,4.011
+2,global_2022,industry_level,Retail Industry,Manager,team_conflict,1.989
+2,global_2022,industry_level,Retail Industry,Manager,team_feedback,3.817
+2,global_2022,industry_level,Retail Industry,Manager,team_innovation,3.632
+2,global_2022,industry_level,Retail Industry,Manager,team_performance,3.866
+2,global_2022,industry_level,Retail Industry,Manager,team_risk_taking,3.657
+2,global_2022,industry_level,Retail Industry,Manager,well_being,3.583
+2,global_2022,industry_level,Retail Industry,Manager,work_life_balance,2.906
+2,global_2022,industry_level,Technology Industry,Individual Contributor,alignment,3.780
+2,global_2022,industry_level,Technology Industry,Individual Contributor,authenticity,3.620
+2,global_2022,industry_level,Technology Industry,Individual Contributor,belonging_index,3.625
+2,global_2022,industry_level,Technology Industry,Individual Contributor,burnout,2.929
+2,global_2022,industry_level,Technology Industry,Individual Contributor,care_adaptive_coping,3.028
+2,global_2022,industry_level,Technology Industry,Individual Contributor,care_awareness_agency,3.483
+2,global_2022,industry_level,Technology Industry,Individual Contributor,care_fulfillment,3.842
+2,global_2022,industry_level,Technology Industry,Individual Contributor,care_outlook,3.650
+2,global_2022,industry_level,Technology Industry,Individual Contributor,care_self_care,2.672
+2,global_2022,industry_level,Technology Industry,Individual Contributor,care_well_being,3.347
+2,global_2022,industry_level,Technology Industry,Individual Contributor,coaching,3.270
+2,global_2022,industry_level,Technology Industry,Individual Contributor,coaching_culture,3.649
+2,global_2022,industry_level,Technology Industry,Individual Contributor,coaching_culture_coworkers,3.776
+2,global_2022,industry_level,Technology Industry,Individual Contributor,coaching_culture_org_practices,3.623
+2,global_2022,industry_level,Technology Industry,Individual Contributor,coaching_culture_psy_safety,3.473
+2,global_2022,industry_level,Technology Industry,Individual Contributor,cognitive_agility,3.738
+2,global_2022,industry_level,Technology Industry,Individual Contributor,emotional_regulation,3.315
+2,global_2022,industry_level,Technology Industry,Individual Contributor,empathy,4.310
+2,global_2022,industry_level,Technology Industry,Individual Contributor,empowerment,3.829
+2,global_2022,industry_level,Technology Industry,Individual Contributor,encouraging_participation,3.965
+2,global_2022,industry_level,Technology Industry,Individual Contributor,engagement,3.651
+2,global_2022,industry_level,Technology Industry,Individual Contributor,ex_authenticity,3.620
+2,global_2022,industry_level,Technology Industry,Individual Contributor,ex_belonging,3.790
+2,global_2022,industry_level,Technology Industry,Individual Contributor,ex_engagement,3.651
+2,global_2022,industry_level,Technology Industry,Individual Contributor,ex_index,3.720
+2,global_2022,industry_level,Technology Industry,Individual Contributor,ex_optimism,3.581
+2,global_2022,industry_level,Technology Industry,Individual Contributor,ex_purpose_and_meaning,3.822
+2,global_2022,industry_level,Technology Industry,Individual Contributor,ex_social_connection,3.921
+2,global_2022,industry_level,Technology Industry,Individual Contributor,feedback,3.776
+2,global_2022,industry_level,Technology Industry,Individual Contributor,focus,3.275
+2,global_2022,industry_level,Technology Industry,Individual Contributor,goal_attainment,3.818
+2,global_2022,industry_level,Technology Industry,Individual Contributor,growth_mindset,3.856
+2,global_2022,industry_level,Technology Industry,Individual Contributor,hope,3.492
+2,global_2022,industry_level,Technology Industry,Individual Contributor,inclusive_leadership,3.963
+2,global_2022,industry_level,Technology Industry,Individual Contributor,intent_to_stay,4.099
+2,global_2022,industry_level,Technology Industry,Individual Contributor,job_satisfaction,3.698
+2,global_2022,industry_level,Technology Industry,Individual Contributor,life_satisfaction,3.745
+2,global_2022,industry_level,Technology Industry,Individual Contributor,locus_of_control_internal,3.732
+2,global_2022,industry_level,Technology Industry,Individual Contributor,manager_job_performance,3.578
+2,global_2022,industry_level,Technology Industry,Individual Contributor,nutrition,3.687
+2,global_2022,industry_level,Technology Industry,Individual Contributor,optimism,3.581
+2,global_2022,industry_level,Technology Industry,Individual Contributor,perceived_organizational_support,4.018
+2,global_2022,industry_level,Technology Industry,Individual Contributor,physical_activity,3.375
+2,global_2022,industry_level,Technology Industry,Individual Contributor,problem_solving,3.793
+2,global_2022,industry_level,Technology Industry,Individual Contributor,productivity,7.010
+2,global_2022,industry_level,Technology Industry,Individual Contributor,psycap,3.527
+2,global_2022,industry_level,Technology Industry,Individual Contributor,psychological_safety,3.473
+2,global_2022,industry_level,Technology Industry,Individual Contributor,purpose_and_meaning,3.822
+2,global_2022,industry_level,Technology Industry,Individual Contributor,recognition,3.929
+2,global_2022,industry_level,Technology Industry,Individual Contributor,relationship_building,3.917
+2,global_2022,industry_level,Technology Industry,Individual Contributor,resilience,3.433
+2,global_2022,industry_level,Technology Industry,Individual Contributor,rest,3.264
+2,global_2022,industry_level,Technology Industry,Individual Contributor,rix,3.800
+2,global_2022,industry_level,Technology Industry,Individual Contributor,sales_excellence,3.607
+2,global_2022,industry_level,Technology Industry,Individual Contributor,self_awareness,3.485
+2,global_2022,industry_level,Technology Industry,Individual Contributor,self_compassion,2.417
+2,global_2022,industry_level,Technology Industry,Individual Contributor,self_efficacy,3.979
+2,global_2022,industry_level,Technology Industry,Individual Contributor,sense_of_belonging,3.790
+2,global_2022,industry_level,Technology Industry,Individual Contributor,social_connection,3.921
+2,global_2022,industry_level,Technology Industry,Individual Contributor,strategic_planning,3.534
+2,global_2022,industry_level,Technology Industry,Individual Contributor,stress_management,2.687
+2,global_2022,industry_level,Technology Industry,Individual Contributor,team_agility,3.818
+2,global_2022,industry_level,Technology Industry,Individual Contributor,team_cohesion,3.971
+2,global_2022,industry_level,Technology Industry,Individual Contributor,team_conflict,2.029
+2,global_2022,industry_level,Technology Industry,Individual Contributor,team_feedback,3.776
+2,global_2022,industry_level,Technology Industry,Individual Contributor,team_innovation,3.611
+2,global_2022,industry_level,Technology Industry,Individual Contributor,team_performance,3.733
+2,global_2022,industry_level,Technology Industry,Individual Contributor,team_risk_taking,3.537
+2,global_2022,industry_level,Technology Industry,Individual Contributor,well_being,3.481
+2,global_2022,industry_level,Technology Industry,Individual Contributor,work_life_balance,3.270
+2,global_2022,industry_level,Technology Industry,Manager,alignment,4.028
+2,global_2022,industry_level,Technology Industry,Manager,authenticity,3.846
+2,global_2022,industry_level,Technology Industry,Manager,belonging_index,3.803
+2,global_2022,industry_level,Technology Industry,Manager,burnout,3.125
+2,global_2022,industry_level,Technology Industry,Manager,care_adaptive_coping,3.207
+2,global_2022,industry_level,Technology Industry,Manager,care_awareness_agency,3.698
+2,global_2022,industry_level,Technology Industry,Manager,care_fulfillment,4.067
+2,global_2022,industry_level,Technology Industry,Manager,care_outlook,3.894
+2,global_2022,industry_level,Technology Industry,Manager,care_self_care,2.821
+2,global_2022,industry_level,Technology Industry,Manager,care_well_being,3.546
+2,global_2022,industry_level,Technology Industry,Manager,coaching,3.728
+2,global_2022,industry_level,Technology Industry,Manager,coaching_culture,3.795
+2,global_2022,industry_level,Technology Industry,Manager,coaching_culture_coworkers,3.930
+2,global_2022,industry_level,Technology Industry,Manager,coaching_culture_org_practices,3.839
+2,global_2022,industry_level,Technology Industry,Manager,coaching_culture_psy_safety,3.645
+2,global_2022,industry_level,Technology Industry,Manager,cognitive_agility,3.923
+2,global_2022,industry_level,Technology Industry,Manager,emotional_regulation,3.635
+2,global_2022,industry_level,Technology Industry,Manager,empathy,4.275
+2,global_2022,industry_level,Technology Industry,Manager,empowerment,4.014
+2,global_2022,industry_level,Technology Industry,Manager,encouraging_participation,4.289
+2,global_2022,industry_level,Technology Industry,Manager,engagement,3.911
+2,global_2022,industry_level,Technology Industry,Manager,ex_authenticity,3.846
+2,global_2022,industry_level,Technology Industry,Manager,ex_belonging,3.995
+2,global_2022,industry_level,Technology Industry,Manager,ex_engagement,3.911
+2,global_2022,industry_level,Technology Industry,Manager,ex_index,3.948
+2,global_2022,industry_level,Technology Industry,Manager,ex_optimism,3.839
+2,global_2022,industry_level,Technology Industry,Manager,ex_purpose_and_meaning,4.085
+2,global_2022,industry_level,Technology Industry,Manager,ex_social_connection,4.034
+2,global_2022,industry_level,Technology Industry,Manager,feedback,3.930
+2,global_2022,industry_level,Technology Industry,Manager,focus,3.588
+2,global_2022,industry_level,Technology Industry,Manager,goal_attainment,3.971
+2,global_2022,industry_level,Technology Industry,Manager,growth_mindset,3.963
+2,global_2022,industry_level,Technology Industry,Manager,hope,3.808
+2,global_2022,industry_level,Technology Industry,Manager,inclusive_leadership,4.145
+2,global_2022,industry_level,Technology Industry,Manager,intent_to_stay,4.144
+2,global_2022,industry_level,Technology Industry,Manager,job_satisfaction,3.975
+2,global_2022,industry_level,Technology Industry,Manager,life_satisfaction,3.971
+2,global_2022,industry_level,Technology Industry,Manager,locus_of_control_internal,3.890
+2,global_2022,industry_level,Technology Industry,Manager,manager_job_performance,3.599
+2,global_2022,industry_level,Technology Industry,Manager,nutrition,3.768
+2,global_2022,industry_level,Technology Industry,Manager,optimism,3.839
+2,global_2022,industry_level,Technology Industry,Manager,perceived_organizational_support,3.997
+2,global_2022,industry_level,Technology Industry,Manager,physical_activity,3.572
+2,global_2022,industry_level,Technology Industry,Manager,problem_solving,3.939
+2,global_2022,industry_level,Technology Industry,Manager,productivity,7.716
+2,global_2022,industry_level,Technology Industry,Manager,psycap,3.820
+2,global_2022,industry_level,Technology Industry,Manager,psychological_safety,3.645
+2,global_2022,industry_level,Technology Industry,Manager,purpose_and_meaning,4.085
+2,global_2022,industry_level,Technology Industry,Manager,recognition,3.983
+2,global_2022,industry_level,Technology Industry,Manager,relationship_building,4.212
+2,global_2022,industry_level,Technology Industry,Manager,resilience,3.699
+2,global_2022,industry_level,Technology Industry,Manager,rest,3.456
+2,global_2022,industry_level,Technology Industry,Manager,rix,3.995
+2,global_2022,industry_level,Technology Industry,Manager,sales_excellence,3.880
+2,global_2022,industry_level,Technology Industry,Manager,self_awareness,3.634
+2,global_2022,industry_level,Technology Industry,Manager,self_compassion,2.577
+2,global_2022,industry_level,Technology Industry,Manager,self_efficacy,4.078
+2,global_2022,industry_level,Technology Industry,Manager,sense_of_belonging,3.995
+2,global_2022,industry_level,Technology Industry,Manager,social_connection,4.034
+2,global_2022,industry_level,Technology Industry,Manager,strategic_planning,3.825
+2,global_2022,industry_level,Technology Industry,Manager,stress_management,2.791
+2,global_2022,industry_level,Technology Industry,Manager,team_agility,3.921
+2,global_2022,industry_level,Technology Industry,Manager,team_cohesion,4.052
+2,global_2022,industry_level,Technology Industry,Manager,team_conflict,1.948
+2,global_2022,industry_level,Technology Industry,Manager,team_feedback,3.835
+2,global_2022,industry_level,Technology Industry,Manager,team_innovation,3.688
+2,global_2022,industry_level,Technology Industry,Manager,team_performance,3.854
+2,global_2022,industry_level,Technology Industry,Manager,team_risk_taking,3.643
+2,global_2022,industry_level,Technology Industry,Manager,well_being,3.666
+2,global_2022,industry_level,Technology Industry,Manager,work_life_balance,3.009
+2,global_2022,industry_level,Telecommunications Industry,Individual Contributor,alignment,3.780
+2,global_2022,industry_level,Telecommunications Industry,Individual Contributor,authenticity,3.586
+2,global_2022,industry_level,Telecommunications Industry,Individual Contributor,belonging_index,3.522
+2,global_2022,industry_level,Telecommunications Industry,Individual Contributor,burnout,2.970
+2,global_2022,industry_level,Telecommunications Industry,Individual Contributor,care_adaptive_coping,2.996
+2,global_2022,industry_level,Telecommunications Industry,Individual Contributor,care_awareness_agency,3.487
+2,global_2022,industry_level,Telecommunications Industry,Individual Contributor,care_fulfillment,3.794
+2,global_2022,industry_level,Telecommunications Industry,Individual Contributor,care_outlook,3.574
+2,global_2022,industry_level,Telecommunications Industry,Individual Contributor,care_self_care,2.631
+2,global_2022,industry_level,Telecommunications Industry,Individual Contributor,care_well_being,3.308
+2,global_2022,industry_level,Telecommunications Industry,Individual Contributor,coaching,3.263
+2,global_2022,industry_level,Telecommunications Industry,Individual Contributor,coaching_culture,3.619
+2,global_2022,industry_level,Telecommunications Industry,Individual Contributor,coaching_culture_coworkers,3.769
+2,global_2022,industry_level,Telecommunications Industry,Individual Contributor,coaching_culture_org_practices,3.584
+2,global_2022,industry_level,Telecommunications Industry,Individual Contributor,coaching_culture_psy_safety,3.424
+2,global_2022,industry_level,Telecommunications Industry,Individual Contributor,cognitive_agility,3.718
+2,global_2022,industry_level,Telecommunications Industry,Individual Contributor,emotional_regulation,3.319
+2,global_2022,industry_level,Telecommunications Industry,Individual Contributor,empathy,4.326
+2,global_2022,industry_level,Telecommunications Industry,Individual Contributor,empowerment,3.817
+2,global_2022,industry_level,Telecommunications Industry,Individual Contributor,encouraging_participation,3.947
+2,global_2022,industry_level,Telecommunications Industry,Individual Contributor,engagement,3.567
+2,global_2022,industry_level,Telecommunications Industry,Individual Contributor,ex_authenticity,3.586
+2,global_2022,industry_level,Telecommunications Industry,Individual Contributor,ex_belonging,3.646
+2,global_2022,industry_level,Telecommunications Industry,Individual Contributor,ex_engagement,3.567
+2,global_2022,industry_level,Telecommunications Industry,Individual Contributor,ex_index,3.649
+2,global_2022,industry_level,Telecommunications Industry,Individual Contributor,ex_optimism,3.466
+2,global_2022,industry_level,Telecommunications Industry,Individual Contributor,ex_purpose_and_meaning,3.742
+2,global_2022,industry_level,Telecommunications Industry,Individual Contributor,ex_social_connection,3.913
+2,global_2022,industry_level,Telecommunications Industry,Individual Contributor,feedback,3.769
+2,global_2022,industry_level,Telecommunications Industry,Individual Contributor,focus,3.232
+2,global_2022,industry_level,Telecommunications Industry,Individual Contributor,goal_attainment,3.798
+2,global_2022,industry_level,Telecommunications Industry,Individual Contributor,growth_mindset,3.834
+2,global_2022,industry_level,Telecommunications Industry,Individual Contributor,hope,3.461
+2,global_2022,industry_level,Telecommunications Industry,Individual Contributor,inclusive_leadership,3.956
+2,global_2022,industry_level,Telecommunications Industry,Individual Contributor,intent_to_stay,4.035
+2,global_2022,industry_level,Telecommunications Industry,Individual Contributor,job_satisfaction,3.611
+2,global_2022,industry_level,Telecommunications Industry,Individual Contributor,life_satisfaction,3.709
+2,global_2022,industry_level,Telecommunications Industry,Individual Contributor,locus_of_control_internal,3.641
+2,global_2022,industry_level,Telecommunications Industry,Individual Contributor,manager_job_performance,3.533
+2,global_2022,industry_level,Telecommunications Industry,Individual Contributor,nutrition,3.633
+2,global_2022,industry_level,Telecommunications Industry,Individual Contributor,optimism,3.466
+2,global_2022,industry_level,Telecommunications Industry,Individual Contributor,perceived_organizational_support,3.866
+2,global_2022,industry_level,Telecommunications Industry,Individual Contributor,physical_activity,3.318
+2,global_2022,industry_level,Telecommunications Industry,Individual Contributor,problem_solving,3.760
+2,global_2022,industry_level,Telecommunications Industry,Individual Contributor,productivity,7.054
+2,global_2022,industry_level,Telecommunications Industry,Individual Contributor,psycap,3.463
+2,global_2022,industry_level,Telecommunications Industry,Individual Contributor,psychological_safety,3.424
+2,global_2022,industry_level,Telecommunications Industry,Individual Contributor,purpose_and_meaning,3.742
+2,global_2022,industry_level,Telecommunications Industry,Individual Contributor,recognition,3.918
+2,global_2022,industry_level,Telecommunications Industry,Individual Contributor,relationship_building,3.901
+2,global_2022,industry_level,Telecommunications Industry,Individual Contributor,resilience,3.391
+2,global_2022,industry_level,Telecommunications Industry,Individual Contributor,rest,3.236
+2,global_2022,industry_level,Telecommunications Industry,Individual Contributor,rix,3.789
+2,global_2022,industry_level,Telecommunications Industry,Individual Contributor,sales_excellence,3.597
+2,global_2022,industry_level,Telecommunications Industry,Individual Contributor,self_awareness,3.472
+2,global_2022,industry_level,Telecommunications Industry,Individual Contributor,self_compassion,2.367
+2,global_2022,industry_level,Telecommunications Industry,Individual Contributor,self_efficacy,3.959
+2,global_2022,industry_level,Telecommunications Industry,Individual Contributor,sense_of_belonging,3.646
+2,global_2022,industry_level,Telecommunications Industry,Individual Contributor,social_connection,3.913
+2,global_2022,industry_level,Telecommunications Industry,Individual Contributor,strategic_planning,3.562
+2,global_2022,industry_level,Telecommunications Industry,Individual Contributor,stress_management,2.671
+2,global_2022,industry_level,Telecommunications Industry,Individual Contributor,team_agility,3.885
+2,global_2022,industry_level,Telecommunications Industry,Individual Contributor,team_cohesion,3.940
+2,global_2022,industry_level,Telecommunications Industry,Individual Contributor,team_conflict,2.060
+2,global_2022,industry_level,Telecommunications Industry,Individual Contributor,team_feedback,3.769
+2,global_2022,industry_level,Telecommunications Industry,Individual Contributor,team_innovation,3.635
+2,global_2022,industry_level,Telecommunications Industry,Individual Contributor,team_performance,3.773
+2,global_2022,industry_level,Telecommunications Industry,Individual Contributor,team_risk_taking,3.555
+2,global_2022,industry_level,Telecommunications Industry,Individual Contributor,well_being,3.457
+2,global_2022,industry_level,Telecommunications Industry,Individual Contributor,work_life_balance,3.172
+2,global_2022,industry_level,Telecommunications Industry,Manager,alignment,3.967
+2,global_2022,industry_level,Telecommunications Industry,Manager,authenticity,3.701
+2,global_2022,industry_level,Telecommunications Industry,Manager,belonging_index,3.748
+2,global_2022,industry_level,Telecommunications Industry,Manager,burnout,3.158
+2,global_2022,industry_level,Telecommunications Industry,Manager,care_adaptive_coping,3.104
+2,global_2022,industry_level,Telecommunications Industry,Manager,care_awareness_agency,3.534
+2,global_2022,industry_level,Telecommunications Industry,Manager,care_fulfillment,3.959
+2,global_2022,industry_level,Telecommunications Industry,Manager,care_outlook,3.735
+2,global_2022,industry_level,Telecommunications Industry,Manager,care_self_care,2.852
+2,global_2022,industry_level,Telecommunications Industry,Manager,care_well_being,3.449
+2,global_2022,industry_level,Telecommunications Industry,Manager,coaching,3.610
+2,global_2022,industry_level,Telecommunications Industry,Manager,coaching_culture,3.595
+2,global_2022,industry_level,Telecommunications Industry,Manager,coaching_culture_coworkers,3.804
+2,global_2022,industry_level,Telecommunications Industry,Manager,coaching_culture_org_practices,3.579
+2,global_2022,industry_level,Telecommunications Industry,Manager,coaching_culture_psy_safety,3.359
+2,global_2022,industry_level,Telecommunications Industry,Manager,cognitive_agility,3.845
+2,global_2022,industry_level,Telecommunications Industry,Manager,emotional_regulation,3.492
+2,global_2022,industry_level,Telecommunications Industry,Manager,empathy,4.325
+2,global_2022,industry_level,Telecommunications Industry,Manager,empowerment,4.006
+2,global_2022,industry_level,Telecommunications Industry,Manager,encouraging_participation,4.265
+2,global_2022,industry_level,Telecommunications Industry,Manager,engagement,3.823
+2,global_2022,industry_level,Telecommunications Industry,Manager,ex_authenticity,3.701
+2,global_2022,industry_level,Telecommunications Industry,Manager,ex_belonging,3.785
+2,global_2022,industry_level,Telecommunications Industry,Manager,ex_engagement,3.823
+2,global_2022,industry_level,Telecommunications Industry,Manager,ex_index,3.817
+2,global_2022,industry_level,Telecommunications Industry,Manager,ex_optimism,3.609
+2,global_2022,industry_level,Telecommunications Industry,Manager,ex_purpose_and_meaning,3.965
+2,global_2022,industry_level,Telecommunications Industry,Manager,ex_social_connection,3.989
+2,global_2022,industry_level,Telecommunications Industry,Manager,feedback,3.804
+2,global_2022,industry_level,Telecommunications Industry,Manager,focus,3.401
+2,global_2022,industry_level,Telecommunications Industry,Manager,goal_attainment,3.819
+2,global_2022,industry_level,Telecommunications Industry,Manager,growth_mindset,3.780
+2,global_2022,industry_level,Telecommunications Industry,Manager,hope,3.668
+2,global_2022,industry_level,Telecommunications Industry,Manager,inclusive_leadership,4.135
+2,global_2022,industry_level,Telecommunications Industry,Manager,intent_to_stay,4.107
+2,global_2022,industry_level,Telecommunications Industry,Manager,job_satisfaction,3.832
+2,global_2022,industry_level,Telecommunications Industry,Manager,life_satisfaction,3.864
+2,global_2022,industry_level,Telecommunications Industry,Manager,locus_of_control_internal,3.734
+2,global_2022,industry_level,Telecommunications Industry,Manager,manager_job_performance,3.678
+2,global_2022,industry_level,Telecommunications Industry,Manager,nutrition,3.583
+2,global_2022,industry_level,Telecommunications Industry,Manager,optimism,3.609
+2,global_2022,industry_level,Telecommunications Industry,Manager,perceived_organizational_support,3.739
+2,global_2022,industry_level,Telecommunications Industry,Manager,physical_activity,3.290
+2,global_2022,industry_level,Telecommunications Industry,Manager,problem_solving,3.885
+2,global_2022,industry_level,Telecommunications Industry,Manager,productivity,7.748
+2,global_2022,industry_level,Telecommunications Industry,Manager,psycap,3.645
+2,global_2022,industry_level,Telecommunications Industry,Manager,psychological_safety,3.359
+2,global_2022,industry_level,Telecommunications Industry,Manager,purpose_and_meaning,3.965
+2,global_2022,industry_level,Telecommunications Industry,Manager,recognition,4.040
+2,global_2022,industry_level,Telecommunications Industry,Manager,relationship_building,4.189
+2,global_2022,industry_level,Telecommunications Industry,Manager,resilience,3.541
+2,global_2022,industry_level,Telecommunications Industry,Manager,rest,3.173
+2,global_2022,industry_level,Telecommunications Industry,Manager,rix,3.926
+2,global_2022,industry_level,Telecommunications Industry,Manager,sales_excellence,3.771
+2,global_2022,industry_level,Telecommunications Industry,Manager,self_awareness,3.661
+2,global_2022,industry_level,Telecommunications Industry,Manager,self_compassion,2.564
+2,global_2022,industry_level,Telecommunications Industry,Manager,self_efficacy,4.006
+2,global_2022,industry_level,Telecommunications Industry,Manager,sense_of_belonging,3.785
+2,global_2022,industry_level,Telecommunications Industry,Manager,social_connection,3.989
+2,global_2022,industry_level,Telecommunications Industry,Manager,strategic_planning,3.614
+2,global_2022,industry_level,Telecommunications Industry,Manager,stress_management,2.703
+2,global_2022,industry_level,Telecommunications Industry,Manager,team_agility,4.022
+2,global_2022,industry_level,Telecommunications Industry,Manager,team_cohesion,4.007
+2,global_2022,industry_level,Telecommunications Industry,Manager,team_conflict,1.993
+2,global_2022,industry_level,Telecommunications Industry,Manager,team_feedback,3.804
+2,global_2022,industry_level,Telecommunications Industry,Manager,team_innovation,3.695
+2,global_2022,industry_level,Telecommunications Industry,Manager,team_performance,3.963
+2,global_2022,industry_level,Telecommunications Industry,Manager,team_risk_taking,3.631
+2,global_2022,industry_level,Telecommunications Industry,Manager,well_being,3.527
+2,global_2022,industry_level,Telecommunications Industry,Manager,work_life_balance,2.965
+2,global_2022,industry_level,Transportation Industry,Manager,alignment,3.880
+2,global_2022,industry_level,Transportation Industry,Manager,authenticity,3.612
+2,global_2022,industry_level,Transportation Industry,Manager,belonging_index,3.753
+2,global_2022,industry_level,Transportation Industry,Manager,burnout,3.206
+2,global_2022,industry_level,Transportation Industry,Manager,care_adaptive_coping,3.113
+2,global_2022,industry_level,Transportation Industry,Manager,care_awareness_agency,3.519
+2,global_2022,industry_level,Transportation Industry,Manager,care_fulfillment,3.940
+2,global_2022,industry_level,Transportation Industry,Manager,care_outlook,3.717
+2,global_2022,industry_level,Transportation Industry,Manager,care_self_care,2.816
+2,global_2022,industry_level,Transportation Industry,Manager,care_well_being,3.433
+2,global_2022,industry_level,Transportation Industry,Manager,coaching,3.561
+2,global_2022,industry_level,Transportation Industry,Manager,coaching_culture,3.590
+2,global_2022,industry_level,Transportation Industry,Manager,coaching_culture_coworkers,3.764
+2,global_2022,industry_level,Transportation Industry,Manager,coaching_culture_org_practices,3.574
+2,global_2022,industry_level,Transportation Industry,Manager,coaching_culture_psy_safety,3.396
+2,global_2022,industry_level,Transportation Industry,Manager,cognitive_agility,3.821
+2,global_2022,industry_level,Transportation Industry,Manager,emotional_regulation,3.470
+2,global_2022,industry_level,Transportation Industry,Manager,empathy,4.130
+2,global_2022,industry_level,Transportation Industry,Manager,empowerment,3.942
+2,global_2022,industry_level,Transportation Industry,Manager,encouraging_participation,4.245
+2,global_2022,industry_level,Transportation Industry,Manager,engagement,3.781
+2,global_2022,industry_level,Transportation Industry,Manager,ex_authenticity,3.612
+2,global_2022,industry_level,Transportation Industry,Manager,ex_belonging,3.872
+2,global_2022,industry_level,Transportation Industry,Manager,ex_engagement,3.781
+2,global_2022,industry_level,Transportation Industry,Manager,ex_index,3.818
+2,global_2022,industry_level,Transportation Industry,Manager,ex_optimism,3.656
+2,global_2022,industry_level,Transportation Industry,Manager,ex_purpose_and_meaning,4.088
+2,global_2022,industry_level,Transportation Industry,Manager,ex_social_connection,3.914
+2,global_2022,industry_level,Transportation Industry,Manager,feedback,3.764
+2,global_2022,industry_level,Transportation Industry,Manager,focus,3.284
+2,global_2022,industry_level,Transportation Industry,Manager,goal_attainment,3.805
+2,global_2022,industry_level,Transportation Industry,Manager,growth_mindset,3.773
+2,global_2022,industry_level,Transportation Industry,Manager,hope,3.610
+2,global_2022,industry_level,Transportation Industry,Manager,inclusive_leadership,4.024
+2,global_2022,industry_level,Transportation Industry,Manager,intent_to_stay,3.908
+2,global_2022,industry_level,Transportation Industry,Manager,job_satisfaction,3.837
+2,global_2022,industry_level,Transportation Industry,Manager,life_satisfaction,3.745
+2,global_2022,industry_level,Transportation Industry,Manager,locus_of_control_internal,3.815
+2,global_2022,industry_level,Transportation Industry,Manager,manager_job_performance,3.472
+2,global_2022,industry_level,Transportation Industry,Manager,nutrition,3.383
+2,global_2022,industry_level,Transportation Industry,Manager,optimism,3.656
+2,global_2022,industry_level,Transportation Industry,Manager,perceived_organizational_support,3.734
+2,global_2022,industry_level,Transportation Industry,Manager,physical_activity,3.291
+2,global_2022,industry_level,Transportation Industry,Manager,problem_solving,3.833
+2,global_2022,industry_level,Transportation Industry,Manager,productivity,7.338
+2,global_2022,industry_level,Transportation Industry,Manager,psycap,3.628
+2,global_2022,industry_level,Transportation Industry,Manager,psychological_safety,3.396
+2,global_2022,industry_level,Transportation Industry,Manager,purpose_and_meaning,4.088
+2,global_2022,industry_level,Transportation Industry,Manager,recognition,3.860
+2,global_2022,industry_level,Transportation Industry,Manager,relationship_building,4.055
+2,global_2022,industry_level,Transportation Industry,Manager,resilience,3.554
+2,global_2022,industry_level,Transportation Industry,Manager,rest,3.213
+2,global_2022,industry_level,Transportation Industry,Manager,rix,3.881
+2,global_2022,industry_level,Transportation Industry,Manager,sales_excellence,3.705
+2,global_2022,industry_level,Transportation Industry,Manager,self_awareness,3.557
+2,global_2022,industry_level,Transportation Industry,Manager,self_compassion,2.574
+2,global_2022,industry_level,Transportation Industry,Manager,self_efficacy,3.911
+2,global_2022,industry_level,Transportation Industry,Manager,sense_of_belonging,3.872
+2,global_2022,industry_level,Transportation Industry,Manager,social_connection,3.914
+2,global_2022,industry_level,Transportation Industry,Manager,strategic_planning,3.642
+2,global_2022,industry_level,Transportation Industry,Manager,stress_management,2.735
+2,global_2022,industry_level,Transportation Industry,Manager,team_agility,3.884
+2,global_2022,industry_level,Transportation Industry,Manager,team_cohesion,3.947
+2,global_2022,industry_level,Transportation Industry,Manager,team_conflict,2.053
+2,global_2022,industry_level,Transportation Industry,Manager,team_feedback,3.764
+2,global_2022,industry_level,Transportation Industry,Manager,team_innovation,3.596
+2,global_2022,industry_level,Transportation Industry,Manager,team_performance,3.800
+2,global_2022,industry_level,Transportation Industry,Manager,team_risk_taking,3.617
+2,global_2022,industry_level,Transportation Industry,Manager,well_being,3.466
+2,global_2022,industry_level,Transportation Industry,Manager,work_life_balance,2.988

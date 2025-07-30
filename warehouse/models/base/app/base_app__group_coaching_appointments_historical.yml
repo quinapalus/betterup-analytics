@@ -1,0 +1,16 @@
+version: 2
+
+models:
+  - name: base_app__group_coaching_appointments_historical
+    description: ""
+    columns:
+      - name: attempted_to_join_at
+      - name: created_at
+      - name: group_coaching_session_id
+      - name: id
+        tests:
+          - unique
+          - not_null
+      - name: updated_at
+      - name: user_id
+      - name: assigned_post_session_resources_at

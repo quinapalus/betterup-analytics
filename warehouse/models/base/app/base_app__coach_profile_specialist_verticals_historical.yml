@@ -1,0 +1,18 @@
+version: 2
+
+models:
+  - name: base_app__coach_profile_specialist_verticals_historical
+    description: ""
+    columns:
+      - name: coach_profile_id
+      - name: created_at
+      - name: id
+        description: Primary key
+        tests:
+          - unique
+          - not_null
+      - name: specialist_vertical_id
+      - name: updated_at
+      - name: uuid
+      - name: specialist_vertical_uuid
+      - name: coach_profile_uuid

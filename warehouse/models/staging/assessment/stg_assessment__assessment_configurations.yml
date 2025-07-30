@@ -1,0 +1,36 @@
+version: 2
+
+models:
+  - name: stg_assessment__assessment_configurations
+    description: Coach Profiles
+
+    columns:
+      - name: assessment_configuration_id
+        description: Unique identifier of Assessment Configuration
+        tests:
+          - unique
+          - not_null
+      - name: assessment_configuration_uuid
+        description: Unique identifier of Assessment Configuration, compatable across
+          US/EU
+        tests:
+          - unique
+          - not_null
+      - name: TITLE_I18N
+        description: JSON BLOB containing Assessment Title in different languages
+      - name: title_en
+        description: Assessment Title in English, parsed out of the JSON BLOB TITLE_I18N
+      - name: TOKEN
+        description: The 'TOKEN' column contains an alphanumeric token that helps
+          to identify each assessment configuration. [GenAI Description]
+      - name: description
+        description: Internal description of the assessment configuration
+      - name: SHOW_REPORT_PAGE_ON_SUBMIT
+        description: "'SHOW_REPORT_PAGE_ON_SUBMIT' indicates whether a report page\
+          \ should be shown after a user submits an assessment. [GenAI Description]"
+      - name: created_at
+        description: The 'created_at' column stores the timestamp when the assessment
+          configuration was created. [GenAI Description]
+      - name: updated_at
+        description: The 'updated_at' column stores the date and time when the record
+          in the assessment_configurations table was last updated. [GenAI Description]

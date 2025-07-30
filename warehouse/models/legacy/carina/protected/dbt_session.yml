@@ -1,0 +1,214 @@
+version: 2
+models:
+  - name: dbt_session
+    description: >
+      Protected carina model containing information on sessions, using combined information
+      from tables on billable events and member calls. Sessions in this
+      table are limited to external deployments and those sessions that have been
+      completed after October 18, 2018 as we had no feedback on call quality then.
+
+    columns:
+      - name: session_key
+        description: Primary Key.
+        tests:
+          - unique
+          - not_null
+
+      - name: member_key
+        description: >
+          Foreign key to conformed Member dimension for the member associated
+          with the session.
+        tests:
+          - not_null
+
+      - name: coach_key
+        description: >
+          Foreign key to conformed Coach dimension for the coach associated
+          with the session.
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_coach')
+              field: coach_key
+
+      - name: account_key
+        description: >
+          Foreign key to conformed Account dimension for the account associated
+          with the session.
+        tests:
+          - not_null
+          
+      - name: deployment_key
+        description: >
+          Foreign key to conformed Deployment dimension for the deployment associated
+          with the session.
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_deployment')
+              field: deployment_key
+
+      - name: member_deployment_key
+        description: Foreign key to conformed Member-Deployment dimension.
+        tests:
+          - not_null
+
+      - name: date_key
+        description: >
+          Foreign key to conformed Date dimension for the date associated with the
+          session.
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_date')
+              field: date_key
+
+      - name: app_scheduled_at
+        description: >
+          Timestamp denoting when the session was scheduled.
+        tests:
+          - not_null
+
+      - name: app_starts_at
+        description: >
+          Timestamp denoting when the session started.
+        tests:
+          - not_null
+
+      - name: scheduled_length
+        description: >
+          Integer denoting the scheduled length of the session.
+        tests:
+          - not_null
+
+      - name: is_complete
+        description: >
+          Boolean indicating if the session was completed. For now, this is
+          a stub as all sessions in the table are completed sessions.
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['true']
+
+      - name: session_type
+        description: >
+          Sanitized string denoting the type of coaching provided in the session.
+        tests:
+          - accepted_values:
+              values: [Primary, Extended Network, On Demand]
+
+      - name: extended_network_session_type
+        description: >
+          Sanitized string denoting the type of extended-network session, if `session_type`
+          was marked as `Extended Network`. `N/A` otherwise.
+
+      - name: development_topic_key
+        description: >
+          Foreign key to conformed Development Topic dimension for the main topic marked by
+          the coach for the given session.
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_development_topic')
+              field: development_topic_key
+
+      - name: contact_method
+        description: contact method indicated for the session
+
+      - name: caoch_qualitative_feedback_call_quality
+        description: Description of uncategorized issues with BetterUp Video reported by the coach, if any. This will only be populated when "coach_feedback_call_quality" is "other".
+
+      - name: media_mode
+        description: Media mode of the videochat call (relayed or routed)
+
+      - name: platform_provider
+        description: >
+          Platform provider used for the call.
+
+      - name: member_platform
+        description: Platform of the member's client device (web, ios, android)
+
+      - name: member_os_browser
+        description: OS and browser of the member's client device
+
+      - name: coach_platform
+        description: Platform of the coach's client device (web, ios, android)
+
+      - name: coach_os_browser
+        description: OS and browser of the coach's client device
+
+      - name: coach_reported_completed_on_platform
+        description: Boolean indicating whether the coach reported that the full call was completed on BetterUp Video. This question is mandatory for the coach to complete the appointment. If an Admin completes the appointment on behalf of the coach the value will be NULL.
+
+      - name: coach_reported_completed_on_phone
+        description: Boolean indicating whether the coach reported that the call was completed via phone. This question is mandatory for the coach to complete the appointment if a proxy phone session was created. If an admin complete the appointment on behalf of the coach, or if a proxy phone session was not created the value will be NULL.
+
+      - name: coach_reported_problem
+        description: Boolean indicating whether the coach reported an issue with BetterUp Video. This question is mandatory for the coach to complete the appointment. If an Admin completes the appointment on behalf of the coach the value will be NULL.
+
+      - name: member_connected
+        description: >
+          Boolean denoting whether the member connected to the call during the session.
+
+      - name: member_submitted_rating
+        description: >
+          Boolean denoting if the member submitted a rating for the session. NULL before Mar 8, 2019.
+
+      - name: coach_connected
+        description: >
+          Boolean denoting whether the coach connected to the call during the session.
+
+      - name: member_submitted_rating
+        description: >
+          Boolean denoting whether the member submitted a post-session rating for the
+          given session. This field is only populated for sessions that occurred after
+          the release of updated post-session items on Mar 8, 2019.
+
+      - name: platform_duration_minutes
+        description: >
+          Decimal number denoting the length of the call on the platform,
+          derived by taking the difference between the timestamp of earliest
+          disconnection and the timestamp of latest connection to the call,
+          either by the member or the coach.
+
+      - name: reported_duration_minutes
+        description: >
+          Integer denoting the length of the session as reported by the coach.
+        tests:
+          - not_null
+
+      - name: coach_encountered_call_issue
+        description: >
+          Boolean denoting if the coach answered "Yes" to the "Did any technical
+          issues hinder you from having a successful session?" in the post-session
+          assessment. NULL before January 17, 2020.
+
+      - name: coach_feedback_call_quality
+        description: >
+          Coach feedback on the call quality, optionally provided by the coaches
+          after marking the session as complete. After January 17, 2020, this can
+          be an array of values.
+
+      - name: member_encountered_call_issue
+        description: >
+          Boolean denoting if the member answered "Yes" to the "Did any technical
+          issues hinder you from having a successful session?" in the post-session
+          assessment. NULL before January 17, 2020.
+
+      - name: member_feedback_call_quality
+        description: >
+          Member feedback on the call quality, optionally provided by the coaches
+          after marking the session as complete. NULL before January 17, 2020.
+
+      - name: coach_feedback_covid_topics
+        description: >
+          Comma-separated string values denoting the COVID-19-related topics discussed
+          in the session, as reported by the coach.
+
+      - name: coach_feedback_covid_session_extent
+        description: >
+          Numerical response denoting the extent to which COVID-19 was the main topic of the session.
+          Scale is defined as: 1, 'Not at all'; 2, 'Slightly'; 3, 'Moderately'; 4, 'Quite a bit'; 5, 'Extremely'.
+
+      - name: member_completed_session_sequence
+        description: 1-based sequence of completed sessions by member.

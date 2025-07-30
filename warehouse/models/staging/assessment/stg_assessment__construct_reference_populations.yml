@@ -1,0 +1,42 @@
+version: 2
+
+models:
+  - name: stg_assessment__construct_reference_populations
+    description: >
+      This table is where our assessment science norms (means, SDs) are stored.
+      This means that each reference_population has a record per construct.
+      (There is also technically a record per reference_population_subgroup.)
+      In that record, it stores the score_mean and score_sd for that reference_population x construct.
+      This table can be thought of as the raw results of BetterUp psychometric research,
+      how certain populations score against a number of behaviors/outcomes/characteristics (constructs).
+    columns:
+      - name: construct_reference_population_id
+        description: ""
+        tests:
+          - unique
+          - not_null
+
+      - name: construct_reference_population_uuid
+        description: ""
+
+
+      - name: construct_id
+        description: ""
+
+      - name: reference_population_id
+        description: ""
+
+      - name: reference_population_subgroup_id
+        description: ""
+
+      - name: score_mean
+        description: ""
+
+      - name: score_standard_deviation
+        description: ""
+
+      - name: created_at
+        description: ""
+
+      - name: updated_at
+        description: ""

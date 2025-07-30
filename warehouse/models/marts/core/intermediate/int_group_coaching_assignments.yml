@@ -1,0 +1,79 @@
+version: 2
+models:
+  - name: int_group_coaching_assignments
+
+    columns:
+      - name: group_coaching_assignment_id
+        description: Surrogate primary key
+        tests:
+          - unique
+          - not_null
+          
+      - name: group_coaching_series_id
+        description: Id of the series this assignment is for.
+
+      - name: registration_start
+        description: Time the series opens for registration, UTC.
+
+      - name: registration_ended_at
+        description: Time the series ends for registration, UTC.
+
+      - name: track_id
+        description: Foreign Key to the associated track.
+
+      - name: track_assignment_id
+        description: Foreign Key for the associated Track Assignment.
+
+      - name: ta_created_at
+        description: Time the Track Assignment was created, UTC.
+
+      - name: ta_ended_at
+        description: Time the Track Assignment was ended, UTC.
+
+      - name: group_coaching_curriculum_id
+        description: Id of the curriculum this assignment is for.
+
+      - name: group_coaching_cohort_id
+        description: Id of the cohort this assignment is for.
+
+      - name: group_coaching_registration_id
+        description: Id of the registration this assignment is for.
+
+      - name: registration_created_at
+        description: Time the registration was created, UTC.
+
+      - name: curriculum_title
+        description: Title of the associiated curriculum.
+
+      - name: member_id
+        description: Foreign key for associated member.
+
+      - name: program_name
+        description: Identifies the Program for the Track.
+
+      - name: product_subscription_assignment_id
+        description: Foreign Key for the associated Product Subscription Assignment.
+
+      - name: psa_started_at
+        description: Time the product subscription was started, UTC.
+
+      - name: psa_ended_at
+        description: Time the product subscription was ended, UTC.
+
+      - name: product_subscription_id
+        description: Foreign Key for the associated Product Subscription.
+
+      - name: product_id
+        description: Foreign Key for the associated Product.
+
+      - name: organization_id
+        description: Foreign Key for the associated organization.
+
+      - name: product_name
+        description: Name of the associated product.
+
+      - name: workshops
+        description: Boolean if the associated assignment is a workshop.
+
+      - name: coaching_circles
+        description: Boolean if the associated assignment is a coaching circle.

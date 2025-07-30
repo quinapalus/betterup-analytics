@@ -1,0 +1,30 @@
+version: 2
+
+models:
+  - name: fact_active_contracts
+    columns:
+      - name: fact_active_contract_id
+        description: ""
+        tests:
+          - unique
+          - not_null
+      - name: product_id
+        description: ""
+      - name: organization_id
+        description: ""
+      - name: total_licenses_purchased
+        description: ""
+      - name: total_purchased_days
+        description: ""
+      - name: total_days_left_on_cli
+        description: ""
+      - name: total_licenses_assigned
+        description: ""
+      - name: total_active_psas_assigned
+        description: ""
+      - name: total_license_days_assigned
+        description: ""
+      - name: actual_license_days_used
+        description: ""
+      - name: total_unused_license_days
+        description: ""

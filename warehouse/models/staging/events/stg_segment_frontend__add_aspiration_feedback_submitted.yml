@@ -1,0 +1,53 @@
+version: 2
+
+models:
+  - name: stg_segment_frontend__add_aspiration_feedback_submitted
+    description: This DBT model provides data on user interactions with the 'Add Aspiration'
+      feature on the frontend of a segment page, such as page name, page URL, desired
+      aspiration count, platform, and event details. The model is designed to store
+      the data from the raw 'Add Aspiration Feedback Submitted' source and provide
+      the relational code needed to access the data. [GenAI Description]
+    columns:
+      - name: id
+        description: The 'id' column is a unique identifier for each row of the data.
+          [GenAI Description]
+        tests:
+          - unique
+          - not_null
+
+      - name: user_id
+        description: The user_id column stores the unique identity of a user. [GenAI
+          Description]
+
+      - name: page_name
+        description: The 'page_name' column stores the name of the page the user visited
+          prior to submitting their feedback. [GenAI Description]
+
+      - name: page_url
+        description: The 'page_url' column contains a URL representing the page on
+          the website where the event associated with this table occurred. [GenAI
+          Description]
+
+      - name: context_page_title
+        description: The column 'context_page_title' stores the page title of the
+          web page that the user was on at the time of the event. [GenAI Description]
+
+      - name: context_page_url
+        description: The 'context_page_url' column stores the URL of the web page
+          on which the feedback event took place. [GenAI Description]
+
+      - name: platform
+        description: The 'platform' column stores information about the device/software
+          used when an event is triggered. [GenAI Description]
+
+      - name: desired_aspiration_count
+        description: The desired_aspiration_count column records the number of desired
+          aspirations specified by a user. [GenAI Description]
+
+      - name: event
+        description: The 'event' column contains the type of event that was triggered
+          in relation to the feedback submitted. [GenAI Description]
+
+      - name: event_at
+        description: The 'event_at' column stores event timestamps in a timestamp
+          format. [GenAI Description]

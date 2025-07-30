@@ -1,0 +1,66 @@
+version: 2
+
+models:
+
+  - name: fact_customer_journey_events
+    meta:
+      owner: "xavier.mafe@betterup.co"
+    tests:
+      - unique:
+          column_name: "associated_record_id || '-' || event_name"
+
+    columns:
+      - name: event_name
+        tests:
+          - dbt_expectations.expect_column_to_exist
+          - accepted_values:
+              #test that only these values exist
+              values: ['lead made inquiry','lead reached fm','lead reached mql','lead reached sal','opportunity closed lost',
+                    'opportunity closed lost','opportunity closed won','opportunity reached stage 1','opportunity reached stage 2',
+                    'opportunity reached stage 3','opportunity reached stage 4','opportunity reached stage 5','opportunity reached stage 6',
+                    'opportunity created','lead made inquiry 15 day offset','lead reached mql 15 day offset']
+          - not_null
+          - dbt_expectations.expect_column_distinct_values_to_contain_set:
+              #test that these values actually exist at least once
+              value_set: ['lead made inquiry','lead reached fm','lead reached mql','lead reached sal','opportunity closed lost',
+                    'opportunity closed lost','opportunity closed won','opportunity reached stage 1','opportunity reached stage 2',
+                    'opportunity reached stage 3','opportunity reached stage 4','opportunity reached stage 5','opportunity reached stage 6',
+                    'opportunity created']
+      - name: event_at
+        tests:
+          - not_null
+          - dbt_expectations.expect_column_to_exist
+
+      - name: sfdc_person_id
+        tests:
+        - dbt_expectations.expect_column_to_exist
+
+      - name: sfdc_account_id
+        tests:
+        - dbt_expectations.expect_column_to_exist
+
+      - name: sfdc_opportunity_id
+        tests:
+        - dbt_expectations.expect_column_to_exist
+
+      - name: associated_record_id
+        tests:
+        - dbt_expectations.expect_column_to_exist
+
+      - name: associated_record_type
+        tests:
+        - dbt_expectations.expect_column_to_exist
+
+      - name: attributes
+        tests:
+        - dbt_expectations.expect_column_to_exist
+
+      - name: primary_key
+        tests:
+        - dbt_expectations.expect_column_to_exist
+        - unique
+        - not_null
+
+      - name: management_target_key
+        tests:
+        - dbt_expectations.expect_column_to_exist

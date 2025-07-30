@@ -1,0 +1,11 @@
+version: 2
+
+models:
+  - name: stg_stripe__customers
+    description: Customers stored via Stripe.
+    columns:
+      - name: stripe_customer_id
+        description: Primary key
+        tests:
+          - unique
+          - not_null

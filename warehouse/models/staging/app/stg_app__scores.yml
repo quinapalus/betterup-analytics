@@ -1,0 +1,55 @@
+version: 2
+
+models:
+  - name: stg_app__scores
+    description: Raw scores and app-scaled scores for assessment item responses recorded
+      at the time of assessment submission.
+    columns:
+      - name: score_id
+        description: The score_id column contains a unique identifier for each score
+          record. [GenAI Description]
+        tests:
+          - unique
+          - not_null
+
+      - name: key
+        description: The 'key' column stores a unique identifier for each score record.
+          [GenAI Description]
+
+      - name: type
+        description: The 'type' column indicates the type of score associated with
+          the assessment. [GenAI Description]
+
+      - name: assessment_id
+        description: The 'assessment_id' column contains a unique identifier for each
+          assessment. [GenAI Description]
+
+      - name: raw_score
+        description: "'raw_score' is the unadjusted score for each assessment in the\
+          \ table. [GenAI Description]"
+
+      - name: scale_score
+        description: The column 'scale_score' stores a score measured on a specific
+          scale, such as a numerical or letter grade. [GenAI Description]
+
+      - name: z_score
+        description: The z_score column contains the normalized values that represent
+          the difference between the raw score and the reference population score.
+          [GenAI Description]
+
+      - name: construct_reference_population_id
+        description: The column 'construct_reference_population_id' provides the ID
+          of the reference population used in the assessment score. [GenAI Description]
+
+      - name: construct_reference_population_uuid
+        description: The construct_reference_population_uuid column contains a unique
+          identifier for the construct reference population associated with a particular
+          score. [GenAI Description]
+
+      - name: created_at
+        description: The 'created_at' column contains the date and time the score
+          entry was created. [GenAI Description]
+
+      - name: updated_at
+        description: "'updated_at' is the date and time of when the record was last\
+          \ modified. [GenAI Description]"

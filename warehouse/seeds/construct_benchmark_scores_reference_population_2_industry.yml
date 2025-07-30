@@ -1,0 +1,39 @@
+version: 2
+
+seeds:
+  - name: construct_benchmark_scores_reference_population_2_industry
+    description: ""
+    columns:
+      - name: reference_population_id
+        tests:
+          - accepted_values:
+              values: ['2']
+
+      - name: reference_population_key
+        description: ""
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['global_2022']
+
+      - name: benchmark_type
+        description: ""
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['industry']
+
+      - name: industry
+        description: ""
+        tests:
+          - not_null
+
+      - name: key
+        description: ""
+        tests:
+          - not_null
+
+      - name: mean
+        description: ""
+        tests:
+          - not_null

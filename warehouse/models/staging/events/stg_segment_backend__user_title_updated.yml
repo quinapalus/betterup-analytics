@@ -1,0 +1,14 @@
+version: 2
+models:
+  - name: stg_segment_backend__user_title_updated
+    description: The DBT model stg_segment_backend__user_title_updated pulls in user
+      data from the 'segment_backend' source and pulls in specific fields such as
+      id, user_id, 'title_updated_at', and 'timestamp'. This model uses a combination
+      of raw SQL and dbt functions such as 'load_timestamp' to get the desired output.
+      [GenAI Description]
+    columns:
+      - name: id
+        description: primary key
+        tests:
+          - unique
+          - not_null

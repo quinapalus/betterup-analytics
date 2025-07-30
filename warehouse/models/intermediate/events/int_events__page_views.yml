@@ -1,0 +1,49 @@
+version: 2
+
+models:
+  - name: int_events__page_views
+    description: >
+      Page view events from web, iOS, and Android apps.
+
+    columns:
+      - name: event_id
+        tests:
+          - unique
+          - not_null
+        description: ID of event.
+      - name: user_id
+        description: User who viewed the page
+      - name: event_text
+        description: Description of event
+        tests:
+          - not_null
+      - name: received_at
+        description: Time of the actual event in UTC.
+        tests:
+          - not_null
+      - name: page_name
+        description: >
+          Name of viewed page. Most informative for mobile views.
+      - name: page_url
+        description: >
+          URL of page viewed. NULL for mobile events.
+      - name: platform
+        description: Source of event. Can be web, ios, or android.
+        tests:
+          - not_null
+          - accepted_values:
+              values: [web, ios, android]
+
+      - name: client_features_enabled
+        description: List of feature flags that were enabled for the user on the client.
+
+      - name: server_features_enabled
+        description: List of feature flags that were enabled for the user on the server.
+
+      - name: user_agent
+        description: >
+          Which user agent was used by the User. `user_agent` is NULL for iOS since
+          the
+          native iOS does not have a `user_agent`. Any iOS views deferred to the frontend
+          will
+          appear as events originating from the frontend.

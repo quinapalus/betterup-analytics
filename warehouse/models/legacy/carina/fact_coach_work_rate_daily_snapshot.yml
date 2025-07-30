@@ -1,0 +1,159 @@
+version: 2
+models:
+  - name: fact_coach_work_rate_daily_snapshot
+    description: >
+      Fact table containing information on billable and completed sessions by the coach for each day since the coach's day of platform account creation to the date the coach's account was deactivated (or to today's date, in case they still have an activated account).
+
+    columns:
+      - name: primary_key
+        tests:
+          - not_null
+          - unique
+
+      - name: date_key
+        description: Foreign key to conformed Date dimension.
+        tests:
+          - relationships:
+              to: ref('dim_date')
+              field: date_key
+
+      - name: app_coach_id
+        description: >
+          Foreign app-specific key to the associated coach.
+        tests:
+          - not_null
+          - relationships:
+              to: ref('int_app__users')
+              field: user_id
+
+      - name: billable_session_count
+        description: >
+          Number of billable sessions by the coach on that particular day.
+        tests:
+          - not_null
+
+      - name: billable_session_hours
+        description: >
+          Length of billable sessions (in hours) by the coach on that particular day.
+        tests:
+          - not_null
+
+      - name: completed_session_count
+        description: >
+          Number of completed sessions by the coach on that particular day.
+        tests:
+          - not_null
+
+      - name: completed_session_hours
+        description: >
+          Length of completed sessions (in hours) by the coach on that particular day.
+        tests:
+          - not_null
+
+      - name: billable_session_count_t30d
+        description: >
+          Number of billable sessions by the coach over the previous 30 day window
+          including the current day.
+        tests:
+          - not_null
+
+      - name: billable_session_hours_t30d
+        description: >
+          Length of billable sessions (in hours) by the coach over the previous
+          30 day window including the current day.
+        tests:
+          - not_null
+
+      - name: completed_session_count_t30d
+        description: >
+          Number of completed sessions by the coach over the previous 30 day window
+          including the current day.
+        tests:
+          - not_null
+
+      - name: completed_session_hours_t30d
+        description: >
+          Length of completed sessions (in hours) by the coach over the previous
+          30 day window including the current day.
+        tests:
+          - not_null
+
+      - name: billable_session_count_t60d
+        description: >
+          Number of billable sessions by the coach over the previous 60 day window
+          including the current day.
+        tests:
+          - not_null
+
+      - name: billable_session_hours_t60d
+        description: >
+          Length of billable sessions (in hours) by the coach over the previous
+          60 day window including the current day.
+        tests:
+          - not_null
+
+      - name: completed_session_count_t60d
+        description: >
+          Number of completed sessions by the coach over the previous 60 day window
+          including the current day.
+        tests:
+          - not_null
+
+      - name: completed_session_hours_t60d
+        description: >
+          Length of completed sessions (in hours) by the coach over the previous
+          60 day window including the current day.
+        tests:
+          - not_null
+
+      - name: billable_session_count_t90d
+        description: >
+          Number of billable sessions by the coach over the previous 90 day window
+          including the current day.
+        tests:
+          - not_null
+
+      - name: billable_session_hours_t90d
+        description: >
+          Length of billable sessions (in hours) by the coach over the previous
+          90 day window including the current day.
+        tests:
+          - not_null
+
+      - name: completed_session_count_t90d
+        description: >
+          Number of completed sessions by the coach over the previous 90 day window
+          including the current day.
+        tests:
+          - not_null
+
+      - name: completed_session_hours_t90d
+        description: >
+          Length of completed sessions (in hours) by the coach over the previous
+          90 day window including the current day.
+        tests:
+          - not_null
+
+      - name: billable_session_count_coach_to_date
+        description: >
+          Number of billable sessions over entire time span for the coach.
+        tests:
+          - not_null
+
+      - name: billable_session_hours_coach_to_date
+        description: >
+          Length of billable sessions (in hours) over entire time span for the coach.
+        tests:
+          - not_null
+
+      - name: completed_session_count_coach_to_date
+        description: >
+          Number of completed sessions over entire time span for the coach.
+        tests:
+          - not_null
+
+      - name: completed_session_hours_coach_to_date
+        description: >
+          Length of completed sessions (in hours) over entire time span for the coach.
+        tests:
+          - not_null

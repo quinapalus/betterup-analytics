@@ -1,0 +1,54 @@
+version: 2
+
+models:
+  - name: fact_coach_compensation_events_seasoned
+    description: >
+      This fact table takes the comp events that we need for seasonal coach reporting
+      and  joins it to the necessary seasons.
+
+    columns:
+      - name: primary_key
+        description: Primary surrogate key
+        tests:
+          - unique
+          - not_null
+
+      - name: season_id
+        description: The 'season_id' column indicates the season associated with each
+          coaching compensation event. [GenAI Description]
+
+      - name: coach_id
+        description: "'coach_id' is the unique identifier of the coach for each record.\
+          \ [GenAI Description]"
+
+      - name: member_id
+        description: The column 'member_id' stores the unique identifier of the coach
+          associated with a compensation event. [GenAI Description]
+
+      - name: event_at
+        description: "'event_at' contains the timestamp of a coach compensation event.\
+          \ [GenAI Description]"
+
+      - name: event_action
+        description: The 'event_action' column contains information about the type
+          of action taken for a coach compensation event. [GenAI Description]
+
+      - name: event_object
+        description: The 'event_object' column stores information about the object
+          associated with the event. [GenAI Description]
+
+      - name: event_action_and_object
+        description: The 'event_action_and_object' column captures the details and
+          action related to a coach's compensation event. [GenAI Description]
+
+      - name: associated_record_type
+        description: The 'associated_record_type' column stores the type of records
+          associated with the coach compensation event. [GenAI Description]
+
+      - name: associated_record_id
+        description: "'associated_record_id' is the foreign key linking the coach\
+          \ compensation events to the relevant season. [GenAI Description]"
+
+      - name: attributes
+        description: The 'attributes' column contains descriptive information that
+          is associated with the coach compensation events. [GenAI Description]

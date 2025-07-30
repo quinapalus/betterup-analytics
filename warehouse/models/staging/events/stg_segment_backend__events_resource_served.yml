@@ -1,0 +1,39 @@
+version: 2
+models:
+  - name: stg_segment_backend__events_resource_served
+    description: >
+      _Resource served_ events from Segment that were generated from the `betterup-app` backend.
+      See this [PR](https://github.com/betterup/betterup-app/pull/12652).
+
+    columns:
+      - name: event_id
+        description: Unique identifier of the event.
+        tests:
+          - not_null
+          - unique
+
+      - name: user_id
+        description: Unique identfier of the User.
+
+      - name: resource_id
+        description: Unique identfier of the resource.
+
+      - name: event_at
+        description: >
+          Specifies when the datapoint occurred (UTC), corrected for client-device clock skew.
+          See the Segment [documentation](https://segment.com/docs/spec/common/#timestamps) for more information.
+        tests:
+          - not_null
+
+      - name: event
+        description: Name of the event.
+
+      - name: event_text
+        description:
+          Human-readable name of the event.
+
+      - name: context_library_version
+        description: Version of the Segment library the generated the event.
+
+      - name: context_library_name
+        description: Name of the Segment library that generated the event.

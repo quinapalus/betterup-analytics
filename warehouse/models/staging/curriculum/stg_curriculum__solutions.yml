@@ -1,0 +1,47 @@
+version: 2
+models:
+
+  - name: stg_curriculum__solutions
+    description: The stg_curriculum__solutions model contains solutions related to
+      the curriculum for a given user and holds fields such as the solution unique
+      identifier, creation and update dates, the solution key, name, internationalized
+      name, and type. This model is built from the raw.stitch_app.solutions table
+      and can be used to help adjust and customize the curriculum for a given user.
+      [GenAI Description]
+
+    columns:
+#      - name: solution_id
+#        description: "This is also a primary key but only usable for US data. We decided to use only the solution_uuid
+#                      as it is usable for US and EU data"
+#        tests:
+#          - unique
+#          - not_null
+
+      - name: solution_uuid
+        description: Primary Key
+        tests:
+          - unique
+          - not_null
+
+      - name: created_at
+        description: The 'created_at' column contains timestamped data of when the
+          solution was created. [GenAI Description]
+
+      - name: updated_at
+        description: The column 'updated_at' stores the time at which the solution
+          was last updated. [GenAI Description]
+
+      - name: key
+        description: The 'key' column stores a unique identifier for a solution. [GenAI
+          Description]
+
+      - name: name
+        description: The 'name' column contains an English-language name for the solution.
+          [GenAI Description]
+
+      - name: name_i18n
+        description: "'name_i18n' stores the localized names of each solution in a\
+          \ JSON-formatted string. [GenAI Description]"
+
+      - name: type
+        description: The column 'type' records the type of the solution. [GenAI Description]

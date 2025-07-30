@@ -1,0 +1,35 @@
+version: 2
+
+models:
+  - name: stg_assessment__construct_items
+    description: >
+      Construct items are the modular pieces, which get put into new combinations to make constructs.
+      Assessment / construct ERD found here: https://betterup.atlassian.net/wiki/spaces/DATA/pages/3156443540/Assessments+Schema
+    columns:
+      - name: construct_item_id
+        description: ""
+        tests:
+          - unique
+          - not_null
+
+      - name: construct_id
+        description: ""
+
+      - name: key
+        description: ""
+
+      - name: is_scale_inverted
+        description: ""
+
+      - name: scale_length
+        description: ""
+
+      - name: reference_population_subgroup_id
+        description: ""
+
+      - name: created_at
+        description: ""
+
+      - name: updated_at
+        description: ""
+

@@ -1,0 +1,50 @@
+version: 2
+models:
+  - name: stg_app__milestones
+    description: This DBT model, stg_app__milestones, houses information regarding
+      milestones achieved by user members. For each milestone, it holds the associated
+      record ID & type, context, timestamp of creation & completion, and an indication
+      if the milestone is locked or not. [GenAI Description]
+    columns:
+      - name: milestone_id
+        description: The column 'milestone_id' in the DBT model stores a unique identifier
+          that is associated with each milestone. [GenAI Description]
+        tests:
+          - unique
+          - not_null
+
+      - name: member_id
+        description: The 'member_id' column stores the unique identifier of the user
+          associated with a milestone in the application. [GenAI Description]
+
+      - name: associated_record_id
+        description: The 'associated_record_id' column stores the ID of an item related
+          to the milestone. [GenAI Description]
+
+      - name: associated_record_type
+        description: The column 'associated_record_type' indicates the type of record
+          associated with the milestone. [GenAI Description]
+
+      - name: context
+        description: The 'context' column provides additional contextual information
+          for a milestone. [GenAI Description]
+
+      - name: locked
+        description: The 'locked' column indicates whether a milestone is locked or
+          not. [GenAI Description]
+
+      - name: type
+        description: The column 'type' stores the type of milestone associated with
+          each record. [GenAI Description]
+
+      - name: created_at
+        description: The 'created_at' column records the timestamp of when a milestone
+          was created. [GenAI Description]
+
+      - name: completed_at
+        description: completed_at is the timestamp when a given milestone has been
+          completed. [GenAI Description]
+
+      - name: updated_at
+        description: The updated_at column contains timestamps of the most recent
+          update made to a milestone record. [GenAI Description]

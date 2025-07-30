@@ -1,0 +1,30 @@
+version: 2
+
+models:
+  - name: dbt_member_reporting_group_assignment__started_360_assessment_metrics
+    description: ""
+    columns:
+      - name: member_reporting_group_assignment_key
+        description: ""
+        tests:
+           - not_null
+           - unique
+
+      - name: member_id
+        description: ""
+        tests:
+           - not_null
+
+      - name: reporting_group_id
+        description: ""
+        tests:
+           - not_null        
+
+      - name: associated_assignment_id
+        description: ""
+        tests:
+           - not_null 
+
+      - name: started_last_360_assessment_at
+        description: ""
+        

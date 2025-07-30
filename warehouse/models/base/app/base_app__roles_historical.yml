@@ -1,0 +1,16 @@
+version: 2
+
+models:
+  - name: base_app__roles_historical
+    description: ""
+    columns:
+      - name: created_at
+      - name: id
+        tests:
+          - unique
+          - not_null
+      - name: name
+      - name: resource_id
+      - name: resource_type
+      - name: updated_at
+      - name: uuid

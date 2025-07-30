@@ -1,0 +1,65 @@
+version: 2
+
+models:
+  - name: contract_line_item_calendar
+    description: ""
+    columns:
+      - name: contract_line_item_calendar_id
+        description: ""
+        tests:
+          - unique
+          - not_null
+
+      - name: date_key
+        description: ""
+
+      - name: date
+        description: ""
+
+      - name: calendar_year_month
+        description: ""
+
+      - name: is_current_fiscal_quarter
+        description: ""
+
+      - name: is_previous_fiscal_quarter
+        description: ""
+
+      - name: is_last_day_of_month
+        description: ""
+
+      - name: starts_at
+        description: ""
+
+      - name: starts_date
+        description: ""
+
+      - name: ends_date
+        description: ""
+
+      - name: contract_line_item_id
+        description: ""
+
+      - name: organization_id
+        description: ""
+
+      - name: product_id
+        description: ""
+
+      - name: product_subscription_id
+        description: ""
+
+      - name: term_length
+        description: ""
+
+      - name: coaching_months
+        description: ""
+
+      - name: deployment_type
+        description: ""
+
+      - name: rn
+        description: ""
+
+      - name: seat_number
+        description: ""

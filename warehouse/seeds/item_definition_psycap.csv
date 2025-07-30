@@ -1,0 +1,13 @@
+item_key,subdimension,item_prompt,scale
+confident_representing_work_area,efficacy,I feel confident in representing my work area in meetings with management.,1-Strongly Disagree;2-Disagree;3-Neutral;4-Agree;5-Strongly Agree
+confident_discussing_strategy,efficacy,I feel confident contributing to discussions about the company's strategy.,1-Strongly Disagree;2-Disagree;3-Neutral;4-Agree;5-Strongly Agree
+confident_presenting_information,efficacy,I feel confident presenting information to a group of colleagues.,1-Strongly Disagree;2-Disagree;3-Neutral;4-Agree;5-Strongly Agree
+many_ways_to_get_out_of_a_jam,hope,"If I should find myself in a jam at work, I could think of many ways to get out of it.",1-Strongly Disagree;2-Disagree;3-Neutral;4-Agree;5-Strongly Agree
+see_myself_as_successful,hope,Right now I see myself as being pretty successful at work.,1-Strongly Disagree;2-Disagree;3-Neutral;4-Agree;5-Strongly Agree
+many_ways_to_reach_goals,hope,I can think of many ways to reach my current work goals.,1-Strongly Disagree;2-Disagree;3-Neutral;4-Agree;5-Strongly Agree
+meeting_work_goals,hope,"At this time, I am meeting the work goals that I have set for myself.",1-Strongly Disagree;2-Disagree;3-Neutral;4-Agree;5-Strongly Agree
+can_be_on_my_own,resilience,I can be “on my own” so to speak at work if I have to.,1-Strongly Disagree;2-Disagree;3-Neutral;4-Agree;5-Strongly Agree
+take_stressful_things_in_stride,resilience,I usually take stressful things at work in stride.,1-Strongly Disagree;2-Disagree;3-Neutral;4-Agree;5-Strongly Agree
+can_get_through_difficult_times,resilience,I can get through difficult times at work because I’ve experienced difficulty before.,1-Strongly Disagree;2-Disagree;3-Neutral;4-Agree;5-Strongly Agree
+look_on_bright_side,optimism,I always look on the bright side of things regarding my job.,1-Strongly Disagree;2-Disagree;3-Neutral;4-Agree;5-Strongly Agree
+optimistic_about_future,optimism,I’m optimistic about what will happen to me in the future as it pertains to work.,1-Strongly Disagree;2-Disagree;3-Neutral;4-Agree;5-Strongly Agree

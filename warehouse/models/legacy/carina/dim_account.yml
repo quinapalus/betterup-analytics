@@ -1,0 +1,52 @@
+version: 2
+models:
+  - name: dim_account
+    description: >
+      Conformed Account dimension
+
+    columns:
+      - name: account_key
+        description: Primary Key
+        tests:
+          - unique
+          - not_null
+
+      - name: app_organization_name
+        description: Name of the application organization for the given account.
+        tests:
+          - not_null
+
+      - name: sfdc_account_name
+        description: Name of the SFDC account associated with the given account.
+        tests:
+          - not_null
+
+      - name: sfdc_account_owner
+        description: Full name of the SFDC Account Owner.
+        tests:
+          - not_null
+
+      - name: sfdc_account_csm
+        description: Full name of the SFDC Account CSM.
+        tests:
+          - not_null
+
+      - name: account_segment
+        description: Segment for the given account.
+
+      - name: account_industry
+        description: Which industry the Account is in.
+
+      - name: account_company_size
+        description: How many employees the company has
+
+      - name: sfdc_account_id
+        description: Foreign Key to the associated SFDC account
+        tests:
+          - not_null
+
+      - name: app_organization_id
+        description: Foreign Key to the associated platform organization.
+        tests:
+          - unique
+          - not_null

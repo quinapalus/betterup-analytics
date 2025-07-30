@@ -1,0 +1,36 @@
+version: 2
+
+models:
+  - name: stg_coach__coach_growth_path_pay_rates
+    description: ""
+    columns:
+      - name: coach_growth_path_pay_rate_id
+        description: ""
+        tests:
+          - unique
+          - not_null
+
+      - name: coach_growth_path_pay_rate_uuid
+        description: ""
+        tests:
+          - unique
+          - not_null
+
+      - name: created_at
+        description: ""
+
+      - name: updated_at
+        description: ""
+
+      - name: amount_usd
+        description: ""
+
+      - name: coaching_cloud
+        description: ""
+
+      - name: name
+        description: ""
+
+      - name: tier
+        description: ""
+

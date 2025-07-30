@@ -1,0 +1,47 @@
+version: 2
+
+models:
+  - name: non_session_event_time
+    description: The 'non_session_event_time' DBT model captures session-unrelated
+      activities, messages, and goals for a C3 member, such as completed assessments,
+      assigned activities and resources, goal and message creation, and shared objectives.
+      It contains fields for activity identification, member ID, category, and duration
+      in minutes. The associated parent models describe the activities involved in
+      more detail. [GenAI Description]
+    columns:
+      - name: non_session_event_time_id
+        description: Surrogate primary key
+        tests:
+          - unique
+          - not_null
+
+      - name: member_id
+        description: The 'member_id' column stores the unique ID of members engaging
+          in activities and assessments. [GenAI Description]
+
+      - name: eventable_id
+        description: The 'eventable_id' column stores the identifier of the object
+          associated with a given engagement event. [GenAI Description]
+
+      - name: eventable_type
+        description: This column records the type of eventable object associated with
+          each event entry. [GenAI Description]
+
+      - name: verb
+        description: The 'verb' column stores the type of action taken by the member
+          (eg. 'Completed', 'Submitted', 'Shared', etc.) in relation to an activity,
+          assessment, message or goal. [GenAI Description]
+
+      - name: event_at
+        description: Describes the timestamp for when a member completed an engagement
+          event (such as completing an activity, assessment, message, or goal). [GenAI
+          Description]
+
+      - name: event_category
+        description: The 'event_category' column provides the category of a member
+          activity, such as coach-assigned activities, messages and goals, or completed
+          assessments. [GenAI Description]
+
+      - name: duration_minutes
+        description: The 'duration_minutes' column represents the length of engagement
+          time of various member activities, calculated in minutes. [GenAI Description]

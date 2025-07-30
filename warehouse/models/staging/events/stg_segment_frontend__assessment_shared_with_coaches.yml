@@ -1,0 +1,107 @@
+version: 2
+
+models:
+  - name: stg_segment_frontend__assessment_shared_with_coaches
+    description: ""
+    columns:
+      - name: received_at
+        description: ""
+
+      - name: assessment_id
+        description: ""
+
+      - name: timestamp
+        description: ""
+
+      - name: user_id
+        description: ""
+
+      - name: context_user_agent
+        description: ""
+
+      - name: event_text
+        description: ""
+
+      - name: platform
+        description: ""
+
+      - name: user_agent
+        description: ""
+
+      - name: context_locale
+        description: ""
+
+      - name: context_library_name
+        description: ""
+
+      - name: context_page_path
+        description: ""
+
+      - name: assessment_shared_with_coaches_id
+        description: ""
+        tests:
+          - unique
+          - not_null
+          
+      - name: original_timestamp
+        description: ""
+
+      - name: context_amplitude_session_id
+        description: ""
+
+      - name: context_page_title
+        description: ""
+
+      - name: page_url
+        description: ""
+
+      - name: client_features_enabled
+        description: ""
+
+      - name: event
+        description: ""
+
+      - name: page_name
+        description: ""
+
+      - name: sent_at
+        description: ""
+
+      - name: server_features_enabled
+        description: ""
+
+      - name: uuid_ts
+        description: ""
+
+      - name: context_ip
+        description: ""
+
+      - name: context_page_referrer
+        description: ""
+
+      - name: context_page_url
+        description: ""
+
+      - name: using_pwa
+        description: ""
+
+      - name: anonymous_id
+        description: ""
+
+      - name: impersonated_event
+        description: ""
+
+      - name: context_library_version
+        description: ""
+
+      - name: context_page_search
+        description: ""
+
+      - name: context_user_agent_data_mobile
+        description: ""
+
+      - name: context_user_agent_data_brands
+        description: ""
+
+      - name: context_user_agent_data_platform
+        description: ""

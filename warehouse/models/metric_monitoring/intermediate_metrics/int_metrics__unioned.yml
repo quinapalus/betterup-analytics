@@ -1,0 +1,50 @@
+version: 2
+
+models:
+  - name: int_metrics__unioned
+    description: Takes all of the metrics from the intermediate_metrics directory
+      and unions them together
+    columns:
+      - name: primary_key
+        description: Surrogate key from metric_name, metric_date and metric_granularity
+        tests:
+          - not_null
+          - unique
+
+      - name: metric_name
+        description: The column 'metric_name' contains the name of the metric to be
+          monitored. [GenAI Description]
+        tests:
+          - not_null
+          - dbt_expectations.expect_column_distinct_values_to_contain_set:
+              #test that these metrics are coming through to the table at least once
+              value_set: [count_members_primary_coaching_access_4_months, count_activated_within_7_days,
+                members_with_coaching_session, count_invited, session_hours, count_completed_session_within_21_days,
+                count_coaching_sessions, members_w_1_eng_in_fourth_month_req_4_months,
+                mid_month_members, count_activated]
+          - dbt_expectations.expect_column_values_to_have_consistent_casing:
+              #all lowercase
+              display_inconsistent_columns: false
+
+      - name: metric_date
+        description: The 'metric_date' column stores the date associated with the
+          metric being stored. [GenAI Description]
+        tests:
+          - not_null
+          - dbt_expectations.expect_column_values_to_be_of_type:
+              column_type: date
+
+      - name: metric_granularity
+        description: The column 'metric_granularity' allows users to snapshot and
+          monitor a metric at different levels of granularity. [GenAI Description]
+        tests:
+          - not_null
+
+      - name: metric_value
+        description: The 'metric_value' column contains numerical values associated
+          with a given metric, metric date, and metric granularity. [GenAI Description]
+
+      - name: source_object_name
+        description: The 'source_object_name' column denotes the source of the associated
+          metric. [GenAI Description]
+

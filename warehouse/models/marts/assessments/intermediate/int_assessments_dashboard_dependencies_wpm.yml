@@ -1,0 +1,81 @@
+version: 2
+
+
+
+inspiring: &subdimensions_inspiring
+  - "alignment"
+  - "coaching"
+  - "empowerment"
+  - "encouraging_participation"
+  - "problem_solving"
+  - "recognition"
+  - "relationship_building"
+
+thriving: &subdimensions_thriving
+  - "authenticity"
+  - "cognitive_agility"
+  - "emotional_regulation"
+  - "empathy"
+  - "focus"
+  - "nutrition"
+  - "physical_activity"
+  - "rest"
+  - "self_compassion"
+  - "social_connection"
+  - "strategic_planning"
+
+mindset: &subdimensions_mindset
+  - "growth_mindset"
+  - "locus_of_control_internal"
+  - "optimism"
+  - "self_awareness"
+  - "self_efficacy"
+
+outcome: &subdimensions_outcome
+  - "engagement"
+  - "goal_attainment"
+  - "purpose_and_meaning"
+  - "resilience"
+  - "stress_management"
+  - "work_life_balance"
+
+
+
+models:
+
+  - name: int_assessments_dashboard_dependencies_wpm
+    description: "Testing model for downstream WPM QBR dashboard in LookerML"
+
+    columns:
+
+      - name: primary_key
+        description: A primary key formed of (assessment_id, item_key, assessment_item_id)
+        tests:
+          - not_null
+          - unique
+    
+    tests:
+
+      - assessments_include_subdimensions:
+          subdimensions: *subdimensions_inspiring
+          assessment_types:
+            - "Assessments::WholePersonAssessment"
+            - "Assessments::WholePersonProgramCheckinAssessment"
+    
+      - assessments_include_subdimensions:
+          subdimensions: *subdimensions_thriving
+          assessment_types:
+            - "Assessments::WholePersonAssessment"
+            - "Assessments::WholePersonProgramCheckinAssessment"
+
+      - assessments_include_subdimensions:
+          subdimensions: *subdimensions_mindset
+          assessment_types:
+            - "Assessments::WholePersonAssessment"
+            - "Assessments::WholePersonProgramCheckinAssessment"
+
+      - assessments_include_subdimensions:
+          subdimensions: *subdimensions_outcome
+          assessment_types:
+            - "Assessments::WholePersonAssessment"
+            - "Assessments::WholePersonProgramCheckinAssessment"

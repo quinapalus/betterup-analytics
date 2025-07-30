@@ -1,0 +1,39 @@
+version: 2
+models:
+  - name: dim_assessment_item
+    description: >
+      Conformed Assessment Item dimension.
+
+    columns:
+      - name: dim_assessment_item_id
+        description: Primary Key
+        tests: 
+          - not_null
+          - unique
+
+      - name: assessment_item_key
+        description: Primary Key
+        tests:
+          - not_null
+
+      - name: assessment_item_category
+        description: General category of the given assessment item.
+        tests:
+          - not_null
+          - accepted_values:
+              values: [Whole Person Model 1.0, Member Satisfaction, Post-Session Satisfaction,
+                       One Month Survey, Member Onboarding, Coach Satisfaction, Coach Observation]
+
+      - name: assessment_item_prompt
+        description: Item prompt as presented to users.
+        tests:
+          - not_null
+
+      - name: assessment_item_response_scale
+        description: >
+          Semicolon-separated list of response choices presented to users. Several
+          post-session feedback questions had undergone changes in March 2019, resulting
+          in adjusted scales. All scales are contained in this field, preceded by a [tag]
+          that denotes the time period during which that particular scale was used.
+        tests:
+          - not_null

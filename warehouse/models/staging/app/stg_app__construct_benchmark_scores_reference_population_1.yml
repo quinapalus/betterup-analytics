@@ -1,0 +1,25 @@
+version: 2
+
+models:
+  - name: stg_app__construct_benchmark_scores_reference_population_1
+    description: ""
+    columns:
+      - name: primary_key
+        description: ""
+        tests:
+          - unique
+          - not_null
+
+      - name: key
+        description: ""
+        tests:
+          - not_null
+
+      - name: industry
+        description: ""
+
+      - name: level
+        description: ""
+
+      - name: mean
+        description: ""

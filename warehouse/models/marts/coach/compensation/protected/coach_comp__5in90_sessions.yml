@@ -1,0 +1,23 @@
+version: 2
+
+models:
+  - name: coach_comp__5in90_sessions
+    description: 5 session in 90 days metric for coach compensation
+
+    columns:
+      - name: user_season_id
+        description: Surrogate Key of User UUID + Season Name. Functions as primary key.
+        tests:
+          - not_null
+          - unique
+      - name: coach_id
+        tests:
+          - not_null
+      - name: coach_profile_uuid
+      - name: user_uuid
+        tests:
+          - not_null
+      - name: full_name
+      - name: season_name
+      - name: primary_b2b_first_time_sessions
+      - name: primary_b2b_5_in_90_sessions

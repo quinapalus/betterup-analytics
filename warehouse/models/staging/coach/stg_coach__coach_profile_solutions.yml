@@ -1,0 +1,42 @@
+version: 2
+
+models:
+  - name: stg_coach__coach_profile_solutions
+    description: This model stores the many-to-many relationships between coach profiles
+      and solutions. It contains a list of coach profile and solution associations,
+      as well as the time stamps when the association was created/last updated, and
+      the unique identifiers associated with each coach profile and solution. [GenAI
+      Description]
+
+    columns:
+      - name: coach_profile_solution_id
+        description: A unique identifier for each coach profile solution. [GenAI Description]
+        tests:
+          - unique
+          - not_null
+
+      - name: coach_profile_solution_uuid
+        description: A unique identifier for each instance of a coach profile solution.
+          [GenAI Description]
+        tests:
+          - unique
+          - not_null
+
+      - name: created_at
+        description: The 'created_at' column stores a timestamp marking the time the
+          coach profile solution was created. [GenAI Description]
+
+      - name: updated_at
+        description: The 'updated_at' column stores the most recent timestamp of when
+          the coach profile solution was updated. [GenAI Description]
+
+      - name: coach_profile_uuid
+        description: "'coach_profile_uuid' is a unique identifier for the specific\
+          \ coach profile associated with the solution. [GenAI Description]"
+
+#      - name: solution_id
+#        description: ""
+
+      - name: solution_uuid
+        description: The 'solution_uuid' column holds the unique identifier for a
+          solution for the coach profile. [GenAI Description]

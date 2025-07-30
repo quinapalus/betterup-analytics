@@ -1,0 +1,51 @@
+version: 2
+
+models:
+  - name: dbt_events__submitted_assessment
+    description: This model tracks when assessments are submitted by users. It contains
+      fields such as member_id (the user's id), event_at (the date and time the submission
+      took place), event_action (the action taken; in this case "submitted"), event_object
+      (the type of object acted upon, in this case 'assessment'), event_action_and_object
+      (the combination of both the action and the object, in this case 'submitted
+      assessment'), associated_record_type (the type of related record for this action;
+      here it is 'Assessment'), associated_record_id (the id of the related record),
+      and attributes (additional attributes related to the assessment, such as the
+      type of assessment, the track assignment id, and the role of the responses).
+      It is also related to parent models containing additional information not included
+      in this model. [GenAI Description]
+    columns:
+      - name: member_id
+        description: The 'member_id' column contains the User ID associated with the
+          Assessment Submission. [GenAI Description]
+
+      - name: event_at
+        description: The 'event_at' column is a timestamp indicating when an assessment
+          was submitted for a member. [GenAI Description]
+
+      - name: event_action
+        description: The event_action column records the action taken by a user for
+          a submitted assessment, either 'submitted' or 'updated'. [GenAI Description]
+
+      - name: event_object
+        description: The 'event_object' column provides the string 'assessment' which
+          is the object for the action in the 'event_action' column. [GenAI Description]
+
+      - name: event_action_and_object
+        description: The 'event_action_and_object' column combines 'event_action'
+          and 'event_object' into a single text field, indicating the action taken
+          and the object the action was taken on. [GenAI Description]
+
+      - name: associated_record_type
+        description: The 'associated_record_type' field provides the type of an associated
+          record associated with this event. [GenAI Description]
+
+      - name: associated_record_id
+        description: Surrogate primary key -- foreign key to assessments table
+        tests:
+          - not_null
+          - unique
+
+      - name: attributes
+        description: The 'attributes' column contains additional information related
+          to the assessment, such as 'assessment_type', 'track_assignment_id', 'responses_role',
+          and 'parent_id'. [GenAI Description]

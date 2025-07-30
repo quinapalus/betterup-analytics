@@ -1,0 +1,51 @@
+version: 2
+models:
+  - name: stg_sfdc__contacts
+    description: >
+      Salesforce Contact models. For more information, check out the [Salesforce Contact
+      documentation](https://developer.salesforce.com/docs/atlas.en-us.api.meta/api/sforce_api_objects_contact.htm).
+      Note that this model filters out Contacts without an email address.
+
+    columns:
+      - name: sfdc_contact_id
+        description: Unique identifier in Salesforce
+        tests:
+          - not_null
+          - unique
+
+      - name: email
+        description: >
+          The contact's email address. Note that Salesforce does not require
+          contacts to have unique email addresses.
+        tests:
+          - not_null
+
+      - name: is_current_member
+        description: >
+          Boolean indicating whether the contact currently has a global `member`
+          role and an open track assignment on our platform. Values in Salesforce
+          are updated with platform data on nightly basis.
+        tests:
+          - not_null
+          - accepted_values:
+              values: [true, false]
+
+      - name: is_past_member
+        description: >
+          Boolean indicating whether the contact currently has a global `member`
+          role (and no open track assignment) on our platform. Values in Salesforce
+          are updated with platform data on nightly basis.
+        tests:
+          - not_null
+          - accepted_values:
+              values: [true, false]
+
+      - name: is_program_admin
+        description: >
+          Boolean indicating whether the contact currently has a global `partner`
+          role on our platform. Values in Salesforce are updated with platform
+          data on nightly basis.
+        tests:
+          - not_null
+          - accepted_values:
+              values: [true, false]

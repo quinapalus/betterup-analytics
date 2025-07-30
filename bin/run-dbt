@@ -1,0 +1,18 @@
+#! /bin/bash
+
+# configure bash to exit on error
+set -e
+set -o pipefail
+
+cd warehouse
+mkdir -p ~/.dbt
+cp setup.profiles.yml ~/.dbt/profiles.yml
+
+echo "Running dbt run..."
+dbt deps
+dbt run --target $DBT_TARGET
+echo "Finished running dbt run."
+
+echo "Checking in with Dead Man's Snitch"
+curl $DBT_RUN_SNITCH_URL
+echo "Done."

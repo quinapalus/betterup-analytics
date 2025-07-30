@@ -1,0 +1,19 @@
+version: 2
+
+sources:
+  - name: analytics_eu_read_only
+    database: eu_anonymized
+    schema: anon_app_eu
+
+    tables:
+      - name: anon_eu__coach_pay_rates
+      
+  - name: analytics_eu_read_only_anon
+    database: eu_anonymized
+    schema: analytics
+
+    tables:
+      - name: anon_eu__coach_comp__5in90_sessions
+      - name: anon_eu__coach_comp__sessions
+      - name: anon_eu__coach_comp__assessments
+      - name: anon_eu__progress_index__metadata

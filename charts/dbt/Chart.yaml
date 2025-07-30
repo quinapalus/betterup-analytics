@@ -1,0 +1,7 @@
+apiVersion: v2
+name: dbt
+description: Runs BetterUp's DBT project.
+type: application
+version: "0.1.0"
+appVersion: "0.1.0"
+icon: https://www.betterup.com/hubfs/BetterUp_Logo_White.png

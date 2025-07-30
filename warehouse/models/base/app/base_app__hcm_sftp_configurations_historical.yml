@@ -1,0 +1,23 @@
+version: 2
+
+models:
+  - name: base_app__hcm_sftp_configurations_historical
+    description: ""
+    columns:
+      - name: allow_user_deactivation
+      - name: allow_user_removal
+      - name: created_at
+      - name: enabled
+      - name: id
+        tests:
+          - unique
+          - not_null
+      - name: latest_import_id
+      - name: organization_id
+      - name: provision_users
+      - name: retain_files
+      - name: ssh_public_key
+      - name: updated_at
+      - name: sftp_username
+      - name: dry_run
+      - name: sftp_virtual_root

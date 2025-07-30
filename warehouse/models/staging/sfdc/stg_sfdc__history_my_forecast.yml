@@ -1,0 +1,38 @@
+version: 2
+
+models:
+  - name: stg_sfdc__history_my_forecast
+    description: "A model representing the historical records of my_forecast data in Salesforce [GenAI Description]"
+    columns:
+      - name: history_my_forecast_id
+        description: "A unique identifier for each historical record in the my_forecast data [GenAI Description]"
+        tests:
+          - unique
+          - not_null
+
+      - name: new_value
+        description: "The updated or new value for a specific field in the record [GenAI Description]"
+
+      - name: old_value
+        description: "The original or old value for a specific field in the record [GenAI Description]"
+
+      - name: parent_id
+        description: "A unique identifier linking this historical record to its corresponding parent record in the my_forecast data [GenAI Description]"
+
+      - name: received_at
+        description: "The timestamp when the historical record was received or recorded in the system [GenAI Description]"
+
+      - name: uuid_ts
+        description: "A unique identifier along with timestamp to track changes in records [GenAI Description]"
+
+      - name: created_date
+        description: "The date and time when the historical record was created [GenAI Description]"
+
+      - name: is_deleted
+        description: "A boolean flag indicating if the historical record has been deleted from the system [GenAI Description]"
+
+      - name: created_by_id
+        description: "A unique identifier representing the user or system that created the historical record [GenAI Description]"
+
+      - name: field
+        description: "The specific field in the my_forecast data that was updated, causing a new historical record to be created [GenAI Description]"

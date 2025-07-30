@@ -1,0 +1,34 @@
+version: 2
+
+models:
+  - name: dbt_features__group_coaching_assessment_item_responses
+    description: Group Coaching Assessment Item Responses
+    columns:
+      - name: member_record_item_id
+        description: Primary Key, Surrogate Key of Member ID, Associated Record ID
+          + Item Key
+        tests:
+          - unique
+          - not_null
+      - name: member_id
+        description: Member ID
+        tests:
+          - not_null
+      - name: associated_record_id
+        description: Associated Record ID
+        tests:
+          - not_null
+      - name: associated_record_type
+        description: Associated Record Type
+      - name: feature_collected_at
+        description: Feature Collected At
+      - name: feature_key
+        description: Feature Key
+        tests:
+          - not_null
+      - name: classification
+        description: Classification
+      - name: feature_attributes
+        description: Feature Attributes
+      - name: feature_type
+        description: Feature Type

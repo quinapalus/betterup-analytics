@@ -1,0 +1,31 @@
+version: 2
+
+models:
+  - name: content_eligible_activities
+    description: >
+      Member activities involving eligible content.
+
+    columns:
+      - name: member_id
+        description: member id
+        tests:
+          - not_null
+      - name: resource_id
+        description: learning resource id
+        tests:
+          - not_null
+      - name: popularity_rank
+        description: rank of content in terms of popularity
+        tests:
+          - not_null
+      - name: viewed
+        description: Binary field that is 1 if the content has been viewed and 0 otherwise
+        tests:
+          - accepted_values:
+              values: [0, 1]
+      - name: completed
+        description: Binary field that is 1 if the content has been completed and
+          0 otherwise
+        tests:
+          - accepted_values:
+              values: [0, 1]

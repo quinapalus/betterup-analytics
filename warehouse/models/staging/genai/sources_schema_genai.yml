@@ -1,0 +1,11 @@
+version: 2
+
+sources:
+  - name: genai
+    database: raw
+    schema: stitch_swordfish_next
+
+    tables:
+      - name: conversation
+      - name: emotion
+      - name: turn

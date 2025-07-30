@@ -1,0 +1,61 @@
+whole_person_model_version,assessment_subdimension_key,subdimension_category,subdimension_domain,subdimension_dimension,subdimension_name,visible_to_member,visible_to_partner,included_in_partner_360_reporting,role_visibility,subdimension_description
+WPM 2.0,cognitive_agility,Behavior,Thriving,Cognitive Thriving,Cognitive Agility,TRUE,TRUE,TRUE,Members & Partners,The extent to which we adapt and shift our thought processes when beneficial.
+WPM 2.0,focus,Behavior,Thriving,Cognitive Thriving,Focus,TRUE,TRUE,TRUE,Members & Partners,The extent to which we focus our thoughts on our current priorities.
+WPM 2.0,strategic_planning,Behavior,Thriving,Cognitive Thriving,Strategic Planning,TRUE,TRUE,TRUE,Members & Partners,The extent to which we think through ways to achieve our future goals.
+WPM 2.0,self_compassion,Behavior,Thriving,Emotional Thriving,Self-Compassion,TRUE,TRUE,TRUE,Members & Partners,The extent to which we focus on our strengths and build ourselves up.
+WPM 2.0,emotional_regulation,Behavior,Thriving,Emotional Thriving,Emotional Regulation,TRUE,TRUE,TRUE,Members & Partners,The extent to which we regulate our emotions to remain calm and collected.
+WPM 2.0,physical_activity,Behavior,Thriving,Physical Thriving,Physical Activity,TRUE,TRUE,FALSE,Members & Partners,The extent to which we activate ourselves by engaging in enjoyable physical activity.
+WPM 2.0,nutrition,Behavior,Thriving,Physical Thriving,Nutrition,TRUE,TRUE,FALSE,Members & Partners,The extent to which we nourish ourselves with positive and healthy fuel.
+WPM 2.0,rest,Behavior,Thriving,Physical Thriving,Rest,TRUE,TRUE,FALSE,Members & Partners,The extent to which we engage in restful activities to help us unwind.
+WPM 2.0,social_connection,Behavior,Thriving,Social Thriving,Social Connection,TRUE,TRUE,TRUE,Members & Partners,"The extent to which we remain close and engaged with important, supportive people in our lives."
+WPM 2.0,authenticity,Behavior,Thriving,Social Thriving,Authenticity,TRUE,TRUE,TRUE,Members & Partners,"The extent to which we are authentic, open, and honest in our close personal relationships."
+WPM 2.0,empathy,Behavior,Thriving,Social Thriving,Empathy,TRUE,TRUE,TRUE,Members & Partners,"The extent to which we give back in our relationships by being warm, encouraging, and empathetic."
+WPM 2.0,alignment,Behavior,Inspiring,Guiding Others,Alignment,TRUE,TRUE,TRUE,Members & Partners,The extent to which we guide progress by communicating goals and providing feedback.
+WPM 2.0,coaching,Behavior,Inspiring,Guiding Others,Coaching,TRUE,TRUE,TRUE,Members & Partners,The extent to which we help others learn and grow at work.
+WPM 2.0,problem_solving,Behavior,Inspiring,Guiding Others,Problem Solving,TRUE,TRUE,TRUE,Members & Partners,The extent to which we provide a creative perspective to help the group problem-solve.
+WPM 2.0,relationship_building,Behavior,Inspiring,Including Others,Relationship Building,TRUE,TRUE,TRUE,Members & Partners,The extent to which we build and maintain meaningful social relationships with others at work.
+WPM 2.0,encouraging_participation,Behavior,Inspiring,Including Others,Encouraging Participation,TRUE,TRUE,TRUE,Members & Partners,The extent to which we encourage others to meaningfully contribute and participate at work.
+WPM 2.0,empowerment,Behavior,Inspiring,Motivating Others,Empowerment,TRUE,TRUE,TRUE,Members & Partners,The extent to which we give others the flexibility and freedom to do their best work.
+WPM 2.0,recognition,Behavior,Inspiring,Motivating Others,Recognition,TRUE,TRUE,TRUE,Members & Partners,The extent to which we recognize the contributions of others and offer individualized consideration.
+WPM 2.0,self_efficacy,Mindset,N/A,N/A,Self-Efficacy,FALSE,TRUE,FALSE,Partners Only,The extent to which we believe that we are capable of achieving our goals.
+WPM 2.0,growth_mindset,Mindset,N/A,N/A,Growth Mindset,TRUE,TRUE,FALSE,Members & Partners,The extent to which we seek out personal growth and learning opportunities.
+WPM 2.0,hope,Mindset,N/A,N/A,Hope,FALSE,FALSE,FALSE,Internal BetterUp Only,The extent to which we experience positive emotions associated with the expectation of achieving desired outcomes.
+WPM 2.0,optimism,Mindset,N/A,N/A,Optimism,FALSE,TRUE,FALSE,Partners Only,The extent to which we think positively about our chances for success in the future.
+WPM 2.0,locus_of_control_internal,Mindset,N/A,N/A,Locus of Control,FALSE,TRUE,FALSE,Partners Only,The extent to which we believe that our performance is under our own control.
+WPM 2.0,self_awareness,Mindset,N/A,N/A,Self-Awareness,TRUE,TRUE,FALSE,Members & Partners,"The extent to which we are conscious about our strengths, motives, and desires."
+WPM 2.0,resilience,Outcome,N/A,N/A,Resilience,TRUE,TRUE,TRUE,Members & Partners,The extent to which we are able to withstand change.
+WPM 2.0,engagement,Outcome,N/A,N/A,Engagement,FALSE,TRUE,TRUE,Partners Only,"The extent to which we experience vigor, dedication, and absorption at work."
+WPM 2.0,purpose_and_meaning,Outcome,N/A,N/A,Purpose and Meaning,TRUE,TRUE,FALSE,Members & Partners,The extent to which we experience a sense of personal meaning associated with what we do at work.
+WPM 2.0,job_performance,Outcome,N/A,N/A,Job Performance,FALSE,TRUE,TRUE,Partners Only,The extent to which we fulfill our job requirements.
+WPM 2.0,organizational_commitment,Outcome,N/A,N/A,Organizational Commitment,FALSE,FALSE,FALSE,Internal BetterUp Only,The extent to which we are emotionally attached to our job.
+WPM 2.0,job_satisfaction,Outcome,N/A,N/A,Job Satisfaction,FALSE,TRUE,FALSE,Partners Only,The extent to which we are content with our job.
+WPM 2.0,life_satisfaction,Outcome,N/A,N/A,Life Satisfaction,FALSE,TRUE,FALSE,Partners Only,The extent to which we are fulfilled in our lives.
+WPM 2.0,turnover_intentions,Outcome,N/A,N/A,Turnover Intentions,FALSE,FALSE,FALSE,Internal BetterUp Only,The extent to which we consider leaving our job.
+WPM 2.0,stress_management,Outcome,N/A,N/A,Stress Management,TRUE,TRUE,FALSE,Members & Partners,The extent to which we manage tension as a result of personal and work circumstances.
+WPM 2.0,goal_attainment,Outcome,N/A,N/A,Goal Attainment,TRUE,TRUE,FALSE,Members & Partners,The extent to which we achieve our personal and professional goals.
+WPM 2.0,work_life_balance,Outcome,N/A,N/A,Work-Life Balance,TRUE,TRUE,FALSE,Members & Partners,The extent to which we strike a balance between work and life roles.
+WPM 1.0,trust_climate,Behavior,Inspiring,Includes,Trust Climate,TRUE,TRUE,TRUE,Members & Partners,Trust Climate measures whether the leader creates a climate where team members feel comfortable taking risks and speaking up.
+WPM 1.0,engagement,Behavior,Thriving,Centered,Engagement,TRUE,TRUE,FALSE,Members & Partners,Engagement measures the extent to which a person feels motivated and energized at work.
+WPM 1.0,influence,Behavior,Inspiring,Drives,Influence,TRUE,TRUE,TRUE,Members & Partners,Influence measures whether the leader uses effective influence strategies to others onboard with their ideas.
+WPM 1.0,flow,Behavior,Thriving,Aware,Flow,TRUE,TRUE,FALSE,Members & Partners,Flow measures the extent to which an individual becomes so fully immersed in their work that they lose track of time.
+WPM 1.0,emotional_regulation,Behavior,Thriving,Aware,Emotional Regulation,TRUE,TRUE,FALSE,Members & Partners,Emotional Regulation measures how well an individual is able to regulate their emotional state.
+WPM 1.0,coaching,Behavior,Inspiring,Elevates,Coaching,TRUE,TRUE,TRUE,Members & Partners,Coaching measures whether the leader uses strategies to support the learning and development of their team members.
+WPM 1.0,values,Behavior,Thriving,Aware,Values,TRUE,TRUE,FALSE,Members & Partners,"Values measures the extent to which an individual is aware of, and driven by, their values."
+WPM 1.0,ownership,Behavior,Inspiring,Elevates,Ownership,TRUE,TRUE,TRUE,Members & Partners,Encouraging Ownership measures whether the leader empowers others to decide how to best do their work.
+WPM 1.0,mindfulness,Behavior,Thriving,Aware,Mindfulness,TRUE,TRUE,FALSE,Members & Partners,Mindfulness measures how much one attends to the present moment rather than past or future events.
+WPM 1.0,problem_solving,Behavior,Inspiring,Drives,Problem Solving,TRUE,TRUE,TRUE,Members & Partners,"Problem Solving measures leader behaviors related to solving problems, developing strategy, and making decisions."
+WPM 1.0,participation,Behavior,Inspiring,Includes,Participation,TRUE,TRUE,TRUE,Members & Partners,Participation measures whether the leader actively encourages the participation of everyone on their team.
+WPM 1.0,growth_mindset,Behavior,Thriving,Agile,Growth Mindset,TRUE,TRUE,FALSE,Members & Partners,Growth Mindset measures the extent to which the individual values learning and being challenged.
+WPM 1.0,sense_of_control,Behavior,Thriving,Agile,Sense of Control,TRUE,TRUE,FALSE,Members & Partners,Sense of Control measures the extent to which the individual believes they have control over their lives and can achieve what they want in life.
+WPM 1.0,purpose,Behavior,Thriving,Centered,Purpose,TRUE,TRUE,FALSE,Members & Partners,Purpose measures one’s sense of purpose and meaning at work.
+WPM 1.0,inspire,Behavior,Inspiring,Elevates,Motivating,TRUE,TRUE,TRUE,Members & Partners,Motivating measures how well the leader inspires and motivates their team to execute a collective vision.
+WPM 1.0,stress,Behavior,Thriving,Centered,Calm,TRUE,TRUE,FALSE,Members & Partners,Calm measures the extent to which a person is experiencing stress in their life.
+WPM 1.0,feedback,Behavior,Inspiring,Drives,Feedback,TRUE,TRUE,TRUE,Members & Partners,Feedback measures the extent to which a leader provides timely and actionable feedback to team members.
+WPM 1.0,recognizing,Behavior,Inspiring,Elevates,Recognizing,TRUE,TRUE,TRUE,Members & Partners,Recognition measures whether the leader acknowledges and rewards the efforts of their team.
+WPM 1.0,positive_relationships,Behavior,Inspiring,Includes,Building Relationships,TRUE,TRUE,TRUE,Members & Partners,Building Relationships measures whether the leader builds trusting personal relationships with coworkers.
+WPM 1.0,open_communication,Behavior,Inspiring,Includes,Open Communication,TRUE,TRUE,TRUE,Members & Partners,Open Communication measures the extent to which the leader encourages open dialogue within their team.
+WPM 1.0,resilience,Behavior,Thriving,Agile,Resilience,TRUE,TRUE,FALSE,Members & Partners,Resilience measures how well an individual copes with setbacks and unexpected events.
+WPM 1.0,risk_tolerance,Behavior,Thriving,Agile,Risk Tolerance,TRUE,TRUE,FALSE,Members & Partners,Risk Tolerance measures how well an individual tolerates mistakes and failure in pursuit of learning and growth.
+WPM 1.0,alignment,Behavior,Inspiring,Drives,Alignment,TRUE,TRUE,TRUE,Members & Partners,Alignment measures leader behaviors that ensure team members understand team objectives and have the resources required to be successful.
+WPM 1.0,focus,Behavior,Thriving,Aware,Focus,TRUE,TRUE,FALSE,Members & Partners,Focus measures how well an individual is able to focus for long periods of time without becoming distracted.
+WPM 1.0,burnout,Behavior,Thriving,Centered,Energy,TRUE,TRUE,FALSE,Members & Partners,Energy measures whether work is emotionally draining and exhausting.

@@ -1,0 +1,11 @@
+version: 2
+
+models:
+  - name: fact_reporting_group_reference_population_construct_scores_pad
+    description: ""
+    columns:
+      - name: primary_key
+        description: ""
+        tests:
+          - unique
+          - not_null

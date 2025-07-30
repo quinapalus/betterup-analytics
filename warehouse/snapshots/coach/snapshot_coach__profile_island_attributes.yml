@@ -1,0 +1,62 @@
+version: 2
+
+snapshots:
+  - name: snapshot_coach__profile_island_attributes
+    description: >
+      Snapshot model of Profile Island Attributes staging model.
+      More docs here: https://betterup.atlassian.net/wiki/spaces/DATA/pages/3345450158/Coach+Snapshot+Data+Model
+    tests:
+      - unique:
+          column_name: "(uuid || '-' || dbt_valid_from || '-' || dbt_valid_to)"
+
+    columns:
+      - name: id
+        description: ""
+
+      - name: uuid
+        description: ""
+
+      - name: coach_profile_uuid
+        description: ""
+
+      - name: island
+        description: ""
+
+      - name: appointment_buffer_enabled
+        description: ""
+
+      - name: current_volunteer_member_count
+        description: ""
+
+      - name: engaged_member_count
+        description: ""
+
+      - name: max_member_count
+        description: ""
+
+      - name: organization_block_list
+        description: ""
+
+      - name: pending_primary_recommendation_count
+        description: ""
+
+      - name: pick_rate
+        description: ""
+
+      - name: created_at
+        description: ""
+
+      - name: updated_at
+        description: ""
+
+      - name: dbt_scd_id
+        description: ""
+
+      - name: dbt_updated_at
+        description: ""
+
+      - name: dbt_valid_from
+        description: ""
+
+      - name: dbt_valid_to
+        description: ""

@@ -1,0 +1,27 @@
+version: 2
+
+models:
+  - name: base_app__conversations_historical
+    description: ""
+    columns:
+      - name: created_at
+      - name: id
+        tests:
+          - unique
+          - not_null
+      - name: last_message_at
+      - name: type
+      - name: updated_at
+      - name: assigned_care_guide_id
+      - name: status
+      - name: last_member_message_at
+      - name: priority
+      - name: care_guide_responded
+      - name: next_steps
+      - name: due_at
+      - name: case_notes
+      - name: subject
+      - name: conversation_subject_id
+      - name: closed_at
+      - name: participants_count
+      - name: closed_reason

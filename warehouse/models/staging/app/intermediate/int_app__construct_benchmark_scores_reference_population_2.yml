@@ -1,0 +1,37 @@
+version: 2
+
+models:
+  - name: int_app__construct_benchmark_scores_reference_population_2
+    description: ""
+    columns:
+      - name: primary_key
+        tests:
+          - unique
+          - not_null
+
+      - name: construct_type
+        description: ""
+
+      - name: reference_population_id
+        description: ""
+
+      - name: reference_population_key
+        description: ""
+
+      - name: benchmark_population_type
+        description: ""
+
+      - name: country
+        description: ""
+
+      - name: industry
+        description: ""
+
+      - name: level
+        description: ""
+
+      - name: key
+        description: ""
+
+      - name: mean
+        description: ""

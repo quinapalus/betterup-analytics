@@ -1,0 +1,53 @@
+version: 2
+models:
+  - name: dim_member
+    description: >
+      Conformed Member dimension. If an organization has provided HCM information, selected
+      attributes are included here as columns named with a `member_hcm_attribute_` prefix,
+      followed by our internal name for the field. To translate between our internal field
+      names and the field names for an organization's HCM system, reference the data in
+      `fact_member_hcm_attribute`. Note that the values for HCM attributes are not rationalized
+      between different accounts, e.g. values for `member_hcm_attribute_is_manager` may be
+      `yes/no`, `t/f`, `true/false`, `manager/individual contributor` depending on the data model
+      for each organization's HCM.
+
+    columns:
+      - name: _unique
+        tests:
+          - unique
+          - not_null
+      - name: member_key
+        description: Primary Key
+        tests:
+          - not_null
+
+      - name: app_member_id
+        description: >
+          Denormalized foreign key to member's associated BetterUp ID.
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dei_members')
+              field: member_id
+
+      - name: member_geo
+        description: Geographic region for the given member, based on timezone to region mapping.
+        tests:
+          - not_null
+          - accepted_values:
+              values: [NORAM, LATAM, EMEA, APAC]
+
+      - name: member_subregion_m49
+        description: >
+          Geographic subregion for the given member, based on timezoe to UN M.49 subregion.
+        tests:
+          - not_null
+          - relationships:
+              to: ref('m49_geoscheme')
+              field: subregion_m49
+
+      - name: employee_level
+        description: Employee Level, i.e IC or Manager. Can be NULL if not known.
+        tests:
+          - accepted_values:
+              values: [manager, individual-contributor]

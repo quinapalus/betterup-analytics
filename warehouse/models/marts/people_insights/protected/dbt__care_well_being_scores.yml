@@ -1,0 +1,71 @@
+version: 2
+
+models:
+  - name: dbt__care_well_being_scores
+    description: The dbt__care_well_being_scores model provides a score from 1-100
+      measuring the overall well-being of a user, taken from baseline assessments
+      and follow-up progress assessments. The model captures the scale score, measurement
+      date, whether it is a baseline or progress score, and the user's well-being
+      cluster, as well as information about the availability of baseline and progress
+      records. [GenAI Description]
+    columns:
+      - name: member_assessment_construct_key
+        description: 'Primary key: combination of member, assessment, and construct'
+        tests:
+          - not_null
+          - unique
+
+      - name: user_id
+        description: "'user_id' is an identifier for each member's submitted assessments\
+          \ that are used to generate scores measuring their baseline and progress\
+          \ towards well-being. [GenAI Description]"
+
+      - name: assessment_id
+        description: The assessment_id column is used to track and store the ID of
+          a given assessment response for a user. [GenAI Description]
+
+      - name: construct
+        description: The 'construct' column stores the assessment category (Adaptability,
+          Outlook, Fulfillment, Coping, Self-care, and Well-being) for which a score
+          was calculated. [GenAI Description]
+
+      - name: scale_score
+        description: "'Scale_score' is a float representing the score assigned to\
+          \ a user's emotional regulation, optimism, purpose, resilience, self-awareness,\
+          \ or overall well-being as recorded during onboarding or progress. [GenAI\
+          \ Description]"
+
+      - name: measurement_date
+        description: The 'measurement_date' column stores the date on which the associated
+          Care Well-being Score was measured. [GenAI Description]
+
+      - name: is_baseline
+        description: The column 'is_baseline' in this model indicates whether a score
+          is from a baseline or progress assessment. [GenAI Description]
+
+      - name: is_progress
+        description: The 'is_progress' column indicates whether a score is part of
+          a progress assessment (True) or a baseline assessment (False). [GenAI Description]
+
+      - name: next_measurement_date
+        description: "'next_measurement_date' contains the date of the next measurement\
+          \ taken after the current score measurement for each user and construct\
+          \ combination. [GenAI Description]"
+
+      - name: has_baseline
+        description: "'has_baseline' indicates whether the user has taken the necessary\
+          \ baseline assessments to create their well-being scores. [GenAI Description]"
+
+      - name: has_progress
+        description: The 'has_progress' column in this DBT model contains a boolean
+          indicating whether the user has completed a progress assessment. [GenAI
+          Description]
+
+      - name: is_most_recent
+        description: "'is_most_recent' indicates whether the score was the most recent\
+          \ for the user at the time of the calculation. [GenAI Description]"
+
+      - name: well_being_cluster
+        description: The 'well_being_cluster' column contains a categorical value
+          which is an indicator of the respondent's well-being score, ranging from
+          '1 - Stuck' to '4 - Strong'. [GenAI Description]

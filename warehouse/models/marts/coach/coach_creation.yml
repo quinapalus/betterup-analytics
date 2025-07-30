@@ -1,0 +1,33 @@
+version: 2
+
+models:
+  - name: coach_creation
+    description: "Coach creation dashboard"
+    columns:
+      - name: fountain_applicant_id
+        description: Primary key
+        tests:
+          - unique
+          - not_null
+
+      - name: funnel
+        tests:
+          - not_null
+
+      - name: first_name
+        tests:
+          - not_null
+
+      - name: last_name
+        tests:
+          - not_null
+
+      - name: fountain_applicant_url
+        description: "Deep link for fountain"
+        tests:
+          - not_null
+
+      - name: admin_url
+        description: "Deep link for admin url"
+        tests:
+          - not_null

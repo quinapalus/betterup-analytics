@@ -1,0 +1,27 @@
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+.DS_store
+venv/
+*.egg-info/
+*.pyc
+.tox/
+py3venv/
+.idea/
+.vscode/settings.json
+.local
+tmp/
+.env
+.venv
+montecarlo/target/
+logs/
+
+# dont ignore files in dev container
+!.devcontainer/*
+
+# ignore pyenv virtualenv configuration file
+.python-version
+
+# ignore any files starting with scratch for quick dev
+scratch*

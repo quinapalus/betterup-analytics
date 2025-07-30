@@ -1,0 +1,10 @@
+version: 2
+
+sources:
+  - name: gsheets_marketing_attribution_sk_mapping
+    database: raw
+    schema: "{{ 'airbyte_gsheets_marketing_attribution_sk_mapping' if env_var('DEPLOYMENT_ENVIRONMENT', '') == 'US Gov' else 'stitch_gsheets_marketing_attribution_sk_mapping' }}"
+    loader: "{{ 'airbyte' if env_var('DEPLOYMENT_ENVIRONMENT', '') == 'US Gov' else 'stitch' }}"
+
+    tables:
+      - name: metadata_attribution

@@ -1,0 +1,53 @@
+version: 2
+
+models:
+  - name: dbt_features__post_session_assessment_item_responses
+    description: This model captures post session assessment item responses (like
+      satisfaction ratings and goal progress) for members. It contains features such
+      as the response key, member ID, associated record ID, associated record type,
+      feature collected at, feature key, classification, feature attributes, and feature
+      type. This model is derived from data coming from the appointments, coach assignments,
+      specialist verticals, assessments, assessment items, assessment response sets,
+      and assessment response options models. [GenAI Description]
+    columns:
+      - name: assessment_item_response_key
+        description: This column contains a unique identifier for the response a member
+          provides to an assessment item. [GenAI Description]
+        tests:
+          - unique
+          - not_null
+
+      - name: member_id
+        description: "'member_id' is a column containing the user identifier associated\
+          \ with a response to an assessment item. [GenAI Description]"
+
+      - name: associated_record_id
+        description: "'associated_record_id' is the identifier for an assessment record\
+          \ associated with each item response. [GenAI Description]"
+
+      - name: associated_record_type
+        description: The column 'associated_record_type' indicates a record type associated
+          with the assessment (e.g. "Assessment"). [GenAI Description]
+
+      - name: feature_collected_at
+        description: This column contains the date and time when an individual user
+          responded to an assessment item. [GenAI Description]
+
+      - name: feature_key
+        description: The 'feature_key' column contains the key for a post-session
+          assessment item which is related to a member's emotions, overall satisfaction,
+          progress towards goals, and utility ratings. [GenAI Description]
+
+      - name: classification
+        description: The 'classification' column provides labels and translation keys
+          corresponding to responses given to post-session assessment items. [GenAI
+          Description]
+
+      - name: feature_attributes
+        description: Feature_attributes column contains attributes related to the
+          appointment (appointment_id,coach_type, extended_network_topic_key, extended_network_topic)
+          associated with the assessment response. [GenAI Description]
+
+      - name: feature_type
+        description: The 'feature_type' column provides information on the type of
+          feature represented by the respective assessment item response. [GenAI Description]

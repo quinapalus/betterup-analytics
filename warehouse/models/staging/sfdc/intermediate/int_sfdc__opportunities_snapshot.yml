@@ -1,0 +1,313 @@
+version: 2
+
+models:
+  - name: int_sfdc__opportunities_snapshot
+    description: ""
+    columns:
+      - name: sfdc_opportunity_id
+        description: ""
+        tests:
+          - not_null
+
+      - name: history_primary_key
+        description: ""
+        tests:
+          - unique
+          - not_null
+
+      - name: sfdc_account_id
+        description: ""
+
+      - name: opportunity_created_by_id
+        description: ""
+
+      - name: opportunity_owner_id
+        description: ""
+
+      - name: primary_campaign_source_campaign_id
+        description: ""
+
+      - name: opportunity_sc_id
+        description: ""
+
+      - name: opportunity_secondary_sc_id
+        description: ""
+
+      - name: opportunity_qualified_by_id
+        description: ""
+
+      - name: opportunity_name
+        description: ""
+
+      - name: opportunity_type
+        description: ""
+
+      - name: opportunity_stage
+        description: ""
+
+      - name: opportunity_stage_raw
+        description: ""
+
+      - name: forecast_category
+        description: ""
+
+      - name: win_reasons
+        description: ""
+
+      - name: win_story
+        description: ""
+
+      - name: lost_reasons
+        description: ""
+
+      - name: lost_reason_detail
+        description: ""
+
+      - name: next_steps
+        description: ""
+
+      - name: primary_solution
+        description: ""
+
+      - name: secondary_solution
+        description: ""
+
+      - name: likelihood_to_renew
+        description: ""
+
+      - name: likelihood_to_renew_reasons
+        description: ""
+
+      - name: proposal_link
+        description: ""
+
+      - name: risk_status
+        description: ""
+
+      - name: risk_reasons
+        description: ""
+
+      - name: challenge_solution_and_use_case
+        description: ""
+
+      - name: highest_champion_level
+        description: ""
+
+      - name: opportunity_owner_region
+        description: ""
+
+      - name: opportunity_probability
+        description: ""
+
+      - name: opportunity_amount_unconverted
+        description: ""
+
+      - name: plan_renewal_amount_unconverted
+        description: ""
+
+      - name: first_year_acv_amount_unconverted
+        description: ""
+
+      - name: risk_amount_unconverted
+        description: ""
+
+      - name: how_many_champions
+        description: ""
+
+      - name: total_users
+        description: ""
+
+      - name: has_post_covid_discussion
+        description: ""
+
+      - name: has_catalyst_identified
+        description: ""
+
+      - name: has_business_case
+        description: ""
+
+      - name: has_budget_confirmed
+        description: ""
+
+      - name: has_c_level
+        description: ""
+
+      - name: has_multi_program
+        description: ""
+
+      - name: has_potential_pull_forward
+        description: ""
+
+      - name: has_been_validated_for_booking
+        description: ""
+
+      - name: has_contract_in_process
+        description: ""
+
+      - name: has_close_plan_agreed
+        description: ""
+
+      - name: has_secured_customer_executive_sponsor
+        description: ""
+
+      - name: has_identified_customer_problem
+        description: ""
+
+      - name: has_proposed_solution
+        description: ""
+
+      - name: has_confirmed_commercial_proposal_scope
+        description: ""
+
+      - name: has_compelling_close_date
+        description: ""
+
+      - name: has_multiple_dmu_champions
+        description: ""
+
+      - name: has_bu_executive_sponsor
+        description: ""
+
+      - name: has_shared_business_case_roi
+        description: ""
+
+      - name: has_cfo_finance_approved_roi
+        description: ""
+
+      - name: has_confirmed_joint_engagement_plan
+        description: ""
+
+      - name: has_unique_competitive_differentiation
+        description: ""
+
+      - name: has_selected_betterup_as_vendor
+        description: ""
+
+      - name: has_confirmed_contracting_plan
+        description: ""
+
+      - name: has_confirmed_funding_budget
+        description: ""
+
+      - name: has_confirmed_deployment_date
+        description: ""
+
+      - name: created_at
+        description: ""
+
+      - name: last_modified_at
+        description: ""
+
+      - name: close_date
+        description: ""
+
+      - name: subscription_start_date
+        description: ""
+
+      - name: subscription_end_date
+        description: ""
+
+      - name: renewal_date
+        description: ""
+
+      - name: initiated_renewal_planning_survey_date
+        description: ""
+
+      - name: discussed_renewal_plans_date
+        description: ""
+
+      - name: initial_proposal_sent_date
+        description: ""
+
+      - name: initial_jep_sent_date
+        description: ""
+
+      - name: stage_1_date
+        description: ""
+
+      - name: stage_2_date
+        description: ""
+
+      - name: stage_3_date
+        description: ""
+
+      - name: stage_4_date
+        description: ""
+
+      - name: stage_5_date
+        description: ""
+
+      - name: stage_6_date
+        description: ""
+
+      - name: fm_scheduled_for_date
+        description: ""
+
+      - name: is_deleted
+        description: ""
+
+      - name: currency_iso_code
+        description: ""
+
+      - name: valid_from
+        description: ""
+
+      - name: valid_to
+        description: ""
+
+      - name: is_current_version
+        description: ""
+
+      - name: version
+        description: ""
+
+      - name: is_last_snapshot_of_day
+        description: ""
+
+      - name: opportunity_amount_usd
+        description: ""
+
+      - name: plan_renewal_amount_usd
+        description: ""
+
+      - name: first_year_acv_amount_usd
+        description: ""
+
+      - name: risk_amount_usd
+        description: ""
+
+      - name: is_closed
+        description: ""
+
+      - name: is_won
+        description: ""
+
+      - name: is_open
+        description: ""
+
+      - name: is_lost
+        description: ""
+
+      - name: stage_default_forecast_category
+        description: ""
+
+      - name: record_type_name
+        description: "Name of the Salesforce Opportunity record type. 
+                      Docs on record types https://developer.salesforce.com/docs/atlas.en-us.object_reference.meta/object_reference/sforce_api_objects_recordtype.htm"
+      
+      - name: stage_last_changed_at
+        description: "Timestamp of the last time the opportunity changed stages. This is only for current state of opportunity records."
+        tests:
+          - not_null:
+          #there are a handful of opportunities that do not have a value for stage_last_changed_at.
+          #in theory that should not be possible.
+          #putting this test here to keep an eye on that. 
+              config:
+                severity: warn
+                warn_if: ">50"
+                where: "is_lost and valid_to is null"
+
+      - name: close_date
+        description: "Close date of the opportunity with the logic to use stage_last_changed_at if the opportunity is closed lost."
+        tests:
+          - not_null

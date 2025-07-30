@@ -1,0 +1,9 @@
+version: 2
+
+sources:
+  - name: jira
+    database: raw
+    schema: "{{ 'airbyte_jira' if env_var('DEPLOYMENT_ENVIRONMENT', '') == 'US Gov' else 'stitch_jira' }}"
+    tables:
+      - name: issues
+      - name: issue_transitions

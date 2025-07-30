@@ -1,0 +1,99 @@
+version: 2
+
+models:
+  - name: int_sfdc__users_snapshots
+    description: ""
+    columns:
+      - name: sfdc_user_id
+        description: ""
+        tests:
+          - not_null
+
+      - name: history_primary_key
+        description: ""
+        tests:
+          - unique
+          - not_null
+      
+      - name: marketing_team_rollup
+        description: "Column to used to align BU marketing teams with the sales teams that they support.
+                      The marketing team to sales team alignment is more complicated than just account segment
+                      so we had to do this custom mapping."
+
+      - name: manager_id
+        description: ""
+
+      - name: assigned_sdr_id
+        description: ""
+
+      - name: employee_id
+        description: ""
+
+      - name: user_role_id
+        description: ""
+
+      - name: rvp_id
+        description: ""
+
+      - name: vp_id
+        description: ""
+
+      - name: name
+        description: ""
+
+      - name: sales_region
+        description: ""
+
+      - name: title
+        description: ""
+
+      - name: created_at
+        description: ""
+
+      - name: last_modified_at
+        description: ""
+
+      - name: is_active
+        description: ""
+
+      - name: valid_from
+        description: ""
+
+      - name: valid_to
+        description: ""
+
+      - name: is_current_version
+        description: ""
+
+      - name: version
+        description: ""
+
+      - name: is_last_snapshot_of_day
+        description: ""
+
+      - name: user_role_name
+        description: ""
+
+      - name: manager_name
+        description: ""
+
+      - name: manager_role_name
+        description: ""
+
+      - name: assigned_sdr_name
+        description: ""
+
+      - name: assigned_sdr_role_name
+        description: ""
+
+      - name: vp_name
+        description: ""
+
+      - name: vp_role_name
+        description: ""
+
+      - name: rvp_name
+        description: ""
+
+      - name: rvp_role_name
+        description: ""

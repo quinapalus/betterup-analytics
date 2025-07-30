@@ -1,0 +1,18 @@
+version: 2
+
+seeds:
+  - name: bu_multi_contributor_subdimensions
+    description: A CSV Seed about multi-contributor subdimensions that stores the relevant
+      data, including the primary key, assessment subdimension key, subdimension name,
+      and whole person model version.
+    columns:
+      - name: assessment_subdimension_key
+        description: Application score key associated with the subdimension. Only
+          unique within scope of a single WPM version.
+
+      - name: subdimension_name
+        description: Name of the subdimension
+
+      - name: whole_person_model_version
+        description: WPM version for the associated subdimension, i.e. WPM 1.0, WPM
+          2.0.

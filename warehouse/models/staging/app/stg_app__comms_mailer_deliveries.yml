@@ -1,0 +1,51 @@
+version: 2
+models:
+  - name: stg_app__comms_mailer_deliveries
+    description: The DBT model stg_app__comms_mailer_deliveries loads and transforms
+      data from the raw.stitch_app.comms_mailer_deliveries table on the data store
+      to provide insight into the mailer deliveries associated with various comms
+      notifications, including information such as delivery recipients, template details,
+      the associated mailer, and other key timestamps. [GenAI Description]
+    columns:
+      - name: comms_mailer_delivery_id
+        description: The column 'comms_mailer_delivery_id' is an identifier for records
+          in the comms_mailer_deliveries dataset. [GenAI Description]
+        tests:
+          - unique
+          - not_null
+
+      - name: mailer
+        description: The 'mailer' column indicates the type of mail delivery tool
+          used for sending the communication. [GenAI Description]
+
+      - name: mailer_action
+        description: The 'mailer_action' column stores the action taken related to
+          a given mailer. [GenAI Description]
+
+      - name: recipients
+        description: The 'recipients' column lists the recipients that a notification
+          email was sent to. [GenAI Description]
+
+      - name: tracking_uuid
+        description: The 'tracking_uuid' column stores a globally unique identifier,
+          used to track comms mailer deliveries. [GenAI Description]
+
+      - name: template_digest
+        description: The template_digest column contains a hash or digest string of
+          a template file associated with the email delivery. [GenAI Description]
+
+      - name: template_file
+        description: Template_file records the filename of the template used in the
+          communication. [GenAI Description]
+
+      - name: subject
+        description: The 'subject' column contains the subject line for the email
+          sent out in the comms mailer delivery. [GenAI Description]
+
+      - name: created_at
+        description: The 'created_at' column stores a timestamp when the record in
+          the table was created. [GenAI Description]
+
+      - name: updated_at
+        description: The 'updated_at' column stores a timestamp representing the time
+          the data was last modified. [GenAI Description]

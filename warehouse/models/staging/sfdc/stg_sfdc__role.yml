@@ -1,0 +1,56 @@
+version: 2
+
+models:
+  - name: stg_sfdc__role
+    description: "A model representing the Salesforce user roles and their respective attributes [GenAI Description]"
+    columns:
+      - name: role_id
+        description: "A unique identifier for each user role in Salesforce [GenAI Description]"
+        tests:
+          - unique
+          - not_null
+
+      - name: received_at
+        description: "The timestamp when the role data was received or recorded in the system [GenAI Description]"
+
+      - name: case_access_for_account_owner
+        description: "Access level granted to account owners with regard to case records in Salesforce [GenAI Description]"
+
+      - name: contact_access_for_account_owner
+        description: "Access level granted to account owners with regard to contact records in Salesforce [GenAI Description]"
+
+      - name: developer_name
+        description: "The unique internal name for the user role, used for API and managed package references [GenAI Description]"
+
+      - name: last_modified_by_id
+        description: "A unique identifier representing the user or system that last modified the role [GenAI Description]"
+
+      - name: last_modified_date
+        description: "The date and time when the role was last modified [GenAI Description]"
+
+      - name: parent_role_id
+        description: "A unique identifier linking this role to its corresponding parent role in the hierarchy [GenAI Description]"
+
+      - name: system_modstamp
+        description: "The timestamp when any modification was made to the role data by the system, used for internal tracking and auditing [GenAI Description]"
+
+      - name: uuid_ts
+        description: "A unique identifier along with timestamp to track changes in role records [GenAI Description]"
+
+      - name: name
+        description: "The label or display name of the user role as seen in the Salesforce user interface [GenAI Description]"
+
+      - name: opportunity_access_for_account_owner
+        description: "Access level granted to account owners with regard to opportunities records in Salesforce [GenAI Description]"
+
+      - name: rollup_description
+        description: "A brief description of the role, detailing its purpose and function in the organization [GenAI Description]"
+
+      - name: forecast_user_id
+        description: "A unique identifier representing the user responsible for forecasting within this role [GenAI Description]"
+
+      - name: may_forecast_manager_share
+        description: "A boolean flag indicating if the manager in this role may share forecasts with other users [GenAI Description]"
+
+      - name: portal_type
+        description: "The type of customer portal associated with this role, if applicable [GenAI Description]"

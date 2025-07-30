@@ -1,0 +1,71 @@
+version: 2
+
+models:
+  - name: int_app__product_subscriptions
+    description: ""
+    columns:
+      - name: product_subscription_id
+        description: ""
+        tests:
+          - unique
+          - not_null
+
+      - name: product_id
+        description: ""
+
+      - name: organization_id
+        description: ""
+
+      - name: subscription_terms_id
+        description: ""
+
+      - name: state
+        description: ""
+
+      - name: name
+        description: ""
+
+      - name: care_limit
+        description: ""
+
+      - name: care_limit_cadence
+        description: ""
+
+      - name: coaching_circles_limit
+        description: ""
+
+      - name: coaching_circles_limit_cadence
+        description: ""
+
+      - name: exact_specialist_verticals
+        description: ""
+
+      - name: non_transfer_period
+        description: ""
+
+      - name: on_demand_limit
+        description: ""
+
+      - name: on_demand_limit_cadence
+        description: ""
+
+      - name: primary_coaching_limit
+        description: ""
+
+      - name: primary_coaching_limit_cadence
+        description: ""
+
+      - name: specialist_coaching_limit
+        description: ""
+
+      - name: specialist_coaching_limit_cadence
+        description: ""
+
+      - name: transferable
+        description: ""
+
+      - name: created_at
+        description: ""
+
+      - name: updated_at
+        description: ""

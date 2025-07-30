@@ -1,0 +1,40 @@
+version: 2
+
+models:
+  - name: base_app__billable_events_historical
+    description: ""
+    columns:
+      - name: associated_record_id
+      - name: associated_record_type
+      - name: coach_id
+      - name: created_at
+      - name: event_at
+      - name: event_type
+      - name: id
+        tests:
+          - unique
+          - not_null
+      - name: notes
+      - name: pay_rate_id
+      - name: processor_success
+      - name: reference_id
+      - name: request_body
+      - name: response_body
+      - name: send_to_shortlist
+      - name: sent_to_processor_at
+      - name: shortlist_workitem_id
+      - name: track_assignment_id
+      - name: track_id
+      - name: units
+      - name: updated_at
+      - name: usage_minutes
+      - name: user_id
+      - name: amount_due
+      - name: currency_code
+      - name: payment_status
+      - name: payment_id
+      - name: product_subscription_assignment_id
+      - name: coach_profile_pay_rate_id
+      - name: coaching_type
+      - name: coaching_cloud
+      - name: coach_profile_pay_rate_uuid

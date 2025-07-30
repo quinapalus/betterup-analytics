@@ -1,0 +1,27 @@
+version: 2
+
+models:
+  - name: int_sfdc__leads_contacts_union
+    columns:
+      - name: primary_key
+        tests:
+          - unique
+          - not_null
+
+      - name: sfdc_person_id
+        tests:
+          - dbt_expectations.expect_column_values_to_be_unique:
+              row_condition: "is_current_version"
+          - not_null
+
+      - name: "email"
+        tests:
+        #keep BU employees out
+          - dbt_expectations.expect_column_values_to_not_match_regex:
+              regex: "%betterup%"
+
+      - name: "company_name"
+        tests:
+        #keep BU employees out
+          - dbt_expectations.expect_column_values_to_not_match_regex:
+              regex: "%betterup%" 

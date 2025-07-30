@@ -1,0 +1,17 @@
+version: 2
+
+models:
+  - name: int_observed_over_expected_calculation
+    description: calculates observed over expected (= OE) for every work life event.
+
+    columns:
+      - name: wle
+        description: Name of the work life event (wle)
+        tests:
+          - unique
+          - not_null
+
+      - name: observed_over_expected
+        description: observed over expected , OE = avg number of sessions with event / avg of (avg number of sessions of all other events)
+        tests:
+          - not_null

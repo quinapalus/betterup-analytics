@@ -1,0 +1,21 @@
+version: 2
+
+models:
+  - name: int_user_attribution_log
+    description: >
+      This table tracks attribution events that occur to users. It is joined with
+      Google sheet mapping
+      table to augment and manually set a business-oriented channel attribution.
+    columns:
+      - name: lead_metadata_attribute_id
+        description: Unique id for this table's granularity.
+        tests:
+          - unique
+          - not_null
+      - name: channel_attribution
+        description: Categories manually defined by business and analytics teams at
+          BetterUp
+        tests:
+          - accepted_values:
+              values: [referral, bing, email, facebook, google, linkedin, organic,
+                other, unlabeled]

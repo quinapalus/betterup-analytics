@@ -1,0 +1,36 @@
+version: 2
+models:
+  - name: dbt_session_inferred_call_quality
+    description: >
+      Protected model that infers call quality for sessions completed between Oct 18, 2018
+      and January 18, 2020 using billable events, calls, and coach post-session assessment
+      data. Note that the only purpose of this model is to calculate values for Ops-specific
+      values -- `platform`, `has_tech_issues`, and `issue_type -- before product updates in January
+      2020.
+
+    columns:
+      - name: session_key
+        description: Primary Key.
+
+      - name: platform
+        description: >
+          String denoting whether the session was completed on or off platform.
+        tests:
+          - not_null
+          - accepted_values:
+              values: [Off Platform, On Platform, Attempted Platform]
+
+      - name: has_tech_issues
+        description: >
+          Boolean indicating whether the session had tech issues, if the session
+          was completed on platform or at least attempted on platform.
+        tests:
+          - accepted_values:
+              values: [true, false]
+
+      - name: issue_type
+        description: >
+          String denoting BU-specific interpretation of AV quality during the session,
+          sourced either directly from coach feedback or defined manually based on the
+          connection data.
+  

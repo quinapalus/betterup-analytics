@@ -1,0 +1,22 @@
+#! /bin/bash
+
+# configure bash to exit on error
+set -e
+set -o pipefail
+
+# If DBT_TARGET env variable is not set, use the default set in profiles.yml, otherwise use the provided target
+if [[ -z "${DBT_TARGET}" ]]; then
+    echo "Installing dependencies (default target)"
+    dbt deps --profiles-dir /home/betterup/.dbt --project-dir /home/betterup/warehouse
+
+    echo "Running dbt seed (default target)"
+    dbt seed --profiles-dir /home/betterup/.dbt --project-dir /home/betterup/warehouse
+else
+    echo "Installing dependencies (target = $DBT_TARGET)"
+    dbt deps --profiles-dir /home/betterup/.dbt --project-dir /home/betterup/warehouse --target=$DBT_TARGET
+
+    echo "Running dbt seed (target = $DBT_TARGET)"
+    dbt seed --profiles-dir /home/betterup/.dbt --project-dir /home/betterup/warehouse --target=$DBT_TARGET
+fi
+
+echo "Finished running dbt seed."

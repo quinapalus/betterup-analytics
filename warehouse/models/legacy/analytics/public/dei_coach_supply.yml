@@ -1,0 +1,37 @@
+version: 2
+models:
+  - name: dei_coach_supply
+    description: '{{ doc("dei_coach_supply") }}'
+    tests:
+      - dbt_utils.expression_is_true:
+          expression: "(attribute_scope = 'geo') = (attribute_value IN ('NORAM', 'LATAM', 'APAC', 'EMEA'))"
+
+    columns:
+      - name: coach_scope_value_key
+        description: 'Primary key: aggregate of coach_id, attribute scope, and attribute value'
+        tests:
+          - not_null
+          - unique
+
+      - name: attribute_scope
+        description: '{{ doc("dei_coach_supply__attribute_scope") }}'
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['geo', 'country', 'industry', 'member_level', 'tier', 'language', 'certification', 'product']
+
+      - name: attribute_value
+        tests:
+          - not_null
+
+      - name: attribute_label
+        description: >
+          Human-friendly label for attribute, e.g. Alpha-2 ISO-639 language codes
+          in `attribute_value` field are mapped to language name.
+        tests:
+          - not_null
+
+      - name: coach_id
+        description: Foreign Key to `dei_coaches`.
+        tests:
+          - not_null

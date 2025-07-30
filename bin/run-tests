@@ -1,0 +1,102 @@
+#! /bin/bash
+
+# configure bash to exit on error
+set -e
+set -o pipefail
+
+CONFIG_DIR=~/.dbt
+PROFILE=$CONFIG_DIR/profiles.yml
+no_run=
+aggressive=
+without_seed=
+full_refresh=
+target=dev
+
+
+usage()
+{
+    echo "usage: bin/run-tests [[[-t/--target dev ] [-n/--no-run] [-s/--without-seed] [-a/--aggressive] [-f/--full-refresh]] | [-h]]"
+    echo ""
+    echo "      bin/run-tests --target dev              Changes the destination target. Defaults to dev."
+    echo "      bin/run-tests --no-run                  Only run the tests. Skips calling dbt run."
+    echo "      bin/run-tests --without-seed            Skip running dbt seed."
+    echo "      bin/run-tests --aggressive              Only run models that changed. Skips parents and children."
+    echo "      bin/run-tests --full-refresh            Perform a full refresh of incremental models."
+}
+
+
+while [ "$1" != "" ]; do
+    case $1 in
+        -t | --target )         shift
+                                target=$1
+                                ;;
+        -n | --no-run )         no_run=1
+                                ;;
+        -s | --without-seed )   without_seed=1
+                                ;;
+        -a | --aggressive )     aggressive=1
+                                ;;
+        -f | --full-refresh )   full_refresh="--full-refresh"
+                                ;;
+        -h | --help )           usage
+                                exit
+                                ;;
+        * )                     usage
+                                exit 1
+    esac
+    shift
+done
+
+
+# Run dbt seed to add CSV files to warehouse.
+cd warehouse
+mkdir -p $CONFIG_DIR
+
+if [ ! -f $PROFILE ]; then
+    cp setup.profiles.yml $PROFILE
+fi
+
+MODELS_CHANGED=`git whatchanged --name-only --pretty="" origin..HEAD -- models`
+
+if [[ -z $MODELS_CHANGED ]]; then
+    echo "No models found. Nothing to do."
+    exit 0
+fi
+
+MODELS=`echo $MODELS_CHANGED | xargs -n 1 basename | cut -d '.' -f 1 | uniq`
+MODELS_AND_DEPENDENCIES=''
+
+# Add @ prefix such that parents of the models are included
+# IF -a/--aggressive was used, then only the models that changed will be tested
+if [[ -z $aggressive ]]; then
+    for model in $MODELS; do
+        MODELS_AND_DEPENDENCIES+="@${model} "
+    done
+else
+    MODELS_AND_DEPENDENCIES=$MODELS
+fi
+
+if [[ -z $without_seed ]]; then
+    echo "=================================="
+    echo "Running dbt seed against target $target"
+    pipenv run dbt seed --target=$target
+    echo "=================================="
+fi
+
+
+if [[ -z $no_run ]]; then
+    echo "=================================="
+    echo "Running dbt run against target $target for $MODELS"
+    pipenv run dbt run $full_refresh --target=$target --models $MODELS_AND_DEPENDENCIES
+    echo "=================================="
+fi
+
+echo "=================================="
+echo "Testing against target $target for $MODELS"
+pipenv run dbt test --target=$target --models $MODELS_AND_DEPENDENCIES
+echo "=================================="
+
+
+echo "Checking in with Dead Man's Snitch"
+curl $DBT_TEST_SNITCH_URL
+echo "Done."

@@ -1,0 +1,32 @@
+version: 2
+models:
+  - name: dbt_timeslots
+    description: >
+      This protected model sanitizes coaches' availability so that we only include
+      those
+      timeslots that either (1) start and end on the same day, or (2) start on one
+      day and
+      end on the next one.
+
+    columns:
+      - name: timeslot_id
+        description: Primary Key.
+
+      - name: coach_id
+        description: Foreign key to the associated coach.
+
+      - name: starts_at
+        description: >
+          Timestamp denoting when the timeslot begins.
+
+      - name: ends_at
+        description: >
+          Timestamp denoting when the timeslot ends.
+
+      - name: created_at
+        description: >
+          Timestamp denoting when the timeslot was created.
+
+      - name: updated_at
+        description: >
+          Timestamp denoting when the timeslot was updated.

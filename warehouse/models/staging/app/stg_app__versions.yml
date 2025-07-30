@@ -1,0 +1,54 @@
+version: 2
+
+models:
+  - name: stg_app__versions
+    description: Versions
+
+    columns:
+      - name: version_id
+        description: Unique identifier of Versions
+        tests:
+          - unique
+          - not_null
+      - name: version_created_at
+        description: Column 'version_created_at' captures the time of creation of
+          app object states in the log. [GenAI Description]
+      - name: event
+        description: The 'event' column in this model contains strings indicating
+          the type of change made to the app objects. [GenAI Description]
+      - name: item_id
+        description: The 'item_id' column is a unique identifier that references the
+          unique object associated with each version record. [GenAI Description]
+      - name: item_type
+        description: The 'item_type' column stores the type of object that has been
+          changed or acted upon. [GenAI Description]
+      - name: object
+        description: The column 'object' contains a JSON formatted string which stores
+          information about an object created, updated, or deleted in the app. [GenAI
+          Description]
+      - name: object_changes
+        description: The column 'object_changes' stores parsed JSON of the changes
+          made to each object in the app. [GenAI Description]
+      - name: user_agent
+        description: The 'user_agent' column stores the web browser or application
+          used to make changes to app objects. [GenAI Description]
+      - name: whodunnit
+        description: The 'whodunnit' column is an integer identifier representing
+          the user responsible for performing a change to an object in the application.
+          [GenAI Description]
+      - name: whodunnit_job
+        description: The 'whodunnit_job' column contains the job name associated with
+          the update to the app object state. [GenAI Description]
+      - name: impersonated
+        description: impersonated - A boolean indicating if the user triggered the
+          event through a third-party service. [GenAI Description]
+      - name: impersonated_user_id
+        description: The column 'impersonated_user_id' records the ID of the user
+          whose actions were being impersonated in a given action. [GenAI Description]
+      - name: request_id
+        description: The 'request_id' column stores the unique identifier for the
+          server request which authored the version of the application object. [GenAI
+          Description]
+      - name: whodunnit_jid
+        description: The 'whodunnit_jid' column stores the job id (jid) of the user
+          responsible for making the version change. [GenAI Description]

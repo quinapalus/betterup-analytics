@@ -1,0 +1,41 @@
+version: 2
+
+models:
+  - name: dbt_events__completed_onboarding_assessment
+    description: Members that have completed onboarding assessment.
+
+    columns:
+      - name: member_id
+        description: ID of the member (users.id)
+        tests:
+          - not_null
+
+      - name: attributes
+        description: Extra fields associated with the event
+
+      - name: associated_record_type
+        description: Type of the associated_record_id
+        tests:
+          - not_null
+
+      - name: associated_record_id
+        description: Associated id
+        tests:
+          - not_null
+          - unique
+
+      - name: event_object
+        description: The abstract business object associated with the event
+        tests:
+          - not_null
+
+      - name: event_action
+        description: The event behavior that happened
+
+      - name: event_at
+        description: Date when event was created
+        tests:
+          - not_null
+
+      - name: event_action_and_object
+        description: Concatenation of event action and event object

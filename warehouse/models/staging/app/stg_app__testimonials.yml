@@ -1,0 +1,32 @@
+version: 2
+
+models:
+  - name: stg_app__testimonials
+    description: DBT model stg_app__testimonials is a staging table that stores testimonial
+      data from the raw.stitch_app.testimonials table, such as the testimonial's text,
+      assessment_id, and timestamps for when it is created and updated. This model
+      is used to extract and store this data in a standardized and organized way that
+      is accessible for use in future analyses. [GenAI Description]
+    columns:
+      - name: testimonial_id
+        description: The testimonial_id column is a unique identifier for each testimonial
+          entry. [GenAI Description]
+        tests:
+          - unique
+          - not_null
+
+      - name: text
+        description: The 'text' column contains the text content of a testimonial.
+          [GenAI Description]
+
+      - name: assessment_id
+        description: The assessment_id column stores the ID of an assessment associated
+          with the testimonial. [GenAI Description]
+
+      - name: created_at
+        description: Created_at is a timestamp that represents the date and time when
+          the testimonial was created. [GenAI Description]
+
+      - name: updated_at
+        description: The column 'updated_at' stores a timestamp indicating when the
+          row was last updated. [GenAI Description]

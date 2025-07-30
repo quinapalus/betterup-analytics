@@ -1,0 +1,99 @@
+version: 2
+
+models:
+  - name: dim_product_subscription_assignments
+    description: >
+      Each row represents 1 product subscription assignment as configured in the BU app.
+
+    columns:
+      - name: product_subscription_assignment_id
+        description: ID of the product subscription assignment.
+        tests:
+          - unique
+          - not_null
+
+      - name: product_subscription_id
+        description: ID of the related product subscription.
+
+      - name: member_id
+        description: ID of the member associated with the product subscription assignment.
+
+      - name: created_at
+        description: When the product subscription assignment was created.
+
+      - name: updated_at
+        description: When the product subscription assignment was last updated.
+
+      - name: starts_at
+        description: When the product subscription assignment is scheduled to start.
+
+      - name: ended_at
+        description: >
+          When the product subscription assignment ended. An assigment can be manually 
+          ended before its scheduled end time.
+
+      - name: ends_at
+        description: >
+          When the product subscription assignment is scheduled to end. Can be NULL if 
+          associated with production subscriptions that have a NULL end date.
+
+      - name: v2
+        description: True if it is a v2 PSA created to suit MAPS.
+
+      - name: has_started
+        description: >
+          True, if the production subscription assignment is started, meaning it 
+          currently is or was active.
+
+      - name: planned_subscription_length_days
+        description: The planned subscription length in days.
+
+      - name: is_planned_subscription_2_month
+        description: True if the planned subscription length is > 30 days.
+
+      - name: is_planned_subscription_3_month
+        description: True if the planned subscription length is > 60 days.
+
+      - name: is_planned_subscription_4_month
+        description: True if the planned subscription length is > 90 days.
+
+      - name: is_planned_subscription_5_month
+        description: True if the planned subscription length is > 120 days.
+
+      - name: is_planned_subscription_6_month
+        description: True if the planned subscription length is > 150 days.
+
+      - name: is_planned_subscription_7_month
+        description: True if the planned subscription length is > 180 days.
+
+      - name: is_planned_subscription_8_month
+        description: True if the planned subscription length is > 210 days.
+
+      - name: is_planned_subscription_9_month
+        description: True if the planned subscription length is > 240 days.
+
+      - name: is_planned_subscription_10_month
+        description: True if the planned subscription length is > 270 days.
+
+      - name: is_planned_subscription_11_month
+        description: True if the planned subscription length is > 300 days.
+
+      - name: is_planned_subscription_12_month
+        description: True if the planned subscription length is > 330 days.
+
+      - name: is_active
+        description: >
+          True if the Product Subscription Assignment is currently active, i.e. PSA has 
+          started and ended_at IS NULL
+
+      - name: product_id
+        description: >
+          ID of the product associated with the product subscription assignment.
+
+      - name: organization_id
+        description: >
+          ID of the organization associated with the product subscription assignment.
+
+      - name: source
+        description: >
+          Source of the product associated with the product subscription assignment (CPQ2, LEGACY).

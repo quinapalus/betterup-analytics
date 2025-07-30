@@ -1,0 +1,21 @@
+version: 2
+models:
+  - name: dbt_members
+    description: >
+      Internal warehouse helper model that contains a row for every user with
+      global `member` role.
+
+    columns:
+      - name: member_id
+        description: Foreign key to associated user.
+        tests:
+          - not_null
+
+      - name: is_current_member
+        description: >
+          Boolean indicating whether the member is currently on an open track
+          assignment.
+        tests:
+          - not_null
+          - accepted_values:
+              values: [true, false]

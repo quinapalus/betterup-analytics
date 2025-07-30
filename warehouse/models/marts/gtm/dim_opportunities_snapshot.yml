@@ -1,0 +1,12 @@
+version: 2
+
+models:
+  - name: dim_opportunities_snapshot
+    meta:
+      owner: "xavier.mafe@betterup.co"
+    description: "Type 2 slowly changing table (could be considered a fact or dimension) for opportunities"
+    columns:
+      - name: "history_primary_key"
+        tests:
+          - unique
+          - not_null

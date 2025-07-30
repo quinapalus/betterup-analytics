@@ -1,0 +1,84 @@
+version: 2
+
+models:
+  - name: progress_index__metadata_global
+    description: ""
+    columns:
+      - name: unique_key
+        description: ""
+        tests:
+          - unique
+          - not_null
+
+      - name: coach_member_key
+        description: ""
+
+      - name: member_id
+        description: ""
+
+      - name: member_uuid
+        description: ""
+
+      - name: coach_id
+        description: ""
+
+      - name: coach_uuid
+        description: ""
+
+      - name: coach_assignment_created_at
+        description: ""
+
+      - name: appointment_id
+        description: ""
+
+      - name: appointment_created_at
+        description: ""
+
+      - name: appointment_started_at
+        description: ""
+
+      - name: appointment_completed_at
+        description: ""
+
+      - name: appointment_canceled
+        description: ""
+
+      - name: assessment_id
+        description: ""
+
+      - name: assessment_submitted_at
+        description: ""
+
+      - name: assessment_item
+        description: ""
+
+      - name: assessment_score
+        description: ""
+
+      - name: deployment_type
+        description: ""
+
+      - name: deployment_group
+        description: ""
+
+      - name: track_id
+        description: ""
+
+      - name: track_name
+        description: ""
+
+      - name: coach_assignment_role
+        description: ""
+
+      - name: is_professional_coaching_cloud
+        description: ""
+
+      - name: en_session_type
+        description: ""
+
+      - name: modality
+        description: ""
+
+      - name: modality_attributes
+        description: ""
+

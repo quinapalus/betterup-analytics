@@ -1,0 +1,50 @@
+version: 2
+
+models:
+  - name: fact_manager_feedback_request_status
+    description: '{{ doc("fact_manager_feedback_request_status") }}'
+
+    columns:
+      - name: primary_key 
+        description: '{{ doc("fact_manager_feedback_request_status__primary_key") }}' 
+        tests:
+          - unique
+          - not_null
+
+      - name: member_id
+        description: '{{ doc("fact_manager_feedback_request_status__member_id") }}'
+        tests:
+          - not_null
+          
+      - name: manager_id 
+        description: '{{ doc("fact_manager_feedback_request_status__manager_id") }}'
+          
+      - name: track_assignment_id
+        description: '{{ doc("fact_manager_feedback_request_status__track_assignment_id") }}'
+          
+      - name: feedback_request_assessment_id
+        description: '{{ doc("fact_manager_feedback_request_status__feedback_request_assessment_id") }}'
+
+      - name: manager_feedback_assessment_id
+        description: '{{ doc("fact_manager_feedback_request_status__manager_feedback_assessment_id") }}'
+
+      - name: feedback_request_submitted_at
+        description: '{{ doc("fact_manager_feedback_request_status__feedback_request_submitted_at") }}'
+ 
+      - name: manager_feedback_assessment_submitted_at
+        description: '{{ doc("fact_manager_feedback_request_status__manager_feedback_assessment_submitted_at") }}'
+            
+      - name: first_completed_session_at
+        description: '{{ doc("fact_manager_feedback_request_status__first_completed_session_at") }}'
+          
+      - name: days_from_first_session_to_member_request
+        description: '{{ doc("fact_manager_feedback_request_status__days_from_first_session_to_member_request") }}'
+
+      - name: days_from_first_session_to_manager_submission
+        description: '{{ doc("fact_manager_feedback_request_status__days_from_first_session_to_manager_submission") }}'
+          
+      - name: days_since_request_unanswered
+        description: '{{ doc("fact_manager_feedback_request_status__days_since_request_unanswered") }}'
+          
+      - name: days_since_request_answered
+        description: '{{ doc("fact_manager_feedback_request_status__days_since_request_answered") }}'

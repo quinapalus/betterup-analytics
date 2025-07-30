@@ -1,0 +1,177 @@
+name: DBT
+
+on:
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+  # Run on schedule at minute 15 past every 2nd hour.
+  schedule:
+    - cron: "15 */2 * * *"
+
+# Allow one concurrent deployment
+concurrency:
+  group: "dbt_us_main"
+  cancel-in-progress: false
+
+env:
+  SNOWFLAKE_USER: "DBT_GITHUB_CI_USER"
+  SNOWFLAKE_PASSWORD: ${{ secrets.DBT_GITHUB_CI_USER_PASSWORD }}
+  SLACK_WEBHOOK_URL: ${{ secrets.DATA_SLACK_WEBHOOK_URL }}
+  SLACK_WEBHOOK_TYPE: INCOMING_WEBHOOK
+  GITHUB_ACTION_URL: "https://github.com/betterup/betterup-analytics/actions/workflows/dbt.yml"
+  # Monte Carlo Data (MCD) Default API ID
+  MCD_DEFAULT_API_ID: ${{ secrets.MCD_DEFAULT_API_ID }}
+  # Monte Carlo Data (MCD) Default API Token
+  MCD_DEFAULT_API_TOKEN: ${{ secrets.MCD_DEFAULT_API_TOKEN }}
+  DATAHUB_TOKEN: ${{ secrets.DATAHUB_TOKEN }}
+  DEPLOYMENT_ENVIRONMENT: ${{ secrets.BETTERUP_ENVIRONMENT }}
+
+jobs:
+  dbt_run:
+    name: DBT Run
+    strategy:
+      matrix:
+        environment: ['US Prod']
+
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: warehouse
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - uses: actions/setup-python@v4
+        with:
+          python-version: "3.10"
+
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16
+
+      - name: Install python dependencies
+        # Retry 3 times before the install actually fails 
+        run: |
+          (echo "===== Install Attempt: 1 =====" && make installdeps) || \
+          (echo "===== Install Attempt: 2 =====" && make installdeps) || \
+          (echo "===== Install Attempt: 3 =====" && make installdeps) || \
+          (echo "===== Install python dependencies step failed =====" && exit 1)
+
+      - name: Write DBT configs
+        run: |
+          make writedbtconfig
+
+      - name: Install DBT dependencies
+        run: |
+          poetry run dbt deps --target prod
+
+      - name: Run dbt docs generate
+        run: poetry run dbt docs generate --target prod 
+                                 --exclude models/betterup_eu/ models/betterup_gov/
+      
+      - name: Run dbt seed
+        run: poetry run dbt seed --target prod 
+                                 --exclude models/betterup_eu/ models/betterup_gov/
+
+      - name: Run dbt models
+        id: dbt_run
+        run: poetry run dbt run --target prod 
+                                --exclude models/betterup_eu/ models/betterup_gov/
+                                --vars '{"account_env":"${{ matrix.environment }}"}' | tee ./runlogs.txt
+        
+      - name: Sanitize Monte Carlo Data Variables from DBT RUN
+        if: always()
+        run: |
+          MCD_ENVIRONMENT='${{ matrix.environment }}'
+          MCD_ENVIRONMENT="${MCD_ENVIRONMENT// /-}" # Replace all spaces with dashes
+          echo "MCD_ENVIRONMENT=${MCD_ENVIRONMENT}" >> "$GITHUB_ENV" # update GitHub ENV vars
+          MCD_JOB='${{ github.workflow }}'
+          MCD_JOB="${MCD_JOB// /-}" # Replace all spaces with dashes
+          echo "MCD_JOB=${MCD_JOB}" >> "$GITHUB_ENV" # update Github ENV 
+          
+      - name: Run Monte Carlo Import DBT Run
+        if: always()
+        run: poetry run montecarlo import dbt-run --project-name '${{ env.MCD_ENVIRONMENT }}' --job-name '${{ env.MCD_JOB }}' --manifest ./target/manifest.json --run-results ./target/run_results.json --logs ./runlogs.txt --connection-id 107ef298-b5a9-4f48-832e-f7bf14b672a5
+
+      - name: Copy DBT Run Artifacts
+        if: always()
+        run: cp target/manifest.json dbtrun__manifest.json && cp target/run_results.json dbtrun__run_results.json
+
+      - name: Test dbt models
+        id: dbt_test
+        run: |
+          poetry run dbt test --target prod --exclude models/betterup_eu/ models/betterup_gov/ | tee ./testlogs.txt
+          
+      - name: Sanitize Monte Carlo Data Variables from DBT Test
+        if: always()
+        run: |
+          MCD_ENVIRONMENT='${{ matrix.environment }}'
+          MCD_ENVIRONMENT="${MCD_ENVIRONMENT// /-}" # Replace all spaces with dashes
+          echo "MCD_ENVIRONMENT=${MCD_ENVIRONMENT}" >> "$GITHUB_ENV" # update GitHub ENV vars
+          MCD_JOB='${{ github.workflow }}'
+          MCD_JOB="${MCD_JOB// /-}" # Replace all spaces with dashes
+          echo "MCD_JOB=${MCD_JOB}" >> "$GITHUB_ENV" # update Github ENV 
+          
+      - name: Run Monte Carlo Import DBT Test
+        if: always()
+        run: poetry run montecarlo import dbt-run --project-name '${{ env.MCD_ENVIRONMENT }}' --job-name '${{ env.MCD_JOB }}' --manifest ./target/manifest.json --run-results ./target/run_results.json --logs ./testlogs.txt --connection-id 107ef298-b5a9-4f48-832e-f7bf14b672a5
+      
+      - name: Sync DBT with DataHub
+        run: |
+          poetry run datahub ingest -c dbt_recipe.dhub.yaml || true
+
+      - name: Copy DBT Test Artifacts
+        if: always()
+        run: cp target/manifest.json ./dbttest__manifest.json && cp target/run_results.json ./dbttest__run_results.json
+
+      - name: Convert to junitxml
+        if: always()
+        run: |
+          poetry run dbt-junitxml parse target/run_results.json target/report.xml
+
+      # - name: Upload report to data dog
+      #   if: always()
+      #   run: |
+      #     npm install -g @datadog/datadog-ci
+      #     datadog-ci junit upload --service buanalytics-dbt-tests target/report.xml
+      #   env:
+      #     DD_ENV: 'ci'
+      #     DATADOG_SITE: 'datadoghq.com'
+      #     DATADOG_API_KEY: ${{ secrets.ANALYTICS_CI_DATADOG_API_KEY }}
+          
+      - name: Archive target artifacts
+        if: always()
+        uses: actions/upload-artifact@v3
+        with:
+          name: dbt-build-artifacts
+          path: |
+            warehouse/dbtrun__manifest.json
+            warehouse/dbtrun__run_results.json
+            warehouse/dbttest__manifest.json
+            warehouse/dbttest__run_results.json
+
+#########################################################
+#
+#    NOTE!
+#    The below step is altered as follows:
+#      Only Non-DBT Step Failures will be reported to Slack during this workflow
+#      during the Monte Carlo Data POC period. If we are still using Monte Carlo Data,
+#      this can remain. If we need to revert to using Slack Notifications for DBT Failures,
+#      change the "if" condition below to simply "if: failure()" 
+#
+#########################################################
+
+      - name: Send GitHub Action data to Slack workflow
+        id: send-slack-notification
+        uses: slackapi/slack-github-action@v1.23.0
+        if: failure() && (steps.dbt_run.outcome == 'success') && (steps.dbt_test.outcome == 'success')
+        with:
+          # Slack API Reference: 
+          # https://api.slack.com/messaging/composing
+          # https://api.slack.com/reference/messaging/payload
+          payload: |
+            {
+              "channel": "warroom-data",
+              "icon_emoji": ":dbt-logo:",
+              "text": "DBT Run Failure. <${{ env.GITHUB_ACTION_URL }}|View here.>"
+            }

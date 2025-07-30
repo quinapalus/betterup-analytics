@@ -1,0 +1,75 @@
+version: 2
+models:
+  - name: dei_session_topics
+    description: >
+      HISTORICAL DATA ONLY, prior to launch of Version 2.0 on 7/17/2019.
+      This model processes coach-coded session-level `development_topics`. Each
+      row represents a topic-session pair and associated attributes. Note that
+      data in this table is limited to sessions associated with external deployments.
+
+    columns:
+#      - name: unique_id  --tried creating a surrogate key from all selected columns but it didn't pass uniqueness
+#        tests:
+#          - not_null
+#          - unique
+
+      - name: session_id
+        description: Foreign Key to associated session.
+        tests:
+          - not_null
+
+      - name: member_id
+        description: Denormalized Foreign Key to associated member.
+        tests:
+          - not_null
+
+      - name: coach_id
+        description: Denormalized Foreign Key to associated coach.
+        tests:
+          - not_null
+
+      - name: track_id
+        description: Denormalized Foreign Key to associated track.
+        tests:
+          - not_null
+
+      - name: session_at
+        description: Timestamp (UTC) when the associated session started.
+        tests:
+          - not_null
+
+      - name: development_topic_id
+        description: Foreign Key to associated development_topic.
+        tests:
+          - not_null
+
+      - name: topic
+        description: Name of the associated development topic selected by the coach.
+        tests:
+          - not_null
+
+      - name: theme
+        description: >
+          Name of the high-level cluster for the associated development topic,
+          as defined by `topic_theme_id` foreign key relationship in
+          `stg_app__development_topics`. May be `NULL` if topic isn't mapped to a theme.
+
+      - name: wpm_dimension
+        description: >
+          WPM 1.0 dimension associated with the given topic. Mapping defined by
+          `data/bu_topic_mapping.csv`.
+        tests:
+          - not_null
+
+      - name: wpm_factor
+        description: >
+          WPM 1.0 factor (i.e. Thriving or Inspiring) associated with the given topic. Mapping defined by `data/bu_topic_mapping.csv`.
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['Inspiring', 'Thriving']
+
+      - name: session_topics_count
+        description: Number of topics selected by the coach for the associated session.
+        tests:
+          - not_null

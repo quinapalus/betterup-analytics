@@ -1,0 +1,36 @@
+version: 2
+
+models:
+  - name: int_coach__appointments_coach_rollup_daily_snapshot
+    description: >
+      Appointments is the application table this is derived from.
+      This is a rollup at the coach level, so all appointments aggregated by coach.
+      It is also a daily snapshot, so a historic as_of_date is in the grain.
+      This rollup is derived from another rollup:int_coach__appointments_coach_date_rollup_daily_snapshot
+        (which is also rollup of appointment data but per coach per *appointment date* (and also a daily snapshot))
+      Business context: Think of this int model as "upcoming coach scheduled hours in next 3, 7, 14 days"
+      which is a factor of coach availability / the demand of coach hours
+      More docs here: https://betterup.atlassian.net/wiki/spaces/DATA/pages/3345450158/Coach+Snapshot+Data+Model
+
+    columns:
+      - name: history_primary_key
+        description: "Surrogate key of coach_id and as_of_date. This table is 1 row per coach per daily snapshot date."
+        tests:
+          - unique
+          - not_null
+
+      - name: coach_id
+        description: ""
+
+      - name: as_of_date
+        description: ""
+
+      - name: upcoming_booking_hours_14d
+        description: ""
+
+      - name: upcoming_booking_hours_3d
+        description: ""
+
+      - name: upcoming_booking_hours_7d
+        description: ""
+

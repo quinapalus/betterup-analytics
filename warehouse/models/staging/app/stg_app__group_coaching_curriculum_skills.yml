@@ -1,0 +1,31 @@
+version: 2
+models:
+  - name: stg_app__group_coaching_curriculum_skills
+    description: This DBT model is a staging table that stores the relationship between
+      group coaching curriculums and skills. It contains fields for group coaching
+      curriculum skill ID, group coaching curriculum ID, skill ID, create and update
+      timestamps. This allows the tracking of how curriculums are linked to skills,
+      and when they were created or modified. [GenAI Description]
+    columns:
+      - name: group_coaching_curriculum_skill_id
+        description: A unique identifier for skills that are part of group coaching
+          curriculums. [GenAI Description]
+        tests:
+          - unique
+          - not_null
+
+      - name: group_coaching_curriculum_id
+        description: The column 'group_coaching_curriculum_id' stores the unique identifier
+          for a group coaching curriculum. [GenAI Description]
+
+      - name: skill_id
+        description: The column 'skill_id' contains the unique identification numbers
+          for the skills related to a given group coaching curriculum. [GenAI Description]
+
+      - name: created_at
+        description: Column 'created_at' stores the timestamp of when the row was
+          created. [GenAI Description]
+
+      - name: updated_at
+        description: The 'updated_at' column contains the timestamp of when the row
+          was last updated. [GenAI Description]

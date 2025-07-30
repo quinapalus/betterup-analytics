@@ -1,0 +1,25 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+title Snowflake Replication EU -> US Sequence Diagram
+autonumber
+
+database raw as euraw
+boundary "dbt" as dbt
+database eu_anonymized as am
+
+group EU Snowflake
+dbt -> euraw: Reads data
+dbt -> am: Creates models
+end
+...
+entity Snowflake as SF
+database eu_anonymized as usam
+group US Snowflake
+SF -> SF: Scheduled task to refresh DB
+SF -> am: Reads Database
+SF -> usam: Synchronizes Data
+end
+
+
+
+@enduml

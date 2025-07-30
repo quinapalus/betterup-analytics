@@ -1,0 +1,185 @@
+
+name: 'warehouse'
+version: '0.1'
+require-dbt-version: ">=1.2.0"
+config-version: 2
+
+# This setting configures which "profile" dbt uses for this project. Profiles contain
+# database connection information, and should be configured in the  ~/.dbt/profiles.yml file
+profile: 'betterup-analytics'
+
+# These configurations specify where dbt should look for different types of files.
+# The `model-paths` config, for example, states that models can be found
+# in the "models/" directory. You probably won't need to change these!
+model-paths: ["models"]
+analysis-paths: ["analyses"]
+test-paths: ["tests"]
+seed-paths: ["seeds"]
+macro-paths: ["macros"]
+
+target-path: "target"  # directory which will store compiled SQL files
+clean-targets:         # directories to be removed by `dbt clean`
+    - "target"
+    - "dbt_packages"
+
+# run hooks
+# on-run-end:
+#    - 'grant usage on schema "{{ target.schema }}" to "mode-sandbox"'
+#    - 'grant select on all tables in schema "{{ target.schema }}" to "mode-sandbox"'
+
+on-run-start:
+  - '{{ create_udfs() }}'
+
+seeds:
+  warehouse:
+    +enabled: true
+    +schema: static
+    +post-hook:
+      - '{{ grant_access() }}'
+  dbt_project_evaluator:
+    dbt_project_evaluator_exceptions:
+      +enabled: false
+
+snapshots:
+  +target_schema: snapshots
+
+vars:
+
+  dbt_project_evaluator:
+    model_types: ['staging', 'intermediate', 'marts', 'other']
+    staging_prefixes: ['stg_']
+    marts_prefixes: ['fact_','dim_']
+    intermediate_prefixes: ['int_']
+
+    # Documentation Coverage Target - the percent of enabled models in the project that have a configured description.
+    # Setting this at our current coverage, 46.86% until we tackle adding more coverage. Aiming for 100%
+    documentation_coverage_target: 46.86
+
+    # Test Coverage Target - the percentage of your models that have minimum 1 test applied.
+    # Setting this at our current coverage, 53.97% until we tackle adding more coverage. Aiming for 100%
+    test_coverage_target: 53.97
+
+  data_diff:
+    prod_database: ANALYTICS
+    prod_schema: ANALYTICS
+    prod_custom_schema: <custom_schema>
+
+models:
+  dbt_project_evaluator:
+    +schema: dbt_project_evaluator
+
+  warehouse:
+    +enabled: true
+    +materialized: view
+    +post-hook:
+      - '{{ grant_access() }}'
+    +meta:
+      team_owner: "analytics_eng_group"
+
+    base:
+      +schema: base
+      fed:
+        sfdc:
+          +enabled: "{{ true if env_var('DEPLOYMENT_ENVIRONMENT', '') == 'US Gov' else false }}"
+          #Since airbyte is not pushing SFDC data to commercial yet we need to make sure that the base
+          #sfdc models don't run in commercial
+
+    # Do not add a new schema for new staging sources.
+    # We would like to have just one staging schema for all sources
+    staging:
+      +schema: staging
+      app:
+        +schema: staging_app
+        protected:
+          +materialized: ephemeral
+      assessment:
+        +schema: staging
+      human_insights:
+        +schema: human_insights
+      wkfw:
+      coach:
+        +schema: staging
+      curriculum:
+        +schema: staging
+      genai:
+        +schema: staging
+      versions:
+        +schema: staging
+      jira:
+        +schema: staging
+
+    staging_eu:
+      +schema: staging
+      app_eu:
+        +schema: staging_app
+      coach_eu:
+        +schema: staging_app
+
+    marts:
+      +materialized: table
+      core:
+        +schema: core
+      d2c:
+        +schema: d2c
+      assessments:
+        +schema: assessments
+      people_insights:
+        +schema: people_insights
+        +tags: ['eu']
+      platform:
+        +schema: platform
+      care:
+        +schema: care
+      content:
+        +schema: content
+      workflow:
+        +schema: workflow
+      implementation_services:
+        +schema: implementation_services
+      machine_learning:
+        +schema: machine_learning
+      services:
+        +materialized: table
+        salesforce:
+          +schema: salesforce_service
+
+    metric_monitoring:
+      +materialized: table
+      +schema: metric_monitoring
+
+    betterup_eu: # This is an EEA Snowflake only models that will land anonymized tables into a DB that gets replicated to the US.
+      +materialized: table
+      anon_app_eu:
+        +schema: anon_app_eu
+
+    betterup_gov: # These are Gov Snowflake only models that will land anonymized tables into a DB that gets replicated to the US.
+      +materialized: table
+      anon_gov_coach:
+        +schema: anon_gov_coach
+
+# everything below here is kinda legacy
+    legacy:
+      analytics:
+        +schema: analytics
+        protected:
+          +materialized: ephemeral
+        public:
+          +materialized: table
+        udfs:
+          +materialized: ephemeral
+      app:
+        +schema: app
+      carina:
+        +schema: carina
+        +materialized: table
+        protected:
+          +materialized: ephemeral
+
+
+
+tests:
+  #for Fed we want to know if something is out of compliance with commercial
+  #but because we won't be able to address these issues until the next release we are setting tests to warn only for Fed
+  +severity: "{{ 'warn' if env_var('DEPLOYMENT_ENVIRONMENT', '') == 'US Gov' else 'error' }}"
+  dbt_project_evaluator:
+    +severity: "{{ env_var('DBT_PROJECT_EVALUATOR_SEVERITY', 'warn') }}"

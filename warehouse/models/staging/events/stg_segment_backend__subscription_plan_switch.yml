@@ -1,0 +1,230 @@
+version: 2
+
+models:
+  - name: stg_segment_backend__subscription_plan_switch
+    description: DBT model stg_segment_backend__subscription_plan_switch stores event
+      data of users switching subscription plans on a platform. It includes fields
+      such as user_id, deployment_type and the old/target subscription plans. [GenAI
+      Description]
+    columns:
+      - name: id
+        description: The 'id' column contains a unique identifier for each subscription
+          plan switch event. [GenAI Description]
+        tests:
+          - unique
+          - not_null
+
+      - name: user_id
+        description: "'user_id' refers to the ID of the user performing a subscription\
+          \ plan switch. [GenAI Description]"
+
+      - name: deployment_type
+        description: The 'deployment_type' column tracks the type of deployment used
+          when switching subscription plans. [GenAI Description]
+
+      - name: old_price_currency
+        description: The old_price_currency column stores the currency of the subscription
+          plan that a user was previously on. [GenAI Description]
+
+      - name: old_price_nickname
+        description: The 'old_price_nickname' column holds the plan nickname of the
+          subscription plan before switching to the new plan. [GenAI Description]
+
+      - name: old_price_recurring_interval
+        description: The 'old_price_recurring_interval' column stores the recurring
+          timespan of the previous subscription plan. [GenAI Description]
+
+      - name: target_price_nickname
+        description: The 'target_price_nickname' column stores the user's target plan's
+          price nickname. [GenAI Description]
+
+      - name: target_price_updated_at
+        description: This column contains the date and time when the target price
+          for a subscription plan was last updated. [GenAI Description]
+
+      - name: context_library_name
+        description: This column stores the library name associated with the event.
+          [GenAI Description]
+
+      - name: old_price_created_at
+        description: The 'old_price_created_at' column stores the timestamp of when
+          the original subscription plan was set. [GenAI Description]
+
+      - name: old_price_id
+        description: The old_price_id column stores the subscription price that was
+          active prior to the switch. [GenAI Description]
+
+      - name: target_price_currency
+        description: This column contains the currency of the target price of a subscription
+          plan switch. [GenAI Description]
+
+      - name: old_price_consumer_product_id
+        description: The 'old_price_consumer_product_id' column provides the consumer
+          product ID for the subscription plan that the user switched away from. [GenAI
+          Description]
+
+      - name: old_price_stripe_price_id
+        description: This column contains the pre-switch subscription plan's price
+          value. [GenAI Description]
+
+      - name: target_price_stripe_price_id
+        description: The 'target_price_stripe_price_id' column holds the stripe price
+          ID of the subscription plan that the customer is switching to. [GenAI Description]
+
+      - name: track_assignment_id
+        description: The 'track_assignment_id' column holds an identifier for the
+          associated subscription plan switch. [GenAI Description]
+
+      - name: track_id
+        description: The 'track_id' column stores a unique identifier for each subscription
+          plan switch event. [GenAI Description]
+
+      - name: target_price_unit_amount
+        description: The target_price_unit_amount column holds the monetary amount
+          of a subscription plan switch. [GenAI Description]
+
+      - name: uuid_ts
+        description: The 'uuid_ts' column stores a unique identifier and timestamp
+          for each subscription plan switch event. [GenAI Description]
+
+      - name: has_primary_coach
+        description: The 'has_primary_coach' column indicates whether the subscription
+          plan switch event is associated with a primary coach profile. [GenAI Description]
+
+      - name: old_price_recurring_interval_count
+        description: The 'old_price_recurring_interval_count' column stores the number
+          of intervals (e.g. days, weeks, etc) for a subscription plan before it was
+          modified. [GenAI Description]
+
+      - name: old_price_updated_at
+        description: The 'old_price_updated_at' column holds the timestamp of when
+          the price of the previous subscription plan was last updated. [GenAI Description]
+
+      - name: sent_at
+        description: The 'sent_at' column stores the timestamp for when a subscription
+          plan switch was sent. [GenAI Description]
+
+      - name: target_price_consumer_product_id
+        description: The 'target_price_consumer_product_id' column contains the ID
+          of the consumer product associated with the predicted switch to a subscription
+          plan. [GenAI Description]
+
+      - name: target_price_created_at
+        description: This column tracks the target price created at the time the subscription
+          plan switch was made. [GenAI Description]
+
+      - name: event
+        description: The 'event' column represents an action taken by a user to switch
+          subscription plans. [GenAI Description]
+
+      - name: received_at
+        description: This column stores the timestamp when the subscription plan switch
+          event was received. [GenAI Description]
+
+      - name: target_price_id
+        description: "'target_price_id' is the ID of the pricing plan after a subscription\
+          \ plan switch is completed. [GenAI Description]"
+
+      - name: target_price_recurring_interval
+        description: The 'target_price_recurring_interval' column stores the frequency
+          of recurring payments for the target plan. [GenAI Description]
+
+      - name: target_price_recurring_interval_count
+        description: The column stores the number of recurrences in a target price.
+          [GenAI Description]
+
+      - name: context_library_version
+        description: This column contains version information of the library context
+          for the 'subscription_plan_switch' event. [GenAI Description]
+
+      - name: event_text
+        description: The 'event_text' column contains a description of an event, such
+          as a subscription plan switch. [GenAI Description]
+
+      - name: old_price_unit_amount
+        description: The 'old_price_unit_amount' column represents the original price
+          paid for a subscription plan before it was switched. [GenAI Description]
+
+      - name: original_timestamp
+        description: "'original_timestamp' is a timestamp column storing when the\
+          \ subscription plan switch was originally recorded. [GenAI Description]"
+
+      - name: timestamp
+        description: The timestamp column contains timestamp records of subscription
+          plan switches. [GenAI Description]
+
+      - name: hubspot_contact_id
+        description: This column contains unique identifiers from HubSpot for contacts.
+          [GenAI Description]
+
+      - name: product_subscription_id
+        description: The 'product_subscription_id' column is a unique identifier for
+          a customer's subscription plan. [GenAI Description]
+
+      - name: product_id
+        description: The 'product_id' column in this model contains the unique identifier
+          of each subscription plan. [GenAI Description]
+
+      - name: product_subscription_assignment_id
+        description: The 'product_subscription_assignment_id' column contains a unique
+          identifier for each product subscription assignment. [GenAI Description]
+
+      - name: browser_name
+        description: The 'browser_name' column stores the name of the web browser
+          used by the user. [GenAI Description]
+
+      - name: device_name
+        description: Device name identifies the device used to generate the Subscription
+          Plan Switch event. [GenAI Description]
+
+      - name: platform_name
+        description: The "platform_name" column contains the name of the platform
+          the subscription change event occurred on. [GenAI Description]
+
+      - name: platform_version
+        description: The 'platform_version' column stores the version of the platform
+          the event occurred on. [GenAI Description]
+
+      - name: browser_version
+        description: The 'browser_version' column contains the version of the web
+          browser used by the user. [GenAI Description]
+
+      - name: app_build
+        description: The 'app_build' column stores the application version (build
+          number) of the event. [GenAI Description]
+
+      - name: app_version
+        description: The 'app_version' column stores the version of the application
+          used by the user to switch subscription plans. [GenAI Description]
+
+      - name: target_price_discount_percentage
+        description: The column 'target_price_discount_percentage' stores the percentage
+          discount of the target subscription plan. [GenAI Description]
+
+      - name: old_price_discount_percentage
+        description: The column 'old_price_discount_percentage' stores the discount
+          percentage for a subscription plan switch. [GenAI Description]
+
+      - name: target_price_track_id
+        description: This column stores the unique ID for the target price track associated
+          with a subscription plan switch. [GenAI Description]
+
+      - name: old_price_track_id
+        description: The column 'old_price_track_id' holds the identifier of the track
+          the user switched from. [GenAI Description]
+
+      - name: old_price_purchase_type
+        description: The 'old_price_purchase_type' column contains the purchase type
+          of the previous subscription plan. [GenAI Description]
+
+      - name: target_price_purchase_type
+        description: This column contains the target price a customer has set for
+          their subscription plan purchase. [GenAI Description]
+
+      - name: old_session_length
+        description: The 'old_session_length' column indicates the duration of the
+          previously subscribed plan. [GenAI Description]
+
+      - name: target_session_length
+        description: The 'target_session_length' column holds the amount of time purchased
+          for the new subscription plan. [GenAI Description]

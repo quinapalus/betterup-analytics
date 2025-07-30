@@ -1,0 +1,15 @@
+version: 2
+
+sources:
+  - name: funnel
+    database: funnel
+    schema: FUNNEL__NCCKILO4IZROC_XX7VD
+    loader: funnel
+
+    loaded_at_field: date::timestamp
+    freshness:
+      warn_after: {count: 1, period: day}
+      error_after: {count: 2, period: day}
+
+    tables:
+      - name: ad_platform_campaigns_daily_metrics

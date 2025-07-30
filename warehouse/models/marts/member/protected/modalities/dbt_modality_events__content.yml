@@ -1,0 +1,24 @@
+version: 2
+
+models:
+  - name: dbt_modality_events__content
+    description: The dbt_modality_events__content model underpins the tracking of
+      "viewed resource" type events in an online learning platform, using the modality
+      field (e.g. "content") to differentiate between multiple types of activities
+      that take place. It has _grain, modality and event_name columns.
+      [GenAI Description]
+    columns:
+      - name: modality
+        description: The 'modality' column identifies the type of content being viewed.
+          [GenAI Description]
+
+      - name: event_name
+        description: The 'event_name' column stores the type of action taken in the
+          content modality. [GenAI Description]
+
+      - name: _grain
+        description: The _grain column holds a unique identifier of the modality and
+          event name for testing purposes. [GenAI Description]
+        tests:
+          - unique
+          - not_null

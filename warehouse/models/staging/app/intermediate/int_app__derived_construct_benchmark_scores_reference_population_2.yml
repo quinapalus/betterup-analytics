@@ -1,0 +1,38 @@
+version: 2
+
+models:
+  - name: int_app__derived_construct_benchmark_scores_reference_population_2
+    description: >
+      Documentation on benchmark-related dbt models here:
+      https://betterup.atlassian.net/wiki/spaces/DATA/pages/3145957413/Benchmarks
+    columns:
+      - name: primary_key
+        description: "surrogate key of 'country', 'industry', 'level', 'key'"
+        tests:
+          - unique
+          - not_null
+
+      - name: reference_population_id
+        description: ""
+
+      - name: reference_population_key
+        description: ""
+
+      - name: benchmark_population_type
+        description: ""
+
+      - name: country
+        description: ""
+
+      - name: industry
+        description: ""
+
+      - name: level
+        description: ""
+
+      - name: key
+        description: ""
+
+      - name: mean
+        description: ""
+

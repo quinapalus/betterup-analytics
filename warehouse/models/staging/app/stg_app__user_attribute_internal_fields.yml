@@ -1,0 +1,25 @@
+version: 2
+
+models:
+  - name: stg_app__user_attribute_internal_fields
+    description: UserAttribute Internal Field model map all UserAttribute Fields across
+      organizations."
+    columns:
+      - name: user_attribute_internal_field_id
+        description: Unique identifer of the user attribute import.
+        tests:
+          - unique
+          - not_null
+
+      - name: field_name
+        description: Name of the field.
+
+      - name: description
+        description: Description of the field.
+
+      - name: created_at
+        description: Time when the Rails object was created in UTC, i.e. when the
+          user account was created.
+
+      - name: updated_at
+        description: Time when the Rails object was updated in UTC.

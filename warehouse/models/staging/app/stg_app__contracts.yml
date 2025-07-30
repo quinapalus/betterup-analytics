@@ -1,0 +1,40 @@
+version: 2
+models:
+  - name: stg_app__contracts
+    description: >
+      Represents a Contract; a collection of Salesforce Opportunity identifiers with the same end date for an Organization.
+
+    columns:
+      - name: contract_id
+        description: Unique identifier for the Contract
+        tests:
+          - not_null
+          - unique
+
+      - name: name
+        description: Name of the Contract
+
+      - name: organization_id
+        description: Which organization the contract belongs to
+        tests:
+          - relationships:
+              to: ref('stg_app__organizations')
+              field: organization_id
+
+      - name: sfdc_opportunity_ids
+        description: Array of Salesforce Opportunity identifiers associated to this Contract
+
+      - name: created_at
+        description: When the Contract was created
+
+      - name: updated_at
+        description: When the Contract was last updated
+
+      - name: salesforce_contract_id
+        description: ""
+
+      - name: salesforce_contract_number
+        description: ""
+
+      - name: trial
+        description: ""

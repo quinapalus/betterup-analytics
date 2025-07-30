@@ -1,0 +1,37 @@
+version: 2
+
+models:
+  - name: int_app__partner_configurations
+    description: This DBT model combines reference tables from 'stg_app__partner_configurations'
+      and 'stg_app__experience_configuration_assignments' to store partner configurations
+      with extra fields like downloadable, competency_mapping_id, partner_emails.
+      It also covers related logic to guarantee that the latest configuration for
+      each track is returned. [GenAI Description]
+    columns:
+      - name: primary_key
+        tests:
+          - unique
+          - not_null
+
+        description: The primary_key column is a surrogate key that uniquely identifies
+          each row of data. [GenAI Description]
+      - name: track_id
+        description: The 'track_id' column is the unique identifier of the Experience
+          Configuration assigned to a Partner Configuration. [GenAI Description]
+
+      - name: partner_configuration_id
+        description: The 'partner_configuration_id' column contains a unique identifier
+          used to reference the partner configuration associated with a track. [GenAI
+          Description]
+
+      - name: downloadable
+        description: The "downloadable" column indicates if a partner configuration
+          can be downloaded from an application. [GenAI Description]
+
+      - name: competency_mapping_id
+        description: "'competency_mapping_id' is a foreign key that relates this table\
+          \ to the 'stg_app__partner_configurations' table. [GenAI Description]"
+
+      - name: partner_emails
+        description: The 'partner_emails' column contains a comma-separated list of
+          email addresses associated with the partner configuration. [GenAI Description]

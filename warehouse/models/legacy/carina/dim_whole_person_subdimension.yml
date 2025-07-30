@@ -1,0 +1,80 @@
+version: 2
+models:
+  - name: dim_whole_person_subdimension
+    description: >
+      Conformed Whole Person Model Subdimension dimension :zany_face:
+
+
+    columns:
+      - name: whole_person_subdimension_key
+        description: Primary Key
+        tests:
+          - not_null
+          - unique
+
+      - name: whole_person_model_version
+        description: WPM version for the associated subdimension.
+        tests:
+          - not_null
+          - accepted_values:
+              values: [WPM 1.0, WPM 2.0]
+
+      - name: assessment_subdimension_key
+        description: >
+          Score key associated with the subdimension. Only unique within
+          scope of a single WPM version.
+        tests:
+          - not_null
+
+      - name: subdimension_name
+        description: Name of the subdimension.
+        tests:
+          - not_null
+
+      - name: subdimension_description
+        description: Short sentence describing the construct measured by the subdimension.
+        tests:
+          - not_null
+
+      - name: subdimension_is_visible_to_member
+        description: >
+          Boolean indicating if scores from the subdimension are presented to members.
+        tests:
+          - not_null
+          - accepted_values:
+              values: [true, false]
+
+      - name: subdimension_is_visible_to_partner
+        description: >
+          Boolean indicating if scores from the subdimension are presented to partners.
+        tests:
+          - not_null
+          - accepted_values:
+              values: [true, false]
+
+      - name: subdimension_is_included_in_partner_360_reporting
+        description: >
+          Boolean indicating if scores from the subdimension are included in Partner-facing
+          180/360 reporting.
+        tests:
+          - not_null
+          - accepted_values:
+              values: [true, false]
+
+      - name: subdimension_dimension
+        description: >
+          Denormalized WPM Dimension for the associated subdimension. N/A
+          for Mindsets and Outcomes.
+
+      - name: subdimension_domain
+        description: >
+          Denormalized WPM Domain for the associated subdimension. N/A for Mindsets
+          and Outcomes.
+
+      - name: subdimension_category
+        description: >
+          Denormalized Category for the associated subdimension, i.e. Behavior,
+          Mindset, Outcome.
+      
+      - name: wpm_domain_sort_order
+        description: "Helper field to sort WPM results by Domain in following order: Mindset, Inspiring, Thriving, Outcome."

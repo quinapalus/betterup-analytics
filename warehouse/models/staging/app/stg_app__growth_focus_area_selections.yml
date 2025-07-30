@@ -1,0 +1,35 @@
+version: 2
+
+models:
+  - name: stg_app__growth_focus_area_selections
+    description: This DBT model stores growth focus area selections related to individual
+      growth maps. It has fields such as growth_focus_area_selection_id, growth_map_id,
+      growth_focus_area_id and satisfaction to facilitate the selection and tracking
+      of focus areas. [GenAI Description]
+    columns:
+      - name: growth_focus_area_selection_id
+        description: The 'growth_focus_area_selection_id' column stores the unique
+          IDs of individual selections from a growth focus area. [GenAI Description]
+        tests:
+          - not_null
+          - unique
+
+      - name: growth_map_id
+        description: The 'growth_map_id' column stores the unique identifier of the
+          growth map associated with a growth focus area selection. [GenAI Description]
+
+      - name: growth_focus_area_id
+        description: The column 'growth_focus_area_id' contains the identifier of
+          the growth focus area related to the selection. [GenAI Description]
+
+      - name: satisfaction
+        description: "'Satisfaction' is a number which indicates a user's level of\
+          \ satisfaction with a growth focus area. [GenAI Description]"
+
+      - name: created_at
+        description: This column contains timestamps of when the selected growth focus
+          area was created. [GenAI Description]
+
+      - name: updated_at
+        description: '"updated_at" contains a timestamp representing when the selection
+          was last updated. [GenAI Description]'

@@ -1,0 +1,38 @@
+version: 2
+
+models:
+  - name: stg_app__call_events
+    description: "Contains CallEvents related to Calls. CallEvents capture actions taken by either
+      a member or coach involving a Call. CallEvents are used to record when calls
+      are triggered, Tokbox parameters, when streams are created/destroyed, etc."
+
+    columns:
+      - name: call_event_id
+        description: ""
+        tests:
+          - unique
+          - not_null
+
+      - name: created_at
+        description: "When the CallEvent was created"
+
+      - name: updated_at
+        description: "When the CallEvent was updated"
+
+      - name: call_id
+        description: "Unique identifier of the Call"
+        tests:
+          - not_null
+
+      - name: contact_method
+        description: "Which contact method was used"
+
+      - name: event_data
+        description: "Details of the event"
+
+      - name: event_name
+        description: "Name of the event that was captured.
+          To see what `event_name`s currently exist try `select distinct event_name from app.app_call_events"
+
+      - name: user_id
+        description: "Unique identifier of the User whom the event was generated from"

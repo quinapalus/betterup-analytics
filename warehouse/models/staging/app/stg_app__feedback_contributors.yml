@@ -1,0 +1,35 @@
+version: 2
+models:
+
+  - name: stg_app__feedback_contributors
+    description: Model representing the feedback contributor.
+
+    columns:
+      - name: feedback_contributor_id
+        description: Primary key
+        tests:
+          - not_null
+          - unique
+
+      - name: feedback_request_id
+        description: Unique identifer of the feedback record record.
+        tests:
+          - not_null
+
+      - name: user_id
+        description: Unique identifer of the contributor user.
+        tests:
+          - not_null
+
+      - name: contributor_assessment_id
+        description: Assessment ID for the contributor response.
+
+      - name: created_at
+        description: When the record was created.
+        tests:
+          - not_null
+
+      - name: updated_at
+        description: When the record was updated.
+        tests:
+          - not_null

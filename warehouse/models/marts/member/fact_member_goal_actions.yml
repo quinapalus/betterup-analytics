@@ -1,0 +1,38 @@
+version: 2
+
+models:
+  - name: fact_member_goal_actions
+    description: This table contains data about goals for BU members
+    columns:
+      - name: primary_key
+        description: Unique primary key identifier
+        tests:
+          - unique
+          - not_null
+
+      - name: title
+        description: A short sentence describing the member's goal action 
+
+      - name: description
+        description: A longer description of the specific goal action
+
+      - name: creator_id
+        description: ID for the user who created the goal action
+
+      - name: assigned_to_id
+        description: ID for the user the goal action is assigned to
+
+      - name: state
+        description: Current state of the goal action (either 'in_progress' or 'completed')
+      
+      - name: state_updated_at
+        description: Timestamp for last update to goal action state
+
+      - name: created_at
+        description: Timestamp at which the goal action was created
+
+      - name: complete_by
+        description: Timestamp representing the deadline by which the assigned_to user wishes to complete their goal action 
+
+      - name: updated_at
+        description: Timestamp for latest update to the goal action

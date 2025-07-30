@@ -1,0 +1,32 @@
+version: 2
+
+models:
+  - name: product_subscription_assignment_consumption
+    description: ""
+    columns:
+      - name: product_subscription_assignment_consumption_id
+        description: ""
+        tests:
+          - unique
+          - not_null
+
+      - name: product_subscription_assignment_id
+        description: ""
+
+      - name: last_engaged_at
+        description: ""
+
+      - name: starts_at
+        description: ""
+
+      - name: end_diff
+        description: ""
+
+      - name: unassignment_reason
+        description: ""
+
+      - name: partial_consumption_leftover_period
+        description: ""
+
+      - name: unassigned_at
+        description: ""

@@ -1,0 +1,24 @@
+version: 2
+
+models:
+  - name: fact_member_reporting_group_assignment_lead_metrics_v2
+    description: ""
+    columns:
+      - name: primary_key
+        description: ""
+        tests:
+          - unique
+          - not_null
+
+      - name: contributor_id
+        description: ""
+          
+      - name: contributor_invited_at
+        description: ""
+
+      - name: first_feedback_submitted_at
+        description: "Date first Contributor Feedback was submitted"
+
+      - name: last_feedback_submitted_at
+        description: "Date last Contributor Feedback was submitted"
+

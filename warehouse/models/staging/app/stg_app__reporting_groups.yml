@@ -1,0 +1,37 @@
+version: 2
+
+models:
+  - name: stg_app__reporting_groups
+    description: The DBT model stg_app__reporting_groups stores and manipulates data
+      from the raw.stitch_app.reporting_groups table. It includes fields such as reporting_group_id,created_at,
+      updated_at, name, product_type, and associated_record_type. This model provides
+      a useful platform for analyzing reporting groups data to gain insights into
+      various product segments and associated records. [GenAI Description]
+
+    columns:
+      - name: reporting_group_id
+        description: The 'reporting_group_id' column stores a unique identifier for
+          each reporting group. [GenAI Description]
+        tests:
+          - unique
+          - not_null
+
+      - name: created_at
+        description: '"created_at" is a timestamp field of when the reporting group
+          record was created. [GenAI Description]'
+
+      - name: updated_at
+        description: The 'updated_at' column stores a timestamp that indicates when
+          changes to the associated record were last made. [GenAI Description]
+
+      - name: name
+        description: The 'name' column contains a descriptive label for each reporting
+          group. [GenAI Description]
+
+      - name: product_type
+        description: The 'product_type' column contains the type of product associated
+          with each reporting group. [GenAI Description]
+
+      - name: associated_record_type
+        description: The 'associated_record_type' column indicates the type of record
+          associated with each reporting group. [GenAI Description]

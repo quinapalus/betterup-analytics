@@ -1,0 +1,25 @@
+openapi: 3.0.1
+info:
+  title: Funnel.io (trialing)
+  description: >
+    Funnel powers your reporting and analytics to give you incredible control 
+    over your performance.
+  x-cortex-git:
+    github:
+      repository: betterup/betterup-analytics
+  x-cortex-tag: betterup-analytics-funnel
+  x-cortex-type: service
+  x-cortex-link:
+  - name: Analytics Confluence
+    type: documentation
+    url: https://betterup.atlassian.net/wiki/spaces/AN/overview
+  x-cortex-owners:
+  - name: betterup/analytics-eng
+    type: GROUP
+  - type: SLACK
+    channel: analytics
+  x-cortex-service-groups:
+  - external-system
+  - tier-2
+  x-cortex-custom-metadata:
+    codeowner-path: .github/CODEOWNERS

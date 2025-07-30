@@ -1,0 +1,15 @@
+version: 2
+
+models:
+
+  - name: int_campaign_members_with_campaigns
+    columns:
+      - name: "sfdc_campaign_member_id"
+        tests:
+          - unique
+          - not_null
+    tests:
+      - dbt_expectations.expect_table_row_count_to_be_between:
+          #somewhat arbitrary test to try and ensure that we don't see major dives in campaign members returned
+          min_value: 415000
+          row_condition: "is_current_version and not is_deleted"

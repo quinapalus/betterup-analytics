@@ -1,0 +1,23 @@
+version: 2
+
+models:
+  - name: content_eligible_resources
+    description: >
+      Learning content eligible for recommendation: public, not retired, not internal
+      or track-specific
+
+    columns:
+      - name: completed_count
+        description: Number of times the content has been completed
+      - name: resource_id
+        description: learning resource id
+        tests:
+          - not_null
+          - unique
+      - name: popularity_rank
+        description: rank of content in terms of popularity
+        tests:
+          - not_null
+          - unique
+      - name: language
+        description: content language

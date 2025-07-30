@@ -1,0 +1,32 @@
+version: 2
+
+models:
+  - name: dbt_member_reporting_group_assignment__completed_activity_metrics
+    description: ""
+    columns:
+      - name: member_reporting_group_assignment_key
+        description: "Primary key"
+        tests:
+          - unique
+          - not_null
+      
+      - name: member_id
+        description: ""
+        tests:
+          - not_null
+
+      - name: reporting_group_id
+        description: ""
+        tests:
+          - not_null
+
+      - name: associated_assignment_id
+        description: ""
+        tests:
+          - not_null
+
+      - name: completed_activity_count
+        description: ""
+
+      - name: completed_resource_count
+        description: ""

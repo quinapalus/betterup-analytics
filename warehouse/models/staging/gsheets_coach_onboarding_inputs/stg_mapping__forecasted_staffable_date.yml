@@ -1,0 +1,49 @@
+version: 2
+
+models:
+  - name: stg_mapping__forecasted_staffable_date
+    description: "Contains the forecast inputs for coach application stage buckets. This is maintained by the coach operations team.
+                       https://docs.google.com/spreadsheets/d/1EbyRq2H5gBcO6desBMw_miHhI78GWqEHMdVIii4SPCM/edit"
+    tests:
+    #purpose of all of the tests for this model is to raise an error if the source spreadsheet is not filled out correctly by coach ops.
+    #to-do insert link to documentation on source spreadsheet
+      - dbt_utils.expression_is_true:
+          expression: "expected_days_in_bucket > 0"
+      - dbt_utils.expression_is_true:
+          expression: "forecast_start_date < forecast_end_date"
+    columns:
+      - name: primary_key
+        description: "Surrogate key from bucket name, funnel ID and forecast start date"
+        tests:
+          - unique
+          - not_null
+
+      - name: bucket_name
+        description: ""
+        tests:
+          - not_null
+          - accepted_values:
+              values: ["application", "administration", "readiness", "finalize", "approved", "rejected", "on_hold", "inactive"]
+
+      - name: funnel_name
+        description: ""
+
+      - name: funnel_id
+        description: ""
+        tests:
+          - not_null
+
+      - name: expected_days_in_bucket
+        description: ""
+        tests:
+          - not_null
+
+      - name: forecast_start_date
+        description: "This is the start of when the forecast in the current row is valid"
+        tests:
+          - not_null
+
+      - name: forecast_end_date
+        description: "This is the end of when the forecast in the current row is valid"
+        tests:
+          - not_null

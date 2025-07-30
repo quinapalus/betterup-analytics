@@ -1,0 +1,172 @@
+version: 2
+models:
+  - name: fact_coach_network_daily_snapshot
+    description: >
+      Fact table containing daily snapshot of the coach network, including Live and Pipeline coaches. Grain is one row per coach per day.
+
+    columns:
+      - name: _unique
+        tests:
+          - unique
+          - not_null
+      - name: date_key
+        description: Foreign key to conformed Date dimension.
+        tests:
+          - relationships:
+              to: ref('dim_date')
+              field: date_key
+
+      - name: coach_key
+        description: Foreign key to conformed Coach dimension.
+        tests:
+          - not_null
+
+      - name: coach_state
+        description: Indication of whether the coach was Live or in Pipeline on the given date.
+        tests:
+          - not_null
+          - accepted_values:
+              values: [Live, Pipeline]
+
+      - name: is_in_network
+        description: >
+          Boolean indicating whether the coach is considered "In Network" on the associated date.
+        tests:
+          - not_null
+          - accepted_values:
+              values: [true]
+
+      - name: pipeline_stage
+        description: >
+          High level operational category for Pipeline coaches. S1 - Review, S2 - Contract,
+          S3 - Train, S4 - Finalize. `pipeline_stage` is set to `hired` when coach goes Live.
+        tests:
+          - not_null
+          - accepted_values:
+              values: [s1-review, s2-contract, s3-train, s4-finalize, hired]
+
+      - name: days_since_application
+        description: >
+          Integer that indicates the number of days between the coach's application date and earliest of the date the coach was hired or the date associated with the given row. Not populated for some legacy coaches.
+
+      - name: days_since_hire
+        description: >
+          Integer that indicates the number of days between the coach's hire date and the
+          date associated with the given row. NULL if coach hasn't been hired yet.
+
+      - name: priority_language
+        description: >
+          ISO 639-1 Alpha-2 code for highest ranked language the coach can coach in, selected
+          from the list of priority languages in `data/bu_priority_staffing_languages.csv`.
+          Value will be `Other` if coach has non-English, non-priority language, `en` only
+          if English is their only coaching language, and `Unknown` if coaching languages
+          haven't been provided by applicant yet.
+        tests:
+          - not_null
+
+      - name: coach_staffing_tier
+        description: Whether coach is Associate or Fellow.
+        tests:
+          - not_null
+
+      - name: staffable_state
+        description: '{{ doc("int_coach__coach_profiles__staffable_states") }}'
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['staffable', 'onboarding', 'hold_involuntary', 'hold_voluntary', 'offboarded_involuntary', 'offboarded_voluntary', 'N/A']
+
+      - name: coach_is_staffable_segment_employee_ic
+        description: Boolean flag, true if coach is staffable for Employee IC deployments.
+        tests:
+          - not_null
+          - accepted_values:
+              values: [true, false]
+
+      - name: coach_is_staffable_segment_employee_manager
+        description: Boolean flag, true if coach is staffable for Employee Manager deployments.
+        tests:
+          - not_null
+          - accepted_values:
+              values: [true, false]
+
+      - name: coach_is_staffable_segment_friends_family
+        description: Boolean flag, true if coach is staffable for Friends & Family deployments.
+        tests:
+          - not_null
+          - accepted_values:
+              values: [true, false]
+
+      - name: coach_is_staffable_segment_trial_cognitive
+        description: Boolean flag, true if coach is staffable for Cognitive Agility Trials.
+        tests:
+          - not_null
+          - accepted_values:
+              values: [true, false]
+
+      - name: coach_is_staffable_segment_trial_test
+        description: Boolean flag, true if coach is staffable for Test Drive Trials.
+        tests:
+          - not_null
+          - accepted_values:
+              values: [true, false]
+
+      - name: seats_theoretical_count
+        description: >
+          Maximum theoretical member capacity used for modeling purposes. Currently assumed
+          to be 30.
+        tests:
+          - not_null
+          - accepted_values:
+              values: [30]
+
+      - name: seats_desired_count
+        description: >
+          Maximum member capacity as indicated by the coach through the platform. NULL if not
+          yet a Live coach.
+
+      - name: seats_occupied_count
+        description: >
+          Number of seats occupied for the given coach on the associated day. NULL if not yet
+          a Live coach.
+
+      - name: seats_available_count
+        description: >
+          Number of seats available for the given coach on the associated day. NULL if not yet
+          a Live coach.
+
+      - name: arr_per_seat
+        description: >
+          Assumed Annual Recurring Revenue per seat for modeling purposes. Currently assumed
+          to be $3600.
+        tests:
+          - not_null
+          - accepted_values:
+              values: [3600]
+
+      - name: coach_arr_theoretical
+        description: >
+          Maximum theoretical Annual Recurring Revenue capacity per coach used for modeling purposes. Currently assumed to be 30 members * $3600/member.
+        tests:
+          - not_null
+          - accepted_values:
+              values: [108000]
+
+      - name: coach_arr_desired
+        description: >
+          Annual Recurring Revenue capacity based on a coach's desired maximum member count,
+          ie. `seats_desired_count` * `arr_per_seat`. NULL if not yet a Live coach.
+
+      - name: coach_arr_actual
+        description: >
+          Annual Recurring Revenue capacity based on a coach's actual member count,
+          ie. `seats_occupied_count` * `arr_per_seat`. NULL if not yet a Live coach.
+
+      - name: coach_arr_available
+        description: >
+          Annual Recurring Revenue capacity based on a coach's available seat count,
+          ie. `seats_available_count` * `arr_per_seat`. NULL if not yet a Live coach.
+
+      - name: fiscal_quarter_arr_goal
+        description: >
+          Annual Recurring Revenue goal for the fiscal quarter associated with the given date.

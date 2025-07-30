@@ -1,0 +1,251 @@
+# See: https://docs.getdbt.com/reference/node-selection/yaml-selectors for full YAML-Selector Documentation
+
+## To Add A New Selector Group, add a new '-name: ' element to the main 'selectors' paramater.
+## !!! Indentation is important, and improperly tabbed lines will not compile.
+
+## Naming Convention -
+## JOBS: job__<target>__purpose. (EG: job__us__main)
+## REPORTS/DASHBOARDS: rep__<target>__purpose. (EG :rep__global__qbr_required)
+
+## Reference, ensure to double check current targets in Confluence - DBT Environments/Targets
+## TARGETS: 'US' 'EU' 'USFED' 'GLOBAL'
+
+selectors:
+  - name: job__eu_tests
+    description: > 
+      Job Definition: Selects tests that are to be run for EU prod runs.
+    definition:
+      union:
+        - method: tag
+          value: eu
+          indirect_selection: cautious
+        - exclude:
+            - union:
+              #Exclude the expect_column_distinct_values_to_contain_set and at_least_one tests. 
+              #There is not enough data in EU yet for these tests to be meaningful.
+              - test_name:expect_column_distinct_values_to_contain_set
+              - test_name:at_least_one              
+
+  - name: job__eu_snapshots
+    description: > 
+      Job Definition: Selects snapshots that are to be run for EU.
+    definition:
+      union:
+        - method: path
+          value: snapshots
+        - exclude:
+          - union:
+            - snapshot_metrics
+            - snapshot_jira_issues
+            - snapshot_fountain_applicants
+            - snapshot_fountain_funnels
+
+  - name: job__eu_get_incremental
+    description: > 
+      Job Definition: Selects tests that are to be run for EU prod runs.
+    definition:
+      union:
+        - intersection:
+          - method: tag
+            value: eu
+            parents: true
+          - method: config.materialized
+            value: incremental
+
+  - name: job__gov__models
+    description: "Job Definition: Models that need to run on Gov Snowflake instance."
+    definition:
+      union:
+        - method: fqn
+          value: dim_organizations
+          parents: true
+          indirect_selection: cautious
+        - method: fqn
+          value: coach_comp__impact_metrics
+          parents: true
+          indirect_selection: cautious
+        - method: fqn
+          value: dim_accounts_daily_snapshot
+          parents: true
+          indirect_selection: cautious
+        - method: fqn
+          value: dim_members
+          parents: true
+          indirect_selection: cautious
+        - method: fqn
+          value: dim_members
+          parents: true
+          indirect_selection: cautious
+        - method: fqn
+          value: member_platform_calendar
+          parents: true
+          indirect_selection: cautious
+        - method: fqn
+          value: member_engagement_events
+          parents: true
+          indirect_selection: cautious
+        - method: fqn
+          value: dei_member_assessments
+          parents: true
+          indirect_selection: cautious
+        - method: fqn
+          value: dim_member_attributes
+          parents: true
+          indirect_selection: cautious
+        - method: fqn
+          value: non_session_event_time
+          parents: true
+          indirect_selection: cautious
+        - method: fqn
+          value: dim_tracks
+          parents: true
+          indirect_selection: cautious
+        - method: fqn
+          value: sessions
+          parents: true
+          indirect_selection: cautious
+        - method: fqn
+          value: session_time
+          parents: true
+          indirect_selection: cautious
+        - method: fqn
+          value: dim_group_coaching_denormalized
+          parents: true
+          indirect_selection: cautious
+        - method: fqn
+          value: dei_activities
+          parents: true
+          indirect_selection: cautious
+        - method: fqn
+          value: fact_assessment_item_responses
+          parents: true
+          indirect_selection: cautious
+        - method: fqn
+          value: dim_track_assignments
+          parents: true
+          indirect_selection: cautious
+        - method: fqn
+          value: dim_reporting_group_assignments
+          parents: true
+          indirect_selection: cautious
+        - method: fqn
+          value: dim_development_topics
+          parents: true
+          indirect_selection: cautious
+        - method: fqn
+          value: fact_whole_person_subdimension_benchmark_score
+          parents: true
+          indirect_selection: cautious
+        - method: fqn
+          value: dim_whole_person_subdimension
+          parents: true
+          indirect_selection: cautious
+        - method: fqn
+          value: fact_whole_person_assessment
+          parents: true
+          indirect_selection: cautious
+        - method: fqn
+          value: fact_whole_person_subdimension_score
+          parents: true
+          indirect_selection: cautious
+        - method: fqn
+          value: dim_contributor_group_subdimension_scores
+          parents: true
+          indirect_selection: cautious
+        - method: fqn
+          value: fact_reporting_group_construct_scores
+          parents: true
+          indirect_selection: cautious
+        - method: fqn
+          value: fact_construct_benchmark_scores
+          parents: true
+          indirect_selection: cautious
+        - method: fqn
+          value: fact_construct_benchmark_scores_reference_population
+          parents: true
+          indirect_selection: cautious
+        - method: fqn
+          value: fact_reference_population_construct_scores
+          parents: true
+          indirect_selection: cautious
+        - method: fqn
+          value: int_app__topic_themes
+          parents: true
+          indirect_selection: cautious
+        - method: fqn
+          value: int_app__competency_constructs
+          parents: true
+          indirect_selection: cautious
+        - method: fqn
+          value: dim_resources
+          parents: true
+          indirect_selection: cautious
+        - method: fqn
+          value: dei_reflection_points
+          parents: true
+          indirect_selection: cautious
+        - method: fqn
+          value: dei_member_engagement_by_track
+          parents: true
+          indirect_selection: cautious
+        - method: fqn
+          value: smi_member_info
+          parents: true
+          indirect_selection: cautious
+        - method: fqn
+          value: dei_coaches
+          parents: true
+          indirect_selection: cautious
+        - method: fqn
+          value: dim_multi_contributor_subdimensions
+          parents: true
+          indirect_selection: cautious
+        - method: fqn
+          value: dim_coach_feedback
+          parents: true
+          indirect_selection: cautious
+        - method: fqn
+          value: dim_goals
+          parents: true
+          indirect_selection: cautious
+        - method: fqn
+          value: star_coach_network_daily_snapshot
+          parents: true
+          indirect_selection: cautious
+        - method: fqn
+          value: stg_app__timeslots
+          parents: true
+          indirect_selection: cautious
+        - method: fqn
+          value: snapshot_sfdc_accounts
+          parents: true
+          indirect_selection: cautious
+        - method: fqn
+          value: snapshot_sfdc_contacts
+          parents: true
+          indirect_selection: cautious
+        - method: fqn
+          value: snapshot_sfdc_opportunities
+          parents: true
+          indirect_selection: cautious
+        - method: fqn
+          value: snapshot_sfdc_users
+          parents: true
+          indirect_selection: cautious
+        - method: fqn
+          value: snapshot_sfdc_products
+          parents: true
+          indirect_selection: cautious
+        - method: fqn
+          value: snapshot_account_health_overall_score
+          parents: true
+          indirect_selection: cautious
+        - exclude:
+          - union:
+            #Exclude the expect_column_distinct_values_to_contain_set and at_least_one tests. 
+            #There is not enough data in Gov yet for these tests to be meaningful.
+            - test_name:expect_column_distinct_values_to_contain_set
+            - test_name:at_least_one  
+            - test_name:relationships
+            - test_name:accepted_values
+            

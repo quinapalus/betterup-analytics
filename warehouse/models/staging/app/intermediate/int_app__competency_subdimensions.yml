@@ -1,0 +1,56 @@
+version: 2
+
+models:
+  - name: int_app__competency_subdimensions
+    description: This model provides information from competency mappings and item
+      mappings, allowing for the organization of data to determine competency subdimensions.
+      This model includes the competency framework, name, description, key, and wpm
+      subdimensions. Its fields are used to construct a competency subdimension ID,
+      which allows for the organization of each individual competency. [GenAI Description]
+    columns:
+      - name: competency_subdimension_id
+        description: Primary key
+        tests:
+          - not_null
+          - unique
+
+      - name: competency_mapping_id
+        description: The competency_mapping_id is a foreign key which links the model
+          to a competency mapping record containing a unique ID, name, description
+          and creation timestamp. [GenAI Description]
+
+      - name: competency_framework
+        description: The column 'competency_framework' displays the name of a competency
+          framework, associated with competency mappings and items. [GenAI Description]
+
+      - name: competency_framework_created_at
+        description: The column 'competency_framework_created_at' identifies the date
+          and time at which the competency framework was created. [GenAI Description]
+
+      - name: organization_id
+        description: A numerical identifier for the organization associated with the
+          competency framework. [GenAI Description]
+
+      - name: competency_id
+        description: The 'competency_id' column contains a unique internal identifier
+          for each competency in the Competency Framework. [GenAI Description]
+
+      - name: competency_name
+        description: The "competency_name" column contains the external name of the
+          competency as provided by the external source. [GenAI Description]
+
+      - name: competency_description
+        description: The 'competency_description' column contains a text description
+          of each competency of the competency framework. [GenAI Description]
+
+      - name: competency_key
+        description: The column 'competency_key' holds the external identifier of
+          a competency as defined by an external competency framework. [GenAI Description]
+
+      - name: wpm_subdimensions
+        description: "'wpm_subdimensions' contains key-value pairs of each of the\
+          \ subdimensions of a competency. [GenAI Description]"
+
+      - name: competency_subdimension_key
+        description: The 'competency_subdimension_key' column contains the unique
+          reference for a specific subdimension of a competency. [GenAI Description]

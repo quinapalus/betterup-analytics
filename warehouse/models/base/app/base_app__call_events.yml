@@ -1,0 +1,47 @@
+version: 2
+
+models:
+  - name: base_app__call_events
+    description: The base_app__call_events model contains fields such as UUID, call_id,
+      contact_method, created_at, data, event_name, updated_at, and user_id to track
+      and store information related to calls. This model is composed of data from
+      the raw.p2pc.call_events model filtered to only include records with a "production"
+      source. [GenAI Description]
+    columns:
+      - name: uuid
+        description: The 'uuid' column contains a unique identifier for each call
+          event record. [GenAI Description]
+        tests:
+          - unique
+          - not_null
+
+      - name: call_id
+        description: "'call_id' is a unique identifier for each call event. [GenAI Description]"
+
+      - name: contact_method
+        description: The 'contact_method' column shows the type of communication used
+          for the corresponding call event. [GenAI Description]
+
+      - name: created_at
+        description: The 'created_at' column stores the date and time of when the
+          call event was created. [GenAI Description]
+
+      - name: data
+        description: The 'data' column contains data relating to call events from
+          the production source. [GenAI Description]
+
+      - name: event_name
+        description: The 'event_name' column contains the type of event that occurred
+          during a phone call. [GenAI Description]
+
+      - name: updated_at
+        description: "'updated_at' contains the time at which the call event was last\
+          \ updated. [GenAI Description]"
+
+      - name: user_id
+        description: "'user_id' is a column which identifies the user associated with\
+          \ each call event. [GenAI Description]"
+
+      - name: source
+        description: The 'source' column stores the origin of the call events data.
+          [GenAI Description]

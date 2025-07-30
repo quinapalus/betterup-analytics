@@ -1,0 +1,67 @@
+version: 2
+models:
+  - name: dei_member_assessments
+    description: >
+      This table contains basic information on assessments associated with members
+      on external deployments. Exclusively non-member assessments have been
+      filtered out in addition to any assesssments associated with unwanted tracks during
+      overlapping track assignments.
+
+    columns:
+      - name: assessment_id
+        description: Primary key + foreign key to associated assessment.
+        tests:
+          - not_null
+          - unique
+
+      - name: member_id
+        description: Denormalized foreign key to associated user.
+        tests:
+          - not_null
+
+      - name: creator_id
+        description: >
+          Denormalized foreign key to associated user who initiated the
+          assessment. Can be a NULL field for particular assessments.
+
+      - name: track_id
+        description: >
+          Foreign key to associated track. The logic infers the relationship
+          between the assessment and the track by looking at the submitted_at
+          timestamp and associating it with the track for which submitted_at
+          falls between the member's start and end dates for that track assignment.
+        tests:
+          - not_null
+
+      - name: type
+        description: >
+          String denoting the type of assessment.
+        tests:
+           - not_null
+
+      - name: questions_version
+        description: >
+          Version of the Assessment questions. For Whole Person Model assessments,
+          `questions_version` indicates whether assessment is on WPM 1.0 or 2.0.
+
+      - name: created_at
+        description: >
+          Timestamp denoting when the assessment was started. Note that
+          auto-save feature was not implemented immediately, so this field
+          has been backpopulated based on the timestamp of submitted_at until
+          April 2018.
+        tests:
+           - not_null
+
+      - name: submitted_at
+        description: >
+          Timestamp denoting when the assessment was submitted.
+        tests:
+           - not_null
+
+      - name: report_generated_at
+        description: >
+          For member-facing Whole Person Assessments, timestamp denoting when the full
+          assessment report was generated. Will be NULL for any 180 or 360 assessments
+          pending completion. For onboarding and reflection point reports, report_generated_at
+          is an alias of submitted_at.

@@ -1,0 +1,141 @@
+reference_population_id,reference_population_key,benchmark_type,level,key,mean
+2,global_2022,level,Manager,alignment,4.01
+2,global_2022,level,Individual Contributor,alignment,3.787
+2,global_2022,level,Manager,authenticity,3.77
+2,global_2022,level,Individual Contributor,authenticity,3.597
+2,global_2022,level,Manager,belonging_index,3.838
+2,global_2022,level,Individual Contributor,belonging_index,3.64
+2,global_2022,level,Manager,burnout,3.088
+2,global_2022,level,Individual Contributor,burnout,2.923
+2,global_2022,level,Manager,care_adaptive_coping,3.23
+2,global_2022,level,Individual Contributor,care_adaptive_coping,3.121
+2,global_2022,level,Manager,care_awareness_agency,3.675
+2,global_2022,level,Individual Contributor,care_awareness_agency,3.568
+2,global_2022,level,Manager,care_fulfillment,4.062
+2,global_2022,level,Individual Contributor,care_fulfillment,3.86
+2,global_2022,level,Manager,care_outlook,3.882
+2,global_2022,level,Individual Contributor,care_outlook,3.686
+2,global_2022,level,Manager,care_self_care,2.841
+2,global_2022,level,Individual Contributor,care_self_care,2.738
+2,global_2022,level,Manager,care_well_being,3.546
+2,global_2022,level,Individual Contributor,care_well_being,3.403
+2,global_2022,level,Manager,coaching,3.727
+2,global_2022,level,Individual Contributor,coaching,3.329
+2,global_2022,level,Manager,coaching_culture,3.718
+2,global_2022,level,Individual Contributor,coaching_culture,3.573
+2,global_2022,level,Manager,coaching_culture_coworkers,3.874
+2,global_2022,level,Individual Contributor,coaching_culture_coworkers,3.72
+2,global_2022,level,Manager,coaching_culture_org_practices,3.758
+2,global_2022,level,Individual Contributor,coaching_culture_org_practices,3.565
+2,global_2022,level,Manager,coaching_culture_psy_safety,3.515
+2,global_2022,level,Individual Contributor,coaching_culture_psy_safety,3.376
+2,global_2022,level,Manager,cognitive_agility,3.896
+2,global_2022,level,Individual Contributor,cognitive_agility,3.746
+2,global_2022,level,Manager,emotional_regulation,3.62
+2,global_2022,level,Individual Contributor,emotional_regulation,3.381
+2,global_2022,level,Manager,empathy,4.229
+2,global_2022,level,Individual Contributor,empathy,4.207
+2,global_2022,level,Manager,empowerment,3.967
+2,global_2022,level,Individual Contributor,empowerment,3.723
+2,global_2022,level,Manager,encouraging_participation,4.26
+2,global_2022,level,Individual Contributor,encouraging_participation,3.88
+2,global_2022,level,Manager,engagement,3.915
+2,global_2022,level,Individual Contributor,engagement,3.674
+2,global_2022,level,Manager,ex_authenticity,3.77
+2,global_2022,level,Individual Contributor,ex_authenticity,3.597
+2,global_2022,level,Manager,ex_belonging,3.954
+2,global_2022,level,Individual Contributor,ex_belonging,3.689
+2,global_2022,level,Manager,ex_engagement,3.915
+2,global_2022,level,Individual Contributor,ex_engagement,3.674
+2,global_2022,level,Manager,ex_index,3.926
+2,global_2022,level,Individual Contributor,ex_index,3.727
+2,global_2022,level,Manager,ex_optimism,3.82
+2,global_2022,level,Individual Contributor,ex_optimism,3.643
+2,global_2022,level,Manager,ex_purpose_and_meaning,4.1
+2,global_2022,level,Individual Contributor,ex_purpose_and_meaning,3.852
+2,global_2022,level,Manager,ex_social_connection,4.011
+2,global_2022,level,Individual Contributor,ex_social_connection,3.914
+2,global_2022,level,Manager,feedback,3.874
+2,global_2022,level,Individual Contributor,feedback,3.72
+2,global_2022,level,Manager,focus,3.607
+2,global_2022,level,Individual Contributor,focus,3.485
+2,global_2022,level,Manager,goal_attainment,3.959
+2,global_2022,level,Individual Contributor,goal_attainment,3.824
+2,global_2022,level,Manager,growth_mindset,3.92
+2,global_2022,level,Individual Contributor,growth_mindset,3.814
+2,global_2022,level,Manager,hope,3.814
+2,global_2022,level,Individual Contributor,hope,3.589
+2,global_2022,level,Manager,inclusive_leadership,4.121
+2,global_2022,level,Individual Contributor,inclusive_leadership,3.904
+2,global_2022,level,Manager,intent_to_stay,4.122
+2,global_2022,level,Individual Contributor,intent_to_stay,3.93
+2,global_2022,level,Manager,job_satisfaction,3.964
+2,global_2022,level,Individual Contributor,job_satisfaction,3.718
+2,global_2022,level,Manager,life_satisfaction,3.959
+2,global_2022,level,Individual Contributor,life_satisfaction,3.771
+2,global_2022,level,Manager,locus_of_control_internal,3.877
+2,global_2022,level,Individual Contributor,locus_of_control_internal,3.735
+2,global_2022,level,Manager,manager_job_performance,3.606
+2,global_2022,level,Individual Contributor,manager_job_performance,3.58
+2,global_2022,level,Manager,nutrition,3.702
+2,global_2022,level,Individual Contributor,nutrition,3.622
+2,global_2022,level,Manager,optimism,3.82
+2,global_2022,level,Individual Contributor,optimism,3.643
+2,global_2022,level,Manager,perceived_organizational_support,3.859
+2,global_2022,level,Individual Contributor,perceived_organizational_support,3.741
+2,global_2022,level,Manager,physical_activity,3.483
+2,global_2022,level,Individual Contributor,physical_activity,3.336
+2,global_2022,level,Manager,problem_solving,3.919
+2,global_2022,level,Individual Contributor,problem_solving,3.726
+2,global_2022,level,Manager,productivity,7.81
+2,global_2022,level,Individual Contributor,productivity,7.346
+2,global_2022,level,Manager,psycap,3.816
+2,global_2022,level,Individual Contributor,psycap,3.611
+2,global_2022,level,Manager,psychological_safety,3.515
+2,global_2022,level,Individual Contributor,psychological_safety,3.376
+2,global_2022,level,Manager,purpose_and_meaning,4.1
+2,global_2022,level,Individual Contributor,purpose_and_meaning,3.852
+2,global_2022,level,Manager,recognition,3.995
+2,global_2022,level,Individual Contributor,recognition,3.813
+2,global_2022,level,Manager,relationship_building,4.173
+2,global_2022,level,Individual Contributor,relationship_building,3.876
+2,global_2022,level,Manager,resilience,3.703
+2,global_2022,level,Individual Contributor,resilience,3.48
+2,global_2022,level,Manager,rest,3.398
+2,global_2022,level,Individual Contributor,rest,3.317
+2,global_2022,level,Manager,rix,3.973
+2,global_2022,level,Individual Contributor,rix,3.778
+2,global_2022,level,Manager,sales_excellence,3.867
+2,global_2022,level,Individual Contributor,sales_excellence,3.666
+2,global_2022,level,Manager,self_awareness,3.643
+2,global_2022,level,Individual Contributor,self_awareness,3.517
+2,global_2022,level,Manager,self_compassion,2.595
+2,global_2022,level,Individual Contributor,self_compassion,2.502
+2,global_2022,level,Manager,self_efficacy,4.045
+2,global_2022,level,Individual Contributor,self_efficacy,3.913
+2,global_2022,level,Manager,sense_of_belonging,3.954
+2,global_2022,level,Individual Contributor,sense_of_belonging,3.689
+2,global_2022,level,Manager,social_connection,4.011
+2,global_2022,level,Individual Contributor,social_connection,3.914
+2,global_2022,level,Manager,strategic_planning,3.84
+2,global_2022,level,Individual Contributor,strategic_planning,3.687
+2,global_2022,level,Manager,stress_management,2.818
+2,global_2022,level,Individual Contributor,stress_management,2.778
+2,global_2022,level,Manager,team_agility,3.934
+2,global_2022,level,Individual Contributor,team_agility,3.866
+2,global_2022,level,Manager,team_cohesion,3.98
+2,global_2022,level,Individual Contributor,team_cohesion,3.937
+2,global_2022,level,Manager,team_conflict,2.02
+2,global_2022,level,Individual Contributor,team_conflict,2.063
+2,global_2022,level,Manager,team_feedback,3.811
+2,global_2022,level,Individual Contributor,team_feedback,3.767
+2,global_2022,level,Manager,team_innovation,3.652
+2,global_2022,level,Individual Contributor,team_innovation,3.617
+2,global_2022,level,Manager,team_performance,3.867
+2,global_2022,level,Individual Contributor,team_performance,3.783
+2,global_2022,level,Manager,team_risk_taking,3.61
+2,global_2022,level,Individual Contributor,team_risk_taking,3.531
+2,global_2022,level,Manager,well_being,3.632
+2,global_2022,level,Individual Contributor,well_being,3.509
+2,global_2022,level,Manager,work_life_balance,2.977
+2,global_2022,level,Individual Contributor,work_life_balance,3.23

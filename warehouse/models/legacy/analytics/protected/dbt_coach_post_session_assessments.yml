@@ -1,0 +1,60 @@
+version: 2
+models:
+  - name: dbt_coach_post_session_assessments
+    description: >
+      This protected model contains information on completed coach post-session
+      assessments. The data in this table is sanitized so that only one completed
+      assessment is associated with the appointment primary key.
+
+    columns:
+      - name: session_id
+        description: Primary Key.
+        tests:
+          - unique
+          - not_null
+          - relationships:
+              to: ref('stg_app__sessions')
+              field: session_id
+
+      - name: assessment_id
+        description: Foreign key to the assessment associated with the appointment.
+        tests:
+          - not_null
+          - relationships:
+              to: ref('int_app__assessments')
+              field: assessment_id
+
+      - name: member_id
+        description: >
+          Denormalized foreign key to the member associated with the assessment.
+        tests:
+          - not_null
+          - relationships:
+              to: ref('int_app__users')
+              field: user_id
+
+      - name: coach_id
+        description: >
+          Denormalized foreign key to the coach associated with the assessment.
+        tests:
+          - relationships:
+              to: ref('int_app__users')
+              field: user_id
+
+      - name: responses
+        description: >
+          Hstore-like array of responses provided by the coach during the assessment.
+        tests:
+          - not_null
+
+      - name: created_at
+        description: >
+          Timestamp denoting when the assessment was created.
+        tests:
+          - not_null
+
+      - name: submitted_at
+        description: >
+          Timestamp denoting when the assessment was submitted.
+        tests:
+          - not_null

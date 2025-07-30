@@ -1,0 +1,45 @@
+version: 2
+models:
+  - name: dbt_coach_specialist_vertical
+    description: >
+      This protected model associates a coach with each of their extended network
+      verticals.
+      Note that only coaches who are associated with at least one extended network
+      vertical
+      are included in this dataset.
+
+    columns:
+      - name: coach_id
+        description: Primary Key.
+        tests:
+          - not_null
+
+      - name: specialist_vertical_uuid
+        description: >
+          Denormalized foreign key to the associated extended network vertical.
+        tests:
+          - not_null
+
+      - name: specialist_vertical_id
+        description: >
+          Denormalized foreign key to the associated extended network vertical.
+        tests:
+          - not_null
+
+      - name: specialist_vertical
+        description: >
+          Name of the extended network vertical as specified in the application.
+        tests:
+          - not_null
+
+      - name: created_at
+        description: >
+          UTC timestamp denoting when the record was created.
+        tests:
+          - not_null
+
+      - name: updated_at
+        description: >
+          UTC timestamp denoting when the record was updated.
+        tests:
+          - not_null

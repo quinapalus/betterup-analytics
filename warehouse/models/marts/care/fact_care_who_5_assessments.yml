@@ -1,0 +1,29 @@
+version: 2
+
+models:
+  - name: fact_care_who_5_assessments
+    description: Scores model for care who-5 assessments.
+
+    columns:
+      - name: score_id
+        tests:
+          - unique
+          - not_null
+      - name: assessment_id
+      - name: member_id
+      - name: scores_key
+      - name: scores_type
+      - name: raw_score
+      - name: scale_score
+      - name: is_assessment_baseline
+      - name: post_baseline_assessment
+      - name: associated_with_session
+      - name: sequence_from_baseline
+      - name: assessment_cnt_from_baseline
+      - name: sequence_overall
+      - name: assessment_cnt_overall
+      - name: score_recorded_at
+      - name: assessment_date
+      - name: month_of_access
+
+

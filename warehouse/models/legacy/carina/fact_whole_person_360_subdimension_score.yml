@@ -1,0 +1,177 @@
+version: 2
+models:
+  - name: fact_whole_person_360_subdimension_score
+    description: >
+      Fact table for contributor-based Whole Person Model Subdimension Scores, that is, 180
+      and 360 assessments. Assessments in this table are limited to external deployments and
+      assessments that have been completed (i.e. not currently in progress). This fact table
+      is currently implemented as expanded version of `fact_whole_person_assessment` with a
+      grain of one row per completed assessment per subdimension.
+
+    columns:
+      - name: _unique
+        description: generated surrogate primary key
+        tests:
+          - unique
+          - not_null
+      
+      - name: member_key
+        description: Foreign key to conformed Member dimension.
+        tests:
+          - not_null
+
+      - name: date_key
+        description: >
+         Foreign key to conformed Date dimension for the date the associated
+         assessment was completed, i.e. when the member-facing report was generated.
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_date')
+              field: date_key
+
+      - name: account_key
+        description: >
+          Foreign key to conformed Account dimension for the account the member was
+          associated with on the day the current assessment was completed.
+        tests:
+          - not_null
+
+      - name: deployment_key
+        description: >
+          Foreign key to conformed Deployment dimension for the deployment associated
+          with the assessment.
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_deployment')
+              field: deployment_key
+
+      - name: member_deployment_key
+        description: Foreign key to conformed Member-Deployment dimension.
+        tests:
+          - not_null
+
+      - name: whole_person_subdimension_key
+        description: >
+          Foreign Key to `dim_whole_person_subdimension`.
+        tests:
+           - not_null
+
+      - name: assessment_name
+        description: >
+          String denoting the type of current WPM assessment.
+        tests:
+          - not_null
+          - accepted_values:
+              values: [WPM 1.0 180, WPM 1.0 360, WPM 2.0 180, WPM 2.0 360]
+
+      - name: self_report_scale_score
+        description: >
+          The denormalized scale score from the member's self-reported assessment for the
+          given subdimension. This field should be used for comparison to
+          `contributor_group_scale_score_mean` on a row-by-row basis and not aggregated directly.
+        tests:
+          - not_null
+
+      - name: manager_count
+        description: >
+          The number of manager contributions for the given assessment.
+        tests:
+          - not_null
+
+      - name: manager_scale_score_mean
+        description: >
+          The mean scale score for manager contributions for the given subdimension.
+        tests:
+          - not_null
+
+      - name: self_report_estimation_relative_to_manager
+        description: >
+          Convenience field calculated by subtracting the `manager_scale_score_mean`
+          from the member's self-reported scale score. Positive numbers represent members
+          *over*-estimating relative to manager, negative numbers represent
+          members *under*-estimating their ability.
+        tests:
+          - not_null
+
+      - name: direct_report_count
+        description: >
+          The number of direct report contributions for the given assessment. NULL if no "direct
+          report" contributions for the given assessment.
+
+      - name: direct_report_score_mean
+        description: >
+          The mean scale score for direct report contributions for the given subdimension.
+          NULL if no "direct report" contributions for the given assessment.
+
+
+      - name: self_report_estimation_relative_to_direct_reports
+        description: >
+          Convenience field calculated by subtracting the `direct_report_scale_score_mean`
+          from the member's self-reported scale score. Positive numbers represent members
+          *over*-estimating relative to direct reports, negative numbers represent
+          members *under*-estimating their ability.
+
+      - name: other_coworker_count
+        description: >
+          The number of "other" coworker contributions for the given assessment. NULL if no "other
+          coworker" contributions for the given assessment.
+
+      - name: other_coworker_score_mean
+        description: >
+          The mean scale score for "other coworker" contributions for the given subdimension.
+          NULL if no "other coworker" contributions for the given assessment.
+
+      - name: self_report_estimation_relative_to_other_coworkers
+        description: >
+          Convenience field calculated by subtracting the `other_coworker_scale_score_mean`
+          from the member's self-reported scale score. Positive numbers represent members
+          *over*-estimating relative to "other" coworkers, negative numbers represent
+          members *under*-estimating their ability.
+
+      - name: account_assessment_sequence
+        description: >
+          Integer that represents the sequence of the assessment for the member scoped
+          to `assessment_name` and `account`
+        tests:
+          - not_null
+
+      - name: deployment_assessment_sequence
+        description: >
+          Integer that represents the sequence of the assessment for the member scoped
+          to `assessment_name` and `deployment_key`
+        tests:
+          - not_null
+
+      - name: account_wpm_sequence
+        description: >
+          Integer that represents the sequence of the assessment for the member scoped
+          to `account` and version of Whole Person Model.
+        tests:
+          - not_null
+
+      - name: deployment_wpm_sequence
+        description: >
+          Integer that represents the sequence of the assessment for the member scoped
+          to `deployment_key` and version of Whole Person Model.
+        tests:
+          - not_null
+
+      - name: deployment_assessment_reverse_sequence
+        description: >
+          Integer that represents the reverse sequence of the assessment for the member scoped
+          to `assessment_name` and `deployment_key`. Specifically, the most recent
+          assessment submitted will have a reverse sequence = 1.
+        tests:
+          - not_null
+
+      - name: app_assessment_id
+        description: >
+          Foreign key to the (parent) member-facing assessment that's associated with
+          the subdimension scores.
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dei_member_assessments')
+              field: assessment_id

@@ -1,0 +1,26 @@
+version: 2
+
+models:
+  - name: base_app__user_attribute_records_historical
+    description: ""
+    columns:
+      - name: created_at
+      - name: data
+      - name: id
+        tests:
+          - unique
+          - not_null
+      - name: processed_at
+      - name: updated_at
+      - name: user_attribute_import_id
+      - name: email
+      - name: user_provision_status
+      - name: user_ending_status
+      - name: user_ending_message
+      - name: user_removal_status
+      - name: user_provision_message
+      - name: user_removal_message
+      - name: source_id
+      - name: source_type
+      - name: user_id
+      - name: dry_run

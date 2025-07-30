@@ -1,0 +1,290 @@
+version: 2
+
+models:
+  - name: int_app__assessments
+    description: The int_app__assessments model stores data about user assessments
+      in the application, including assessment responses, assessment sequences, flags
+      for whether an assessment is a reflection point, onboarding, whole person based,
+      or other type, and any applicable whole person model version. It is made up
+      from data from stg_app__assessments and stg_gsheets_assessments__assessments,
+      and removed any destroyed records. [GenAI Description]
+    columns:
+      - name: assessment_id
+        description: "'assessment_id' is a unique identifier for each assessment in\
+          \ the database. [GenAI Description]"
+        tests:
+          - unique
+          - not_null
+
+      - name: user_id
+        description: The 'user_id' column stores the unique identifier of the user
+          associated with each assessment. [GenAI Description]
+
+      - name: creator_id
+        description: "'creator_id' is a foreign key field that stores the ID for the\
+          \ coach who created the assessment. [GenAI Description]"
+
+      - name: track_assignment_id
+        description: "\"track_assignment_id\" is a reference to the unique ID identifying\
+          \ the user's coaching track assignment record. [GenAI Description]"
+
+      - name: associated_record_id
+        description: The 'associated_record_id' column stores the id of the record
+          associated with the assessment. [GenAI Description]
+
+      - name: associated_record_type
+        description: This column stores the type of associated record (if one exists)
+          associated with each assessment record. [GenAI Description]
+
+      - name: assessment_configuration_id
+        description: This column contains the identification number of the assessment
+          configuration for each assessment. [GenAI Description]
+
+      - name: assessment_configuration_uuid
+        description: This column contains a universal unique identifier for the assessment
+          configuration related to each assessment record. [GenAI Description]
+
+      - name: assessment_session_id
+        description: The 'assessment_session_id' column contains a reference to an
+          appointment associated with the assessment. [GenAI Description]
+
+      - name: type
+        description: The 'type' column in this model stores the type of assessment
+          that the user is taking. [GenAI Description]
+
+      - name: responses
+        description: The 'responses' column contains the responses provided by users
+          to questions in the assessment situation. [GenAI Description]
+
+      - name: assessment_name
+        description: The 'assessment_name' column contains the descriptive name of
+          the assessment, such as "Onboarding Assessment" or "Whole Person Baseline".
+          [GenAI Description]
+
+      - name: user_role
+        description: The column 'user_role' contains a short description of the type
+          of user involved in the assessment. [GenAI Description]
+
+      - name: assessment_description
+        description: This column contains the description of a specific assessment,
+          given in the context of a particular user and assessment type. [GenAI Description]
+
+      - name: parent_id
+        description: The 'parent_id' column contains a reference to the parent assessment's
+          ID of a duplicate assessment for the same user. [GenAI Description]
+
+      - name: questions_version
+        description: The questions_version column tracks the version of an assessment
+          a user has completed. [GenAI Description]
+
+      - name: shared_with_coach
+        description: The 'shared_with_coach' column indicates whether the assessment
+          was shared with the assigned coach for the user. [GenAI Description]
+
+      - name: submitted_at
+        description: The submitted_at column stores the date and time when an assessment
+          was submitted. [GenAI Description]
+
+      - name: expires_at
+        description: The 'expires_at' column contains the date/time that the assessment
+          will no longer be accessible. [GenAI Description]
+
+      - name: report_generated_at
+        description: The column 'report_generated_at' holds the timestamp of when
+          a report of an assessment was generated. [GenAI Description]
+
+      - name: created_at
+        description: Created_at column contains the date and time the record was created.
+          [GenAI Description]
+
+      - name: updated_at
+        description: The 'updated_at' column records the date and time at which the
+          record in the assessment table was last updated. [GenAI Description]
+
+      - name: assessment_sequence_by_user
+        description: This column provides an assessment sequence by user, sorted in
+          chronological (or reverse chronological) order, with assessments grouped
+          by type. [GenAI Description]
+
+      - name: assessment_reverse_sequence_by_user
+        description: This column contains a reverse sequence of assessments for each
+          user, based on their submission date. [GenAI Description]
+
+      - name: assessment_sequence_by_user_and_type
+        description: This column provides an ascending sequence of assessment numbers
+          based on the user, and separated by type. [GenAI Description]
+
+      - name: assessment_reverse_sequence_by_user_and_type
+        description: This column is an auto-generated assessment sequence number based
+          on user and type, displayed in descending order (the highest values for
+          user and type being first). [GenAI Description]
+
+      - name: cancellation_reasons
+        description: The 'cancellation_reasons' column stores responses given by users
+          for why they did or did not need a coach. [GenAI Description]
+        tests:
+          #test that at least one row has a non-null value. If this fails that most likely means that our json extraction is not working
+          - dbt_utils.at_least_one
+
+      - name: try_another_coach_option
+        description: This column indicates whether the user indicated that they'd
+          like to try another coach option. [GenAI Description]
+        tests:
+          #test that at least one row has a non-null value. If this fails that most likely means that our json extraction is not working
+          - dbt_utils.at_least_one
+
+      - name: learn_how_to_pause
+        description: This column contains the responses from users regarding whether
+          they have learned how to pause as part of their coaching experience. [GenAI
+          Description]
+        tests:
+          #test that at least one row has a non-null value. If this fails that most likely means that our json extraction is not working
+          - dbt_utils.at_least_one
+
+      - name: session_overall_emotional
+        description: "'session_overall_emotional' indicates the emotional tone of\
+          \ the coaching session from the client's point of view. [GenAI Description]"
+        tests:
+          #test that at least one row has a non-null value. If this fails that most likely means that our json extraction is not working
+          - dbt_utils.at_least_one
+
+      - name: why_dont_need_coach
+        description: The column 'why_dont_need_coach' holds the responses from users
+          who have indicated that they do not need a coach. [GenAI Description]
+        tests:
+          #test that at least one row has a non-null value. If this fails that most likely means that our json extraction is not working
+          - dbt_utils.at_least_one
+
+      - name: offering_a_discount
+        description: This column stores the value of whether or not the user was offered
+          a discount. [GenAI Description]
+        tests:
+          #test that at least one row has a non-null value. If this fails that most likely means that our json extraction is not working
+          - dbt_utils.at_least_one
+
+      - name: package_would_like_to_see
+        description: The 'package_would_like_to_see' column contains a response to
+          a survey question, typically a text field, about which type of package the
+          respondent would like to see in the future. [GenAI Description]
+        tests:
+          #test that at least one row has a non-null value. If this fails that most likely means that our json extraction is not working
+          - dbt_utils.at_least_one
+
+      - name: other_reasons_text_area
+        description: The column 'other_reasons_text_area' contains a string field
+          of the user's response for questions with free-form or open-ended answers.
+          [GenAI Description]
+        tests:
+          #test that at least one row has a non-null value. If this fails that most likely means that our json extraction is not working
+          - dbt_utils.at_least_one
+
+      - name: why_unsatisfactory_experience
+        description: This column contains a plain text explanation given by the user
+          about why they had an unsatisfactory experience. [GenAI Description]
+        tests:
+          #test that at least one row has a non-null value. If this fails that most likely means that our json extraction is not working
+          - dbt_utils.at_least_one
+
+      - name: other_different_packages_text_area
+        description: This column contains a free-form text field allowing users to
+          freely suggest different packages they would like to see offered. [GenAI
+          Description]
+        tests:
+          #test that at least one row has a non-null value. If this fails that most likely means that our json extraction is not working
+          - dbt_utils.at_least_one
+
+      - name: other_reasons_dont_need_coach_text_area
+        description: Column 'other_reasons_dont_need_coach_text_area' is a string
+          response attribute field capturing the other reasons why the user does not
+          need a coach. [GenAI Description]
+        tests:
+          #test that at least one row has a non-null value. If this fails that most likely means that our json extraction is not working
+          - dbt_utils.at_least_one
+
+
+      - name: other_reasons_unsatisfactory_experience_text_area
+        description: The column 'other_reasons_unsatisfactory_experience_text_area'
+          holds response data from user-provided text area fields related to an unsatisfactory
+          experience. [GenAI Description]
+        tests:
+          #test that at least one row has a non-null value. If this fails that most likely means that our json extraction is not working
+          - dbt_utils.at_least_one
+
+      - name: is_primary_reflection_point
+        description: This column indicates whether an assessment is a primary reflection
+          point assessment. [GenAI Description]
+        tests:
+          - dbt_expectations.expect_column_distinct_values_to_contain_set:
+              #test that these values actually exist at least once
+              value_set: ['true', 'false']
+
+      - name: is_onboarding
+        description: This column indicates whether an assessment is part of the onboarding
+          process. [GenAI Description]
+        tests:
+          - dbt_expectations.expect_column_distinct_values_to_contain_set:
+              #test that these values actually exist at least once
+              value_set: ['true', 'false']
+
+      - name: is_duplicate_assessment
+        description: An assessment is considered a duplicate if there has been another
+          assessment of the same type submitted by the same member less than 24 hours
+          earlier. Designed with Whole Person Model assessments in mind for growth
+          analysis use cases.
+        tests:
+          - dbt_expectations.expect_column_distinct_values_to_contain_set:
+              #test that these values actually exist at least once
+              value_set: ['true', 'false']
+
+      - name: is_whole_person_based_assessment
+        description: This column is a boolean indicating whether or not the assessment
+          is based on the Whole Person Model. [GenAI Description]
+        tests:
+          - dbt_expectations.expect_column_distinct_values_to_contain_set:
+              #test that these values actually exist at least once
+              value_set: ['true', 'false']
+
+      - name: is_multi_contributor_assessment
+        description: This column indicates whether the assessment is a multi-contributor
+          assessment (180/360). [GenAI Description]
+        tests:
+          - dbt_expectations.expect_column_distinct_values_to_contain_set:
+              #test that these values actually exist at least once
+              value_set: ['true', 'false']
+
+      - name: is_post_session_assessment
+        description: This column is a Boolean indicating whether or not the assessment
+          is a 'Post Session Member Assessment'. [GenAI Description]
+        tests:
+          - dbt_expectations.expect_column_distinct_values_to_contain_set:
+              #test that these values actually exist at least once
+              value_set: ['true', 'false']
+
+      - name: is_any_reflection_point
+        description: The column 'is_any_reflection_point' indicates whether the assessment
+          is a reflection point. [GenAI Description]
+        tests:
+          - dbt_expectations.expect_column_distinct_values_to_contain_set:
+              #test that these values actually exist at least once
+              value_set: ['true', 'false']
+
+      - name: is_group_coaching_reflection_point
+        description: This column is a boolean indicating whether the assessment is
+          a Group Coaching Reflection Point. [GenAI Description]
+        tests:
+          - dbt_expectations.expect_column_distinct_values_to_contain_set:
+              #test that these values actually exist at least once
+              value_set: ['true', 'false']
+
+      - name: is_one_month_survey
+        description: This column indicates if the assessment is the 'One-Month Survey'.
+          [GenAI Description]
+        tests:
+          - dbt_expectations.expect_column_distinct_values_to_contain_set:
+              #test that these values actually exist at least once
+              value_set: ['true', 'false']
+
+      - name: whole_person_model_version
+        description: The 'whole_person_model_version' column indicates the version
+          of the assessment when it is based off of the Whole Person Model. [GenAI
+          Description]

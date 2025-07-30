@@ -1,0 +1,30 @@
+version: 2
+
+models:
+  - name: stg_genai__conversation
+    description: Conversation table for GenAI
+
+    columns:
+      - name: conversation_id
+        description: Unique identifier of Conversation
+        tests:
+          - unique
+          - not_null
+
+      - name: context
+
+      - name: experiment_id
+
+      - name: initial_message
+
+      - name: internal_session_id
+
+      - name: utm_source
+
+      - name: utm_term
+
+      - name: version_id
+
+      - name: created_at
+
+      - name: updated_at

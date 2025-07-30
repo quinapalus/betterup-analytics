@@ -1,0 +1,45 @@
+version: 2
+
+models:
+  - name: stg_segment_backend__growth_map_created
+    description: The DBT model stg_segment_backend__growth_map_created is used to
+      store data related to user growth map assignments. It contains fields such as
+      user_id, track_assignment_id, product_subscription_assignment_id, event, context_library_name,
+      deployment_type, event_at. The model is created using the raw SQL code given
+      for the source table and transforming the timestamp into a timestamp format
+      for the event_at field. [GenAI Description]
+    columns:
+      - name: id
+        description: The 'id' column is a unique identifier for each record in the
+          growth map created table. [GenAI Description]
+        tests:
+          - unique
+          - not_null
+
+      - name: user_id
+        description: The user_id column contains the unique identifier of the user
+          associated with the data event. [GenAI Description]
+
+      - name: track_assignment_id
+        description: The 'track_assignment_id' column stores the identifiers of the
+          track assignment for the user. [GenAI Description]
+
+      - name: product_subscription_assignment_id
+        description: "'product_subscription_assignment_id' is an ID that identifies\
+          \ the product subscription associated with the event. [GenAI Description]"
+
+      - name: event
+        description: The 'event' column stores the name of the specific event being
+          tracked. [GenAI Description]
+
+      - name: context_library_name
+        description: "'context_library_name' stores the library used to perform a\
+          \ given task. [GenAI Description]"
+
+      - name: deployment_type
+        description: The 'deployment_type' column contains the type of deployment
+          the associated event applied to. [GenAI Description]
+
+      - name: event_at
+        description: The 'event_at' column stores the timestamp of the event in a
+          timestamp format. [GenAI Description]

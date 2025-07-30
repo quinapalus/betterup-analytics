@@ -1,0 +1,41 @@
+version: 2
+models:
+  - name: stg_app__active_storage_attachments
+    description: >
+      ActiveStorage handles file upload in Rails. It is designed with Blob and
+      Attachment models. The active_storage_attachments join model connects polymorphic
+      records with blobs.
+    columns:
+      - name: active_storage_attachment_id
+        description: Unique identifier of the ActiveStorageAttachment
+        tests:
+          - unique
+          - not_null
+
+      - name: name
+        description: >
+          Defined in the model to identify the type of attachments
+          (e.g. In the Track model we have has_many_attached :external_resources.
+          This means that the ActiveStorageAttachment#name is external_resources).
+        tests:
+          - not_null
+
+      - name: record_type
+        description: >
+          Model name in which the attachement is associated with (e.g. Track).
+        tests:
+          - not_null
+
+      - name: record_id
+        description: >
+          Unique identifier of the record associated with the attachemnt
+          (e.g. Take a track with the id of 101. The ActiveStorageAttachment#record_id
+          would be 101).
+        tests:
+          - not_null
+
+      - name: created_at
+        description: >
+          When the ActiveStorageAttachment was created.
+        tests:
+          - not_null

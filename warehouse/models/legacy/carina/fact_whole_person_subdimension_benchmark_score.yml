@@ -1,0 +1,47 @@
+version: 2
+models:
+  - name: fact_whole_person_subdimension_benchmark_score
+    description: >
+      Fact table for Whole Person Model Subdimension Benchmark Scores by Industry and Employee
+      Level. Data in this table is limited to WPM 2.0 currently, and only includes subdimensions
+      from the conformed `dim_whole_person_subdimension` model. The grain of this fact table is
+      one row per industry per role per subdimension. Benchmark scores in each row are designed
+      to be aggregated to create composite benchmarks, e.g. Financial Services + Technology.
+
+    columns:
+      - name: primary_key
+        description: ""
+        tests:
+          - unique
+          - not_null
+          
+      - name: whole_person_subdimension_key
+        description: >
+          Foreign Key to `dim_whole_person_subdimension`.
+        tests:
+           - not_null
+
+      - name: industry
+        description: >
+          String denoting the Industry associated with the given benchmark. Note values in
+          this field are aligned with values shown in the PAD (People Analytics Dashboard),
+          and are not currently conformed with values in `dim_account.account_industry`.
+        tests:
+          - not_null
+
+      - name: employee_level
+        description: >
+          Employee Level associated with the given benchmark, i.e Individual Contributor
+          or Manager.
+        tests:
+          - not_null
+          - accepted_values:
+              values: [Manager, Individual Contributor]
+
+      - name: benchmark_scale_score_mean
+        description: >
+          The mean scale score from our benchmarking sample for the given industry, employee
+          level, and subdimension. Mean benchmark scale scores can be aggregated (averaged) to
+          create composite benchmarks.
+        tests:
+          - not_null

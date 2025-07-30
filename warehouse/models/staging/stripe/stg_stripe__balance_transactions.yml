@@ -1,0 +1,11 @@
+version: 2
+
+models:
+  - name: stg_stripe__balance_transactions
+    description: Any transaction that flows in or out of Betterup Stripe Account.
+    columns:
+      - name: stripe_balance_transaction_id
+        description: Primary key
+        tests:
+          - unique
+          - not_null

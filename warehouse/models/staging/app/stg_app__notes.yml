@@ -1,0 +1,39 @@
+version: 2
+models:
+  - name: stg_app__notes
+    description: The DBT model stg_app__notes contains the data about notes created
+      in an application. This model has fields for note identifier, creator's identifier,
+      notable's identifier, note body, notable type, and created and updated timestamps.
+      It also contains relationships to other models in the application that help
+      with working with it. [GenAI Description]
+    columns:
+      - name: note_id
+        description: The note_id column holds the unique identifier for each note
+          entry. [GenAI Description]
+        tests:
+          - unique
+          - not_null
+
+      - name: creator_id
+        description: The 'creator_id' column contains the unique identifier of the
+          user who created a note. [GenAI Description]
+
+      - name: notable_id
+        description: Notable_id is a foreign key which refers to the associated entity
+          (e.g. a person, account, etc.) to which the noted relates. [GenAI Description]
+
+      - name: body
+        description: The column 'body' contains the note content created for notable
+          records in the application. [GenAI Description]
+
+      - name: notable_type
+        description: Notable type is a categorization of a note based on the object
+          it is associated with (e.g. order, contact, item). [GenAI Description]
+
+      - name: created_at
+        description: The 'created_at' column stores a timestamp of when the note was
+          created. [GenAI Description]
+
+      - name: updated_at
+        description: The updated_at column holds the timestamp when the note was last
+          updated. [GenAI Description]

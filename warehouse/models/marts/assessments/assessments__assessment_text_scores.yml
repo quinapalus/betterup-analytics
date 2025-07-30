@@ -1,0 +1,85 @@
+version: 2
+
+models:
+  - name: assessments__assessment_text_scores
+    description: >
+      Scores for open-ended text responses from HI assessments across sentiment, emotion,
+      theme, information
+      content, and work/life event models.
+
+    columns:
+      - name: id
+        description: Unique identifier (PK) for the assessment item
+        tests:
+          - not_null
+          - unique
+
+      - name: scored_datetime
+        description: Timestamp denoting when the assessment item was created.
+        tests:
+          - not_null
+
+      - name: assessment_id
+        description: ID to identify the assessment this item is a part of
+
+      - name: item_key
+        description: Key of the assessment item (e.g. "layer2_motivation")
+
+      - name: item_response
+        description: The text to be scored
+        tests:
+          - not_null
+
+      - name: sentiment
+        description: Label from the sentiment model
+
+      - name: sentiment_score
+        description: Score for the label from the sentiment model
+
+      - name: emotion_1
+        description: Label from the emotion model with rank 1
+
+      - name: emotion_score_1
+        description: Score for the label from the emotion model with rank 1
+
+      - name: emotion_2
+        description: Label from the emotion model with rank 2
+
+      - name: emotion_score_2
+        description: Score for the label from the emotion model with rank 2
+
+      - name: emotion_3
+        description: Label from the emotion model with rank 3
+
+      - name: emotion_score_3
+        description: Score for the label from the emotion model with rank 3
+
+      - name: theme_1
+        description: Label from the theme model with rank 1
+
+      - name: theme_score_1
+        description: Score for the label from the theme model with rank 1
+
+      - name: theme_2
+        description: Label from the theme model with rank 2
+
+      - name: theme_score_2
+        description: Score for the label from the theme model with rank 2
+
+      - name: theme_3
+        description: Label from the theme model with rank 3
+
+      - name: theme_score_3
+        description: Score for the label from the theme model with rank 3
+
+      - name: information_content
+        description: Label from the informative model
+
+      - name: information_content_score
+        description: Score for the label from the informative model
+
+      - name: work_life_event
+        description: Label from the work_life_event model
+
+      - name: work_life_event_score
+        description: Score for the label from the work_life_event model

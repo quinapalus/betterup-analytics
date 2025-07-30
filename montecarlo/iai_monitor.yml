@@ -1,0 +1,16 @@
+montecarlo:
+  custom_sql:
+    - sql: |
+        select count(*)
+        from analytics.analytics.int_iai_members
+      description: |
+        Count of members whose product access is ending in the next 30 days should not be 0.
+      comparisons:
+        - type: threshold
+          operator: EQ
+          threshold_value: 0
+      schedule:
+        type: fixed
+        interval_minutes: 1440
+        start_time: "2023-05-12T19:00:00"
+      labels: [pad]

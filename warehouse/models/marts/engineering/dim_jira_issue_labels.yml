@@ -1,0 +1,17 @@
+version: 2
+
+models:
+  - name: dim_jira_issue_labels
+    description: "Takes the labels attribute from JIRA issues and makes it into a table with one row per issue per label, per issue snapshot"
+    columns:
+      - name: primary_key
+        description: ""
+        tests:
+          - unique
+          - not_null
+
+      - name: jira_issue_id
+        description: ""
+
+      - name: label
+        description: ""

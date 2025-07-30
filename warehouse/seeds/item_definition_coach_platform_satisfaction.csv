@@ -1,0 +1,3 @@
+item_key,item_prompt,scale
+platform_nps,How likely is it that you would recommend becoming a BetterUp Coach or Specialist to a colleague?,0-Extremely unlikely;1-Very unlikely;2-Unlikely;3-Somewhat unlikely;4-A bit unlikely;5-Neutral;6-A bit likely;7-Somewhat likely;8-Likely;9-Very likely;10-Extremely likely
+feedback,Could you tell us more?,text_response

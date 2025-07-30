@@ -1,0 +1,38 @@
+version: 2
+
+models:
+  - name: base_app__group_coaching_cohorts_historical
+    description: ""
+    columns:
+      - name: coach_id
+      - name: created_at
+      - name: first_session_starts_at
+      - name: group_coaching_series_id
+      - name: id
+        tests:
+          - unique
+          - not_null
+      - name: num_sessions
+      - name: remaining_seats
+      - name: session_duration_minutes
+      - name: session_url
+      - name: updated_at
+      - name: uuid
+      - name: ended_at
+      - name: started_at
+      - name: seat_capacity
+      - name: canceled_at
+      - name: min_seat_count
+      - name: calendar_sequence
+      - name: state
+      - name: registered_members_count
+      - name: original_first_session_starts_at
+      - name: pre_group_coaching_assessment_resource_id
+      - name: live_session
+      - name: payment_duration_minutes
+      - name: conversation_id
+      - name: enable_outlook_calendar_support
+      - name: base_time_zone
+      - name: pre_group_coaching_assessment_resource_uuid
+      - name: disable_automated_coach_requests
+      - name: balanced_at

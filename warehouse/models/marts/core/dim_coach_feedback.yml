@@ -1,0 +1,16 @@
+version: 2
+
+models:
+  - name: dim_coach_feedback
+    description: Coach feedback given during an assessment.
+    columns:
+      - name: assessment_id
+        description: >
+          The unique id of the assessment from which the feedback was provided.  This is 
+          also the primary key of this table.
+        tests:
+          - unique
+          - not_null
+
+      - name: item_response
+        description: Freeform text feedback provided in assessment.

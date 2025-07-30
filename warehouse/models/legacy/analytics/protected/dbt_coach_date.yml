@@ -1,0 +1,20 @@
+version: 2
+models:
+  - name: dbt_coach_date
+    description: >
+      This protected builds the date spine for each day the coach was active
+      on the BetterUp platform. This model should be used to build other `dbt` models,
+      both across `dei` and `carina` levels or feed directly into these levels.
+
+    columns:
+      - name: coach_id
+        description: Primary Key.
+        tests:
+          - not_null
+          - relationships:
+              to: ref('int_app__users')
+              field: user_id
+
+      - name: day
+        description: >
+          SQL date for every day the coach was active on the BetterUp platform.

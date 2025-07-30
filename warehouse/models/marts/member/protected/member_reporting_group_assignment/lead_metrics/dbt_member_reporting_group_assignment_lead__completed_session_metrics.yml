@@ -1,0 +1,57 @@
+version: 2
+
+models:
+  - name: dbt_member_reporting_group_assignment_lead__completed_session_metrics
+    description: ""
+    columns:
+      - name: member_reporting_group_assignment_key
+        description: ""
+        tests:
+           - not_null
+           - unique
+
+      - name: member_id
+        description: ""
+        tests:
+           - not_null
+
+      - name: reporting_group_id
+        description: ""
+        tests:
+           - not_null        
+
+      - name: associated_assignment_id
+        description: ""
+        tests:
+           - not_null        
+
+      - name: first_session_at
+        description: ""
+
+      - name: first_primary_session_at
+        description: ""
+
+      - name: last_session_at
+        description: ""
+
+      - name: last_primary_session_at
+        description: ""
+
+      - name: completed_session_count
+        description: ""
+
+      - name: completed_session_hours
+        description: ""
+
+      - name: average_session_length_hours
+        description: ""
+
+      - name: completed_primary_session_count
+        description: ""
+
+      - name: completed_extended_network_session_count
+        description: ""
+
+      - name: completed_on_demand_session_count
+        description: ""
+        

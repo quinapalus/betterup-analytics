@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# configure bash to exit on error
+set -e
+set -o pipefail
+
+cd packages/bu-tap-semaphore
+poetry install 
+poetry run create-semaphore-configs --token $SEMAPHORE_TOKEN
+
+poetry run bu-tap-semaphore -c semaphore.json | poetry run target-snowflake -c snowflake.json
+
+echo "Done."

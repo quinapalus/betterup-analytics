@@ -1,0 +1,418 @@
+version: 2
+
+models:
+  - name: dim_tracks
+    description: >
+      A Track can be thought of as a “program” or “course” that members will be invited 
+      onto. The track allows us to add additional details to the members' experience such 
+      as specialist coach verticals, primary coach requirements (language, industry, 
+      experience level, etc.), reflection point cadence, etc.
+
+    columns:
+      - name: track_id
+        description: Unique identifier (primary key) for the Track
+        tests:
+          - unique
+          - not_null
+
+      - name: sfdc_program_id
+        description: ""
+
+      - name: sfdc_account_id
+        description: Salesforce Account identifier for the Organization of this Track.
+
+      - name: sfdc_opportunity_id
+        description: >
+          Foreign Key to associated Salesforce opportunity for the given track defined
+          in the Admin Panel. Only used operationally for Sales Trials. Revenue-generating
+          tracks use to Contracts model to link tracks with opportunities.
+
+      - name: sfdc_prospective_opportunity_id
+        description: >
+          Salesforce Opportunity identifier associated with this Track. Only populated
+          for Sales Trials. Revenue-generating tracks are linked with Salesforce
+          Opportunities through the Contracts model.
+
+      - name: default_resource_list_id
+        description: ""
+
+      - name: organization_id
+        description: >
+          Unique identifier (foreign key) for the Organization associated with the Track.
+
+      - name: contract_id
+        description: Which contract this track belongs to.
+
+      - name: stripe_pricing_plan_id
+        description: Foreign Key for the associated Stripe Pricing Plan
+
+      - name: solution_uuid
+        description: ""
+
+      - name: salesforce_program_identifier
+        description: Unique ID of the SFDC program associated with the Track.
+
+      - name: name
+        description: Name of the Track
+        tests:
+          - not_null
+
+      - name: program_name
+        description: Name of the program associated with the Track from BU App.
+        
+      - name: sfdc_program_name
+        description: >
+          Name of the program associated with the Track from SFDC. Used to aggregate 
+          tracks by program for certain accounts.
+
+      - name: overview
+        description: ""
+
+      - name: minutes_limit
+        description: ""
+
+      - name: members_limit
+        description: Maximum number of members that should be allowed on the track.
+
+      - name: length_days
+        description: ""
+
+      - name: reflection_point_interval_days
+        description: >
+          Number of days (from either when the member matched with a coach,
+          when their last reflection point was completed, or when the last reflection 
+          point process was canceled) when the member will become eligible for the 
+          reflection point assessment.
+
+      - name: reflection_point_interval_appointments
+        description: >
+          If set, this value triggers the reflection point process when the member
+          meets the specified number of sessions, either since matching with a coach
+          or completing their last reflection point.
+
+      - name: num_reflection_points
+        description: Number of reflection points assigned on the track.
+
+      - name: deployment_type
+        description: '{{ doc("deployment_types") }}'
+
+      - name: deployment_name
+        description: The deployment name, as used within BetterUp.
+
+      - name: deployment_group
+        description: Deployment Group for the associated track
+
+      - name: estimated_seat_count
+        description: Estimate by admins (post-sales or operations) prior to track launch of how many members will onboard.
+
+      - name: member_orientation
+        description: >
+          String denoting whether the orientation was held by BetterUp, the partner, or a facilitator.
+          Will be NULL if no orientation was held.
+        tests:
+          - accepted_values:
+              values: [betterup_driven, partner_driven, facilitator_driven]
+              severity: warn
+
+      - name: use_cases
+        description: ""
+
+      - name: customer_goals
+        description: ""
+
+      - name: key_satisfaction_driver
+        description: ""
+
+      - name: wpm_behavior_goals
+        description: ""
+
+      - name: aggregate_hours_limit
+        description: ""
+
+      - name: deployment_cadence
+        description: String denoting the cadence associated with the deployment.
+
+      - name: staffing_member_levels
+        description: ""
+
+      - name: program_briefing_duration_minutes
+        description: Length of program briefing in minutes. NULL if no briefing.
+
+      - name: staffing_risk_levels
+        description: ""
+
+      - name: staffing_tiers
+        description: ""
+
+      - name: staffing_industries
+        description: ""
+
+      - name: client_limit
+        description: Maximum number of clients a coach can have to be qualified for the track.
+
+      - name: staffing_languages
+        description: ""
+
+      - name: staffing_qualifications
+        description: ""
+
+      - name: account_qualifications
+        description: ""
+
+      - name: certification_qualifications
+        description: ""
+
+      - name: focus_qualifications
+        description: ""
+
+      - name: postgrad_qualifications
+        description: ""
+
+      - name: product_qualifications
+        description: ""
+
+      - name: professional_qualifications
+        description: ""
+
+      - name: segment_qualifications
+        description: ""
+
+      - name: internal_notes
+        description: >
+          Internal notes provided in the Admin Panel by BetterUp employees who
+          manage or deploy tracks.
+
+      - name: solution
+        description: >
+          Solution for the associated track, e.g. Growth and Transformation, Sales 
+          Performance, etc
+
+      - name: primary_coaching_months_limit
+        description: Limit of Primary Coaching in months, if set.
+      
+      - name: open_track_assignment_count
+        description: >
+          Integer denoting the number of open track assignments associated with the track.
+      
+      - name: engaged_member_count
+        description: >
+          Integer denoting the total number of members on track that had at least one 
+          session completed.
+      
+      - name: engagement_manager
+        description: Name of the engagement manager on the track.
+
+      - name: relationship_manager
+        description: Name of the relationship manager on the track.
+      
+      - name: organization_name
+        description: Name of the associated Organization.
+
+      - name: external_resource_count
+        description: >
+          The number of external resource attachments that are associated with this Track.
+
+      - name: accounting_category
+        description: String denoting the General Ledger accounting category. Will be N/A 
+          for Candidates and QA deployment types.
+        tests:
+          - accepted_values:
+              values: [7551 MKTG Coaching Promotional, 6492 BU-Employee Coaching,
+                       6494 BU-F&F Coaching, 7120 R&D Other Expenses,
+                       5311 Customer Sessions, 7550 Sales Trials, N/A]
+      
+      - name: admin_panel_url
+        description: >
+          URL to the track in the Admin Panel.
+
+      - name: partner_panel_url
+        description: >
+          URL to the track in the Partner Panel.
+        
+      - name: coaching_cloud
+        description: The coaching cloud associated with the track.
+
+      - name: is_active_track
+        description: Is this a currently active track
+        tests:
+          - accepted_values:
+              values: [true, false]
+
+      - name: is_past_track
+        description: Is this a past track
+        tests:
+          - accepted_values:
+              values: [true, false]
+
+      - name: is_future_track
+        description: Is this a track that is yet to launch
+        tests:
+          - accepted_values:
+              values: [true, false]
+
+      - name: is_direct_pay
+        description: >
+          True if the track is configured for direct pay (i.e. stripe_pricing_plan_id is 
+          not null or empty)
+        tests:
+          - accepted_values:
+              values: [true, false]
+
+      - name: is_external
+        description: >
+          True if deployment type is external facing, as defined in BetterUp Deployment 
+          Types gSheet.
+        tests:
+          - not_null
+          - accepted_values:
+              values: [true, false]
+
+      - name: is_revenue_generating
+        description: >
+          True if deployment type is revenue generating, as defined in BetterUp Deployment
+           Types gSheet.
+        tests:
+          - not_null
+          - accepted_values:
+              values: [true, false]
+
+      - name: is_restricted
+        description: True if members on Track have their coaching allowance restricted.
+        tests:
+          - accepted_values:
+              values: [true, false]
+
+      - name: includes_behavioral_assessments
+        description: ""
+        tests:
+          - accepted_values:
+              values: [true, false]
+
+      - name: manager_feedback_enabled
+        description: ""
+        tests:
+          - accepted_values:
+              values: [true, false]
+
+      - name: whole_person360_enabled
+        description: True if 360 assessments are enabled. False otherwise.
+        tests:
+          - not_null
+          - accepted_values:
+              values: [true, false]
+
+      - name: whole_person180_enabled
+        description: True if 180 assessments are enabled. False otherwise.
+        tests:
+          - not_null
+          - accepted_values:
+              values: [true, false]
+
+      - name: coaching_primary_enabled
+        description: Boolean flag, true if new members on the track are eligible for 
+          Primary coaching.
+        tests:
+          - not_null
+          - accepted_values:
+              values: [true, false]
+
+      - name: coaching_on_demand_enabled
+        description: Boolean flag, true if new members on the track are eligible for On 
+          Demand coaching.
+        tests:
+          - not_null
+          - accepted_values:
+              values: [true, false]
+
+      - name: coaching_extended_network_enabled
+        description: Boolean flag, true if new members on the track are eligible for Extended Network coaching.
+        tests:
+          - not_null
+          - accepted_values:
+              values: [true, false]
+
+      - name: whole_person_model_2
+        description: Boolean denoting if WPM2 has been enabled on the track.
+        tests:
+          - not_null
+          - accepted_values:
+              values: [true, false]
+
+      - name: downloadable
+        description: >
+          True, if the track data is downloadable via the partner CSV export feature
+        tests:
+          - accepted_values:
+              values: [true, false]
+      
+      - name: program_briefing_automatic_payment
+        description: >
+          Boolean denoting if the track has automatic program briefing payment.
+          NULL if no briefing.
+        tests:
+          - accepted_values:
+              values: [true, false]
+
+      - name: is_videochat_recording_enabled
+        description: True, if the track is configured to enable record option on videochat
+        tests:
+          - accepted_values:
+              values: [true, false]
+
+      - name: has_primary_coaching_months_limit
+        description: Yes if Track has a Primary Coaching Months limit.
+        tests:
+          - accepted_values:
+              values: [true, false]
+      
+      - name: is_active
+        description: >
+          Boolean denoting whether the track is active or not. Active means that there is
+           at least one open track assignment on the track.
+        tests:
+          - not_null
+          - accepted_values:
+              values: [true, false]
+
+      - name: is_direct
+        description: ""
+        tests:
+          - not_null
+          - accepted_values:
+              values: [true, false]
+      
+      - name: is_deleted
+        description: >
+          This table contains destroyed/deleted track records found the BU app versions
+          table.  Is_delete is TRUE if the track record came from the versions table.
+        tests:
+          - not_null
+          - accepted_values:
+              values: [true, false]
+
+      - name: created_at
+        description: Application timestamp when the Track was created.
+
+      - name: updated_at
+        description: Application timestamp when the Track was last updated.
+
+      - name: ends_on
+        description: >
+          Application timestamp when the Track (and as a result all of their Track 
+          Assignments) ends.
+
+      - name: launches_on
+        description: Application timestamp when the Track launches.
+      
+      - name: start_date
+        description: >
+          Truncated timestamp indicating the start date of the track, denoted as
+          the date of earliest track assignment creation.
+
+      - name: end_date
+        description: >
+          Truncated timestamp indicating the end date of the track, denoted as
+          the date of the latest (intended) track assignment ending time. This
+          field will be NULL if `ends_on` hasn't been populated in the Admin Panel
+          for any track assignments on that track.
+    

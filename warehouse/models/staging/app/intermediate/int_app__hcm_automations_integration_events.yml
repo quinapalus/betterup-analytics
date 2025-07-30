@@ -1,0 +1,23 @@
+version: 2
+
+models:
+  - name: int_app__hcm_automations_integration_events
+    description: In this intermediate table, HCM related events are counted and linked to their source (sftp or manual uploaded file, hcm_sync run)
+    columns:
+      - name: primary_key
+        description: Primary key
+        tests:
+          - not_null
+          - unique
+      - name: organization_id
+      - name: source
+      - name: user_attribute_import_id
+      - name: hcm_sync_run_id
+      - name: count_user_provisioning_succeeded
+      - name: count_user_provisioning_failed
+      - name: count_user_deactivation_succeeded
+      - name: count_user_deactivation_failed
+      - name: count_user_attribute_values_changed
+      - name: max_timestamp
+      - name: min_timestamp
+      - name: timestamp

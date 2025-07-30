@@ -1,0 +1,19 @@
+#!/bin/bash
+
+set -e
+set -o pipefail
+
+(
+  cd packages/target-s3
+  poetry install
+)
+
+(
+  cd packages/bu-tap-qualtrics
+  poetry install
+  hash -r
+  poetry run create-qualtrics-configs
+  poetry run bu-tap-qualtrics --config qualtrics.json | (cd ../target-s3 && poetry run target-s3 -b "${QUALTRICS_AWS_BUCKET}")
+)
+
+echo 'Done.'

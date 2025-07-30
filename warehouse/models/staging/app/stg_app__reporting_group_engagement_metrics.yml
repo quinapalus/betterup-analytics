@@ -1,0 +1,103 @@
+version: 2
+
+models:
+  - name: stg_app__reporting_group_engagement_metrics
+    description: The DBT model stg_app__reporting_group_engagement_metrics stores
+      data about a reporting group's engagement with different online product offerings.
+      It includes information about the status of the engagement, the types of services
+      included, the number of sessions, and any timestamps related to the engagement.
+      [GenAI Description]
+    columns:
+      - name: care
+        description: The 'care' column is a boolean indicating whether a given user
+          has access to the care services provided by the platform. [GenAI Description]
+
+      - name: coaching_circles
+        description: The 'coaching_circles' column indicates whether the member is
+          enrolled in a coaching circle. [GenAI Description]
+
+      - name: created_at
+        description: "'created_at' is a timestamp field containing the date and time\
+          \ the row was first created. [GenAI Description]"
+
+      - name: ended_at
+        description: The 'ended_at' column represents the timestamp when the engagement
+          with the reporting group ended. [GenAI Description]
+
+      - name: extended_network
+        description: A boolean column to indicate whether the group member has access
+          to extended networks. [GenAI Description]
+
+      - name: foundations
+        description: The foundations column is a boolean indicating whether the person
+          is a part of the foundations tier or not. [GenAI Description]
+
+      - name: reporting_group_engagement_metric_id
+        description: The ID of the engagement metric for a reporting group, including
+          foreign keys, booleans, and timestamps such as start and end dates. [GenAI
+          Description]
+        tests:
+          - unique
+          - not_null
+
+      - name: last_engaged_at
+        description: "'last_engaged_at' captures the date and time of the user's last\
+          \ engagement with the reporting group. [GenAI Description]"
+
+      - name: member_id
+        description: The 'member_id' column stores the foreign key reference to the
+          member associated with a specific reporting group engagement metric. [GenAI
+          Description]
+
+      - name: next_session_at
+        description: The 'next_session_at' column stores timestamps for the next session
+          of the reporting group engagement metrics. [GenAI Description]
+
+      - name: on_demand
+        description: The 'on_demand' column contains a boolean representing whether
+          the member is accessing the product through the on-demand option. [GenAI
+          Description]
+
+      - name: primary_coaching
+        description: The 'primary_coaching' column indicates whether a reporting group
+          member is signed up to receive primary coaching services. [GenAI Description]
+
+      - name: product_access
+        description: The 'product_access' column stores the type of access a reporting
+          group member has to the product. [GenAI Description]
+
+      - name: reporting_group_id
+        description: The 'reporting_group_id' column identifies the group to which
+          a member belongs, as tracked by their engagement metrics. [GenAI Description]
+
+      - name: status
+        description: The column 'status' indicates the current state of a user's engagement
+          with a given reporting group. [GenAI Description]
+
+      - name: total_sessions
+        description: The total_sessions column stores the total number of sessions
+          the member has attended. [GenAI Description]
+
+      - name: track_name
+        description: The 'track_name' column contains the name of the program the
+          user is enrolled in. [GenAI Description]
+
+      - name: updated_at
+        description: The 'updated_at' column stores the timestamp of when the record
+          was last updated. [GenAI Description]
+
+      - name: workshops
+        description: This column denotes whether the associated reporting group member
+          has engaged in workshops. [GenAI Description]
+
+      - name: hidden
+        description: "'hidden' is a boolean column indicating whether the engagement\
+          \ metric is hidden or not. [GenAI Description]"
+
+      - name: last_session_at
+        description: "'last_session_at' is the timestamp of the last active session\
+          \ for the member in the reporting group. [GenAI Description]"
+
+      - name: started_at
+        description: The 'started_at' column holds the timestamp of when a reporting
+          group engagement began. [GenAI Description]

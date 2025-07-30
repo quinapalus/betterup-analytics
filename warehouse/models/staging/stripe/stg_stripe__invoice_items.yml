@@ -1,0 +1,11 @@
+version: 2
+
+models:
+  - name: stg_stripe__invoice_items
+    description: All invoice items part of various invoices.
+    columns:
+      - name: stripe_invoice_item_id
+        description: Primary key
+        tests:
+          - unique
+          - not_null

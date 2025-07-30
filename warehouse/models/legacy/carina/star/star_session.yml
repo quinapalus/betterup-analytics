@@ -1,0 +1,8 @@
+version: 2
+models:
+  - name: star_session
+    description: >
+      Sessions fact table, joined with full Member, Coach, Date, Development Topic,
+      Account and Deployment dimensions. See documentation for `fact_sessions`, `dim_members`,
+      `dim_coach`, `dim_date`, `dim_development_topic`, `dim_account`, `dim_deployment`,
+      and `dim_member_deployment` field descriptions.

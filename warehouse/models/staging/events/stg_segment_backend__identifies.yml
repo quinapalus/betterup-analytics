@@ -1,0 +1,29 @@
+version: 2
+models:
+  - name: stg_segment_backend__identifies
+    description: >
+      Identifies segment events
+
+      The Identifies table has feature flag data
+
+    columns:
+      - name: id
+        description: Unique identifier of the event
+        tests:
+          - unique
+          - not_null
+        
+      - name: user_id
+        description: Unique identfier of the User
+
+      - name: created_at
+        description: Time the user was created
+
+      - name: event_at
+        description: Timestamp when the identifies event occurred
+
+      - name: context_library_name
+        description: Name of the library that generated the event
+
+      - name: foundations_active
+        description: Feature flag boolean for if the user had foundations active

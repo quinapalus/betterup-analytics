@@ -1,0 +1,48 @@
+version: 2
+
+models:
+  - name: dbt_features__extended_network_session_types
+    description: This DBT model contains data on extended network coaching sessions,
+      including the member_id, associated_record_id and associated_record_type for
+      an appointment, the feature_collected_at date, the classification (type of coaching
+      session), feature_attributes (such as the coach_type), and the feature_type.
+      It is built using the stg_app__appointments, stg_curriculum__specialist_verticals,
+      and stg_app__coach_assignments parent models. [GenAI Description]
+    columns:
+      - name: member_id
+        description: This column contains the unique identifier for a member in the
+          system; it is associated with all data collected for the member. [GenAI
+          Description]
+
+      - name: associated_record_id
+        description: "'associated_record_id' is the identifier for the appointment\
+          \ associated with the engagement feature. [GenAI Description]"
+        tests:
+          - unique
+          - not_null
+
+      - name: associated_record_type
+        description: The column 'associated_record_type' provides the type of associated
+          record (eg. Appointment) for a given feature. [GenAI Description]
+
+      - name: feature_collected_at
+        description: The 'feature_collected_at' column stores the start date and time
+          of an appointment associated with an extended network coaching session.
+          [GenAI Description]
+
+      - name: feature_key
+        description: The 'feature_key' column holds the feature key associated with
+          extended network coaching session data. [GenAI Description]
+
+      - name: classification
+        description: Classification is an object containing the key and label of the
+          specialist vertical associated with the appointment. [GenAI Description]
+
+      - name: feature_attributes
+        description: The 'feature_attributes' column includes information regarding
+          the coach role for extended network coaching sessions. [GenAI Description]
+
+      - name: feature_type
+        description: The 'feature_type' column contains the types of features collected
+          in this model, such as "engagement". [GenAI Description]
+

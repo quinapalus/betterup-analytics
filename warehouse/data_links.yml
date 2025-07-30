@@ -1,0 +1,8 @@
+connections:
+- fdw_name: postgresql_animated_26145
+  user: dbt
+  password: ${DBT_APP_LINK_PASSWORD}
+  host: ec2-3-212-113-159.compute-1.amazonaws.com
+  port: 5432
+  dbname: d2jcdtfvla1as4
+  schema: data_link_app

@@ -1,0 +1,36 @@
+version: 2
+models:
+  - name: stg_app__client_notes
+    description: >
+      ClientNotes are captured by the Coach after an Appointment with a Member.  Coaches
+      enter a combination of text and topics related to the session.
+
+    columns:
+      - name: client_note_id
+        description: Unique identifier of the ClientNote.
+        tests:
+          - unique
+          - not_null
+
+      - name: member_id
+        description: Who the ClientNote is about.
+        tests:
+          - not_null
+
+      - name: creator_id
+        description: Who created the ClientNote.
+        tests:
+          - not_null
+
+      - name: session_id
+        description: Unique identifier of the session.
+
+      - name: topics
+        description: >
+          Topics discussed between the Coach and Member in the session.
+
+      - name: created_at
+        description: When the ClientNote was created.
+
+      - name: updated_at
+        description: When the ClientNote was updated.

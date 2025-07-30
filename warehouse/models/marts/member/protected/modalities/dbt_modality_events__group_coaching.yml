@@ -1,0 +1,20 @@
+version: 2
+
+models:
+  - name: dbt_modality_events__group_coaching
+    description: Group Coaching Events
+    columns:
+      - name: modality_event_name_id
+        description: Primary Key, Surrogate Key of Modality + Event Name
+        tests:
+          - unique
+          - not_null
+      - name: modality
+        description: Modality
+        tests:
+          - not_null
+      - name: event_name
+        description: Event Name
+        tests:
+          - not_null
+

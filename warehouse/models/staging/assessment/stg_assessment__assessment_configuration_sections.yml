@@ -1,0 +1,27 @@
+version: 2
+
+models:
+  - name: stg_assessment__assessment_configuration_sections
+    description: Assessment Configuration Section
+
+    columns:
+      - name: assessment_configuration_section_id
+        description: Unique identifier of Assessment Configuration Section
+        tests:
+          - unique
+          - not_null
+      - name: assessment_configuration_id
+        description: A unique identifier for the associated assessment configuration.
+          [GenAI Description]
+      - name: assessment_section_id
+        description: The 'assessment_section_id' column relates assessment configuration
+          records to their associated assessment sections. [GenAI Description]
+      - name: position
+        description: The column 'position' specifies the relative order of each assessment
+          section in an assessment configuration. [GenAI Description]
+      - name: created_at
+        description: The 'created_at' column stores the date and time the record was
+          created. [GenAI Description]
+      - name: updated_at
+        description: The 'updated_at' column stores the timestamp of the last update
+          made to the assessment configuration section. [GenAI Description]

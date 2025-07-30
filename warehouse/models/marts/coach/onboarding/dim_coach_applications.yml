@@ -1,0 +1,38 @@
+version: 2
+
+models:
+  - name: dim_coach_applications
+    description: "Mart model for coach application details. This contains categorical details relating to coach application. The grain is one row per applications"
+    columns:
+      - name: application_id
+        description: ""
+        tests:
+          - not_null
+          - unique
+
+      - name: master_personal_email_key
+        description: ""
+
+      - name: region
+        description: "Region which the applicant is operating in"
+
+      - name: sprint
+        description: "Segmentation field used by coach ops team"
+
+      - name: pay_rate_tier
+        description: "Tier of pay for the applicant"
+
+      - name: lgbtq_status
+        description: ""
+
+      - name: professional_coaching_hours
+        description: ""
+
+      - name: extended_network_specialist_type
+        description: "Specialist type of the applicant. Applies to applications for extended network specialists"
+
+      - name: citizenship_verification
+        description: "Whether or not the applicant has opted in to citizenship verification"
+
+      - name: master_personal_email_key
+        description: "Surrogate key created from master_personal_email"

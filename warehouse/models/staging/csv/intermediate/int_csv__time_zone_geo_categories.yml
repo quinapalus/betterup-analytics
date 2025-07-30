@@ -1,0 +1,30 @@
+version: 2
+
+models:
+  - name: int_csv__time_zone_geo_categories
+    description: >
+      This intermediate model joins together timezone csvs.
+      This will get joined to the users table on time_zone.
+      This provides more information about the geo of users.
+    columns:
+      - name: time_zone
+        description: ""
+        tests:
+          - not_null
+          - unique
+
+      - name: tz_iana
+        description: ""
+
+      - name: country_code
+        description: ""
+
+      - name: country_name
+        description: ""
+
+      - name: subregion_m49
+        description: ""
+
+      - name: geo
+        description: ""
+

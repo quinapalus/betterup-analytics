@@ -1,0 +1,31 @@
+version: 2
+
+models:
+  - name: dim_users_roles
+    description: >
+      Table of the current roles assigned to users. The rows are unique per user_id
+      and
+       role_id.
+    columns:
+      - name: users_roles_id
+        description: Primary Key
+        tests:
+          - unique
+          - not_null
+
+      - name: user_id
+        description: The id of the user assigned to a role.
+
+      - name: role_id
+        description: The id of the role assigned to the user.
+
+      - name: resource_id
+        description: The resource_id is the identifier of the resource associated
+          with each user role. [GenAI Description]
+
+      - name: role
+        description: The name of the role assigned.
+
+      - name: resource_type
+        description: The 'resource_type' column holds the type of resource associated
+          with the role for each user. [GenAI Description]

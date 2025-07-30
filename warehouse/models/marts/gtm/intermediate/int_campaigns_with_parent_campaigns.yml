@@ -1,0 +1,18 @@
+version: 2
+
+models:
+
+  - name: int_campaigns_with_parent_campaigns
+    columns:
+      - name: sfdc_campaign_id
+        tests:
+          - unique
+          - not_null
+        description: The column 'sfdc_campaign_id' contains the Salesforce campaign
+          ID for a campaign. [GenAI Description]
+    description: "This DBT model identifies and pulls data from Salesforce Marketing\
+      \ Cloud campaigns, and the parent campaigns associated with them. It includes\
+      \ the following fields from both the campaigns and their parent campaigns: publisher,\
+      \ channel, super_channel, marketing_program, campaign_sourced_by, tactic, campaign_type,\
+      \ audience, and content_title. It can be used to get a better understanding\
+      \ of the structure of a campaign's hierarchy. [GenAI Description]"

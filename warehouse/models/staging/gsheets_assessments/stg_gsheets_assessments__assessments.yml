@@ -1,0 +1,27 @@
+version: 2
+
+models:
+  - name: stg_gsheets_assessments__assessments
+    description: The stg_gsheets_assessments__assessments model contains assessment_name,
+      assessment_type, user_role, and assessment_description fields, and provides
+      a unique key (_unique) for each assessment. It stores information about assessments
+      organized by type and user role, which allows users to easily access the corresponding
+      assessments. [GenAI Description]
+    columns:
+      - name: _unique
+        tests:
+          - unique
+          - not_null
+        description: The '_unique' column in this model contains a unique identifier
+          for each assessment based on the assessment name and assessment type. [GenAI
+          Description]
+      - name: assessment_name
+        description: Human-readable name assigned to this Assessment Type
+
+      - name: assessment_type
+        description: The column 'assessment_type' is a categorization assigned to
+          an assessment, indicating the type of assessment. [GenAI Description]
+
+      - name: user_role
+        description: The user_role column stores the classification of the user being
+          assessed in this assessment. [GenAI Description]

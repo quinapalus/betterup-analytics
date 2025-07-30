@@ -1,0 +1,71 @@
+version: 2
+
+models:
+  - name: stg_app__engagement_events
+    description: The stg_app__engagement_events model stores user interactions and
+      activities in a mobile app, including the user ID, related event IDs, and the
+      respective date and type of event (verb). It also stores the event's timestamp
+      of when it was created and updated. [GenAI Description]
+    columns:
+      - name: engagement_event_id
+        description: The engagement_event_id is a unique identifier for each engagement
+          event. [GenAI Description]
+        tests:
+          - not_null
+          - unique
+
+      - name: track_assignment_id
+        description: The 'track_assignment_id' column is a unique identifier for each
+          engagement event. [GenAI Description]
+
+      - name: date
+        description: The 'date' column is a date field representing when an engagement
+          event occurred. [GenAI Description]
+        tests:
+          - not_null
+
+      - name: date_key
+        description: The 'date_key' column stores the date in a 8-digit numeric format
+          (YYYYMMDD). [GenAI Description]
+
+      - name: user_id
+        description: The column 'user_id' contains a unique identifier for each user
+          associated with an engagement event. [GenAI Description]
+        tests:
+          - not_null
+
+      - name: eventable_id
+        description: The 'eventable_id' column stores the unique ID associated with
+          the eventable item associated with the event. [GenAI Description]
+        tests:
+          - not_null
+
+      - name: eventable_type
+        description: The column 'eventable_type' stores the type of object the event
+          is being applied to. [GenAI Description]
+
+      - name: verb
+        description: The 'verb' column defines the type of activity taken with the
+          eventable, usually related to liking, following, or viewing content. [GenAI
+          Description]
+
+      - name: eventable_subject
+        description: "'eventable_subject' is a reference to the accompanying entity\
+          \ associated with the eventable, such as the name of a lesson or the role\
+          \ of a user in a course. [GenAI Description]"
+
+      - name: event_at
+        description: "'event_at' is the timestamp when the engagement event occurred.\
+          \ [GenAI Description]"
+        tests:
+          - not_null
+
+      - name: created_at
+        description: The 'created_at' column is a timestamp recording when the engagement
+          event was first recorded. [GenAI Description]
+
+      - name: updated_at
+        description: The column 'updated_at' stores the most recent timestamp of when
+          the row was updated. [GenAI Description]
+        tests:
+          - not_null

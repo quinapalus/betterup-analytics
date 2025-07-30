@@ -1,0 +1,43 @@
+version: 2
+models:
+  - name: dbt_member_reporting_group_assignment_lead__upcoming_session_metrics
+
+    columns:
+      - name: primary_key
+        tests:
+          - not_null
+          - unique
+
+      - name: member_id
+        description: ""
+        tests:
+          - not_null        
+
+      - name: reporting_group_id
+        description: ""
+        tests:
+          - not_null        
+
+      - name: associated_assignment_id
+        description: ""
+        tests:
+          - not_null        
+
+      - name: next_session_at
+        description: ""
+
+      - name: next_primary_session_at
+        description: ""
+
+      - name: scheduled_upcoming_session_count
+        description: ""
+
+      - name: scheduled_upcoming_primary_session_count
+        description: ""
+
+      - name: scheduled_upcoming_extended_network_session_count
+        description: ""
+
+      - name: scheduled_upcoming_on_demand_session_count
+        description: ""
+        

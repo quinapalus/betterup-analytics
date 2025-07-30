@@ -1,0 +1,256 @@
+name: Workflow engine unit tests
+
+on:
+  pull_request:
+    paths:
+      - 'packages/**'
+  
+  push:
+    branches:
+      - main
+    
+env:
+  REQUIRED_TEST_COVERAGE: 90
+  LOOKERSDK_BASE_URL: "https://betterup.looker.com:19999"
+  LOOKERSDK_API_VERSION: "3.1"
+
+jobs:
+  semaphore-snowflake-s3:
+    name: Run semaphore-snowflake/s3 unit tests
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16'
+
+      - name: Install Poetry
+        uses: snok/install-poetry@v1
+      
+      - name: Run unit tests
+        run: |
+          cd packages/bu-tap-semaphore
+          poetry install
+          poetry run pytest --cov=bu_tap_semaphore \
+          --cov-fail-under="$REQUIRED_TEST_COVERAGE" \
+          --junitxml=coverage-semaphore-snowflake.xml \
+          tests/unit
+
+      # - name: Upload report to data dog
+      #   if: github.event_name == 'push'
+      #   run: |
+      #     npm install -g @datadog/datadog-ci
+      #     datadog-ci junit upload --service buanalytics-workflow-engine-tests packages/bu-tap-semaphore/coverage-semaphore-snowflake.xml
+        env:
+          DD_ENV: 'ci'
+          DATADOG_SITE: 'datadoghq.com'
+          DATADOG_API_KEY: ${{ secrets.ANALYTICS_CI_DATADOG_API_KEY }}
+  
+  twilio-s3-sync:
+    name: Run twilio-s3-sync unit tests
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16'
+
+      - name: Install Poetry
+        uses: snok/install-poetry@v1
+      
+      - name: Run unit tests
+        run: |
+          cd packages/bu-tap-twilio
+          poetry install
+          poetry run pytest --cov=bu_tap_twilio \
+          --cov-fail-under="$REQUIRED_TEST_COVERAGE" \
+          --junitxml=coverage-twilio-s3-sync.xml \
+          tests/unit
+
+      # - name: Upload report to data dog
+      #   if: github.event_name == 'push'
+      #   run: |
+      #     npm install -g @datadog/datadog-ci
+      #     datadog-ci junit upload --service buanalytics-workflow-engine-tests packages/bu-tap-twilio/coverage-twilio-s3-sync.xml
+        env:
+          DD_ENV: 'ci'
+          DATADOG_SITE: 'datadoghq.com'
+          DATADOG_API_KEY: ${{ secrets.ANALYTICS_CI_DATADOG_API_KEY }}
+
+  fountain-snowflake:
+    name: Run fountain-snowflake unit tests
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16'
+
+      - name: Install Poetry
+        uses: snok/install-poetry@v1
+
+      - name: Run unit tests
+        run: |
+          cd packages/bu-tap-fountain
+          poetry install
+          poetry run pytest --cov=bu_tap_fountain \
+          --cov-fail-under="$REQUIRED_TEST_COVERAGE" \
+          --junitxml=coverage-fountain-snowflake.xml \
+          tests/unit
+
+      # - name: Upload report to data dog
+      #   if: github.event_name == 'push'
+      #   run: |
+      #     npm install -g @datadog/datadog-ci
+      #     datadog-ci junit upload --service buanalytics-workflow-engine-tests packages/bu-tap-fountain/coverage-fountain-snowflake.xml
+        env:
+          DD_ENV: 'ci'
+          DATADOG_SITE: 'datadoghq.com'
+          DATADOG_API_KEY: ${{ secrets.ANALYTICS_CI_DATADOG_API_KEY }}
+    
+  looker-s3-sync:
+    name: Run looker-s3-sync unit tests
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16'
+
+      - name: Install Poetry
+        uses: snok/install-poetry@v1
+      
+      - name: Run unit tests
+        run: |
+          cd packages/bu-tap-looker
+          poetry install
+          poetry run pytest --cov=bu_tap_looker \
+          --cov-fail-under="$REQUIRED_TEST_COVERAGE" \
+          --junitxml=coverage-looker-s3-sync.xml \
+          tests/unit
+
+      # - name: Upload report to data dog
+      #   if: github.event_name == 'push'
+      #   run: |
+      #     npm install -g @datadog/datadog-ci
+      #     datadog-ci junit upload --service buanalytics-workflow-engine-tests packages/bu-tap-looker/coverage-looker-s3-sync.xml
+        env:
+          DD_ENV: 'ci'
+          DATADOG_SITE: 'datadoghq.com'
+          DATADOG_API_KEY: ${{ secrets.ANALYTICS_CI_DATADOG_API_KEY }}
+  
+  qualtrics-s3-sync:
+    name: Run qualtrics-s3-sync unit tests
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16'
+
+      - name: Install Poetry
+        uses: snok/install-poetry@v1
+      
+      - name: Run unit tests
+        run: |
+          cd packages/bu-tap-qualtrics
+          poetry install
+          poetry run pytest --cov=bu_tap_qualtrics \
+          --cov-fail-under="$REQUIRED_TEST_COVERAGE" \
+          --junitxml=coverage-qualtrics-s3-sync.xml \
+          tests/unit
+
+      # - name: Upload report to data dog
+      #   if: github.event_name == 'push'
+      #   run: |
+      #     npm install -g @datadog/datadog-ci
+      #     datadog-ci junit upload --service buanalytics-workflow-engine-tests packages/bu-tap-qualtrics/coverage-qualtrics-s3-sync.xml
+        env:
+          DD_ENV: 'ci'
+          DATADOG_SITE: 'datadoghq.com'
+          DATADOG_API_KEY: ${{ secrets.ANALYTICS_CI_DATADOG_API_KEY }}
+
+  zendesk-s3-sync:
+      name: Run zendesk-s3-sync unit tests
+      runs-on: ubuntu-latest
+
+      steps:
+        - name: Checkout code
+          uses: actions/checkout@v3
+
+        - name: Setup Python
+          uses: actions/setup-python@v4
+          with:
+            python-version: '3.10'
+
+        - name: Setup Node
+          uses: actions/setup-node@v3
+          with:
+            node-version: '16'
+
+        - name: Install Poetry
+          uses: snok/install-poetry@v1
+        
+        - name: Run unit tests
+          run: |
+            cd packages/bu-zendesk-to-s3
+            poetry install
+            poetry run pytest --cov=bu_zendesk_to_s3 \
+            --cov-fail-under="$REQUIRED_TEST_COVERAGE" \
+            --junitxml=coverage-zendesk-s3-sync.xml \
+            tests/unit
+
+        # - name: Upload report to data dog
+        #   if: github.event_name == 'push'
+        #   run: |
+        #     npm install -g @datadog/datadog-ci
+        #     datadog-ci junit upload --service buanalytics-workflow-engine-tests packages/bu-zendesk-to-s3/coverage-zendesk-s3-sync.xml
+          env:
+            DD_ENV: 'ci'
+            DATADOG_SITE: 'datadoghq.com'
+            DATADOG_API_KEY: ${{ secrets.ANALYTICS_CI_DATADOG_API_KEY }}

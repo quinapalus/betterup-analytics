@@ -1,0 +1,20 @@
+version: 2
+
+models:
+  - name: raw_metrics__kpi_2_activated
+    description: "Looker link: https://betterup.looker.com/x/KkeMeU1GDaWQL93P4XqC9M "
+    columns:
+      - name: activated_month
+        description: ""
+
+      - name: count_activated
+        description: ""
+
+      - name: count_completed_session_within_21_days
+        description: ""
+
+      - name: primary_key
+        description: ""
+        tests:
+          - unique
+          - not_null

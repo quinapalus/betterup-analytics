@@ -1,0 +1,56 @@
+version: 2
+models:
+  - name: stg_app__member_goal_actions
+    description: >
+      Application table containing member goal action information
+      (application Object is "Goal Actions").
+
+    columns:
+      - name: id
+        description: Primary key
+        tests:
+          - unique
+          - not_null
+
+      - name: title
+        description: >
+          Goal Action title
+
+      - name: description
+        description: >
+          Goal Action description   
+
+      - name: creator_id
+        description: >
+          Foreign key for the creator of the goal action
+
+      - name: assigned_to_id
+        description: >
+          Foreign key for the member goal action is assigned to
+
+      - name: state
+        description: >
+          State of the goal action - either 'completed' or 'in progress'
+        tests:
+          - not_null
+
+      - name: state_updated_at
+        description: >
+          Time when the goal action state was updated in UTC
+        tests:
+          - not_null  
+
+      - name: created_at
+        description: >
+          Time when the goal action was created in UTC
+        tests:
+          - not_null
+
+      - name: complete_by
+        description: >
+          Time when the goal action is expected to be completed in UTC
+
+      - name: updated_at
+        description: Time when the Rails object was updated in UTC.
+        tests:
+          - not_null

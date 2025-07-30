@@ -1,0 +1,19 @@
+version: 2
+
+models:
+  - name: base_app__group_coaching_session_curriculums_historical
+    description: ""
+    columns:
+      - name: created_at
+      - name: description_i18n
+      - name: group_coaching_curriculum_id
+      - name: id
+        tests:
+          - unique
+          - not_null
+      - name: post_session_resource_list_id
+      - name: session_number
+      - name: title_i18n
+      - name: updated_at
+      - name: session_resource_list_id
+      - name: uuid

@@ -1,0 +1,17 @@
+version: 2
+
+models:
+  - name: base_app__client_notes_historical
+    description: ""
+    columns:
+      - name: appointment_id
+      - name: author_id
+      - name: created_at
+      - name: id
+        tests:
+          - unique
+          - not_null
+      - name: topics
+      - name: updated_at
+      - name: user_id
+      - name: send_notification

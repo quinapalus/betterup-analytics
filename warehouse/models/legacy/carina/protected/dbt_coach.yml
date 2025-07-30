@@ -1,0 +1,202 @@
+
+
+version: 2
+models:
+  - name: dbt_coach
+    description: >
+      This model integrates the information from `dei_coaches` and `dei_coach_applicants`
+      needed to build the `dim_coach` and `fact_coach_network_daily_snapshot` models. This
+      model contains a row for each applicant or platform coach (integrated in the situations
+      where we have rationalized identity across Fountain and our platform).
+
+    columns:
+      - name: coach_key
+        description: Primary Key
+        tests:
+          - unique
+          - not_null
+
+      - name: email
+        description: Primary email associated with coach or coach applicant
+        tests:
+          - unique
+          - not_null
+
+      - name: first_name
+        description: First name of the coach or coach applicant.
+
+      - name: last_name
+        description: Last name of the coach or coach applicant.
+
+      - name: is_in_network
+        description: >
+          Boolean indicating if the associated coach is considered "in network". Current logic
+          includes all platform coaches that are staffable or "on hold", and all applicants
+          that are in S2 - Contract, S3 - Train, or S4 - Finalize and have had a Fountain
+          transition within the past 90 days.
+        tests:
+          - not_null
+          - accepted_values:
+              values: [true, false]
+
+      - name: coach_state
+        description: Indication of whether the coach is currently Live or in Pipeline.
+        tests:
+          - not_null
+          - accepted_values:
+              values: [Live, Pipeline, Other]
+
+      - name: pipeline_stage
+        description: >
+          High level operational category for Pipeline coaches. S1 - Review, S2 - Contract,
+          S3 - Train, S4 - Finalize. `pipeline_stage` is set to `hired` when coach goes Live,
+          or `rejected` if not hired.
+        tests:
+          - not_null
+          - accepted_values:
+              values: [s1-review, s2-contract, s3-train, s4-finalize, hired, rejected, N/A]
+
+      - name: staffable_state
+        description: '{{ doc("int_coach__coach_profiles__staffable_states") }}'
+        tests:
+          - not_null
+#          - accepted_values:
+#              values: ['staffable', 'onboarding', 'hold_involuntary', 'hold_voluntary', 'offboarded_involuntary', 'offboarded_voluntary', 'N/A']
+# # https://betterup.atlassian.net/browse/DATA-2119 failure in accepted values -> empty string value
+
+      - name: application_date_key
+        description: >
+          Foreign key to conformed Date dimension for the date the coach applied.
+        tests:
+          - relationships:
+              to: ref('dim_date')
+              field: date_key
+
+      - name: days_since_application
+        description: >
+          Integer that indicates the number of days between the coach's application date and the
+          earlier of the date the coach was hired or the current date.
+
+      - name: hire_date_key
+        description: >
+          Foreign key to conformed Date dimension for the date the coach was hired. Currently
+          implemented as the date the coach's platform account was created. NULL if not yet a
+          Live coach.
+        tests:
+          - relationships:
+              to: ref('dim_date')
+              field: date_key
+
+      - name: days_since_hire
+        description: >
+          Integer that indicates the number of days between the coach's hire date and the
+          current date. NULL if coach hasn't been hired yet.
+
+      - name: coach_geo
+        description: >
+          Geographic region for the given coach, based on timezone to region mapping.
+          Unknown only in cases where coach is in earlier application stages and time zone
+          isn't known or formatted properly.
+        tests:
+          - not_null
+          - accepted_values:
+              values: [NORAM, LATAM, EMEA, APAC, Unknown]
+
+      - name: coach_subregion_m49
+        description: >
+          Geographic subregion for the given coach, based on timezoe to UN M.49 subregion.
+          `Unknown` in cases where timezone isn't known or is not formatted properly.
+        tests:
+          - not_null
+
+      - name: coach_country_code
+        description: >
+          The 2-letter ISO 3166 country code based on mapping from a coach's time
+          zone. Note: US and Canada share common time zones in the Rails application,
+          so if a coach's currency code is available, we use that information to
+          disambiguate US from Canada. Unknown only in rare cares where coach is in earlier application stages and time zone isn't known or formatted properly.
+        tests:
+          - not_null
+
+      - name: coach_country_name
+        description: >
+          Human-readable country name for corresponding ISO `country_code`. See
+          note on logic in description for `coach_country_code`.
+        tests:
+          - not_null
+
+      - name: coach_geo_country_code
+        description: >
+          Concatenation of `coach_geo` and ISO `coach_country_code`.
+        tests:
+          - not_null
+
+      - name: staffing_languages
+        description: >
+          Array of ISO 639-1 Alpha-2 codes for all languages the coach is qualified to coach in.
+
+      - name: priority_language
+        description: >
+          ISO 639-1 Alpha-2 code for highest ranked language the coach can coach in, selected
+          from the list of priority languages in `data/bu_priority_staffing_languages.csv`.
+          Value will be `Other` if coach has non-English, non-priority language, `en` only
+          if English is their only coaching language, and `Unknown` if coaching languages
+          haven't been provided by applicant yet.
+        tests:
+          - not_null
+
+      - name: staffing_qualifications
+        description: >
+          Array of the coaches staffing qualifications. NULL for applicants that don't
+          yet have a platform account.
+
+      - name: type_primary
+        description: >
+          Boolean indicating if coach is a Primary coach. NULL for applicants that don't
+          yet have a platform account.
+
+      - name: type_extended_network
+        description: >
+          Boolean indicating if coach is an Extended Network coach. NULL for applicants
+          that don't yet have a platform account.
+
+      - name: type_on_demand
+        description: >
+          Boolean indicating if coach is an On Demand coach. NULL for applicants
+          that don't yet have a platform account.
+
+      - name: extended_network_specialist_verticals
+        description: >
+          Names of a coach's associated verticals if an Extended Network coach.
+
+      - name: seats_desired_count
+        description: >
+          Maximum member capacity as indicated by the coach through the platform. NULL if not
+          yet a Live coach.
+
+      - name: seats_occupied_count
+        description: >
+          Number of seats occupied for the given coach on the associated day. NULL if not yet
+          a Live coach.
+
+      - name: seats_available_count
+        description: >
+          Number of seats available for the given coach on the associated day. NULL if not yet
+          a Live coach.
+
+      - name: fnt_applicant_id
+        description: Foreign key to associated Fountain applicant record.
+        tests:
+          - unique
+          - relationships:
+              # test against base source table, prior to removal of duplicates
+              to: ref('stg_fountain__applicants')
+              field: fountain_applicant_id
+
+      - name: app_coach_id
+        description: Foreign key to associated platform coach record.
+        tests:
+          - unique
+          - relationships:
+              to: ref('dei_coaches')
+              field: coach_id

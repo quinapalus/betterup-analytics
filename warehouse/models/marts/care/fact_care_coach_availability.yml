@@ -1,0 +1,48 @@
+version: 2
+models:
+  - name: fact_care_coach_availability
+    description: '{{ doc("fact_care_coach_availability") }}'
+
+    columns:
+      - name: primary_key 
+        description: '{{ doc("fact_care_coach_availability__primary_key") }}'
+
+      - name: member_id
+        description: '{{ doc("fact_care_coach_availability__member_id") }}'
+
+      - name: activated_care_at
+        description: '{{ doc("fact_care_coach_availability__activated_care_at") }}'
+
+      - name: first_completed_care_appointment_at
+        description: '{{ doc("fact_care_coach_availability") }}'
+
+      - name: coach_id
+        description: '{{ doc("fact_care_coach_availability__coach_id") }}'
+
+      - name: coach_timeslot_available_minutes
+        description: '{{ doc("fact_care_coach_availability__coach_timeslot_available_minutes") }}'
+
+      - name: half_hour_available_slot
+        description: '{{ doc("fact_care_coach_availability__half_hour_available_slot") }}'
+
+      - name: days_until_available_slot
+        description: '{{ doc("fact_care_coach_availability__days_until_available_slot") }}'
+
+      - name: timeslot_starts_at
+        description: '{{ doc("fact_care_coach_availability__timeslot_starts_at") }}'
+
+      - name: timeslot_ends_at
+        description: '{{ doc("fact_care_coach_availability__timeslot_ends_at") }}'
+
+      - name: coach_recommendation_set_id
+        description: '{{ doc("fact_care_coach_availability__coach_recommendation_set_id") }}'
+
+      - name: coach_recommendation_set_created_at
+        description: '{{ doc("fact_care_coach_availability__coach_recommendation_set_created_at") }}'
+
+      - name: available_sessions_ranked
+        description: '{{ doc("fact_care_coach_availability__available_sessions_ranked") }}'
+
+
+      - name: days_until_first_session_available
+        description: '{{ doc("fact_care_coach_availability__days_until_first_session_available") }}'

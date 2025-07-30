@@ -1,0 +1,98 @@
+version: 2
+
+models:
+  - name: stg_app__products
+    description: ""
+    columns:
+      - name: product_id
+        description: "Primary Key"
+        tests:
+          - unique
+          - not_null
+
+      - name: product_uuid
+        description: ""
+        tests:
+          - unique
+          - not_null
+
+      - name: coaching_cloud
+        description: ""
+
+      - name: created_at
+        description: ""
+
+      - name: updated_at
+        description: ""
+
+      - name: description
+        description: ""
+
+      - name: extended_network
+        description: ""
+
+      - name: name
+        description: ""
+
+      - name: on_demand
+        description: ""
+
+      - name: primary_coaching
+        description: ""
+
+      - name: salesforce_product_identifier
+        description: ""
+
+      - name: care
+        description: ""
+
+      - name: coaching_circles
+        description: ""
+
+      - name: workshops
+        description: ""
+
+      - name: sessions_per_month
+        description: ""
+
+      - name: coaching_circles_limit
+        description: ""
+
+      - name: product_group
+        description: ""
+
+      - name: pricing_model
+        description: ""
+
+      - name: source
+        description: ""
+
+      - name: product_type
+        description: ""
+
+      - name: product_family
+        description: ""
+
+      - name: product_code
+        description: ""
+
+      - name: specialist_catalog
+        description: ""
+
+      - name: specialist_coaching_limited
+        description: ""
+
+      - name: care_limited
+        description: ""                                      
+
+      - name: coaching_circles_limited
+        description: ""    
+
+      - name: primary_coaching_limited
+        description: ""    
+
+      - name: primary_solution
+        description: ""    
+
+      - name: workshop_catalog
+        description: ""                                           

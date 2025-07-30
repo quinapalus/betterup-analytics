@@ -1,0 +1,30 @@
+version: 2
+models:
+  - name: stg_app__sessions
+    description: >
+      Sessions is the primary object for scheduled and completed appointments.
+
+    columns:
+      - name: session_id
+        description: Unique identifer (primary key) of the Session
+        tests:
+          - unique
+          - not_null
+
+      - name: development_topic_id
+        description: >
+          Foreign key to main topic discussed in the session, as coded by the coach
+          in the
+          post-session flow. Added as a required step on 7/17/2019 in
+          [`betterup-app#10692`](https://github.com/betterup/betterup-app/pull/10692).
+
+      - name: timeslot_id
+        description: Unique identifer for associated Timeslot
+
+      - name: post_session_member_assessment_id
+        description: Unique identifer for associated member feedback
+        tests:
+          - unique
+
+      - name: requested_weekly_interval
+        description: Identifier for member request of weekly appointments

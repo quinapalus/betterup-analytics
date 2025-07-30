@@ -1,0 +1,14 @@
+version: 2
+
+models:
+  - name: int_app__coach_configurations
+    columns:
+      - name: primary_key
+        description: Unique identifier
+        tests:
+          - not_null
+          - unique
+    description: The int_app__coach_configurations model is a synthetic table that
+      provides a mapping of the latest coach configurations associated with each experience
+      track. It contains values from the stg_app__coach_configurations and stg_app__experience_configuration_assignments
+      tables, as well as a primary key field. [GenAI Description]

@@ -1,0 +1,36 @@
+version: 2
+models:
+  - name: stg_gsheets_ops_analytics__cso_comp_escalations
+    description: This is a google sheet that contains coach assignment IDs that should
+      be excluded from 5/90 metrics
+
+    columns:
+      - name: coach_assignment_member_key
+        tests:
+          - not_null
+          - unique
+        description: The column 'coach_assignment_member_key' contains a unique identifier
+          generated from the combination of coach_assignment_id and member_id. [GenAI
+          Description]
+      - name: coach_assignment_id
+        description: The coach_assignment_id column stores the unique identifier for
+          a coach assignment related to a customer support ticket. [GenAI Description]
+      - name: coach_id
+        description: The coach_id column contains an integer referring to the unique
+          identifier of the coach managing an escalation for a specific customer.
+          [GenAI Description]
+      - name: cso_ticket_link
+        description: This column contains the link to the Customer Service Outreach
+          ticket associated with this escalation. [GenAI Description]
+      - name: cso_user_name
+        description: This column contains the name of the customer service operations
+          user associated with the escalation. [GenAI Description]
+      - name: member_id
+        description: The 'member_id' column is an identification number used to identify
+          a specific member. [GenAI Description]
+      - name: reason
+        description: The 'reason' column stores the reason a member submitted a CSO
+          comp escalation. [GenAI Description]
+      - name: submitted_at
+        description: The 'submitted_at' column stores the timestamp of when the respective
+          CSO competition escalation was submitted. [GenAI Description]

@@ -1,0 +1,54 @@
+version: 2
+
+models:
+  - name: stg_app__member_profiles
+    description: Source member_profiles table from betterup-app
+
+    columns:
+      - name: member_profile_id
+        tests:
+          - unique
+          - not_null
+        description: The 'member_profile_id' column holds the unique identifiers for
+          members' profiles. [GenAI Description]
+      - name: created_at
+        description: The 'created_at' column stores the timestamp for when the member
+          profile was created. [GenAI Description]
+      - name: updated_at
+        description: The 'updated_at' column stores a timestamp for when the member
+          profile was updated. [GenAI Description]
+      - name: people_manager
+        description: The 'people_manager' column indicates whether the member has
+          manager-level responsibility. [GenAI Description]
+      - name: manages_other_managers
+        description: The column "manages_other_managers" stores a boolean where 1
+          = true and 0 = false, indicating whether a person is a manager managing
+          other managers. [GenAI Description]
+      - name: next_member_nps_at
+        description: '"next_member_nps_at" is a timestamp that records when the member
+          should be asked to provide NPS feedback. [GenAI Description]'
+      - name: career_topic_theme_id
+        description: The 'career_topic_theme_id' column contains the ID number of
+          the selected career topic theme. [GenAI Description]
+      - name: career_development_topic_id
+        description: The column 'career_development_topic_id' identifies the specific
+          career development topic selected by the user. [GenAI Description]
+      - name: career_topic_theme_picked_at
+        description: "'career_topic_theme_picked_at' is a timestamp field containing\
+          \ the date and time when a career topic theme was chosen by a member. [GenAI\
+          \ Description]"
+      - name: career_activity_id
+        description: The 'career_activity_id' column refers to an activity related
+          to a member's career development topic. [GenAI Description]
+      - name: coach_race_ethnicity_preferences
+        description: This column stores the race/ethnicity preferences indicated by
+          members when selecting a coach. [GenAI Description]
+      - name: coach_gender_preferences
+        description: This column holds the gender preference provided by members for
+          finding a coach. [GenAI Description]
+      - name: show_product_market_fit_prompt
+        description: This column indicates whether a prompt to fill out a survey for
+          product market fit should be displayed. [GenAI Description]
+      - name: self_reported_organization_name
+        description: The 'self_reported_organization_name' column contains values
+          for a member's organization as they have self-reported it. [GenAI Description]

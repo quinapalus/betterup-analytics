@@ -1,0 +1,98 @@
+version: 2
+models:
+  - name: fact_qualitative_item_response
+    description: >
+      Fact table for qualitative item responses currently scoped across member onboarding, post-session assessments,
+      program satisfaction, coach observations (at Reflection Point and Post-Session Feedback), and one-month surveys. This table should be used to present sanitized
+      qualitative responses in the `star` level when joined on `dim` level. Note that
+      responses are sanitized so that empty responses are not surfaced, but they are
+      left intact from the original submission (i.e. some responses might be in non-English
+      language or in non-Latin alphabet.)
+
+    columns:
+      - name: id
+        description: Surrogate Primary key for this table.
+        tests:
+          - unique
+          - not_null
+      
+      - name: member_key
+        description: Foreign key to conformed Member dimension.
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_members')
+              field: member_key
+
+      - name: deployment_key
+        description: >
+          Foreign key to conformed Deployment dimension for the deployment associated
+          with the item response.
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_deployment')
+              field: deployment_key
+
+      - name: member_deployment_key
+        description: Foreign key to conformed Member-Deployment dimension.
+        tests:
+          - not_null
+
+      - name: account_key
+        description: >
+          Foreign key to conformed Account dimension for the account the member was
+          associated with on the day the current assessment was submitted.
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_account')
+              field: account_key
+
+      - name: date_key
+        description: >
+         Foreign key to conformed Date dimension for the date the current
+         assessment was submitted.
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_date')
+              field: date_key
+
+      - name: assessment_item_key
+        description: >
+          Foreign key to conformed Assessment Item dimension associated with
+          the submitted assessment.
+        tests:
+          - not_null
+
+      - name: assessment_item_category
+        description: >
+          Assessment item category associated with the assessment item key. This
+          category would usually be kept in the dimension, but because item keys
+          (such as feedback) might not be unique to only one assessment, the column
+          is included here to allow specificity when joining in the `star` level.
+        tests:
+          - not_null
+          - accepted_values:
+              values: [Post-Session Satisfaction, Member Onboarding, One Month Survey, Member Satisfaction, Coach Observation]
+
+      - name: assessment_item_response
+        description: >
+          Assessment item response associated with the assessment item key.
+        tests:
+          - not_null
+
+      - name: assessment_item_response_word_count
+        description: >
+          Number of words in the associated item response. Calculated by counting
+          whitespace characters so will not be accurate for some character-based
+          languages, e.g. Chinese.
+        tests:
+          - not_null
+
+      - name: app_assessment_id
+        description: >
+          Foreign key to the assessment that's associated with the item response.
+        tests:
+          - not_null

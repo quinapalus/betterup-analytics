@@ -1,0 +1,97 @@
+version: 2
+
+models:
+  - name: fact_assessment_item_responses
+    description: >
+      Assessment item responses and their metadata. Does not contain construct scoring: rather, these are the
+      granular items which construct scores would be made from.
+      Read more here: https://betterup.atlassian.net/wiki/spaces/DATA/pages/3101360450/fact+assessment+item+responses
+
+    columns:
+      - name: primary_key
+        description: Unique surrogate key from assessment_id and, depending on the version of the assessment item logic, either assessment_item_id or item_key
+        tests:
+          - not_null
+          - unique
+
+      - name: assessment_id
+        description: "FK to assessments table"
+        tests:
+          - not_null
+
+      - name: item_key
+        description: "Assessment item key, originally stored in JSON response of assessment. Or the dimension_key with 'dimension_score_' prefixed."
+        tests:
+          - not_null
+
+      - name: item_response
+        description: "Selected response to assessment item, which could be a number (ex: 1-5) or a string (ex: true)"
+
+      - name: prompt
+        description: "The prompt that is configured to show to the user when they answer this assessment item"
+
+      - name: assessment_item_id
+        description: ""
+
+      - name: assessment_item_uuid
+        description: ""
+
+      - name: response_set_key
+        description: ""
+
+      - name: response_set_type
+        description: ""
+
+      - name: response_set_number_of_options
+        description: ""
+
+      - name: response_option_label
+        description: "The label affixed to the item response that the user selected. Ex: Agree"
+
+      - name: response_set_key
+        description: "The key to the response set options. Ex: Progress_10"
+
+      - name: html_label
+        description: "Deprecated: This field is only populated for assessment items on assessments submitted before 9/2022, and even then only some assessment types. Use prompt instead."
+
+      - name: is_response_set_improved_5
+        description: "Yes if Response Set for the item is Improved-5 (1: Decreased, 2: Somewhat decreased, 3: Stayed the same, 4: Somewhat improved, 5: Significantly improved)"
+
+      - name: is_response_set_recommend_5
+        description: "Yes if Response Set for the item is Recommend-5 (1: Would not recommend, 2: Slightly recommend, 3: Somewhat recommend, 4: Recommend, 5: Highly recommend)"
+
+      - name: is_response_set_agree_5_to
+        description: "Yes if Response Set for the item is Agree-5 (1: Strongly disagree, 2: Disagree, 3: Neither disagree nor agree, 4: Agree, 5: Strongly agree) and value is 4 or 5"
+        tests:
+          - dbt_expectations.expect_column_distinct_values_to_contain_set:
+              #test that these values actually exist at least once
+              value_set: ['true','false']
+
+      - name: is_response_set_nps_10
+        description: "True if the item is 11-point NPS item."
+        tests:
+          - dbt_expectations.expect_column_distinct_values_to_contain_set:
+              #test that these values actually exist at least once
+              value_set: ['true','false']
+
+      - name: is_response_set_agree_5
+        description: "True if Response Set for the item is Agree-5 (1: Strongly disagree, 2: Disagree, 3: Neither disagree nor agree, 4: Agree, 5: Strongly agree)"
+        tests:
+          - dbt_expectations.expect_column_distinct_values_to_contain_set:
+              #test that these values actually exist at least once
+              value_set: ['true','false']
+
+      - name: response_category
+        description: "Sanitized response category based on item type and member response. For NPS items, response categories are Promoter, Neutral, and Detractor. For agreement-5 scale
+                      items, response categories are Agree and Disagree-Neutral. This field is typically used to filter or aggregate data in
+                      the visualization layer. Values are NULL if response category mapping is not defined for the given item."
+        tests:
+          - dbt_expectations.expect_column_distinct_values_to_contain_set:
+              #test that these values actually exist at least once
+              value_set: ['Agree','Disagree-Neutral','Promoter','Neutral','Detractor']
+      
+      - name: nps_promoter_flag
+        description: "Flag for promoters"
+
+      - name: nps_detractor_flag
+        description: "Flag for detractors"

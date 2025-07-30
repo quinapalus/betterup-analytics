@@ -1,0 +1,49 @@
+version: 2
+models:
+  - name: dei_member_attributes_sanitized
+    description: >
+      This table contains mapping of external member attribute categories to BetterUp's
+      internal ones. Attribute values with insufficient number of members in this
+      table
+      are masked for data privacy and protection, and any internal categories whose
+      grouped
+      masked attribute values don't have a sufficient number of members are excluded.
+
+    columns:
+      - name: id
+        description: Surrogate primary key for this table. Combination of member_id,
+          organization_id, and category_name_partner, and category_name.
+        tests:
+          - unique
+          - not_null
+
+      - name: member_id
+        description: Denormalized foreign key to associated member.
+        tests:
+          - not_null
+
+      - name: organization_id
+        description: Denormalized foreign key to associated organization.
+        tests:
+          - not_null
+
+      - name: category_name_partner
+        description: >
+          Partner-specific, external member attribute category.
+        tests:
+          - not_null
+
+      - name: category_name
+        description: >
+          BetterUp-specific, internal member attribute category mapped to
+          the partner's external member attribute category.
+        tests:
+          - not_null
+
+      - name: value
+        description: >
+          Corresponding member attribute value. If 'other', the original
+          attribute value did not have a sufficient number of members and was
+          therefore masked for data privacy and protection.
+        tests:
+          - not_null

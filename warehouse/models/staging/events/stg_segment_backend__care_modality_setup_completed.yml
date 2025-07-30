@@ -1,0 +1,28 @@
+version: 2
+
+models:
+  - name: stg_segment_backend__care_modality_setup_completed
+    description: This DBT model, stg_segment_backend__care_modality_setup_completed,
+      contains data about completed care modality setup events for users, stored in
+      fields including `id`, `user_id`, `event`, and `timestamp`. It uses the DBT
+      source from the parent model, 'segment_backend' and the raw SQL code to structure
+      the data accordingly. [GenAI Description]
+    columns:
+      - name: id
+        description: The 'id' column is an identifier for each individual row in the
+          table. [GenAI Description]
+        tests:
+          - unique
+          - not_null
+
+      - name: user_id
+        description: The 'user_id' column contains the unique identifier of the user
+          who completed the setup of a care modality. [GenAI Description]
+
+      - name: event
+        description: The 'event' column contains data about the type of completed
+          care modality setup. [GenAI Description]
+
+      - name: timestamp
+        description: The 'timestamp' column denotes the specific time the event occurred.
+          [GenAI Description]

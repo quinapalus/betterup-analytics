@@ -1,0 +1,15 @@
+version: 2
+
+models:
+  - name: dim_subscriptions
+    meta:
+      owner: "adrian.lievano@betterup.co"
+    description: >
+      A table tracking all subscriptions from Stripe
+
+    columns:
+      - name: stripe_subscription_id
+        description: Primary key
+        tests:
+          - unique
+          - not_null

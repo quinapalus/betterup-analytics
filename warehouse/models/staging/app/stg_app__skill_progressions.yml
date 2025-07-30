@@ -1,0 +1,35 @@
+version: 2
+
+models:
+  - name: stg_app__skill_progressions
+    description: The stg_app__skill_progressions model stores member (user_id) skill
+      progress information, such as the skill_id and total_minutes achieved, for data
+      stored in raw.stitch_app.skill_progressions. The model includes information
+      related to the time of record creation and last update. [GenAI Description]
+    columns:
+      - name: skill_progression_id
+        description: The 'skill_progression_id' column contains unique identifiers
+          for each skill progression record. [GenAI Description]
+        tests:
+          - unique
+          - not_null
+
+      - name: member_id
+        description: The 'member_id' column refers to the unique user identifier corresponding
+          to each progression. [GenAI Description]
+
+      - name: skill_id
+        description: The 'skill_id' column indicates the unique ID for each skill
+          associated with the member's skill progression. [GenAI Description]
+
+      - name: total_minutes
+        description: The 'total_minutes' column stores the total amount of time spent
+          on a given skill. [GenAI Description]
+
+      - name: created_at
+        description: The 'created_at' column stores the timestamp of when the data
+          was first inserted into the table. [GenAI Description]
+
+      - name: updated_at
+        description: The 'updated_at' column stores a timestamp of the last update
+          of a skill progression. [GenAI Description]

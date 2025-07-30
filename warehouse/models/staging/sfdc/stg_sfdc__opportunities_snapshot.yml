@@ -1,0 +1,13 @@
+version: 2
+
+models:
+  - name: stg_sfdc__opportunities_snapshot
+    columns:
+      - name: history_primary_key
+        tests:
+          - unique
+          - not_null
+
+      - name: sfdc_opportunity_id
+        tests:
+          - not_null

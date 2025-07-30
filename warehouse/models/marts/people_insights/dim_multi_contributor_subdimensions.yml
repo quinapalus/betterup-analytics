@@ -1,0 +1,27 @@
+version: 2
+
+models:
+  - name: dim_multi_contributor_subdimensions
+    description: DBT Model `dim_multi_contributor_subdimensions` is a dimensional
+      representation of the "Multi Contributor Subdimensions" data sourced from a
+      Google Sheet. It contains assessment subdimension keys, names, and a version
+      of the Whole Person Model related to each subdimension. Relational connections
+      to other models in the data warehouse are also made. [GenAI Description]
+    columns:
+      - name: primary_key
+        description: The 'primary_key' column contains a unique identifier for each
+          row in the dataset. [GenAI Description]
+        tests:
+          - unique
+          - not_null
+
+      - name: assessment_subdimension_key
+        description: Application score key associated with the subdimension. Only
+          unique within scope of a single WPM version.
+
+      - name: subdimension_name
+        description: Name of the subdimension
+
+      - name: whole_person_model_version
+        description: WPM version for the associated subdimension, i.e. WPM 1.0, WPM
+          2.0.

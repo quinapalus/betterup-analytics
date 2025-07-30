@@ -1,0 +1,37 @@
+version: 2
+models:
+  - name: stg_app__user_groups
+    description: This model contains user group information including group_id, member_id,
+      role, and timestamps. It can be used to manage user access to the app and to
+      track the history of user membership in a given group. [GenAI Description]
+    columns:
+      - name: user_group_id
+        description: The 'user_group_id' column is a unique identifier for each record
+          of a user's group membership. [GenAI Description]
+        tests:
+          - unique
+          - not_null
+
+      - name: member_id
+        description: The 'member_id' column is the identifier for the specific user
+          associated with a particular user group. [GenAI Description]
+
+      - name: group_id
+        description: The 'group_id' column contains the unique ID corresponding to
+          the group a user belongs to. [GenAI Description]
+
+      - name: role
+        description: The 'role' column stores the role (e.g. admin, member) a user
+          has in a given group. [GenAI Description]
+
+      - name: migration_version
+        description: "'migration_version' is a version control column tracking updates\
+          \ to the user groups data. [GenAI Description]"
+
+      - name: created_at
+        description: The 'created_at' column stores the date and time when a user
+          group membership was created. [GenAI Description]
+
+      - name: updated_at
+        description: The column "updated_at" holds a timestamp value for when the
+          user group was last changed. [GenAI Description]

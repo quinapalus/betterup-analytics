@@ -1,0 +1,67 @@
+version: 2
+models:
+  - name: ml_member_motivation_topics
+    description: >
+      This table is the output of the Member Motivations [NLP classifier](https://github.com/betterup/kubeflow/tree/zero_shot_scores/nlp_tagging/pipelines/nlp_tagging).  The
+      classifier runs on a daily basis, processing any new motivations and writing
+      output to this table. The table has one row per every motivation-"topic theme"
+      pair,  with magnitude of the association represented by the "relative_distance"
+      field. Note that results in this table need to be filtered against a relevance
+      threshold in  downstream logic before reporting on metrics such as "35% of members
+      are working on Influence".
+
+    columns:
+      - name: member_topic_theme_key
+        description: Primary key -- composite of member key and topic theme id
+        tests:
+          - not_null
+          - unique
+
+      - name: member_key
+        description: Foreign key to conformed Member dimension.
+        tests:
+          - not_null
+
+      - name: topic_theme_id
+        description: >
+          Foreign key to associated Topic Theme.
+        tests:
+          - not_null
+          - relationships:
+              to: ref('stg_app__topic_themes')
+              field: topic_theme_id
+
+      - name: topic_theme_rank
+        description: >
+          Rank of the associated topic theme for a given motivation. The "primary"
+          theme will have rank = 1, next closest theme will have rank = 2, and so
+          on.
+        tests:
+          - not_null
+
+      - name: relative_distance
+        description: >
+          Numerical value representing the proximity between the motivation and
+          the associated topic theme. Smaller numbers represent closer proximity.
+          The primary theme always has `relative_distance = 0`. For technical details,
+          refer to the [nlp package](https://github.com/betterup/kubeflow/tree/zero_shot_scores/nlp_tagging/pipelines/nlp_tagging).
+        tests:
+          - not_null
+
+      - name: relative_distance_to_next_topic_theme
+        description: >
+          Convenience field that calculates the delta in `relative_distance` between
+          the associated theme and the next closest theme for a given motivation.
+          Useful if you're trying to filter for motivations with the largest delta
+          between the primary "topic theme" and next closest (secondary) topic theme.
+
+      - name: classified_date_key
+        description: >
+          Foreign key to conformed Date dimension for when the motivation was
+          classified. Note this does not represent the date when the motivation
+          was submitted by the member.
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_date')
+              field: date_key

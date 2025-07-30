@@ -1,0 +1,18 @@
+#!/bin/bash
+
+set -e
+set -o pipefail
+
+(
+  cd packages/target-s3
+  poetry install
+)
+
+(
+  cd packages/bu-zendesk-to-s3
+  poetry install
+  poetry run create-zendesk-configs
+  poetry run tap-zendesk --config zendesk.json --catalog catalog.json | (cd ../target-s3 && poetry run target-s3 -b "${ZENDESK_AWS_BUCKET}")
+)
+
+echo 'Done.'

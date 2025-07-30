@@ -1,0 +1,21 @@
+version: 2
+
+models:
+  - name: stg_csv__m49_geoscheme
+    description: ""
+    columns:
+      - name: country_name
+        description: ""
+
+      - name: country_code_iso
+        description: ""
+        tests:
+          - not_null
+          - unique
+
+      - name: region_m49
+        description: ""
+
+      - name: subregion_m49
+        description: ""
+

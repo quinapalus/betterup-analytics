@@ -1,0 +1,74 @@
+version: 2
+models:
+  - name: fact_coach_qualitative_item_response
+    description: >
+      Fact table for coach qualitative responses. Grain is one row per coach response
+      to given item prompt. For now, this table contains only coach qualitative feedback
+      for the NPS assessment, but should also be used to expand on other feedback,
+      such as coaches' qualitative feedback in RPs.
+
+    columns:
+      - name: primary_key
+        description: ""
+        tests:
+          - unique
+          - not_null
+      - name: date_key
+        description: Foreign key to conformed Date dimension.
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_date')
+              field: date_key
+
+      - name: coach_app_coach_id
+        description: Foreign key to the associated coach.
+        tests:
+          - not_null
+          - relationships:
+              to: ref('int_app__users')
+              field: user_id
+
+      - name: assessment_item_key
+        description: Foreign key to conformed Assessment Item dimension.
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_assessment_item')
+              field: assessment_item_key
+
+      - name: assessment_item_category
+        description: General category of the given assessment item.
+        tests:
+          - not_null
+          - accepted_values:
+              values: [Coach Satisfaction]
+
+      - name: assessment_item_response
+        description: >
+          Coaches' qualitative feedback.
+        tests:
+          - not_null
+
+      - name: assessment_item_response_word_count
+        description: >
+          Number of words in the associated item response. Calculated by counting
+          whitespace characters so will not be accurate for some character-based
+          languages, e.g. Chinese.
+        tests:
+          - not_null
+
+      - name: app_assessment_id
+        description: >
+          Foreign key to the assessment that's associated with the coach response.
+        tests:
+          - not_null
+          - relationships:
+              to: ref('int_app__assessments')
+              field: assessment_id
+
+      - name: app_assessment_submitted_at
+        description: >
+          UTC timestamp denoting when the assessment was submitted.
+        tests:
+          - not_null

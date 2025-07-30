@@ -1,0 +1,17 @@
+version: 2
+
+models:
+  - name: fact_monthly_creation_date_by_month_pivots_forecasted_ltv
+  
+    meta:
+      owner: "adrian.lievano@betterup.co"
+    description: >
+      A preaggregated, merged report to aide in the calculation of LTV 
+      at the subscription created month date with monthly pivots by stripe plan id as a 
+      function of X months away from the creation date. Allows forecasted LTV calculations. 
+    columns:
+      - name: _id
+        description: Primary key
+        tests:
+          - unique
+          - not_null

@@ -1,0 +1,13 @@
+version: 2
+
+models:
+  - name: stg_app__session_credits
+    description: Tracks any credits given to users for a session. Includes canceled
+      sessions and flex sessions.
+    columns:
+      - name: session_credit_id
+        description: The 'session_credit_id' column stores the unique identifier for
+          a session credit entry. [GenAI Description]
+        tests:
+          - unique
+          - not_null

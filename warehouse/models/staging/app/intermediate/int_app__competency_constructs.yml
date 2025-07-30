@@ -1,0 +1,42 @@
+version: 2
+
+models:
+  - name: int_app__competency_constructs
+    description: ""
+    columns:
+      - name: competency_construct_id
+        description: "Primary key"
+        tests:
+          - unique
+          - not_null
+
+      - name: competency_mapping_id
+        description: ""
+
+      - name: competency_framework
+        description: ""
+
+      - name: competency_framework_created_at
+        description: ""
+
+      - name: organization_id
+        description: ""
+
+      - name: competency_id
+        description: ""
+
+      - name: competency_name
+        description: ""
+
+      - name: competency_description
+        description: ""
+
+      - name: competency_key
+        description: ""
+
+      - name: wpm_subdimensions
+        description: ""
+
+      - name: competency_construct_key
+        description: ""
+        

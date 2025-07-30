@@ -1,0 +1,15 @@
+version: 2
+
+models:
+
+  - name: event_lead_reached_mql
+    columns:
+      - name: "associated_record_id"
+        tests:
+          - unique
+          - not_null
+    tests:
+      - dbt_utils.expression_is_true:
+          expression: "sfdc_opportunity_id is null"
+          #for lead based events (Inquiry, MQL, FM, SAL) opportunity ID should always be null
+          #if it is not null there will be issues downstream in looker

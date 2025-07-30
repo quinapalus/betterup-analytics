@@ -1,0 +1,62 @@
+version: 2
+models:
+
+  - name: stg_app__manager_feedback_flows
+    description: Model representing the manager feedback flow.
+
+    columns:
+      - name: manager_feedback_flow_id
+        description: Unique identifer of the Manager Feedback Flow record.
+        tests:
+          - not_null
+          - unique
+
+      - name: member_id
+        description: Unique identifer of the Member.
+        tests:
+          - not_null
+
+      - name: manager_id
+        description: Unique identifer of the Manager.
+
+      - name: assessment_type_chosen
+        description: >
+          Rails class name of the assessment that  should be sent to the manager upon
+          process initiation.  
+
+      - name: feedback_request_assessment_id
+        description: Assessment ID for the Feedback Request.
+
+      - name: manager_growth_assessment_id
+        description: Assessment ID for the Manager Growth Assessment.
+
+      - name: onboarding_assessment_id
+        description: Assessment ID for the Onboarding Assessment.
+
+      - name: track_assignment_id
+        description: Track Assignment ID.
+
+      - name: growth_due_on
+        description: Time the Growth assessment prompt should be sent to the manager.
+
+      - name: recommendation_due_on
+        description: >
+          Time the Recommendation assessment prompt  should be sent to the manager.
+
+      - name: opted_out_at
+        description: Time the member opted out of the manager feedback flow.
+
+      - name: relationship_ended_at
+        description: >
+          Time the member ended the relationship by removing the  manager or asking
+          for a different manager’s feedback.
+
+      - name: created_at
+        description: When the record was created.
+        tests:
+          - not_null
+
+      - name: updated_at
+        description: When the record was updated.
+        tests:
+          - not_null

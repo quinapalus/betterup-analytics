@@ -1,0 +1,45 @@
+version: 2
+
+models:
+  - name: dim_plans
+    meta:
+      owner: "adrian.lievano@betterup.co"
+    description: >
+      A table tracking all plans from Stripe
+
+    columns:
+      - name: stripe_plan_id
+        description: Primary key
+        tests:
+          - unique
+          - not_null
+
+      - name: stripe_product_id
+        description: Associated product id to the plan
+
+      - name: plan_name
+        description: The column 'plan_name' contains the name of each plan in the
+          subscription service. [GenAI Description]
+
+      - name: amount
+        description: Amount billed per interval, interval_count, and billing schema
+
+      - name: billing_scheme
+        description: "'billing_scheme' is the type of charging plan (e.g. per_usage,\
+          \ subscription, etc.) for a given plan. [GenAI Description]"
+
+      - name: interval
+        description: The 'interval' column contains a string representing the billing
+          interval of a plan, such as yearly or monthly. [GenAI Description]
+
+      - name: interval_count
+        description: interval_count is the number of intervals (days, weeks, months,
+          or years) that a payment in this plan occurs. [GenAI Description]
+
+      - name: is_active
+        description: The 'is_active' column in this model describes whether a plan
+          component is currently active or not. [GenAI Description]
+
+      - name: currency
+        description: The 'currency' column contains the currency code associated with
+          the plan price amount. [GenAI Description]

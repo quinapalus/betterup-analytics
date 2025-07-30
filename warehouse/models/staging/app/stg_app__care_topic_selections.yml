@@ -1,0 +1,31 @@
+version: 2
+models:
+  - name: stg_app__care_topic_selections
+    description: DBT model stg_app__care_topic_selections is a data model that stores
+      relationship data from the care_topic_selections source table. It contains fields
+      for care_topic_selection_id, care_profile_id, care_topic_id, created_at, and
+      updated_at and holds pertinent information regarding the associations between
+      care profiles, topics, and their selections. [GenAI Description]
+    columns:
+      - name: care_topic_selection_id
+        description: "'care_topic_selection_id' is the unique identifier for an individual\
+          \ selection of a care topic by a care profile. [GenAI Description]"
+        tests:
+          - unique
+          - not_null
+
+      - name: care_profile_id
+        description: The 'care_profile_id' column stores the unique identifier of
+          the patient profile linked to the care topic selection. [GenAI Description]
+
+      - name: care_topic_id
+        description: "'care_topic_id' is an ID for a care topic associated with a\
+          \ given care profile. [GenAI Description]"
+
+      - name: created_at
+        description: "'created_at' stores the timestamp for when a care topic was\
+          \ selected. [GenAI Description]"
+
+      - name: updated_at
+        description: The 'updated_at' column stores the latest date and time at which
+          any data about the care topic selection was updated. [GenAI Description]

@@ -1,0 +1,75 @@
+version: 2
+
+models:
+  - name: dbt__reference_population_persisted_construct_scores
+    description: "One row per score in the scores table, fanned out by reference population in the reference_population_constructs table."
+    columns:
+      - name: primary_key
+        description: ""
+        tests:
+          - unique
+          - not_null
+
+      - name: assessment_id
+        description: ""
+
+      - name: construct_id
+        description: ""
+
+      - name: name
+        description: ""
+
+      - name: label_i18n
+        description: ""
+
+      - name: key
+        description: ""
+
+      - name: construct_reference_population_id
+        description: ""
+
+      - name: construct_reference_population_uuid
+        description: ""
+
+      - name: reference_population_id
+        description: ""
+
+      - name: reference_population_subgroup_id
+        description: ""
+
+      - name: assessment_type
+        description: ""
+
+      - name: questions_version
+        description: ""
+
+      - name: type
+        description: ""
+
+      - name: raw_score
+        description: ""
+
+      - name: score_mean
+        description: ""
+
+      - name: score_standard_deviation
+        description: ""
+
+      - name: scale_min_score
+        description: ""
+
+      - name: scale_max_score
+        description: ""
+
+      - name: scale_mean
+        description: ""
+
+      - name: scale_standard_deviation
+        description: ""
+
+      - name: original_scale_score
+        description: ""
+
+      - name: scale_score
+        description: ""
+

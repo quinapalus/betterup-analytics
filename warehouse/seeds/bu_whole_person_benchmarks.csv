@@ -1,0 +1,2151 @@
+whole_person_model_version,industry,employee_level,construct_key,scale_score_mean
+WPM 2.0,,Individual Contributor,alignment,45.79778383521676
+WPM 2.0,,Individual Contributor,authenticity,48.39918100824222
+WPM 2.0,,Individual Contributor,belonging_index,50
+WPM 2.0,,Individual Contributor,coaching,45.76931002554072
+WPM 2.0,,Individual Contributor,cognitive_agility,47.5076078636821
+WPM 2.0,,Individual Contributor,emotional_regulation,47.33308442392358
+WPM 2.0,,Individual Contributor,empathy,48.80432014792659
+WPM 2.0,,Individual Contributor,empowerment,46.85942349626604
+WPM 2.0,,Individual Contributor,encouraging_participation,44.46031168401095
+WPM 2.0,,Individual Contributor,engagement,46.51228504211055
+WPM 2.0,,Individual Contributor,ex_index,46.6599871
+WPM 2.0,,Individual Contributor,focus,48.34710371262161
+WPM 2.0,,Individual Contributor,goal_attainment,47.936254024260776
+WPM 2.0,,Individual Contributor,growth_mindset,46.89652494972696
+WPM 2.0,,Individual Contributor,hope,46.88198390420232
+WPM 2.0,,Individual Contributor,job_performance,49.97931925119246
+WPM 2.0,,Individual Contributor,job_satisfaction,47.8500576
+WPM 2.0,,Individual Contributor,life_satisfaction,47.916086571263904
+WPM 2.0,,Individual Contributor,locus_of_control_internal,49.293484275553276
+WPM 2.0,,Individual Contributor,nutrition,48.335350255280694
+WPM 2.0,,Individual Contributor,optimism,50
+WPM 2.0,,Individual Contributor,organizational_commitment,46.941500390541215
+WPM 2.0,,Individual Contributor,physical_activity,47.75483303719202
+WPM 2.0,,Individual Contributor,problem_solving,46.92724653190635
+WPM 2.0,,Individual Contributor,productivity,48.973084
+WPM 2.0,,Individual Contributor,purpose_and_meaning,47.55502546914931
+WPM 2.0,,Individual Contributor,psychological_safety,50
+WPM 2.0,,Individual Contributor,recognition,46.916643757641324
+WPM 2.0,,Individual Contributor,relationship_building,45.79388844658036
+WPM 2.0,,Individual Contributor,resilience,47.34700930706511
+WPM 2.0,,Individual Contributor,rest,48.872758491455436
+WPM 2.0,,Individual Contributor,sales_excellence_index,50
+WPM 2.0,,Individual Contributor,self_awareness,48.52604197605136
+WPM 2.0,,Individual Contributor,self_compassion,49.04146670001031
+WPM 2.0,,Individual Contributor,self_efficacy,48.039264357531124
+WPM 2.0,,Individual Contributor,social_connection,48.60496392736553
+WPM 2.0,,Individual Contributor,strategic_planning,47.889630859897885
+WPM 2.0,,Individual Contributor,stress_management,49.5725113
+WPM 2.0,,Individual Contributor,team_feedback,50
+WPM 2.0,,Individual Contributor,team_risk_taking,50
+WPM 2.0,,Individual Contributor,team_agility,50
+WPM 2.0,,Individual Contributor,well_being,50
+WPM 2.0,,Individual Contributor,work_life_balance,52.1535262
+WPM 2.0,,Manager,alignment,54.561153732342866
+WPM 2.0,,Manager,authenticity,51.66527773967519
+WPM 2.0,,Manager,belonging_index,50
+WPM 2.0,,Manager,coaching,54.58721848533639
+WPM 2.0,,Manager,cognitive_agility,52.74309220688459
+WPM 2.0,,Manager,emotional_regulation,52.891175684967806
+WPM 2.0,,Manager,empathy,51.36600640103206
+WPM 2.0,,Manager,empowerment,53.48596306772346
+WPM 2.0,,Manager,encouraging_participation,56.1148084904004
+WPM 2.0,,Manager,engagement,53.92921371292876
+WPM 2.0,,Manager,ex_index,53.8441076
+WPM 2.0,,Manager,focus,51.93110213172676
+WPM 2.0,,Manager,goal_attainment,52.54731935344154
+WPM 2.0,,Manager,growth_mindset,53.4656686362676
+WPM 2.0,,Manager,hope,53.44582913453462
+WPM 2.0,,Manager,job_performance,50.703923794874555
+WPM 2.0,,Manager,job_satisfaction,52.6236739
+WPM 2.0,,Manager,life_satisfaction,52.63095904274909
+WPM 2.0,,Manager,locus_of_control_internal,50.734964361810654
+WPM 2.0,,Manager,nutrition,51.73167870852978
+WPM 2.0,,Manager,optimism,50
+WPM 2.0,,Manager,organizational_commitment,53.60474653345484
+WPM 2.0,,Manager,physical_activity,52.33557109471377
+WPM 2.0,,Manager,problem_solving,53.37516516201138
+WPM 2.0,,Manager,productivity,51.8600488
+WPM 2.0,,Manager,purpose_and_meaning,53.01726391266434
+WPM 2.0,,Manager,psychological_safety,50
+WPM 2.0,,Manager,recognition,53.460540777040094
+WPM 2.0,,Manager,relationship_building,54.65964763997125
+WPM 2.0,,Manager,resilience,53.053641027644744
+WPM 2.0,,Manager,rest,51.172631135114116
+WPM 2.0,,Manager,sales_excellence_index,50
+WPM 2.0,,Manager,self_awareness,51.62830452529121
+WPM 2.0,,Manager,self_compassion,50.8655003519106
+WPM 2.0,,Manager,self_efficacy,52.510485441153435
+WPM 2.0,,Manager,social_connection,51.674237128319255
+WPM 2.0,,Manager,strategic_planning,52.441512652056616
+WPM 2.0,,Manager,stress_management,50.444702
+WPM 2.0,,Manager,team_feedback,50
+WPM 2.0,,Manager,team_risk_taking,50
+WPM 2.0,,Manager,team_agility,50
+WPM 2.0,,Manager,well_being,50
+WPM 2.0,,Manager,work_life_balance,47.8348337
+WPM 2.0,Automotive Industry,,alignment,48.92591823006088
+WPM 2.0,Automotive Industry,,authenticity,48.26538368204097
+WPM 2.0,Automotive Industry,,belonging_index,50
+WPM 2.0,Automotive Industry,,coaching,48.74700408900848
+WPM 2.0,Automotive Industry,,cognitive_agility,49.71075437130305
+WPM 2.0,Automotive Industry,,emotional_regulation,49.418905518345824
+WPM 2.0,Automotive Industry,,empathy,47.80154986574206
+WPM 2.0,Automotive Industry,,empowerment,48.31379390676626
+WPM 2.0,Automotive Industry,,encouraging_participation,49.257884615864235
+WPM 2.0,Automotive Industry,,engagement,49.6968732005446
+WPM 2.0,Automotive Industry,,ex_index,48.3538277
+WPM 2.0,Automotive Industry,,focus,50.66401611471001
+WPM 2.0,Automotive Industry,,goal_attainment,49.432989623480765
+WPM 2.0,Automotive Industry,,growth_mindset,49.40022456463675
+WPM 2.0,Automotive Industry,,hope,49.49227178393772
+WPM 2.0,Automotive Industry,,job_performance,50.069835875871895
+WPM 2.0,Automotive Industry,,job_satisfaction,49.988068
+WPM 2.0,Automotive Industry,,life_satisfaction,48.83352209827977
+WPM 2.0,Automotive Industry,,locus_of_control_internal,49.201174979152675
+WPM 2.0,Automotive Industry,,nutrition,47.654522743933974
+WPM 2.0,Automotive Industry,,optimism,50
+WPM 2.0,Automotive Industry,,organizational_commitment,51.13568900769108
+WPM 2.0,Automotive Industry,,physical_activity,47.17888287115196
+WPM 2.0,Automotive Industry,,problem_solving,49.80933963795479
+WPM 2.0,Automotive Industry,,productivity,50.4774027
+WPM 2.0,Automotive Industry,,purpose_and_meaning,47.534424106671175
+WPM 2.0,Automotive Industry,,psychological_safety,50
+WPM 2.0,Automotive Industry,,recognition,48.467543504484155
+WPM 2.0,Automotive Industry,,relationship_building,48.04598219588145
+WPM 2.0,Automotive Industry,,resilience,50.86588160295273
+WPM 2.0,Automotive Industry,,rest,47.82720179796964
+WPM 2.0,Automotive Industry,,sales_excellence_index,50
+WPM 2.0,Automotive Industry,,self_awareness,49.00589565113299
+WPM 2.0,Automotive Industry,,self_compassion,48.92335431270161
+WPM 2.0,Automotive Industry,,self_efficacy,50.70613472223157
+WPM 2.0,Automotive Industry,,social_connection,48.58047267327158
+WPM 2.0,Automotive Industry,,strategic_planning,49.68147553938637
+WPM 2.0,Automotive Industry,,stress_management,47.7510406
+WPM 2.0,Automotive Industry,,team_feedback,50
+WPM 2.0,Automotive Industry,,team_risk_taking,50
+WPM 2.0,Automotive Industry,,team_agility,50
+WPM 2.0,Automotive Industry,,well_being,50
+WPM 2.0,Automotive Industry,,work_life_balance,48.651694
+WPM 2.0,Automotive Industry,Individual Contributor,alignment,44.218922880654524
+WPM 2.0,Automotive Industry,Individual Contributor,authenticity,47.3489405228611
+WPM 2.0,Automotive Industry,Individual Contributor,belonging_index,50
+WPM 2.0,Automotive Industry,Individual Contributor,coaching,44.005250503163815
+WPM 2.0,Automotive Industry,Individual Contributor,cognitive_agility,48.386711348922056
+WPM 2.0,Automotive Industry,Individual Contributor,emotional_regulation,47.946818377213056
+WPM 2.0,Automotive Industry,Individual Contributor,empathy,46.31804069093597
+WPM 2.0,Automotive Industry,Individual Contributor,empowerment,44.84489675926044
+WPM 2.0,Automotive Industry,Individual Contributor,encouraging_participation,43.375798128208515
+WPM 2.0,Automotive Industry,Individual Contributor,engagement,46.557903074459894
+WPM 2.0,Automotive Industry,Individual Contributor,ex_index,45.446587
+WPM 2.0,Automotive Industry,Individual Contributor,focus,49.67689382734758
+WPM 2.0,Automotive Industry,Individual Contributor,goal_attainment,48.00527199667974
+WPM 2.0,Automotive Industry,Individual Contributor,growth_mindset,46.39850095693963
+WPM 2.0,Automotive Industry,Individual Contributor,hope,47.01591739781118
+WPM 2.0,Automotive Industry,Individual Contributor,job_performance,49.91281572817642
+WPM 2.0,Automotive Industry,Individual Contributor,job_satisfaction,48.0769672
+WPM 2.0,Automotive Industry,Individual Contributor,life_satisfaction,47.369208022355046
+WPM 2.0,Automotive Industry,Individual Contributor,locus_of_control_internal,49.03177446843853
+WPM 2.0,Automotive Industry,Individual Contributor,nutrition,46.66219251110614
+WPM 2.0,Automotive Industry,Individual Contributor,optimism,50
+WPM 2.0,Automotive Industry,Individual Contributor,organizational_commitment,47.01882419311361
+WPM 2.0,Automotive Industry,Individual Contributor,physical_activity,45.19341330422961
+WPM 2.0,Automotive Industry,Individual Contributor,problem_solving,46.85752909320118
+WPM 2.0,Automotive Industry,Individual Contributor,productivity,48.286407
+WPM 2.0,Automotive Industry,Individual Contributor,purpose_and_meaning,45.35892753613207
+WPM 2.0,Automotive Industry,Individual Contributor,psychological_safety,50
+WPM 2.0,Automotive Industry,Individual Contributor,recognition,44.37142352075412
+WPM 2.0,Automotive Industry,Individual Contributor,relationship_building,43.090387357050645
+WPM 2.0,Automotive Industry,Individual Contributor,resilience,48.337163745286794
+WPM 2.0,Automotive Industry,Individual Contributor,rest,47.09521882607022
+WPM 2.0,Automotive Industry,Individual Contributor,sales_excellence_index,50
+WPM 2.0,Automotive Industry,Individual Contributor,self_awareness,48.378401421470166
+WPM 2.0,Automotive Industry,Individual Contributor,self_compassion,49.18641570228352
+WPM 2.0,Automotive Industry,Individual Contributor,self_efficacy,49.16893357254489
+WPM 2.0,Automotive Industry,Individual Contributor,social_connection,48.248949757883786
+WPM 2.0,Automotive Industry,Individual Contributor,strategic_planning,47.65007922601963
+WPM 2.0,Automotive Industry,Individual Contributor,stress_management,48.4457564
+WPM 2.0,Automotive Industry,Individual Contributor,team_feedback,50
+WPM 2.0,Automotive Industry,Individual Contributor,team_risk_taking,50
+WPM 2.0,Automotive Industry,Individual Contributor,team_agility,50
+WPM 2.0,Automotive Industry,Individual Contributor,well_being,50
+WPM 2.0,Automotive Industry,Individual Contributor,work_life_balance,51.821032
+WPM 2.0,Automotive Industry,Manager,alignment,53.920510036661106
+WPM 2.0,Automotive Industry,Manager,authenticity,49.23782133159843
+WPM 2.0,Automotive Industry,Manager,belonging_index,50
+WPM 2.0,Automotive Industry,Manager,coaching,53.77847785321431
+WPM 2.0,Automotive Industry,Manager,cognitive_agility,51.115696152689
+WPM 2.0,Automotive Industry,Manager,emotional_regulation,50.98093688398772
+WPM 2.0,Automotive Industry,Manager,empathy,49.375701148988426
+WPM 2.0,Automotive Industry,Manager,empowerment,51.994639963488304
+WPM 2.0,Automotive Industry,Manager,encouraging_participation,55.499365389934766
+WPM 2.0,Automotive Industry,Manager,engagement,53.027633762031634
+WPM 2.0,Automotive Industry,Manager,ex_index,51.4387002
+WPM 2.0,Automotive Industry,Manager,focus,51.71145137278705
+WPM 2.0,Automotive Industry,Manager,goal_attainment,50.94794050650182
+WPM 2.0,Automotive Industry,Manager,growth_mindset,52.585352873415154
+WPM 2.0,Automotive Industry,Manager,hope,52.119930918707425
+WPM 2.0,Automotive Industry,Manager,job_performance,50.236449922611904
+WPM 2.0,Automotive Industry,Manager,job_satisfaction,52.0159368
+WPM 2.0,Automotive Industry,Manager,life_satisfaction,50.38730546601253
+WPM 2.0,Automotive Industry,Manager,locus_of_control_internal,49.380925826570326
+WPM 2.0,Automotive Industry,Manager,nutrition,48.70748415188366
+WPM 2.0,Automotive Industry,Manager,optimism,50
+WPM 2.0,Automotive Industry,Manager,organizational_commitment,55.504093423973885
+WPM 2.0,Automotive Industry,Manager,physical_activity,49.285664224240655
+WPM 2.0,Automotive Industry,Manager,problem_solving,52.94150520580943
+WPM 2.0,Automotive Industry,Manager,productivity,52.8022678
+WPM 2.0,Automotive Industry,Manager,purpose_and_meaning,49.84284307459557
+WPM 2.0,Automotive Industry,Manager,psychological_safety,50
+WPM 2.0,Automotive Industry,Manager,recognition,52.813935584979774
+WPM 2.0,Automotive Industry,Manager,relationship_building,53.304362870078705
+WPM 2.0,Automotive Industry,Manager,resilience,53.54910360670824
+WPM 2.0,Automotive Industry,Manager,rest,48.60390878037208
+WPM 2.0,Automotive Industry,Manager,sales_excellence_index,50
+WPM 2.0,Automotive Industry,Manager,self_awareness,49.67172965042897
+WPM 2.0,Automotive Industry,Manager,self_compassion,48.6442199257929
+WPM 2.0,Automotive Industry,Manager,self_efficacy,52.33725854908852
+WPM 2.0,Automotive Industry,Manager,social_connection,48.93225157126963
+WPM 2.0,Automotive Industry,Manager,strategic_planning,51.836989753773494
+WPM 2.0,Automotive Industry,Manager,stress_management,47.0138778
+WPM 2.0,Automotive Industry,Manager,team_feedback,50
+WPM 2.0,Automotive Industry,Manager,team_risk_taking,50
+WPM 2.0,Automotive Industry,Manager,team_agility,50
+WPM 2.0,Automotive Industry,Manager,well_being,50
+WPM 2.0,Automotive Industry,Manager,work_life_balance,45.2887102
+WPM 2.0,Education Industry,,alignment,49.02983400263097
+WPM 2.0,Education Industry,,authenticity,48.79275287815607
+WPM 2.0,Education Industry,,belonging_index,50
+WPM 2.0,Education Industry,,coaching,48.45096391328474
+WPM 2.0,Education Industry,,cognitive_agility,48.80929163861962
+WPM 2.0,Education Industry,,emotional_regulation,48.46439881427054
+WPM 2.0,Education Industry,,empathy,51.13905273461179
+WPM 2.0,Education Industry,,empowerment,50.38143790898977
+WPM 2.0,Education Industry,,encouraging_participation,48.03155830604442
+WPM 2.0,Education Industry,,engagement,50.3206070433262
+WPM 2.0,Education Industry,,ex_index,51.3937519
+WPM 2.0,Education Industry,,focus,47.84284100859476
+WPM 2.0,Education Industry,,goal_attainment,49.258878137145885
+WPM 2.0,Education Industry,,growth_mindset,47.15231386853491
+WPM 2.0,Education Industry,,hope,49.04238474237112
+WPM 2.0,Education Industry,,job_performance,52.06368323313452
+WPM 2.0,Education Industry,,job_satisfaction,50.4233761
+WPM 2.0,Education Industry,,life_satisfaction,51.91220611104233
+WPM 2.0,Education Industry,,locus_of_control_internal,48.79901397208819
+WPM 2.0,Education Industry,,nutrition,50.819524539715694
+WPM 2.0,Education Industry,,optimism,50
+WPM 2.0,Education Industry,,organizational_commitment,49.68153361501626
+WPM 2.0,Education Industry,,physical_activity,49.96544534784859
+WPM 2.0,Education Industry,,problem_solving,47.721981813448274
+WPM 2.0,Education Industry,,productivity,49.736366
+WPM 2.0,Education Industry,,purpose_and_meaning,56.23798606820386
+WPM 2.0,Education Industry,,psychological_safety,50
+WPM 2.0,Education Industry,,recognition,48.033316812410916
+WPM 2.0,Education Industry,,relationship_building,49.253274187982605
+WPM 2.0,Education Industry,,resilience,47.34203273655781
+WPM 2.0,Education Industry,,rest,52.91746171326234
+WPM 2.0,Education Industry,,sales_excellence_index,50
+WPM 2.0,Education Industry,,self_awareness,51.25599100614555
+WPM 2.0,Education Industry,,self_compassion,48.818781175042574
+WPM 2.0,Education Industry,,self_efficacy,48.55678774888223
+WPM 2.0,Education Industry,,social_connection,51.49268092329278
+WPM 2.0,Education Industry,,strategic_planning,49.95894409377869
+WPM 2.0,Education Industry,,stress_management,49.7856167
+WPM 2.0,Education Industry,,team_feedback,50
+WPM 2.0,Education Industry,,team_risk_taking,50
+WPM 2.0,Education Industry,,team_agility,50
+WPM 2.0,Education Industry,,well_being,50
+WPM 2.0,Education Industry,,work_life_balance,53.1491019
+WPM 2.0,Education Industry,Individual Contributor,alignment,46.47691027857036
+WPM 2.0,Education Industry,Individual Contributor,authenticity,47.81741725398756
+WPM 2.0,Education Industry,Individual Contributor,belonging_index,50
+WPM 2.0,Education Industry,Individual Contributor,coaching,44.99427853244894
+WPM 2.0,Education Industry,Individual Contributor,cognitive_agility,46.87543684506347
+WPM 2.0,Education Industry,Individual Contributor,emotional_regulation,46.73463429242611
+WPM 2.0,Education Industry,Individual Contributor,empathy,50.68899572528657
+WPM 2.0,Education Industry,Individual Contributor,empowerment,47.93462747918513
+WPM 2.0,Education Industry,Individual Contributor,encouraging_participation,44.13208097834131
+WPM 2.0,Education Industry,Individual Contributor,engagement,48.62571169959741
+WPM 2.0,Education Industry,Individual Contributor,ex_index,49.7731896
+WPM 2.0,Education Industry,Individual Contributor,focus,47.17308472521327
+WPM 2.0,Education Industry,Individual Contributor,goal_attainment,48.050673488150615
+WPM 2.0,Education Industry,Individual Contributor,growth_mindset,44.68935455804499
+WPM 2.0,Education Industry,Individual Contributor,hope,47.504039602254785
+WPM 2.0,Education Industry,Individual Contributor,job_performance,52.64140616921825
+WPM 2.0,Education Industry,Individual Contributor,job_satisfaction,49.561259
+WPM 2.0,Education Industry,Individual Contributor,life_satisfaction,50.98933709753537
+WPM 2.0,Education Industry,Individual Contributor,locus_of_control_internal,48.80104358347906
+WPM 2.0,Education Industry,Individual Contributor,nutrition,50.052836541850496
+WPM 2.0,Education Industry,Individual Contributor,optimism,50
+WPM 2.0,Education Industry,Individual Contributor,organizational_commitment,48.1463253974095
+WPM 2.0,Education Industry,Individual Contributor,physical_activity,48.9569943840238
+WPM 2.0,Education Industry,Individual Contributor,problem_solving,44.72622689723221
+WPM 2.0,Education Industry,Individual Contributor,productivity,49.7958169
+WPM 2.0,Education Industry,Individual Contributor,purpose_and_meaning,55.77698407160755
+WPM 2.0,Education Industry,Individual Contributor,psychological_safety,50
+WPM 2.0,Education Industry,Individual Contributor,recognition,45.361831309394034
+WPM 2.0,Education Industry,Individual Contributor,relationship_building,46.91149731972662
+WPM 2.0,Education Industry,Individual Contributor,resilience,45.64242812593042
+WPM 2.0,Education Industry,Individual Contributor,rest,52.74298354279123
+WPM 2.0,Education Industry,Individual Contributor,sales_excellence_index,50
+WPM 2.0,Education Industry,Individual Contributor,self_awareness,50.21375552941577
+WPM 2.0,Education Industry,Individual Contributor,self_compassion,47.827010624142254
+WPM 2.0,Education Industry,Individual Contributor,self_efficacy,46.95478699708345
+WPM 2.0,Education Industry,Individual Contributor,social_connection,50.835367004027766
+WPM 2.0,Education Industry,Individual Contributor,strategic_planning,48.37424669022353
+WPM 2.0,Education Industry,Individual Contributor,stress_management,49.4700498
+WPM 2.0,Education Industry,Individual Contributor,team_feedback,50
+WPM 2.0,Education Industry,Individual Contributor,team_risk_taking,50
+WPM 2.0,Education Industry,Individual Contributor,team_agility,50
+WPM 2.0,Education Industry,Individual Contributor,well_being,50
+WPM 2.0,Education Industry,Individual Contributor,work_life_balance,54.1250601
+WPM 2.0,Education Industry,Manager,alignment,53.922324713006496
+WPM 2.0,Education Industry,Manager,authenticity,50.661911927355106
+WPM 2.0,Education Industry,Manager,belonging_index,50
+WPM 2.0,Education Industry,Manager,coaching,55.07544742410838
+WPM 2.0,Education Industry,Manager,cognitive_agility,52.515382237221466
+WPM 2.0,Education Industry,Manager,emotional_regulation,51.77936540512513
+WPM 2.0,Education Industry,Manager,empathy,52.00155391962984
+WPM 2.0,Education Industry,Manager,empowerment,55.07057028887474
+WPM 2.0,Education Industry,Manager,encouraging_participation,55.50462004357343
+WPM 2.0,Education Industry,Manager,engagement,53.56874941675457
+WPM 2.0,Education Industry,Manager,ex_index,54.4994406
+WPM 2.0,Education Industry,Manager,focus,49.126379707294156
+WPM 2.0,Education Industry,Manager,goal_attainment,51.57431355957198
+WPM 2.0,Education Industry,Manager,growth_mindset,51.87239439151991
+WPM 2.0,Education Industry,Manager,hope,51.990510154986
+WPM 2.0,Education Industry,Manager,job_performance,50.956519681273754
+WPM 2.0,Education Industry,Manager,job_satisfaction,52.0755602
+WPM 2.0,Education Industry,Manager,life_satisfaction,53.68081675652397
+WPM 2.0,Education Industry,Manager,locus_of_control_internal,48.7951243710077
+WPM 2.0,Education Industry,Manager,nutrition,52.288825745999134
+WPM 2.0,Education Industry,Manager,optimism,50
+WPM 2.0,Education Industry,Manager,organizational_commitment,52.62364734616465
+WPM 2.0,Education Industry,Manager,physical_activity,51.89806751195086
+WPM 2.0,Education Industry,Manager,problem_solving,53.46312596123985
+WPM 2.0,Education Industry,Manager,productivity,49.6224326
+WPM 2.0,Education Industry,Manager,purpose_and_meaning,57.12146251701236
+WPM 2.0,Education Industry,Manager,psychological_safety,50
+WPM 2.0,Education Industry,Manager,recognition,53.15302245940293
+WPM 2.0,Education Industry,Manager,relationship_building,53.74111746576424
+WPM 2.0,Education Industry,Manager,resilience,50.599200073927314
+WPM 2.0,Education Industry,Manager,rest,53.25183630508739
+WPM 2.0,Education Industry,Manager,sales_excellence_index,50
+WPM 2.0,Education Industry,Manager,self_awareness,53.253358706506646
+WPM 2.0,Education Industry,Manager,self_compassion,50.71943655356914
+WPM 2.0,Education Industry,Manager,self_efficacy,51.62690446342455
+WPM 2.0,Education Industry,Manager,social_connection,52.752374745515326
+WPM 2.0,Education Industry,Manager,strategic_planning,52.995900212983834
+WPM 2.0,Education Industry,Manager,stress_management,50.3903775
+WPM 2.0,Education Industry,Manager,team_feedback,50
+WPM 2.0,Education Industry,Manager,team_risk_taking,50
+WPM 2.0,Education Industry,Manager,team_agility,50
+WPM 2.0,Education Industry,Manager,well_being,50
+WPM 2.0,Education Industry,Manager,work_life_balance,51.2787498
+WPM 2.0,Energy Industry,,alignment,49.69121851998757
+WPM 2.0,Energy Industry,,authenticity,48.82850376612023
+WPM 2.0,Energy Industry,,belonging_index,50
+WPM 2.0,Energy Industry,,coaching,49.23107198977491
+WPM 2.0,Energy Industry,,cognitive_agility,50.539529455127784
+WPM 2.0,Energy Industry,,emotional_regulation,49.77775146538031
+WPM 2.0,Energy Industry,,empathy,47.91619922006232
+WPM 2.0,Energy Industry,,empowerment,52.479387541551894
+WPM 2.0,Energy Industry,,encouraging_participation,50.23146793077263
+WPM 2.0,Energy Industry,,engagement,51.120511343214226
+WPM 2.0,Energy Industry,,ex_index,50.3741911
+WPM 2.0,Energy Industry,,focus,49.310945667889044
+WPM 2.0,Energy Industry,,goal_attainment,51.33345285713572
+WPM 2.0,Energy Industry,,growth_mindset,49.605295793328295
+WPM 2.0,Energy Industry,,hope,51.208598742586744
+WPM 2.0,Energy Industry,,job_performance,52.668516203334896
+WPM 2.0,Energy Industry,,job_satisfaction,51.8529588
+WPM 2.0,Energy Industry,,life_satisfaction,51.37111276767615
+WPM 2.0,Energy Industry,,locus_of_control_internal,50.6605850448588
+WPM 2.0,Energy Industry,,nutrition,50.46017796033414
+WPM 2.0,Energy Industry,,optimism,50
+WPM 2.0,Energy Industry,,organizational_commitment,51.13298158460872
+WPM 2.0,Energy Industry,,physical_activity,49.280320079905444
+WPM 2.0,Energy Industry,,problem_solving,50.619355177695084
+WPM 2.0,Energy Industry,,productivity,48.8132378
+WPM 2.0,Energy Industry,,purpose_and_meaning,50.87787399166619
+WPM 2.0,Energy Industry,,psychological_safety,50
+WPM 2.0,Energy Industry,,recognition,49.393155636296314
+WPM 2.0,Energy Industry,,relationship_building,50.125227699677886
+WPM 2.0,Energy Industry,,resilience,50.43875795217398
+WPM 2.0,Energy Industry,,rest,47.77492088380697
+WPM 2.0,Energy Industry,,sales_excellence_index,50
+WPM 2.0,Energy Industry,,self_awareness,52.31134477823907
+WPM 2.0,Energy Industry,,self_compassion,50.838017884978704
+WPM 2.0,Energy Industry,,self_efficacy,51.787285110962856
+WPM 2.0,Energy Industry,,social_connection,50.36833935644694
+WPM 2.0,Energy Industry,,strategic_planning,50.831989648882335
+WPM 2.0,Energy Industry,,stress_management,51.2097761
+WPM 2.0,Energy Industry,,team_feedback,50
+WPM 2.0,Energy Industry,,team_risk_taking,50
+WPM 2.0,Energy Industry,,team_agility,50
+WPM 2.0,Energy Industry,,well_being,50
+WPM 2.0,Energy Industry,,work_life_balance,50.5001302
+WPM 2.0,Energy Industry,Individual Contributor,alignment,45.42141734548561
+WPM 2.0,Energy Industry,Individual Contributor,authenticity,47.41518199863856
+WPM 2.0,Energy Industry,Individual Contributor,belonging_index,50
+WPM 2.0,Energy Industry,Individual Contributor,coaching,44.34527563858176
+WPM 2.0,Energy Industry,Individual Contributor,cognitive_agility,49.732438096667636
+WPM 2.0,Energy Industry,Individual Contributor,emotional_regulation,47.10296794083666
+WPM 2.0,Energy Industry,Individual Contributor,empathy,47.84829463442325
+WPM 2.0,Energy Industry,Individual Contributor,empowerment,49.4037255292507
+WPM 2.0,Energy Industry,Individual Contributor,encouraging_participation,45.812425257391965
+WPM 2.0,Energy Industry,Individual Contributor,engagement,46.83349642633291
+WPM 2.0,Energy Industry,Individual Contributor,ex_index,46.936591
+WPM 2.0,Energy Industry,Individual Contributor,focus,47.96692330562261
+WPM 2.0,Energy Industry,Individual Contributor,goal_attainment,50.29430781762704
+WPM 2.0,Energy Industry,Individual Contributor,growth_mindset,48.220910537769655
+WPM 2.0,Energy Industry,Individual Contributor,hope,48.07199483848044
+WPM 2.0,Energy Industry,Individual Contributor,job_performance,52.51211905570218
+WPM 2.0,Energy Industry,Individual Contributor,job_satisfaction,49.4216359
+WPM 2.0,Energy Industry,Individual Contributor,life_satisfaction,49.916994404393904
+WPM 2.0,Energy Industry,Individual Contributor,locus_of_control_internal,48.43855620714102
+WPM 2.0,Energy Industry,Individual Contributor,nutrition,50.39227856070838
+WPM 2.0,Energy Industry,Individual Contributor,optimism,50
+WPM 2.0,Energy Industry,Individual Contributor,organizational_commitment,47.224494896085744
+WPM 2.0,Energy Industry,Individual Contributor,physical_activity,47.930989549759076
+WPM 2.0,Energy Industry,Individual Contributor,problem_solving,48.05558507637517
+WPM 2.0,Energy Industry,Individual Contributor,productivity,45.4523366
+WPM 2.0,Energy Industry,Individual Contributor,purpose_and_meaning,47.33153737097125
+WPM 2.0,Energy Industry,Individual Contributor,psychological_safety,50
+WPM 2.0,Energy Industry,Individual Contributor,recognition,46.183517071601216
+WPM 2.0,Energy Industry,Individual Contributor,relationship_building,46.82622134043676
+WPM 2.0,Energy Industry,Individual Contributor,resilience,48.026390244879636
+WPM 2.0,Energy Industry,Individual Contributor,rest,47.40642476301525
+WPM 2.0,Energy Industry,Individual Contributor,sales_excellence_index,50
+WPM 2.0,Energy Industry,Individual Contributor,self_awareness,50.79506983739529
+WPM 2.0,Energy Industry,Individual Contributor,self_compassion,50.021734499127014
+WPM 2.0,Energy Industry,Individual Contributor,self_efficacy,49.48468498949011
+WPM 2.0,Energy Industry,Individual Contributor,social_connection,49.25225566868472
+WPM 2.0,Energy Industry,Individual Contributor,strategic_planning,49.90808057886635
+WPM 2.0,Energy Industry,Individual Contributor,stress_management,51.2321883
+WPM 2.0,Energy Industry,Individual Contributor,team_feedback,50
+WPM 2.0,Energy Industry,Individual Contributor,team_risk_taking,50
+WPM 2.0,Energy Industry,Individual Contributor,team_agility,50
+WPM 2.0,Energy Industry,Individual Contributor,well_being,50
+WPM 2.0,Energy Industry,Individual Contributor,work_life_balance,53.6497684
+WPM 2.0,Energy Industry,Manager,alignment,54.98577197637001
+WPM 2.0,Energy Industry,Manager,authenticity,50.58102275779749
+WPM 2.0,Energy Industry,Manager,belonging_index,50
+WPM 2.0,Energy Industry,Manager,coaching,55.28945946525442
+WPM 2.0,Energy Industry,Manager,cognitive_agility,51.540322739618375
+WPM 2.0,Energy Industry,Manager,emotional_regulation,53.094483035814434
+WPM 2.0,Energy Industry,Manager,empathy,48.00040090625476
+WPM 2.0,Energy Industry,Manager,empowerment,56.29320843680537
+WPM 2.0,Energy Industry,Manager,encouraging_participation,55.71108084576465
+WPM 2.0,Energy Industry,Manager,engagement,56.43640984014706
+WPM 2.0,Energy Industry,Manager,ex_index,54.6368153
+WPM 2.0,Energy Industry,Manager,focus,50.977533397099435
+WPM 2.0,Energy Industry,Manager,goal_attainment,52.62199270612647
+WPM 2.0,Energy Industry,Manager,growth_mindset,51.321933510221
+WPM 2.0,Energy Industry,Manager,hope,55.09798758367857
+WPM 2.0,Energy Industry,Manager,job_performance,52.86244866639946
+WPM 2.0,Energy Industry,Manager,job_satisfaction,54.8677991
+WPM 2.0,Energy Industry,Manager,life_satisfaction,53.174219538146154
+WPM 2.0,Energy Industry,Manager,locus_of_control_internal,53.41590080362885
+WPM 2.0,Energy Industry,Manager,nutrition,50.544373215870095
+WPM 2.0,Energy Industry,Manager,optimism,50
+WPM 2.0,Energy Industry,Manager,organizational_commitment,55.97950507837721
+WPM 2.0,Energy Industry,Manager,physical_activity,50.95348993728695
+WPM 2.0,Energy Industry,Manager,problem_solving,53.798430103331775
+WPM 2.0,Energy Industry,Manager,productivity,52.9807553
+WPM 2.0,Energy Industry,Manager,purpose_and_meaning,55.275331401327925
+WPM 2.0,Energy Industry,Manager,psychological_safety,50
+WPM 2.0,Energy Industry,Manager,recognition,53.37310745651823
+WPM 2.0,Energy Industry,Manager,relationship_building,54.215995585136895
+WPM 2.0,Energy Industry,Manager,resilience,53.43009390921897
+WPM 2.0,Energy Industry,Manager,rest,48.23185607358871
+WPM 2.0,Energy Industry,Manager,sales_excellence_index,50
+WPM 2.0,Energy Industry,Manager,self_awareness,54.19152570488536
+WPM 2.0,Energy Industry,Manager,self_compassion,51.8502092834348
+WPM 2.0,Energy Industry,Manager,self_efficacy,54.64250926158905
+WPM 2.0,Energy Industry,Manager,social_connection,51.75228312927209
+WPM 2.0,Energy Industry,Manager,strategic_planning,51.977636895702155
+WPM 2.0,Energy Industry,Manager,stress_management,51.1819849
+WPM 2.0,Energy Industry,Manager,team_feedback,50
+WPM 2.0,Energy Industry,Manager,team_risk_taking,50
+WPM 2.0,Energy Industry,Manager,team_agility,50
+WPM 2.0,Energy Industry,Manager,well_being,50
+WPM 2.0,Energy Industry,Manager,work_life_balance,46.594579
+WPM 2.0,Financial Services Industry,,alignment,50.53655342899636
+WPM 2.0,Financial Services Industry,,authenticity,52.124350630617094
+WPM 2.0,Financial Services Industry,,belonging_index,50
+WPM 2.0,Financial Services Industry,,coaching,51.4025267248605
+WPM 2.0,Financial Services Industry,,cognitive_agility,49.48353861582994
+WPM 2.0,Financial Services Industry,,emotional_regulation,51.43137553425591
+WPM 2.0,Financial Services Industry,,empathy,50.71839982436236
+WPM 2.0,Financial Services Industry,,empowerment,51.30407421360109
+WPM 2.0,Financial Services Industry,,encouraging_participation,50.00271674058515
+WPM 2.0,Financial Services Industry,,engagement,51.09151644757472
+WPM 2.0,Financial Services Industry,,ex_index,51.591755
+WPM 2.0,Financial Services Industry,,focus,50.058014728090676
+WPM 2.0,Financial Services Industry,,goal_attainment,50.726682872063265
+WPM 2.0,Financial Services Industry,,growth_mindset,49.9427071946543
+WPM 2.0,Financial Services Industry,,hope,49.95807212273452
+WPM 2.0,Financial Services Industry,,job_performance,48.76030575088533
+WPM 2.0,Financial Services Industry,,job_satisfaction,51.9369396
+WPM 2.0,Financial Services Industry,,life_satisfaction,51.22842004637996
+WPM 2.0,Financial Services Industry,,locus_of_control_internal,50.27306908315381
+WPM 2.0,Financial Services Industry,,nutrition,51.75957908511453
+WPM 2.0,Financial Services Industry,,optimism,50
+WPM 2.0,Financial Services Industry,,organizational_commitment,50.82104544599011
+WPM 2.0,Financial Services Industry,,physical_activity,51.039118180068385
+WPM 2.0,Financial Services Industry,,problem_solving,49.302111185342355
+WPM 2.0,Financial Services Industry,,productivity,49.8538587
+WPM 2.0,Financial Services Industry,,purpose_and_meaning,49.33591896449611
+WPM 2.0,Financial Services Industry,,psychological_safety,50
+WPM 2.0,Financial Services Industry,,recognition,50.61475346467303
+WPM 2.0,Financial Services Industry,,relationship_building,51.187601260137306
+WPM 2.0,Financial Services Industry,,resilience,51.40297060181837
+WPM 2.0,Financial Services Industry,,rest,52.543708085519526
+WPM 2.0,Financial Services Industry,,sales_excellence_index,50
+WPM 2.0,Financial Services Industry,,self_awareness,50.104207579139874
+WPM 2.0,Financial Services Industry,,self_compassion,49.273968726934584
+WPM 2.0,Financial Services Industry,,self_efficacy,50.33919226973141
+WPM 2.0,Financial Services Industry,,social_connection,51.83479304570249
+WPM 2.0,Financial Services Industry,,strategic_planning,51.3942225854407
+WPM 2.0,Financial Services Industry,,stress_management,50.4999188
+WPM 2.0,Financial Services Industry,,team_feedback,50
+WPM 2.0,Financial Services Industry,,team_risk_taking,50
+WPM 2.0,Financial Services Industry,,team_agility,50
+WPM 2.0,Financial Services Industry,,well_being,50
+WPM 2.0,Financial Services Industry,,work_life_balance,47.3294079
+WPM 2.0,Financial Services Industry,Individual Contributor,alignment,45.19553007106579
+WPM 2.0,Financial Services Industry,Individual Contributor,authenticity,49.17992114582685
+WPM 2.0,Financial Services Industry,Individual Contributor,belonging_index,50
+WPM 2.0,Financial Services Industry,Individual Contributor,coaching,46.76186228601309
+WPM 2.0,Financial Services Industry,Individual Contributor,cognitive_agility,45.212835698506204
+WPM 2.0,Financial Services Industry,Individual Contributor,emotional_regulation,47.91373142137
+WPM 2.0,Financial Services Industry,Individual Contributor,empathy,49.203048621271705
+WPM 2.0,Financial Services Industry,Individual Contributor,empowerment,47.233347595136514
+WPM 2.0,Financial Services Industry,Individual Contributor,encouraging_participation,43.37351548644372
+WPM 2.0,Financial Services Industry,Individual Contributor,engagement,46.37989182400446
+WPM 2.0,Financial Services Industry,Individual Contributor,ex_index,46.7057388
+WPM 2.0,Financial Services Industry,Individual Contributor,focus,46.68254633442053
+WPM 2.0,Financial Services Industry,Individual Contributor,goal_attainment,47.18276844174694
+WPM 2.0,Financial Services Industry,Individual Contributor,growth_mindset,45.17711100507922
+WPM 2.0,Financial Services Industry,Individual Contributor,hope,46.15227915142379
+WPM 2.0,Financial Services Industry,Individual Contributor,job_performance,47.84302467874829
+WPM 2.0,Financial Services Industry,Individual Contributor,job_satisfaction,49.0935954
+WPM 2.0,Financial Services Industry,Individual Contributor,life_satisfaction,47.37025209051125
+WPM 2.0,Financial Services Industry,Individual Contributor,locus_of_control_internal,48.950138808487516
+WPM 2.0,Financial Services Industry,Individual Contributor,nutrition,48.389584232560885
+WPM 2.0,Financial Services Industry,Individual Contributor,optimism,50
+WPM 2.0,Financial Services Industry,Individual Contributor,organizational_commitment,47.51921273957694
+WPM 2.0,Financial Services Industry,Individual Contributor,physical_activity,47.84939122423297
+WPM 2.0,Financial Services Industry,Individual Contributor,problem_solving,45.79546266532073
+WPM 2.0,Financial Services Industry,Individual Contributor,productivity,47.3709802
+WPM 2.0,Financial Services Industry,Individual Contributor,purpose_and_meaning,44.99545854139437
+WPM 2.0,Financial Services Industry,Individual Contributor,psychological_safety,50
+WPM 2.0,Financial Services Industry,Individual Contributor,recognition,47.76512617242316
+WPM 2.0,Financial Services Industry,Individual Contributor,relationship_building,46.88501710294697
+WPM 2.0,Financial Services Industry,Individual Contributor,resilience,47.64471021184907
+WPM 2.0,Financial Services Industry,Individual Contributor,rest,50.752780247554824
+WPM 2.0,Financial Services Industry,Individual Contributor,sales_excellence_index,50
+WPM 2.0,Financial Services Industry,Individual Contributor,self_awareness,48.40140713750928
+WPM 2.0,Financial Services Industry,Individual Contributor,self_compassion,47.89936761104611
+WPM 2.0,Financial Services Industry,Individual Contributor,self_efficacy,47.187075269667716
+WPM 2.0,Financial Services Industry,Individual Contributor,social_connection,49.746549582898
+WPM 2.0,Financial Services Industry,Individual Contributor,strategic_planning,48.79086608213602
+WPM 2.0,Financial Services Industry,Individual Contributor,stress_management,49.9369412
+WPM 2.0,Financial Services Industry,Individual Contributor,team_feedback,50
+WPM 2.0,Financial Services Industry,Individual Contributor,team_risk_taking,50
+WPM 2.0,Financial Services Industry,Individual Contributor,team_agility,50
+WPM 2.0,Financial Services Industry,Individual Contributor,well_being,50
+WPM 2.0,Financial Services Industry,Individual Contributor,work_life_balance,50.0403643
+WPM 2.0,Financial Services Industry,Manager,alignment,55.409401215301536
+WPM 2.0,Financial Services Industry,Manager,authenticity,54.81068164536311
+WPM 2.0,Financial Services Industry,Manager,belonging_index,50
+WPM 2.0,Financial Services Industry,Manager,coaching,55.63640662434561
+WPM 2.0,Financial Services Industry,Manager,cognitive_agility,53.37988653682298
+WPM 2.0,Financial Services Industry,Manager,emotional_regulation,54.64067517213036
+WPM 2.0,Financial Services Industry,Manager,empathy,52.10092059999067
+WPM 2.0,Financial Services Industry,Manager,empowerment,55.01797506407861
+WPM 2.0,Financial Services Industry,Manager,encouraging_participation,56.05082521931883
+WPM 2.0,Financial Services Industry,Manager,engagement,55.39013640825598
+WPM 2.0,Financial Services Industry,Manager,ex_index,56.04948
+WPM 2.0,Financial Services Industry,Manager,focus,53.137601276877405
+WPM 2.0,Financial Services Industry,Manager,goal_attainment,53.95995006251286
+WPM 2.0,Financial Services Industry,Manager,growth_mindset,54.290567761171815
+WPM 2.0,Financial Services Industry,Manager,hope,53.43026249011998
+WPM 2.0,Financial Services Industry,Manager,job_performance,49.59718114764721
+WPM 2.0,Financial Services Industry,Manager,job_satisfaction,54.5310462
+WPM 2.0,Financial Services Industry,Manager,life_satisfaction,54.748394388943545
+WPM 2.0,Financial Services Industry,Manager,locus_of_control_internal,51.48003588114989
+WPM 2.0,Financial Services Industry,Manager,nutrition,54.83417188440318
+WPM 2.0,Financial Services Industry,Manager,optimism,50
+WPM 2.0,Financial Services Industry,Manager,organizational_commitment,53.833450956313385
+WPM 2.0,Financial Services Industry,Manager,physical_activity,53.94924474084848
+WPM 2.0,Financial Services Industry,Manager,problem_solving,52.50137906586299
+WPM 2.0,Financial Services Industry,Manager,productivity,52.1190967
+WPM 2.0,Financial Services Industry,Manager,purpose_and_meaning,53.29590969040288
+WPM 2.0,Financial Services Industry,Manager,psychological_safety,50
+WPM 2.0,Financial Services Industry,Manager,recognition,53.21459231806738
+WPM 2.0,Financial Services Industry,Manager,relationship_building,55.11303582215353
+WPM 2.0,Financial Services Industry,Manager,resilience,54.83179492898176
+WPM 2.0,Financial Services Industry,Manager,rest,54.17764940459286
+WPM 2.0,Financial Services Industry,Manager,sales_excellence_index,50
+WPM 2.0,Financial Services Industry,Manager,self_awareness,51.657746443597134
+WPM 2.0,Financial Services Industry,Manager,self_compassion,50.52807707953409
+WPM 2.0,Financial Services Industry,Manager,self_efficacy,53.215005632938016
+WPM 2.0,Financial Services Industry,Manager,social_connection,53.73998833377098
+WPM 2.0,Financial Services Industry,Manager,strategic_planning,53.7693778925702
+WPM 2.0,Financial Services Industry,Manager,stress_management,51.0135477
+WPM 2.0,Financial Services Industry,Manager,team_feedback,50
+WPM 2.0,Financial Services Industry,Manager,team_risk_taking,50
+WPM 2.0,Financial Services Industry,Manager,team_agility,50
+WPM 2.0,Financial Services Industry,Manager,well_being,50
+WPM 2.0,Financial Services Industry,Manager,work_life_balance,44.8560845
+WPM 2.0,Government and Public Sector,,alignment,48.16884294418129
+WPM 2.0,Government and Public Sector,,authenticity,47.40840873835393
+WPM 2.0,Government and Public Sector,,belonging_index,50
+WPM 2.0,Government and Public Sector,,coaching,48.30417915773892
+WPM 2.0,Government and Public Sector,,cognitive_agility,47.46714661480605
+WPM 2.0,Government and Public Sector,,emotional_regulation,48.74108685339462
+WPM 2.0,Government and Public Sector,,empathy,48.733484441777804
+WPM 2.0,Government and Public Sector,,empowerment,49.52024852541935
+WPM 2.0,Government and Public Sector,,encouraging_participation,48.238817574593845
+WPM 2.0,Government and Public Sector,,engagement,47.017212011091516
+WPM 2.0,Government and Public Sector,,ex_index,47.7466714
+WPM 2.0,Government and Public Sector,,focus,48.602084513805906
+WPM 2.0,Government and Public Sector,,goal_attainment,49.20423761467284
+WPM 2.0,Government and Public Sector,,growth_mindset,47.53133367707985
+WPM 2.0,Government and Public Sector,,hope,49.428063678775096
+WPM 2.0,Government and Public Sector,,job_performance,51.761164570092525
+WPM 2.0,Government and Public Sector,,job_satisfaction,49.0899188
+WPM 2.0,Government and Public Sector,,life_satisfaction,50.66701170302603
+WPM 2.0,Government and Public Sector,,locus_of_control_internal,49.96233825106008
+WPM 2.0,Government and Public Sector,,nutrition,47.85611521500287
+WPM 2.0,Government and Public Sector,,optimism,50
+WPM 2.0,Government and Public Sector,,organizational_commitment,49.22610930634902
+WPM 2.0,Government and Public Sector,,physical_activity,48.543337601120655
+WPM 2.0,Government and Public Sector,,problem_solving,48.20878517479337
+WPM 2.0,Government and Public Sector,,productivity,48.3694821
+WPM 2.0,Government and Public Sector,,purpose_and_meaning,52.378290998270124
+WPM 2.0,Government and Public Sector,,psychological_safety,50
+WPM 2.0,Government and Public Sector,,recognition,49.628160269211065
+WPM 2.0,Government and Public Sector,,relationship_building,49.07943116919791
+WPM 2.0,Government and Public Sector,,resilience,48.23176537407203
+WPM 2.0,Government and Public Sector,,rest,47.82720179796964
+WPM 2.0,Government and Public Sector,,sales_excellence_index,50
+WPM 2.0,Government and Public Sector,,self_awareness,51.231313663933776
+WPM 2.0,Government and Public Sector,,self_compassion,51.805869270068634
+WPM 2.0,Government and Public Sector,,self_efficacy,48.98100817565383
+WPM 2.0,Government and Public Sector,,social_connection,48.312842283657936
+WPM 2.0,Government and Public Sector,,strategic_planning,48.89810455590241
+WPM 2.0,Government and Public Sector,,stress_management,52.3046158
+WPM 2.0,Government and Public Sector,,team_feedback,50
+WPM 2.0,Government and Public Sector,,team_risk_taking,50
+WPM 2.0,Government and Public Sector,,team_agility,50
+WPM 2.0,Government and Public Sector,,well_being,50
+WPM 2.0,Government and Public Sector,,work_life_balance,55.2754884
+WPM 2.0,Government and Public Sector,Individual Contributor,alignment,44.94186657120017
+WPM 2.0,Government and Public Sector,Individual Contributor,authenticity,47.33603836097257
+WPM 2.0,Government and Public Sector,Individual Contributor,belonging_index,50
+WPM 2.0,Government and Public Sector,Individual Contributor,coaching,45.19355490915741
+WPM 2.0,Government and Public Sector,Individual Contributor,cognitive_agility,46.0467514933791
+WPM 2.0,Government and Public Sector,Individual Contributor,emotional_regulation,47.59154264460972
+WPM 2.0,Government and Public Sector,Individual Contributor,empathy,48.433748403628826
+WPM 2.0,Government and Public Sector,Individual Contributor,empowerment,46.58085416187912
+WPM 2.0,Government and Public Sector,Individual Contributor,encouraging_participation,43.04340214246823
+WPM 2.0,Government and Public Sector,Individual Contributor,engagement,44.530440131244234
+WPM 2.0,Government and Public Sector,Individual Contributor,ex_index,45.8887797
+WPM 2.0,Government and Public Sector,Individual Contributor,focus,48.17118869343849
+WPM 2.0,Government and Public Sector,Individual Contributor,goal_attainment,48.34854500244721
+WPM 2.0,Government and Public Sector,Individual Contributor,growth_mindset,45.78644164853423
+WPM 2.0,Government and Public Sector,Individual Contributor,hope,47.13165146098864
+WPM 2.0,Government and Public Sector,Individual Contributor,job_performance,50.64362675947118
+WPM 2.0,Government and Public Sector,Individual Contributor,job_satisfaction,47.9424606
+WPM 2.0,Government and Public Sector,Individual Contributor,life_satisfaction,49.24906158720736
+WPM 2.0,Government and Public Sector,Individual Contributor,locus_of_control_internal,49.018648459584746
+WPM 2.0,Government and Public Sector,Individual Contributor,nutrition,47.48113196126065
+WPM 2.0,Government and Public Sector,Individual Contributor,optimism,50
+WPM 2.0,Government and Public Sector,Individual Contributor,organizational_commitment,46.919491238995754
+WPM 2.0,Government and Public Sector,Individual Contributor,physical_activity,47.411555180732755
+WPM 2.0,Government and Public Sector,Individual Contributor,problem_solving,45.09954187395698
+WPM 2.0,Government and Public Sector,Individual Contributor,productivity,47.6634606
+WPM 2.0,Government and Public Sector,Individual Contributor,purpose_and_meaning,50.396002668688695
+WPM 2.0,Government and Public Sector,Individual Contributor,psychological_safety,50
+WPM 2.0,Government and Public Sector,Individual Contributor,recognition,46.42603702321679
+WPM 2.0,Government and Public Sector,Individual Contributor,relationship_building,45.538391197704755
+WPM 2.0,Government and Public Sector,Individual Contributor,resilience,46.18082309463464
+WPM 2.0,Government and Public Sector,Individual Contributor,rest,47.69778586194483
+WPM 2.0,Government and Public Sector,Individual Contributor,sales_excellence_index,50
+WPM 2.0,Government and Public Sector,Individual Contributor,self_awareness,49.63209519943014
+WPM 2.0,Government and Public Sector,Individual Contributor,self_compassion,51.23518898445773
+WPM 2.0,Government and Public Sector,Individual Contributor,self_efficacy,47.873196784842925
+WPM 2.0,Government and Public Sector,Individual Contributor,social_connection,47.19167006707422
+WPM 2.0,Government and Public Sector,Individual Contributor,strategic_planning,47.851415380427525
+WPM 2.0,Government and Public Sector,Individual Contributor,stress_management,51.4664413
+WPM 2.0,Government and Public Sector,Individual Contributor,team_feedback,50
+WPM 2.0,Government and Public Sector,Individual Contributor,team_risk_taking,50
+WPM 2.0,Government and Public Sector,Individual Contributor,team_agility,50
+WPM 2.0,Government and Public Sector,Individual Contributor,well_being,50
+WPM 2.0,Government and Public Sector,Individual Contributor,work_life_balance,55.6821539
+WPM 2.0,Government and Public Sector,Manager,alignment,52.313650068845526
+WPM 2.0,Government and Public Sector,Manager,authenticity,47.50136301539679
+WPM 2.0,Government and Public Sector,Manager,belonging_index,50
+WPM 2.0,Government and Public Sector,Manager,coaching,52.29954077724879
+WPM 2.0,Government and Public Sector,Manager,cognitive_agility,49.291536736909734
+WPM 2.0,Government and Public Sector,Manager,emotional_regulation,50.21758946016349
+WPM 2.0,Government and Public Sector,Manager,empathy,49.118472716510915
+WPM 2.0,Government and Public Sector,Manager,empowerment,53.29567830612902
+WPM 2.0,Government and Public Sector,Manager,encouraging_participation,54.91193581585676
+WPM 2.0,Government and Public Sector,Manager,engagement,50.21128243915721
+WPM 2.0,Government and Public Sector,Manager,ex_index,50.1329929
+WPM 2.0,Government and Public Sector,Manager,focus,49.155537610395214
+WPM 2.0,Government and Public Sector,Manager,goal_attainment,50.303310066944604
+WPM 2.0,Government and Public Sector,Manager,growth_mindset,49.77251553767231
+WPM 2.0,Government and Public Sector,Manager,hope,52.377631516067396
+WPM 2.0,Government and Public Sector,Manager,job_performance,53.196557378768695
+WPM 2.0,Government and Public Sector,Manager,job_satisfaction,50.5637421
+WPM 2.0,Government and Public Sector,Manager,life_satisfaction,52.48826140031907
+WPM 2.0,Government and Public Sector,Manager,locus_of_control_internal,51.17443642566385
+WPM 2.0,Government and Public Sector,Manager,nutrition,48.33775284791331
+WPM 2.0,Government and Public Sector,Manager,optimism,50
+WPM 2.0,Government and Public Sector,Manager,organizational_commitment,52.188785785635716
+WPM 2.0,Government and Public Sector,Manager,physical_activity,49.99702653385365
+WPM 2.0,Government and Public Sector,Manager,problem_solving,52.20237307135297
+WPM 2.0,Government and Public Sector,Manager,productivity,49.2763133
+WPM 2.0,Government and Public Sector,Manager,purpose_and_meaning,54.92439045545261
+WPM 2.0,Government and Public Sector,Manager,psychological_safety,50
+WPM 2.0,Government and Public Sector,Manager,recognition,53.74104543167322
+WPM 2.0,Government and Public Sector,Manager,relationship_building,53.6276292364205
+WPM 2.0,Government and Public Sector,Manager,resilience,50.866045638180104
+WPM 2.0,Government and Public Sector,Manager,rest,47.993426781261114
+WPM 2.0,Government and Public Sector,Manager,sales_excellence_index,50
+WPM 2.0,Government and Public Sector,Manager,self_awareness,53.28538884746102
+WPM 2.0,Government and Public Sector,Manager,self_compassion,52.53886494165466
+WPM 2.0,Government and Public Sector,Manager,self_efficacy,50.403908133602805
+WPM 2.0,Government and Public Sector,Manager,social_connection,49.75290321195621
+WPM 2.0,Government and Public Sector,Manager,strategic_planning,50.24249765036112
+WPM 2.0,Government and Public Sector,Manager,stress_management,53.3811875
+WPM 2.0,Government and Public Sector,Manager,team_feedback,50
+WPM 2.0,Government and Public Sector,Manager,team_risk_taking,50
+WPM 2.0,Government and Public Sector,Manager,team_agility,50
+WPM 2.0,Government and Public Sector,Manager,well_being,50
+WPM 2.0,Government and Public Sector,Manager,work_life_balance,54.7531574
+WPM 2.0,Healthcare/Health Services Industry,,alignment,50.26919374644121
+WPM 2.0,Healthcare/Health Services Industry,,authenticity,50.253577718779134
+WPM 2.0,Healthcare/Health Services Industry,,belonging_index,50
+WPM 2.0,Healthcare/Health Services Industry,,coaching,49.96260683907558
+WPM 2.0,Healthcare/Health Services Industry,,cognitive_agility,49.45570182256448
+WPM 2.0,Healthcare/Health Services Industry,,emotional_regulation,48.35545174073159
+WPM 2.0,Healthcare/Health Services Industry,,empathy,52.570813440639675
+WPM 2.0,Healthcare/Health Services Industry,,empowerment,48.94543232389865
+WPM 2.0,Healthcare/Health Services Industry,,encouraging_participation,49.49500878411173
+WPM 2.0,Healthcare/Health Services Industry,,engagement,50.48826445444229
+WPM 2.0,Healthcare/Health Services Industry,,ex_index,52.5613354
+WPM 2.0,Healthcare/Health Services Industry,,focus,49.47568312055005
+WPM 2.0,Healthcare/Health Services Industry,,goal_attainment,51.04254900112595
+WPM 2.0,Healthcare/Health Services Industry,,growth_mindset,49.64462212377115
+WPM 2.0,Healthcare/Health Services Industry,,hope,49.98127373432424
+WPM 2.0,Healthcare/Health Services Industry,,job_performance,50.70717778922251
+WPM 2.0,Healthcare/Health Services Industry,,job_satisfaction,51.1072365
+WPM 2.0,Healthcare/Health Services Industry,,life_satisfaction,51.1208942833088
+WPM 2.0,Healthcare/Health Services Industry,,locus_of_control_internal,49.502827094177135
+WPM 2.0,Healthcare/Health Services Industry,,nutrition,50.131120137686544
+WPM 2.0,Healthcare/Health Services Industry,,optimism,50
+WPM 2.0,Healthcare/Health Services Industry,,organizational_commitment,50.340839760146345
+WPM 2.0,Healthcare/Health Services Industry,,physical_activity,50.55674664652016
+WPM 2.0,Healthcare/Health Services Industry,,problem_solving,49.46711388406642
+WPM 2.0,Healthcare/Health Services Industry,,productivity,51.9237014
+WPM 2.0,Healthcare/Health Services Industry,,purpose_and_meaning,56.124274417157395
+WPM 2.0,Healthcare/Health Services Industry,,psychological_safety,50
+WPM 2.0,Healthcare/Health Services Industry,,recognition,50.580849062968284
+WPM 2.0,Healthcare/Health Services Industry,,relationship_building,50.50162248921726
+WPM 2.0,Healthcare/Health Services Industry,,resilience,48.635423954974584
+WPM 2.0,Healthcare/Health Services Industry,,rest,49.519955787017075
+WPM 2.0,Healthcare/Health Services Industry,,sales_excellence_index,50
+WPM 2.0,Healthcare/Health Services Industry,,self_awareness,50.32554463540534
+WPM 2.0,Healthcare/Health Services Industry,,self_compassion,49.364745060478704
+WPM 2.0,Healthcare/Health Services Industry,,self_efficacy,50.562003870313646
+WPM 2.0,Healthcare/Health Services Industry,,social_connection,51.357152148934176
+WPM 2.0,Healthcare/Health Services Industry,,strategic_planning,50.31008249474811
+WPM 2.0,Healthcare/Health Services Industry,,stress_management,48.6787658
+WPM 2.0,Healthcare/Health Services Industry,,team_feedback,50
+WPM 2.0,Healthcare/Health Services Industry,,team_risk_taking,50
+WPM 2.0,Healthcare/Health Services Industry,,team_agility,50
+WPM 2.0,Healthcare/Health Services Industry,,well_being,50
+WPM 2.0,Healthcare/Health Services Industry,,work_life_balance,50.5280884
+WPM 2.0,Healthcare/Health Services Industry,Individual Contributor,alignment,46.67001436380235
+WPM 2.0,Healthcare/Health Services Industry,Individual Contributor,authenticity,49.07636462108317
+WPM 2.0,Healthcare/Health Services Industry,Individual Contributor,belonging_index,50
+WPM 2.0,Healthcare/Health Services Industry,Individual Contributor,coaching,46.06001644653378
+WPM 2.0,Healthcare/Health Services Industry,Individual Contributor,cognitive_agility,47.357121683884195
+WPM 2.0,Healthcare/Health Services Industry,Individual Contributor,emotional_regulation,46.00546454383029
+WPM 2.0,Healthcare/Health Services Industry,Individual Contributor,empathy,50.873639697167626
+WPM 2.0,Healthcare/Health Services Industry,Individual Contributor,empowerment,45.89234489217712
+WPM 2.0,Healthcare/Health Services Industry,Individual Contributor,encouraging_participation,43.94902174843526
+WPM 2.0,Healthcare/Health Services Industry,Individual Contributor,engagement,47.24651649027181
+WPM 2.0,Healthcare/Health Services Industry,Individual Contributor,ex_index,49.8517778
+WPM 2.0,Healthcare/Health Services Industry,Individual Contributor,focus,47.730766862912766
+WPM 2.0,Healthcare/Health Services Industry,Individual Contributor,goal_attainment,48.64833390536055
+WPM 2.0,Healthcare/Health Services Industry,Individual Contributor,growth_mindset,47.04036050764693
+WPM 2.0,Healthcare/Health Services Industry,Individual Contributor,hope,47.25196203129263
+WPM 2.0,Healthcare/Health Services Industry,Individual Contributor,job_performance,49.81117819471445
+WPM 2.0,Healthcare/Health Services Industry,Individual Contributor,job_satisfaction,49.7439881
+WPM 2.0,Healthcare/Health Services Industry,Individual Contributor,life_satisfaction,49.33342422998415
+WPM 2.0,Healthcare/Health Services Industry,Individual Contributor,locus_of_control_internal,48.992959050770075
+WPM 2.0,Healthcare/Health Services Industry,Individual Contributor,nutrition,47.76954903624976
+WPM 2.0,Healthcare/Health Services Industry,Individual Contributor,optimism,50
+WPM 2.0,Healthcare/Health Services Industry,Individual Contributor,organizational_commitment,47.66396681490153
+WPM 2.0,Healthcare/Health Services Industry,Individual Contributor,physical_activity,47.7016223972909
+WPM 2.0,Healthcare/Health Services Industry,Individual Contributor,problem_solving,46.2951066847038
+WPM 2.0,Healthcare/Health Services Industry,Individual Contributor,productivity,51.6903591
+WPM 2.0,Healthcare/Health Services Industry,Individual Contributor,purpose_and_meaning,54.61360143365496
+WPM 2.0,Healthcare/Health Services Industry,Individual Contributor,psychological_safety,50
+WPM 2.0,Healthcare/Health Services Industry,Individual Contributor,recognition,47.4969368738508
+WPM 2.0,Healthcare/Health Services Industry,Individual Contributor,relationship_building,46.59135637097259
+WPM 2.0,Healthcare/Health Services Industry,Individual Contributor,resilience,46.60978283742378
+WPM 2.0,Healthcare/Health Services Industry,Individual Contributor,rest,47.92522851202465
+WPM 2.0,Healthcare/Health Services Industry,Individual Contributor,sales_excellence_index,50
+WPM 2.0,Healthcare/Health Services Industry,Individual Contributor,self_awareness,48.357100760772596
+WPM 2.0,Healthcare/Health Services Industry,Individual Contributor,self_compassion,48.82144458979418
+WPM 2.0,Healthcare/Health Services Industry,Individual Contributor,self_efficacy,48.38749463785634
+WPM 2.0,Healthcare/Health Services Industry,Individual Contributor,social_connection,49.44216440183913
+WPM 2.0,Healthcare/Health Services Industry,Individual Contributor,strategic_planning,48.14518652145941
+WPM 2.0,Healthcare/Health Services Industry,Individual Contributor,stress_management,47.9063069
+WPM 2.0,Healthcare/Health Services Industry,Individual Contributor,team_feedback,50
+WPM 2.0,Healthcare/Health Services Industry,Individual Contributor,team_risk_taking,50
+WPM 2.0,Healthcare/Health Services Industry,Individual Contributor,team_agility,50
+WPM 2.0,Healthcare/Health Services Industry,Individual Contributor,well_being,50
+WPM 2.0,Healthcare/Health Services Industry,Individual Contributor,work_life_balance,51.9740824
+WPM 2.0,Healthcare/Health Services Industry,Manager,alignment,54.45882338443453
+WPM 2.0,Healthcare/Health Services Industry,Manager,authenticity,51.62391422051937
+WPM 2.0,Healthcare/Health Services Industry,Manager,belonging_index,50
+WPM 2.0,Healthcare/Health Services Industry,Manager,coaching,54.50542247433109
+WPM 2.0,Healthcare/Health Services Industry,Manager,cognitive_agility,51.89855687700544
+WPM 2.0,Healthcare/Health Services Industry,Manager,emotional_regulation,51.090957522003265
+WPM 2.0,Healthcare/Health Services Industry,Manager,empathy,54.5464108367498
+WPM 2.0,Healthcare/Health Services Industry,Manager,empowerment,52.499382886359086
+WPM 2.0,Healthcare/Health Services Industry,Manager,encouraging_participation,55.950822508950544
+WPM 2.0,Healthcare/Health Services Industry,Manager,engagement,54.26182556537397
+WPM 2.0,Healthcare/Health Services Industry,Manager,ex_index,55.7153996
+WPM 2.0,Healthcare/Health Services Industry,Manager,focus,51.506855254975186
+WPM 2.0,Healthcare/Health Services Industry,Manager,goal_attainment,53.82953832800833
+WPM 2.0,Healthcare/Health Services Industry,Manager,growth_mindset,52.67611638733373
+WPM 2.0,Healthcare/Health Services Industry,Manager,hope,53.15833272102009
+WPM 2.0,Healthcare/Health Services Industry,Manager,job_performance,51.7501673314744
+WPM 2.0,Healthcare/Health Services Industry,Manager,job_satisfaction,52.6941278
+WPM 2.0,Healthcare/Health Services Industry,Manager,life_satisfaction,53.20160122127303
+WPM 2.0,Healthcare/Health Services Industry,Manager,locus_of_control_internal,50.09633968108178
+WPM 2.0,Healthcare/Health Services Industry,Manager,nutrition,52.88011017873136
+WPM 2.0,Healthcare/Health Services Industry,Manager,optimism,50
+WPM 2.0,Healthcare/Health Services Industry,Manager,organizational_commitment,53.45685733977512
+WPM 2.0,Healthcare/Health Services Industry,Manager,physical_activity,53.880257898119424
+WPM 2.0,Healthcare/Health Services Industry,Manager,problem_solving,53.15949316321035
+WPM 2.0,Healthcare/Health Services Industry,Manager,productivity,52.1953238
+WPM 2.0,Healthcare/Health Services Industry,Manager,purpose_and_meaning,57.8827753508778
+WPM 2.0,Healthcare/Health Services Industry,Manager,psychological_safety,50
+WPM 2.0,Healthcare/Health Services Industry,Manager,recognition,54.1706812260494
+WPM 2.0,Healthcare/Health Services Industry,Manager,relationship_building,55.05337306337939
+WPM 2.0,Healthcare/Health Services Industry,Manager,resilience,50.99337424302232
+WPM 2.0,Healthcare/Health Services Industry,Manager,rest,51.37630023265733
+WPM 2.0,Healthcare/Health Services Industry,Manager,sales_excellence_index,50
+WPM 2.0,Healthcare/Health Services Industry,Manager,self_awareness,52.6169143953202
+WPM 2.0,Healthcare/Health Services Industry,Manager,self_compassion,49.99717470966353
+WPM 2.0,Healthcare/Health Services Industry,Manager,self_efficacy,53.093244289265364
+WPM 2.0,Healthcare/Health Services Industry,Manager,social_connection,53.58629623114467
+WPM 2.0,Healthcare/Health Services Industry,Manager,strategic_planning,52.830132586336674
+WPM 2.0,Healthcare/Health Services Industry,Manager,stress_management,49.5779477
+WPM 2.0,Healthcare/Health Services Industry,Manager,team_feedback,50
+WPM 2.0,Healthcare/Health Services Industry,Manager,team_risk_taking,50
+WPM 2.0,Healthcare/Health Services Industry,Manager,team_agility,50
+WPM 2.0,Healthcare/Health Services Industry,Manager,well_being,50
+WPM 2.0,Healthcare/Health Services Industry,Manager,work_life_balance,48.8448772
+WPM 2.0,Insurance Industry,,alignment,48.093050621233
+WPM 2.0,Insurance Industry,,authenticity,50.654044382450714
+WPM 2.0,Insurance Industry,,belonging_index,50
+WPM 2.0,Insurance Industry,,coaching,48.510603189884634
+WPM 2.0,Insurance Industry,,cognitive_agility,48.029556893046674
+WPM 2.0,Insurance Industry,,emotional_regulation,49.35941200054402
+WPM 2.0,Insurance Industry,,empathy,50.137582171451065
+WPM 2.0,Insurance Industry,,empowerment,49.31452786527323
+WPM 2.0,Insurance Industry,,encouraging_participation,47.40758267189862
+WPM 2.0,Insurance Industry,,engagement,48.23624122992044
+WPM 2.0,Insurance Industry,,ex_index,49.2019466
+WPM 2.0,Insurance Industry,,focus,51.03572295072115
+WPM 2.0,Insurance Industry,,goal_attainment,49.77327076773706
+WPM 2.0,Insurance Industry,,growth_mindset,47.5368386642017
+WPM 2.0,Insurance Industry,,hope,47.7855768100572
+WPM 2.0,Insurance Industry,,job_performance,51.558302313180555
+WPM 2.0,Insurance Industry,,job_satisfaction,50.4100931
+WPM 2.0,Insurance Industry,,life_satisfaction,49.888683859114806
+WPM 2.0,Insurance Industry,,locus_of_control_internal,49.68565988574691
+WPM 2.0,Insurance Industry,,nutrition,49.70626611689324
+WPM 2.0,Insurance Industry,,optimism,50
+WPM 2.0,Insurance Industry,,organizational_commitment,50.68100095098453
+WPM 2.0,Insurance Industry,,physical_activity,50.317368970983125
+WPM 2.0,Insurance Industry,,problem_solving,47.94494325054536
+WPM 2.0,Insurance Industry,,productivity,50.8678295
+WPM 2.0,Insurance Industry,,purpose_and_meaning,48.19815282396199
+WPM 2.0,Insurance Industry,,psychological_safety,50
+WPM 2.0,Insurance Industry,,recognition,49.56274661198898
+WPM 2.0,Insurance Industry,,relationship_building,50.069819245592086
+WPM 2.0,Insurance Industry,,resilience,49.108101435693676
+WPM 2.0,Insurance Industry,,rest,51.33935892439759
+WPM 2.0,Insurance Industry,,sales_excellence_index,50
+WPM 2.0,Insurance Industry,,self_awareness,48.94023913241623
+WPM 2.0,Insurance Industry,,self_compassion,49.83819410378208
+WPM 2.0,Insurance Industry,,self_efficacy,49.687886566220705
+WPM 2.0,Insurance Industry,,social_connection,49.92920940939903
+WPM 2.0,Insurance Industry,,strategic_planning,49.3637251466152
+WPM 2.0,Insurance Industry,,stress_management,50.4924169
+WPM 2.0,Insurance Industry,,team_feedback,50
+WPM 2.0,Insurance Industry,,team_risk_taking,50
+WPM 2.0,Insurance Industry,,team_agility,50
+WPM 2.0,Insurance Industry,,well_being,50
+WPM 2.0,Insurance Industry,,work_life_balance,51.7064834
+WPM 2.0,Insurance Industry,Individual Contributor,alignment,44.92156010054691
+WPM 2.0,Insurance Industry,Individual Contributor,authenticity,49.985853243542856
+WPM 2.0,Insurance Industry,Individual Contributor,belonging_index,50
+WPM 2.0,Insurance Industry,Individual Contributor,coaching,45.36223790616025
+WPM 2.0,Insurance Industry,Individual Contributor,cognitive_agility,46.087495848797865
+WPM 2.0,Insurance Industry,Individual Contributor,emotional_regulation,46.623917434545994
+WPM 2.0,Insurance Industry,Individual Contributor,empathy,49.62809749969323
+WPM 2.0,Insurance Industry,Individual Contributor,empowerment,46.2389912869696
+WPM 2.0,Insurance Industry,Individual Contributor,encouraging_participation,42.09510113697869
+WPM 2.0,Insurance Industry,Individual Contributor,engagement,45.51338187348959
+WPM 2.0,Insurance Industry,Individual Contributor,ex_index,46.7209344
+WPM 2.0,Insurance Industry,Individual Contributor,focus,49.96243031268385
+WPM 2.0,Insurance Industry,Individual Contributor,goal_attainment,48.23439990278733
+WPM 2.0,Insurance Industry,Individual Contributor,growth_mindset,45.48388001424777
+WPM 2.0,Insurance Industry,Individual Contributor,hope,45.359757955708545
+WPM 2.0,Insurance Industry,Individual Contributor,job_performance,51.93442425567663
+WPM 2.0,Insurance Industry,Individual Contributor,job_satisfaction,48.43616
+WPM 2.0,Insurance Industry,Individual Contributor,life_satisfaction,48.27331814224796
+WPM 2.0,Insurance Industry,Individual Contributor,locus_of_control_internal,49.27978195237305
+WPM 2.0,Insurance Industry,Individual Contributor,nutrition,47.981648988195964
+WPM 2.0,Insurance Industry,Individual Contributor,optimism,50
+WPM 2.0,Insurance Industry,Individual Contributor,organizational_commitment,47.85936991274779
+WPM 2.0,Insurance Industry,Individual Contributor,physical_activity,48.08112794539273
+WPM 2.0,Insurance Industry,Individual Contributor,problem_solving,46.126966105140696
+WPM 2.0,Insurance Industry,Individual Contributor,productivity,50.469342
+WPM 2.0,Insurance Industry,Individual Contributor,purpose_and_meaning,45.69553123558412
+WPM 2.0,Insurance Industry,Individual Contributor,psychological_safety,50
+WPM 2.0,Insurance Industry,Individual Contributor,recognition,46.57293353916519
+WPM 2.0,Insurance Industry,Individual Contributor,relationship_building,45.920219643312
+WPM 2.0,Insurance Industry,Individual Contributor,resilience,47.98089208561153
+WPM 2.0,Insurance Industry,Individual Contributor,rest,50.08073900459682
+WPM 2.0,Insurance Industry,Individual Contributor,sales_excellence_index,50
+WPM 2.0,Insurance Industry,Individual Contributor,self_awareness,47.53857781059849
+WPM 2.0,Insurance Industry,Individual Contributor,self_compassion,49.00174040872247
+WPM 2.0,Insurance Industry,Individual Contributor,self_efficacy,48.53927191180939
+WPM 2.0,Insurance Industry,Individual Contributor,social_connection,49.53716710754079
+WPM 2.0,Insurance Industry,Individual Contributor,strategic_planning,47.482217712309215
+WPM 2.0,Insurance Industry,Individual Contributor,stress_management,48.8902836
+WPM 2.0,Insurance Industry,Individual Contributor,team_feedback,50
+WPM 2.0,Insurance Industry,Individual Contributor,team_risk_taking,50
+WPM 2.0,Insurance Industry,Individual Contributor,team_agility,50
+WPM 2.0,Insurance Industry,Individual Contributor,well_being,50
+WPM 2.0,Insurance Industry,Individual Contributor,work_life_balance,52.7043252
+WPM 2.0,Insurance Industry,Manager,alignment,53.0405758335033
+WPM 2.0,Insurance Industry,Manager,authenticity,51.69642255914697
+WPM 2.0,Insurance Industry,Manager,belonging_index,50
+WPM 2.0,Insurance Industry,Manager,coaching,53.42205303249467
+WPM 2.0,Insurance Industry,Manager,cognitive_agility,51.05917212207483
+WPM 2.0,Insurance Industry,Manager,emotional_regulation,53.626783523500926
+WPM 2.0,Insurance Industry,Manager,empathy,50.93237825939328
+WPM 2.0,Insurance Industry,Manager,empowerment,54.11236492742689
+WPM 2.0,Insurance Industry,Manager,encouraging_participation,55.69505386637372
+WPM 2.0,Insurance Industry,Manager,engagement,52.483901825952564
+WPM 2.0,Insurance Industry,Manager,ex_index,53.0723257
+WPM 2.0,Insurance Industry,Manager,focus,52.71005946605935
+WPM 2.0,Insurance Industry,Manager,goal_attainment,52.17390931705863
+WPM 2.0,Insurance Industry,Manager,growth_mindset,50.73945415812983
+WPM 2.0,Insurance Industry,Manager,hope,51.569854222841116
+WPM 2.0,Insurance Industry,Manager,job_performance,50.97155208288667
+WPM 2.0,Insurance Industry,Manager,job_satisfaction,53.4894287
+WPM 2.0,Insurance Industry,Manager,life_satisfaction,52.408654377427084
+WPM 2.0,Insurance Industry,Manager,locus_of_control_internal,50.318829461810125
+WPM 2.0,Insurance Industry,Manager,nutrition,52.396668837661004
+WPM 2.0,Insurance Industry,Manager,optimism,50
+WPM 2.0,Insurance Industry,Manager,organizational_commitment,55.08274537063386
+WPM 2.0,Insurance Industry,Manager,physical_activity,53.80590497090414
+WPM 2.0,Insurance Industry,Manager,problem_solving,50.78098759737662
+WPM 2.0,Insurance Industry,Manager,productivity,51.48947
+WPM 2.0,Insurance Industry,Manager,purpose_and_meaning,52.10224250183147
+WPM 2.0,Insurance Industry,Manager,psychological_safety,50
+WPM 2.0,Insurance Industry,Manager,recognition,54.22685500559408
+WPM 2.0,Insurance Industry,Manager,relationship_building,56.543194625149006
+WPM 2.0,Insurance Industry,Manager,resilience,50.86654802182182
+WPM 2.0,Insurance Industry,Manager,rest,53.30280599928678
+WPM 2.0,Insurance Industry,Manager,sales_excellence_index,50
+WPM 2.0,Insurance Industry,Manager,self_awareness,51.12683079445191
+WPM 2.0,Insurance Industry,Manager,self_compassion,51.14306186807506
+WPM 2.0,Insurance Industry,Manager,self_efficacy,51.47972542710237
+WPM 2.0,Insurance Industry,Manager,social_connection,50.54079540029787
+WPM 2.0,Insurance Industry,Manager,strategic_planning,52.29887674413254
+WPM 2.0,Insurance Industry,Manager,stress_management,52.9917449
+WPM 2.0,Insurance Industry,Manager,team_feedback,50
+WPM 2.0,Insurance Industry,Manager,team_risk_taking,50
+WPM 2.0,Insurance Industry,Manager,team_agility,50
+WPM 2.0,Insurance Industry,Manager,well_being,50
+WPM 2.0,Insurance Industry,Manager,work_life_balance,50.1498502
+WPM 2.0,Leisure and Hospitality Industry,,alignment,50.31935771324597
+WPM 2.0,Leisure and Hospitality Industry,,authenticity,50.13630731085374
+WPM 2.0,Leisure and Hospitality Industry,,belonging_index,50
+WPM 2.0,Leisure and Hospitality Industry,,coaching,50.35429088024202
+WPM 2.0,Leisure and Hospitality Industry,,cognitive_agility,51.37396084359507
+WPM 2.0,Leisure and Hospitality Industry,,emotional_regulation,49.04518301251032
+WPM 2.0,Leisure and Hospitality Industry,,empathy,52.988221538016845
+WPM 2.0,Leisure and Hospitality Industry,,empowerment,49.62443633211497
+WPM 2.0,Leisure and Hospitality Industry,,encouraging_participation,50.90818524539004
+WPM 2.0,Leisure and Hospitality Industry,,engagement,49.66831062652486
+WPM 2.0,Leisure and Hospitality Industry,,ex_index,49.166855
+WPM 2.0,Leisure and Hospitality Industry,,focus,50.437807123036244
+WPM 2.0,Leisure and Hospitality Industry,,goal_attainment,49.28671748310619
+WPM 2.0,Leisure and Hospitality Industry,,growth_mindset,49.730906225399366
+WPM 2.0,Leisure and Hospitality Industry,,hope,49.45488379048539
+WPM 2.0,Leisure and Hospitality Industry,,job_performance,49.87788716803134
+WPM 2.0,Leisure and Hospitality Industry,,job_satisfaction,48.7759383
+WPM 2.0,Leisure and Hospitality Industry,,life_satisfaction,48.313407525226665
+WPM 2.0,Leisure and Hospitality Industry,,locus_of_control_internal,49.81298965693217
+WPM 2.0,Leisure and Hospitality Industry,,nutrition,47.71041581798247
+WPM 2.0,Leisure and Hospitality Industry,,optimism,50
+WPM 2.0,Leisure and Hospitality Industry,,organizational_commitment,49.66713794828975
+WPM 2.0,Leisure and Hospitality Industry,,physical_activity,47.582453988466646
+WPM 2.0,Leisure and Hospitality Industry,,problem_solving,51.29612574615943
+WPM 2.0,Leisure and Hospitality Industry,,productivity,50.633635
+WPM 2.0,Leisure and Hospitality Industry,,purpose_and_meaning,46.44233875171912
+WPM 2.0,Leisure and Hospitality Industry,,psychological_safety,50
+WPM 2.0,Leisure and Hospitality Industry,,recognition,52.200990041767
+WPM 2.0,Leisure and Hospitality Industry,,relationship_building,50.58730247743633
+WPM 2.0,Leisure and Hospitality Industry,,resilience,49.207594152505486
+WPM 2.0,Leisure and Hospitality Industry,,rest,47.665137856736976
+WPM 2.0,Leisure and Hospitality Industry,,sales_excellence_index,50
+WPM 2.0,Leisure and Hospitality Industry,,self_awareness,50.55979262165197
+WPM 2.0,Leisure and Hospitality Industry,,self_compassion,48.69229739094994
+WPM 2.0,Leisure and Hospitality Industry,,self_efficacy,50.62057031296106
+WPM 2.0,Leisure and Hospitality Industry,,social_connection,49.96939645133582
+WPM 2.0,Leisure and Hospitality Industry,,strategic_planning,49.527895981930335
+WPM 2.0,Leisure and Hospitality Industry,,stress_management,48.9095955
+WPM 2.0,Leisure and Hospitality Industry,,team_feedback,50
+WPM 2.0,Leisure and Hospitality Industry,,team_risk_taking,50
+WPM 2.0,Leisure and Hospitality Industry,,team_agility,50
+WPM 2.0,Leisure and Hospitality Industry,,well_being,50
+WPM 2.0,Leisure and Hospitality Industry,,work_life_balance,50.7287153
+WPM 2.0,Leisure and Hospitality Industry,Individual Contributor,alignment,46.365987907586366
+WPM 2.0,Leisure and Hospitality Industry,Individual Contributor,authenticity,49.66681849023574
+WPM 2.0,Leisure and Hospitality Industry,Individual Contributor,belonging_index,50
+WPM 2.0,Leisure and Hospitality Industry,Individual Contributor,coaching,47.063179511286016
+WPM 2.0,Leisure and Hospitality Industry,Individual Contributor,cognitive_agility,49.20483502546113
+WPM 2.0,Leisure and Hospitality Industry,Individual Contributor,emotional_regulation,47.32802745608406
+WPM 2.0,Leisure and Hospitality Industry,Individual Contributor,empathy,51.65474750712876
+WPM 2.0,Leisure and Hospitality Industry,Individual Contributor,empowerment,47.01761330905622
+WPM 2.0,Leisure and Hospitality Industry,Individual Contributor,encouraging_participation,45.32286571542215
+WPM 2.0,Leisure and Hospitality Industry,Individual Contributor,engagement,45.914152448206295
+WPM 2.0,Leisure and Hospitality Industry,Individual Contributor,ex_index,45.8803223
+WPM 2.0,Leisure and Hospitality Industry,Individual Contributor,focus,49.991115165180034
+WPM 2.0,Leisure and Hospitality Industry,Individual Contributor,goal_attainment,47.575250706378775
+WPM 2.0,Leisure and Hospitality Industry,Individual Contributor,growth_mindset,46.9278966594581
+WPM 2.0,Leisure and Hospitality Industry,Individual Contributor,hope,46.00196733880289
+WPM 2.0,Leisure and Hospitality Industry,Individual Contributor,job_performance,49.375574121116834
+WPM 2.0,Leisure and Hospitality Industry,Individual Contributor,job_satisfaction,46.3848548
+WPM 2.0,Leisure and Hospitality Industry,Individual Contributor,life_satisfaction,46.38764640535503
+WPM 2.0,Leisure and Hospitality Industry,Individual Contributor,locus_of_control_internal,49.383006351504086
+WPM 2.0,Leisure and Hospitality Industry,Individual Contributor,nutrition,47.248884560084754
+WPM 2.0,Leisure and Hospitality Industry,Individual Contributor,optimism,50
+WPM 2.0,Leisure and Hospitality Industry,Individual Contributor,organizational_commitment,46.63482260235674
+WPM 2.0,Leisure and Hospitality Industry,Individual Contributor,physical_activity,46.99077338084403
+WPM 2.0,Leisure and Hospitality Industry,Individual Contributor,problem_solving,48.16179031902219
+WPM 2.0,Leisure and Hospitality Industry,Individual Contributor,productivity,50.1940147
+WPM 2.0,Leisure and Hospitality Industry,Individual Contributor,purpose_and_meaning,43.27016092706885
+WPM 2.0,Leisure and Hospitality Industry,Individual Contributor,psychological_safety,50
+WPM 2.0,Leisure and Hospitality Industry,Individual Contributor,recognition,49.537795472174864
+WPM 2.0,Leisure and Hospitality Industry,Individual Contributor,relationship_building,46.09625932614757
+WPM 2.0,Leisure and Hospitality Industry,Individual Contributor,resilience,46.51419544368357
+WPM 2.0,Leisure and Hospitality Industry,Individual Contributor,rest,48.147111201298365
+WPM 2.0,Leisure and Hospitality Industry,Individual Contributor,sales_excellence_index,50
+WPM 2.0,Leisure and Hospitality Industry,Individual Contributor,self_awareness,49.056107429196814
+WPM 2.0,Leisure and Hospitality Industry,Individual Contributor,self_compassion,47.173286317937034
+WPM 2.0,Leisure and Hospitality Industry,Individual Contributor,self_efficacy,48.40350960940728
+WPM 2.0,Leisure and Hospitality Industry,Individual Contributor,social_connection,49.0419447417062
+WPM 2.0,Leisure and Hospitality Industry,Individual Contributor,strategic_planning,47.96961813767631
+WPM 2.0,Leisure and Hospitality Industry,Individual Contributor,stress_management,48.0415845
+WPM 2.0,Leisure and Hospitality Industry,Individual Contributor,team_feedback,50
+WPM 2.0,Leisure and Hospitality Industry,Individual Contributor,team_risk_taking,50
+WPM 2.0,Leisure and Hospitality Industry,Individual Contributor,team_agility,50
+WPM 2.0,Leisure and Hospitality Industry,Individual Contributor,well_being,50
+WPM 2.0,Leisure and Hospitality Industry,Individual Contributor,work_life_balance,52.6058511
+WPM 2.0,Leisure and Hospitality Industry,Manager,alignment,54.246752684440004
+WPM 2.0,Leisure and Hospitality Industry,Manager,authenticity,50.60271144802484
+WPM 2.0,Leisure and Hospitality Industry,Manager,belonging_index,50
+WPM 2.0,Leisure and Hospitality Industry,Manager,coaching,53.623778652818544
+WPM 2.0,Leisure and Hospitality Industry,Manager,cognitive_agility,53.52883484952051
+WPM 2.0,Leisure and Hospitality Industry,Manager,emotional_regulation,50.751056337948235
+WPM 2.0,Leisure and Hospitality Industry,Manager,empathy,54.31293424150095
+WPM 2.0,Leisure and Hospitality Industry,Manager,empowerment,52.214131740041935
+WPM 2.0,Leisure and Hospitality Industry,Manager,encouraging_participation,56.45680753797313
+WPM 2.0,Leisure and Hospitality Industry,Manager,engagement,53.397802850977996
+WPM 2.0,Leisure and Hospitality Industry,Manager,ex_index,52.4317943
+WPM 2.0,Leisure and Hospitality Industry,Manager,focus,50.88156417972389
+WPM 2.0,Leisure and Hospitality Industry,Manager,goal_attainment,50.98693940584722
+WPM 2.0,Leisure and Hospitality Industry,Manager,growth_mindset,52.51549917132789
+WPM 2.0,Leisure and Hospitality Industry,Manager,hope,52.88511353749193
+WPM 2.0,Leisure and Hospitality Industry,Manager,job_performance,50.376899866411584
+WPM 2.0,Leisure and Hospitality Industry,Manager,job_satisfaction,51.1513116
+WPM 2.0,Leisure and Hospitality Industry,Manager,life_satisfaction,50.22651581251046
+WPM 2.0,Leisure and Hospitality Industry,Manager,locus_of_control_internal,50.24014784208805
+WPM 2.0,Leisure and Hospitality Industry,Manager,nutrition,48.168914676025416
+WPM 2.0,Leisure and Hospitality Industry,Manager,optimism,50
+WPM 2.0,Leisure and Hospitality Industry,Manager,organizational_commitment,52.67953006593147
+WPM 2.0,Leisure and Hospitality Industry,Manager,physical_activity,48.17024707567124
+WPM 2.0,Leisure and Hospitality Industry,Manager,problem_solving,54.40986764223795
+WPM 2.0,Leisure and Hospitality Industry,Manager,productivity,51.0703669
+WPM 2.0,Leisure and Hospitality Industry,Manager,purpose_and_meaning,49.59367440932174
+WPM 2.0,Leisure and Hospitality Industry,Manager,psychological_safety,50
+WPM 2.0,Leisure and Hospitality Industry,Manager,recognition,54.84668661812922
+WPM 2.0,Leisure and Hospitality Industry,Manager,relationship_building,55.04883811787564
+WPM 2.0,Leisure and Hospitality Industry,Manager,resilience,51.883296417774034
+WPM 2.0,Leisure and Hospitality Industry,Manager,rest,47.18633122271804
+WPM 2.0,Leisure and Hospitality Industry,Manager,sales_excellence_index,50
+WPM 2.0,Leisure and Hospitality Industry,Manager,self_awareness,52.05359814792806
+WPM 2.0,Leisure and Hospitality Industry,Manager,self_compassion,50.201328102116506
+WPM 2.0,Leisure and Hospitality Industry,Manager,self_efficacy,52.823064257621574
+WPM 2.0,Leisure and Hospitality Industry,Manager,social_connection,50.890754522925825
+WPM 2.0,Leisure and Hospitality Industry,Manager,strategic_planning,51.075935469783204
+WPM 2.0,Leisure and Hospitality Industry,Manager,stress_management,49.7719034
+WPM 2.0,Leisure and Hospitality Industry,Manager,team_feedback,50
+WPM 2.0,Leisure and Hospitality Industry,Manager,team_risk_taking,50
+WPM 2.0,Leisure and Hospitality Industry,Manager,team_agility,50
+WPM 2.0,Leisure and Hospitality Industry,Manager,well_being,50
+WPM 2.0,Leisure and Hospitality Industry,Manager,work_life_balance,48.8639128
+WPM 2.0,Manufacturing Industry,,alignment,49.14810947095112
+WPM 2.0,Manufacturing Industry,,authenticity,49.27617464126158
+WPM 2.0,Manufacturing Industry,,belonging_index,50
+WPM 2.0,Manufacturing Industry,,coaching,49.792400011445324
+WPM 2.0,Manufacturing Industry,,cognitive_agility,48.06620766036422
+WPM 2.0,Manufacturing Industry,,emotional_regulation,49.58836746998881
+WPM 2.0,Manufacturing Industry,,empathy,46.931128116821924
+WPM 2.0,Manufacturing Industry,,empowerment,48.91468567655475
+WPM 2.0,Manufacturing Industry,,encouraging_participation,49.76035121588223
+WPM 2.0,Manufacturing Industry,,engagement,49.92288016204151
+WPM 2.0,Manufacturing Industry,,ex_index,48.8556439
+WPM 2.0,Manufacturing Industry,,focus,50.41441008945948
+WPM 2.0,Manufacturing Industry,,goal_attainment,50.09145547970841
+WPM 2.0,Manufacturing Industry,,growth_mindset,50.08180006616495
+WPM 2.0,Manufacturing Industry,,hope,50.401114467177266
+WPM 2.0,Manufacturing Industry,,job_performance,49.475930099775006
+WPM 2.0,Manufacturing Industry,,job_satisfaction,49.8376261
+WPM 2.0,Manufacturing Industry,,life_satisfaction,50.482438435380764
+WPM 2.0,Manufacturing Industry,,locus_of_control_internal,49.464050954502135
+WPM 2.0,Manufacturing Industry,,nutrition,48.48105187531646
+WPM 2.0,Manufacturing Industry,,optimism,50
+WPM 2.0,Manufacturing Industry,,organizational_commitment,50.43445514619736
+WPM 2.0,Manufacturing Industry,,physical_activity,50.71493456571872
+WPM 2.0,Manufacturing Industry,,problem_solving,48.98685560257561
+WPM 2.0,Manufacturing Industry,,productivity,50.3065062
+WPM 2.0,Manufacturing Industry,,purpose_and_meaning,48.28685062267702
+WPM 2.0,Manufacturing Industry,,psychological_safety,50
+WPM 2.0,Manufacturing Industry,,recognition,48.947137264167964
+WPM 2.0,Manufacturing Industry,,relationship_building,48.330361252432574
+WPM 2.0,Manufacturing Industry,,resilience,50.80960018631592
+WPM 2.0,Manufacturing Industry,,rest,50.714534102862565
+WPM 2.0,Manufacturing Industry,,sales_excellence_index,50
+WPM 2.0,Manufacturing Industry,,self_awareness,49.592657955137305
+WPM 2.0,Manufacturing Industry,,self_compassion,51.836576415911416
+WPM 2.0,Manufacturing Industry,,self_efficacy,50.049841032492814
+WPM 2.0,Manufacturing Industry,,social_connection,48.565746637331586
+WPM 2.0,Manufacturing Industry,,strategic_planning,49.20455228089435
+WPM 2.0,Manufacturing Industry,,stress_management,53.176577
+WPM 2.0,Manufacturing Industry,,team_feedback,50
+WPM 2.0,Manufacturing Industry,,team_risk_taking,50
+WPM 2.0,Manufacturing Industry,,team_agility,50
+WPM 2.0,Manufacturing Industry,,well_being,50
+WPM 2.0,Manufacturing Industry,,work_life_balance,51.3880565
+WPM 2.0,Manufacturing Industry,Individual Contributor,alignment,42.47649838583539
+WPM 2.0,Manufacturing Industry,Individual Contributor,authenticity,46.373752285710886
+WPM 2.0,Manufacturing Industry,Individual Contributor,belonging_index,50
+WPM 2.0,Manufacturing Industry,Individual Contributor,coaching,43.358818470811734
+WPM 2.0,Manufacturing Industry,Individual Contributor,cognitive_agility,43.71093177430304
+WPM 2.0,Manufacturing Industry,Individual Contributor,emotional_regulation,45.46426498800199
+WPM 2.0,Manufacturing Industry,Individual Contributor,empathy,44.124461127237545
+WPM 2.0,Manufacturing Industry,Individual Contributor,empowerment,43.1117077539615
+WPM 2.0,Manufacturing Industry,Individual Contributor,encouraging_participation,41.9807013099941
+WPM 2.0,Manufacturing Industry,Individual Contributor,engagement,44.474560056342575
+WPM 2.0,Manufacturing Industry,Individual Contributor,ex_index,42.9823791
+WPM 2.0,Manufacturing Industry,Individual Contributor,focus,47.61162294550124
+WPM 2.0,Manufacturing Industry,Individual Contributor,goal_attainment,46.203252242845444
+WPM 2.0,Manufacturing Industry,Individual Contributor,growth_mindset,45.408303877196225
+WPM 2.0,Manufacturing Industry,Individual Contributor,hope,45.80798677682909
+WPM 2.0,Manufacturing Industry,Individual Contributor,job_performance,48.94196927033101
+WPM 2.0,Manufacturing Industry,Individual Contributor,job_satisfaction,46.3513224
+WPM 2.0,Manufacturing Industry,Individual Contributor,life_satisfaction,46.60143033288169
+WPM 2.0,Manufacturing Industry,Individual Contributor,locus_of_control_internal,49.33853722524193
+WPM 2.0,Manufacturing Industry,Individual Contributor,nutrition,45.18993240558127
+WPM 2.0,Manufacturing Industry,Individual Contributor,optimism,50
+WPM 2.0,Manufacturing Industry,Individual Contributor,organizational_commitment,46.45581582969607
+WPM 2.0,Manufacturing Industry,Individual Contributor,physical_activity,46.12275935958368
+WPM 2.0,Manufacturing Industry,Individual Contributor,problem_solving,43.87941580589715
+WPM 2.0,Manufacturing Industry,Individual Contributor,productivity,48.4109458
+WPM 2.0,Manufacturing Industry,Individual Contributor,purpose_and_meaning,43.46816352759227
+WPM 2.0,Manufacturing Industry,Individual Contributor,psychological_safety,50
+WPM 2.0,Manufacturing Industry,Individual Contributor,recognition,44.032770629597344
+WPM 2.0,Manufacturing Industry,Individual Contributor,relationship_building,42.11453473535137
+WPM 2.0,Manufacturing Industry,Individual Contributor,resilience,46.98900987165767
+WPM 2.0,Manufacturing Industry,Individual Contributor,rest,48.400041350831486
+WPM 2.0,Manufacturing Industry,Individual Contributor,sales_excellence_index,50
+WPM 2.0,Manufacturing Industry,Individual Contributor,self_awareness,46.19111718352878
+WPM 2.0,Manufacturing Industry,Individual Contributor,self_compassion,49.51762360729305
+WPM 2.0,Manufacturing Industry,Individual Contributor,self_efficacy,47.82508187454841
+WPM 2.0,Manufacturing Industry,Individual Contributor,social_connection,45.711542707237264
+WPM 2.0,Manufacturing Industry,Individual Contributor,strategic_planning,45.00805418029822
+WPM 2.0,Manufacturing Industry,Individual Contributor,stress_management,52.2435702
+WPM 2.0,Manufacturing Industry,Individual Contributor,team_feedback,50
+WPM 2.0,Manufacturing Industry,Individual Contributor,team_risk_taking,50
+WPM 2.0,Manufacturing Industry,Individual Contributor,team_agility,50
+WPM 2.0,Manufacturing Industry,Individual Contributor,well_being,50
+WPM 2.0,Manufacturing Industry,Individual Contributor,work_life_balance,52.8250249
+WPM 2.0,Manufacturing Industry,Manager,alignment,54.55462077964061
+WPM 2.0,Manufacturing Industry,Manager,authenticity,51.62822710470429
+WPM 2.0,Manufacturing Industry,Manager,belonging_index,50
+WPM 2.0,Manufacturing Industry,Manager,coaching,55.00601796834517
+WPM 2.0,Manufacturing Industry,Manager,cognitive_agility,51.595617278227756
+WPM 2.0,Manufacturing Industry,Manager,emotional_regulation,52.93043978544503
+WPM 2.0,Manufacturing Industry,Manager,empathy,49.205582761333055
+WPM 2.0,Manufacturing Industry,Manager,empowerment,53.61727780345053
+WPM 2.0,Manufacturing Industry,Manager,encouraging_participation,56.064790227272795
+WPM 2.0,Manufacturing Industry,Manager,engagement,54.33806622265262
+WPM 2.0,Manufacturing Industry,Manager,ex_index,53.6151947
+WPM 2.0,Manufacturing Industry,Manager,focus,52.685720601468574
+WPM 2.0,Manufacturing Industry,Manager,goal_attainment,53.24236078614655
+WPM 2.0,Manufacturing Industry,Manager,growth_mindset,53.86908767547234
+WPM 2.0,Manufacturing Industry,Manager,hope,54.12327340050056
+WPM 2.0,Manufacturing Industry,Manager,job_performance,49.90863896513839
+WPM 2.0,Manufacturing Industry,Manager,job_satisfaction,52.6628417
+WPM 2.0,Manufacturing Industry,Manager,life_satisfaction,53.62751297998198
+WPM 2.0,Manufacturing Industry,Manager,locus_of_control_internal,49.56576422705112
+WPM 2.0,Manufacturing Industry,Manager,nutrition,51.1480950234203
+WPM 2.0,Manufacturing Industry,Manager,optimism,50
+WPM 2.0,Manufacturing Industry,Manager,organizational_commitment,53.658647651340615
+WPM 2.0,Manufacturing Industry,Manager,physical_activity,54.43632162900883
+WPM 2.0,Manufacturing Industry,Manager,problem_solving,53.125800554087846
+WPM 2.0,Manufacturing Industry,Manager,productivity,51.8426222
+WPM 2.0,Manufacturing Industry,Manager,purpose_and_meaning,52.19179740992817
+WPM 2.0,Manufacturing Industry,Manager,psychological_safety,50
+WPM 2.0,Manufacturing Industry,Manager,recognition,52.9296204224157
+WPM 2.0,Manufacturing Industry,Manager,relationship_building,53.367515836042216
+WPM 2.0,Manufacturing Industry,Manager,resilience,53.905713625564914
+WPM 2.0,Manufacturing Industry,Manager,rest,52.590142719445886
+WPM 2.0,Manufacturing Industry,Manager,sales_excellence_index,50
+WPM 2.0,Manufacturing Industry,Manager,self_awareness,52.34918383982185
+WPM 2.0,Manufacturing Industry,Manager,self_compassion,53.71579935384365
+WPM 2.0,Manufacturing Industry,Manager,self_efficacy,51.85273172757121
+WPM 2.0,Manufacturing Industry,Manager,social_connection,50.87872406189818
+WPM 2.0,Manufacturing Industry,Manager,strategic_planning,52.60529224434702
+WPM 2.0,Manufacturing Industry,Manager,stress_management,53.932663
+WPM 2.0,Manufacturing Industry,Manager,team_feedback,50
+WPM 2.0,Manufacturing Industry,Manager,team_risk_taking,50
+WPM 2.0,Manufacturing Industry,Manager,team_agility,50
+WPM 2.0,Manufacturing Industry,Manager,well_being,50
+WPM 2.0,Manufacturing Industry,Manager,work_life_balance,50.2235723
+WPM 2.0,Pharma/Biotech Industry,,alignment,51.12985017650279
+WPM 2.0,Pharma/Biotech Industry,,authenticity,49.05197486042925
+WPM 2.0,Pharma/Biotech Industry,,belonging_index,50
+WPM 2.0,Pharma/Biotech Industry,,coaching,49.73702491405482
+WPM 2.0,Pharma/Biotech Industry,,cognitive_agility,50.79252261444906
+WPM 2.0,Pharma/Biotech Industry,,emotional_regulation,49.962314542470736
+WPM 2.0,Pharma/Biotech Industry,,empathy,51.03606262920883
+WPM 2.0,Pharma/Biotech Industry,,empowerment,50.65391486844333
+WPM 2.0,Pharma/Biotech Industry,,encouraging_participation,51.798693305388284
+WPM 2.0,Pharma/Biotech Industry,,engagement,50.57195081677944
+WPM 2.0,Pharma/Biotech Industry,,ex_index,51.2082637
+WPM 2.0,Pharma/Biotech Industry,,focus,48.63890025597735
+WPM 2.0,Pharma/Biotech Industry,,goal_attainment,50.623104941554736
+WPM 2.0,Pharma/Biotech Industry,,growth_mindset,52.096450829167026
+WPM 2.0,Pharma/Biotech Industry,,hope,49.74589064514094
+WPM 2.0,Pharma/Biotech Industry,,job_performance,51.827234340917634
+WPM 2.0,Pharma/Biotech Industry,,job_satisfaction,49.8572039
+WPM 2.0,Pharma/Biotech Industry,,life_satisfaction,51.10087540050811
+WPM 2.0,Pharma/Biotech Industry,,locus_of_control_internal,50.29552707373189
+WPM 2.0,Pharma/Biotech Industry,,nutrition,52.61407113989728
+WPM 2.0,Pharma/Biotech Industry,,optimism,50
+WPM 2.0,Pharma/Biotech Industry,,organizational_commitment,49.43885944940837
+WPM 2.0,Pharma/Biotech Industry,,physical_activity,50.48092416127175
+WPM 2.0,Pharma/Biotech Industry,,problem_solving,50.937029736259746
+WPM 2.0,Pharma/Biotech Industry,,productivity,48.4724035
+WPM 2.0,Pharma/Biotech Industry,,purpose_and_meaning,54.548199127335806
+WPM 2.0,Pharma/Biotech Industry,,psychological_safety,50
+WPM 2.0,Pharma/Biotech Industry,,recognition,50.955368027618626
+WPM 2.0,Pharma/Biotech Industry,,relationship_building,51.075274372505575
+WPM 2.0,Pharma/Biotech Industry,,resilience,49.37719126307118
+WPM 2.0,Pharma/Biotech Industry,,rest,48.412364508649816
+WPM 2.0,Pharma/Biotech Industry,,sales_excellence_index,50
+WPM 2.0,Pharma/Biotech Industry,,self_awareness,51.39188545559635
+WPM 2.0,Pharma/Biotech Industry,,self_compassion,49.7276812704373
+WPM 2.0,Pharma/Biotech Industry,,self_efficacy,50.56943208720685
+WPM 2.0,Pharma/Biotech Industry,,social_connection,50.542092851721925
+WPM 2.0,Pharma/Biotech Industry,,strategic_planning,51.28070850899371
+WPM 2.0,Pharma/Biotech Industry,,stress_management,49.1996494
+WPM 2.0,Pharma/Biotech Industry,,team_feedback,50
+WPM 2.0,Pharma/Biotech Industry,,team_risk_taking,50
+WPM 2.0,Pharma/Biotech Industry,,team_agility,50
+WPM 2.0,Pharma/Biotech Industry,,well_being,50
+WPM 2.0,Pharma/Biotech Industry,,work_life_balance,50.9113174
+WPM 2.0,Pharma/Biotech Industry,Individual Contributor,alignment,48.1548841902037
+WPM 2.0,Pharma/Biotech Industry,Individual Contributor,authenticity,48.32817432947796
+WPM 2.0,Pharma/Biotech Industry,Individual Contributor,belonging_index,50
+WPM 2.0,Pharma/Biotech Industry,Individual Contributor,coaching,46.15065867457484
+WPM 2.0,Pharma/Biotech Industry,Individual Contributor,cognitive_agility,48.785610951160045
+WPM 2.0,Pharma/Biotech Industry,Individual Contributor,emotional_regulation,48.237426649224915
+WPM 2.0,Pharma/Biotech Industry,Individual Contributor,empathy,50.29076825975626
+WPM 2.0,Pharma/Biotech Industry,Individual Contributor,empowerment,47.91697424851932
+WPM 2.0,Pharma/Biotech Industry,Individual Contributor,encouraging_participation,47.30287232860502
+WPM 2.0,Pharma/Biotech Industry,Individual Contributor,engagement,48.149424750554566
+WPM 2.0,Pharma/Biotech Industry,Individual Contributor,ex_index,49.5281739
+WPM 2.0,Pharma/Biotech Industry,Individual Contributor,focus,47.804564815122404
+WPM 2.0,Pharma/Biotech Industry,Individual Contributor,goal_attainment,50.200523452133176
+WPM 2.0,Pharma/Biotech Industry,Individual Contributor,growth_mindset,50.50041033170983
+WPM 2.0,Pharma/Biotech Industry,Individual Contributor,hope,47.66613373129264
+WPM 2.0,Pharma/Biotech Industry,Individual Contributor,job_performance,51.81234198156284
+WPM 2.0,Pharma/Biotech Industry,Individual Contributor,job_satisfaction,48.8072326
+WPM 2.0,Pharma/Biotech Industry,Individual Contributor,life_satisfaction,49.72103167393097
+WPM 2.0,Pharma/Biotech Industry,Individual Contributor,locus_of_control_internal,50.08820806227883
+WPM 2.0,Pharma/Biotech Industry,Individual Contributor,nutrition,50.9530174171331
+WPM 2.0,Pharma/Biotech Industry,Individual Contributor,optimism,50
+WPM 2.0,Pharma/Biotech Industry,Individual Contributor,organizational_commitment,47.2601801317457
+WPM 2.0,Pharma/Biotech Industry,Individual Contributor,physical_activity,49.3407920228882
+WPM 2.0,Pharma/Biotech Industry,Individual Contributor,problem_solving,48.710123916085884
+WPM 2.0,Pharma/Biotech Industry,Individual Contributor,productivity,47.9460314
+WPM 2.0,Pharma/Biotech Industry,Individual Contributor,purpose_and_meaning,53.08512338365618
+WPM 2.0,Pharma/Biotech Industry,Individual Contributor,psychological_safety,50
+WPM 2.0,Pharma/Biotech Industry,Individual Contributor,recognition,48.57521705056554
+WPM 2.0,Pharma/Biotech Industry,Individual Contributor,relationship_building,48.04382000641022
+WPM 2.0,Pharma/Biotech Industry,Individual Contributor,resilience,47.96527563074514
+WPM 2.0,Pharma/Biotech Industry,Individual Contributor,rest,47.94128877914928
+WPM 2.0,Pharma/Biotech Industry,Individual Contributor,sales_excellence_index,50
+WPM 2.0,Pharma/Biotech Industry,Individual Contributor,self_awareness,50.13974865592341
+WPM 2.0,Pharma/Biotech Industry,Individual Contributor,self_compassion,48.238435276814236
+WPM 2.0,Pharma/Biotech Industry,Individual Contributor,self_efficacy,49.61123247720259
+WPM 2.0,Pharma/Biotech Industry,Individual Contributor,social_connection,50.1696504249649
+WPM 2.0,Pharma/Biotech Industry,Individual Contributor,strategic_planning,50.1070776140501
+WPM 2.0,Pharma/Biotech Industry,Individual Contributor,stress_management,49.4892371
+WPM 2.0,Pharma/Biotech Industry,Individual Contributor,team_feedback,50
+WPM 2.0,Pharma/Biotech Industry,Individual Contributor,team_risk_taking,50
+WPM 2.0,Pharma/Biotech Industry,Individual Contributor,team_agility,50
+WPM 2.0,Pharma/Biotech Industry,Individual Contributor,well_being,50
+WPM 2.0,Pharma/Biotech Industry,Individual Contributor,work_life_balance,52.3680333
+WPM 2.0,Pharma/Biotech Industry,Manager,alignment,54.973611539331706
+WPM 2.0,Pharma/Biotech Industry,Manager,authenticity,49.987150767676056
+WPM 2.0,Pharma/Biotech Industry,Manager,belonging_index,50
+WPM 2.0,Pharma/Biotech Industry,Manager,coaching,54.37073704648027
+WPM 2.0,Pharma/Biotech Industry,Manager,cognitive_agility,53.38552352453928
+WPM 2.0,Pharma/Biotech Industry,Manager,emotional_regulation,52.19093075852287
+WPM 2.0,Pharma/Biotech Industry,Manager,empathy,51.99900933664312
+WPM 2.0,Pharma/Biotech Industry,Manager,empowerment,54.19013903223895
+WPM 2.0,Pharma/Biotech Industry,Manager,encouraging_participation,57.60745315149762
+WPM 2.0,Pharma/Biotech Industry,Manager,engagement,53.70194024747707
+WPM 2.0,Pharma/Biotech Industry,Manager,ex_index,53.3789992
+WPM 2.0,Pharma/Biotech Industry,Manager,focus,49.71689117955984
+WPM 2.0,Pharma/Biotech Industry,Manager,goal_attainment,51.16909518452417
+WPM 2.0,Pharma/Biotech Industry,Manager,growth_mindset,54.15859164889048
+WPM 2.0,Pharma/Biotech Industry,Manager,hope,52.43301019754671
+WPM 2.0,Pharma/Biotech Industry,Manager,job_performance,51.846475796367194
+WPM 2.0,Pharma/Biotech Industry,Manager,job_satisfaction,51.213804
+WPM 2.0,Pharma/Biotech Industry,Manager,life_satisfaction,52.88368233927149
+WPM 2.0,Pharma/Biotech Industry,Manager,locus_of_control_internal,50.563390575255305
+WPM 2.0,Pharma/Biotech Industry,Manager,nutrition,54.76021134807048
+WPM 2.0,Pharma/Biotech Industry,Manager,optimism,50
+WPM 2.0,Pharma/Biotech Industry,Manager,organizational_commitment,52.25379024922033
+WPM 2.0,Pharma/Biotech Industry,Manager,physical_activity,51.95401524272307
+WPM 2.0,Pharma/Biotech Industry,Manager,problem_solving,53.81427088444899
+WPM 2.0,Pharma/Biotech Industry,Manager,productivity,49.1524949
+WPM 2.0,Pharma/Biotech Industry,Manager,purpose_and_meaning,56.43854477846168
+WPM 2.0,Pharma/Biotech Industry,Manager,psychological_safety,50
+WPM 2.0,Pharma/Biotech Industry,Manager,recognition,54.03060734310315
+WPM 2.0,Pharma/Biotech Industry,Manager,relationship_building,54.99202072161994
+WPM 2.0,Pharma/Biotech Industry,Manager,resilience,51.20143623935084
+WPM 2.0,Pharma/Biotech Industry,Manager,rest,49.02101102641157
+WPM 2.0,Pharma/Biotech Industry,Manager,sales_excellence_index,50
+WPM 2.0,Pharma/Biotech Industry,Manager,self_awareness,53.00969052420033
+WPM 2.0,Pharma/Biotech Industry,Manager,self_compassion,51.65183981087065
+WPM 2.0,Pharma/Biotech Industry,Manager,self_efficacy,51.80745990190261
+WPM 2.0,Pharma/Biotech Industry,Manager,social_connection,51.02330165089471
+WPM 2.0,Pharma/Biotech Industry,Manager,strategic_planning,52.79708116971733
+WPM 2.0,Pharma/Biotech Industry,Manager,stress_management,48.8254918
+WPM 2.0,Pharma/Biotech Industry,Manager,team_feedback,50
+WPM 2.0,Pharma/Biotech Industry,Manager,team_risk_taking,50
+WPM 2.0,Pharma/Biotech Industry,Manager,team_agility,50
+WPM 2.0,Pharma/Biotech Industry,Manager,well_being,50
+WPM 2.0,Pharma/Biotech Industry,Manager,work_life_balance,49.0291889
+WPM 2.0,Professional and Business Services,,alignment,51.39462071037003
+WPM 2.0,Professional and Business Services,,authenticity,51.675481414874575
+WPM 2.0,Professional and Business Services,,belonging_index,50
+WPM 2.0,Professional and Business Services,,coaching,52.12284054380984
+WPM 2.0,Professional and Business Services,,cognitive_agility,52.07907222569031
+WPM 2.0,Professional and Business Services,,emotional_regulation,50.924882630009435
+WPM 2.0,Professional and Business Services,,empathy,51.21137084071879
+WPM 2.0,Professional and Business Services,,empowerment,50.92084638663562
+WPM 2.0,Professional and Business Services,,encouraging_participation,52.476265379913386
+WPM 2.0,Professional and Business Services,,engagement,51.316014637710346
+WPM 2.0,Professional and Business Services,,ex_index,51.3464263
+WPM 2.0,Professional and Business Services,,focus,50.70029468534624
+WPM 2.0,Professional and Business Services,,goal_attainment,51.68260594166349
+WPM 2.0,Professional and Business Services,,growth_mindset,52.38321146925378
+WPM 2.0,Professional and Business Services,,hope,51.29518417778108
+WPM 2.0,Professional and Business Services,,job_performance,50.98512289500091
+WPM 2.0,Professional and Business Services,,job_satisfaction,50.7553393
+WPM 2.0,Professional and Business Services,,life_satisfaction,50.9502187783485
+WPM 2.0,Professional and Business Services,,locus_of_control_internal,49.716145649996
+WPM 2.0,Professional and Business Services,,nutrition,52.51147938539554
+WPM 2.0,Professional and Business Services,,optimism,50
+WPM 2.0,Professional and Business Services,,organizational_commitment,50.674278934383395
+WPM 2.0,Professional and Business Services,,physical_activity,51.54390412354654
+WPM 2.0,Professional and Business Services,,problem_solving,51.60933447884419
+WPM 2.0,Professional and Business Services,,productivity,50.3030163
+WPM 2.0,Professional and Business Services,,purpose_and_meaning,49.565921525033154
+WPM 2.0,Professional and Business Services,,psychological_safety,50
+WPM 2.0,Professional and Business Services,,recognition,51.203365619949096
+WPM 2.0,Professional and Business Services,,relationship_building,52.33274416123546
+WPM 2.0,Professional and Business Services,,resilience,50.74344759065056
+WPM 2.0,Professional and Business Services,,rest,51.41757720799593
+WPM 2.0,Professional and Business Services,,sales_excellence_index,50
+WPM 2.0,Professional and Business Services,,self_awareness,49.819026751619674
+WPM 2.0,Professional and Business Services,,self_compassion,50.182523063833706
+WPM 2.0,Professional and Business Services,,self_efficacy,51.12138327558538
+WPM 2.0,Professional and Business Services,,social_connection,51.21210668906633
+WPM 2.0,Professional and Business Services,,strategic_planning,51.22513747837495
+WPM 2.0,Professional and Business Services,,stress_management,49.3712547
+WPM 2.0,Professional and Business Services,,team_feedback,50
+WPM 2.0,Professional and Business Services,,team_risk_taking,50
+WPM 2.0,Professional and Business Services,,team_agility,50
+WPM 2.0,Professional and Business Services,,well_being,50
+WPM 2.0,Professional and Business Services,,work_life_balance,49.2531353
+WPM 2.0,Professional and Business Services,Individual Contributor,alignment,46.03755229287819
+WPM 2.0,Professional and Business Services,Individual Contributor,authenticity,49.776611600609606
+WPM 2.0,Professional and Business Services,Individual Contributor,belonging_index,50
+WPM 2.0,Professional and Business Services,Individual Contributor,coaching,47.35200910249015
+WPM 2.0,Professional and Business Services,Individual Contributor,cognitive_agility,48.86628542193923
+WPM 2.0,Professional and Business Services,Individual Contributor,emotional_regulation,46.45859210551351
+WPM 2.0,Professional and Business Services,Individual Contributor,empathy,49.973191138171885
+WPM 2.0,Professional and Business Services,Individual Contributor,empowerment,47.16169202067676
+WPM 2.0,Professional and Business Services,Individual Contributor,encouraging_participation,46.08546808745571
+WPM 2.0,Professional and Business Services,Individual Contributor,engagement,46.69611806840499
+WPM 2.0,Professional and Business Services,Individual Contributor,ex_index,46.2749947
+WPM 2.0,Professional and Business Services,Individual Contributor,focus,48.53275946066451
+WPM 2.0,Professional and Business Services,Individual Contributor,goal_attainment,47.77087514416037
+WPM 2.0,Professional and Business Services,Individual Contributor,growth_mindset,48.915029641271765
+WPM 2.0,Professional and Business Services,Individual Contributor,hope,46.692054642369136
+WPM 2.0,Professional and Business Services,Individual Contributor,job_performance,51.125453605657334
+WPM 2.0,Professional and Business Services,Individual Contributor,job_satisfaction,46.468268
+WPM 2.0,Professional and Business Services,Individual Contributor,life_satisfaction,47.17306989080946
+WPM 2.0,Professional and Business Services,Individual Contributor,locus_of_control_internal,48.077862134939494
+WPM 2.0,Professional and Business Services,Individual Contributor,nutrition,50.58655592979573
+WPM 2.0,Professional and Business Services,Individual Contributor,optimism,50
+WPM 2.0,Professional and Business Services,Individual Contributor,organizational_commitment,46.36476016995063
+WPM 2.0,Professional and Business Services,Individual Contributor,physical_activity,48.30387411780639
+WPM 2.0,Professional and Business Services,Individual Contributor,problem_solving,48.40320215370438
+WPM 2.0,Professional and Business Services,Individual Contributor,productivity,48.3895738
+WPM 2.0,Professional and Business Services,Individual Contributor,purpose_and_meaning,44.77747418427315
+WPM 2.0,Professional and Business Services,Individual Contributor,psychological_safety,50
+WPM 2.0,Professional and Business Services,Individual Contributor,recognition,48.01035486781677
+WPM 2.0,Professional and Business Services,Individual Contributor,relationship_building,47.36559666604275
+WPM 2.0,Professional and Business Services,Individual Contributor,resilience,46.744268356238585
+WPM 2.0,Professional and Business Services,Individual Contributor,rest,49.88712637956449
+WPM 2.0,Professional and Business Services,Individual Contributor,sales_excellence_index,50
+WPM 2.0,Professional and Business Services,Individual Contributor,self_awareness,47.54000059825583
+WPM 2.0,Professional and Business Services,Individual Contributor,self_compassion,48.205955832282406
+WPM 2.0,Professional and Business Services,Individual Contributor,self_efficacy,47.343585949556385
+WPM 2.0,Professional and Business Services,Individual Contributor,social_connection,49.80120105396862
+WPM 2.0,Professional and Business Services,Individual Contributor,strategic_planning,48.14985295487016
+WPM 2.0,Professional and Business Services,Individual Contributor,stress_management,48.6538919
+WPM 2.0,Professional and Business Services,Individual Contributor,team_feedback,50
+WPM 2.0,Professional and Business Services,Individual Contributor,team_risk_taking,50
+WPM 2.0,Professional and Business Services,Individual Contributor,team_agility,50
+WPM 2.0,Professional and Business Services,Individual Contributor,well_being,50
+WPM 2.0,Professional and Business Services,Individual Contributor,work_life_balance,51.6861229
+WPM 2.0,Professional and Business Services,Manager,alignment,55.37855549901051
+WPM 2.0,Professional and Business Services,Manager,authenticity,53.08762942617278
+WPM 2.0,Professional and Business Services,Manager,belonging_index,50
+WPM 2.0,Professional and Business Services,Manager,coaching,55.67080369614759
+WPM 2.0,Professional and Business Services,Manager,cognitive_agility,54.468351607330476
+WPM 2.0,Professional and Business Services,Manager,emotional_regulation,54.246365353398936
+WPM 2.0,Professional and Business Services,Manager,empathy,52.13217804479678
+WPM 2.0,Professional and Business Services,Manager,empowerment,53.71644739212455
+WPM 2.0,Professional and Business Services,Manager,encouraging_participation,57.228961757177885
+WPM 2.0,Professional and Business Services,Manager,engagement,54.75173082200985
+WPM 2.0,Professional and Business Services,Manager,ex_index,55.1179392
+WPM 2.0,Professional and Business Services,Manager,focus,52.31224329496587
+WPM 2.0,Professional and Business Services,Manager,goal_attainment,54.59167470716292
+WPM 2.0,Professional and Business Services,Manager,growth_mindset,54.962422552822005
+WPM 2.0,Professional and Business Services,Manager,hope,54.718431085150655
+WPM 2.0,Professional and Business Services,Manager,job_performance,50.88076201017941
+WPM 2.0,Professional and Business Services,Manager,job_satisfaction,53.9435406
+WPM 2.0,Professional and Business Services,Manager,life_satisfaction,53.75920191655282
+WPM 2.0,Professional and Business Services,Manager,locus_of_control_internal,50.93450132153801
+WPM 2.0,Professional and Business Services,Manager,nutrition,53.943002920766894
+WPM 2.0,Professional and Business Services,Manager,optimism,50
+WPM 2.0,Professional and Business Services,Manager,organizational_commitment,53.87917392356502
+WPM 2.0,Professional and Business Services,Manager,physical_activity,53.95344367953951
+WPM 2.0,Professional and Business Services,Manager,problem_solving,53.99366507006884
+WPM 2.0,Professional and Business Services,Manager,productivity,51.7260017
+WPM 2.0,Professional and Business Services,Manager,purpose_and_meaning,53.12698523706961
+WPM 2.0,Professional and Business Services,Manager,psychological_safety,50
+WPM 2.0,Professional and Business Services,Manager,recognition,53.57793798389118
+WPM 2.0,Professional and Business Services,Manager,relationship_building,56.02670327547647
+WPM 2.0,Professional and Business Services,Manager,resilience,53.717549848885675
+WPM 2.0,Professional and Business Services,Manager,rest,52.55574006546162
+WPM 2.0,Professional and Business Services,Manager,sales_excellence_index,50
+WPM 2.0,Professional and Business Services,Manager,self_awareness,51.51388873004082
+WPM 2.0,Professional and Business Services,Manager,self_compassion,51.65245294752761
+WPM 2.0,Professional and Business Services,Manager,self_efficacy,53.93084864333339
+WPM 2.0,Professional and Business Services,Manager,social_connection,52.26136639700681
+WPM 2.0,Professional and Business Services,Manager,strategic_planning,53.51215941711931
+WPM 2.0,Professional and Business Services,Manager,stress_management,49.9047418
+WPM 2.0,Professional and Business Services,Manager,team_feedback,50
+WPM 2.0,Professional and Business Services,Manager,team_risk_taking,50
+WPM 2.0,Professional and Business Services,Manager,team_agility,50
+WPM 2.0,Professional and Business Services,Manager,well_being,50
+WPM 2.0,Professional and Business Services,Manager,work_life_balance,47.4437756
+WPM 2.0,Retail Industry,,alignment,49.611129322485645
+WPM 2.0,Retail Industry,,authenticity,48.75838001773031
+WPM 2.0,Retail Industry,,belonging_index,50
+WPM 2.0,Retail Industry,,coaching,49.67970594413945
+WPM 2.0,Retail Industry,,cognitive_agility,49.59174413350718
+WPM 2.0,Retail Industry,,emotional_regulation,49.07030179615825
+WPM 2.0,Retail Industry,,empathy,49.219640153426035
+WPM 2.0,Retail Industry,,empowerment,48.662733432163364
+WPM 2.0,Retail Industry,,encouraging_participation,50.653443104614134
+WPM 2.0,Retail Industry,,engagement,48.950086057550344
+WPM 2.0,Retail Industry,,ex_index,47.475572
+WPM 2.0,Retail Industry,,focus,50.737601515324954
+WPM 2.0,Retail Industry,,goal_attainment,48.666430655787494
+WPM 2.0,Retail Industry,,growth_mindset,49.28572562112907
+WPM 2.0,Retail Industry,,hope,48.83101422741714
+WPM 2.0,Retail Industry,,job_performance,49.335329734613225
+WPM 2.0,Retail Industry,,job_satisfaction,47.7458757
+WPM 2.0,Retail Industry,,life_satisfaction,47.72260257840489
+WPM 2.0,Retail Industry,,locus_of_control_internal,50.38751018456702
+WPM 2.0,Retail Industry,,nutrition,46.58075380212058
+WPM 2.0,Retail Industry,,optimism,50
+WPM 2.0,Retail Industry,,organizational_commitment,49.46381739195402
+WPM 2.0,Retail Industry,,physical_activity,48.120903521390126
+WPM 2.0,Retail Industry,,problem_solving,49.591010303285714
+WPM 2.0,Retail Industry,,productivity,52.692977
+WPM 2.0,Retail Industry,,purpose_and_meaning,45.127193541155506
+WPM 2.0,Retail Industry,,psychological_safety,50
+WPM 2.0,Retail Industry,,recognition,50.116746019693146
+WPM 2.0,Retail Industry,,relationship_building,50.45695993820522
+WPM 2.0,Retail Industry,,resilience,49.4460213771407
+WPM 2.0,Retail Industry,,rest,48.9349747474672
+WPM 2.0,Retail Industry,,sales_excellence_index,50
+WPM 2.0,Retail Industry,,self_awareness,49.723462263514314
+WPM 2.0,Retail Industry,,self_compassion,49.94472897792718
+WPM 2.0,Retail Industry,,self_efficacy,48.793063339773894
+WPM 2.0,Retail Industry,,social_connection,49.23309334715708
+WPM 2.0,Retail Industry,,strategic_planning,48.42688959188485
+WPM 2.0,Retail Industry,,stress_management,50.8023984
+WPM 2.0,Retail Industry,,team_feedback,50
+WPM 2.0,Retail Industry,,team_risk_taking,50
+WPM 2.0,Retail Industry,,team_agility,50
+WPM 2.0,Retail Industry,,well_being,50
+WPM 2.0,Retail Industry,,work_life_balance,50.7200154
+WPM 2.0,Retail Industry,Individual Contributor,alignment,44.277861896112015
+WPM 2.0,Retail Industry,Individual Contributor,authenticity,47.70032538989549
+WPM 2.0,Retail Industry,Individual Contributor,belonging_index,50
+WPM 2.0,Retail Industry,Individual Contributor,coaching,45.195796998344704
+WPM 2.0,Retail Industry,Individual Contributor,cognitive_agility,47.104331418068
+WPM 2.0,Retail Industry,Individual Contributor,emotional_regulation,46.482425669071006
+WPM 2.0,Retail Industry,Individual Contributor,empathy,47.496881567779184
+WPM 2.0,Retail Industry,Individual Contributor,empowerment,45.08841404424275
+WPM 2.0,Retail Industry,Individual Contributor,encouraging_participation,44.041265802339495
+WPM 2.0,Retail Industry,Individual Contributor,engagement,45.369228482941644
+WPM 2.0,Retail Industry,Individual Contributor,ex_index,44.1046954
+WPM 2.0,Retail Industry,Individual Contributor,focus,48.76925288161307
+WPM 2.0,Retail Industry,Individual Contributor,goal_attainment,45.91060055364414
+WPM 2.0,Retail Industry,Individual Contributor,growth_mindset,45.027265403249324
+WPM 2.0,Retail Industry,Individual Contributor,hope,45.47564307326522
+WPM 2.0,Retail Industry,Individual Contributor,job_performance,47.74696479323053
+WPM 2.0,Retail Industry,Individual Contributor,job_satisfaction,45.8992726
+WPM 2.0,Retail Industry,Individual Contributor,life_satisfaction,44.872135619049416
+WPM 2.0,Retail Industry,Individual Contributor,locus_of_control_internal,49.67825539086757
+WPM 2.0,Retail Industry,Individual Contributor,nutrition,45.437771103205456
+WPM 2.0,Retail Industry,Individual Contributor,optimism,50
+WPM 2.0,Retail Industry,Individual Contributor,organizational_commitment,46.114383530492006
+WPM 2.0,Retail Industry,Individual Contributor,physical_activity,46.47464032466251
+WPM 2.0,Retail Industry,Individual Contributor,problem_solving,46.03639771303098
+WPM 2.0,Retail Industry,Individual Contributor,productivity,51.7496275
+WPM 2.0,Retail Industry,Individual Contributor,purpose_and_meaning,41.91313228188732
+WPM 2.0,Retail Industry,Individual Contributor,psychological_safety,50
+WPM 2.0,Retail Industry,Individual Contributor,recognition,46.15065748844826
+WPM 2.0,Retail Industry,Individual Contributor,relationship_building,45.476799236644005
+WPM 2.0,Retail Industry,Individual Contributor,resilience,46.3624373983489
+WPM 2.0,Retail Industry,Individual Contributor,rest,49.28941293521546
+WPM 2.0,Retail Industry,Individual Contributor,sales_excellence_index,50
+WPM 2.0,Retail Industry,Individual Contributor,self_awareness,47.371407391061595
+WPM 2.0,Retail Industry,Individual Contributor,self_compassion,49.68052686259262
+WPM 2.0,Retail Industry,Individual Contributor,self_efficacy,45.694960481383625
+WPM 2.0,Retail Industry,Individual Contributor,social_connection,47.83049355258024
+WPM 2.0,Retail Industry,Individual Contributor,strategic_planning,45.3998105869717
+WPM 2.0,Retail Industry,Individual Contributor,stress_management,50.7732087
+WPM 2.0,Retail Industry,Individual Contributor,team_feedback,50
+WPM 2.0,Retail Industry,Individual Contributor,team_risk_taking,50
+WPM 2.0,Retail Industry,Individual Contributor,team_agility,50
+WPM 2.0,Retail Industry,Individual Contributor,well_being,50
+WPM 2.0,Retail Industry,Individual Contributor,work_life_balance,52.035733
+WPM 2.0,Retail Industry,Manager,alignment,53.41974515691292
+WPM 2.0,Retail Industry,Manager,authenticity,49.513962531619136
+WPM 2.0,Retail Industry,Manager,belonging_index,50
+WPM 2.0,Retail Industry,Manager,coaching,52.88177425345276
+WPM 2.0,Retail Industry,Manager,cognitive_agility,51.36806598227278
+WPM 2.0,Retail Industry,Manager,emotional_regulation,50.91836700781828
+WPM 2.0,Retail Industry,Manager,empathy,50.44990391176367
+WPM 2.0,Retail Industry,Manager,empowerment,51.21524174082533
+WPM 2.0,Retail Industry,Manager,encouraging_participation,55.375359550984264
+WPM 2.0,Retail Industry,Manager,engagement,51.507263444163556
+WPM 2.0,Retail Industry,Manager,ex_index,49.8827968
+WPM 2.0,Retail Industry,Manager,focus,52.14324709329774
+WPM 2.0,Retail Industry,Manager,goal_attainment,50.63443588127292
+WPM 2.0,Retail Industry,Manager,growth_mindset,52.326795516835276
+WPM 2.0,Retail Industry,Manager,hope,51.227166283263486
+WPM 2.0,Retail Industry,Manager,job_performance,50.46961972665148
+WPM 2.0,Retail Industry,Manager,job_satisfaction,49.0645798
+WPM 2.0,Retail Industry,Manager,life_satisfaction,49.75819028271298
+WPM 2.0,Retail Industry,Manager,locus_of_control_internal,50.89400626323148
+WPM 2.0,Retail Industry,Manager,nutrition,47.39698551479216
+WPM 2.0,Retail Industry,Manager,optimism,50
+WPM 2.0,Retail Industry,Manager,organizational_commitment,51.85572948285119
+WPM 2.0,Retail Industry,Manager,physical_activity,49.29654006413799
+WPM 2.0,Retail Industry,Manager,problem_solving,52.12944550898176
+WPM 2.0,Retail Industry,Manager,productivity,53.3666459
+WPM 2.0,Retail Industry,Manager,purpose_and_meaning,47.42243276811313
+WPM 2.0,Retail Industry,Manager,psychological_safety,50
+WPM 2.0,Retail Industry,Manager,recognition,52.94902619115842
+WPM 2.0,Retail Industry,Manager,relationship_building,54.013413682144986
+WPM 2.0,Retail Industry,Manager,resilience,51.648083608323105
+WPM 2.0,Retail Industry,Manager,rest,48.68186182695092
+WPM 2.0,Retail Industry,Manager,sales_excellence_index,50
+WPM 2.0,Retail Industry,Manager,self_awareness,51.40312178824891
+WPM 2.0,Retail Industry,Manager,self_compassion,50.13340212695705
+WPM 2.0,Retail Industry,Manager,self_efficacy,51.0054938555961
+WPM 2.0,Retail Industry,Manager,social_connection,50.23472393492269
+WPM 2.0,Retail Industry,Manager,strategic_planning,50.58860024850081
+WPM 2.0,Retail Industry,Manager,stress_management,50.8232435
+WPM 2.0,Retail Industry,Manager,team_feedback,50
+WPM 2.0,Retail Industry,Manager,team_risk_taking,50
+WPM 2.0,Retail Industry,Manager,team_agility,50
+WPM 2.0,Retail Industry,Manager,well_being,50
+WPM 2.0,Retail Industry,Manager,work_life_balance,49.7804296
+WPM 2.0,Technology Industry,,alignment,52.08016197799479
+WPM 2.0,Technology Industry,,authenticity,52.598985877287085
+WPM 2.0,Technology Industry,,belonging_index,50
+WPM 2.0,Technology Industry,,coaching,51.935699017767135
+WPM 2.0,Technology Industry,,cognitive_agility,51.977247530341245
+WPM 2.0,Technology Industry,,emotional_regulation,53.76900160973642
+WPM 2.0,Technology Industry,,empathy,48.95931170220881
+WPM 2.0,Technology Industry,,empowerment,52.32175573205335
+WPM 2.0,Technology Industry,,encouraging_participation,51.17442115880566
+WPM 2.0,Technology Industry,,engagement,52.245200760155456
+WPM 2.0,Technology Industry,,ex_index,52.4649216
+WPM 2.0,Technology Industry,,focus,50.90411522498451
+WPM 2.0,Technology Industry,,goal_attainment,50.91033660643617
+WPM 2.0,Technology Industry,,growth_mindset,53.48164210307942
+WPM 2.0,Technology Industry,,hope,52.21149259853758
+WPM 2.0,Technology Industry,,job_performance,47.545843714062705
+WPM 2.0,Technology Industry,,job_satisfaction,52.0723819
+WPM 2.0,Technology Industry,,life_satisfaction,50.866831694005874
+WPM 2.0,Technology Industry,,locus_of_control_internal,51.40568096019324
+WPM 2.0,Technology Industry,,nutrition,54.219420766520074
+WPM 2.0,Technology Industry,,optimism,50
+WPM 2.0,Technology Industry,,organizational_commitment,51.14564275390361
+WPM 2.0,Technology Industry,,physical_activity,54.35153383093327
+WPM 2.0,Technology Industry,,problem_solving,52.07548572952487
+WPM 2.0,Technology Industry,,productivity,49.6177659
+WPM 2.0,Technology Industry,,purpose_and_meaning,50.339940645220196
+WPM 2.0,Technology Industry,,psychological_safety,50
+WPM 2.0,Technology Industry,,recognition,50.45536341593703
+WPM 2.0,Technology Industry,,relationship_building,51.05671985573874
+WPM 2.0,Technology Industry,,resilience,52.547764795889115
+WPM 2.0,Technology Industry,,rest,53.671894384797895
+WPM 2.0,Technology Industry,,sales_excellence_index,50
+WPM 2.0,Technology Industry,,self_awareness,47.84743953404381
+WPM 2.0,Technology Industry,,self_compassion,48.71887147606741
+WPM 2.0,Technology Industry,,self_efficacy,50.72359424375464
+WPM 2.0,Technology Industry,,social_connection,50.31111046731207
+WPM 2.0,Technology Industry,,strategic_planning,50.79523811844443
+WPM 2.0,Technology Industry,,stress_management,48.5033353
+WPM 2.0,Technology Industry,,team_feedback,50
+WPM 2.0,Technology Industry,,team_risk_taking,50
+WPM 2.0,Technology Industry,,team_agility,50
+WPM 2.0,Technology Industry,,well_being,50
+WPM 2.0,Technology Industry,,work_life_balance,44.5279965
+WPM 2.0,Technology Industry,Individual Contributor,alignment,46.37195356641479
+WPM 2.0,Technology Industry,Individual Contributor,authenticity,47.99326730904553
+WPM 2.0,Technology Industry,Individual Contributor,belonging_index,50
+WPM 2.0,Technology Industry,Individual Contributor,coaching,46.00417570398449
+WPM 2.0,Technology Industry,Individual Contributor,cognitive_agility,47.444892540530006
+WPM 2.0,Technology Industry,Individual Contributor,emotional_regulation,49.00023633040755
+WPM 2.0,Technology Industry,Individual Contributor,empathy,46.13706829423467
+WPM 2.0,Technology Industry,Individual Contributor,empowerment,48.56363437918266
+WPM 2.0,Technology Industry,Individual Contributor,encouraging_participation,44.88230198722359
+WPM 2.0,Technology Industry,Individual Contributor,engagement,47.34127043420261
+WPM 2.0,Technology Industry,Individual Contributor,ex_index,45.8080511
+WPM 2.0,Technology Industry,Individual Contributor,focus,46.7958997356777
+WPM 2.0,Technology Industry,Individual Contributor,goal_attainment,47.06278438035235
+WPM 2.0,Technology Industry,Individual Contributor,growth_mindset,48.400058001971225
+WPM 2.0,Technology Industry,Individual Contributor,hope,47.18674924926321
+WPM 2.0,Technology Industry,Individual Contributor,job_performance,46.61868102415965
+WPM 2.0,Technology Industry,Individual Contributor,job_satisfaction,47.9213528
+WPM 2.0,Technology Industry,Individual Contributor,life_satisfaction,46.53308390981656
+WPM 2.0,Technology Industry,Individual Contributor,locus_of_control_internal,50.0294601321314
+WPM 2.0,Technology Industry,Individual Contributor,nutrition,51.08194636688038
+WPM 2.0,Technology Industry,Individual Contributor,optimism,50
+WPM 2.0,Technology Industry,Individual Contributor,organizational_commitment,46.63070545544905
+WPM 2.0,Technology Industry,Individual Contributor,physical_activity,50.86152518197477
+WPM 2.0,Technology Industry,Individual Contributor,problem_solving,48.12631617216145
+WPM 2.0,Technology Industry,Individual Contributor,productivity,45.3732568
+WPM 2.0,Technology Industry,Individual Contributor,purpose_and_meaning,45.70645914406299
+WPM 2.0,Technology Industry,Individual Contributor,psychological_safety,50
+WPM 2.0,Technology Industry,Individual Contributor,recognition,46.928148477139416
+WPM 2.0,Technology Industry,Individual Contributor,relationship_building,45.478296040750685
+WPM 2.0,Technology Industry,Individual Contributor,resilience,47.46136169781639
+WPM 2.0,Technology Industry,Individual Contributor,rest,49.64502742093388
+WPM 2.0,Technology Industry,Individual Contributor,sales_excellence_index,50
+WPM 2.0,Technology Industry,Individual Contributor,self_awareness,46.99874053201757
+WPM 2.0,Technology Industry,Individual Contributor,self_compassion,48.76605656565862
+WPM 2.0,Technology Industry,Individual Contributor,self_efficacy,47.61112236169897
+WPM 2.0,Technology Industry,Individual Contributor,social_connection,46.31804706411604
+WPM 2.0,Technology Industry,Individual Contributor,strategic_planning,46.5886625262634
+WPM 2.0,Technology Industry,Individual Contributor,stress_management,49.5351975
+WPM 2.0,Technology Industry,Individual Contributor,team_feedback,50
+WPM 2.0,Technology Industry,Individual Contributor,team_risk_taking,50
+WPM 2.0,Technology Industry,Individual Contributor,team_agility,50
+WPM 2.0,Technology Industry,Individual Contributor,well_being,50
+WPM 2.0,Technology Industry,Individual Contributor,work_life_balance,49.527646
+WPM 2.0,Technology Industry,Manager,alignment,56.81749296372101
+WPM 2.0,Technology Industry,Manager,authenticity,56.42134338627405
+WPM 2.0,Technology Industry,Manager,belonging_index,50
+WPM 2.0,Technology Industry,Manager,coaching,56.85836251581595
+WPM 2.0,Technology Industry,Manager,cognitive_agility,55.738719463984346
+WPM 2.0,Technology Industry,Manager,emotional_regulation,57.726674121411044
+WPM 2.0,Technology Industry,Manager,empathy,51.301535423181306
+WPM 2.0,Technology Industry,Manager,empowerment,55.4406791226143
+WPM 2.0,Technology Industry,Manager,encouraging_participation,56.39634877044434
+WPM 2.0,Technology Industry,Manager,engagement,56.31504884731536
+WPM 2.0,Technology Industry,Manager,ex_index,57.989562
+WPM 2.0,Technology Industry,Manager,focus,54.31358718715951
+WPM 2.0,Technology Industry,Manager,goal_attainment,54.10348007030309
+WPM 2.0,Technology Industry,Manager,growth_mindset,57.69892782269636
+WPM 2.0,Technology Industry,Manager,hope,56.38160529371343
+WPM 2.0,Technology Industry,Manager,job_performance,48.3153104579147
+WPM 2.0,Technology Industry,Manager,job_satisfaction,55.5173856
+WPM 2.0,Technology Industry,Manager,life_satisfaction,54.46347641719315
+WPM 2.0,Technology Industry,Manager,locus_of_control_internal,52.547828040659525
+WPM 2.0,Technology Industry,Manager,nutrition,56.82325959275905
+WPM 2.0,Technology Industry,Manager,optimism,50
+WPM 2.0,Technology Industry,Manager,organizational_commitment,54.89265947445454
+WPM 2.0,Technology Industry,Manager,physical_activity,57.24794631643802
+WPM 2.0,Technology Industry,Manager,problem_solving,55.35296299787956
+WPM 2.0,Technology Industry,Manager,productivity,53.1403501
+WPM 2.0,Technology Industry,Manager,purpose_and_meaning,54.18533904425053
+WPM 2.0,Technology Industry,Manager,psychological_safety,50
+WPM 2.0,Technology Industry,Manager,recognition,53.38265398034325
+WPM 2.0,Technology Industry,Manager,relationship_building,55.686340585186
+WPM 2.0,Technology Industry,Manager,resilience,56.769049876074924
+WPM 2.0,Technology Industry,Manager,rest,57.013853939850314
+WPM 2.0,Technology Industry,Manager,sales_excellence_index,50
+WPM 2.0,Technology Industry,Manager,self_awareness,48.551788042359895
+WPM 2.0,Technology Industry,Manager,self_compassion,48.67971183597241
+WPM 2.0,Technology Industry,Manager,self_efficacy,53.306683091588546
+WPM 2.0,Technology Industry,Manager,social_connection,53.625015921351725
+WPM 2.0,Technology Industry,Manager,strategic_planning,54.286340660568136
+WPM 2.0,Technology Industry,Manager,stress_management,47.6469769
+WPM 2.0,Technology Industry,Manager,team_feedback,50
+WPM 2.0,Technology Industry,Manager,team_risk_taking,50
+WPM 2.0,Technology Industry,Manager,team_agility,50
+WPM 2.0,Technology Industry,Manager,well_being,50
+WPM 2.0,Technology Industry,Manager,work_life_balance,40.3787096
+WPM 2.0,Telecommunications Industry,,alignment,51.58408778647989
+WPM 2.0,Telecommunications Industry,,authenticity,51.209861693683635
+WPM 2.0,Telecommunications Industry,,belonging_index,50
+WPM 2.0,Telecommunications Industry,,coaching,51.447009257489874
+WPM 2.0,Telecommunications Industry,,cognitive_agility,51.14850088064267
+WPM 2.0,Telecommunications Industry,,emotional_regulation,51.59397688669331
+WPM 2.0,Telecommunications Industry,,empathy,50.535840766733685
+WPM 2.0,Telecommunications Industry,,empowerment,52.14998471378896
+WPM 2.0,Telecommunications Industry,,encouraging_participation,50.984368319337904
+WPM 2.0,Telecommunications Industry,,engagement,50.22032716766488
+WPM 2.0,Telecommunications Industry,,ex_index,49.76744
+WPM 2.0,Telecommunications Industry,,focus,51.89908998936056
+WPM 2.0,Telecommunications Industry,,goal_attainment,50.21462876209495
+WPM 2.0,Telecommunications Industry,,growth_mindset,52.04778161654444
+WPM 2.0,Telecommunications Industry,,hope,49.98333147819198
+WPM 2.0,Telecommunications Industry,,job_performance,50.23449448036072
+WPM 2.0,Telecommunications Industry,,job_satisfaction,49.3645528
+WPM 2.0,Telecommunications Industry,,life_satisfaction,49.09788217692673
+WPM 2.0,Telecommunications Industry,,locus_of_control_internal,50.15066730802687
+WPM 2.0,Telecommunications Industry,,nutrition,49.146307029843825
+WPM 2.0,Telecommunications Industry,,optimism,50
+WPM 2.0,Telecommunications Industry,,organizational_commitment,49.08762998415342
+WPM 2.0,Telecommunications Industry,,physical_activity,48.87003802942302
+WPM 2.0,Telecommunications Industry,,problem_solving,51.69309339640388
+WPM 2.0,Telecommunications Industry,,productivity,49.9450777
+WPM 2.0,Telecommunications Industry,,purpose_and_meaning,48.116047481071796
+WPM 2.0,Telecommunications Industry,,psychological_safety,50
+WPM 2.0,Telecommunications Industry,,recognition,50.772081792607786
+WPM 2.0,Telecommunications Industry,,relationship_building,50.01974102725913
+WPM 2.0,Telecommunications Industry,,resilience,52.00867397057579
+WPM 2.0,Telecommunications Industry,,rest,49.85902823474614
+WPM 2.0,Telecommunications Industry,,sales_excellence_index,50
+WPM 2.0,Telecommunications Industry,,self_awareness,48.505390352094324
+WPM 2.0,Telecommunications Industry,,self_compassion,49.82636610087
+WPM 2.0,Telecommunications Industry,,self_efficacy,50.27970126621447
+WPM 2.0,Telecommunications Industry,,social_connection,50.48294023544627
+WPM 2.0,Telecommunications Industry,,strategic_planning,50.88381144016313
+WPM 2.0,Telecommunications Industry,,stress_management,48.6714441
+WPM 2.0,Telecommunications Industry,,team_feedback,50
+WPM 2.0,Telecommunications Industry,,team_risk_taking,50
+WPM 2.0,Telecommunications Industry,,team_agility,50
+WPM 2.0,Telecommunications Industry,,well_being,50
+WPM 2.0,Telecommunications Industry,,work_life_balance,47.8255539
+WPM 2.0,Telecommunications Industry,Individual Contributor,alignment,46.47822120166952
+WPM 2.0,Telecommunications Industry,Individual Contributor,authenticity,48.367819978100094
+WPM 2.0,Telecommunications Industry,Individual Contributor,belonging_index,50
+WPM 2.0,Telecommunications Industry,Individual Contributor,coaching,46.821538252153445
+WPM 2.0,Telecommunications Industry,Individual Contributor,cognitive_agility,48.13010088777327
+WPM 2.0,Telecommunications Industry,Individual Contributor,emotional_regulation,48.059307034682384
+WPM 2.0,Telecommunications Industry,Individual Contributor,empathy,48.7302358374419
+WPM 2.0,Telecommunications Industry,Individual Contributor,empowerment,49.317703407062226
+WPM 2.0,Telecommunications Industry,Individual Contributor,encouraging_participation,45.222918966173324
+WPM 2.0,Telecommunications Industry,Individual Contributor,engagement,44.949354290946715
+WPM 2.0,Telecommunications Industry,Individual Contributor,ex_index,44.0529716
+WPM 2.0,Telecommunications Industry,Individual Contributor,focus,49.35360499790037
+WPM 2.0,Telecommunications Industry,Individual Contributor,goal_attainment,46.9490390144873
+WPM 2.0,Telecommunications Industry,Individual Contributor,growth_mindset,48.1318425308489
+WPM 2.0,Telecommunications Industry,Individual Contributor,hope,45.73327415484838
+WPM 2.0,Telecommunications Industry,Individual Contributor,job_performance,50.45478824835853
+WPM 2.0,Telecommunications Industry,Individual Contributor,job_satisfaction,44.7879078
+WPM 2.0,Telecommunications Industry,Individual Contributor,life_satisfaction,45.75735018787095
+WPM 2.0,Telecommunications Industry,Individual Contributor,locus_of_control_internal,49.12312285543582
+WPM 2.0,Telecommunications Industry,Individual Contributor,nutrition,46.38197027031155
+WPM 2.0,Telecommunications Industry,Individual Contributor,optimism,50
+WPM 2.0,Telecommunications Industry,Individual Contributor,organizational_commitment,44.06747598639455
+WPM 2.0,Telecommunications Industry,Individual Contributor,physical_activity,45.07991740315746
+WPM 2.0,Telecommunications Industry,Individual Contributor,problem_solving,48.87865638203832
+WPM 2.0,Telecommunications Industry,Individual Contributor,productivity,47.3342006
+WPM 2.0,Telecommunications Industry,Individual Contributor,purpose_and_meaning,43.18172039390963
+WPM 2.0,Telecommunications Industry,Individual Contributor,psychological_safety,50
+WPM 2.0,Telecommunications Industry,Individual Contributor,recognition,47.35836674662009
+WPM 2.0,Telecommunications Industry,Individual Contributor,relationship_building,44.21431042771648
+WPM 2.0,Telecommunications Industry,Individual Contributor,resilience,48.92687127233822
+WPM 2.0,Telecommunications Industry,Individual Contributor,rest,47.35494368731641
+WPM 2.0,Telecommunications Industry,Individual Contributor,sales_excellence_index,50
+WPM 2.0,Telecommunications Industry,Individual Contributor,self_awareness,47.590267438609324
+WPM 2.0,Telecommunications Industry,Individual Contributor,self_compassion,49.421806248833356
+WPM 2.0,Telecommunications Industry,Individual Contributor,self_efficacy,47.26534480364452
+WPM 2.0,Telecommunications Industry,Individual Contributor,social_connection,47.65058903255028
+WPM 2.0,Telecommunications Industry,Individual Contributor,strategic_planning,47.81719652028007
+WPM 2.0,Telecommunications Industry,Individual Contributor,stress_management,48.0822495
+WPM 2.0,Telecommunications Industry,Individual Contributor,team_feedback,50
+WPM 2.0,Telecommunications Industry,Individual Contributor,team_risk_taking,50
+WPM 2.0,Telecommunications Industry,Individual Contributor,team_agility,50
+WPM 2.0,Telecommunications Industry,Individual Contributor,well_being,50
+WPM 2.0,Telecommunications Industry,Individual Contributor,work_life_balance,50.7093713
+WPM 2.0,Telecommunications Industry,Manager,alignment,57.51911219275519
+WPM 2.0,Telecommunications Industry,Manager,authenticity,54.513431551114074
+WPM 2.0,Telecommunications Industry,Manager,belonging_index,50
+WPM 2.0,Telecommunications Industry,Manager,coaching,56.82362512694077
+WPM 2.0,Telecommunications Industry,Manager,cognitive_agility,54.65706839372165
+WPM 2.0,Telecommunications Industry,Manager,emotional_regulation,55.702652953988064
+WPM 2.0,Telecommunications Industry,Manager,empathy,52.63466359052585
+WPM 2.0,Telecommunications Industry,Manager,empowerment,55.4422091387021
+WPM 2.0,Telecommunications Industry,Manager,encouraging_participation,57.68143765293092
+WPM 2.0,Telecommunications Industry,Manager,engagement,56.34726999872187
+WPM 2.0,Telecommunications Industry,Manager,ex_index,56.4098989
+WPM 2.0,Telecommunications Industry,Manager,focus,54.857944338408316
+WPM 2.0,Telecommunications Industry,Manager,goal_attainment,54.010527955895284
+WPM 2.0,Telecommunications Industry,Manager,growth_mindset,56.599642434105064
+WPM 2.0,Telecommunications Industry,Manager,hope,54.92356905062556
+WPM 2.0,Telecommunications Industry,Manager,job_performance,49.97842651072224
+WPM 2.0,Telecommunications Industry,Manager,job_satisfaction,54.6844136
+WPM 2.0,Telecommunications Industry,Manager,life_satisfaction,52.98089371976081
+WPM 2.0,Telecommunications Industry,Manager,locus_of_control_internal,51.345077953773725
+WPM 2.0,Telecommunications Industry,Manager,nutrition,52.359553177676226
+WPM 2.0,Telecommunications Industry,Manager,optimism,50
+WPM 2.0,Telecommunications Industry,Manager,organizational_commitment,54.92302266530903
+WPM 2.0,Telecommunications Industry,Manager,physical_activity,53.2756483300394
+WPM 2.0,Telecommunications Industry,Manager,problem_solving,54.96457573788864
+WPM 2.0,Telecommunications Industry,Manager,productivity,52.9799435
+WPM 2.0,Telecommunications Industry,Manager,purpose_and_meaning,53.85167554820047
+WPM 2.0,Telecommunications Industry,Manager,psychological_safety,50
+WPM 2.0,Telecommunications Industry,Manager,recognition,54.740160820422545
+WPM 2.0,Telecommunications Industry,Manager,relationship_building,56.76793386091556
+WPM 2.0,Telecommunications Industry,Manager,resilience,55.590940354851945
+WPM 2.0,Telecommunications Industry,Manager,rest,52.769758990732846
+WPM 2.0,Telecommunications Industry,Manager,sales_excellence_index,50
+WPM 2.0,Telecommunications Industry,Manager,self_awareness,49.56912296947861
+WPM 2.0,Telecommunications Industry,Manager,self_compassion,50.29662370665618
+WPM 2.0,Telecommunications Industry,Manager,self_efficacy,53.78356860732141
+WPM 2.0,Telecommunications Industry,Manager,social_connection,53.77524590718862
+WPM 2.0,Telecommunications Industry,Manager,strategic_planning,54.44842365472806
+WPM 2.0,Telecommunications Industry,Manager,stress_management,49.3563199
+WPM 2.0,Telecommunications Industry,Manager,team_feedback,50
+WPM 2.0,Telecommunications Industry,Manager,team_risk_taking,50
+WPM 2.0,Telecommunications Industry,Manager,team_agility,50
+WPM 2.0,Telecommunications Industry,Manager,well_being,50
+WPM 2.0,Telecommunications Industry,Manager,work_life_balance,44.4734243
+WPM 2.0,Transportation Industry,,alignment,48.86942493344948
+WPM 2.0,Transportation Industry,,authenticity,49.53985923931914
+WPM 2.0,Transportation Industry,,belonging_index,50
+WPM 2.0,Transportation Industry,,coaching,49.06665788906841
+WPM 2.0,Transportation Industry,,cognitive_agility,50.31555774555355
+WPM 2.0,Transportation Industry,,emotional_regulation,50.535508163663586
+WPM 2.0,Transportation Industry,,empathy,48.398146878448635
+WPM 2.0,Transportation Industry,,empowerment,48.43810386481209
+WPM 2.0,Transportation Industry,,encouraging_participation,48.31364709793589
+WPM 2.0,Transportation Industry,,engagement,50.09208684008294
+WPM 2.0,Transportation Industry,,ex_index,49.7386254
+WPM 2.0,Transportation Industry,,focus,51.34395455834792
+WPM 2.0,Transportation Industry,,goal_attainment,51.160189468128245
+WPM 2.0,Transportation Industry,,growth_mindset,48.64366534374193
+WPM 2.0,Transportation Industry,,hope,51.362647529341956
+WPM 2.0,Transportation Industry,,job_performance,50.606964117244
+WPM 2.0,Transportation Industry,,job_satisfaction,50.3305557
+WPM 2.0,Transportation Industry,,life_satisfaction,50.327652687453515
+WPM 2.0,Transportation Industry,,locus_of_control_internal,50.13301145893623
+WPM 2.0,Transportation Industry,,nutrition,48.6020073579578
+WPM 2.0,Transportation Industry,,optimism,50
+WPM 2.0,Transportation Industry,,organizational_commitment,50.48567908188299
+WPM 2.0,Transportation Industry,,physical_activity,49.79248629757087
+WPM 2.0,Transportation Industry,,problem_solving,49.46442697795707
+WPM 2.0,Transportation Industry,,productivity,52.2734914
+WPM 2.0,Transportation Industry,,purpose_and_meaning,50.156094465147135
+WPM 2.0,Transportation Industry,,psychological_safety,50
+WPM 2.0,Transportation Industry,,recognition,48.27010645410827
+WPM 2.0,Transportation Industry,,relationship_building,47.41573845803309
+WPM 2.0,Transportation Industry,,resilience,51.37093135681681
+WPM 2.0,Transportation Industry,,rest,49.38850000728211
+WPM 2.0,Transportation Industry,,sales_excellence_index,50
+WPM 2.0,Transportation Industry,,self_awareness,50.96795828216291
+WPM 2.0,Transportation Industry,,self_compassion,51.768514169676536
+WPM 2.0,Transportation Industry,,self_efficacy,51.07851965934027
+WPM 2.0,Transportation Industry,,social_connection,49.01532240176866
+WPM 2.0,Transportation Industry,,strategic_planning,50.072027867762486
+WPM 2.0,Transportation Industry,,stress_management,52.1246873
+WPM 2.0,Transportation Industry,,team_feedback,50
+WPM 2.0,Transportation Industry,,team_risk_taking,50
+WPM 2.0,Transportation Industry,,team_agility,50
+WPM 2.0,Transportation Industry,,well_being,50
+WPM 2.0,Transportation Industry,,work_life_balance,50.3105711
+WPM 2.0,Transportation Industry,Individual Contributor,alignment,46.102678795639854
+WPM 2.0,Transportation Industry,Individual Contributor,authenticity,49.319640897997346
+WPM 2.0,Transportation Industry,Individual Contributor,belonging_index,50
+WPM 2.0,Transportation Industry,Individual Contributor,coaching,45.34732631074103
+WPM 2.0,Transportation Industry,Individual Contributor,cognitive_agility,48.645623256853156
+WPM 2.0,Transportation Industry,Individual Contributor,emotional_regulation,48.614065653896944
+WPM 2.0,Transportation Industry,Individual Contributor,empathy,47.58915400103133
+WPM 2.0,Transportation Industry,Individual Contributor,empowerment,45.89607252897631
+WPM 2.0,Transportation Industry,Individual Contributor,encouraging_participation,43.07214369791649
+WPM 2.0,Transportation Industry,Individual Contributor,engagement,47.612469086183836
+WPM 2.0,Transportation Industry,Individual Contributor,ex_index,47.6415761
+WPM 2.0,Transportation Industry,Individual Contributor,focus,49.71765356729548
+WPM 2.0,Transportation Industry,Individual Contributor,goal_attainment,49.47617191771841
+WPM 2.0,Transportation Industry,Individual Contributor,growth_mindset,45.848203127474946
+WPM 2.0,Transportation Industry,Individual Contributor,hope,48.998667738506555
+WPM 2.0,Transportation Industry,Individual Contributor,job_performance,49.78242755358458
+WPM 2.0,Transportation Industry,Individual Contributor,job_satisfaction,48.4698165
+WPM 2.0,Transportation Industry,Individual Contributor,life_satisfaction,48.99395720394745
+WPM 2.0,Transportation Industry,Individual Contributor,locus_of_control_internal,50.13087786484498
+WPM 2.0,Transportation Industry,Individual Contributor,nutrition,47.373176171172126
+WPM 2.0,Transportation Industry,Individual Contributor,optimism,50
+WPM 2.0,Transportation Industry,Individual Contributor,organizational_commitment,47.59282463327266
+WPM 2.0,Transportation Industry,Individual Contributor,physical_activity,48.11479753737497
+WPM 2.0,Transportation Industry,Individual Contributor,problem_solving,47.052518062713084
+WPM 2.0,Transportation Industry,Individual Contributor,productivity,52.197267
+WPM 2.0,Transportation Industry,Individual Contributor,purpose_and_meaning,48.04313243479664
+WPM 2.0,Transportation Industry,Individual Contributor,psychological_safety,50
+WPM 2.0,Transportation Industry,Individual Contributor,recognition,45.391664447027566
+WPM 2.0,Transportation Industry,Individual Contributor,relationship_building,43.80099608522116
+WPM 2.0,Transportation Industry,Individual Contributor,resilience,49.991752595806354
+WPM 2.0,Transportation Industry,Individual Contributor,rest,48.481476450027294
+WPM 2.0,Transportation Industry,Individual Contributor,sales_excellence_index,50
+WPM 2.0,Transportation Industry,Individual Contributor,self_awareness,49.586283280084295
+WPM 2.0,Transportation Industry,Individual Contributor,self_compassion,51.48159060132121
+WPM 2.0,Transportation Industry,Individual Contributor,self_efficacy,50.04384570430379
+WPM 2.0,Transportation Industry,Individual Contributor,social_connection,47.677101547364224
+WPM 2.0,Transportation Industry,Individual Contributor,strategic_planning,48.80988916487367
+WPM 2.0,Transportation Industry,Individual Contributor,stress_management,51.0598662
+WPM 2.0,Transportation Industry,Individual Contributor,team_feedback,50
+WPM 2.0,Transportation Industry,Individual Contributor,team_risk_taking,50
+WPM 2.0,Transportation Industry,Individual Contributor,team_agility,50
+WPM 2.0,Transportation Industry,Individual Contributor,well_being,50
+WPM 2.0,Transportation Industry,Individual Contributor,work_life_balance,51.370469
+WPM 2.0,Transportation Industry,Manager,alignment,52.13704752724189
+WPM 2.0,Transportation Industry,Manager,authenticity,49.799944694156075
+WPM 2.0,Transportation Industry,Manager,belonging_index,50
+WPM 2.0,Transportation Industry,Manager,coaching,53.45931673588607
+WPM 2.0,Transportation Industry,Manager,cognitive_agility,52.28780796065661
+WPM 2.0,Transportation Industry,Manager,emotional_regulation,52.80479802433625
+WPM 2.0,Transportation Industry,Manager,empathy,49.3535953629846
+WPM 2.0,Transportation Industry,Manager,empowerment,51.4403305286871
+WPM 2.0,Transportation Industry,Manager,encouraging_participation,54.50404335485537
+WPM 2.0,Transportation Industry,Manager,engagement,53.02060091149827
+WPM 2.0,Transportation Industry,Manager,ex_index,52.215313
+WPM 2.0,Transportation Industry,Manager,focus,53.264672108125374
+WPM 2.0,Transportation Industry,Manager,goal_attainment,53.14907226473297
+WPM 2.0,Transportation Industry,Manager,growth_mindset,51.945202616402064
+WPM 2.0,Transportation Industry,Manager,hope,54.15458917886308
+WPM 2.0,Transportation Industry,Manager,job_performance,51.580770231221074
+WPM 2.0,Transportation Industry,Manager,job_satisfaction,52.5281528
+WPM 2.0,Transportation Industry,Manager,life_satisfaction,51.90279304297359
+WPM 2.0,Transportation Industry,Manager,locus_of_control_internal,50.1355313071302
+WPM 2.0,Transportation Industry,Manager,nutrition,50.053299363040885
+WPM 2.0,Transportation Industry,Manager,optimism,50
+WPM 2.0,Transportation Industry,Manager,organizational_commitment,53.90223993929346
+WPM 2.0,Transportation Industry,Manager,physical_activity,51.773894574698794
+WPM 2.0,Transportation Industry,Manager,problem_solving,52.31297457613316
+WPM 2.0,Transportation Industry,Manager,productivity,52.363515
+WPM 2.0,Transportation Industry,Manager,purpose_and_meaning,52.65157548375073
+WPM 2.0,Transportation Industry,Manager,psychological_safety,50
+WPM 2.0,Transportation Industry,Manager,recognition,51.66964572109152
+WPM 2.0,Transportation Industry,Manager,relationship_building,51.684873846612696
+WPM 2.0,Transportation Industry,Manager,resilience,52.99978903145847
+WPM 2.0,Transportation Industry,Manager,rest,50.45972610507444
+WPM 2.0,Transportation Industry,Manager,sales_excellence_index,50
+WPM 2.0,Transportation Industry,Manager,self_awareness,52.599764103583354
+WPM 2.0,Transportation Industry,Manager,self_compassion,52.10738079782032
+WPM 2.0,Transportation Industry,Manager,self_efficacy,52.30050527865061
+WPM 2.0,Transportation Industry,Manager,social_connection,50.59580737636699
+WPM 2.0,Transportation Industry,Manager,strategic_planning,51.56265719789842
+WPM 2.0,Transportation Industry,Manager,stress_management,53.3822777
+WPM 2.0,Transportation Industry,Manager,team_feedback,50
+WPM 2.0,Transportation Industry,Manager,team_risk_taking,50
+WPM 2.0,Transportation Industry,Manager,team_agility,50
+WPM 2.0,Transportation Industry,Manager,well_being,50
+WPM 2.0,Transportation Industry,Manager,work_life_balance,49.0587952
+WPM 2.0,Utilities Industry,,alignment,48.71993510723234
+WPM 2.0,Utilities Industry,,authenticity,49.282576432684245
+WPM 2.0,Utilities Industry,,belonging_index,50
+WPM 2.0,Utilities Industry,,coaching,49.17642565607504
+WPM 2.0,Utilities Industry,,cognitive_agility,48.3629122339837
+WPM 2.0,Utilities Industry,,emotional_regulation,49.66466511388384
+WPM 2.0,Utilities Industry,,empathy,47.94473967509082
+WPM 2.0,Utilities Industry,,empowerment,50.55240129845039
+WPM 2.0,Utilities Industry,,encouraging_participation,50.130495311322434
+WPM 2.0,Utilities Industry,,engagement,49.23823528935372
+WPM 2.0,Utilities Industry,,ex_index,49.3883328
+WPM 2.0,Utilities Industry,,focus,48.42542385642233
+WPM 2.0,Utilities Industry,,goal_attainment,49.04003910216723
+WPM 2.0,Utilities Industry,,growth_mindset,48.0705421804793
+WPM 2.0,Utilities Industry,,hope,50.1821796048459
+WPM 2.0,Utilities Industry,,job_performance,51.67218956670247
+WPM 2.0,Utilities Industry,,job_satisfaction,51.1781338
+WPM 2.0,Utilities Industry,,life_satisfaction,51.59074708408349
+WPM 2.0,Utilities Industry,,locus_of_control_internal,50.39120701234828
+WPM 2.0,Utilities Industry,,nutrition,50.81460377861086
+WPM 2.0,Utilities Industry,,optimism,50
+WPM 2.0,Utilities Industry,,organizational_commitment,51.15489350924223
+WPM 2.0,Utilities Industry,,physical_activity,50.415471783129384
+WPM 2.0,Utilities Industry,,problem_solving,49.42853877165606
+WPM 2.0,Utilities Industry,,productivity,50.3181514
+WPM 2.0,Utilities Industry,,purpose_and_meaning,50.28290403940236
+WPM 2.0,Utilities Industry,,psychological_safety,50
+WPM 2.0,Utilities Industry,,recognition,49.63408146814861
+WPM 2.0,Utilities Industry,,relationship_building,50.277917159061076
+WPM 2.0,Utilities Industry,,resilience,50.95672171270661
+WPM 2.0,Utilities Industry,,rest,49.02945699334034
+WPM 2.0,Utilities Industry,,sales_excellence_index,50
+WPM 2.0,Utilities Industry,,self_awareness,50.51258900983337
+WPM 2.0,Utilities Industry,,self_compassion,52.62557119796083
+WPM 2.0,Utilities Industry,,self_efficacy,49.53373420518339
+WPM 2.0,Utilities Industry,,social_connection,49.067857998136915
+WPM 2.0,Utilities Industry,,strategic_planning,49.4289955468111
+WPM 2.0,Utilities Industry,,stress_management,52.908319
+WPM 2.0,Utilities Industry,,team_feedback,50
+WPM 2.0,Utilities Industry,,team_risk_taking,50
+WPM 2.0,Utilities Industry,,team_agility,50
+WPM 2.0,Utilities Industry,,well_being,50
+WPM 2.0,Utilities Industry,,work_life_balance,52.0804883
+WPM 2.0,Utilities Industry,Individual Contributor,alignment,45.88678077745774
+WPM 2.0,Utilities Industry,Individual Contributor,authenticity,47.629704323012156
+WPM 2.0,Utilities Industry,Individual Contributor,belonging_index,50
+WPM 2.0,Utilities Industry,Individual Contributor,coaching,46.47213945393345
+WPM 2.0,Utilities Industry,Individual Contributor,cognitive_agility,46.84886911834476
+WPM 2.0,Utilities Industry,Individual Contributor,emotional_regulation,47.42443954938299
+WPM 2.0,Utilities Industry,Individual Contributor,empathy,48.42875653157196
+WPM 2.0,Utilities Industry,Individual Contributor,empowerment,47.91954123471424
+WPM 2.0,Utilities Industry,Individual Contributor,encouraging_participation,46.213717723466765
+WPM 2.0,Utilities Industry,Individual Contributor,engagement,45.840559060033826
+WPM 2.0,Utilities Industry,Individual Contributor,ex_index,45.8484693
+WPM 2.0,Utilities Industry,Individual Contributor,focus,48.60598748600522
+WPM 2.0,Utilities Industry,Individual Contributor,goal_attainment,47.2400504559321
+WPM 2.0,Utilities Industry,Individual Contributor,growth_mindset,46.53341555552572
+WPM 2.0,Utilities Industry,Individual Contributor,hope,48.21051924913984
+WPM 2.0,Utilities Industry,Individual Contributor,job_performance,51.01333364042401
+WPM 2.0,Utilities Industry,Individual Contributor,job_satisfaction,49.2864162
+WPM 2.0,Utilities Industry,Individual Contributor,life_satisfaction,49.05766146040295
+WPM 2.0,Utilities Industry,Individual Contributor,locus_of_control_internal,50.30531251105477
+WPM 2.0,Utilities Industry,Individual Contributor,nutrition,50.40161333905301
+WPM 2.0,Utilities Industry,Individual Contributor,optimism,50
+WPM 2.0,Utilities Industry,Individual Contributor,organizational_commitment,48.689073854841915
+WPM 2.0,Utilities Industry,Individual Contributor,physical_activity,48.89279938592135
+WPM 2.0,Utilities Industry,Individual Contributor,problem_solving,48.11667917240663
+WPM 2.0,Utilities Industry,Individual Contributor,productivity,49.0968924
+WPM 2.0,Utilities Industry,Individual Contributor,purpose_and_meaning,47.46821874585267
+WPM 2.0,Utilities Industry,Individual Contributor,psychological_safety,50
+WPM 2.0,Utilities Industry,Individual Contributor,recognition,48.72263292111423
+WPM 2.0,Utilities Industry,Individual Contributor,relationship_building,47.31412379484833
+WPM 2.0,Utilities Industry,Individual Contributor,resilience,48.530054731162146
+WPM 2.0,Utilities Industry,Individual Contributor,rest,48.68316272239889
+WPM 2.0,Utilities Industry,Individual Contributor,sales_excellence_index,50
+WPM 2.0,Utilities Industry,Individual Contributor,self_awareness,48.48597666950393
+WPM 2.0,Utilities Industry,Individual Contributor,self_compassion,50.98530824858725
+WPM 2.0,Utilities Industry,Individual Contributor,self_efficacy,48.254456552844886
+WPM 2.0,Utilities Industry,Individual Contributor,social_connection,48.46548792039536
+WPM 2.0,Utilities Industry,Individual Contributor,strategic_planning,48.47726844841479
+WPM 2.0,Utilities Industry,Individual Contributor,stress_management,50.7763523
+WPM 2.0,Utilities Industry,Individual Contributor,team_feedback,50
+WPM 2.0,Utilities Industry,Individual Contributor,team_risk_taking,50
+WPM 2.0,Utilities Industry,Individual Contributor,team_agility,50
+WPM 2.0,Utilities Industry,Individual Contributor,well_being,50
+WPM 2.0,Utilities Industry,Individual Contributor,work_life_balance,52.5299413
+WPM 2.0,Utilities Industry,Manager,alignment,52.255109978897984
+WPM 2.0,Utilities Industry,Manager,authenticity,51.34500977307154
+WPM 2.0,Utilities Industry,Manager,belonging_index,50
+WPM 2.0,Utilities Industry,Manager,coaching,52.55080047467648
+WPM 2.0,Utilities Industry,Manager,cognitive_agility,50.25211647562168
+WPM 2.0,Utilities Industry,Manager,emotional_regulation,52.459990818261026
+WPM 2.0,Utilities Industry,Manager,empathy,47.340789438242666
+WPM 2.0,Utilities Industry,Manager,empowerment,53.83765146647515
+WPM 2.0,Utilities Industry,Manager,encouraging_participation,55.01780185900075
+WPM 2.0,Utilities Industry,Manager,engagement,53.47781359319535
+WPM 2.0,Utilities Industry,Manager,ex_index,53.8053306
+WPM 2.0,Utilities Industry,Manager,focus,48.200118796500306
+WPM 2.0,Utilities Industry,Manager,goal_attainment,51.28604263419512
+WPM 2.0,Utilities Industry,Manager,growth_mindset,49.98854973904969
+WPM 2.0,Utilities Industry,Manager,hope,52.642392969045495
+WPM 2.0,Utilities Industry,Manager,job_performance,52.49430182869596
+WPM 2.0,Utilities Industry,Manager,job_satisfaction,53.5385956
+WPM 2.0,Utilities Industry,Manager,life_satisfaction,54.75149994195035
+WPM 2.0,Utilities Industry,Manager,locus_of_control_internal,50.498385106882665
+WPM 2.0,Utilities Industry,Manager,nutrition,51.329928132395445
+WPM 2.0,Utilities Industry,Manager,optimism,50
+WPM 2.0,Utilities Industry,Manager,organizational_commitment,54.23171272402491
+WPM 2.0,Utilities Industry,Manager,physical_activity,52.31544353539781
+WPM 2.0,Utilities Industry,Manager,problem_solving,51.0654609264717
+WPM 2.0,Utilities Industry,Manager,productivity,51.8420233
+WPM 2.0,Utilities Industry,Manager,purpose_and_meaning,53.795033476486495
+WPM 2.0,Utilities Industry,Manager,psychological_safety,50
+WPM 2.0,Utilities Industry,Manager,recognition,50.77137567285522
+WPM 2.0,Utilities Industry,Manager,relationship_building,53.97610179936195
+WPM 2.0,Utilities Industry,Manager,resilience,53.98468670737713
+WPM 2.0,Utilities Industry,Manager,rest,49.461558694249575
+WPM 2.0,Utilities Industry,Manager,sales_excellence_index,50
+WPM 2.0,Utilities Industry,Manager,self_awareness,53.04137077962496
+WPM 2.0,Utilities Industry,Manager,self_compassion,54.672270984347314
+WPM 2.0,Utilities Industry,Manager,self_efficacy,51.130001010313734
+WPM 2.0,Utilities Industry,Manager,social_connection,49.81948791815071
+WPM 2.0,Utilities Industry,Manager,strategic_planning,50.61654882888083
+WPM 2.0,Utilities Industry,Manager,stress_management,55.5685605
+WPM 2.0,Utilities Industry,Manager,team_feedback,50
+WPM 2.0,Utilities Industry,Manager,team_risk_taking,50
+WPM 2.0,Utilities Industry,Manager,team_agility,50
+WPM 2.0,Utilities Industry,Manager,well_being,50
+WPM 2.0,Utilities Industry,Manager,work_life_balance,51.5196665

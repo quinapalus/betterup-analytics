@@ -1,0 +1,279 @@
+version: 2
+
+models:
+  - name: dim_coaches
+    description: ""
+    columns:
+      - name: coach_profile_uuid
+        description: ""
+        tests:
+          - unique
+          - not_null
+
+      - name: coach_profile_id
+        description: ""
+
+      - name: eea_eligible
+        description: ""
+
+      - name: coach_id
+        description: ""
+
+      - name: user_uuid
+        description: ""
+
+      - name: first_name
+        description: ""
+
+      - name: last_name
+        description: ""
+
+      - name: full_name
+        description: ""
+
+      - name: email
+        description: ""
+
+      - name: fed_eligible
+        description: ""
+
+      - name: bio
+        description: ""
+
+      - name: endorsement
+        description: ""
+
+      - name: experience_highlight
+        description: ""
+
+      - name: outlook
+        description: ""
+
+      - name: invoices_with_shortlist
+        description: ""
+
+      - name: last_book_read
+        description: ""
+
+      - name: coach_style_words
+        description: ""
+
+      - name: most_grateful_for
+        description: ""
+
+      - name: greatest_accomplishment
+        description: ""
+
+      - name: max_member_count
+        description: ""
+
+      - name: currency_code
+        description: ""
+
+      - name: staffable_state
+        description: ""
+
+      - name: fountain_applicant_id
+        description: ""
+
+      - name: staffing_languages
+        description: ""
+
+      - name: account_qualifications
+        description: ""
+
+      - name: certification_qualifications
+        description: ""
+
+      - name: focus_qualifications
+        description: ""
+
+      - name: postgrad_qualifications
+        description: ""
+
+      - name: product_qualifications
+        description: ""
+
+      - name: professional_qualifications
+        description: ""
+
+      - name: segment_qualifications
+        description: ""
+
+      - name: additional_qualifications
+        description: ""
+
+      - name: staffing_qualifications
+        description: ""
+
+      - name: staffing_member_levels
+        description: ""
+
+      - name: staffing_tier
+        description: ""
+
+      - name: staffing_industries
+        description: ""
+
+      - name: staffing_risk_level
+        description: ""
+
+      - name: type_primary
+        description: ""
+
+      - name: coaching_cloud
+        description: ""
+
+      - name: type_qa
+        description: ""
+
+      - name: type_on_demand
+        description: ""
+
+      - name: banned_organization_ids
+        description: ""
+
+      - name: appointment_buffer_enabled
+        description: ""
+
+      - name: clinical_experience
+        description: ""
+
+      - name: accredited_coaching
+        description: ""
+
+      - name: coaching_hours
+        description: ""
+
+      - name: management_work_years
+        description: ""
+
+      - name: clinical_hours
+        description: ""
+
+      - name: clinical_years
+        description: ""
+
+      - name: clinical_corporate_years
+        description: ""
+
+      - name: country_of_residence
+        description: ""
+
+      - name: experience_country
+        description: ""
+
+      - name: industry_coaching_experience
+        description: ""
+
+      - name: industry_work_experience
+        description: ""
+
+      - name: additional_certifications
+        description: ""
+
+      - name: professional_work_years
+        description: ""
+
+      - name: vp_leadership_years
+        description: ""
+
+      - name: new_member
+        description: ""
+
+      - name: short_engagement
+        description: ""
+
+      - name: resistant_member
+        description: ""
+
+      - name: coaching_style
+        description: ""
+
+      - name: accountability_style
+        description: ""
+
+      - name: exec_experience_org_size
+        description: ""
+
+      - name: function_coaching_experience
+        description: ""
+
+      - name: function_work_experience
+        description: ""
+
+      - name: vp_leadership_org_size
+        description: ""
+
+      - name: topic_experience
+        description: ""
+
+      - name: engaged_member_count
+        description: ""
+
+      - name: current_volunteer_member_count
+        description: ""
+
+      - name: pick_rate
+        description: ""
+
+      - name: segment_priority_level
+        description: ""
+
+      - name: updated_at
+        description: ""
+
+      - name: created_at
+        description: ""
+
+      - name: race_ethnicity
+        description: ""
+
+      - name: coaching_varieties
+        description: ""
+
+      - name: lifetime_completed_sessions
+        description: ""
+
+      - name: lifetime_completed_primary_b2b_sessions
+        description: ""
+
+      - name: lifetime_earnings_usd
+        description: ""
+
+      - name: lifetime_primary_b2b_earnings_usd
+        description: ""
+
+      - name: lifetime_hours
+        description: ""
+
+      - name: lifetime_primary_b2b_hours
+        description: ""
+
+      - name: solution_keys_array
+        description: "An array list of each key from the solutions table for that coach"
+
+      - name: has_solution_growth_and_transformation
+        description: "A flag for whether that coach has the solution_growth_and_transformation checkbox selected"
+
+      - name: has_solution_sales_performance
+        description: "A flag for whether that coach has the has_solution_sales_performance checkbox selected"
+
+      - name: has_solution_diversity_equity_inclusion_and_belonging
+        description: "A flag for whether that coach has the has_solution_diversity_equity_inclusion_and_belonging checkbox selected"
+
+      - name: tz_iana
+        description: "Timezone information for user; comes from csv timezone metadata"
+
+      - name: country_code
+        description: "Timezone information for user; comes from csv timezone metadata"
+
+      - name: country_name
+        description: "Timezone information for user; comes from csv timezone metadata"
+
+      - name: subregion_m49
+        description: "Timezone information for user; comes from csv timezone metadata"
+
+      - name: csv
+        description: "Timezone information for user; comes from csv timezone metadata"
+

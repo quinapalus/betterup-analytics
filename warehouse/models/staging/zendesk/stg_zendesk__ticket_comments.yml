@@ -1,0 +1,146 @@
+version: 2
+
+models:
+  - name: stg_zendesk__ticket_comments
+    description: ""
+    columns:
+      - name: ticket_comment_id
+        description: ""
+        tests:
+          - unique
+          - not_null
+
+      - name: created_at
+        description: ""
+
+      - name: received_at
+        description: ""
+
+      - name: author_id
+        description: ""
+
+      - name: ticket_id
+        description: ""
+
+      - name: ticket_event_id
+        description: ""
+
+      - name: type
+        description: ""
+
+      - name: via
+        description: ""
+
+      - name: body
+        description: ""
+
+      - name: public
+        description: ""
+
+      - name: uuid_ts
+        description: ""
+
+      - name: metadata_custom_sdk_device_battery
+        description: ""
+
+      - name: metadata_flags_options_21_trusted
+        description: ""
+
+      - name: metadata_system_ip_address
+        description: ""
+
+      - name: metadata_custom_sdk_device_os
+        description: ""
+
+      - name: metadata_flags_options_15_trusted
+        description: ""
+
+      - name: metadata_suspension_type_id
+        description: ""
+
+      - name: metadata_system_longitude
+        description: ""
+
+      - name: metadata_custom_sdk_device_storage
+        description: ""
+
+      - name: metadata_custom_sdk_device_total_memory
+        description: ""
+
+      - name: metadata_system_eml_redacted
+        description: ""
+
+      - name: metadata_system_message_id
+        description: ""
+
+      - name: metadata_flags_0
+        description: ""
+
+      - name: metadata_system_location
+        description: ""
+
+      - name: metadata_system_email_id
+        description: ""
+
+      - name: metadata_system_raw_email_identifier
+        description: ""
+
+      - name: metadata_trusted
+        description: ""
+
+      - name: metadata_custom_sdk_device_model
+        description: ""
+
+      - name: metadata_system_json_email_identifier
+        description: ""
+
+      - name: metadata_system_latitude
+        description: ""
+
+      - name: metadata_custom
+        description: ""
+
+      - name: metadata_system_client
+        description: ""
+
+      - name: metadata_flags_options_3_trusted
+        description: ""
+
+      - name: metadata_flags_options_2_trusted
+        description: ""
+
+      - name: metadata_flags_1
+        description: ""
+
+      - name: metadata_custom_sdk_device_name
+        description: ""
+
+      - name: metadata_custom_sdk_device_used_memory
+        description: ""
+
+      - name: metadata_custom_sdk_device_manufacturer
+        description: ""
+
+      - name: metadata_custom_sdk_device_low_memory
+        description: ""
+
+      - name: metadata_custom_sdk_device_api
+        description: ""
+
+      - name: metadata_flags_options_9_trusted
+        description: ""
+
+      - name: metadata_notifications_suppressed_for_0
+        description: ""
+
+      - name: metadata_custom_created_via
+        description: ""
+
+      - name: metadata_flags_2
+        description: ""
+
+      - name: metadata_flags_options_25_trusted
+        description: ""
+
+      - name: metadata_custom_who_5
+        description: ""

@@ -1,0 +1,19 @@
+version: 2
+
+sources:
+  - name: gsheets_coach_onboarding_inputs
+    database: raw
+    schema: stitch_gsheets_coach_onboarding_inputs
+
+    tables:
+      - name: mapping__stage_buckets
+        description: "Maps stage to stage reporting buckets. Contains ordering logic for the funnel as well. This is maintained by the coach operations team.
+                       https://docs.google.com/spreadsheets/d/1EbyRq2H5gBcO6desBMw_miHhI78GWqEHMdVIii4SPCM/edit."
+
+      - name: mapping__forecasted_staffable_date
+        description: "Contains the forecast inputs for coach application stage buckets. This is maintained by the coach operations team.
+                       https://docs.google.com/spreadsheets/d/1EbyRq2H5gBcO6desBMw_miHhI78GWqEHMdVIii4SPCM/edit."
+
+      - name: mapping__decision_points
+        description: "Contains the decision point stages that coach operations wants extra insight into. This is maintained by the coach operations team.
+                       https://docs.google.com/spreadsheets/d/1EbyRq2H5gBcO6desBMw_miHhI78GWqEHMdVIii4SPCM/edit#gid=1437735253"

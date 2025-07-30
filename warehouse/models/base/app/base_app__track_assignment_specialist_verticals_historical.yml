@@ -1,0 +1,15 @@
+version: 2
+
+models:
+  - name: base_app__track_assignment_specialist_verticals_historical
+    description: ""
+    columns:
+      - name: created_at
+      - name: id
+        tests:
+          - unique
+          - not_null
+      - name: specialist_vertical_id
+      - name: track_assignment_id
+      - name: updated_at
+      - name: specialist_vertical_uuid

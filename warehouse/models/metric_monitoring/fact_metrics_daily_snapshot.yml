@@ -1,0 +1,104 @@
+version: 2
+
+models:
+  - name: fact_metrics_daily_snapshot
+    description: "Daily snapshots of key historical metrics. Each metric from int_metrics__unioned has one row per day."
+    tests:
+      - dbt_utils.expression_is_true:
+          #we want to be alerted if a metric changes by more than 0.5% from the previous day.
+          #when that happens this test will fail and alert us to the change in historical metric.
+          #this test will continue failing for a day then turn off. We can use the Monte Carlo snooze feature if the
+          #alerts become cumbersome.
+          expression: "not (abs(percent_change_from_prior_day) > 0.025 and as_of_date = current_date())"
+
+      #- dbt_utils.expression_is_true::
+          #this tests that the window function expressions are working correctly. 
+          #2023-03-21 is the day the snapshots started and therefore is the only day when
+          #change_from_prior_day_in_units or change_from_first_snapshot_in_units should be null
+          #expression: "not (as_of_date > '2023-03-21' and 
+          #              (change_from_prior_day_in_units is null or change_from_first_snapshot_in_units is null)) "
+
+    columns:
+      - name: daily_snapshot_primary_key
+        description: "Surrogate primary key. Derived from as_of_date and metric_primary_key"
+        tests:
+          - unique
+          - not_null
+
+      - name: as_of_date
+        description: "The date of the snapshot represented by the current row"
+        tests:
+          - not_null
+
+      - name: metric_primary_key
+        description: "Surrogate key for the metric. This is defined in int_metrics__unioned
+                      and is derived from metric_name, metric_date and metric_granularity"
+        tests:
+          - not_null
+
+      - name: metric_name
+        description: "Name of the metric"
+        tests:
+          - not_null
+
+      - name: metric_date
+        description: "Aggregated date of the metric. For example, the count_invited metric is grouped by month so metric_date would be the first of the month"
+        tests:
+          - not_null
+
+      - name: metric_granularity
+        description: "The date granularity of the metric. Currently we are only looking at monthly metrics but this may be expanded to other grains ie weekly, quarterly in the future"
+        tests:
+          - not_null
+
+      - name: metric_value
+        description: "The numerical value of the metric. For the count_invited metric this would be the numeric count_invited number"
+        tests:
+          - not_null
+
+      - name: valid_from
+        description: "dbt snapshot timestamp of when the row was first inserted and became valid"
+        tests:
+          - not_null
+          
+      - name: valid_to
+        description: "dbt snapshot timestamp of when the row was stopped becoming valid because a new row was inserted. This will be null if the row is currently valid"
+
+      - name: version
+        description: "The version of the record captured in this row.
+                      The initial version will be 1, the next snapshot of a metric that is inserted into the table will be version 2 and so on"
+        tests:
+          - not_null
+
+      - name: is_current_version
+        description: "Flagging the rows that represent the most up to date snapshot of a metric"
+
+      - name: is_last_snapshot_of_day
+        description: "Flagging the rows that represent the final snapshot of a day"
+
+      - name: is_currently_valid
+        description: "Flagging the rows that represent the snapshots for current date"
+
+      - name: prior_day_snapshot_metric_value
+        description: "The metric_value for the prior day metric snapshot"
+
+      - name: change_from_prior_day_in_units
+        description: "Change in units since prior day metric snapshot"
+
+      - name: percent_change_from_prior_day
+        description: "Percent change since prior day metric snapshot"
+
+      - name: first_snapshot_metric_value
+        description: "The metric_value from the first time the metric was snapshotted"
+
+      - name: change_from_first_snapshot_in_units
+        description: "Change in units since first time the metric was snapshotted"
+
+      - name: percent_change_from_first_snapshot
+        description: "Percent change since first time the metric was snapshotted"
+
+      - name: is_regression_from_prior_day
+        description: "True if the row is a regression from prior day, false otherwise."
+
+      - name: is_regression_from_first_snapshot
+        description: "True if the row is a regression from first snapshot, false otherwise."

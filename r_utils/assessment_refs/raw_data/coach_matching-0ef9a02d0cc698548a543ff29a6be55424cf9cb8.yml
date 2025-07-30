@@ -1,0 +1,218 @@
+---
+accountability_vs_autonomy_question: &accountability_vs_autonomy_question
+  options:
+    - ['Hands On', 'Hands On']
+    - ['Mostly Hands On', 'Mostly Hands On']
+    - ['Neutral', 'Neutral']
+    - ['Mostly Hands Off', 'Mostly Hands Off']
+    - ['Hands Off', 'Hands Off']
+
+focused_vs_explorative_question: &focused_vs_explorative_question
+  options:
+    - ['Structured', 'Structured']
+    - ['Mostly Structured', 'Mostly Structured']
+    - ['Neutral', 'Neutral']
+    - ['Mostly Explorative', 'Mostly Explorative']
+    - ['Explorative', 'Explorative']
+
+interest_question: &interest_question
+  options:
+    - [1, 'Not Interested']
+    - [2, 'Slightly Interested']
+    - [3, 'Somewhat Interested']
+    - [4, 'Interested']
+    - [5, 'Very Interested']
+
+agreement_question: &agreement_question
+  options:
+    - [1, 'Strongly Disagree']
+    - [2, 'Disagree']
+    - [3, 'Neither Disagree nor Agree']
+    - [4, 'Agree']
+    - [5, 'Strongly Agree']
+
+questions:
+  previous_coaching:
+    options:
+      - [1, 'Yes']
+      - [0, 'No']
+    label: 'Have you received professional coaching prior to BetterUp coaching?'
+
+  accountability_vs_autonomy:
+    <<: *accountability_vs_autonomy_question
+    label: 'When engaging with a coach I prefer a style that offers:'
+    tags:
+      - coaching_style
+
+  focused_vs_explorative:
+    <<: *focused_vs_explorative_question
+    label: 'When working towards goals, I prefer a style that is:'
+    tags:
+      - coaching_style
+
+  wants_to_improve_focus:
+    <<: *interest_question
+    label: 'Improve focus'
+    tags:
+      - interest
+  wants_to_inspire_a_team:
+    <<: *interest_question
+    label: 'Inspire my team'
+    tags:
+      - interest
+  wants_to_handle_stress_better:
+    <<: *interest_question
+    label: 'Handle stress better'
+    tags:
+      - interest
+  wants_to_increase_impact:
+    <<: *interest_question
+    label: 'Increase my impact'
+    tags:
+      - interest
+  wants_to_become_more_open:
+    <<: *interest_question
+    label: 'Become more open'
+    tags:
+      - interest
+  wants_to_communicate_with_poise:
+    <<: *interest_question
+    label: 'Communicate with poise'
+    tags:
+      - interest
+
+  good_time_for_working_with_coach:
+    <<: *agreement_question
+    label: 'Right now is a good time for me to begin working with a coach.'
+    tags:
+      - readiness
+  clear_understanding_of_what_to_work_on:
+    <<: *agreement_question
+    label: 'I have a clear understanding of what I would like to work on with my coach.'
+    tags:
+      - readiness
+  open_to_investing_in_personal_development:
+    <<: *agreement_question
+    label: 'I am open to investing in my personal development right now'
+    tags:
+      - readiness
+  can_achieve_meaningful_change:
+    <<: *agreement_question
+    label: 'I believe I can achieve meaningful change or growth by working with a coach.'
+    tags:
+      - readiness
+
+  motivation:
+    label: "What do you want to gain from coaching?"
+
+  road_recog_1:
+    <<: *agreement_question
+    label: 'There are skills I need to develop in order to achieve my long-term career goals.'
+    viewable_by_coach: false
+    tags:
+      - road
+  road_recog_2:
+    <<: *agreement_question
+    label: 'I have untapped potential that would be unlocked with additional learning and development.'
+    viewable_by_coach: false
+    tags:
+      - road
+  road_recog_3:
+    <<: *agreement_question
+    label: 'I would greatly benefit from additional professional development at work.'
+    viewable_by_coach: false
+    tags:
+      - road
+  road_recog_4:
+    <<: *agreement_question
+    label: 'There are areas at work in which I could improve if I had additional support.'
+    viewable_by_coach: false
+    tags:
+      - road
+  road_recog_5:
+    <<: *agreement_question
+    label: 'I would like to dedicate more time toward my professional development.'
+    viewable_by_coach: false
+    tags:
+      - road
+
+  road_open_1:
+    <<: *agreement_question
+    label: 'I would like to better understand how my coworkers perceive me, even if it is negative.'
+    viewable_by_coach: false
+    tags:
+      - road
+  road_open_2:
+    <<: *agreement_question
+    label: 'I look for opportunities to receive constructive feedback from coworkers.'
+    viewable_by_coach: false
+    tags:
+      - road
+  road_open_3:
+    <<: *agreement_question
+    label: 'I find constructive feedback from coworkers helpful for my professional development.'
+    viewable_by_coach: false
+    tags:
+      - road
+  road_open_4:
+    <<: *agreement_question
+    label: 'I am interested in finding out how others perceive my performance at work.'
+    viewable_by_coach: false
+    tags:
+      - road
+  road_open_5:
+    <<: *agreement_question
+    label: 'I believe that receiving feedback from coworkers is key to my learning at work.'
+    viewable_by_coach: false
+    tags:
+      - road
+
+  road_account_1:
+    <<: *agreement_question
+    label: 'I develop skills better with the help of another person rather than on my own.'
+    viewable_by_coach: false
+    tags:
+      - road
+  road_account_2:
+    <<: *agreement_question
+    label: 'I prefer to learn with the help of an instructor, mentor, or coach, rather than on my own.'
+    viewable_by_coach: false
+    tags:
+      - road
+  road_account_3:
+    <<: *agreement_question
+    label: 'I find it easier to learn when I have another person to hold me accountable.'
+    viewable_by_coach: false
+    tags:
+      - road
+  road_account_4:
+    <<: *agreement_question
+    label: 'I would benefit from working with another person to help accelerate my professional development .'
+    viewable_by_coach: false
+    tags:
+      - road
+  road_account_5:
+    <<: *agreement_question
+    label: 'I would like to partner with someone else to help me develop professionally.'
+    viewable_by_coach: false
+    tags:
+      - road
+
+  road_devcon_1:
+    <<: *agreement_question
+    label: 'My organization supports me in spending work time on professional development activities.'
+    viewable_by_coach: false
+    tags:
+      - road
+  road_devcon_2:
+    <<: *agreement_question
+    label: 'My organization values my professional development.'
+    viewable_by_coach: false
+    tags:
+      - road
+  road_devcon_3:
+    <<: *agreement_question
+    label: 'I have opportunities at work to practice new skills I want to develop.'
+    viewable_by_coach: false
+    tags:
+      - road

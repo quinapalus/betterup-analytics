@@ -1,0 +1,39 @@
+version: 2
+
+models:
+  - name: invited__pivoted
+    description: ""
+
+    columns:
+      - name: invited_pivoted_id
+        description: Surrogate key used as a primary key.
+        tests:
+          - unique
+          - not_null
+
+      - name: member_id
+        description: ""
+
+      - name: product_subscription_assignment_id
+        description: ""
+
+      - name: is_new_care_invite
+        description: ""
+
+      - name: is_new_coaching_circles_invite
+        description: ""
+
+      - name: is_new_extended_network_invite
+        description: ""
+
+      - name: is_new_foundations_invite
+        description: ""
+
+      - name: is_new_on_demand_invite
+        description: ""
+
+      - name: is_new_primary_coaching_invite
+        description: ""
+
+      - name: is_new_workshops_invite
+        description: ""

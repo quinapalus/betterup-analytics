@@ -1,0 +1,16 @@
+version: 2
+
+models:
+  - name: int_stripe_subscription_daily_status
+    meta:
+      owner: "adrian.lievano@betterup.co"
+    description: >
+      A table tracking stripe daily subscription statuses between the subscription
+      start and end date. 
+
+    columns:
+      - name: _unique
+        description: Primary key
+        tests:
+          - unique
+          - not_null

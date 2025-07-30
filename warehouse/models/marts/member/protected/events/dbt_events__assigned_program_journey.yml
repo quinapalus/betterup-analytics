@@ -1,0 +1,45 @@
+version: 2
+
+models:
+  - name: dbt_events__assigned_program_journey
+    description: The dbt_events__assigned_program_journey model captures each time
+      a program journey is assigned to a user, represented by the member_id field
+      and associated information such as the time of assignment (event_at). It has
+      associated record information (associated_record_type, associated_record_id)
+      for further tracking and further related attributes (attributes). [GenAI Description]
+    columns:
+      - name: member_id
+        description: The column 'member_id' contains a user's unique identifier. [GenAI
+          Description]
+
+      - name: event_at
+        description: "'event_at' stores the timestamp of when the event was initialized.\
+          \ [GenAI Description]"
+
+      - name: event_action
+        description: The 'event_action' column stores the string "assigned" representing
+          the action of assigning a program journey to a member. [GenAI Description]
+
+      - name: event_object
+        description: The 'event_object' column stores the type of object associated
+          with "assigned" user events. [GenAI Description]
+
+      - name: event_action_and_object
+        description: The 'event_action_and_object' column stores the event action
+          and event object formatted as a single string. [GenAI Description]
+
+      - name: associated_record_type
+        description: The column 'associated_record_type' stores the type of associated
+          record (in this case 'ProgramJourneyAssignment') assigned to a user. [GenAI
+          Description]
+
+      - name: associated_record_id
+        description: The "associated_record_id" column stores the primary key ID for
+          the ProgramJourneyAssignment associated with the event. [GenAI Description]
+        tests:
+          - not_null
+          - unique
+
+      - name: attributes
+        description: The 'attributes' column stores data related to the associated
+          program journey assign event, in a structured form. [GenAI Description]

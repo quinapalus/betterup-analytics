@@ -1,0 +1,42 @@
+version: 2
+
+models:
+  - name: stg_wkfw__construct_items
+    description: The stg_wkfw__construct_items model provides a structured table of
+      construct items sourced from the raw.stitch_app_viva_staging.construct_items
+      table. It includes the fields construct_item_id, construct_id, is_scale_inverted,
+      question_key, scale_length, created_at, and updated_at. Data stored in this
+      model can be used to relate instructions for a given construct item task to
+      its parent construct. [GenAI Description]
+    columns:
+      - name: construct_item_id
+        description: The construct_item_id is an identifier for the construct item,
+          storing information including the construct_id, is_scale_inverted, question_key,
+          and scale_length. [GenAI Description]
+        tests:
+          - not_null
+          - unique
+
+      - name: construct_id
+        description: The 'construct_id' column contains the unique identifier associated
+          with the specific construct item. [GenAI Description]
+
+      - name: is_scale_inverted
+        description: The column 'is_scale_inverted' indicates whether the construct
+          item's scale is inverted. [GenAI Description]
+
+      - name: question_key
+        description: The 'question_key' column stores unique identifiers for questions
+          in the construct items table. [GenAI Description]
+
+      - name: scale_length
+        description: Scale_length is an integer which indicates the length of a scale
+          used to measure responses in a construct item. [GenAI Description]
+
+      - name: created_at
+        description: created_at is a timestamp indicating when the construct item
+          was created. [GenAI Description]
+
+      - name: updated_at
+        description: The 'updated_at' column contains a timestamp of when an item
+          was most recently updated. [GenAI Description]

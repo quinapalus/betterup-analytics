@@ -1,0 +1,17 @@
+version: 2
+
+models:
+  - name: int_sfdc__parent_account_details
+    description: "Parent account details for SFDC accounts, current values only, no snapshots"
+    columns:
+      - name: sfdc_account_id
+        description: ""
+        tests:
+          - unique
+          - not_null
+
+      - name: parent_account_type
+        description: ""
+
+      - name: customer_account_type
+        description: ""

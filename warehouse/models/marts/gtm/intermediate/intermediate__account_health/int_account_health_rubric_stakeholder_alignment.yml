@@ -1,0 +1,100 @@
+version: 2
+
+models:
+  - name: int_account_health_rubric_stakeholder_alignment
+    description: "Drivers and overall score calculations for the external factors rubric of the account health score. 
+                  More detail here https://betterup.atlassian.net/wiki/spaces/AN/pages/3149266998/Stakeholder+Alignment+Health+Score+Calculation"
+    columns:
+      - name: sfdc_account_id
+        description: ""
+        tests:
+          - unique
+          - not_null
+
+      - name: account_health_rubric_stakeholder_alignment_driver_maturity_curve
+        description: ""
+        tests:
+          - accepted_values:
+              #test that only these values exist
+              values: ['Good','Okay','Poor']
+          - dbt_expectations.expect_column_distinct_values_to_contain_set:
+              #test that these values actually exist at least once
+              value_set: ['Good','Okay','Poor']
+
+      - name: account_health_rubric_stakeholder_alignment_driver_highest_level_champion
+        description: ""
+        tests:
+          - accepted_values:
+              #test that only these values exist
+              values: ['Good','Okay','Poor']
+          - dbt_expectations.expect_column_distinct_values_to_contain_set:
+              #test that these values actually exist at least once
+              value_set: ['Good','Okay','Poor']
+
+      - name: account_health_rubric_stakeholder_alignment_driver_sphere_of_influence
+        description: ""
+        tests:
+          - accepted_values:
+              #test that only these values exist
+              values: ['Good','Poor']
+          - dbt_expectations.expect_column_distinct_values_to_contain_set:
+              #test that these values actually exist at least once
+              value_set: ['Good','Poor']
+
+      - name: account_health_rubric_stakeholder_alignment_driver_qbr_in_last_6_months
+        description: ""
+        tests:
+          - accepted_values:
+              #test that only these values exist
+              values: [true,false]
+              quote: false
+          - dbt_expectations.expect_column_distinct_values_to_contain_set:
+              #test that these values actually exist at least once
+              value_set: [true,false]
+              quote_values: false
+
+      - name: account_health_rubric_stakeholder_alignment_driver_executive_sponsor_engagement_in_last_6_months
+        description: ""
+        tests:
+          - accepted_values:
+              #test that only these values exist
+              values: [true,false]
+              quote: false
+          - dbt_expectations.expect_column_distinct_values_to_contain_set:
+              #test that these values actually exist at least once
+              value_set: [true,false]
+              quote_values: false
+
+      - name: account_health_rubric_stakeholder_alignment_driver_success_plan_established
+        description: ""
+        tests:
+          - accepted_values:
+              #test that only these values exist
+              values: [true, false]
+              quote: false
+          - dbt_expectations.expect_column_distinct_values_to_contain_set:
+              #test that these values actually exist at least once
+              value_set: [true,false]
+              quote_values: false
+
+      - name: account_health_rubric_stakeholder_alignment_driver_sucess_plan_updated_in_last_12_months
+        description: ""
+        tests:
+          - accepted_values:
+              #test that only these values exist
+              values: [true,false]
+              quote: false
+          - dbt_expectations.expect_column_distinct_values_to_contain_set:
+              #test that these values actually exist at least once
+              value_set: [true,false]
+              quote_values: false
+
+      - name: account_health_rubric_stakeholder_alignment_overall_score
+        description: ""
+        tests:
+          - accepted_values:
+              #test that only these values exist
+              values: ['Good','Okay','Poor','Not Enough Data']
+          - dbt_expectations.expect_column_distinct_values_to_contain_set:
+              #test that these values actually exist at least once
+              value_set: ['Good','Okay','Poor','Not Enough Data']

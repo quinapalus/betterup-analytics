@@ -1,0 +1,29 @@
+version: 2
+
+models:
+  - name: stg_identify__product_recommendations
+    description: ""
+    columns:
+      - name: user_id
+        description: ""
+
+      - name: product_id
+        description: ""
+
+      - name: id
+        description: ""
+        tests:
+          - unique
+          - not_null
+
+      - name: created_at
+        description: ""
+
+      - name: updated_at
+        description: ""
+
+      - name: score
+        description: ""
+
+      - name: model_version
+        description: ""

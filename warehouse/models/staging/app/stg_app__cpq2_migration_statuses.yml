@@ -1,0 +1,61 @@
+version: 2
+models:
+  - name: stg_app__cpq2_migration_statuses
+    description: This DBT model stores data regarding CPQ2 Migration Statuses in the
+      Stitch App. It includes fields for status ID, user ID, job report ID, organization
+      ID, color, errored jobs, finished jobs, status, status message, status type,
+      total jobs, confirmed at, created at, and updated at. It has been designed to
+      keep track of data relating to CPQ2 Migration Statuses. [GenAI Description]
+    columns:
+      - name: cpq2_migration_status_id
+        description: The cpq2_migration_status_id column holds a unique identifier
+          for each CPQ2 migration status record. [GenAI Description]
+        tests:
+          - unique
+          - not_null
+
+      - name: user_id
+        description: The user_id column stores the user identifier associated with
+          the CPQ2 migration status. [GenAI Description]
+
+      - name: job_report_id
+        description: The job_report_id column contains the unique identifier for a
+          migration job report. [GenAI Description]
+
+      - name: organization_id
+        description: The 'organization_id' column holds a unique identifier for which
+          organization the data relates to. [GenAI Description]
+
+      - name: color
+        description: Specifies the color of the status report. [GenAI Description]
+
+      - name: errored_jobs
+        description: The errored_jobs column contains the number of jobs that have
+          errored out during the CPQ2 migration process. [GenAI Description]
+      - name: finished_jobs
+        description: The 'finished_jobs' column holds the number of finished jobs
+          in a CPQ2 migration status. [GenAI Description]
+      - name: status
+        description: The 'status' column indicates the status of the migration. [GenAI
+          Description]
+      - name: status_message
+        description: The 'status_message' column stores the status message associated
+          with a CPQ2 migration status. [GenAI Description]
+      - name: status_type
+        description: The 'status_type' column reflects the current state of the migration
+          process, indicating whether it is 'queued', 'running', 'completed' or 'errored'.
+          [GenAI Description]
+      - name: total_jobs
+        description: '"total_jobs" represents the total number of jobs in the franchise
+          migration process. [GenAI Description]'
+      - name: confirmed_at
+        description: The 'confirmed_at' column is a timestamp indicating when this
+          model was created. [GenAI Description]
+
+      - name: created_at
+        description: The 'created_at' column contains the timestamp of when the record
+          was first created. [GenAI Description]
+
+      - name: updated_at
+        description: The 'updated_at' column stores the timestamp when the associated
+          CPQ2 migration status was last modified. [GenAI Description]

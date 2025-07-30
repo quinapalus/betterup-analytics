@@ -1,0 +1,34 @@
+version: 2
+
+models:
+  - name: stg_app__user_attribute_imports
+    description: >
+      The UserAttribute Import that are then processed asynchoronusely
+      to form UserAttribute Records and Fields
+
+    columns:
+      - name: user_attribute_import_id
+        description: Unique identifer of the user attribute import.
+        tests:
+          - unique
+          - not_null
+      - name: organization_id
+        description: Foreign Key to associated Organization.
+        tests:
+          - relationships:
+              to: ref('stg_app__organizations')
+              field: organization_id
+      - name: user_id
+        description: Foreign Key to associated User.
+      - name: processed_at
+        description: Time when the Rails object was processed in UTC.
+      - name: created_at
+        description: >
+          Time when the Rails object was created in UTC, i.e. when the
+          user account was created.
+        tests:
+          - not_null
+      - name: updated_at
+        description: Time when the Rails object was updated in UTC.
+        tests:
+          - not_null

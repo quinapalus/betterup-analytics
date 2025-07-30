@@ -1,0 +1,39 @@
+version: 2
+models:
+  - name: stg_app__reactions
+    description: DBT model stg_app__reactions stores data about reactions to an app's
+      content, such as likes, favorites, etc. The model captures the reaction_id,
+      reactable_id, category, count, reactable_type, created_at, and updated_at, as
+      well as the relationship between the reactions and their respective parent models.
+      [GenAI Description]
+    columns:
+      - name: reaction_id
+        description: The 'reaction_id' column contains the unique identifier for each
+          reaction. [GenAI Description]
+        tests:
+          - unique
+          - not_null
+
+      - name: reactable_id
+        description: The 'reactable_id' column contains a unique identifier for the
+          item or record being reacted to. [GenAI Description]
+
+      - name: category
+        description: "'category' column stores the type of reaction for the associated\
+          \ reactable item. [GenAI Description]"
+
+      - name: count
+        description: The 'count' column holds an integer value that represents the
+          number of times a reaction has been made. [GenAI Description]
+
+      - name: reactable_type
+        description: The 'reactable_type' column stores the type of object which the
+          reaction is related to. [GenAI Description]
+
+      - name: created_at
+        description: "'created_at' contains a timestamp indicating when the record\
+          \ was created. [GenAI Description]"
+
+      - name: updated_at
+        description: The column 'updated_at' contains a timestamp representing when
+          the reaction was last updated. [GenAI Description]

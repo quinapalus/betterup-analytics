@@ -1,0 +1,14 @@
+version: 2
+
+models:
+  - name: dbt_events__completed_care_modality_setup
+    description: The dbt_events__completed_care_modality_setup model tracks when users
+      complete a care modality setup and stores the associated record ID in a relational
+      database. This model is generated from the seg_care_modality_setup_completed
+      model, which contains related fields and relationships. [GenAI Description]
+    columns:
+      - name: _unique
+        description: Surrogate Primary Key
+        tests:
+          - not_null
+          - unique

@@ -1,0 +1,112 @@
+name: DBT EU - Main
+
+on:
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+  # Run on schedule at minute 45 past every hour.
+  schedule:
+    - cron: "45 */1 * * *"
+
+# Allow one concurrent deployment
+concurrency:
+  group: "dbt_eu_main"
+  cancel-in-progress: false
+
+env:
+  SNOWFLAKE_USER: "DBT_GITHUB_CI_USER"
+  SNOWFLAKE_PASSWORD: ${{ secrets.DBT_GITHUB_CI_USER_PASSWORD }}
+  SNOWFLAKE_ACCOUNT: ${{ secrets.DBT_TARGET_ACCOUNT }}
+  SLACK_WEBHOOK_URL: ${{ secrets.DATA_SLACK_WEBHOOK_URL }}
+  SLACK_WEBHOOK_TYPE: INCOMING_WEBHOOK
+  GITHUB_ACTION_URL: "https://github.com/betterup/betterup-analytics/actions/workflows/dbt_eu__main.yml"
+  DEPLOYMENT_ENVIRONMENT: ${{ secrets.BETTERUP_ENVIRONMENT }}
+
+jobs:
+  dbt_run:
+    name: DBT EU - Main Prod Run
+    strategy:
+      matrix:
+        environment: ['EU Prod']
+
+    runs-on: ubuntu-latest
+    environment: ${{ matrix.environment }}
+    defaults:
+      run:
+        working-directory: warehouse
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - uses: actions/setup-python@v4
+        with:
+          python-version: "3.10"
+
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16
+
+      - name: Install python dependencies
+        # Retry 3 times before the install actually fails 
+        run: |
+          (echo "===== Install Attempt: 1 =====" && make installdeps) || \
+          (echo "===== Install Attempt: 2 =====" && make installdeps) || \
+          (echo "===== Install Attempt: 3 =====" && make installdeps) || \
+          (echo "===== Install python dependencies step failed =====" && exit 1)
+
+      - name: Write DBT configs
+        run: |
+          make writedbtconfig
+
+      - name: Install DBT dependencies
+        run: |
+          poetry run dbt deps --target prod
+          
+      - name: Run dbt seed
+        run: |
+          poetry run dbt seed --target prod
+
+      - name: Run dbt models
+        run: |- 
+          poetry run dbt run --select +tag:eu --vars '{"account_env":"${{ matrix.environment }}"}' --target prod
+
+      - name: Test dbt models
+        run: |- 
+          poetry run dbt test --selector job__eu_tests --indirect-selection=cautious --target prod
+        
+      - name: Convert to junitxml
+        if: success() || failure()
+        run: |
+          poetry run dbt-junitxml parse target/run_results.json target/report.xml
+
+      # - name: Upload report to data dog
+      #   run: |
+      #     npm install -g @datadog/datadog-ci
+      #     datadog-ci junit upload --service buanalytics-dbt-tests target/report.xml
+        env:
+          DD_ENV: 'ci'
+          DATADOG_SITE: 'datadoghq.com'
+          DATADOG_API_KEY: ${{ secrets.ANALYTICS_CI_DATADOG_API_KEY }}
+
+      - name: Archive target artifacts
+        if: always()
+        uses: actions/upload-artifact@v3
+        with:
+          name: dbt-build-artifacts
+          path: |
+            warehouse/target/manifest.json
+
+      - name: Send GitHub Action data to Slack workflow
+        id: send-slack-notification
+        uses: slackapi/slack-github-action@v1.23.0
+        if: failure()
+        with:
+          # Slack API Reference: 
+          # https://api.slack.com/messaging/composing
+          # https://api.slack.com/reference/messaging/payload
+          payload: |
+            {
+              "channel": "warroom-data",
+              "icon_emoji": ":dbt-logo:",
+              "text": "DBT EU Run Failure: ${{ github.workflow }} <${{ env.GITHUB_ACTION_URL }}|View here.>"
+            }

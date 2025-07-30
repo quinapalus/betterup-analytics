@@ -1,0 +1,48 @@
+version: 2
+
+models:
+  - name: dbt_features__group_coaching_topics
+    description: This model stores the topics associated with a user's group coaching
+      registration. It contains the user ID, the associated record ID, the associated
+      record type, the date of data collection, the type of feature being tracked,
+      the classification (label) of the topic, the feature attributes, and the type
+      of feature (coaching topic). [GenAI Description]
+    columns:
+      - name: primary_key
+        description: Surrogate Key of Member ID, ASsociated Record ID, and Feature
+          Key
+        tests:
+          - not_null
+          - unique
+
+      - name: member_id
+        description: Member ID
+        tests:
+          - not_null
+
+      - name: associated_record_id
+        description: Associated Record ID
+        tests:
+          - not_null
+
+      - name: associated_record_type
+        description: Associated Record Type
+        tests:
+          - not_null
+
+      - name: feature_collected_at
+        description: Feature Collected At
+
+      - name: feature_key
+        description: Feature Key
+        tests:
+          - not_null
+
+      - name: classification
+        description: Classification
+
+      - name: feature_attributes
+        description: Feature Attributes
+
+      - name: feature_type
+        description: Feature Type

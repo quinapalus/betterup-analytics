@@ -1,0 +1,50 @@
+version: 2
+
+models:
+  - name: dbt_events__onboarded
+    description: dbt_events__onboarded is a model that captures events for users having
+      completed onboarding based on a combination of account creation, member onboarding,
+      and care onboarding. It contains fields for tracking the user ID, the date of
+      the event, the type of onboarding, and additional attributes for further contextual
+      information. It is related to the int_app__users and stg_app__care_profiles
+      parent models. [GenAI Description]
+    columns:
+      - name: dbt_events__onboarded_id
+        description: Surrogate key of member_id, event_object and event_at
+        tests:
+          - unique
+          - not_null
+
+      - name: member_id
+        description: The member_id column is used to identify the user associated
+          with onboarding events related to account creation, care onboarding, and
+          member onboarding. [GenAI Description]
+
+      - name: event_at
+        description: The "event_at" column stores a UTC timestamps when onboarding
+          actions, such as 'converged', 'care', and 'member' onboarding, are completed.
+          [GenAI Description]
+
+      - name: event_action
+        description: The column 'event_action' records whether onboarding processes
+          such as 'Converged', 'Care', and 'Member' have been completed. [GenAI Description]
+
+      - name: event_object
+        description: The 'event_object' column in this model contains the words "completed"
+          as an action and "onboarding" for the type of event. [GenAI Description]
+
+      - name: event_action_and_object
+        description: This column stores the action ("completed") and the associated
+          object (e.g., "member_onboarding") for every onboarding event. [GenAI Description]
+
+      - name: associated_record_type
+        description: This column stores information on the type of "associated record"
+          related to the corresponding onboarding event. [GenAI Description]
+
+      - name: associated_record_id
+        description: The 'associated_record_id' column stores the ID of the record
+          associated with this event. [GenAI Description]
+
+      - name: attributes
+        description: The 'attributes' column contains a collection of null objects
+          related to the completed onboarding events. [GenAI Description]

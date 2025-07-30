@@ -1,0 +1,25 @@
+version: 2
+models:
+  - name: stg_app__resource_development_topics
+    description: >
+      This base table maps development topics to resources.
+
+    columns:
+      - name: resource_development_topic_id
+        description: Unique identifer of the resource to development topic mapping.
+        tests:
+          - not_null
+          - unique
+
+      - name: development_topic_id
+        description: Which development topic the resource is mapped to.
+
+      - name: created_at
+        description: Timestamp denoting when the mapping was created.
+        tests:
+          - not_null
+
+      - name: updated_at
+        description: Timestamp denoting when the mapping was updated.
+        tests:
+          - not_null

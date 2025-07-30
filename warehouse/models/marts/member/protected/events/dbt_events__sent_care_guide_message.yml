@@ -1,0 +1,48 @@
+version: 2
+
+models:
+  - name: dbt_events__sent_care_guide_message
+    description: dbt_events__sent_care_guide_message tracks when members have sent
+      messages to care guides. The model holds information about the member, the message
+      sent, and the associated message record. It also stores additional attributes
+      associated with the message. The model uses a SQL query to extract data from
+      several other tables in order to generate its results. [GenAI Description]
+    columns:
+
+      - name: member_id
+        description: The 'member_id' column contains the unique identifier of users
+          who sent messages in care guide conversations. [GenAI Description]
+
+      - name: event_at
+        description: "'event_at' is the date and time a care guide message was sent\
+          \ by a member. [GenAI Description]"
+
+      - name: event_action
+        description: The column 'event_action' records the action of the user (either
+          'sent' or 'recieved') in relationship to the event object ('care_guide_message').
+          [GenAI Description]
+
+      - name: event_object
+        description: This column contains the type of event (e.g. "sent care_guide_message")
+          associated with each message sent by a member. [GenAI Description]
+
+      - name: event_action_and_object
+        description: This column contains a concatenation of the action taken ("sent")
+          and the type of message sent ("care_guide_message") for messages sent by
+          members of a care guide conversation. [GenAI Description]
+
+      - name: associated_record_type
+        description: '"associated_record_type" contains the type of associated record
+          in this event, which is "Message". [GenAI Description]'
+
+      - name: associated_record_id
+        description: The column 'associated_record_id' stores the unique message ID
+          associated with the event. [GenAI Description]
+        tests:
+          - unique
+          - not_null
+
+      - name: attributes
+        description: The 'attributes' column contains an object that stores additional
+          related data associated with a sent care guide message. [GenAI Description]
+

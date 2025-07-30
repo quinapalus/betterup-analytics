@@ -1,0 +1,67 @@
+name: Pipeline - fountain-snowflake-sync
+
+on:
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+  # Run on schedule every 3 hours
+  schedule:
+    - cron:  '0 */3 * * *'
+
+env:
+  FOUNTAIN_API_TOKEN: ${{ secrets.FOUNTAIN_API_TOKEN }}
+  FOUNTAIN_SNITCH_URL: ${{ secrets.FOUNTAIN_SNITCH_URL }}
+
+  SNOWFLAKE_ACCOUNT: oj02423.us-east-1
+  SNOWFLAKE_USER: tap_user
+  SNOWFLAKE_PASSWORD: ${{ secrets.TAP_USER_SNOWFLAKE_PASSWORD }}
+  SNOWFLAKE_DB: raw
+  SNOWFLAKE_WAREHOUSE: tap_loading
+  SNOWFLAKE_FOUNTAIN_SCHEMA: tap_fountain
+  TAP_FOUNTAIN_STAGE: tap_fountain.base
+  TAP_FOUNTAIN_FILE_FORMAT: tap_fountain.csv
+  TAP_S3_ACCESS_KEY: ${{ secrets.WAREHOUSE_TAPS_AWS_ACCESS_ID }}
+  TAP_S3_SECRET_KEY: ${{ secrets.WAREHOUSE_TAPS_AWS_ACCESS_KEY }}
+  TAP_FOUNTAIN_S3_KEY_PREFIX: fountain/
+  TAP_S3_BUCKET: bu-warehouse-taps
+  SNOWFLAKE_TRANSFORMER_ROLE: transformer
+
+  BU_SLACK_BOT_TOKEN: ${{ secrets.BU_SLACK_BOT_TOKEN }}
+  SLACK_WEBHOOK_URL: ${{ secrets.DATA_SLACK_WEBHOOK_URL }}
+  SLACK_WEBHOOK_TYPE: INCOMING_WEBHOOK
+  GITHUB_ACTION_URL: "https://github.com/betterup/betterup-analytics/actions/workflows/fountain_snowflake_sync.yml"
+
+jobs:
+  run_job:
+    name: Run job
+    runs-on: ubuntu-latest
+    concurrency:
+      group: ${{ github.workflow }}
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: Install Poetry
+        uses: snok/install-poetry@v1
+
+      - name: Run sync
+        run: ./bin/fountain-snowflake-sync
+        shell: bash
+
+      - name: Send GitHub Action data to Slack workflow
+        id: send-slack-notification
+        uses: slackapi/slack-github-action@v1.23.0
+        if: failure()
+        with:
+          payload: |
+            {
+              "channel": "warroom-data",
+              "icon_emoji": ":github:",
+              "text": "Pipeline Failure: ${{ github.workflow }} <${{ env.GITHUB_ACTION_URL }}|View here.>"
+            }

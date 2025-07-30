@@ -1,0 +1,189 @@
+assessment_type,item_key,prompt,response_scale,html_label,item_id,item_uuid
+Assessments::CareNpsAssessment,care_nps,"",nps_10,,1091,4c0b2c5d-9fbc-4077-a426-2eff16ea4275
+Assessments::GroupCoachingExitAssessment,coaching_circle_nps,"In the event a friend or colleague is seeking professional development, how likely would you be to recommend coaching circles from BetterUp?",nps_10,,634,0701c238-6aa4-411c-be68-b50ccdb17825
+Assessments::ManagerFeedbackAssessment,including_others,"To optimize their professional growth, would you recommend %{first_name} to focus on creating an inclusive work environment?",recommend_5,Creating an inclusive work environment,1279,195476ef-b578-4ef5-aa81-d0324239bebe
+Assessments::ManagerFeedbackAssessment,motivating_others,"To optimize their professional growth, would you recommend %{first_name} to focus on motivating and inspiring others?",recommend_5,Motivating and inspiring others,1280,c004385f-ce9f-4934-9028-49b19cb7e144
+Assessments::ManagerFeedbackAssessment,guiding_others,"To optimize their professional growth, would you recommend %{first_name} to focus on aligning others around a clear strategy?",recommend_5,Aligning others around a clear strategy,1281,9d271d96-654f-46d1-a3ac-2923f924ebd5
+Assessments::ManagerFeedbackAssessment,social_thriving,"To optimize their professional growth, would you recommend %{first_name} to focus on building relationships and internal partnerships?",recommend_5,Building relationships and internal partnerships,1282,c233b075-ec88-4a18-8ceb-02b2d4d630a3
+Assessments::ManagerFeedbackAssessment,strategic_thinking,"To optimize their professional growth, would you recommend %{first_name} to focus on strategic thinking and planning for the future?",recommend_5,Strategic thinking and planning for the future,1283,cac71744-1022-4267-b821-b96654be537a
+Assessments::ManagerFeedbackAssessment,adapting,"To optimize their professional growth, would you recommend %{first_name} to focus on ability to adapt to change?",recommend_5,Ability to adapt to change,1284,fab0e104-7143-40fc-a958-ae32a78fc436
+Assessments::ManagerFeedbackAssessment,executing,"To optimize their professional growth, would you recommend %{first_name} to focus on executing against objectives?",recommend_5,Executing against objectives,1285,8edab853-75cc-440b-827b-0d5de06b2cc2
+Assessments::ManagerFeedbackAssessment,innovating,"To optimize their professional growth, would you recommend %{first_name} to focus on innovating products and/or processes?",recommend_5,Innovating products and/or processes,1286,41919153-be15-4733-8f2c-76165bfa4243
+Assessments::ManagerGrowthAssessment,inclusive_work_environment,"How has %{first_name}’s performance changed in their ability to create an inclusive work environment?",improved_5,Creating an inclusive work environment,1388,4cec2874-9b0a-4680-800f-d6d7bf9c660e
+Assessments::ManagerGrowthAssessment,motivate_and_inspire,"How has %{first_name}’s performance changed in their ability to motivate and inspire others?",improved_5,Motivating and inspiring others,1389,5e267c2a-8522-4e02-8529-08d43e318dc9
+Assessments::ManagerGrowthAssessment,align_around_strategy,"How has %{first_name}’s performance changed in their ability to align others around a clear strategy?",improved_5,Aligning others around a clear strategy,1390,7975fabf-711b-4407-95e4-d4e841d23507
+Assessments::ManagerGrowthAssessment,build_relationships_partnerships,"How has %{first_name}’s performance changed in their ability to build relationships and internal partnerships?",improved_5,Building relationships and internal partnerships,1391,675bf9dd-5e0b-4999-bd39-d743281c1763
+Assessments::ManagerGrowthAssessment,think_strategically_about_future,"How has %{first_name}’s performance changed in their ability to think strategically about the future?",improved_5,Strategic thinking and planning for the future,1392,197497ae-defb-45fd-a325-332ce1744287
+Assessments::ManagerGrowthAssessment,adapt_to_change,"How has %{first_name}’s performance changed in their ability to adapt to change?",improved_5,Ability to adapt to change,1393,1eb15b3e-288f-457e-8c96-1c7c31a03291
+Assessments::ManagerGrowthAssessment,execute_against_objectives,"How has %{first_name}’s performance changed in their ability to execute against objectives?",improved_5,Executing against objectives,1394,1c76578c-6ffa-4c23-98a6-9f3eb8fcbf97
+Assessments::ManagerGrowthAssessment,innovate_products_or_processes,"How has %{first_name}’s performance changed in their ability to innovate products or processes?",improved_5,Innovating products and/or processes,1395,5e88d291-de38-48d0-913c-54d3809bd36e
+Assessments::ManagerGrowthAssessment,changes_in_behavior,"What specific changes have you observed in %{first_name}’s behavior?",open_text,,1396,962b2a1d-a0ac-49f9-a223-085709cfeb79
+Assessments::ManagerGrowthAssessment,additional_growth_recommendations,"What additional recommendations would you suggest to %{first_name} for their continued growth?",open_text,,1397,556870e4-f25d-4656-a9a8-266a56eae0ae
+Assessments::ManagerGrowthAssessment,more_effective_in_job,"Working with BetterUp has made %{first_name} more effective in their job.",agree_5,,1399,d276f2e6-6c30-47da-ba48-162a3fc23d34
+Assessments::ManagerGrowthAssessment,prepare_for_next_step,"Working with BetterUp has helped prepare %{first_name} for the next step in their career.",agree_5,,1400,1073e088-d910-45da-8d15-9b10fb559878
+Assessments::ManagerGrowthAssessment,everyone_on_my_team_participate,"I would want everyone on my team to have the opportunity to participate in Betterup.",agree_5,,1401,433d598e-f310-49ae-a449-31c70b08c3bc
+Assessments::MemberNpsAssessment,member_platform_nps,"How likely are you to recommend BetterUp to a friend or colleague?",nps_10,,732,9693708b-c735-47e4-89da-b9de62f5ca2f
+Assessments::OnboardingAssessment,intent_to_stay_1,"I see a future for myself at my current company",agree_5,,56,bddc355e-de68-4996-9710-074946d5ed56
+Assessments::OnboardingAssessment,intent_to_stay_3,"I plan to stay at my current company for the foreseeable future",agree_5,,56,bddc355e-de68-4996-9710-074946d5ed56
+Assessments::OnboardingAssessment,intent_to_stay_2,"I would like to be working at my current company a year from now",agree_5,,57,123c3d60-6866-40dd-a4e5-1a60035a1239
+Assessments::OnboardingAssessment,layer2_employer_nps,"In the event a friend or colleague is looking for a new job, how likely are you to recommend your current organization?",nps_10,,60,329b1eb2-bf2d-406d-b63a-2a6711fdf436
+Assessments::OnboardingAssessment,cof_learning_culture,"",agree_5,,648,57864dbf-a938-476b-ab62-4e23d37f783b
+Assessments::OnboardingAssessment,cof_career_goals,"",agree_5,,649,c3420378-3626-4356-8eb8-b98237a61732
+Assessments::OnboardingAssessment,cof_morale,"",agree_5,,650,d82b2c70-38ea-4c2f-8428-62c9ebc346c5
+Assessments::OnboardingAssessment,cof_valued,"",agree_5,,651,9e2a643a-53c0-44ae-9d51-56475dd6c163
+Assessments::OnboardingAssessment,daf_missionreadiness1,"",agree_5,,1111,0039a171-8593-4141-a921-3e801bd916f4
+Assessments::OnboardingAssessment,daf_missionreadiness2,"",agree_5,,1112,464dbd58-1c79-4cbc-81b5-26228f16515b
+Assessments::OnboardingAssessment,daf_feedback1,"",agree_5,,1113,c961322d-5201-459b-8c6b-360ae8de9424
+Assessments::OnboardingAssessment,daf_feedback2,"",agree_5,,1114,28ff4ed9-6c52-4390-8b7e-7a9695cd4b65
+Assessments::OnboardingAssessment,daf_feedback3,"",agree_5,,1115,fa1fabb5-a187-4236-88ee-e8358414cf50
+Assessments::OnboardingAssessment,manager_coaching_6,"I work across my sales team to identify and communicate common themes for how to improve",agree_5,,1175,2ea01016-8c5f-4978-9d3b-efa7e906cbdf
+Assessments::OnboardingAssessment,daf_careercommit,"",agree_5,,1232,e24d6fb7-bdc7-45b7-a822-515d3f2a3d02
+Assessments::OnboardingAssessment,manager_coaching_9,"I keep up to date on what each of my sales reps uniquely needs from me to be successful",agree_5,,1289,3f048e33-5ed1-45b2-bda9-74117d112b37
+Assessments::OnboardingAssessment,manager_coaching_10,"I coach and support all of my team members, not just the highest and lowest performers",agree_5,,1290,b797251d-64d5-4344-affe-0bc9b19b69a6
+Assessments::OnboardingAssessment,manager_coaching_13,"I check in on the well-being of my sales reps and help them set clear work-life boundaries",agree_5,,1293,79507d01-c291-4429-9831-bb5544baf458
+Assessments::OnboardingAssessment,manager_coaching_14,"I listen to ideas of my sales reps before providing guidance on deals",agree_5,,1294,31787d81-c143-4695-bb4c-c99038bfc712
+Assessments::OnboardingAssessment,sales_rep_1,"Learn from wins and losses",agree_5,,1406,76c21e7d-72d2-4c7f-b59b-c9ff2a6e7882
+Assessments::OnboardingAssessment,sales_rep_2,"Reframe losses",agree_5,,1407,c3853fae-411d-424c-8979-c21545542ddd
+Assessments::OnboardingAssessment,sales_rep_3,"Incorporate new information",agree_5,,1408,19940219-62f3-4b43-9d93-2cebce8f9aa3
+Assessments::OnboardingAssessment,sales_rep_4,"Confidence in winning large deals",agree_5,,1409,b748e626-a65b-434e-9315-76316c62e293
+Assessments::OnboardingAssessment,sales_rep_5,"Expansion ability",agree_5,,1410,d85dce8d-47f3-40f2-8a9c-d3aecfdf55a3
+Assessments::OnboardingAssessment,sales_rep_6,"Mentally prepare",agree_5,,1411,57f20cfe-69f1-4edc-b271-23c7069ef02b
+Assessments::OnboardingAssessment,sales_rep_7,"Bounce back quickly",agree_5,,1412,f56c5cc1-b058-4038-9e8c-a3d57e9da590
+Assessments::OnboardingAssessment,sales_rep_8,"Agility with sales tactics",agree_5,,1413,5e202c8a-5aa9-438c-a5ec-8744d5e342c7
+Assessments::OnboardingAssessment,sales_rep_9,"Belief in hard work",agree_5,,1414,3471a4a1-9b4a-46c4-861e-6f53f2f3439f
+Assessments::OnboardingAssessment,sales_culture_1,"Celebrating wins",agree_5,,1415,3ded1712-d958-46da-8676-1c4792084081
+Assessments::OnboardingAssessment,sales_culture_2,"Collaboration strength",agree_5,,1416,70ccbacb-24e5-4206-9a67-7f9b38e5b9ca
+Assessments::OnboardingAssessment,sales_culture_3,"Cultural strength",agree_5,,1417,cfa3fb64-deed-46d1-afbb-4a530f4dbc88
+Assessments::OnboardingAssessment,sales_culture_5,"Shared learnings",agree_5,,1419,6959618a-76c8-4619-a7b2-00fe76259ea8
+Assessments::OnboardingAssessment,ssl_seek_1,"I seek out a variety of perspectives during discussions.",agree_5,,1685,10c374e3-5c61-4216-ae64-ce77732aff91
+Assessments::OnboardingAssessment,ssl_seek_2,"When I sense tension or worry on my team, I ask questions to learn more.",agree_5,,1693,c70a4340-41bb-418a-aebc-439bdc4519eb
+Assessments::OnboardingAssessment,ssl_speak_1,"My team comes to me to discuss potentially problematic behaviors.",agree_5,,1694,7044cd5b-9ac3-4546-9159-d98f1ed3a626
+Assessments::OnboardingAssessment,ssl_speak_2,"I am comfortable discussing concerns with my manager.",agree_5,,1695,9d061568-de63-40d2-98a4-2ab9f1cac182
+Assessments::OnboardingAssessment,ssl_listen_1,"When in conversations with my colleagues, I multitask to get other work done.",agree_5,,1696,eeeb849d-95ea-4c12-ab63-138b29a248a0
+Assessments::OnboardingAssessment,ssl_listen_2,"I focus on understanding another person’s perspective during conversations.",agree_5,,1697,2849b689-780f-4ef2-af4f-6760c1bc499a
+Assessments::OnboardingAssessment,ssl_impact_1,"I feel that the Seek, Speak & Listen habits are helping my team identify and address issues before they become major problems.",agree_5,,1698,2273f29a-153b-4851-b692-ce285cd02576
+Assessments::OnboardingAssessment,ssl_impact_2,"I feel that the Seek, Speak & Listen habits are positively impacting the way my team collaborates.",agree_5,,1699,e18b7276-e066-4cb4-9ddb-b7b3f745f0b9
+Assessments::OnboardingAssessment,ssl_impact_3,"I feel that the Seek, Speak & Listen habits are helping my team achieve better business outcomes (ex. improved performance, safety, quality).",agree_5,,1700,1e6a4afa-41de-44d2-bec9-bd66c4def460
+Assessments::OneMonthSurveyAssessment,layer2_member_rated_productivity,"With 0 as not at all productive and 10 as full productivity, how productive have you been at work recently?",productive_10,,46,3985f9a4-9887-4a52-93e8-e3939a36e192
+Assessments::OneMonthSurveyAssessment,job_satisfaction,"All in all I am satisfied with my job.",agree_5,,198,826e6a7d-2212-4ed0-8754-a3d11cb2067e
+Assessments::OneMonthSurveyAssessment,overall_satisfaction,"Overall, how satisfied are you with your BetterUp experience?",satisfied_10,,262,03069b69-96d9-4728-9357-d0cab2aef97c
+Assessments::OneMonthSurveyAssessment,satisfaction_with_coaching,"How satisfied are you with the coaching you have received from BetterUp?",satisfied_5,,263,871c7793-b58f-4605-81c9-4b2a9860f101
+Assessments::OneMonthSurveyAssessment,satisfaction_with_platform,"How satisfied are you with the BetterUp application and platform?",satisfied_5,,264,c613d6de-e344-45fa-bdae-44f1e361f96a
+Assessments::OneMonthSurveyAssessment,net_promoter,"In the event a friend or colleague is seeking professional development, how likely are you to recommend BetterUp?",nps_10,,265,fd32773e-c24f-4ee5-a6b5-aae34aeb0779
+Assessments::OneMonthSurveyAssessment,employer_nps,"In the event a friend or colleague is looking for a new job, how likely are you to recommend your current organization?",nps_10,,265,fd32773e-c24f-4ee5-a6b5-aae34aeb0779
+Assessments::OneMonthSurveyAssessment,nps_explanation,"Please tell us a little bit about why you would or would not recommend BetterUp to others.",open_text,,266,e805b1a0-0302-49dd-a7f0-257784e87feb
+Assessments::OneMonthSurveyAssessment,goal_progress,"Working with BetterUp has helped me make progress toward my professional development goals.",agree_5,,267,a049032f-cb72-464b-9948-9a9b6a1cf5db
+Assessments::OneMonthSurveyAssessment,more_effective,"Working with BetterUp has made me more effective in my job.",agree_5,,268,e9dfc333-9797-4c4c-9415-ea6686dbe099
+Assessments::OneMonthSurveyAssessment,layer2_achievements,"What specifically have you learned or started doing differently as a result of working with BetterUp?",open_text,,269,e4c84d87-4fd8-4893-9d14-08d95b67b6fb
+Assessments::OneMonthSurveyAssessment,time_availability,"I have adequate time to dedicate toward BetterUp.",agree_5,,271,1247b45a-7552-415d-aece-bbd583c60852
+Assessments::OneMonthSurveyAssessment,feedback_culture,"My coworkers and I are comfortable asking for feedback from each other.",agree_5,,272,23886d62-be25-4a60-853d-a7fe16bbffb2
+Assessments::OneMonthSurveyAssessment,manager_support,"My supervisor works with team members to promote their ongoing growth and development.",agree_5,,273,011e0f02-e978-48f9-8163-2d7c132668e8
+Assessments::OneMonthSurveyAssessment,learning_culture,"In my organization it is the norm to see mistakes as learning opportunities.",agree_5,,274,896b57eb-d932-44e6-8d4b-e6b489f91c4d
+Assessments::OneMonthSurveyAssessment,layer2_feedback,"Is there anything else you'd like to share about your BetterUp experience?",open_text,,278,1c5f5249-fbfd-43d6-8451-34efbfb887b0
+Assessments::OneMonthSurveyAssessment,layer2_engagement_1,"I find it easy to feel involved and energized at work.",agree_5,,494,b99b3d43-d9a5-47a4-9431-07b169950e8b
+Assessments::OneMonthSurveyAssessment,layer2_engagement_2,"I often become engrossed in my work.",agree_5,,495,54bae6b4-613f-4949-973b-f2df6a4b0879
+Assessments::OneMonthSurveyAssessment,layer2_engagement_3,"I am enthusiastic about my work.",agree_5,,496,7acbade7-13ec-47d8-aaa1-a7c1007cce4c
+Assessments::OneMonthSurveyAssessment,how_much_progress,"Since you started working with your coach, how much progress have you made towards the goal(s) you set for yourself as part of this experience?",progress_10,,506,8b3657f1-5267-4e13-b351-87012a7691a0
+Assessments::OneMonthSurveyAssessment,layer2_relative_value_to_other_offerings,"Compared to other development opportunities offered at my organization,I have found BetterUp to be...",valuable_5,,507,68ab694e-0bf2-4f56-a9d7-a0159a384e12
+Assessments::OneMonthSurveyAssessment,layer2_retention_value,"I would be more likely to stay with an organization that offered me BetterUp compared to one that did not.",agree_5,,508,75c94bf7-2ef3-4fc5-aaf5-fe5650787434
+Assessments::OneMonthSurveyAssessment,use_of_time,"BetterUp is a valuable use of my time.",agree_5,,509,cf0fdf37-c1c1-49c8-9b58-e78b971def37
+Assessments::OneMonthSurveyAssessment,meaningful_progress,"My coach has helped me make meaningful progress towards my goals.",agree_5,,511,0e28bcf1-a737-46f8-9c94-43e57c57df6c
+Assessments::OneMonthSurveyAssessment,working_relationship,"My coach and I have a strong working relationship, characterized by mutual respect and trust.",agree_5,,512,67ba5df2-d89d-4416-bbe0-55ff7a88a175
+Assessments::PartnerNpsAssessment,partner_platform_nps,"How likely are you to recommend the BetterUp People Analytics Dashboard to a friend or colleague?",nps_10,,1349,3f7b4f8c-5b76-4677-9ed9-3326be2e4563
+Assessments::PostGroupCoachingSessionAssessment,group_broadened_perspective,"During this program, my group members broadened my perspective on this topic.",agree_5,,624,828031b9-39de-4ed9-968b-8f85ac306289
+Assessments::PostGroupCoachingSessionAssessment,coaching_circle_nps,"In the event a friend or colleague is seeking professional development, how likely would you be to recommend coaching circles from BetterUp?",nps_10,,634,0701c238-6aa4-411c-be68-b50ccdb17825
+Assessments::PostGroupCoachingSessionAssessment,coaching_circle_broader_network,"As a result of this coaching circle, I have a broader network I can reach out to for advice and/or support.",agree_5,,796,6327e536-93c1-47dc-b280-259a294df9a2
+Assessments::PostGroupCoachingSessionAssessment,group_active_listening,"This coaching circle improved my ability to actively listen to others.",agree_5,,1480,7b8f3532-ad26-4f36-9e6d-ef0cac239041
+Assessments::PostGroupCoachingSessionAssessment,group_belonging,"I feel more seen, heard, and valued as a result of this coaching circle.",agree_5,,1481,3d52ea03-996d-461a-9ccf-1524121e85c8
+Assessments::PostGroupCoachingSessionAssessment,group_clarity_to_grow,"This coaching circle gave me clarity on what I need to do, to grow.",agree_5,,1482,7b755cf1-7f0c-4db0-913d-55c5794aa802
+Assessments::PostGroupCoachingSessionAssessment,group_not_alone,"After this coaching circle, I know that I'm not alone in the challenges I face.",agree_5,,1483,f5b3a5bc-4c63-4071-a732-e3c8a77d09b6
+Assessments::PostGroupCoachingSessionAssessment,group_powerful_discussions,"Through this coaching circle, I had powerful discussions I wouldn't have had otherwise.",agree_5,,1485,8cc5f035-717c-4a38-a078-d1bd935bced2
+Assessments::PostGroupCoachingSessionAssessment,group_energized,"I felt energized by the discussions in this coaching circle.",agree_5,,1486,8d0c2266-01db-4b1e-8ae3-65d9a67ed59a
+Assessments::PostGroupCoachingSessionAssessment,group_think_new_ways,"This coaching circle pushed me to think in new ways about problems I face.",agree_5,,1487,a0af2cd4-2242-4c3f-98fb-a372a9fb0578
+Assessments::PostGroupCoachingSessionAssessment,group_psychological_safety,"As a result of this coaching circle, I feel a stronger sense of psychological safety for my views.",agree_5,,1488,8d86eab9-ef1f-48c0-9d3a-a0367885818c
+Assessments::PostGroupCoachingSessionAssessment,group_issues_discuss,"I felt that I could talk with my coaching circle about issues that I would not normally discuss with my peers.",agree_5,,1489,e243a706-91f5-406b-9afd-dafa4f5d60e8
+Assessments::PostGroupCoachingSessionAssessment,group_support_others,"As a result of this coaching circle, I feel better equipped to support the growth and development of others.",agree_5,,1490,a92a8fd7-d60a-4db1-b15f-8e7ce0c6b175
+Assessments::PostSessionMemberAssessment,session_overall_emotional,"How was this session overall?",emotion_overall_5,,863,e39a50f5-e40e-4b86-b580-a98aff8bf5b4
+Assessments::PostSessionMemberAssessment,layer2_member_rated_goal_progress,"How much progress have you made towards the goal(s) you set for yourself as part of this experience?",progress_10,,864,1871e69e-e6f9-4fde-b0d9-6aaf8360b985
+Assessments::PostSessionMemberAssessment,session_was_valuable,"Was this session a valuable use of your time?",agree_5,,868,af38585e-7e52-4c17-b0e7-5536efe994be
+Assessments::PostSessionMemberAssessment,insight_rating,"Did you gain a valuable insight or takeaway?",agree_5,,869,9cbdc07d-0356-44be-839c-e5930c139529
+Assessments::PostSessionMemberAssessment,layer2_utility_rating,"This session will help me be more effective at work.",agree_5,,870,e5ff795b-ff6e-42a9-a0b4-cf73be675145
+Assessments::PostSessionMemberAssessment,adapt_to_change,"In the last two weeks, my team has been able to effectively adapt to change",agree_5,,872,1eacd2b6-cc60-47e3-98c8-f1c904115029
+Assessments::PostSessionMemberAssessment,optimistic_future,"I feel optimistic about the future",agree_5,,873,cc82a50f-1115-49db-8db4-8358a7acf0f9
+Assessments::PostSessionMemberAssessment,boeing_post_session_1,"This session will help me practice the Seek, Speak & Listen habits to strengthen my team",agree_5,,1709,a0f0cf96-2f46-4109-8516-72be7a9a521a
+Assessments::PostSessionMemberAssessment,boeing_post_session_2,"This session will help me practice the Seek, Speak & Listen habits to achieve better business outcomes",agree_5,,1710,1421e9d8-c3c7-464e-9288-5fefed0b8645
+Assessments::PrimaryCoachingModalitySetupAssessment,intent_to_stay_1,"I see a future for myself at my current company",agree_5,,56,bddc355e-de68-4996-9710-074946d5ed56
+Assessments::PrimaryCoachingModalitySetupAssessment,intent_to_stay_2,"I would like to be working at my current company a year from now",agree_5,,57,123c3d60-6866-40dd-a4e5-1a60035a1239
+Assessments::PrimaryCoachingModalitySetupAssessment,intent_to_stay_3,"I plan to stay at my current company for the foreseeable future",agree_5,,58,091f6968-808a-4f4e-8a7e-ee4edd719716
+Assessments::PrimaryCoachingModalitySetupAssessment,manager_coaching_6,"I work across my sales team to identify and communicate common themes for how to improve",,,1175,2ea01016-8c5f-4978-9d3b-efa7e906cbdf
+Assessments::PrimaryCoachingModalitySetupAssessment,manager_coaching_9,"I keep up to date on what each of my sales reps uniquely needs from me to be successful",,,1289,3f048e33-5ed1-45b2-bda9-74117d112b37
+Assessments::PrimaryCoachingModalitySetupAssessment,manager_coaching_10,"I coach and support all of my team members, not just the highest and lowest performers",,,1290,b797251d-64d5-4344-affe-0bc9b19b69a6
+Assessments::PrimaryCoachingModalitySetupAssessment,manager_coaching_13,"I check in on the well-being of my sales reps and help them set clear work-life boundaries",,,1293,79507d01-c291-4429-9831-bb5544baf458
+Assessments::PrimaryCoachingModalitySetupAssessment,manager_coaching_14,"I listen to ideas of my sales reps before providing guidance on deals",,,1294,31787d81-c143-4695-bb4c-c99038bfc712
+Assessments::PrimaryCoachingModalitySetupAssessment,sales_rep_1,"Learn from wins and losses",agree_5,,1406,76c21e7d-72d2-4c7f-b59b-c9ff2a6e7882
+Assessments::PrimaryCoachingModalitySetupAssessment,sales_rep_2,"Reframe losses",agree_5,,1407,c3853fae-411d-424c-8979-c21545542ddd
+Assessments::PrimaryCoachingModalitySetupAssessment,sales_rep_3,"Incorporate new information",agree_5,,1408,19940219-62f3-4b43-9d93-2cebce8f9aa3
+Assessments::PrimaryCoachingModalitySetupAssessment,sales_rep_4,"Confidence in winning large deals",agree_5,,1409,b748e626-a65b-434e-9315-76316c62e293
+Assessments::PrimaryCoachingModalitySetupAssessment,sales_rep_5,"Expansion ability",agree_5,,1410,d85dce8d-47f3-40f2-8a9c-d3aecfdf55a3
+Assessments::PrimaryCoachingModalitySetupAssessment,sales_rep_6,"Mentally prepare",agree_5,,1411,57f20cfe-69f1-4edc-b271-23c7069ef02b
+Assessments::PrimaryCoachingModalitySetupAssessment,sales_rep_7,"Bounce back quickly",agree_5,,1412,f56c5cc1-b058-4038-9e8c-a3d57e9da590
+Assessments::PrimaryCoachingModalitySetupAssessment,sales_rep_8,"Agility with sales tactics",agree_5,,1413,5e202c8a-5aa9-438c-a5ec-8744d5e342c7
+Assessments::PrimaryCoachingModalitySetupAssessment,sales_rep_9,"Belief in hard work",agree_5,,1414,3471a4a1-9b4a-46c4-861e-6f53f2f3439f
+Assessments::PrimaryCoachingModalitySetupAssessment,sales_culture_1,"Celebrating wins",,,1415,3ded1712-d958-46da-8676-1c4792084081
+Assessments::PrimaryCoachingModalitySetupAssessment,sales_culture_2,"Collaboration strength",,,1416,70ccbacb-24e5-4206-9a67-7f9b38e5b9ca
+Assessments::PrimaryCoachingModalitySetupAssessment,sales_culture_3,"Cultural strength",,,1417,cfa3fb64-deed-46d1-afbb-4a530f4dbc88
+Assessments::PrimaryCoachingModalitySetupAssessment,sales_culture_5,"Shared learnings",,,1419,6959618a-76c8-4619-a7b2-00fe76259ea8
+Assessments::WholePersonProgramCheckinAssessment,intent_to_stay_1,"I see a future for myself at my current company",agree_5,,56,bddc355e-de68-4996-9710-074946d5ed56
+Assessments::WholePersonProgramCheckinAssessment,intent_to_stay_3,"I plan to stay at my current company for the foreseeable future",agree_5,,56,bddc355e-de68-4996-9710-074946d5ed56
+Assessments::WholePersonProgramCheckinAssessment,intent_to_stay_2,"I would like to be working at my current company a year from now",agree_5,,57,123c3d60-6866-40dd-a4e5-1a60035a1239
+Assessments::WholePersonProgramCheckinAssessment,overall_satisfaction,"Overall, how satisfied are you with your BetterUp experience?",satisfied_10,,262,03069b69-96d9-4728-9357-d0cab2aef97c
+Assessments::WholePersonProgramCheckinAssessment,net_promoter,"In the event a friend or colleague is seeking professional development, how likely are you to recommend BetterUp?",nps_10,,265,fd32773e-c24f-4ee5-a6b5-aae34aeb0779
+Assessments::WholePersonProgramCheckinAssessment,nps_explanation,"Please tell us a little bit about why you would or would not recommend BetterUp to others.",open_text,,266,e805b1a0-0302-49dd-a7f0-257784e87feb
+Assessments::WholePersonProgramCheckinAssessment,layer2_employer_nps,"In the event a friend or colleague is looking for a new job, how likely are you to recommend your current organization?",nps_10,,493,e37b7a48-2972-4090-ab0d-2fcc7da16189
+Assessments::WholePersonProgramCheckinAssessment,how_much_progress,"Since you started working with your coach, how much progress have you made towards the goal(s) you set for yourself as part of this experience?",progress_10,,506,8b3657f1-5267-4e13-b351-87012a7691a0
+Assessments::WholePersonProgramCheckinAssessment,use_of_time,"BetterUp is a valuable use of my time.",agree_5,,509,cf0fdf37-c1c1-49c8-9b58-e78b971def37
+Assessments::WholePersonProgramCheckinAssessment,more_effective,"Working with BetterUp has made me more effective in my job.",agree_5,,510,c0426997-5e1f-4802-8d17-b719b9d81cb8
+Assessments::WholePersonProgramCheckinAssessment,meaningful_progress,"My coach has helped me make meaningful progress towards my goals.",agree_5,,511,0e28bcf1-a737-46f8-9c94-43e57c57df6c
+Assessments::WholePersonProgramCheckinAssessment,working_relationship,"My coach and I have a strong working relationship, characterized by mutual respect and trust.",agree_5,,512,67ba5df2-d89d-4416-bbe0-55ff7a88a175
+Assessments::WholePersonProgramCheckinAssessment,cof_learning_culture,"",agree_5,,648,57864dbf-a938-476b-ab62-4e23d37f783b
+Assessments::WholePersonProgramCheckinAssessment,cof_career_goals,"",agree_5,,649,c3420378-3626-4356-8eb8-b98237a61732
+Assessments::WholePersonProgramCheckinAssessment,cof_morale,"",agree_5,,650,d82b2c70-38ea-4c2f-8428-62c9ebc346c5
+Assessments::WholePersonProgramCheckinAssessment,cof_valued,"",agree_5,,651,9e2a643a-53c0-44ae-9d51-56475dd6c163
+Assessments::WholePersonProgramCheckinAssessment,daf_missionreadiness1,"",agree_5,,1111,0039a171-8593-4141-a921-3e801bd916f4
+Assessments::WholePersonProgramCheckinAssessment,daf_missionreadiness2,"",agree_5,,1112,464dbd58-1c79-4cbc-81b5-26228f16515b
+Assessments::WholePersonProgramCheckinAssessment,daf_feedback1,"",agree_5,,1113,c961322d-5201-459b-8c6b-360ae8de9424
+Assessments::WholePersonProgramCheckinAssessment,daf_feedback2,"",agree_5,,1114,28ff4ed9-6c52-4390-8b7e-7a9695cd4b65
+Assessments::WholePersonProgramCheckinAssessment,daf_feedback3,"",agree_5,,1115,fa1fabb5-a187-4236-88ee-e8358414cf50
+Assessments::WholePersonProgramCheckinAssessment,manager_coaching_6,"I work across my sales team to identify and communicate common themes for how to improve",agree_5,,1175,2ea01016-8c5f-4978-9d3b-efa7e906cbdf
+Assessments::WholePersonProgramCheckinAssessment,daf_careercommit,"",agree_5,,1232,e24d6fb7-bdc7-45b7-a822-515d3f2a3d02
+Assessments::WholePersonProgramCheckinAssessment,manager_coaching_9,"I keep up to date on what each of my sales reps uniquely needs from me to be successful",agree_5,,1289,3f048e33-5ed1-45b2-bda9-74117d112b37
+Assessments::WholePersonProgramCheckinAssessment,manager_coaching_10,"I coach and support all of my team members, not just the highest and lowest performers",agree_5,,1290,b797251d-64d5-4344-affe-0bc9b19b69a6
+Assessments::WholePersonProgramCheckinAssessment,manager_coaching_13,"I check in on the well-being of my sales reps and help them set clear work-life boundaries",agree_5,,1293,79507d01-c291-4429-9831-bb5544baf458
+Assessments::WholePersonProgramCheckinAssessment,manager_coaching_14,"I listen to ideas of my sales reps before providing guidance on deals",agree_5,,1294,31787d81-c143-4695-bb4c-c99038bfc712
+Assessments::WholePersonProgramCheckinAssessment,sales_rep_1,"Learn from wins and losses",agree_5,,1406,76c21e7d-72d2-4c7f-b59b-c9ff2a6e7882
+Assessments::WholePersonProgramCheckinAssessment,sales_rep_2,"Reframe losses",agree_5,,1407,c3853fae-411d-424c-8979-c21545542ddd
+Assessments::WholePersonProgramCheckinAssessment,sales_rep_3,"Incorporate new information",agree_5,,1408,19940219-62f3-4b43-9d93-2cebce8f9aa3
+Assessments::WholePersonProgramCheckinAssessment,sales_rep_4,"Confidence in winning large deals",agree_5,,1409,b748e626-a65b-434e-9315-76316c62e293
+Assessments::WholePersonProgramCheckinAssessment,sales_rep_5,"Expansion ability",agree_5,,1410,d85dce8d-47f3-40f2-8a9c-d3aecfdf55a3
+Assessments::WholePersonProgramCheckinAssessment,sales_rep_6,"Mentally prepare",agree_5,,1411,57f20cfe-69f1-4edc-b271-23c7069ef02b
+Assessments::WholePersonProgramCheckinAssessment,sales_rep_7,"Bounce back quickly",agree_5,,1412,f56c5cc1-b058-4038-9e8c-a3d57e9da590
+Assessments::WholePersonProgramCheckinAssessment,sales_rep_8,"Agility with sales tactics",agree_5,,1413,5e202c8a-5aa9-438c-a5ec-8744d5e342c7
+Assessments::WholePersonProgramCheckinAssessment,sales_rep_9,"Belief in hard work",agree_5,,1414,3471a4a1-9b4a-46c4-861e-6f53f2f3439f
+Assessments::WholePersonProgramCheckinAssessment,sales_culture_1,"Celebrating wins",agree_5,,1415,3ded1712-d958-46da-8676-1c4792084081
+Assessments::WholePersonProgramCheckinAssessment,sales_culture_2,"Collaboration strength",agree_5,,1416,70ccbacb-24e5-4206-9a67-7f9b38e5b9ca
+Assessments::WholePersonProgramCheckinAssessment,sales_culture_3,"Cultural strength",agree_5,,1417,cfa3fb64-deed-46d1-afbb-4a530f4dbc88
+Assessments::WholePersonProgramCheckinAssessment,sales_culture_5,"Shared learnings",agree_5,,1419,6959618a-76c8-4619-a7b2-00fe76259ea8
+Assessments::WholePersonProgramCheckinAssessment,ssl_seek_1,"I seek out a variety of perspectives during discussions.",agree_5,,1685,10c374e3-5c61-4216-ae64-ce77732aff91
+Assessments::WholePersonProgramCheckinAssessment,ssl_seek_2,"When I sense tension or worry on my team, I ask questions to learn more.",agree_5,,1693,c70a4340-41bb-418a-aebc-439bdc4519eb
+Assessments::WholePersonProgramCheckinAssessment,ssl_speak_1,"My team comes to me to discuss potentially problematic behaviors.",agree_5,,1694,7044cd5b-9ac3-4546-9159-d98f1ed3a626
+Assessments::WholePersonProgramCheckinAssessment,ssl_speak_2,"I am comfortable discussing concerns with my manager.",agree_5,,1695,9d061568-de63-40d2-98a4-2ab9f1cac182
+Assessments::WholePersonProgramCheckinAssessment,ssl_listen_1,"When in conversations with my colleagues, I multitask to get other work done.",agree_5,,1696,eeeb849d-95ea-4c12-ab63-138b29a248a0
+Assessments::WholePersonProgramCheckinAssessment,ssl_listen_2,"I focus on understanding another person’s perspective during conversations.",agree_5,,1697,2849b689-780f-4ef2-af4f-6760c1bc499a
+Assessments::WholePersonProgramCheckinAssessment,ssl_impact_1,"I feel that the Seek, Speak & Listen habits are helping my team identify and address issues before they become major problems.",agree_5,,1698,2273f29a-153b-4851-b692-ce285cd02576
+Assessments::WholePersonProgramCheckinAssessment,ssl_impact_2,"I feel that the Seek, Speak & Listen habits are positively impacting the way my team collaborates.",agree_5,,1699,e18b7276-e066-4cb4-9ddb-b7b3f745f0b9
+Assessments::WholePersonProgramCheckinAssessment,ssl_impact_3,"I feel that the Seek, Speak & Listen habits are helping my team achieve better business outcomes (ex. improved performance, safety, quality).",agree_5,,1700,1e6a4afa-41de-44d2-bec9-bd66c4def460
+Assessments::WholePersonProgramCheckinAssessment,salesforce_true_investment_post,"My coaching experience was a true investment in me by Salesforce.",agree_5,,2425,1a6aa9d1-97f5-4997-9ab1-2e6841e3d23d
+Assessments::WholePersonProgramCheckinAssessment,salesforce_career_goals_post,"My participation in BetterUp increased my confidence that my career goals can be met at Salesforce",agree_5,,3086,8dcd1204-de13-4e7a-9b54-c3c4124dd9d2
+Assessments::WholePersonProgramCheckinAssessment,salesforce_make_difference_post,"My participation in BetterUp increased my belief that I can make a difference at Salesforce",agree_5,,3087,17db61eb-e6eb-4132-8860-e55ca88c34b6
+Assessments::WholePersonProgramCheckinAssessment,salesforce_inclusive_leader_post,"I am more inclusive as a leader as a result of my participation in BetterUp coaching",agree_5,,3090,a1039150-7f2b-4f98-9ffe-7d5a188131d0
+Assessments::WorkshopPostSessionSurveyAssessment,workshop_nps,"In the event a friend or colleague is seeking professional development, how likely would you be to recommend workshops from BetterUp?",nps_10,,891,ec8177e6-754c-4e5f-bff3-34e6b8da92ac

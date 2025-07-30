@@ -1,0 +1,17 @@
+version: 2
+
+models:
+  - name: base_app__resource_list_items_historical
+    description: ""
+    columns:
+      - name: created_at
+      - name: id
+        tests:
+          - unique
+          - not_null
+      - name: position
+      - name: resource_id
+      - name: resource_list_id
+      - name: updated_at
+      - name: uuid
+      - name: resource_uuid

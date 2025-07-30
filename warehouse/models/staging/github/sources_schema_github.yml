@@ -1,0 +1,8 @@
+version: 2
+
+sources:
+  - name: github
+    schema: stitch_github
+    database: raw
+    tables:
+      - name: pull_requests

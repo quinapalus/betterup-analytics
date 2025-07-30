@@ -1,0 +1,69 @@
+version: 2
+models:
+  - name: stg_app__hcm_sync_runs
+    description: The DBT model stg_app__hcm_sync_runs contains fields related to Human
+      Capital Management (HCM) synchronization runs in a staging layer. It stores
+      information such as configuration IDs, sync schedule IDs, job types, whether
+      or not provisioning users is enabled, and when the run was created, started,
+      completed, and/or updated. This model is based upon raw data from the "raw.stitch_app.hcm_sync_runs"
+      source table. [GenAI Description]
+    columns:
+      - name: hcm_sync_run_id
+        description: The 'hcm_sync_run_id' column is the unique identifier for an
+          HCM synchronization run. [GenAI Description]
+        tests:
+          - unique
+          - not_null
+
+      - name: configuration_id
+        description: "'configuration_id' is the identifier used to identify a specific\
+          \ configuration of an HCM sync run. [GenAI Description]"
+
+      - name: hcm_sync_schedule_id
+        description: "'hcm_sync_schedule_id' is the identifier of the HCM synchronization\
+          \ schedule related to the HCM synchronization run. [GenAI Description]"
+
+      - name: workday_configuration_id
+        description: The 'workday_configuration_id' column holds the configuration
+          ID of the associated Workday integration. [GenAI Description]
+
+      - name: job_type
+        description: The 'job_type' column defines the type of the HCM synchronization
+          job that was run. [GenAI Description]
+
+      - name: provision_users
+        description: "'provision_users' indicates whether new users will be transferred\
+          \ from Workday to the system of record. [GenAI Description]"
+
+      - name: allow_user_deactivation
+        description: "'allow_user_deactivation' indicates whether members of the configured\
+          \ group in a HCM sync run can be deactivated. [GenAI Description]"
+
+      - name: allow_user_removal
+        description: "'allow_user_removal' stores a boolean value indicating whether\
+          \ users are permitted to be removed from the system during the HCM sync\
+          \ run. [GenAI Description]"
+
+      - name: dry_run
+        description: The 'dry_run' column indicates whether a sync run is a test without
+          impacting any production data. [GenAI Description]
+
+      - name: configuration_type
+        description: The 'configuration_type' column stores the type of the Workday
+          configuration used for a HCM sync run. [GenAI Description]
+
+      - name: completed_at
+        description: The column 'completed_at' contains the timestamp of when the
+          HCM sync process was completed. [GenAI Description]
+
+      - name: started_at
+        description: The 'started_at' column stores the timestamp of when the synchronization
+          process began. [GenAI Description]
+
+      - name: created_at
+        description: The 'created_at' column stores a timestamp indicating when this
+          run of HCM synchronization was created. [GenAI Description]
+
+      - name: updated_at
+        description: "'updated_at' holds the timestamp of when the record was last\
+          \ updated. [GenAI Description]"

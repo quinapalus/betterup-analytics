@@ -1,0 +1,13 @@
+version: 2
+models:
+
+  - name: stg_app__lead_metadata_attributes
+    description: Model tracking all UTM params associated with a BetterUp user_Id
+      over time.
+
+    columns:
+      - name: lead_metadata_attribute_id
+        description: Unique identifer of the attribution event
+        tests:
+          - not_null
+          - unique

@@ -1,0 +1,15 @@
+version: 2
+
+models:
+  - name: int_app__member_configurations
+
+    columns:
+      - name: primary_key
+        description: Unique identifier
+        tests:
+          - not_null
+          - unique
+    description: The int_app__member_configurations model provides a combined view
+      of associated experience configuration and member configuration data, resulting
+      in a single record per track showing the most recently assigned member configuration.
+      [GenAI Description]

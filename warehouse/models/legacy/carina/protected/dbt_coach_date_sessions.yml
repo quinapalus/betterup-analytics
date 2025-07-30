@@ -1,0 +1,49 @@
+version: 2
+models:
+  - name: dbt_coach_date_sessions
+    description: >
+      This table contains coach and date keys, as well as information on the number
+      of completed sessions and length of completed sessions (in hours) for each date key
+      associated with that particular coach.
+
+    columns:
+      - name: date_key
+        description: Foreign key to conformed Date dimension.
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_date')
+              field: date_key
+
+      - name: app_coach_id
+        description: >
+          Foreign app-specific key to the associated coach.
+        tests:
+          - not_null
+          - relationships:
+              to: ref('int_app__users')
+              field: user_id
+
+      - name: billable_session_hours
+        description: >
+          Length of billable sessions (in hours) by the coach on that particular day.
+        tests:
+          - not_null
+
+      - name: billable_session_count
+        description: >
+          Number of billable sessions by the coach on that particular day.
+        tests:
+          - not_null
+
+      - name: completed_session_hours
+        description: >
+          Length of completed sessions (in hours) by the coach on that particular day.
+        tests:
+          - not_null
+
+      - name: completed_session_count
+        description: >
+          Number of completed sessions by the coach on that particular day.
+        tests:
+          - not_null

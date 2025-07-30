@@ -1,0 +1,34 @@
+version: 2
+models:
+  - name: stg_app__one_on_one_relationships
+    description: DBT stg_app__one_on_one_relationships model holds information about
+      ongoing, two-person conversations between two participants. It stores the participants'
+      IDs, count of in-progress topics in each conversation, and timestamps of when
+      the conversation started and when it has been updated. [GenAI Description]
+    columns:
+      - name: one_on_one_relationship_id
+        description: The 'one_on_one_relationship_id' column stores the unique identifiers
+          of one-on-one relationships. [GenAI Description]
+        tests:
+          - unique
+          - not_null
+
+      - name: first_participant_id
+        description: The 'first_participant_id' column stores the ID of the first
+          participant in a one-on-one conversation. [GenAI Description]
+
+      - name: second_participant_id
+        description: The second_participant_id column stores the id of the second
+          participant involved in a one-on-one relationship. [GenAI Description]
+
+      - name: in_progress_one_on_one_topics_count
+        description: This column contains a count of the number of one-on-one topics
+          in progress. [GenAI Description]
+
+      - name: created_at
+        description: The 'created_at' column holds the timestamp of when the relationship
+          was created. [GenAI Description]
+
+      - name: updated_at
+        description: The 'updated_at' column holds the timestamp for when the one-on-one
+          relationship was last edited. [GenAI Description]

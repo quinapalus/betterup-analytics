@@ -1,0 +1,32 @@
+version: 2
+
+models:
+  - name: stg_app__reporting_group_organizations
+    description: The stg_app__reporting_group_organizations model is a database table
+      of related ID and timestamp fields between reporting groups and organizations.
+      It stores a record of when an organization is associated to a particular reporting
+      group. Data is sourced from raw.stitch_app.reporting_group_organizations. [GenAI
+      Description]
+
+    columns:
+      - name: reporting_group_organization_id
+        description: Primary Key
+        tests:
+          - unique
+          - not_null
+
+      - name: created_at
+        description: "'created_at' is a timestamp saved for when the reporting_group_organization\
+          \ record was created. [GenAI Description]"
+
+      - name: updated_at
+        description: The 'updated_at' column contains the timestamp for when a reporting
+          group organization was last modified. [GenAI Description]
+
+      - name: organization_id
+        description: Tracks the organization IDs that have been assigned to a reporting
+          group. [GenAI Description]
+
+      - name: reporting_group_id
+        description: The 'reporting_group_id' column identifies which reporting group
+          an organization belongs to. [GenAI Description]

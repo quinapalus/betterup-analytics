@@ -1,0 +1,26 @@
+version: 2
+
+models:
+  - name: stg_app__versions_update
+    description: Subset of Versions, UPDATE Type Records Only
+    
+    columns:
+      - name: version_id
+        description: Unique identifier of Versions
+        tests:
+          - unique
+          - not_null
+      - name: created_at
+        description: UTC timestamp for when the record was created.
+      - name: event
+      - name: item_id
+      - name: item_type
+      - name: object
+      - name: object_changes
+      - name: user_agent
+      - name: whodunnit
+      - name: whodunnit_job
+      - name: impersonated
+      - name: impersonated_user_id
+      - name: request_id
+      - name: whodunnit_jid

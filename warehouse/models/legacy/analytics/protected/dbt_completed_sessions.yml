@@ -1,0 +1,57 @@
+version: 2
+models:
+  - name: dbt_completed_sessions
+    description: >
+      This protected model contains information on completed sessions using
+      billable events as the source truth. The data in this table is sanitized
+      so that only one completed session is associated with the primary key.
+
+    columns:
+      - name: session_id
+        description: Primary Key.
+        tests:
+          - unique
+          - not_null
+
+      - name: billable_event_id
+        description: Foreign key to the billable event associated with the completed session.
+        tests:
+          - not_null
+          - relationships:
+              to: ref('app_billable_events')
+              field: billable_event_id
+
+      - name: member_id
+        description: Denormalized foreign key to the member associated with the completed session.
+        tests:
+          - not_null
+          - relationships:
+              to: ref('int_app__users')
+              field: user_id
+
+      - name: coach_id
+        description: Denormalized foreign key to the coach associated with the completed session.
+        tests:
+          - not_null
+          - relationships:
+              to: ref('int_app__users')
+              field: user_id
+
+      - name: track_id
+        description: Foreign key to the track associated with the completed session.
+        tests:
+          - not_null
+
+      - name: starts_at
+        description: >
+          Timestamp denoting when the session started.
+        tests:
+          - not_null
+
+      - name: reported_duration_minutes
+        description: >
+          Integer denoting the length of the session as reported by the coach.
+        tests:
+          - not_null
+      - name: member_completed_session_sequence
+        description: 1-based sequence of completed sessions by member

@@ -1,0 +1,45 @@
+version: 2
+
+models:
+  - name: stg_app__on_demand_configurations
+    description: The DBT model stg_app__on_demand_configurations stores data associated
+      with on-demand staffing configurations. This includes the member levels associated
+      with this configuration, the languages that are supported, the staffing risk
+      levels, the staffing tiers, the staffing industries, a cached list of on-demand
+      tags, and the maximum number of clients that can be added to this configuration.
+      [GenAI Description]
+    columns:
+      - name: on_demand_configuration_id
+        description: The column 'on_demand_configuration_id' holds identifiers for
+          each type of on-demand configuration. [GenAI Description]
+        tests:
+          - unique
+          - not_null
+
+      - name: member_levels
+        description: "\"The 'member_levels' column stores information related to different\
+          \ membership tiers of a given service.\" [GenAI Description]"
+
+      - name: languages
+        description: The column 'languages' contains the languages supported by the
+          on-demand configurations. [GenAI Description]
+
+      - name: staffing_risk_levels
+        description: The 'staffing_risk_levels' column stores the risk levels associated
+          with different staffing roles. [GenAI Description]
+
+      - name: staffing_tiers
+        description: The staffing_tiers column stores the staffing tiers for each
+          on-demand configuration. [GenAI Description]
+
+      - name: staffing_industries
+        description: The "staffing_industries" column stores the industries to which
+          staffing is limited for the on-demand configuration. [GenAI Description]
+
+      - name: cached_on_demand_tag_list
+        description: "'cached_on_demand_tag_list' contains a cached list of related\
+          \ tags for the on-demand configuration. [GenAI Description]"
+
+      - name: client_limit
+        description: The 'client_limit' column stores the maximum number of clients
+          that an on-demand configuration allows. [GenAI Description]

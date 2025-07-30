@@ -1,0 +1,21 @@
+version: 2
+
+models:
+  - name: content_consumption_per_period
+    description: >
+      Table to measure completed activities involving learning content on weekly and
+      monthly basis.
+
+    columns:
+      - name: month
+        description: completed_at date truncated by month
+      - name: week
+        description: completed_at date truncated by week
+      - name: resource_id
+        description: learning resource id
+        tests:
+          - not_null
+      - name: language
+        description: content language
+      - name: completed_count
+        description: number of times the resource has been completed in the period

@@ -1,0 +1,88 @@
+version: 2
+models:
+  - name: stg_app__calls
+    description: >
+      Model representing Calls between Users.
+
+    columns:
+      - name: call_id
+        description: Unique identifer of the Call
+        tests:
+          - not_null
+          - unique
+
+      - name: member_id
+        description: Unique identifer of the Member on the Call.
+        tests:
+          - not_null
+
+      - name: coach_id
+        description: Unique identifer of the Coach on the Call.
+        tests:
+          - not_null
+
+      - name: member_connected_at
+        description: >
+          When the Member first connected. Does not reset if the Call
+          is dropped and the member reconnects.
+
+      - name: member_last_disconnect_at
+        description: >
+          When the Member last disconnected.
+
+      - name: member_client_info
+        description: >
+          Information on the client the Member used (i.e., browser, os, app version).
+
+      - name: coach_connected_at
+        description: >
+          When the Coach first connected. Does not reset if the Call is
+          dropped and the Coach reconnects.
+
+      - name: coach_last_disconnect_at
+        description: >
+          When the Coach last disconnected.
+
+      - name: coach_client_info
+        description: >
+          Information on the client the Coach used (i.e., browser, os, app version).
+
+      - name: coach_reported_problem
+        description: True if the Coach reported a problem after the Call completed.
+
+      - name: completed_on_platform
+        description: True if the Call was completed on the BetterUp platform.
+
+      - name: completed_on_phone
+        description: Whether the Call was completed on phone.
+
+      - name: archive_id
+        description: Unique identifier of the archive for the Call.
+
+      - name: issues
+        description: Issues reported by the Coach.
+
+      - name: media_mode
+        description: Media mode configuration for Tokbox. Defaults to `'relayed'`.
+        tests:
+          - accepted_values:
+              values: [relayed, routed]
+
+      - name: tokbox_session_id
+        description: Unique identifier of the session as set by Tokbox.
+
+      - name: platform_provider
+        description: Platform provider used for this call (i.e., tokbox or dailyco).
+          Defaults to `'tokbox'`.
+        tests:
+          - not_null
+
+      - name: created_at
+        description: When the Call was created.
+        tests:
+          - not_null
+
+      - name: updated_at
+        description: When the Call was updated.
+        tests:
+          - not_null

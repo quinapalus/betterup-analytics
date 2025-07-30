@@ -1,0 +1,61 @@
+version: 2
+
+models:
+  - name: int_account_health_rubric_adoption
+    description: "This model does the calculation for the account health adoption rubric.
+                  For documentation on the business logic read
+                  https://betterup.atlassian.net/wiki/spaces/AN/pages/3148087338/Adoption+Health+Score+Calculation"
+    columns:
+      - name: sfdc_account_id
+        description: ""
+        tests:
+          - unique
+          - not_null
+
+      - name: invited_members_past_30_days
+        description: ""
+
+      - name: activated_members_past_30_days_from_invited
+        description: ""
+
+      - name: members_past_30_days
+        description: ""
+
+      - name: members_with_1_session_past_30_days
+        description: ""
+
+      - name: percent_invited_members_activated_past_30_days
+        description: ""
+
+      - name: percent_members_with_1_session_past_30_days
+        description: ""
+
+      - name: average_of_metrics
+        description: ""
+
+      - name: account_health_rubric_adoption_driver_percent_completed_first_session
+        tests:
+          - accepted_values:
+              #test that only these values exist
+              values: ['Good','Okay','Poor']
+          - dbt_expectations.expect_column_distinct_values_to_contain_set:
+              #test that these values actually exist at least once
+              value_set: ['Good','Okay','Poor']
+
+      - name: account_health_rubric_adoption_driver_percent_activated
+        tests:
+          - accepted_values:
+              #test that only these values exist
+              values: ['Good','Okay','Poor']
+          - dbt_expectations.expect_column_distinct_values_to_contain_set:
+              #test that these values actually exist at least once
+              value_set: ['Good','Okay','Poor']
+
+      - name: account_health_rubric_adoption_overall_score
+        tests:
+          - accepted_values:
+              #test that only these values exist
+              values: ['Good','Okay','Poor','Not Enough Data']
+          - dbt_expectations.expect_column_distinct_values_to_contain_set:
+              #test that these values actually exist at least once
+              value_set: ['Good','Okay','Poor']

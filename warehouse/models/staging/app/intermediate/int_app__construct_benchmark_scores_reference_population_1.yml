@@ -1,0 +1,41 @@
+version: 2
+
+models:
+  - name: int_app__construct_benchmark_scores_reference_population_1
+    description: ""
+    columns:
+      - name: primary_key
+        tests:
+          - unique
+          - not_null
+
+      - name: reference_population_id
+        description: ""
+        tests:
+         - not_null
+
+      - name: reference_population_key
+        description: ""
+        tests:
+         - not_null
+
+      - name: benchmark_population_type
+        description: "The benchmark population combination: industry, level, or industry_level"
+        tests:
+         - not_null
+
+      - name: industry
+        description: ""
+
+      - name: level
+        description: ""
+
+      - name: key
+        description: ""
+        tests:
+         - not_null
+
+      - name: mean
+        description: ""
+        tests:
+         - not_null

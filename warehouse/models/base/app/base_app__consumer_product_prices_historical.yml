@@ -1,0 +1,21 @@
+version: 2
+
+models:
+  - name: base_app__consumer_product_prices_historical
+    description: ""
+    columns:
+      - name: consumer_product_id
+      - name: created_at
+      - name: currency
+      - name: id
+        tests:
+          - unique
+          - not_null
+      - name: nickname
+      - name: recurring
+      - name: stripe_price_id
+      - name: unit_amount
+      - name: updated_at
+      - name: discount_percentage
+      - name: track_id
+      - name: purchase_type

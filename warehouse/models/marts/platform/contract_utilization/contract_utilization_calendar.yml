@@ -1,0 +1,50 @@
+version: 2
+
+models:
+  - name: contract_utilization_calendar
+    description: ""
+    columns:
+      - name: contract_utilization_calendar_id
+        description: ""
+        tests:
+          - unique
+          - not_null
+
+      - name: utilization_date
+        description: ""
+
+      - name: availability_date
+        description: ""
+
+      - name: calendar_date
+        description: ""
+
+      - name: contract_line_item_id
+        description: ""
+
+      - name: organization_id
+        description: ""
+
+      - name: seat_number
+        description: ""
+
+      - name: member_id
+        description: ""
+
+      - name: product_subscription_assignment_id
+        description: ""
+
+      - name: non_transfer_period
+        description: ""
+
+      - name: product_subscription_id
+        description: ""
+
+      - name: product_id
+        description: ""
+
+      - name: is_seat_over_assigned
+        description: ""
+
+      - name: is_seat_assigned
+        description: ""

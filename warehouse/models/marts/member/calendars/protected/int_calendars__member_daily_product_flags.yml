@@ -1,0 +1,44 @@
+version: 2
+
+models:
+  - name: int_calendars__member_daily_product_flags
+    description: ""
+    columns:
+      - name: member_daily_product_flags_id
+        description: Surrogate primary key
+        tests:
+          - unique
+          - not_null
+
+      - name: member_id
+        description: ""
+
+      - name: date
+        description: ""
+
+      - name: date_key
+        description: ""
+
+      - name: on_demand
+        description: ""
+
+      - name: primary_coaching
+        description: ""
+
+      - name: care
+        description: ""
+
+      - name: coaching_circles
+        description: ""
+
+      - name: workshops
+        description: ""
+
+      - name: extended_network
+        description: ""
+
+      - name: foundations
+        description: ""
+
+      - name: member_daily_product_group
+        description: ""

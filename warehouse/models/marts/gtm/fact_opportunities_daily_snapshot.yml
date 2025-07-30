@@ -1,0 +1,25 @@
+version: 2
+
+models:
+
+  - name: fact_opportunities_daily_snapshot
+    meta:
+      owner: "xavier.mafe@betterup.co"
+    columns:
+      - name: daily_snapshot_unique_key
+        tests:
+          - dbt_expectations.expect_column_to_exist
+          - not_null
+          - unique
+
+      - name: new_business_and_expansion_one_year_acv_usd
+        tests:
+          - dbt_expectations.expect_column_mean_to_be_between:
+              min_value: 75000
+              max_value: 175000
+              row_condition: "is_currently_valid"
+
+      - name: sfdc_opportunity_id
+        tests:
+          - dbt_expectations.expect_column_to_exist
+          - not_null

@@ -1,0 +1,36 @@
+version: 2
+
+models:
+  - name: stg_app__product_subscription_assignment_extension_logs
+    description: 'The DBT model stg_app__product_subscription_assignment_extension_logs
+      stores information about extensions of product subscription assignments in an
+      efficient and organized way. It is comprised of a series of fields that include:
+      product_subscription_assignment_extension_log_id, created_at, days_extended,
+      product_subscription_assignment_id, updated_at, user_id. [GenAI Description]'
+    columns:
+      - name: product_subscription_assignment_extension_log_id
+        description: Unique identifier for each record of product subscription assignment
+          extension activity. [GenAI Description]
+        tests:
+          - unique
+          - not_null
+
+      - name: created_at
+        description: The 'created_at' column stores a timestamp for the time when
+          the record was first added. [GenAI Description]
+
+      - name: days_extended
+        description: The 'days_extended' column captures the number of days a product
+          subscription assignment was extended. [GenAI Description]
+
+      - name: product_subscription_assignment_id
+        description: The unique identifier for each product subscription assignment
+          in the log table. [GenAI Description]
+
+      - name: updated_at
+        description: The column 'updated_at' stores the timestamp value when the record
+          was updated. [GenAI Description]
+
+      - name: user_id
+        description: "'user_id' is the ID of a user who extended a product subscription\
+          \ assignment. [GenAI Description]"

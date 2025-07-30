@@ -1,0 +1,13 @@
+version: 2
+
+models:
+  - name: int_amplitude__flattened_experiment_assignment_events
+    description: >
+      A laterally flattened table on amplitude experiment assignment events
+    columns:
+      - name: id
+        description: >
+          A unique identifier per row (event sent). 
+        tests:
+          - unique
+          - not_null

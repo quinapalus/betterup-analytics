@@ -1,0 +1,65 @@
+version: 2
+models:
+  - name: stg_gsheets_betterup_metric_targets__metric_targets
+    description: >
+      BetterUp metric targets stored in a google sheet, updated by various teams for various reporting cycles. 
+      Managed at https://docs.google.com/spreadsheets/d/1cyqXixB94Jn7__bU4mM09egT_Y9Wh4tOxb1KN5HPlqM/edit#gid=0
+    columns:
+      - name: _unique
+        description: "Primary key of this table. Set at the target month and metric name"
+        tests:
+          - unique
+          - not_null
+
+      - name: metric_name_id
+        description: "Surrogate key on the metric name string"
+
+      - name: target_month
+        description: "Month the business user sets the metric target"
+
+      - name: metric_name
+        description: "The name of the metric, selected from the predefined dropdown menu"
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['gross_margin', 
+                      'blended_cost_per_subscription', 
+                      'session_utilization', 
+                      'operational_revenue', 
+                      'gross_margin_ltv_to_cac_ratio', 
+                      'average_revenue_per_user', 
+                      'average_revenue_per_subscriber', 
+                      'end_of_month_active_subscriptions',
+                      'total_12_month_forecasted_ltv_contribution',
+                      'created_subscriptions',
+                      'ended_subscriptions',
+                      'digital_marketing_spend',
+                      'coach_cost',
+                      'retained_subscriptions_at_31_days_from_created',
+                      'retained_subscriptions_at_61_days_from_created',
+                      'retained_subscriptions_at_91_days_from_created',
+                      'retention_rate_at_31_days_from_created',
+                      'retention_rate_at_61_days_from_created',
+                      'retention_rate_at_91_days_from_created']
+      - name: team
+        description: "The name of the team requesting to track a target metric"
+        tests:
+          - not_null
+          - accepted_values: 
+              values: ['direct_to_consumer', 'FED', 'EMEA']
+
+      - name: target_metric_value
+        description: "The value, without units, set by the business team for a given target metric"
+
+      - name: units
+        description: "The units of the metric. Can be null if it's a ratio"
+
+      - name: period_length
+        description: "Determines whether or not the metric target is set at a week, month, quarter, annual grain."
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['week', 
+                       'month',
+                       'quarter',
+                       'annual']

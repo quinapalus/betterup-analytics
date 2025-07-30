@@ -1,0 +1,12 @@
+version: 2
+
+models:
+  - name: util_day
+    description: A utility table to generate a date spline for each day between 2015
+      and the current date.
+    columns:
+      - name: _unique
+        description: Primary key
+        tests:
+          - unique
+          - not_null

@@ -1,0 +1,284 @@
+version: 2
+models:
+  - name: int_account_health_overall_score_daily_snapshot 
+    description: "This model is spining out the account health overall score snapshot into a daily snapshot.
+                  One row per account per day."
+    columns:
+      - name: daily_snapshot_unique_key
+        description: ""
+        tests:
+          - unique
+          - not_null
+
+      - name: as_of_date
+        description: ""
+
+      - name: is_currently_valid
+        description: ""
+
+      - name: sfdc_account_id
+        description: ""
+
+      - name: is_eligible_for_account_health_scoring
+        description: ""
+
+      - name: account_health_rubric_external_factors_driver_industry
+        description: ""
+
+      - name: account_health_rubric_external_factors_driver_annual_revenue
+        description: ""
+
+      - name: account_health_rubric_external_factors_overall_score
+        description: ""
+
+      - name: account_health_rubric_external_factors_numerical_overall_score
+        description: ""
+
+      - name: account_health_rubric_stakeholder_alignment_driver_maturity_curve
+        description: ""
+
+      - name: account_health_rubric_stakeholder_alignment_driver_highest_level_champion
+        description: ""
+
+      - name: account_health_rubric_stakeholder_alignment_driver_sphere_of_influence
+        description: ""
+
+      - name: account_health_rubric_stakeholder_alignment_driver_qbr_in_last_6_months
+        description: ""
+
+      - name: account_health_rubric_stakeholder_alignment_driver_executive_sponsor_engagement_in_last_6_months
+        description: ""
+
+      - name: account_health_rubric_stakeholder_alignment_driver_success_plan_established
+        description: ""
+
+      - name: account_health_rubric_stakeholder_alignment_driver_sucess_plan_updated_in_last_12_months
+        description: ""
+
+      - name: account_health_rubric_stakeholder_alignment_overall_score
+        description: ""
+
+      - name: account_health_rubric_stakeholder_alignment_numerical_overall_score
+        description: ""
+
+      - name: invited_members_past_30_days_adoption_rubric
+        description: ""
+
+      - name: activated_members_past_30_days_from_invited_adoption_rubric
+        description: ""
+
+      - name: members_past_30_days_adoption_rubric
+        description: ""
+
+      - name: members_with_1_session_past_30_days_adoption_rubric
+        description: ""
+
+      - name: percent_invited_members_activated_past_30_days_adoption_rubric
+        description: ""
+
+      - name: percent_members_with_1_session_past_30_days_adoption_rubric
+        description: ""
+
+      - name: average_of_metrics_adoption_rubric
+        description: ""
+
+      - name: account_health_rubric_adoption_driver_percent_completed_first_session
+        description: ""
+
+      - name: account_health_rubric_adoption_driver_percent_activated
+        description: ""
+
+      - name: account_health_rubric_adoption_overall_score
+        description: ""
+
+      - name: account_health_rubric_adoption_numerical_overall_score
+        description: ""
+
+      - name: members_past_30_days_engagement_rubric
+        description: ""
+
+      - name: members_past_120_days_engagement_rubric
+        description: ""
+
+      - name: members_with_1_session_past_30_days_engagement_rubric
+        description: ""
+
+      - name: members_with_1_session_past_120_days_engagement_rubric
+        description: ""
+
+      - name: total_billable_sessions_engagement_rubric
+        description: ""
+
+      - name: members_with_1_reflection_point_past_120_days_engagement_rubric
+        description: ""
+
+      - name: average_of_total_months_in_tenure_since_activation_engagement_rubric
+        description: ""
+
+      - name: average_sessions_per_member_per_month_engagement_rubric
+        description: ""
+
+      - name: percent_of_members_with_1_reflection_point_engagement_rubric
+        description: ""
+
+      - name: account_health_rubric_adoption_driver_average_sessions_per_member_per_month
+        description: ""
+
+      - name: account_health_rubric_adoption_driver_reflection_points
+        description: ""
+
+      - name: account_health_rubric_engagement_overall_score
+        description: ""
+
+      - name: account_health_rubric_engagement_numerical_overall_score
+        description: ""
+
+      - name: count_activated_members_nps_rubric
+        description: ""
+
+      - name: sum_nps_promoters_nps_rubric
+        description: ""
+
+      - name: sum_nps_detractors_nps_rubric
+        description: ""
+
+      - name: count_item_responses_nps_rubric
+        description: ""
+
+      - name: member_net_promoter_score_nps_rubric
+        description: ""
+
+      - name: account_health_rubric_nps_driver_member_nps
+        description: ""
+
+      - name: account_health_rubric_nps_driver_partner_rps
+        description: ""
+
+      - name: account_health_rubric_nps_overall_score
+        description: ""
+
+      - name: account_health_rubric_sentiment_numerical_overall_score
+        description: ""
+
+      - name: mindset_average_percent_growth_from_reference_behavioral_rubric
+        description: ""
+
+      - name: thriving_average_percent_growth_from_reference_behavioral_rubric
+        description: ""
+
+      - name: inspiring_average_percent_growth_from_reference_behavioral_rubric
+        description: ""
+
+      - name: outcome_average_percent_growth_from_reference_behavioral_rubric
+        description: ""
+
+      - name: overall_average_percent_growth_from_reference_behavioral_rubric
+        description: ""
+
+      - name: account_health_rubric_behavorial_overall_score
+        description: ""
+
+      - name: account_health_rubric_behavioral_numerical_overall_score
+        description: ""
+
+      - name: stakeholder_alignment_is_missing
+        description: ""
+
+      - name: external_factors_is_missing
+        description: ""
+
+      - name: adoption_is_missing
+        description: ""
+
+      - name: engagement_is_missing
+        description: ""
+
+      - name: sentiment_is_missing
+        description: ""
+
+      - name: behavioral_is_missing
+        description: ""
+
+      - name: count_of_missing_rubrics
+        description: ""
+
+      - name: is_not_missing_any_rubrics
+        description: ""
+
+      - name: is_missing_sentiment_and_behavioral
+        description: ""
+
+      - name: external_factors_weight
+        description: ""
+
+      - name: stakeholder_alignment_weight
+        description: ""
+
+      - name: adoption_weight
+        description: ""
+
+      - name: engagement_weight
+        description: ""
+
+      - name: sentiment_weight
+        description: ""
+
+      - name: behavioral_weight
+        description: ""
+
+      - name: external_factors_numerical_score
+        description: ""
+
+      - name: stakeholder_alignment_numerical_score
+        description: ""
+
+      - name: adoption_numerical_score
+        description: ""
+
+      - name: engagement_numerical_score
+        description: ""
+
+      - name: sentiment_numerical_score
+        description: ""
+
+      - name: behavioral_numerical_score
+        description: ""
+
+      - name: overall_weighted_average_score
+        description: ""
+
+      - name: overall_account_health_categorical_score
+        description: ""
+
+      - name: overall_account_health_categorical_score_csm_risk_flag
+        description: ""
+
+      - name: overall_account_health_scoring_method
+        description: ""
+
+      - name: dbt_scd_id
+        description: ""
+
+      - name: dbt_updated_at
+        description: ""
+
+      - name: dbt_valid_from
+        description: ""
+
+      - name: dbt_valid_to
+        description: ""
+
+      - name: valid_from
+        description: ""
+
+      - name: valid_to
+        description: ""
+
+      - name: is_current_version
+        description: ""
+
+      - name: version
+        description: ""
+
+      - name: is_last_snapshot_of_day
+        description: ""

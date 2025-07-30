@@ -1,0 +1,14 @@
+version: 2
+
+models:
+  - name: int_user_attribution_attributes
+    description: >
+      This table tracks attribution attributes for users at BetterUp. It provides
+      access to obtain  first and last touch utm parameters associated with a user.
+      
+    columns:
+      - name: user_id
+        description: Unique id for this table's granularity.
+        tests:
+          - unique
+          - not_null

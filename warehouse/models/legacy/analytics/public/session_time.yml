@@ -1,0 +1,41 @@
+version: 2
+
+models:
+  - name: session_time
+    description: ""
+    columns:
+      - name: session_time_id
+        description: Primary key 
+        tests:
+          - unique
+          - not_null
+
+      - name: billable_event_id
+        description: ""
+
+      - name: session_id
+        description: ""
+
+      - name: member_id
+        description: ""
+
+      - name: requested_length
+        description: ""
+
+      - name: usage_minutes
+        description: ""
+
+      - name: type
+        description: ""
+
+      - name: date_key
+        description: ""
+
+      - name: eventable_id_join
+        description: ""
+
+      - name: eventable_type_join
+        description: ""
+
+      - name: verb_join
+        description: ""

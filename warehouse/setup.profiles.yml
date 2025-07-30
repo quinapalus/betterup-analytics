@@ -1,0 +1,107 @@
+###############################################################################################
+# '''
+# For more information on how to configure this file, please see:
+# https://github.com/fishtown-analytics/dbt/blob/master/sample.profiles.yml
+#
+# >>> get_custom_schema.sql has special logic that changes schema names based on targets (prod, dev, stg, etc.)
+# >>> please double check the logic of that file (and adjust if necessary) when making changes or adding new targets here
+# '''
+###############################################################################################
+
+betterup-analytics:
+
+  # default target
+  target: dev
+  
+  outputs:
+  
+  ##################### Dev Targets #################################
+    dev:
+        type: snowflake
+        account: oj02423.us-east-1
+        user: "{{ env_var('SNOWFLAKE_USER') }}"
+        # enables SSO auth
+        authenticator: externalbrowser
+        database: dev_analytics
+        role: transformer
+        warehouse: transforming
+        schema: "{{ 'dbt_' + env_var('SNOWFLAKE_SCHEMA') }}"
+        threads: 8
+        client_session_keep_alive: False
+    # dev profile authenticating via snowflake password
+    dev_with_pass:
+        type: snowflake
+        account: "{{ env_var('SNOWFLAKE_ACCOUNT','oj02423.us-east-1') }}"
+        user: "{{ env_var('SNOWFLAKE_USER') }}"
+        password: "{{ env_var('SNOWFLAKE_PASSWORD') }}"
+        database: dev_analytics
+        role: transformer
+        warehouse: transforming
+        schema: "{{ 'dbt_' + env_var('SNOWFLAKE_SCHEMA') }}"
+        threads: 8
+        client_session_keep_alive: False
+    eu-dev:
+        type: snowflake
+        account: pb82673-betterupeea
+        user: "{{ env_var('SNOWFLAKE_USER_EU') }}"
+        password: "{{ env_var('SNOWFLAKE_PASSWORD_EU') }}"
+        database: dev_analytics
+        warehouse: transforming
+        threads: 8
+    ##################### End Dev Targets #############################
+  
+    ##########################  PROD TARGETS  ###################################################
+    
+    ##########################  WARNING!  #######################################################
+    # get_custom_schema.sql has special logic that changes schema names based on the prod / stg #
+    # target names! Please check logic there if adding new targets                              #
+    ##########################  WARNING!  #######################################################
+    
+    ##########################  NOTE  #######################################################
+    # One 'Prod' Profile is sufficient for multiple destinations when executing on Github Actions
+    # As seen below, where there is a required difference between one profile target and another, 
+    # environment variables are used when actually executing the workflow (just as you would set
+    # these variables locally). The default 'prod' profile is structured such that if no environment
+    # variables are provided, it will fall back to using the values needed to run against the main US
+    # Snowflake instance. Please ensure the addition of a new target would not be achievable by utilizing
+    # the dynamic values made possible with the defined environment variables.
+    
+    prod:
+        type: snowflake
+        account: "{{ env_var('SNOWFLAKE_ACCOUNT','oj02423.us-east-1') }}"
+        user: "{{ env_var('SNOWFLAKE_USER') }}"
+
+        # Login Option A: Authenticate using snowflake password
+        # For machine users only!
+        # Set the following env var:
+        # export SNOWFLAKE_PASSWORD='secret-password-i-promise-not-to-check-in'
+        password: "{{ env_var('SNOWFLAKE_PASSWORD') }}"
+
+        # Login Option B: Use SSO auth via Okta
+        # For human users.  Uncomment the line below and comment out Option A
+        # authenticator: externalbrowser
+        database: "{{ env_var('SNOWFLAKE_DATABASE','analytics') }}"
+        role: "{{ env_var('SNOWFLAKE_ROLE','transformer') }}"
+        warehouse: "{{ env_var('SNOWFLAKE_WAREHOUSE','transforming') }}"
+        schema: "{{ env_var('SNOWFLAKE_SCHEMA','analytics') }}"
+        threads: 12
+        client_session_keep_alive: False
+
+    ##########################  END PROD TARGETS  ###############################################
+    ##########################  WARNING!  #######################################################
+    # get_custom_schema.sql has special logic that changes schema names based on the prod / stg #
+    # target names! Please check logic there if adding new targets                              #
+    ##########################  WARNING!  #######################################################
+    stg:
+        type: snowflake
+        account: oj02423.us-east-1
+        user: "{{ env_var('SNOWFLAKE_USER') }}"
+        # enables SSO auth
+        authenticator: externalbrowser
+        database: stg_analytics
+        role: transformer
+        warehouse: transforming
+        schema: analytics
+        threads: 8
+        client_session_keep_alive: False
+    ##########################  END STAGING TARGET  ##############################################

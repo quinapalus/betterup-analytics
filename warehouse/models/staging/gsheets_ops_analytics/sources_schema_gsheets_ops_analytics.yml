@@ -1,0 +1,12 @@
+version: 2
+
+sources:
+  - name: gsheets_ops_analytics
+    database: raw
+    schema: "{{ 'airbyte_gsheets_ops_analytics' if env_var('DEPLOYMENT_ENVIRONMENT', '') == 'US Gov' else 'stitch_gsheets_ops_analytics' }}"
+    loader: "{{ 'airbyte' if env_var('DEPLOYMENT_ENVIRONMENT', '') == 'US Gov' else 'stitch' }}"
+
+    tables:
+      - name: cso_comp_escalations
+      - name: is_partner_sat_final
+      - name: cso_time_card

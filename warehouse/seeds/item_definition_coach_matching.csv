@@ -1,0 +1,41 @@
+item_key,subsurvey,item_prompt,scale
+motivation,area_of_focus,What do you want to gain from coaching?,text_response
+wants_to_become_more_open,area_of_focus,Become more open,1-Not Interested;2-Slightly Interested;3-Somewhat Interested;4-Interested;5-Very Interested
+wants_to_communicate_with_poise,area_of_focus,Communicate with poise,1-Not Interested;2-Slightly Interested;3-Somewhat Interested;4-Interested;5-Very Interested
+wants_to_handle_stress_better,area_of_focus,Handle stress better,1-Not Interested;2-Slightly Interested;3-Somewhat Interested;4-Interested;5-Very Interested
+wants_to_improve_focus,area_of_focus,Improve focus,1-Not Interested;2-Slightly Interested;3-Somewhat Interested;4-Interested;5-Very Interested
+wants_to_increase_impact,area_of_focus,Increase my impact,1-Not Interested;2-Slightly Interested;3-Somewhat Interested;4-Interested;5-Very Interested
+wants_to_inspire_a_team,area_of_focus,Inspire my team,1-Not Interested;2-Slightly Interested;3-Somewhat Interested;4-Interested;5-Very Interested
+accountability_vs_autonomy,coach_match,When engaging with a coach I prefer a style that offers:,Hands On;Mostly Hands On;Neutral;Mostly Hands Off;Hands Off
+focused_vs_explorative,coach_match,"When working towards goals, I prefer a style that is:",Structured;Mostly Structured;Neutral;Mostly Explorative;Explorative
+describe_changes,job_status,"If you are experiencing more change than usual, please use a few words to describe the changes you are experiencing. (Optional)",text_response
+how_many_months_have_you_been_in_your_current_position,job_status,How many months have you been in your current position at work?,0-3 months;4-6 months;7-9 months;10-12 months;More than a year
+how_many_months_have_you_worked_for_your_current_organization,job_status,How many months have you worked for your current organization?,0-3 months;4-6 months;7-9 months;10-12 months;More than a year
+how_many_months_have_you_worked_with_your_current_manager,job_status,How many months have you worked with your current manager?,0-3 months;4-6 months;7-9 months;10-12 months;More than a year
+how_much_uncertainty,job_status,"Compared to your usual experience, how much uncertainty and/or ambiguity are you currently experiencing at work?",1-Much less than usual;2-Less than usual;3-Same as usual;4-More than usual;5-Much more than usual
+impacted_by_changes_home,job_status,"Compared to your usual experience, to what extent are you currently being impacted by significant changes in your home life?",1-Much less than usual;2-Less than usual;3-Same as usual;4-More than usual;5-Much more than usual
+impacted_by_changes_work,job_status,"Compared to your usual experience, to what extent are you currently being impacted by significant changes at work?",1-Much less than usual;2-Less than usual;3-Same as usual;4-More than usual;5-Much more than usual
+job_function,job_status,Which of the following best describes your primary job function?,"Accounting/Finance;Administrative;Engineering/IT;HR;Legal;Marketing, Media & Communications;Product & Design;Program Management;Research;Sales/Business Development;Other"
+previous_coaching,job_status,Have you received professional coaching prior to BetterUp coaching?,1-Yes;0-No
+can_achieve_meaningful_change,motivation_matrix,I believe I can achieve meaningful change or growth by working with a coach.,1-Strongly Disagree;2-Disagree;3-Neither Disagree nor Agree;4-Agree;5-Strongly Agree
+clear_understanding_of_what_to_work_on,motivation_matrix,I have a clear understanding of what I would like to work on with my coach.,1-Strongly Disagree;2-Disagree;3-Neither Disagree nor Agree;4-Agree;5-Strongly Agree
+good_time_for_working_with_coach,motivation_matrix,Right now is a good time for me to begin working with a coach.,1-Strongly Disagree;2-Disagree;3-Neither Disagree nor Agree;4-Agree;5-Strongly Agree
+open_to_investing_in_personal_development,motivation_matrix,I am open to investing in my personal development right now,1-Strongly Disagree;2-Disagree;3-Neither Disagree nor Agree;4-Agree;5-Strongly Agree
+road_account_1,road,I develop skills better with the help of another person rather than on my own.,1-Strongly Disagree;2-Disagree;3-Neither Disagree nor Agree;4-Agree;5-Strongly Agree
+road_account_2,road,"I prefer to learn with the help of an instructor, mentor, or coach, rather than on my own.",1-Strongly Disagree;2-Disagree;3-Neither Disagree nor Agree;4-Agree;5-Strongly Agree
+road_account_3,road,I find it easier to learn when I have another person to hold me accountable.,1-Strongly Disagree;2-Disagree;3-Neither Disagree nor Agree;4-Agree;5-Strongly Agree
+road_account_4,road,I would benefit from working with another person to help accelerate my professional development .,1-Strongly Disagree;2-Disagree;3-Neither Disagree nor Agree;4-Agree;5-Strongly Agree
+road_account_5,road,I would like to partner with someone else to help me develop professionally.,1-Strongly Disagree;2-Disagree;3-Neither Disagree nor Agree;4-Agree;5-Strongly Agree
+road_devcon_1,road,My organization supports me in spending work time on professional development activities.,1-Strongly Disagree;2-Disagree;3-Neither Disagree nor Agree;4-Agree;5-Strongly Agree
+road_devcon_2,road,My organization values my professional development.,1-Strongly Disagree;2-Disagree;3-Neither Disagree nor Agree;4-Agree;5-Strongly Agree
+road_devcon_3,road,I have opportunities at work to practice new skills I want to develop.,1-Strongly Disagree;2-Disagree;3-Neither Disagree nor Agree;4-Agree;5-Strongly Agree
+road_open_1,road,"I would like to better understand how my coworkers perceive me, even if it is negative.",1-Strongly Disagree;2-Disagree;3-Neither Disagree nor Agree;4-Agree;5-Strongly Agree
+road_open_2,road,I look for opportunities to receive constructive feedback from coworkers.,1-Strongly Disagree;2-Disagree;3-Neither Disagree nor Agree;4-Agree;5-Strongly Agree
+road_open_3,road,I find constructive feedback from coworkers helpful for my professional development.,1-Strongly Disagree;2-Disagree;3-Neither Disagree nor Agree;4-Agree;5-Strongly Agree
+road_open_4,road,I am interested in finding out how others perceive my performance at work.,1-Strongly Disagree;2-Disagree;3-Neither Disagree nor Agree;4-Agree;5-Strongly Agree
+road_open_5,road,I believe that receiving feedback from coworkers is key to my learning at work.,1-Strongly Disagree;2-Disagree;3-Neither Disagree nor Agree;4-Agree;5-Strongly Agree
+road_recog_1,road,There are skills I need to develop in order to achieve my long-term career goals.,1-Strongly Disagree;2-Disagree;3-Neither Disagree nor Agree;4-Agree;5-Strongly Agree
+road_recog_2,road,I have untapped potential that would be unlocked with additional learning and development.,1-Strongly Disagree;2-Disagree;3-Neither Disagree nor Agree;4-Agree;5-Strongly Agree
+road_recog_3,road,I would greatly benefit from additional professional development at work.,1-Strongly Disagree;2-Disagree;3-Neither Disagree nor Agree;4-Agree;5-Strongly Agree
+road_recog_4,road,There are areas at work in which I could improve if I had additional support.,1-Strongly Disagree;2-Disagree;3-Neither Disagree nor Agree;4-Agree;5-Strongly Agree
+road_recog_5,road,I would like to dedicate more time toward my professional development.,1-Strongly Disagree;2-Disagree;3-Neither Disagree nor Agree;4-Agree;5-Strongly Agree

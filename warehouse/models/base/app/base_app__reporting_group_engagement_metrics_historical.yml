@@ -1,0 +1,32 @@
+version: 2
+
+models:
+  - name: base_app__reporting_group_engagement_metrics_historical
+    description: ""
+    columns:
+      - name: care
+      - name: coaching_circles
+      - name: created_at
+      - name: ended_at
+      - name: extended_network
+      - name: foundations
+      - name: id
+        tests:
+          - unique
+          - not_null
+      - name: last_engaged_at
+      - name: member_id
+      - name: next_session_at
+      - name: on_demand
+      - name: primary_coaching
+      - name: product_access
+      - name: reporting_group_id
+      - name: status
+      - name: team_insights_dashboard
+      - name: total_sessions
+      - name: track_name
+      - name: updated_at
+      - name: workshops
+      - name: hidden
+      - name: last_session_at
+      - name: started_at

@@ -1,0 +1,19 @@
+version: 2
+
+models:
+  - name: fact_funnel_app_experiment_events
+    description: >
+      This model contains data to support events completed by various users on the
+      app for core funnel steps. 
+    columns:
+      - name: id
+        description: Unique id for this table's granularity.
+        tests:
+          - unique
+          - not_null
+
+      - name: uuid
+        description: Unique identifier for the event object. There should be many
+          duplicates in this table.
+        tests:
+          - not_null

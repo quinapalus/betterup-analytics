@@ -1,0 +1,57 @@
+version: 2
+models:
+  - name: stg_segment_ios__page_views
+    description: >
+      Page views from Segment that were generated from the `betterup-app` ios.
+
+    columns:
+      - name: event_id
+        description: Unique identifier of the event.
+        tests:
+          - unique
+          - not_null
+
+      - name: user_id
+        description: >
+          Unique identfier of the User. If `null` then the user has not been `identified`
+          when the event occurred.
+
+      - name: received_at
+        description: >
+          Specifies when the datapoint occurred, corrected for client-device clock skew.
+          See the Segment [documentation](https://segment.com/docs/spec/common/#timestamps) for more information.
+        tests:
+          - not_null
+
+      - name: event_text
+        description: Human-readable name of the event.
+
+      - name: received_at
+        description: The time the page viewed event was received.
+
+      - name: page_name
+        description: The name of the page visited during this page viewed event.
+
+      - name: page_url
+        description: >
+          Url of the page that was vistied.
+          Included for field consistency, NULL on iOS
+
+      - name: platform
+        description: The platform where the page viewed event originated.
+
+      - name: client_features_enabled
+        description: The client features enabled when this page viewed event was triggered.
+
+      - name: server_features_enabled
+        description: The server features enabled when this page viewed event was triggered.
+
+      - name: user_agent
+        description: >
+          User agent string of the client viewing the page.
+          Included for field consistency, NULL on iOS
+
+      - name: transition_time
+        description: >
+          The time it took for the page to be rendered for view.
+          Included for field consistency, NULL on iOS

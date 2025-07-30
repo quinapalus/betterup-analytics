@@ -1,0 +1,41 @@
+version: 2
+
+models:
+  - name: stg_wkfw__constructs
+    description: The DBT model stg_wkfw__constructs is a staging model derived from
+      the raw data from the raw.stitch_app_viva_staging.constructs table. The model
+      contains the fields construct_id, mean, standard_deviation, description, title,
+      created_at, and updated_at. It is created with structured and localized description
+      and title fields from the underlying raw table for ease of readability. [GenAI
+      Description]
+    columns:
+      - name: construct_id
+        description: The 'construct_id' column holds a unique identifier for each
+          construct in the table. [GenAI Description]
+        tests:
+          - not_null
+          - unique
+
+      - name: mean
+        description: The 'mean' column in the model contains the average of all the
+          values for the construct. [GenAI Description]
+
+      - name: standard_deviation
+        description: The 'standard_deviation' column in this model stores the standard
+          deviation of a given data set. [GenAI Description]
+
+      - name: description
+        description: This column holds the English description of a construct as parsed
+          from a JSON string. [GenAI Description]
+
+      - name: title
+        description: The 'title' column stores the title for the construct in English.
+          [GenAI Description]
+
+      - name: created_at
+        description: The 'created_at' column contains the timestamp of when a construct
+          was created. [GenAI Description]
+
+      - name: updated_at
+        description: "'updated_at' is a timestamp indicating when the construct record\
+          \ was last updated. [GenAI Description]"

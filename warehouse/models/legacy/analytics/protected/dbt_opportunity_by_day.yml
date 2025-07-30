@@ -1,0 +1,44 @@
+version: 2
+models:
+  - name: dbt_opportunity_by_day
+    description: >
+      This model expands each Opportunity such that there is a row for
+      each day the Opportunity was active. Only contains closed won opportunities.
+    tests:
+      - unique:
+          column_name: concat(sfdc_opportunity_id, date_day)
+
+    columns:
+      - name: sfdc_opportunity_id
+        description: Foreign key for associated opportunity.
+        tests:
+          - not_null
+          - relationships:
+              to: ref('int_sfdc__opportunities')
+              field: sfdc_opportunity_id
+
+      - name: type
+        description: What type of opportunity this is
+        tests:
+          - accepted_values:
+              values: [Contraction, Debook, Expansion, New Business, Pilot, Pilot
+                    Expansion, Renewal, Renewal Multi-Yr]
+
+      - name: seats_purchased
+        description: Total number of seats that were purchased
+        tests:
+          - not_null
+
+      - name: hours_purchased
+        description: Total number of hours purchased
+        tests:
+          - not_null
+
+      - name: date_day
+        description: >
+          SQL date for when each day the Opportunity was active. The start date is
+          from the
+          specified `start_date_per_agreement` field in Salesforce. `end_date_per_agreement`
+          is used for the end date.
+        tests:
+          - not_null

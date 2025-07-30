@@ -1,0 +1,57 @@
+version: 2
+models:
+  - name: dbt_member_track_upcoming_engagement
+    description: >
+      This protected model associates each member-track pair with information on
+      upcoming session based on the member's engagement on the track. The model should be
+      used to build `dei` models or the more downstream `carina` models. This model only shows
+      members with open track enrollments.
+
+    columns:
+      - name: member_id
+        description: Foreign Key to the associated member.
+        tests:
+          - not_null
+
+      - name: track_id
+        description: Foreign Key to the associated track.
+        tests:
+          - not_null
+
+      - name: contract_id
+        description: Foreign Key to the associated contract.
+
+      - name: organization_id
+        description: Foreign Key to the associated organization.
+        tests:
+          - not_null
+
+      - name: sfdc_account_id
+        description: Foreign Key to the associated SFDC account.
+        tests:
+          - not_null
+
+      - name: has_upcoming_session
+        description: >
+          Boolean denoting if the member has an upcoming session scheduled on the track.
+          This is inferred from `dei_members` and adjusted based on the end date of
+          member's track enrollment.
+        tests:
+          - not_null
+          - accepted_values:
+              values: [true, false]
+
+      - name: is_upcoming_session_recurring
+        description: >
+          Boolean denoting if the upcoming session is recurring. NULL if no next session.
+        tests:
+          - accepted_values:
+              values: [true, false]
+
+      - name: upcoming_session_type
+        description: >
+          String denoting the type of upcoming session. NULL if no next session.
+
+      - name: upcoming_session_starts_at
+        description: >
+          UTC date denoting the start time of upcoming session.

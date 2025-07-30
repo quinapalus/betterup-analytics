@@ -1,0 +1,37 @@
+version: 2
+models:
+  - name: dbt_session_app_call_quality
+    description: >
+      Protected model that reports on call quality for sessions completed as of January 18, 2020 using
+      only coach post-session assessment data. In terms of architectural structure, this model is
+      symmetric to `dbt_session_inferred_call_quality`.
+
+    columns:
+      - name: session_key
+        description: Primary Key.
+
+      - name: platform
+        description: >
+          String denoting whether the session was completed on or off platform.
+        tests:
+          - not_null
+          - accepted_values:
+              values: [Off Platform, On Platform, Attempted Platform]
+
+      - name: has_tech_issues
+        description: >
+          Boolean indicating whether the session had tech issues, if the session
+          was completed on platform or at least attempted on platform.
+        tests:
+          - accepted_values:
+              values: [true, false]
+
+      - name: issue_type
+        description: >
+          String denoting AV quality during the session. Note that
+          only one issue is reported here based on `sanitize_call_issues` macro to complement
+          the logic in `dbt_session_inferred_call_quality`, in which only one call issue is surfaced.
+        tests:
+          - accepted_values:
+              values: [connect_problem, no_audio, call_dropped, connection_quality,
+                       other, no_video]

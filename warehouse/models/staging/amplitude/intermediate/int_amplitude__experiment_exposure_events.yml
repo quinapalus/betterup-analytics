@@ -1,0 +1,13 @@
+version: 2
+
+models:
+  - name: int_amplitude__experiment_exposure_events
+    description: >
+      Amplitude experiment exposure events.
+    columns:
+      - name: uuid
+        description: >
+          A unique identifier per row (event sent). 
+        tests:
+          - unique
+          - not_null

@@ -1,0 +1,18 @@
+version: 2
+
+models:
+  - name: base_app__resource_recommendations_historical
+    description: ""
+    columns:
+      - name: created_at
+      - name: id
+        tests:
+          - unique
+          - not_null
+      - name: position
+      - name: resource_id
+      - name: updated_at
+      - name: user_id
+      - name: recommendation_date
+      - name: development_topic_id
+      - name: resource_uuid

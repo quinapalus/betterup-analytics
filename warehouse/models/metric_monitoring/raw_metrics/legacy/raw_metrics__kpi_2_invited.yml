@@ -1,0 +1,20 @@
+version: 2
+
+models:
+  - name: raw_metrics__kpi_2_invited
+    description: "Looker link: https://betterup.looker.com/x/HqrbHXljwQxEg1pwPw0Xqc"
+    columns:
+      - name: invited_month
+        description: ""
+
+      - name: count_invited
+        description: ""
+
+      - name: count_activated_within_7_days
+        description: ""
+
+      - name: primary_key
+        description: ""
+        tests:
+          - unique
+          - not_null

@@ -1,0 +1,17 @@
+version: 2
+
+models:
+  - name: int_account_health_eligible_accounts
+    description: "This model returns the account IDs for only accounts that meet
+                  the eligibility criteria for account health scoring.
+                  Documentation on the criteria are on this Confluence page
+                  https://betterup.atlassian.net/wiki/spaces/AN/pages/3141402630/Who+What+and+When+is+included+in+Account+Health+2.0+Model"
+    columns:
+      - name: sfdc_account_id
+        description: ""
+        tests:
+          - unique
+          - not_null
+
+      - name: is_eligible_for_account_health_scoring
+        description: ""

@@ -1,0 +1,11 @@
+version: 2
+
+models:
+  - name: stg_stripe__subscription_items
+    description: Subscription items stored in Stripe.
+    columns:
+      - name: stripe_subscription_item_id
+        description: Primary key
+        tests:
+          - unique
+          - not_null

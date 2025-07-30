@@ -1,0 +1,8 @@
+# dbt project files
+target/
+dbt_modules/
+logs/
+dbt_packages/
+# Mac finder artifacts
+.DS_Store
+.user.yml

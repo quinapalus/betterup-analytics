@@ -1,0 +1,10 @@
+version: 2
+
+sources:
+  - name: identify
+    schema: identify
+    database: raw
+    tables:
+      - name: product_recommendation_attributes
+      - name: product_recommendation_user_attributes
+      - name: product_recommendations

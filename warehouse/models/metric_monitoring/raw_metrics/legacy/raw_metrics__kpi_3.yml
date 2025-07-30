@@ -1,0 +1,20 @@
+version: 2
+
+models:
+  - name: raw_metrics__kpi_3
+    description: "Looker link: https://betterup.looker.com/x/UwqHt48IsQBMKA2gQMku0Y"
+    columns:
+      - name: first_primary_coaching_access_month
+        description: ""
+
+      - name: count_members_primary_coaching_access_4_months
+        description: ""
+
+      - name: members_w_1_eng_in_fourth_month_req_4_months
+        description: ""
+
+      - name: primary_key
+        description: ""
+        tests:
+          - unique
+          - not_null

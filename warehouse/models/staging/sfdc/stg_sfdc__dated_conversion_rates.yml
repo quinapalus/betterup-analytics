@@ -1,0 +1,45 @@
+version: 2
+
+models:
+  - name: stg_sfdc__dated_conversion_rates
+    description: The DBT model stg_sfdc__dated_conversion_rates provides converted
+      and standardized currency conversion rates from Salesforce for different ISO
+      codes. It includes fields for the id, ISO code, conversion rate, start date,
+      next start date, creation time, last modification time, and a sequence for the
+      conversion rate period. [GenAI Description]
+    columns:
+      - name: id
+        description: "'id' serves as a unique identifier for each row in the model.\
+          \ [GenAI Description]"
+        tests:
+          - unique
+          - not_null
+
+      - name: iso_code
+        description: "'iso_code' contains the ISO 4217 currency code for the related\
+          \ conversion rate. [GenAI Description]"
+
+      - name: conversion_rate
+        description: "'conversion_rate' is the exchange rate between two currencies\
+          \ as determined by Salesforce and given a start and end date. [GenAI Description]"
+
+      - name: start_date
+        description: The start_date column contains the date when the conversion rate
+          in a given row becomes effective. [GenAI Description]
+
+      - name: next_start_date
+        description: "'next_start_date' is a date field that indicates when the next\
+          \ rate becomes applicable. [GenAI Description]"
+
+      - name: created_at
+        description: The 'created_at' column contains the timestamp of when the record
+          was first created. [GenAI Description]
+
+      - name: last_modified_date
+        description: last_modified_date is the timestamp of the last modification
+          for the row. [GenAI Description]
+
+      - name: conversion_rate_period_sequence
+        description: The 'conversion_rate_period_sequence' column contains a sequential
+          number corresponding to the order of the most recent conversion rates for
+          each ISO code. [GenAI Description]

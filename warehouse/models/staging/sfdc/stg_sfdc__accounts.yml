@@ -1,0 +1,73 @@
+version: 2
+models:
+  - name: stg_sfdc__accounts
+    description: >
+      Salesforce Account models. For more information, check out the [Salesforce Account
+      documentation](https://developer.salesforce.com/docs/atlas.en-us.api.meta/api/sforce_api_objects_account.htm)
+
+    columns:
+      - name: sfdc_account_id
+        description: Unique identifier in Salesforce
+        tests:
+          - not_null
+          - unique
+
+      - name: account_name
+        description: Name the account
+        tests:
+          - not_null
+
+      - name: account_owner_id
+        description: Foreign Key to SFDC user that is listed as the "Account Owner".
+        tests:
+          - not_null
+
+      - name: account_csm_id
+        description: Foreign Key to SFDC user that is listed as the "Account CSM".
+        tests:
+          - relationships:
+              to: ref('stg_sfdc__users')
+              field: sfdc_user_id
+
+      - name: created_at
+        description: When the account was created in Salesforce
+        tests:
+          - not_null
+
+      - name: last_modified_at
+        description: When the account was last modified in Salesforce
+
+      - name: description
+        description: Description of the account
+
+      - name: industry
+        description: Which industry the account belongs to
+
+      - name: account_owner_region
+        description: >
+          Sales region of the account owner. Captured from the owners’s user record
+          upon account creation
+          or ownership change.
+
+      - name: account_segment
+        description: Which segment the account belongs to (for example, SMB).
+        tests:
+          - accepted_values:
+              values: [SMB, Enterprise, Ptnr, Partner, MidMarket]
+
+      - name: city
+        description: City the account is located in
+
+      - name: country
+        description: Country the account is located in
+
+      - name: region
+        description: Region the account is located in
+
+      - name: company_size
+        description: Category of the size of the company (e.g. `100-500`)
+
+      - name: is_deleted
+        description: >
+          True if the account has been deleted in SFDC. Deleted records should be
+          excluded primarily from reporting.

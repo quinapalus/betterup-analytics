@@ -1,0 +1,31 @@
+version: 2
+
+models:
+  - name: fact_ended_subscriptions_kpi
+    meta:
+      owner: "adrian.lievano@betterup.co"
+    description: "Stores calculation for Ended Subscriptions"
+    columns:
+      - name: _unique
+        description: "Primary key of this table. Sets the grain to month and metric_name, ensuring no metric has multiple values and/or targets"
+        tests:
+          - unique
+          - not_null
+
+      - name: metric_name_id
+        description: "Surrogate key on the manually written metric_name"
+
+      - name: month
+        description: "calendar month that the metric is calculated"
+        tests: 
+          - not_null
+
+      - name: metric_value
+        description: "Calculated value for the metric in a given month"
+        tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: 770
+              max_value: 780
+              row_condition: "month = '2023-05-01'"
+              config:
+                severity: warn

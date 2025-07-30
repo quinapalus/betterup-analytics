@@ -1,0 +1,109 @@
+version: 2
+models:
+  - name: dbt_whole_person_item_response
+    description: >
+      Protected fact table for item responses, both by member and contributors, across all WPM
+      assessments: onboarding, reflection point, 180, and 360. Assessments in this table
+      are limited to external deployments and assessments that have been submitted by the
+      member (onboarding, RP), or either the member or a contributor (180, 360). Note that
+      the 180/360 final reports need not be generated for a contributor to be included in this
+      table.
+
+    columns:
+      - name: id
+        description: Surrogate Primary key for this table.
+        tests:
+          - unique
+          - not_null
+      
+      - name: member_key
+        description: Foreign key to conformed Member dimension.
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_members')
+              field: member_key
+
+      - name: date_key
+        description: >
+         Foreign key to conformed Date dimension for the date the given
+         assessment was submitted.
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_date')
+              field: date_key
+
+      - name: account_key
+        description: >
+          Foreign key to conformed Account dimension for the account the member was
+          associated with on the day the assessment was submitted.
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_account')
+              field: account_key
+
+      - name: deployment_key
+        description: >
+          Foreign key to conformed Deployment dimension for the deployment associated
+          with the item response.
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_deployment')
+              field: deployment_key
+
+      - name: app_member_assessment_id
+        description: >
+          Foreign key to the parent member assessment that's associated with the
+          item response.
+        tests:
+          - not_null
+
+      - name: app_creator_assessment_id
+        description: >
+          Foreign key to the assessment -- submitted either by member or a
+          contributor -- that's associated with the item response.
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dei_member_assessments')
+              field: assessment_id
+
+      - name: assessment_name
+        description: >
+          String denoting the type of WPM assessment. The naming convention in this
+          column has been adjusted from the original one seen in base-layer assessment
+          tables for easier interpretation.
+        tests:
+          - not_null
+          - accepted_values:
+              values: [WPM 1.0 Baseline, WPM 1.0 Reflection Point, WPM 1.0 360, WPM 1.0 180, WPM 2.0 Baseline, WPM 2.0 Reflection Point, WPM 2.0 360, WPM 2.0 180]
+
+      - name: creator_role
+        description: >
+          String denoting the profile of the creator associated with the
+          assessment.
+        tests:
+          - not_null
+          - accepted_values:
+              values: [self, manager, direct_report, other_coworker]
+
+      - name: app_creator_submitted_at
+        description: >
+          Timestamp denoting when the creator submitted the assessment.
+        tests:
+          - not_null
+
+      - name: item_key
+        description: Primary Key
+        tests:
+          - not_null
+
+      - name: item_response
+        description: >
+          Integer denoting the member's or the contributor's response to the
+          prompt in the WPM assessment.
+        tests:
+          - not_null

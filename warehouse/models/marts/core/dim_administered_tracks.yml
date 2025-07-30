@@ -1,0 +1,23 @@
+version: 2
+
+models:
+  - name: dim_administered_tracks
+    description: ""
+    columns:
+      - name: primary_key
+        description: "Surrogate key of member ID and track ID"
+        tests:
+          - unique
+          - not_null
+
+      - name: user_id
+        description: ""
+
+      - name: track_id
+        description: ""
+
+      - name: is_active
+        description: ""
+
+      - name: is_current_partner
+        description: ""

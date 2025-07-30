@@ -1,0 +1,53 @@
+version: 2
+
+models:
+  - name: anon_app_eu__coach_assignments
+    description: >
+      Coach Assignments table from app with removed PII.
+
+
+    columns:
+      - name: id
+        description: Primary key
+        tests:
+          - unique
+          - not_null
+
+      - name: associated_record_id
+        description: The 'associated_record_id' column contains the unique identifier
+          of the associated record. [GenAI Description]
+      - name: coach_id
+        tests:
+          - not_null
+        description: A column containing an identifier for the coach\
+          \ associated with the coach-member relationship. [GenAI Description]
+      - name: coach_unread_message_count
+        description: The 'coach_unread_message_count' column stores the number of
+          unread messages a coach user has received. [GenAI Description]
+      - name: created_at
+        tests:
+          - not_null
+        description: The 'created_at' column records when a particular coach assignment
+          was created. [GenAI Description]
+      - name: ended_reason
+        description: The 'ended_reason' column contains information about why the
+          coach assignment was ended. [GenAI Description]
+      - name: member_last_active_at
+        description: The column 'member_last_active_at' stores the date and time of
+          the last activity of a member in a coach assignment. [GenAI Description]
+      - name: role
+        description: The 'role' column identifies the coach’s role on the assignment.
+          [GenAI Description]
+      - name: updated_at
+        tests:
+          - not_null
+        description: The column 'updated_at' contains the timestamps of the last update
+          made on each coach assignment record. [GenAI Description]
+      - name: user_id
+        tests:
+          - not_null
+        description: The 'user_id' column holds the unique identifier of the user
+          associated with each coach assignment. [GenAI Description]
+      - name: user_unread_message_count
+        description: The number of unread messages for the user in a coach-member
+          relationship. [GenAI Description]

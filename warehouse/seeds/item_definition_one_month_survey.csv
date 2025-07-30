@@ -1,0 +1,19 @@
+item_key,item_prompt,scale
+employer_nps,In the event a friend or colleague is looking for a new job: how likely are you to recommend your current organization?,0-Extremely unlikely;1-Very unlikely;2-Unlikely;3-Somewhat unlikely;4-A bit unlikely;5-Neutral;6-A bit likely;7-Somewhat likely;8-Likely;9-Very likely;10-Extremely likely
+how_much_progress,Since you started working with BetterUp: how much progress have you made towards the goal(s) you set for yourself as part of this experience?,1-No progress;[...];10-A lot of progress
+job_satisfaction,All in all I am satisfied with my job.,1-Strongly Disagree;2-Disagree;3-Neither Disagree nor Agree;4-Agree;5-Strongly Agree
+layer2_achievements,What specifically have you learned or started doing differently as a result of working with BetterUp?,text_response
+layer2_engagement_1,I find it easy to feel involved and energized at work.,1-Strongly Disagree;2-Disagree;3-Neither Disagree nor Agree;4-Agree;5-Strongly Agree
+layer2_engagement_2,I often become engrossed in my work.,1-Strongly Disagree;2-Disagree;3-Neither Disagree nor Agree;4-Agree;5-Strongly Agree
+layer2_engagement_3,I am enthusiastic about my work.,1-Strongly Disagree;2-Disagree;3-Neither Disagree nor Agree;4-Agree;5-Strongly Agree
+layer2_feedback,Is there anything else you'd like to share about your BetterUp experience?,text_response
+layer2_member_rated_productivity,With 0 as not at all productive and 10 as full productivity: how productive have you been at work recently?,1-Not at all productive;[...];10-Fully productive
+layer2_relative_value_to_other_offerings,Compared to other development opportunities offered at my organization: I have found BetterUp to be...,1-Significantly less valuable;2-Less valuable;3-Neither more nor less valuable;4-More valuable;5-Significantly more valuable
+layer2_retention_value,I would be more likely to stay with an organization that offered me BetterUp compared to one that did not.,1-Strongly Disagree;2-Disagree;3-Neither Disagree nor Agree;4-Agree;5-Strongly Agree
+more_effective,Working with my coach has made me more effective in my job.,1-Strongly Disagree;2-Disagree;3-Neither Disagree nor Agree;4-Agree;5-Strongly Agree
+net_promoter,In the event a friend or colleague is seeking a coach: how likely are you to recommend BetterUp?,0-Extremely unlikely;1-Very unlikely;2-Unlikely;3-Somewhat unlikely;4-A bit unlikely;5-Neutral;6-A bit likely;7-Somewhat likely;8-Likely;9-Very likely;10-Extremely likely
+overall_satisfaction,Overall: how satisfied are you with your BetterUp coaching experience?,0-Extremely dissatisfied;1-Very dissatisfied;2-Dissatisfied;3-Somewhat dissatisfied;4-A bit dissatisfied;5-Neutral;6-A bit satisfied;7-Somewhat satisfied;8-Satisfied;9-Very satisfied;10-Extremely satisfied
+turnover_intentions,I intend to leave the organization during the next 12 months.,1-Strongly Disagree;2-Disagree;3-Neither Disagree nor Agree;4-Agree;5-Strongly Agree
+intent_to_stay_1,I see a future for myself at my current company.,1-Strongly Disagree;2-Disagree;3-Neither Disagree nor Agree;4-Agree;5-Strongly Agree
+intent_to_stay_2,I would like to be working at my current company a year from now.,1-Strongly Disagree;2-Disagree;3-Neither Disagree nor Agree;4-Agree;5-Strongly Agree
+intent_to_stay_3,I plan to stay at my current company for the foreseeable future.,1-Strongly Disagree;2-Disagree;3-Neither Disagree nor Agree;4-Agree;5-Strongly Agree

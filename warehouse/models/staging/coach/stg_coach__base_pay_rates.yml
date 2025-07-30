@@ -1,0 +1,47 @@
+version: 2
+
+models:
+  - name: stg_coach__base_pay_rates
+    description: Base Pay Rates
+
+    columns:
+      - name: base_pay_rate_id
+        description: Unique identifier of Base Pay Rates
+        tests:
+          - unique
+          - not_null
+
+      - name: coaching_cloud
+        description: The "coaching_cloud" column contains information indicating where
+          the base pay rate data is sourced from. [GenAI Description]
+      - name: hiring_tier
+        description: "'hiring_tier' is a categorical column that specifies the tier\
+          \ of the hiring rate for a particular specialist. [GenAI Description]"
+      - name: name
+        description: The 'name' column contains the descriptive title of the base
+          pay rate. [GenAI Description]
+      - name: specialist_vertical_uuid
+        description: The 'specialist_vertical_uuid' column stores a unique identifier
+          for a specialist vertical related to a pay rate. [GenAI Description]
+      - name: specialist_vertical_id
+        description: The 'specialist_vertical_id' column stores the numerical identifier
+          for the vertical applicable to the base pay rate. [GenAI Description]
+      - name: type
+        description: The 'type' column in the base_pay_rates table holds the type
+          of rate (e.g. base rate) for each pay rate. [GenAI Description]
+      - name: created_at
+        tests:
+          - not_null
+        description: The 'created_at' column stores the timestamp of when the base
+          pay rate record was created. [GenAI Description]
+      - name: updated_at
+        tests:
+          - not_null
+        description: The 'updated_at' column stores the time and date that the base_pay_rate
+          was last updated. [GenAI Description]
+      - name: amount_usd
+        description: The 'amount_usd' column holds the monetary value (in U.S. dollars)
+          associated with each base pay rate. [GenAI Description]
+      - name: base_pay_rate_uuid
+        description: The base_pay_rate_uuid column contains a universally unique identifier
+          for each base pay rate. [GenAI Description]

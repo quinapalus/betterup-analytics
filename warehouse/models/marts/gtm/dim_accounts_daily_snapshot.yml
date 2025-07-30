@@ -1,0 +1,487 @@
+version: 2
+
+models:
+  - name: dim_accounts_daily_snapshot
+    meta:
+      owner: "xavier.mafe@betterup.co"
+    description: "Slowly changing dimension representing Salesforce accounts. These accounts can be current
+                  customers, past customers and prospects. The grain of this table is one row per account per day.
+                  The as_of_date column represents the date of the snapshot for the account in that row."
+    columns:
+      - name: daily_snapshot_unique_key
+        description: "Primary key of the table. It is a surrogate derived from as_of_date and sfdc_account_id."
+        tests:
+          - unique
+          - not_null   
+
+      - name: as_of_date
+        description: ""
+
+      - name: is_currently_valid
+        description: ""
+
+      - name: sfdc_account_id
+        description: "Natural key for Salesforce Accounts. This is the 18 character Salesforce ID, not the 15 character ID."
+
+      - name: history_primary_key
+        description: ""
+
+      - name: parent_sfdc_account_id
+        description: ""
+
+      - name: account_owner_id
+        description: ""
+
+      - name: account_csm_id
+        description: ""
+
+      - name: account_sdr_id
+        description: ""
+
+      - name: account_dm_id
+        description: ""
+
+      - name: account_sc_id
+        description: ""
+
+      - name: account_name
+        description: ""
+
+      - name: industry
+        description: ""
+
+      - name: account_segment
+        description: ""
+
+      - name: account_solutions
+        description: ""
+
+      - name: account_type
+        description: ""
+
+      - name: billing_city
+        description: ""
+
+      - name: billing_country
+        description: ""
+
+      - name: billing_state
+        description: ""
+
+      - name: company_size
+        description: ""
+
+      - name: pricing_reccomendation
+        description: ""
+
+      - name: expansion_priority_score
+        description: ""
+
+      - name: account_lifecycle_stage
+        description: ""
+
+      - name: highest_level_champion
+        description: "Used to indicate the highest level champion that the account CSM has access to.
+                      This is used in Account Health Scoring."
+
+      - name: first_session_completed_rate
+        description: ""
+
+      - name: sphere_of_influence
+        description: "AKA Network Strength, this field is used by CSMs to indicate how many champions 
+                      we have at an account. A champion is an advocate for the adoption and success of the partnership. 
+                      Champions have authority to change business processes and can directly influence or make buying decisions.
+                      Champions should also be people we can readily reach out to and schedule a meeting with when we need one"
+
+      - name: strategic_catalysts
+        description: ""
+
+      - name: db_region
+        description: ""
+
+      - name: account_tier
+        description: ""
+
+      - name: csm_health_rating
+        description: "AKA CSM Sentiment, this field is used by CSMs to indicate the health of the account.
+                      It is a crucial input in how we calculate account health scores. 
+                      Read https://betterup.atlassian.net/wiki/spaces/AN/pages/3147989058/Final+Account+Health+Score+Calculation
+                      for more detail.
+                      If the accepted values test for this field fails reach out to PE&O team and ask them if the
+                      picklist values in Salesforce have changed and what that change should mean for account health."
+
+      - name: pod_segment
+        description: ""
+
+      - name: levels_of_focus
+        description: ""
+
+      - name: adjusted_account_segment
+        description: ""
+
+      - name: bingo_card_bucket
+        description: ""
+
+      - name: six_sense_account_buying_stage
+        description: ""
+
+      - name: six_sense_account_intent_score
+        description: ""
+
+      - name: six_sense_account_profile_fit
+        description: ""
+
+      - name: six_sense_account_profile_score
+        description: ""
+
+      - name: number_of_employees
+        description: ""
+
+      - name: previous_quarter_carr_unconverted
+        description: ""
+
+      - name: number_of_programs
+        description: ""
+
+      - name: is_top_level_parent_account
+        description: ""
+
+      - name: created_at
+        description: ""
+
+      - name: last_modified_at
+        description: ""
+
+      - name: is_deleted
+        description: ""
+
+      - name: currency_iso_code
+        description: ""
+
+      - name: valid_from
+        description: ""
+
+      - name: valid_to
+        description: ""
+
+      - name: is_current_version
+        description: ""
+
+      - name: version
+        description: ""
+
+      - name: is_last_snapshot_of_day
+        description: ""
+
+      - name: previous_quarter_carr_usd
+        description: ""
+
+      - name: risk_rating
+        description: ""
+
+      - name: parent_account_type
+        description: ""
+
+      - name: customer_account_type
+        description: ""
+
+      - name: has_ever_been_eligible_for_account_health_scoring
+        description: ""
+
+      - name: is_eligible_for_account_health_scoring
+        description: ""
+
+      - name: account_health_rubric_external_factors_driver_industry
+        description: ""
+
+      - name: account_health_rubric_external_factors_driver_annual_revenue
+        description: ""
+
+      - name: account_health_rubric_external_factors_overall_score
+        description: ""
+
+      - name: account_health_rubric_external_factors_numerical_overall_score
+        description: ""
+
+      - name: account_health_rubric_stakeholder_alignment_driver_maturity_curve
+        description: ""
+
+      - name: account_health_rubric_stakeholder_alignment_driver_highest_level_champion
+        description: ""
+
+      - name: account_health_rubric_stakeholder_alignment_driver_sphere_of_influence
+        description: ""
+
+      - name: account_health_rubric_stakeholder_alignment_driver_qbr_in_last_6_months
+        description: ""
+
+      - name: account_health_rubric_stakeholder_alignment_driver_executive_sponsor_engagement_in_last_6_months
+        description: ""
+
+      - name: account_health_rubric_stakeholder_alignment_driver_success_plan_established
+        description: ""
+
+      - name: account_health_rubric_stakeholder_alignment_driver_sucess_plan_updated_in_last_12_months
+        description: ""
+
+      - name: account_health_rubric_stakeholder_alignment_overall_score
+        description: ""
+
+      - name: account_health_rubric_stakeholder_alignment_numerical_overall_score
+        description: ""
+
+      - name: invited_members_past_30_days_adoption_rubric
+        description: ""
+
+      - name: activated_members_past_30_days_from_invited_adoption_rubric
+        description: ""
+
+      - name: members_past_30_days_adoption_rubric
+        description: ""
+
+      - name: members_with_1_session_past_30_days_adoption_rubric
+        description: ""
+
+      - name: percent_invited_members_activated_past_30_days_adoption_rubric
+        description: ""
+
+      - name: percent_members_with_1_session_past_30_days_adoption_rubric
+        description: ""
+
+      - name: average_of_metrics_adoption_rubric
+        description: ""
+
+      - name: account_health_rubric_adoption_driver_percent_completed_first_session
+        description: ""
+
+      - name: account_health_rubric_adoption_driver_percent_activated
+        description: ""
+
+      - name: account_health_rubric_adoption_overall_score
+        description: ""
+
+      - name: account_health_rubric_adoption_numerical_overall_score
+        description: ""
+
+      - name: members_past_30_days_engagement_rubric
+        description: ""
+
+      - name: members_past_120_days_engagement_rubric
+        description: ""
+
+      - name: members_with_1_session_past_30_days_engagement_rubric
+        description: ""
+
+      - name: members_with_1_session_past_120_days_engagement_rubric
+        description: ""
+
+      - name: total_billable_sessions_engagement_rubric
+        description: ""
+
+      - name: members_with_1_reflection_point_past_120_days_engagement_rubric
+        description: ""
+
+      - name: average_of_total_months_in_tenure_since_activation_engagement_rubric
+        description: ""
+
+      - name: average_sessions_per_member_per_month_engagement_rubric
+        description: ""
+
+      - name: percent_of_members_with_1_reflection_point_engagement_rubric
+        description: ""
+
+      - name: account_health_rubric_adoption_driver_average_sessions_per_member_per_month
+        description: ""
+
+      - name: account_health_rubric_adoption_driver_reflection_points
+        description: ""
+
+      - name: account_health_rubric_engagement_overall_score
+        description: ""
+
+      - name: account_health_rubric_engagement_numerical_overall_score
+        description: ""
+
+      - name: count_activated_members_nps_rubric
+        description: ""
+
+      - name: sum_nps_promoters_nps_rubric
+        description: ""
+
+      - name: sum_nps_detractors_nps_rubric
+        description: ""
+
+      - name: count_item_responses_nps_rubric
+        description: ""
+
+      - name: member_net_promoter_score_nps_rubric
+        description: ""
+
+      - name: account_health_rubric_nps_driver_member_nps
+        description: ""
+
+      - name: account_health_rubric_nps_driver_partner_rps
+        description: ""
+
+      - name: account_health_rubric_nps_overall_score
+        description: ""
+
+      - name: account_health_rubric_sentiment_numerical_overall_score
+        description: ""
+
+      - name: mindset_average_percent_growth_from_reference_behavioral_rubric
+        description: ""
+
+      - name: thriving_average_percent_growth_from_reference_behavioral_rubric
+        description: ""
+
+      - name: inspiring_average_percent_growth_from_reference_behavioral_rubric
+        description: ""
+
+      - name: outcome_average_percent_growth_from_reference_behavioral_rubric
+        description: ""
+
+      - name: overall_average_percent_growth_from_reference_behavioral_rubric
+        description: ""
+
+      - name: account_health_rubric_behavorial_overall_score
+        description: ""
+
+      - name: account_health_rubric_behavioral_numerical_overall_score
+        description: ""
+
+      - name: stakeholder_alignment_is_missing
+        description: ""
+
+      - name: external_factors_is_missing
+        description: ""
+
+      - name: adoption_is_missing
+        description: ""
+
+      - name: engagement_is_missing
+        description: ""
+
+      - name: sentiment_is_missing
+        description: ""
+
+      - name: behavioral_is_missing
+        description: ""
+
+      - name: count_of_missing_rubrics
+        description: ""
+
+      - name: is_not_missing_any_rubrics
+        description: ""
+
+      - name: is_missing_sentiment_and_behavioral
+        description: ""
+
+      - name: external_factors_weight
+        description: ""
+
+      - name: stakeholder_alignment_weight
+        description: ""
+
+      - name: adoption_weight
+        description: ""
+
+      - name: engagement_weight
+        description: ""
+
+      - name: sentiment_weight
+        description: ""
+
+      - name: behavioral_weight
+        description: ""
+
+      - name: external_factors_numerical_score
+        description: ""
+
+      - name: stakeholder_alignment_numerical_score
+        description: ""
+
+      - name: adoption_numerical_score
+        description: ""
+
+      - name: engagement_numerical_score
+        description: ""
+
+      - name: sentiment_numerical_score
+        description: ""
+
+      - name: behavioral_numerical_score
+        description: ""
+
+      - name: overall_weighted_average_score
+        description: ""
+
+      - name: overall_account_health_categorical_score
+        description: ""
+
+      - name: overall_account_health_categorical_score_csm_risk_flag
+        description: ""
+
+      - name: overall_account_health_scoring_method
+        description: ""
+
+      - name: account_owner_name_current_version
+        description: "Name of account owner. Comes from most recent version of the sfdc users snapshot"
+
+      - name: account_owner_role_current_version
+        description: "Name of account owner's role. Comes from most recent version of the sfdc users snapshot"
+
+      - name: account_csm_name_current_version
+        description: "Name of account csm. Comes from most recent version of the sfdc users snapshot"
+        
+      - name: account_csm_role_current_version
+        description: "Name of account csm's role. Comes from most recent version of the sfdc users snapshot"
+
+      - name: global_2000_2022
+        description: "Global 2000 ranking"
+
+      - name: betterup_segment
+        description: "Global account segment"
+
+      - name: primary_risk_reason
+        description: "Gets populated by CSMs when CSM sentiment is at risk or somewhat at risk to indicate the primary reason why"
+
+      - name: zoominfo_customer_experience_systems
+        description: Detailed information on the customer experience systems from Zoominfo
+
+      - name: zoominfo_customer_feedback_systems
+        description: Detailed information on the customer feedback systems from Zoominfo
+
+      - name: zoominfo_email_hosting_systems
+        description: Detailed information on the email hosting systems from Zoominfo
+
+      - name: zoominfo_erp_software
+        description: Detailed information on the ERP software from Zoominfo
+
+      - name: zoominfo_filesharing_systems
+        description: Detailed information on the file sharing systems from Zoominfo
+
+      - name: zoominfo_hr_software
+        description: Detailed information on the HR software from Zoominfo
+
+      - name: zoominfo_lms_software
+        description: Detailed information on the LMS software from Zoominfo
+
+      - name: zoominfo_operating_systems
+        description: Detailed information on the operating systems from Zoominfo
+
+      - name: zoominfo_other_comm_collab_systems
+        description: Detailed information on the other communication and collaboration systems from Zoominfo
+
+      - name: zoominfo_other_hr_systems
+        description: Detailed information on the other HR systems from Zoominfo
+
+      - name: zoominfo_other_it_systems
+        description: Detailed information on the other IT systems from Zoominfo
+
+      - name: zoominfo_team_collaboration
+        description: Detailed information on the team collaboration tools from Zoominfo
+        
+      - name: zoominfo_business_process_systems
+        description: Detailed information on the business process systems from Zoominfo
+

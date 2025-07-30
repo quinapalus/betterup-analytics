@@ -1,0 +1,109 @@
+version: 2
+
+models:
+  - name: stg_app__appointments
+    description: Appointments (aka bookings) of timeslots (session). There can be
+      several bookings for one session.
+
+    columns:
+      - name: appointment_id
+        tests:
+          - unique
+          - not_null
+        description: The appointment_id column stores a unique identifier for each
+          appointment. [GenAI Description]
+      - name: call_id
+        description: A unique identifier for the appointment call. [GenAI Description]
+      - name: canceled_at
+        description: The 'canceled_at' column contains a timestamp of when the appointment
+          was canceled. [GenAI Description]
+      - name: canceled_by_user_id
+        description: This column holds the ID of a user that has canceled an appointment.
+          [GenAI Description]
+      - name: coach_assignment_id
+        description: The 'coach_assignment_id' column stores the assignment ID of
+          the coach that runs the appointment. [GenAI Description]
+      - name: coach_id
+        description: The 'coach_id' column contains the unique identifier of the coach
+          assigned to the appointment. [GenAI Description]
+      - name: complete_at
+        description: This column holds the timestamp of when the appointment was completed.
+          [GenAI Description]
+      - name: contact_method
+        description: The contact_method column stores the communication method utilized
+          for an appointment. [GenAI Description]
+      - name: created_at
+        description: The 'created_at' column is the timestamp for when the appointment
+          entity was created. [GenAI Description]
+      - name: creator_id
+        description: The 'creator_id' column contains the unique user ID of the person
+          who created the appointment. [GenAI Description]
+      - name: development_topic_id
+        description: Column 'development_topic_id' contains the ID of the development
+          topic associated with the appointment. [GenAI Description]
+      - name: ends_at
+        description: The 'ends_at' column contains a timestamp of when the appointment
+          ends. [GenAI Description]
+      - name: length
+        description: The length of the appointment in minutes. [GenAI Description]
+      - name: missed
+        description: The 'missed' column indicates whether or not an appointment was
+          missed. [GenAI Description]
+      - name: original_starts_at
+        description: '"original_starts_at" is the original starting time of the appointment,
+          before any possible rescheduling. [GenAI Description]'
+      - name: participant_id
+        description: The participant_id column identifies the participant associated
+          with an appointment. [GenAI Description]
+      - name: post_session_member_assessment_id
+        description: Column post_session_member_assessment_id stores the post-session
+          evaluation undertaking by the appointment member. [GenAI Description]
+      - name: rating_pending
+        description: The rating_pending column indicates whether the completed appointment
+          is ready to be rated or not. [GenAI Description]
+      - name: recurring
+        description: The 'recurring' column identifies whether an appointment is recurring
+          or not. [GenAI Description]
+      - name: requested_length
+        description: The requested_length column stores the requested length, in minutes,
+          of the appointment session. [GenAI Description]
+      - name: requested_weekly_interval
+        description: The 'requested_weekly_interval' column indicates the number of
+          weeks between recurring appointment requests. [GenAI Description]
+      - name: sequence_number
+        description: The sequence_number column stores a numerical sequence which
+          reflects the order in which appointments were created. [GenAI Description]
+      - name: started_at
+        description: The "started_at" column stores the timestamp of when the appointment
+          was started. [GenAI Description]
+      - name: starts_at
+        description: The 'starts_at' column stores the timestamp for when the appointment
+          begins. [GenAI Description]
+      - name: timeslot_id
+        description: The timeslot_id is an identifier for the timeslot associated
+          with the appointment. [GenAI Description]
+      - name: track_assignment_id
+        description: "'track_assignment_id' is the unique identifier for an assignment\
+          \ related to the appointment, if any. [GenAI Description]"
+      - name: updated_at
+        description: The 'updated_at' column holds the timestamp for when the appointment
+          was last updated. [GenAI Description]
+      - name: user_id
+        description: The unique identifier for the user attending the appointment.
+          [GenAI Description]
+      - name: uuid
+        description: The 'uuid' column stores a unique UUID (Universally Unique Identifier)
+          to identify each appointments record. [GenAI Description]
+      - name: nylas_event_id
+        description: The 'nylas_event_id' column stores the event IDs associated with
+          an appointment. [GenAI Description]
+      - name: product_subscription_assignment_id
+      - name: token
+        description: The "token" column contains a unique value for each appointment.
+          [GenAI Description]
+      - name: confirmed_at
+        description: "'confirmed_at' is the timestamp of when the appointment was\
+          \ confirmed. [GenAI Description]"
+      - name: last_rescheduled_by_user_id
+        description: The last_rescheduled_by_user_id column tracks the user ID of
+          the person who last rescheduled the appointment. [GenAI Description]

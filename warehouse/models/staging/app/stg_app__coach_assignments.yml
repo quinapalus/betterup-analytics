@@ -1,0 +1,79 @@
+version: 2
+models:
+  - name: stg_app__coach_assignments
+    description: DBT model stg_app__coach_assignments stores and combines data on
+      members, coaches, and coaching assignments from coaching-related tables in the
+      source database. It includes information fields such as coach_id, role, specialty,
+      coaching_cloud, group_coaching_cohort_id, member_last_active_at, among many
+      more. [GenAI Description]
+    columns:
+      - name: coach_assignment_id
+        description: Unique identifier of Coach Assignment
+        tests:
+          - unique
+          - not_null
+      - name: coach_id
+        description: This column represents the unique identifier of the assigned
+          coach. [GenAI Description]
+      - name: coach_recommendation_id
+        description: The 'coach_recommendation_id' column stores the unique identifier
+          given to each coach assignment recommendation made to a member. [GenAI Description]
+      - name: created_at
+        description: Created_at is a timestamp indicating when a coach assignment
+          was created. [GenAI Description]
+      - name: ended_at
+        description: The 'ended_at' column holds the timestamp when a coach assignment
+          was ended. [GenAI Description]
+      - name: ended_reason
+        description: The 'ended_reason' column provides information on why the coach
+          assignment was ended. [GenAI Description]
+      - name: last_appointment_id
+        description: This column stores the ID of the last appointment associated
+          with the coach assignment. [GenAI Description]
+      - name: next_appointment_id
+        description: The column 'next_appointment_id' stores the ID of the next appointment
+          assigned for this coach and member pair. [GenAI Description]
+      - name: role
+        description: This column lists the role of a user in a given coach assignment
+          (e.g. coach or member). [GenAI Description]
+      - name: specialist_vertical_uuid
+        description: This column stores the unique identifier for the specialist's
+          associated vertical. [GenAI Description]
+      - name: specialist_vertical_id
+        description: The specialist_vertical_id field identifies the vertical for
+          specialists in the US data. [GenAI Description]
+      - name: updated_at
+        description: The column 'updated_at' records the date and time the coaching
+          assignment was last updated. [GenAI Description]
+      - name: user_id
+        description: The 'user_id' column contains the ID of the member associated
+          with the coach assignment. [GenAI Description]
+      - name: user_unread_message_count
+        description: The 'user_unread_message_count' column stores the number of unread
+          messages sent by the user within the conversation related to the assignment.
+          [GenAI Description]
+      - name: member_last_active_at
+        description: This column holds the timestamp when the member of the coach
+          assignment was last active. [GenAI Description]
+      - name: coach_unread_message_count
+        description: The coach_unread_message_count column records the number of unread
+          messages sent by the coach in an assigned coaching relationship. [GenAI
+          Description]
+      - name: last_message_sent_at
+        description: This column provides the timestamp of the last message sent in
+          the ongoing conversation between the user and their assigned coach. [GenAI
+          Description]
+      - name: last_message_id
+        description: "'last_message_id' is an ID to the last message sent in the conversation\
+          \ associated with the coach assignment. [GenAI Description]"
+      - name: next_appointment_at
+        description: A timestamp representing the date and time of the next scheduled
+          appointment. [GenAI Description]
+      - name: group_coaching_registration_id
+        description: The 'group_coaching_registration_id' column stores the ID of
+          each member's group coaching registration. [GenAI Description]
+      - name: debrief360
+        description: The 'debrief360' column is a boolean flag indicating whether
+          a 360-degree debriefing was enabled for a given coach/member pairing. [GenAI
+          Description]
+

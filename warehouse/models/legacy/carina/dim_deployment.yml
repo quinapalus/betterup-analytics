@@ -1,0 +1,118 @@
+version: 2
+models:
+  - name: dim_deployment
+    description: >
+      Conformed deployment dimension
+
+    columns:
+      - name: deployment_key
+        description: Primary Key
+        tests:
+          - unique
+          - not_null
+
+      - name: app_track_id
+        description: Foreign key to the associated track.
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_tracks')
+              field: track_id
+
+      - name: track_name
+        description: Name of the associated track for the given deployment.
+        tests:
+          - not_null
+
+      - name: program_name
+        description: >
+          Concatenated Organization name and Program name from the associated track object
+          in the admin panel.
+        tests:
+          - not_null
+
+      - name: start_date
+        description: >
+          Truncated timestamp indicating the start date of the track, denoted as
+          the date of earliest track assignment creation.
+
+      - name: end_date
+        description: >
+          Truncated timestamp indicating the end date of the track, denoted as
+          the date of the latest (intended) track assignment ending time. This
+          field will be NULL if `ends_on` hasn't been populated in the Admin Panel
+          for any track assignments on that track.
+
+      - name: deployment_is_currently_active
+        description: >
+          Boolean denoting whether the track is active or not. Active means
+          that there is at least one open track assignment on the track.
+        tests:
+          - not_null
+          - accepted_values:
+              values: [true, false]
+
+      - name: open_member_count
+        description: >
+          Integer denoting the number of open track assignments associated with
+          the track.
+        tests:
+          - not_null
+
+      - name: engaged_member_count
+        description: >
+          Integer denoting the total number of members on track that had at least
+          one session completed.
+        tests:
+          - not_null
+
+      - name: is_revenue_generating
+        description: >
+          Boolean value indicating whether the associated deployment is revenue generating.
+        tests:
+          - not_null
+          - accepted_values:
+              values: [true, false]
+
+      - name: deployment_type
+        description: >
+          Deployment Type for the associated track object in the admin panel.
+        tests:
+          - not_null
+
+      - name: sfdc_prospective_opportunity_id
+        description: >
+          Foreign Key to the Salesforce opportunity for the associated track object in the
+          admin panel. Only populated for Sales Trials. Revenue-generating deployments are
+          linked with Salesforce opportunities through the Contracts model.
+
+      - name: member_orientation
+        description: >
+          String denoting whether the orientation was held by BetterUp, the partner, or a facilitator.
+          Can be NULL if no orientation was held or if there was no input before the
+          feature was introduced.
+        tests:
+          - accepted_values:
+              values: [betterup_driven, partner_driven, facilitator_driven]
+              severity: warn
+
+      - name: parent_accounting_category
+        description: >
+          String denoting the parent General Ledger accounting category.
+        tests:
+          - accepted_values:
+              values: [7551 MKTG Coaching Promotional, 6492 BU-Employee Coaching,
+                       6494 BU-F&F Coaching, 7120 R&D Other Expenses,
+                       5311 Customer Sessions, 7550 Sales Trials, N/A]
+
+      - name: admin_panel_url
+        description: >
+          URL to the track in the Admin Panel.
+        tests:
+          - not_null
+
+      - name: partner_panel_url
+        description: >
+          URL to the track in the Partner Panel.
+        tests:
+          - not_null

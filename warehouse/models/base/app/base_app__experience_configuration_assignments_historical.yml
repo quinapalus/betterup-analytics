@@ -1,0 +1,17 @@
+version: 2
+
+models:
+  - name: base_app__experience_configuration_assignments_historical
+    description: ""
+    columns:
+      - name: configurable_id
+      - name: configurable_type
+      - name: created_at
+      - name: id
+        tests:
+          - unique
+          - not_null
+      - name: template
+      - name: track_id
+      - name: updated_at
+      - name: name

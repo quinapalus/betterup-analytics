@@ -1,0 +1,52 @@
+version: 2
+models:
+  - name: stg_app__goal_actions
+    description: >
+      Application table containing goal action suggestions.
+      (application Object is "ObjectiveAction").
+
+    columns:
+      - name: goal_action_id
+        description: Primary key
+        tests:
+          - unique
+          - not_null
+
+      - name: description_i18n
+        description: A JSON object of description translations.
+        tests:
+          - not_null
+
+      - name: description
+        description: >
+          Description of the action (e.g. "Sharing my goal with a colleague,
+          friend, or family member"). Pulling the English version from the
+          localized JSON translations (description_i18n).
+        tests:
+          - not_null
+
+      - name: collaborator_description_i18n
+        description: A JSON object of collaborator description translations.
+        tests:
+          - not_null
+
+      - name: collaborator_description
+        description: >
+          Collaborator-facing Description of the action (e.g. "Sharing their
+          goal with a colleague, friend, or family member"). Pulling the
+          English version from the localized JSON translations
+          (description_i18n).
+        tests:
+          - not_null
+
+      - name: created_at
+        description: >
+          Time when the Rails object was created in UTC, i.e. when the
+          goal action was created.
+        tests:
+          - not_null
+
+      - name: updated_at
+        description: Time when the Rails object was updated in UTC.
+        tests:
+          - not_null

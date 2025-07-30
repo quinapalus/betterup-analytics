@@ -1,0 +1,24 @@
+version: 2
+
+sources:
+  - name: wkfw
+    database: raw
+    schema: "{{ 'airbyte_app_viva_staging' if env_var('DEPLOYMENT_ENVIRONMENT', '') == 'US Gov' else 'stitch_app_viva_staging' }}"
+    loader: "{{ 'airbyte' if env_var('DEPLOYMENT_ENVIRONMENT', '') == 'US Gov' else 'stitch' }}"
+
+
+# tables listed below must match the source (raw) table names
+    tables:
+      - name: admin_users
+      - name: assessment_configuration_constructs
+      - name: assessment_configurations
+      - name: assessment_item_options
+      - name: assessment_items
+      - name: assessments
+      - name: constructs
+      - name: construct_items
+      - name: scores
+      - name: themes
+      - name: users
+      - name: videos
+      - name: viva_user_profiles

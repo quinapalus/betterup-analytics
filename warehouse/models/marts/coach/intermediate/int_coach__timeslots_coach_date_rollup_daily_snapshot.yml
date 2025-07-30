@@ -1,0 +1,52 @@
+version: 2
+
+models:
+  - name: int_coach__timeslots_coach_date_rollup_daily_snapshot
+    description: >
+      Timeslots is the application table this is derived from.
+      This is a rollup at the coach and timeslot date level, so all timeslots aggregated by coach and date.
+      It is also a daily snapshot, so a historic as_of_date is in the grain.
+      Business context: Think of this int model as "upcoming coach timeslots by date"
+      which is a factor of coach availability / the supply of coach hours
+      More docs here: https://betterup.atlassian.net/wiki/spaces/DATA/pages/3345450158/Coach+Snapshot+Data+Model
+
+    columns:
+      - name: history_primary_key
+        description: "surrogate key of coach_id, timeslot_date, and as_of_date. This model is 1 row per coach per timeslot date per daily snapshot date"
+        tests:
+          - unique
+          - not_null
+
+      - name: coach_id
+        description: ""
+
+      - name: timeslot_date
+        description: ""
+
+      - name: as_of_date
+        description: ""
+
+      - name: total_available_minutes
+        description: ""
+
+      - name: total_available_hours
+        description: ""
+
+      - name: total_external_unavailable_minutes
+        description: ""
+
+      - name: total_external_unavailable_hours
+        description: ""
+
+      - name: total_timeslot_minutes
+        description: ""
+
+      - name: total_timeslot_hours
+        description: ""
+
+      - name: total_timeslot_minutes_minus_external
+        description: ""
+
+      - name: total_timeslot_hours_minus_external
+        description: ""
+

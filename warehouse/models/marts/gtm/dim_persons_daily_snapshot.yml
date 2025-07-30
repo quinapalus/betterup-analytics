@@ -1,0 +1,11 @@
+version: 2
+
+models:
+  
+  - name: dim_persons_daily_snapshot
+    meta:
+      owner: "xavier.mafe@betterup.co"
+    columns:
+      - name: "daily_snapshot_unique_key"
+        tests:
+          - unique

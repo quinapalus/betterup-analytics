@@ -1,0 +1,66 @@
+version: 2
+
+models:
+
+  - name: stg_jira__issues_snapshot
+    description: ""
+    columns:
+      - name: primary_key
+        description: "Unique surrogate key from jira_issue_id,valid_from and valid_to "
+        tests:
+          - unique
+          - not_null
+
+      - name: jira_issue_id
+        description: "Natural primary key for JIRA issues. Not unique for this model because it is a snapshot"
+
+      - name: jira_issue_key
+        description: Slug of the issue (e.g. MLAI-100)
+
+      - name: issue_type
+        description: Type of the issue (e.g. 'Bug', 'Task')
+
+      - name: status
+        description: The issue status (e.g. Closed)
+
+      - name: description
+        description: Description of the issue.
+
+      - name: assignee
+        description: Username of the individual assigned to the issue.
+
+      - name: creator
+        description: Who created the ticket
+
+      - name: impact
+        description: Estimated impact of the issue.
+        tests:
+          - accepted_values:
+              values: [Trivial, Minor, Major, Critical]
+      
+      - name: fiscal_quarter
+        description: BU Fiscal Quarter for Issue
+
+      - name: effort
+        description: Estimated effort of the issue.
+        tests:
+          - accepted_values:
+              values: [Xtra Small, Small, Medium, Large, Xtra Large]
+
+      - name: team
+        description: Name of the team that owns the issue.
+
+      - name: investment_category
+        description: Category that explains whether we are investing in improving or bringing something new or Keep the lights on or Productivity improvements.
+
+      - name: created_at
+        description: When the issue was created
+
+      - name: updated_at
+        description: When the issue was last updated
+
+      - name: due_date
+        description: When the issue is due.
+
+      - name: resolved_at
+        description: When the issue was resolved. Null if it is not resolved.

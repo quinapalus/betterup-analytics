@@ -1,0 +1,56 @@
+version: 2
+
+models:
+  - name: dbt__reference_population_derived_construct_scores
+    description: "Derived scores for reference populations"
+    columns:
+      - name: primary_key
+        description: ""
+        tests:
+          - unique
+          - not_null
+
+      - name: assessment_id
+        description: ""
+
+      - name: construct_key
+        description: ""
+
+      - name: name
+        description: ""
+
+      - name: label_i18n
+        description: ""
+
+      - name: construct_id
+        description: ""
+
+      - name: construct_reference_population_id
+        description: ""
+
+      - name: reference_population_id
+        description: ""
+
+      - name: reference_population_subgroup_id
+        description: ""
+
+      - name: reference_population_key
+        description: ""
+
+      - name: reference_population_subgroup_key
+        description: ""
+
+      - name: raw_score
+        description: ""
+
+      - name: raw_item_score_sum
+        description: ""
+
+      - name: score_mean
+        description: ""
+
+      - name: score_standard_deviation
+        description: ""
+
+      - name: scale_score
+        description: ""

@@ -1,0 +1,27 @@
+[tool.poetry]
+name = "bu-tap-looker"
+version = "0.1.0"
+description = ""
+authors = ["juslu-betterup <122490701+juslu-betterup@users.noreply.github.com>"]
+readme = "README.md"
+packages = [{include = "bu_tap_looker"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+python-dotenv = "^0.21.1"
+singer-python = "^5.13.0"
+looker-sdk = "^22.20.0"
+
+[tool.poetry.dev-dependencies]
+pytest = "^7.2.1"
+pytest-mock = "^3.10.0"
+pytest-cov = "^4.0.0"
+mock = "^5.0.1"
+
+[tool.poetry.scripts]
+bu-tap-looker = "bu_tap_looker:main"
+create-looker-configs = "bu_tap_looker.configs:create_looker_configs"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

@@ -1,0 +1,14 @@
+version: 2
+
+models:
+  - name: dim_plan_forecasted_retention_rates_by_month
+    meta:
+      owner: "adrian.lievano@betterup.co"
+    description: >
+      A table tracking all stripe plan retention rates X months from the creation month of various cohorts.
+    columns:
+      - name: _id
+        description: Primary key
+        tests:
+          - unique
+          - not_null

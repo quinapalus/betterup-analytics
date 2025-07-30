@@ -1,0 +1,60 @@
+version: 2
+
+models:
+  - name: dim_products
+    description: ""
+    columns:
+      - name: product_id
+        description: ""
+        tests:
+          - not_null
+          - unique
+
+      - name: product_uuid
+        description: ""
+
+      - name: coaching_cloud
+        description: ""
+
+      - name: created_at
+        description: ""
+
+      - name: updated_at
+        description: ""
+
+      - name: description
+        description: ""
+
+      - name: extended_network
+        description: ""
+
+      - name: name
+        description: ""
+
+      - name: on_demand
+        description: ""
+
+      - name: primary_coaching
+        description: ""
+
+      - name: salesforce_product_identifier
+        description: ""
+
+      - name: care
+        description: ""
+
+      - name: coaching_circles
+        description: ""
+
+      - name: workshops
+        description: ""
+
+      - name: sessions_per_month
+        description: ""
+
+      - name: coaching_circles_limit
+        description: ""
+
+      - name: product_group
+        description: ""
+

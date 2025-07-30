@@ -1,0 +1,28 @@
+version: 2
+
+sources:
+  - name: app_eu
+    database: raw
+    schema: "{{ 'airbyte_app' if env_var('DEPLOYMENT_ENVIRONMENT', '') == 'US Gov' else 'stitch_app_v2' }}"
+    loader: "{{ 'airbyte' if env_var('DEPLOYMENT_ENVIRONMENT', '') == 'US Gov' else 'stitch' }}"
+
+
+    # tables listed below must match the source (raw) table names
+    tables:
+      - name: coach_profiles
+      - name: assessments
+      - name: appointments
+      - name: billable_events
+      - name: coach_assignments
+      - name: product_subscription_assignments
+      - name: tracks
+      - name: track_assignments
+      - name: users
+
+  - name: analytics_eu_staging
+    database: analytics
+    schema: staging
+    loader: stitch
+
+    tables:
+      - name: int_coach__coach_pay_rates

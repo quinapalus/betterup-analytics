@@ -1,0 +1,15 @@
+version: 2
+
+models:
+  - name: base_app__reporting_group_records_historical
+    description: ""
+    columns:
+      - name: associated_record_id
+      - name: associated_record_type
+      - name: created_at
+      - name: id
+        tests:
+          - unique
+          - not_null
+      - name: reporting_group_id
+      - name: updated_at

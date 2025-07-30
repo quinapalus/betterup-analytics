@@ -1,0 +1,36 @@
+# Simple workflow for deploying Monte Carlo Monitors As Code
+name: Monte Carlo Deploy
+
+on:
+  # Runs on pushes targeting the default branch
+  push:
+    branches: ["main"]
+    paths:
+      - 'montecarlo/**.yml'
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+env:
+  MONTE_CARLO_RESOURCE_ID: ${{ secrets.MCD_DEFAULT_RESOURCE_ID }}
+  MCD_DEFAULT_API_ID: ${{ secrets.MCD_DEFAULT_API_ID }}
+  MCD_DEFAULT_API_TOKEN: ${{ secrets.MCD_DEFAULT_API_TOKEN }}
+
+jobs:
+  deploy-monte-carlo:
+    name: Deploy Monte Carlo
+
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: montecarlo
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Install Monte Carlo
+        run: pip install montecarlodata
+
+      - name: Apply Monitors
+        run: |
+          montecarlo monitors apply --namespace ${{ secrets.MC_MONITORS_NAMESPACE }} --auto-yes

@@ -1,0 +1,402 @@
+purpose:
+  label: Purpose
+  overview: "Purpose is the belief that our work is important and that we are contributing to a mission that is personally meaningful."
+  description: "Your strong sense of purpose makes your job feel more like a calling than a career. This helps you stay motivated, focused, and brings a level of meaning and satisfaction that permeates your life. Some traits associated with this strength include:"
+  features:
+    - Pride in your work and your organization
+    - A desire to contribute to your organization’s mission
+    - The belief that what you do is good for the world
+  mean: 3.430357143
+  std_dev: 1.167742857
+  tags:
+    - whole_person
+    - thriving
+    - centered
+    - purpose
+engagement:
+  label: Engagement
+  overview: "Engagement is being personally connected, motivated, and energized at work."
+  description: "You are immersed in your work. You find your work stimulating, which keeps you focused and allows you to sustain performance over the long-haul. Highly engaged individuals tend to:"
+  features:
+    - Bring a strong personal energy to their role
+    - Have a strong connection to and are highly motivated by their work
+    - Have high levels of self-esteem, productivity and job satisfaction
+  mean: 3.569357143
+  std_dev: 1.097307143
+  tags:
+    - whole_person
+    - thriving
+    - centered
+    - engagement
+burnout:
+  label: Energy
+  overview: "When we experience energy we find our work invigorating and don’t often feel drained or depleted."
+  description: "You have vigor and energy for your work, and don’t often feel depleted. This helps you sustain high performance and invigorates those around you. Those with energy as a strength typically possess:"
+  features:
+    - Stamina and motivation for sustained performance at work
+    - The ability to avoid potential negative impacts from burnout, like poor physical health and feeling emotionally drained
+    - Commitment to performing well in their role
+  mean: 3.362357143
+  std_dev: 1.258364286
+  tags:
+    - whole_person
+    - thriving
+    - centered
+    - burnout
+stress:
+  label: Calm
+  overview: "Calm is feeling balanced despite the trials and challenges of our day-to-day lives."
+  description: "You are calm and centered, which is a testament to your ability to cope with stress. You take care of yourself, so that you can perform at your best. People with the strength of calm have been found to have increased focus, well-being and physical health.  You may find you:"
+  features:
+    - Are able to stay focused and keep important items top of mind
+    - Are aware of your stress levels and how to manage them
+    - Know how to channel stress effectively for performance
+  mean: 3.297571429
+  std_dev: 1.2212
+  tags:
+    - whole_person
+    - thriving
+    - centered
+    - stress
+focus:
+  label: Focus
+  overview: "Focus is the ability to ignore distractions, cancel noise, and sustain attention on a single task."
+  description: "You can tune in, ignore distractions and cancel noise. Strong and steady, you are able to stay on a single task, which helps you work productively and get a lot done. You might find that you:"
+  features:
+    - Are able to keep your mind from wandering
+    - Focus on the most important tasks at hand
+    - Consider aspects of your job to be highly stimulating
+  mean: 3.6005
+  std_dev: 0.9323642857
+  tags:
+    - whole_person
+    - thriving
+    - aware
+    - focus
+flow:
+  label: Flow
+  overview: "Flow is the experience of becoming so fully immersed in our work that we lose track of time."
+  description: >
+    You have the ability to get "in the zone" at work. Balancing your skills with the challenges you take 
+    on allows you to become fully immersed in your work, be creative, and love what you do. Those with a flow as a strength:
+  features:
+    - Can focus for long periods of time on a single project
+    - Might lose track of time when they’re particularly absorbed
+    - Enjoy periods of uninterrupted work
+  mean: 3.208857143
+  std_dev: 1.0249
+  tags:
+    - whole_person
+    - thriving
+    - aware
+    - flow
+values:
+  label: Values
+  overview: "Values are the core beliefs that guide our decisions and how we choose to live our lives."
+  description: "Your values are central to who you are and how you operate in the world. Your integrity makes you a strong role model and garners respect from others.  People with a strength in values often:"
+  features:
+    - Feel grounded in very strong beliefs and principals
+    - Use values to drive decisions at work
+    - Are invested in their work and its outcomes
+  mean: 4.308571429
+  std_dev: 0.6715714286
+  tags:
+    - whole_person
+    - thriving
+    - aware
+    - values
+mindfulness:
+  label: Mindfulness
+  overview: "Mindfulness is attending to the present moment rather than the past or future."
+  description: "You have the ability to focus in and notice what's going on in the present moment. Instead of dwelling in the past, or worrying too much about the future, you tune into to what's happening right now—making you more perceptive, engaged and balanced. Those strong in Mindfulness often have:"
+  features:
+    - An empathetic approach to helping others through tough situations
+    - Skills to reframe stressful situations into manageable challenges
+    - Think clearly and calmly, even under pressure
+  mean: 3.1165
+  std_dev: 1.104357143
+  tags:
+    - whole_person
+    - thriving
+    - aware
+    - mindfulness
+emotional_regulation:
+  label: Emotional Regulation
+  overview: "Emotional regulation is the ability to effectively manage our emotional states, particularly when emotions run high."
+  description: "You have the ability to manage your emotions so that they work with you, not against you. This allows you to remain objective when emotions bubble up and connect with others who see you as a source of stability. You may find that you:"
+  features:
+    - Acknowledge and address negative emotions in a positive way
+    - Are able to maintain positive relationships despite receiving negative feedback
+    - Take negative situations and reframe in a positive light
+  mean: 3.608785714
+  std_dev: 1.010071429
+  tags:
+    - whole_person
+    - thriving
+    - aware
+    - emotional_regulation
+resilience:
+  label: Resilience
+  overview: "Resilience is the ability to bounce back from setbacks, stress, and unexpected events."
+  description: "Where others might falter, you bounce back from setbacks. In fact, you tend to perform at your best in the face of adversity. Buoyed by your resilience, you adapt and excel, finding new ways to accomplish your goals despite obstacles. People who have high resilience may:"
+  features:
+    - Overcome setbacks quickly, without dwelling on issues
+    - Readily try new tactics when unsuccessful at first
+    - Persevere through challenges and consistently work towards goals
+  mean: 3.577642857
+  std_dev: 0.9394071429
+  tags:
+    - whole_person
+    - thriving
+    - agile
+    - resilience
+growth_mindset:
+  label: Growth Mindset
+  overview: "Growth mindset is the the extent to which we value learning and being challenged."
+  description: "You believe that if you put in the time and effort, you can develop the skills you need to succeed. People with a growth mindset tend to achieve more than those with a Fixed Mindset, because they put more into learning. Those with growth mindset:"
+  features:
+    - Believe abilities are developable and not something you are born with
+    - See challenges as opportunities for growth
+    - Learn from feedback
+  mean: 3.92
+  std_dev: 0.8497785714
+  tags:
+    - whole_person
+    - thriving
+    - agile
+    - growth_mindset
+sense_of_control:
+  label: Sense of Control
+  overview: "Sense of control is the belief that we are in control of what happens to us and can achieve what we want in life."
+  description: "You feel a strong sense of control in your life, and believe that your mindset, determination and actions, rather than outside factors, drive your success. Your sense of control gives you the confidence to take risks and follow through so you can achieve what you want in life. You might typically:"
+  features:
+    - Feel that you can achieve challenging goals
+    - Confidently navigate the day to day with a high level of self-esteem
+    - Seek goals that constantly raise the bar for performance
+  mean: 3.872285714
+  std_dev: 0.8232142857
+  tags:
+    - whole_person
+    - thriving
+    - agile
+    - sense_of_control
+risk_tolerance:
+  label: Risk Tolerance
+  overview: "Risk tolerance is the willingness to risk mistakes and failure in pursuit of innovation and growth."
+  description: 
+    "You’re willing to take a chance—despite the possibility of a negative outcome. You believe that to reach a major goal, failure is an acceptable risk in pursuit of growth. Because you’re willing to learn from all outcomes, you take leaps to accomplish what others would think impossible. People with strength in risk tolerance commonly:"
+  features:
+    - See opportunities where others see potential failure
+    - Have lower anxiety (particularly in the face of risk)
+    - Can decide and act without requiring the total picture
+  mean: 4.283142857
+  std_dev: 0.6378428571
+  tags:
+    - whole_person
+    - thriving
+    - agile
+    - risk_tolerance
+open_communication:
+  label: Open Communication
+  overview: "Open communication is the ability to successfully facilitate open dialogue and information sharing among your coworkers."
+  description: "You are a catalyst for open communication. By helping to create an environment where ideas are shared freely, you help promote innovation and performance. Actions associated with facilitating open communication include:"
+  features:
+    - Enabling candid discussions of problems and tough issues
+    - Encouraging an environment of direct feedback, information sharing, and support
+    - Initiating conversations related to improving processes
+  mean: 3.898499286
+  std_dev: 0.7611285714
+  mean_long_form: 3.990428571
+  std_dev_long_form: 0.78105
+  tags:
+    - whole_person
+    - inspiring
+    - includes
+    - open_communication
+participation:
+  label: Participation
+  overview: "Participation is getting everyone to speak up and contribute so that the best ideas emerge."
+  description: "You are skilled at encouraging participation to make sure all voices are heard. This creates a culture of openness and lets ideas shine through from all team members.  More ideas means better ideas and better team performance. You might be known in your organization to:"
+  features:
+    - Involve individuals in decisions that impact them
+    - Make sure others feel comfortable participating in discussions
+    - Encourage everyone to share their ideas
+  mean: 3.823047143
+  std_dev: 0.7957214286
+  mean_long_form: 3.899428571
+  std_dev_long_form: 0.9012071429
+  tags:
+    - whole_person
+    - inspiring
+    - includes
+    - participation
+positive_relationships:
+  label: Building Relationships
+  overview: "Positive relationships are trusting personal relationships with co-workers."
+  description: "You develop strong personal relationships built on trust and mutual understanding. Studies show that people who maintain these positive relationships create an environment that supports creativity, learning and commitment.  You might find that you tend to:"
+  features:
+    - Get to know coworkers on a personal level
+    - Develop a high level of trust with coworkers
+    - Show an interest in other’s well-being
+  mean: 3.831569286
+  std_dev: 0.8807428571
+  mean_long_form: 3.948214286
+  std_dev_long_form: 0.9091214286
+  tags:
+    - whole_person
+    - inspiring
+    - includes
+    - positive_relationships
+trust_climate:
+  label: Trust Climate
+  overview: "Trust climate is a working environment where everyone feels they belong and can be honest."
+  description: "You create a trusting atmosphere, where people are comfortable taking risks and being their true selves. A trusting team environment has the ability to allow all team members to perform at their best.  You may be motivated to:"
+  features:
+    - Support a cohesive team environment
+    - Show openness to feedback and coworkers’ recommendations
+    - Create an environment where people are comfortable to admit their mistakes - perhaps by first sharing your own.
+  mean: 3.941802857
+  std_dev: 0.7908428571
+  mean_long_form: 3.997285714
+  std_dev_long_form: 0.7222642857
+  tags:
+    - whole_person
+    - inspiring
+    - includes
+    - trust_climate
+inspire:
+  label: Motivating
+  overview: "Motivating is getting others excited about their work and cultivating a sense of passion and purpose in others."
+  description: "You’re motivated by your work, and your passion is contagious. Your ability to get others excited about their work helps keep your team moving towards their goals. Some common skills of strong motivators include:"
+  features:
+    - Express energy and passion for your work to others
+    - Communicate an inspiring vision for the future
+    - Share the core values that drive your behavior and decisions
+  mean: 3.541747143
+  std_dev: 0.9869928571
+  mean_long_form: 3.493357143
+  std_dev_long_form: 1.01555
+  tags:
+    - whole_person
+    - inspiring
+    - elevates
+    - inspire
+coaching:
+  label: Coaching
+  overview: "Coaching is providing insight and resources to support the growth and development of others."
+  description: "You guide and support others’ development. You have the ability to provide insight and resources to support the growth and development of others, guiding, correcting and encouraging so they can be their best. The best managers are great coaches, so you’re well placed to lead a team. This might mean you:"
+  features:
+    - Provide opportunities for others to learn and develop
+    - Encourage others to set performance and career goals
+    - Ask open-ended questions to stimulate others’ thinking
+  mean: 3.502046429
+  std_dev: 0.9508714286
+  mean_long_form: 3.433285714
+  std_dev_long_form: 1.032535714
+  tags:
+    - whole_person
+    - inspiring
+    - elevates
+    - coaching
+recognizing:
+  label: Recognizing
+  overview: "Recognizing is celebrating and rewarding the high quality work of others."
+  description: "You are good at recognizing and celebrating the efforts of others. Your encouragement keeps motivation high and inspires others to go the extra mile, amping productivity and making others feel good about their work.  This might include:"
+  features:
+    - Acknowledging individuals when they produce high-quality work
+    - Celebrating team milestones and achievements
+    - Encouraging those who go the above and beyond in their work
+  mean: 4.194903571
+  std_dev: 0.6982285714
+  mean_long_form: 4.220142857
+  std_dev_long_form: 0.7926
+  tags:
+    - whole_person
+    - inspiring
+    - elevates
+    - recognizing
+ownership:
+  label: Encouraging Ownership
+  overview: "Encouraging ownership is allowing others to make decisions and to control how they do their work."
+  description: "You encourage others to take ownership, allowing them to decide how best to complete their work. Your ability to support others in this way is highly motivating for driven individuals, who appreciate the latitude you give them to ‘run with it’. You might typically:"
+  features:
+    - Enable others to determine the best way to complete their job requirements
+    - Allow autonomy so others can make decisions on their own
+    - Structure work so that individuals have flexibility to achieve in their own way
+  mean: 3.902517857
+  std_dev: 0.7967071429
+  mean_long_form: 3.990785714
+  std_dev_long_form: 0.8580785714
+  tags:
+    - whole_person
+    - inspiring
+    - elevates
+    - ownership
+alignment:
+  label: Alignment
+  overview: "Alignment is the ability to coordinate people and resources so that everyone is working towards a common goal."
+  description: "You have the ability to strategically align people, resources, and goals. Seeking to understand different perspectives and objectives, you provide clarity and resources to others so they can follow through on a common goal. People in your organization may look to you to:"
+  features:
+    - Provide clarity of roles, responsibilities, and outcomes
+    - Ensure employees have the information and resources they need to be successful
+    - Get buy-in from key stakeholders
+  mean: 3.96342
+  std_dev: 0.8007285714
+  mean_long_form: 4.133357143
+  std_dev_long_form: 0.7740571429
+  tags:
+    - whole_person
+    - inspiring
+    - drives
+    - alignment
+problem_solving:
+  label: Problem Solving
+  overview: "Problem Solving is the ability to resolve problems creatively and strategically by collecting information and identifying the best path forward."
+  description: "You are able to look strategically at problems and identify the best path forward, balancing tradeoffs and incorporating varied perspectives. This makes you a valuable planner, and indispensable when your team veers off track. Those strong in problem solving typically:"
+  features:
+    - Encourage open discussions to find the best possible solution to problems
+    - Develop an effective strategy to achieve results
+    - Collect all relevant information before making decisions
+  mean: 3.825541429
+  std_dev: 0.8256
+  mean_long_form: 4.03
+  std_dev_long_form: 0.7697142857
+  tags:
+    - whole_person
+    - inspiring
+    - drives
+    - problem_solving
+feedback:
+  label: Feedback
+  overview: "Feedback is the ability to communicate key information to help track progress and improve the performance of others."
+  description: "You provide constructive and accurate feedback in a way that supports growth. You understand that people are motivated to perform better when they receive regular feedback that focuses on opportunities. Others may depend on you to:"
+  features:
+    - Provide regular, actionable feedback that helps improve team member performance
+    - Help others identify and leverage their strengths
+    - Help your organization or team track progress toward goals
+  mean: 3.936745
+  std_dev: 0.75375
+  mean_long_form: 3.901142857
+  std_dev_long_form: 0.8900785714
+  tags:
+    - whole_person
+    - inspiring
+    - drives
+    - feedback
+influence:
+  label: Influence
+  overview: "Influence is the ability to get other people on board with your ideas using effective persuasive strategies."
+  description: "You win others over to your side. Your ability to use logic and persuasion to get people on board with your ideas makes you a respected team member, and helps you garner resources for your projects. You might:"
+  features:
+    - Use logic and evidence to persuade others
+    - Communicate how proposed ideas align with outcomes
+    - Get others’ input and appeal to values and ideals to get others on board
+  mean: 4.036862857
+  std_dev: 0.6683214286
+  mean_long_form: 4.046214286
+  std_dev_long_form: 0.7308071429
+  tags:
+    - whole_person
+    - inspiring
+    - drives
+    - influence

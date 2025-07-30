@@ -1,0 +1,25 @@
+version: 2
+
+models:
+  - name: dbt__derived_construct_benchmark_scores
+    description: ""
+    columns:
+      - name: primary_key
+        tests:
+          - unique
+          - not_null
+
+      - name: construct_key
+        description: ""
+        
+      - name: whole_person_model_version
+        description: ""
+
+      - name: industry
+        description: ""
+
+      - name: employee_level
+        description: ""
+
+      - name: scale_score_mean
+        description: ""

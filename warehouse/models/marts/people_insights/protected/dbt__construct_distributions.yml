@@ -1,0 +1,67 @@
+version: 2
+
+models:
+  - name: dbt__construct_distributions
+    description: >
+      This intermediate model denormalizes the data in the following app staging tables:
+      construct_reference_populations, constructs, reference_populations, and reference_population_subgroups.
+      The base table is construct_reference_populations (science of psychometric score means, SDs by populations),
+      then the other dimensional tables are joined to enrich the construct_reference_populations data with useful details.
+      Assessment ERD reference: https://betterup.atlassian.net/wiki/spaces/DATA/pages/3156443540/Assessments+Schema
+    columns:
+      - name: construct_reference_population_id
+        description: ""
+        tests:
+          - unique
+          - not_null
+
+      - name: construct_reference_population_uuid
+        description: ""
+        tests:
+          - unique
+          - not_null
+
+      - name: construct_id
+        description: ""
+
+      - name: construct_key
+        description: ""
+
+      - name: name
+        description: ""
+
+      - name: label_i18n
+        description: ""
+
+      - name: reference_population_id
+        description: ""
+
+      - name: reference_population_uuid
+        description: ""
+
+      - name: reference_population_key
+        description: ""
+
+      - name: reference_population_subgroup_id
+        description: ""
+
+      - name: reference_population_subgroup_key
+        description: ""
+
+      - name: score_mean
+        description: ""
+
+      - name: score_standard_deviation
+        description: ""
+
+      - name: scale_min_score
+        description: ""
+
+      - name: scale_max_score
+        description: ""
+
+      - name: scale_mean
+        description: ""
+
+      - name: scale_standard_deviation
+        description: ""

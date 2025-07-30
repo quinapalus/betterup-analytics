@@ -1,0 +1,43 @@
+version: 2
+
+models:
+  - name: int_app__whole_person_v2_subdimensions
+    description: "Whole person model subdimensions specifically for WPM version 2.0"
+    columns:
+      - name: _unique
+        tests:
+          - unique
+          - not_null
+      - name: whole_person_model_version
+        description: ""
+
+      - name: construct_id
+        description: ""
+
+      - name: subdimension_key
+        description: ""
+
+      - name: name
+        description: ""
+
+      - name: category
+        description: ""
+
+      - name: category_key
+        description: ""
+
+      - name: domain
+        description: ""
+
+      - name: domain_key
+        description: ""
+
+      - name: dimension
+        description: ""
+
+      - name: dimension_key
+        description: ""
+
+      - name: visible_to_partner
+        description: ""
+        

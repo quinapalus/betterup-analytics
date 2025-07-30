@@ -1,0 +1,28 @@
+version: 2
+
+models:
+  - name: int_app__derived_construct_benchmark_scores_reference_population_1
+    description: >
+      Documentation on benchmark-related dbt models here:
+      https://betterup.atlassian.net/wiki/spaces/DATA/pages/3145957413/Benchmarks
+    columns:
+      - name: _unique
+        description: "Surrogate key created from key, industry, level"
+        tests:
+          - not_null
+          - unique
+         
+      - name: key
+        description: ""
+
+      - name: whole_person_model_version
+        description: ""
+
+      - name: industry
+        description: ""
+
+      - name: level
+        description: ""
+
+      - name: mean
+        description: ""

@@ -1,0 +1,284 @@
+version: 2
+
+models:
+  - name: stg_sfdc__tasks
+    description: "A model representing the Tasks data in Salesforce, including associated attributes and relationships [GenAI Description]"
+    columns:
+      - name: task_id
+        description: "A unique identifier for each task in Salesforce [GenAI Description]"
+        tests:
+          - unique
+          - not_null
+
+      - name: call_disposition
+        description: "The result or outcome of a call associated with the task [GenAI Description]"
+
+      - name: data_quality_description_c
+        description: "A description of the data quality for the task [GenAI Description]"
+
+      - name: first_meeting_scheduled_c
+        description: "A boolean flag indicating if the first meeting has been scheduled for the task [GenAI Description]"
+
+      - name: last_modified_by_id
+        description: "A unique identifier representing the user or system that last modified the task [GenAI Description]"
+
+      - name: recurrence_end_date_only
+        description: "The end date for a recurring task, without the time component [GenAI Description]"
+
+      - name: recurrence_type
+        description: "The type of recurrence pattern for the task, if applicable [GenAI Description]"
+
+      - name: enablement_subject_c
+        description: "The subject of an enablement task item related to the task [GenAI Description]"
+
+      - name: owner_id
+        description: "A unique identifier representing the owner of the task in Salesforce [GenAI Description]"
+
+      - name: is_closed
+        description: "A boolean flag indicating if the task is closed [GenAI Description]"
+
+      - name: pre_opportunity_sbs_involvement_c
+        description: "A field capturing pre-opportunity involvement details for the task [GenAI Description]"
+
+      - name: priority
+        description: "The priority level assigned to the task [GenAI Description]"
+
+      - name: status
+        description: "The current status of the task [GenAI Description]"
+
+      - name: subject
+        description: "The subject or title of the task as seen in the Salesforce user interface [GenAI Description]"
+
+      - name: type
+        description: "The type or category of the task [GenAI Description]"
+
+      - name: what_count
+        description: "The count of records related to the task, captured in the 'What' field [GenAI Description]"
+
+      - name: what_id
+        description: "A unique identifier for the record that the task is related to in Salesforce [GenAI Description]"
+
+      - name: recurrence_time_zone_sid_key
+        description: "The time zone ID key associated with the recurrence pattern of the task [GenAI Description]"
+
+      - name: data_quality_score_c
+        description: "A score representing the quality of the data in the task [GenAI Description]"
+
+      - name: driver_executor_attended_the_meeting_c
+        description: "A boolean flag indicating if the driver or executor attended the associated meeting for the task [GenAI Description]"
+
+      - name: last_modified_date
+        description: "The date and time when the task was last modified in Salesforce [GenAI Description]"
+
+      - name: who_count
+        description: "The count of records related to the task, captured in the 'Who' field [GenAI Description]"
+
+      - name: created_date_c
+        description: "The created date of the task, as a custom field [GenAI Description]"
+
+      - name: evp_action_c
+        description: "The executive vice president's action plan, as a custom field in the task [GenAI Description]"
+
+      - name: influencer_attended_the_meeting_c
+        description: "A boolean flag indicating if an influencer attended the associated meeting for the task [GenAI Description]"
+
+      - name: is_recurrence
+        description: "A boolean flag indicating if the task is a recurring task [GenAI Description]"
+
+      - name: call_duration_in_seconds
+        description: "The duration of the associated call for the task, measured in seconds [GenAI Description]"
+
+      - name: decision_maker_attended_the_meeting_c
+        description: "A boolean flag indicating if the decision maker attended the associated meeting for the task [GenAI Description]"
+
+      - name: uuid_ts
+        description: "A unique identifier along with a timestamp to track changes in task records [GenAI Description]"
+
+      - name: call_object
+        description: "The object or entity associated with the call related to the task in Salesforce [GenAI Description]"
+
+      - name: enablement_task_sequence_c
+        description: "The sequence or order of enablement tasks related to the task [GenAI Description]"
+
+      - name: is_reminder_set
+        description: "A boolean flag indicating if a reminder has been set for the task [GenAI Description]"
+
+      - name: recurrence_activity_id
+        description: "A unique identifier of the activity associated with the recurring task [GenAI Description]"
+
+      - name: task_subtype
+        description: "A sub-type or additional classification of the task [GenAI Description]"
+
+      - name: enablement_link_c
+        description: "A custom field capturing an enablement link associated with the task [GenAI Description]"
+
+      - name: first_meeting_rescheduled_c
+        description: "A boolean flag indicating if the first meeting related to the task was rescheduled [GenAI Description]"
+
+      - name: in_person_meeting_c
+        description: "A boolean flag indicating if the meeting associated with the task was in-person [GenAI Description]"
+
+      - name: overall_quality_score_c
+        description: "A custom field capturing the overall quality score for the task [GenAI Description]"
+
+      - name: recurrence_interval
+        description: "The interval between occurrences of the task, if applicable [GenAI Description]"
+
+      - name: recurrence_start_date_only
+        description: "The start date for a recurring task, without the time component [GenAI Description]"
+
+      - name: who_id
+        description: "A unique identifier representing the individual the task is related to [GenAI Description]"
+
+      - name: account_qbr_meeting_c
+        description: "A custom field capturing the account QBR meeting details for the task [GenAI Description]"
+
+      - name: description
+        description: "A brief description or additional notes about the task [GenAI Description]"
+
+      - name: reminder_date_time
+        description: "The date and time when a reminder is set to be triggered for the task [GenAI Description]"
+
+      - name: activity_date
+        description: "The date when the activity or event related to the task took place [GenAI Description]"
+
+      - name: call_type
+        description: "A categorical description of the call type associated with the task [GenAI Description]"
+
+      - name: created_by_id
+        description: "A unique identifier representing the user or system that created the task [GenAI Description]"
+
+      - name: first_meeting_c
+        description: "A custom field capturing details about the first meeting related to the task [GenAI Description]"
+
+      - name: received_at
+        description: "The timestamp when the task was received or recorded in the system [GenAI Description]"
+
+      - name: system_modstamp
+        description: "The timestamp when any modification was made to the task data by the system, used for internal tracking and auditing [GenAI Description]"
+
+      - name: first_meeting_cancelled_c
+        description: "A boolean flag indicating if the first meeting related to the task was cancelled [GenAI Description]"
+
+      - name: who_will_be_evaluating_c
+        description: "A custom field capturing details on who will be evaluating the task [GenAI Description]"
+
+      - name: account_id
+        description: "A unique identifier representing the account the task is associated with in Salesforce [GenAI Description]"
+
+      - name: record_type_id
+        description: "A unique identifier representing the record type of the task in Salesforce [GenAI Description]"
+
+      - name: social_selling_generated_c
+        description: "A boolean flag indicating if the task was generated by social selling activities [GenAI Description]"
+
+      - name: created_date
+        description: "The date and time when the task was created in Salesforce [GenAI Description]"
+
+      - name: enablement_rationale_c
+        description: "A custom field capturing the rationale or reasoning behind the enablement tasks [GenAI Description]"
+
+      - name: is_archived
+        description: "A boolean flag indicating if the task is archived [GenAI Description]"
+
+      - name: is_deleted
+        description: "A boolean flag indicating if the task has been deleted from the system [GenAI Description]"
+
+      - name: phase_c
+        description: "A custom field capturing the phase or stage of the task [GenAI Description]"
+
+      - name: recurrence_day_of_month
+        description: "The day of the month when a recurring task is set to occur [GenAI Description]"
+
+      - name: is_high_priority
+        description: "A boolean flag indicating if the task is marked as high priority [GenAI Description]"
+
+      - name: contact_or_lead_id_c
+        description: "A custom field containing the unique identifier of the contact or lead associated with the task [GenAI Description]"
+
+      - name: opp_amount_c
+        description: "A custom field capturing the opportunity amount associated with the task [GenAI Description]"
+
+      - name: contact_id_18_digit_c
+        description: "A custom field containing the 18-digit unique identifier of the contact associated with the task [GenAI Description]"
+
+      - name: manager_c
+        description: "A custom field capturing the manager details for the task [GenAI Description]"
+
+      - name: groove_email_sent_at_c
+        description: "A custom field capturing the timestamp when an email was sent through the Groove system for the task [GenAI Description]"
+
+      - name: da_scoop_composer_times_opened_c
+        description: "A custom field capturing the number of times the Da Scoop Composer was opened for the task [GenAI Description]"
+
+      - name: da_scoop_composer_v_cal_iid_c
+        description: "A custom field capturing the Da Scoop Composer V-Cal IID for the task [GenAI Description]"
+
+      - name: da_scoop_composer_times_clicked_c
+        description: "A custom field capturing the number of times the Da Scoop Composer was clicked for the task [GenAI Description]"
+
+      - name: global_account_manager_c
+        description: "A custom field capturing the Global Account Manager details for the task [GenAI Description]"
+
+      - name: expected_revenue_c
+        description: "A custom field capturing the expected revenue associated with the task [GenAI Description]"
+
+      - name: documents_attached_to_opp_c
+        description: "A custom field indicating if documents are attached to the opportunity associated with the task [GenAI Description]"
+
+      - name: flow_name_c
+        description: "A custom field capturing the name of the flow for the task [GenAI Description]"
+
+      - name: groove_inbound_response_time_seconds_c
+        description: "A custom field capturing the response time for inbound communications through the Groove system, measured in seconds [GenAI Description]"
+
+      - name: da_scoop_composer_last_opened_date_c
+        description: "A custom field capturing the date when the Da Scoop Composer was last opened for the task [GenAI Description]"
+
+      - name: da_scoop_composer_v_cal_uid_c
+        description: "A custom field capturing the Da Scoop Composer V-Cal UID for the task [GenAI Description]"
+
+      - name: assigned_to_region_c
+        description: "A custom field capturing the region to which the task is assigned [GenAI Description]"
+
+      - name: da_scoop_composer_is_created_by_groove_c
+        description: "A custom field indicating if the Da Scoop Composer associated with the task was created by the Groove system [GenAI Description]"
+
+      - name: da_scoop_composer_last_modified_date_c
+        description: "A custom field capturing the date when the Da Scoop Composer was last modified for the task [GenAI Description]"
+
+      - name: groove_sent_from_flow_c
+        description: "A custom field indicating if the task was sent from the Groove flow [GenAI Description]"
+
+      - name: da_scoop_composer_mirror_in_owner_s_calendar_c
+        description: "A custom field indicating if the Da Scoop Composer associated with the task mirrors the owner's calendar [GenAI Description]"
+
+      - name: da_scoop_composer_replied_c
+        description: "A custom field indicating if the recipient replied to the Da Scoop Composer for the task [GenAI Description]"
+
+      - name: steer_co_del_c
+        description: "A custom field capturing the Steer Co Del details for the task [GenAI Description]"
+
+      - name: template_name_c
+        description: "A custom field capturing the template name associated with the task [GenAI Description]"
+
+      - name: opp_owner_region_c
+        description: "A custom field capturing the region of the opportunity owner for the task [GenAI Description]"
+
+      - name: opp_stage_c
+        description: "A custom field capturing the stage of the opportunity associated with the task [GenAI Description]"
+
+      - name: qualified_by_c
+        description: "A custom field capturing details about who qualified the task [GenAI Description]"
+
+      - name: opp_forecast_c
+        description: "A custom field capturing the forecast of the opportunity associated with the task [GenAI Description]"
+
+      - name: fm_opportunity_c
+        description: "A custom field capturing the FM opportunity details for the task [GenAI Description]"
+
+      - name: opp_type_c
+        description: "A custom field capturing the type of the associated opportunity for the task [GenAI Description]"
+
+      - name: notes_and_observations_c
+        description: "A custom field containing notes and observations related to the task [GenAI Description]"

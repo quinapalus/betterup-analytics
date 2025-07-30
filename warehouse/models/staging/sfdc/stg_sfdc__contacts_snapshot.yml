@@ -1,0 +1,12 @@
+version: 2
+
+models:
+  - name: stg_sfdc__contacts_snapshot
+    columns:
+      - name: history_primary_key
+        tests:
+          - unique
+          - not_null
+      - name: sfdc_contact_id
+        tests:
+          - not_null

@@ -1,0 +1,19 @@
+version: 2
+
+models:
+  - name: dim_coach_application_funnels
+    description: "Application funnels. A funnel is basically a position that a coach applies for. 
+                  We have a funnel for Lead, a seperate funnel for care and additional funnels in the future.
+                  The grain is one row per funnel"
+    columns:
+      - name: funnel_id
+        description: "Unique identifier for Funnels"
+        tests:
+          - not_null
+          - unique
+
+      - name: funnel_title
+        description: "Name of the funnel"
+
+      - name: is_active_funnel
+        description: "True if funnel is active, false if not"

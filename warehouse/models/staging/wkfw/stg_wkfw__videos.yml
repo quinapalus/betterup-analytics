@@ -1,0 +1,38 @@
+version: 2
+
+models:
+  - name: stg_wkfw__videos
+    description: The stg_wkfw__videos DBT model stores data related to videos, such
+      as video_id, vimeo_id, title, description, created_at, updated_at, and publish_date.
+      It serves as a staging point for further data processing and analytics. [GenAI
+      Description]
+    columns:
+      - name: video_id
+        description: The video_id column contains the unique identifier for each video.
+          [GenAI Description]
+        tests:
+          - not_null
+          - unique
+
+      - name: vimeo_id
+        description: The 'vimeo_id' column contains the unique identifier of each
+          video retrieved from the Vimeo API. [GenAI Description]
+
+      - name: title
+        description: The 'title' column stores the title of a video. [GenAI Description]
+
+      - name: description
+        description: This column holds a description of a video, including details
+          of the video's content. [GenAI Description]
+
+      - name: created_at
+        description: The column 'created_at' stores the datetime when the video was
+          first created. [GenAI Description]
+
+      - name: updated_at
+        description: The 'updated_at' column contains a timestamp representing the
+          date and time the video was last updated. [GenAI Description]
+
+      - name: publish_date
+        description: "'publish_date' is the date/time the video was published. [GenAI\
+          \ Description]"

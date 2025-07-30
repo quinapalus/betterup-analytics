@@ -1,0 +1,91 @@
+version: 2
+models:
+  - name: fact_coach_nps_assessment_response
+    description: >
+      Fact table that provides both quantitative and qualitative response for each coach NPS assessment, along with the same
+      for the preceding NPS assessment, if such exists. Grain is one row per assessment.
+
+    columns:
+      - name: date_key
+        description: Foreign key to conformed Date dimension.
+
+      - name: coach_app_coach_id
+        description: Foreign key to the associated coach.
+
+      - name: coach_raw_promoter_score
+        description: >
+          Coach raw promoter score.
+
+      - name: coach_net_promoter_score
+        description: >
+          Coach net promoter score.
+
+      - name: coach_qualitative_feedback
+        description: >
+          Coach qualitative feedback in the NPS assessment. NULL if the coach did not provide
+          any feedback.
+
+      - name: coach_net_promoter_score_category
+        description: >
+          Sanitized response category based on the coach response. For NPS items,
+          response categories are "Promoter", "Neutral", and "Detractor".
+
+      - name: assessment_sequence
+        description: >
+          Integer denoting the sequence of the assessment, with number 1 representing
+          the earliest submitted assessment per coach.
+
+      - name: is_most_recent_assessment
+        description: >
+          Boolean denoting if the assessment is the most recent assessment per coach.
+
+      - name: preceding_assessment_coach_raw_promoter_score
+        description: >
+          Coach raw promoter score for the preceding NPS assessment, if such exists.
+
+      - name: preceding_assessment_coach_net_promoter_score
+        description: >
+          Coach net promoter score for the preceding NPS assessment, if such exists.
+
+      - name: preceding_assessment_coach_qualitative_feedback
+        description: >
+          Coach qualitative feedback for the preceding NPS assessment, if such exists.
+          NULL can mean that there was no preceding assessment or that the response was not provided.
+
+      - name: preceding_assessment_coach_net_promoter_score_category
+        description: >
+          Sanitized response category based on the coach response for the preceding NPS assessment,
+          if such exists. For NPS items, response categories are "Promoter", "Neutral", and "Detractor".
+
+      - name: preceding_assessment_sequence
+        description: >
+          Integer denoting the sequence of the preceding assessment, with number 1 representing
+          the earliest submitted assessment per coach.
+
+      - name: raw_promoter_score_growth_from_preceding
+        description: >
+          Integer denoting the change in raw promoter score between current and preceding NPS
+          assessment, if such exists.
+
+      - name: has_coach_net_promoter_score_category_changed
+        description: >
+          Boolean denoting if the response category changed between current and preceding
+          assessment, if such exists.
+        tests:
+          - accepted_values:
+              values: [true, false]
+
+      - name: app_assessment_id
+        description: >
+          Foreign key to the assessment that's associated with the coach response.
+        tests:
+          - unique
+          - not_null
+
+      - name: preceding_app_assessment_id
+        description: >
+          Foreign key to the preceding assessment that's associated with the coach response, if such exists.
+
+      - name: preceding_assessment_submitted_at
+        description: >
+          UTC timestamp denoting when the preceding assessment was submitted, if such exists.

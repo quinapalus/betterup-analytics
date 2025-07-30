@@ -1,0 +1,61 @@
+version: 2
+models:
+  - name: stg_app__group_coaching_session_curriculums
+    description: The DBT model stg_app__group_coaching_session_curriculums stores
+      a list of group coaching and session curriculum information, including descriptions,
+      titles, session numbers, UUIDs, and timestamps for when the entries were created
+      or updated. [GenAI Description]
+    columns:
+      - name: group_coaching_session_curriculum_id
+        description: The 'group_coaching_session_curriculum_id' column is a unique
+          identifier for the group coaching session curriculum. [GenAI Description]
+        tests:
+          - unique
+          - not_null
+
+      - name: group_coaching_curriculum_id
+        description: The 'group_coaching_curriculum_id' column stores the ID of the
+          group coaching curriculum associated with the session. [GenAI Description]
+
+      - name: post_session_resource_list_id
+        description: The post_session_resource_list_id column stores the ID of a post-session
+          resource list associated with each group coaching session curriculum. [GenAI
+          Description]
+
+      - name: session_resource_list_id
+        description: The 'session_resource_list_id' column stores the ID of a resource
+          list for the given session. [GenAI Description]
+
+      - name: description_i18n
+        description: The 'description_i18n' column contains a JSON string with localized
+          versions of a textual description associated with a group coaching session.
+          [GenAI Description]
+
+      - name: description
+        description: Contains the description for the group coaching session curriculum,
+          in English language. [GenAI Description]
+
+      - name: session_number
+        description: The session_number column stores the numerical order of each
+          session in the group coaching curriculum. [GenAI Description]
+
+      - name: title_i18n
+        description: The 'title_i18n' column stores the title of a coaching session
+          which typically contains both an English and other language translation.
+          [GenAI Description]
+
+      - name: title
+        description: The ‘title’ column stores the title of the group coaching session
+          curriculum as an English string. [GenAI Description]
+
+      - name: uuid
+        description: The 'uuid' column stores a universally unique identifier for
+          each record in the table. [GenAI Description]
+
+      - name: created_at
+        description: The 'created_at' column in this model records the timestamps
+          of when a coaching session curriculum was created. [GenAI Description]
+
+      - name: updated_at
+        description: The 'updated_at' column expresses the time at which the record
+          was last updated. [GenAI Description]

@@ -1,0 +1,19 @@
+version: 2
+
+models:
+  - name: dim_coach_compensation_seasons
+    description: Defines the start and end dates for the coaching compensation seasons
+
+    columns:
+      - name: season_id
+        description: Primary key from season_name
+        tests:
+          - not_null
+          - unique
+      - name: season_name
+        description: Name of the season
+      - name: season_start_date
+        description: Start date of the season
+      - name: season_end_date
+        description: End date of the season
+

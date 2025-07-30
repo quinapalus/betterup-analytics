@@ -1,0 +1,38 @@
+version: 2
+models:
+  - name: stg_app__goal_check_in_emotions
+    description: >
+      Application table containing goal check-in emotion suggestions.
+      (application Object is "ObjectiveCheckInEmotion").
+
+    columns:
+      - name: goal_check_in_emotion_id
+        description: Primary key
+        tests:
+          - unique
+          - not_null
+
+      - name: description_i18n
+        description: A JSON object of description translations.
+        tests:
+          - not_null
+
+      - name: description
+        description: >
+          Description of the check-in emotion (e.g. "Happy"). Pulling the
+          English version from the localized JSON translations
+          (description_i18n).
+        tests:
+          - not_null
+
+      - name: created_at
+        description: >
+          Time when the Rails object was created in UTC, i.e. when the
+          goal check-in emotion was created.
+        tests:
+          - not_null
+
+      - name: updated_at
+        description: Time when the Rails object was updated in UTC.
+        tests:
+          - not_null

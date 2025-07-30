@@ -1,0 +1,36 @@
+version: 2
+models:
+  - name: stg_app__community_groups
+    description: The stg_app__community_groups model provides insights into data from
+      the raw.stitch_app.community_groups table, which includes community group information
+      such as name, description, and posts count. This model stores the community
+      group ID, description, name, posts count, as well as the timestamp values for
+      when the group was created and updated. [GenAI Description]
+    columns:
+      - name: community_group_id
+        description: The 'community_group_id' column represents the unique identifier
+          of a community group. [GenAI Description]
+        tests:
+          - unique
+          - not_null
+
+      - name: description
+        description: A table containing information about community groups, including
+          a description, name, posts count, creation date, and updated date. [GenAI
+          Description]
+
+      - name: name
+        description: The 'name' column stores the name of the community group. [GenAI
+          Description]
+
+      - name: posts_count
+        description: The 'posts_count' column stores the total number of posts associated
+          with a community group. [GenAI Description]
+
+      - name: created_at
+        description: The 'created_at' column stores the date and time when the community
+          group was created. [GenAI Description]
+
+      - name: updated_at
+        description: The 'updated_at' column contains timestamp data of when the record
+          was last updated. [GenAI Description]

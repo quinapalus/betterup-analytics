@@ -1,0 +1,116 @@
+version: 2
+
+models:
+  - name: stg_sendgrid__events
+    description: This is the DBT stg_sendgrid__events model, which stores Sendgrid
+      event data including user IDs, message IDs, event types, content types, and
+      timestamps. It has fields for email, status, useragent, TLS settings, URL information,
+      and other relevant data. This model is extracted from the Sendgrid source and
+      is used as a staging table. [GenAI Description]
+    columns:
+      - name: sendgrid_event_id
+        description: Primary surrogate key
+        tests:
+          - unique
+          - not_null
+
+      - name: user_id
+        description: The 'user_id' column stores a unique identifier for the user
+          associated with the event. [GenAI Description]
+
+      - name: asm_group_id
+        description: "'asm_group_id' is an identification number that tracks the sendgrid\
+          \ automated emails sent to the user. [GenAI Description]"
+
+      - name: sg_event_id
+        description: "'sg_event_id' is a SendGrid-generated identifier for a particular\
+          \ event. [GenAI Description]"
+
+      - name: sg_message_id
+        description: "'sg_message_id' is a unique identifier for a sendgrid message.\
+          \ [GenAI Description]"
+
+      - name: smtp_id
+        description: "'Smtp_id' is an identifier for a particular email link sent\
+          \ by the Sendgrid platform. [GenAI Description]"
+
+      - name: attempt
+        description: The 'attempt' column in the DBT model stores a numerical value
+          representing the delivery attempt of a particular event. [GenAI Description]
+
+      - name: category
+        description: The 'category' column stores the category assigned to an email
+          event. [GenAI Description]
+
+      - name: email
+        description: The 'email' column stores the email address to which each SendGrid
+          event refers. [GenAI Description]
+
+      - name: event
+        description: The 'event' column contains information about the type of event
+          that occurred, such as whether an email was sent, opened, clicked, etc.
+          [GenAI Description]
+
+      - name: ip
+        description: The 'ip' column is a string containing the IP address associated
+          with the event. [GenAI Description]
+
+      - name: reason
+        description: The 'reason' column contains data about the reason why an event
+          occurred in SendGrid. [GenAI Description]
+
+      - name: response
+        description: "'Response' is a field containing the response codes associated\
+          \ with a particular event. [GenAI Description]"
+
+      - name: status
+        description: The 'status' column stores the outcome of the event (such as
+          'queued', 'delivered', 'deferred', 'bounce', and so on). [GenAI Description]
+
+      - name: url
+        description: The 'url' column contains URLs from the emails sent through SendGrid.
+          [GenAI Description]
+
+      - name: useragent
+        description: The 'useragent' column holds the user agent information of the
+          users who triggered the SendGrid event. [GenAI Description]
+
+      - name: tls
+        description: The tls column contains information about the Transport Layer
+          Security used by SendGrid for each event. [GenAI Description]
+
+      - name: url_offset__index
+        description: url_offset__index is an integer indicating the entry index of
+          a specific URL in an event. [GenAI Description]
+
+      - name: url_offset__type
+        description: The 'url_offset__type' column is a type of the offset index associated
+          with a URL accessed from the event data. [GenAI Description]
+
+      - name: cert_err
+        description: The 'cert_err' column captures the error code reported by a client
+          certificiate verification during an event. [GenAI Description]
+
+      - name: event_type
+        description: The 'event_type' column stores the type of a SendGrid event,
+          such as bounces, clicks, or delivery attempts. [GenAI Description]
+
+      - name: sg_content_type
+        description: "'sg_content_type' stores the content type field sent with the\
+          \ email, for example HTML or plain text. [GenAI Description]"
+
+      - name: event_date
+        description: The 'event_date' column holds the date of the event in string
+          format. [GenAI Description]
+
+      - name: event_at
+        description: "'event_at' is a date-time column specifying when an event occurred.\
+          \ [GenAI Description]"
+
+      - name: processed_at
+        description: The 'processed_at' column contains the timestamp when the event
+          was last processed. [GenAI Description]
+
+      - name: send_at
+        description: The 'send_at' column stores the timestamp when an email was sent
+          using SendGrid. [GenAI Description]

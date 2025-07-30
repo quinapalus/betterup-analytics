@@ -1,0 +1,68 @@
+version: 2
+
+models:
+  - name: stg_gsheets_ops_analytics__is_partner_sat_final
+    description: This DBT model, stg_gsheets_ops_analytics__is_partner_sat_final,
+      stores survey responses from Google Sheets for partner satisfaction. This model
+      includes fields related to overall rating of the partner services, reaction
+      to the members success, satisfaction with technical and resource support, and
+      expectation and what the partner liked. Data is pulled from a Google Sheets
+      source and a surrogate key is applied. [GenAI Description]
+    columns:
+      - name: unique_id
+        description: The unique_id column is a surrogate key created from the launch
+          request ID, survey sent time, response received and response time. [GenAI
+          Description]
+        tests:
+          - unique
+          - not_null
+
+      - name: expectation_satisfaction
+        description: This column provides information on how likely a respondent expects
+          their satisfaction with the services provided. [GenAI Description]
+
+      - name: how_to_improve
+        description: The column 'how_to_improve' captures suggestions for ways to
+          improve from responding members. [GenAI Description]
+
+      - name: ipm
+        description: The ipm column in the table stores members' impression, satisfaction,
+          and motivation ratings from 1 to 4. [GenAI Description]
+
+      - name: launch_request_id
+        description: The 'launch_request_id' column contains a unique identifier associated
+          with a given survey launch request. [GenAI Description]
+
+      - name: member_success_satisfaction
+        description: The 'member_success_satisfaction' column is the customer/partner's
+          satisfaction rating for the success of the team in meeting their expectations.
+          [GenAI Description]
+
+      - name: overall_rating
+        description: The overall_rating column contains customer ratings on their
+          satisfaction with the product/service offered. [GenAI Description]
+
+      - name: resource_satisfaction
+        description: Resource satisfaction is the rating given to how adequately the
+          resources provided for the launch request met the expectations of the customer.
+          [GenAI Description]
+
+      - name: response_at
+        description: The 'response_at' column tracks the date and time a response
+          to the survey was received. [GenAI Description]
+
+      - name: response_received
+        description: The 'response_received' column indicates whether a response to
+          the satisfaction survey was received. [GenAI Description]
+
+      - name: survey_sent_at
+        description: survey_sent_at contains the date and time of when the survey
+          was sent to the customer. [GenAI Description]
+
+      - name: technical_satisfaction
+        description: Technical satisfaction measures the respondent's perceived technical
+          capability of the organization or team that provided services. [GenAI Description]
+
+      - name: what_did_you_like
+        description: The column 'what_did_you_like' contains responses detailing what
+          the survey respondent liked. [GenAI Description]

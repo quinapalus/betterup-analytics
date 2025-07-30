@@ -1,0 +1,81 @@
+version: 2
+
+models:
+  - name: fact_flex_session_appointments
+    meta:
+      owner: "adrian.lievano@betterup.co"
+    description: >
+      A table tracking all flex session appointments
+
+    columns:
+      - name: flex_session_id
+        description: Primary key
+        tests:
+          - unique
+          - not_null
+
+      - name: session_credit_id
+        description: Credit id from BetterUp backend app data
+
+      - name: appointment_id
+        description: The column 'appointment_id' contains a unique identifier for
+          an appointment associated with each flex session. [GenAI Description]
+
+      - name: created_by_user_id
+        description: The 'created_by_user_id' column holds the ID of the user who
+          created the flex session. [GenAI Description]
+
+      - name: order_id
+        description: The 'order_id' column is a foreign key referencing the ID of
+          the order associated with the given flex session. [GenAI Description]
+
+      - name: user_id
+        description: "'user_id' is the ID of the user associated with the flex session\
+          \ credit. [GenAI Description]"
+
+      - name: coach_id
+        description: A numeric identifier for the coach assigned to the flex session
+          appointment. [GenAI Description]
+
+      - name: coach_assignment_id
+        description: The 'coach_assignment_id' column stores the ID number that is
+          associated with the coach who was assigned to the session. [GenAI Description]
+
+      - name: appointment_created_at
+        description: The column 'appointment_created_at' is the date and time that
+          an appointment was created. [GenAI Description]
+
+      - name: appointment_updated_at
+        description: The column 'appointment_updated_at' stores the date and time
+          when an appointment was last updated. [GenAI Description]
+
+      - name: appointment_starts_at
+        description: The start time of an appointment in the flex session. [GenAI
+          Description]
+
+      - name: appointment_ended_at
+        description: The date and time when the appointment is expected to end. [GenAI
+          Description]
+
+      - name: appointment_started_at
+        description: The timestamp at which the appointment was started. [GenAI Description]
+
+      - name: appointment_completed_at
+        description: The appointment completion timestamp for the flex session. [GenAI
+          Description]
+
+      - name: appointment_canceled_at
+        description: The column 'appointment_canceled_at' records the time and date
+          when an appointment was canceled. [GenAI Description]
+
+      - name: is_completed
+        description: A boolean flag indicating whether an appointment associated with
+          a flex session has been completed. [GenAI Description]
+
+      - name: created_at
+        description: The column 'created_at' holds the timestamp for when the flex
+          session was created. [GenAI Description]
+
+      - name: voided_at
+        description: The column 'voided_at' stores the timestamp at which the flex
+          session was voided. [GenAI Description]

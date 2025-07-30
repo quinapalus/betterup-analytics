@@ -1,0 +1,17 @@
+version: 2
+
+models:
+  - name: fact_coach_member_retention_daily_status
+    meta:
+      owner: "adrian.lievano@betterup.co"
+    description: >
+      A table tracking coach member relationship statuses between the first time
+      and member completes a session with a coach and the timestamp of when that
+      coach assignment ended.
+
+    columns:
+      - name: _unique
+        description: Primary key
+        tests:
+          - unique
+          - not_null

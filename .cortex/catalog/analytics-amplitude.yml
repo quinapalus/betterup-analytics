@@ -1,0 +1,23 @@
+openapi: 3.0.1
+info:
+  title: Amplitude
+  description: Amplitude is a digital analytics platform focused on product analytics.
+  x-cortex-git:
+    github:
+      repository: betterup/betterup-analytics
+  x-cortex-tag: betterup-analytics-amplitude
+  x-cortex-type: service
+  x-cortex-link:
+  - name: Analytics Confluence
+    type: documentation
+    url: https://betterup.atlassian.net/wiki/spaces/AN/overview
+  x-cortex-owners:
+  - name: betterup/analytics-eng
+    type: GROUP
+  - type: SLACK
+    channel: analytics
+  x-cortex-service-groups:
+  - external-system
+  - tier-2
+  x-cortex-custom-metadata:
+    codeowner-path: .github/CODEOWNERS

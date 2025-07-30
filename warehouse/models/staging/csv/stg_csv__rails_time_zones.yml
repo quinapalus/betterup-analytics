@@ -1,0 +1,15 @@
+version: 2
+
+models:
+  - name: stg_csv__rails_time_zones
+    description: ""
+    columns:
+      - name: tz_rails
+        description: ""
+        tests:
+          - unique
+          - not_null
+
+      - name: tz_iana
+        description: ""
+

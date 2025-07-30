@@ -1,0 +1,34 @@
+score_key,model_version,score_type,score_title,subdimension,dimension,factor
+purpose,1.0,subdimension,Purpose,Purpose,Centered,Thriving
+engagement,1.0,subdimension,Engagement,Engagement,Centered,Thriving
+burnout,1.0,subdimension,Energy,Energy,Centered,Thriving
+stress,1.0,subdimension,Calm,Calm,Centered,Thriving
+focus,1.0,subdimension,Focus,Focus,Aware,Thriving
+flow,1.0,subdimension,Flow,Flow,Aware,Thriving
+values,1.0,subdimension,Values,Values,Aware,Thriving
+mindfulness,1.0,subdimension,Mindfulness,Mindfulness,Aware,Thriving
+emotional_regulation,1.0,subdimension,Emotional Regulation,Emotional Regulation,Aware,Thriving
+resilience,1.0,subdimension,Resilience,Resilience,Agile,Thriving
+growth_mindset,1.0,subdimension,Growth Mindset,Growth Mindset,Agile,Thriving
+sense_of_control,1.0,subdimension,Sense of Control,Sense of Control,Agile,Thriving
+risk_tolerance,1.0,subdimension,Risk Tolerance,Risk Tolerance,Agile,Thriving
+open_communication,1.0,subdimension,Open Communication,Open Communication,Includes,Inspiring
+participation,1.0,subdimension,Participation,Participation,Includes,Inspiring
+positive_relationships,1.0,subdimension,Building Relationships,Building Relationships,Includes,Inspiring
+trust_climate,1.0,subdimension,Trust Climate,Trust Climate,Includes,Inspiring
+inspire,1.0,subdimension,Motivating,Motivating,Elevates,Inspiring
+coaching,1.0,subdimension,Coaching,Coaching,Elevates,Inspiring
+recognizing,1.0,subdimension,Recognizing,Recognizing,Elevates,Inspiring
+ownership,1.0,subdimension,Ownership,Ownership,Elevates,Inspiring
+alignment,1.0,subdimension,Alignment,Alignment,Drives,Inspiring
+problem_solving,1.0,subdimension,Problem Solving,Problem Solving,Drives,Inspiring
+feedback,1.0,subdimension,Feedback,Feedback,Drives,Inspiring
+influence,1.0,subdimension,Influence,Influence,Drives,Inspiring
+centered,1.0,dimension,Centered,,Centered,Thriving
+aware,1.0,dimension,Aware,,Aware,Thriving
+agile,1.0,dimension,Agile,,Agile,Thriving
+includes,1.0,dimension,Includes,,Includes,Inspiring
+elevates,1.0,dimension,Elevates,,Elevates,Inspiring
+drives,1.0,dimension,Drives,,Drives,Inspiring
+inspiring,1.0,factor,Inspiring,,,Inspiring
+thriving,1.0,factor,Thriving,,,Thriving

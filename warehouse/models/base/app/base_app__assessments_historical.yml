@@ -1,0 +1,28 @@
+version: 2
+
+models:
+  - name: base_app__assessments_historical
+    description: ""
+    columns:
+      - name: created_at
+      - name: created_from
+      - name: creator_id
+      - name: expires_at
+      - name: id
+        tests:
+          - unique
+          - not_null
+      - name: parent_id
+      - name: questions_version
+      - name: report_generated_at
+      - name: responses
+      - name: submitted_at
+      - name: type
+      - name: updated_at
+      - name: user_id
+      - name: associated_record_id
+      - name: associated_record_type
+      - name: assessment_configuration_id
+      - name: shared_with_coach
+      - name: track_assignment_id
+      - name: assessment_configuration_uuid

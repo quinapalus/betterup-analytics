@@ -1,0 +1,24 @@
+version: 2
+
+models:
+  - name: dbt_modality_events__care_guide
+    description: This DBT model is used to track the modality and event name associated
+      with the care guide message. It has been configured to select the modality 'care_guide'
+      and the event name 'sent care_guide_message' as its outputs. It references the
+      parent models to produce the desired output. [GenAI Description]
+    columns:
+      - name: modality
+        description: "'Modality' is a category used to identify the type of event\
+          \ associated with the event_name. [GenAI Description]"
+        tests:
+          - unique
+          - not_null
+
+      - name: event_name
+        description: The column 'event_name' stores the name of the event associated
+          with the care guide modality. [GenAI Description]
+        tests:
+          - unique
+          - not_null
+
+

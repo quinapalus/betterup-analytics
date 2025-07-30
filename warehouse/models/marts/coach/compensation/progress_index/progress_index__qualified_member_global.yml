@@ -1,0 +1,27 @@
+version: 2
+
+models:
+  - name: progress_index__qualified_member_global
+    description: ""
+    columns:
+      - name: coach_member_key
+        description: ""
+
+      - name: coach_member_modality_key
+        description: ""
+        tests:
+          - unique
+          - not_null
+
+      - name: coach_uuid
+        description: ""
+
+      - name: member_uuid
+        description: ""
+
+      - name: modality
+        description: ""
+
+      - name: session_count
+        description: ""
+

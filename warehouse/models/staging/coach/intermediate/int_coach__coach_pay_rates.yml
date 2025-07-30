@@ -1,0 +1,44 @@
+version: 2
+
+models:
+  - name: int_coach__coach_pay_rates
+    description: Intermediate Coach Pay Rates view with Staffing Tier, Base Payment
+      Types, Growth Pay Rate
+
+    columns:
+      - name: user_uuid
+        tests:
+          - not_null
+        description: The 'user_uuid' column contains unique identifiers for each user
+          associated with the coach profile. [GenAI Description]
+      - name: coach_profile_uuid
+        tests:
+          - not_null
+        description: The column 'coach_profile_uuid' stores a unique identifier linking
+          a record in the 'users' table to a record in the 'coach_profile' table.
+          [GenAI Description]
+      - name: staffing_tier
+        description: "'staffing_tier' is a categorization of coach_profiles that determines\
+          \ what bonus pay rate to use. [GenAI Description]"
+      - name: base_payment_name
+        description: "'base_payment_name' refers to the name of a base pay rate of\
+          \ a coach profile, such as \"Individual Coach Starter\" or \"Group Coach\
+          \ Advanced\". [GenAI Description]"
+      - name: base_payment_type
+        description: "'base_payment_type' is a column referencing the type of base\
+          \ payment rate for a given user/coach. [GenAI Description]"
+      - name: coaching_cloud
+        description: "'coaching_cloud' indicates the type of Coaching Cloud the Base\
+          \ Pay Rates are associated with. [GenAI Description]"
+      - name: amount_usd
+        description: '"amount_usd" refers to the dollar amount associated with the
+          base payment rate, and in certain cases, the growth pay rate. [GenAI Description]'
+      - name: growth_pay_rate
+        tests:
+          - not_null
+        description: This column stores the extra pay rate of the coach if they are
+          on a growth path and are on a coaching cloud called 'professional'. [GenAI
+          Description]
+      - name: adjustment_usd
+        description: "'adjustment_usd' is the dollar value adjustment to the payment\
+          \ rate set for a particular coach. [GenAI Description]"

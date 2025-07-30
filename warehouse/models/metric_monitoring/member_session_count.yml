@@ -1,0 +1,17 @@
+version: 2
+
+models:
+  - name: member_session_count
+    description: >
+      This model contains a count of all time member sessions used for sole purpose of
+      monitoring that the count does not drop.  We will use Monte Carlo to monitor this 
+      model over time.
+    columns:
+      - name: primary_key
+        description: A harded value of 1 b/c this model will only ever have 1 row.
+        tests:
+          - unique
+          - not_null
+
+      - name: count_events
+        description: A count of all time member sessions.

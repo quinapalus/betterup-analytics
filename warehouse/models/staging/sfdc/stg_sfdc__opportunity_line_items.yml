@@ -1,0 +1,37 @@
+version: 2
+models:
+  - name: stg_sfdc__opportunity_line_items
+    description: >
+      Salesforce Opportunity Line Items. Essentially, a list of products sold under
+      an opportunity.
+      For more information, check out the [Salesforce OpportunityLineItem documentation](https://developer.salesforce.com/docs/atlas.en-us.api.meta/api/sforce_api_objects_opportunitylineitem.htm)
+
+    columns:
+      - name: sfdc_opportunity_line_item_id
+        description: Unique identifier for the product order (line item) under the
+          opportunity
+        tests:
+          - not_null
+          - unique
+
+      - name: sfdc_opportunity_id
+        description: Foreign key for the opportunity
+
+      - name: sfdc_product_id
+        description: Foreign key for the product (note, the product table does not
+          yet exist).
+
+      - name: created_at
+        description: When the line item was created for the opportunity
+
+      - name: name
+        description: Name of the line item.
+
+      - name: description
+        description: Description of the line item
+
+      - name: product_code
+        description: Foreign key to the Salesforce Product table (not yet imported)
+
+      - name: quantity
+        description: How many were sold

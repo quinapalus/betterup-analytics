@@ -1,0 +1,72 @@
+version: 2
+models:
+  - name: member_product_subscription_calendar
+    columns:
+      - name: member_product_subscription_calendar_id
+        description: Surrogate key used as a primary key 
+        tests:
+          - unique
+          - not_null
+
+      - name: DATE_KEY
+        description: Foreign key to conformed Date dimension.
+
+      - name: DATE
+        description: Calendar date (YYYY-MM--DD format) for the given day.
+
+      - name: CALENDAR_YEAR_MONTH
+        description: Concatenated Calendar year-month (YYYY-MM format) for the given day.
+
+      - name: IS_CURRENT_FISCAL_QUARTER
+        description: Boolean flag, true if date is within current fiscal quarter.
+
+      - name: IS_PREVIOUS_FISCAL_QUARTER
+        description: Boolean flag, true if date is within previous fiscal quarter.
+
+      - name: IS_LAST_DAY_OF_MONTH
+        description: Boolean flag, true if date is last day of the month.
+
+      - name: PRODUCT_SUBSCRIPTION_ASSIGNMENT_ID
+        description: Foreign Key for the associated Product Subscription Assignment.
+
+      - name: MEMBER_ID
+        description: Foreign Key for the associated Member.
+
+      - name: STARTS_DATE
+        description: Starts date (YYYY-MM--DD format) for the given Product Subscription Assignment.
+
+      - name: STARTED_AT
+        description: Started at timestamp for the given Product Subscription Assignment.
+
+      - name: MAX_STARTED_AT
+        description: Last started at time for a given member on the given day day.
+
+      - name: MEMBER_WAS_ACTIVE_ON_PRODUCT_SUBSCRIPTION
+        description: Boolean flag, true if the member was activated on the given product subscription.
+
+      - name: DAYS_ON_PRODUCT_SUBSCRIPTION
+        description: Days since the member was active on the given product subscription.
+
+      - name: MONTHS_ON_PRODUCT_SUBSCRIPTION
+        description: Months since the member was active on the given product subscription.
+
+      - name: PRODUCT_SUBSCRIPTION_ID
+        description: Foreign Key for the associated Product Subscription.
+
+      - name: PRODUCT_ID
+        description: Foreign Key for the associated Product.
+
+      - name: ON_DEMAND
+        description:  Boolean flag, true if the member has access to on demand.
+
+      - name: PRIMARY_COACHING
+        description: Boolean flag, true if the member has access to primary coaching.
+
+      - name: CARE
+        description: Boolean flag, true if the member has access to care.
+
+      - name: COACHING_CIRCLES
+        description: Boolean flag, true if the member has access to coaching circles.
+
+      - name: WORKSHOPS
+        description: Boolean flag, true if the member has access to workshops.

@@ -1,0 +1,42 @@
+version: 2
+
+models:
+  - name: anon_eu__coach_pay_rates
+    description: >
+      Staging table that contains data from `INT_COACH__COACH_PAY_RATES` ready to
+      be replicated to US.
+
+    columns:
+      - name: user_uuid
+        tests:
+          - not_null
+        description: The user_uuid column stores a unique identifier associated with
+          each coach. [GenAI Description]
+      - name: coach_profile_uuid
+        tests:
+          - not_null
+        description: The 'coach_profile_uuid' column contains a unique identifier
+          that is associated with each coaching profile. [GenAI Description]
+      - name: staffing_tier
+        description: The staffing_tier column is an integer that identifies the level
+          of payment for each coach profile. [GenAI Description]
+      - name: base_payment_name
+        description: The column base_payment_name holds the name for the standard
+          payment for a particular coach. [GenAI Description]
+      - name: base_payment_type
+        description: "'base_payment_type' column stores the type of payment, such\
+          \ as hourly rate or fixed fee. [GenAI Description]"
+      - name: coaching_cloud
+        description: The 'coaching_cloud' column of this model indicates whether a
+          coach's pay rate is coming from the Coaching Cloud. [GenAI Description]
+      - name: amount_usd
+        description: The amount_usd column contains the dollar amounts of the payment
+          rate for a coach. [GenAI Description]
+      - name: growth_pay_rate
+        tests:
+          - not_null
+        description: Growth pay rate is the increase amount of the base pay rate based
+          on performance. [GenAI Description]
+      - name: adjustment_usd
+        description: The 'adjustment_usd' column contains the monetary adjustment
+          of the specified rate. [GenAI Description]

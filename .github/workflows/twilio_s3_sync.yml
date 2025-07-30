@@ -1,0 +1,52 @@
+name: Pipeline - twilio-s3-sync
+
+on:
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+  schedule:
+    - cron: '35 */12 * * *'
+
+env:
+  TWILIO_AWS_BUCKET: "bu-s3-twilio-logs"
+  TWILIO_ACCOUNT_SID: ${{secrets.TWILIO_ACCOUNT_SID}}
+  TWILIO_AUTH_TOKEN: ${{secrets.TWILIO_AUTH_TOKEN}}
+  AWS_ACCESS_KEY_ID: ${{secrets.AWS_ACCESS_KEY_ID}}
+  AWS_SECRET_ACCESS_KEY: ${{secrets.AWS_SECRET_ACCESS_KEY}}
+
+  BU_SLACK_BOT_TOKEN: ${{ secrets.BU_SLACK_BOT_TOKEN }}
+  SLACK_WEBHOOK_URL: ${{ secrets.DATA_SLACK_WEBHOOK_URL }}
+  SLACK_WEBHOOK_TYPE: INCOMING_WEBHOOK
+  GITHUB_ACTION_URL: "https://github.com/betterup/betterup-analytics/actions/workflows/twilio_s3_sync.yml"
+
+jobs:
+  twilio-s3-sync:
+    name: twilio-s3-sync
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Setup python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.10"
+      
+      - name: Setup poetry
+        uses: snok/install-poetry@v1
+
+      - name: Run twilio-s3-sync job
+        run: sudo chmod +x bin/twilio-s3-sync && bin/twilio-s3-sync
+
+      - name: Send GitHub Action data to Slack workflow
+        id: send-slack-notification
+        uses: slackapi/slack-github-action@v1.23.0
+        if: failure()
+        with:
+          payload: |
+            {
+              "channel": "warroom-data",
+              "icon_emoji": ":github:",
+              "text": "Pipeline Failure: ${{ github.workflow }} <${{ env.GITHUB_ACTION_URL }}|View here.>"
+            }

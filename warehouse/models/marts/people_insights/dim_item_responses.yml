@@ -1,0 +1,48 @@
+version: 2
+
+models:
+  - name: dim_item_responses
+    description: The DBT model dim_item_responses provides a dimensional representation
+      of the responses for a given assessment, with details such as primary key, assessment
+      ID, type, questions version, item key, item response, assessment configuration
+      ID, and assessment configuration UUID. It is designed to join assessments from
+      the parent model with the nested responses to unnest each item response into
+      a single row, which is then selected from the derived unnest table. [GenAI Description]
+    columns:
+      - name: primary_key
+        description: Primary key, which is a surrogate key of Assessment ID and Item
+          Key together
+        tests:
+          - not_null
+          - unique
+
+      - name: assessment_id
+        description: "'assessment_id' is a unique identifier for an assessment. [GenAI\
+          \ Description]"
+        tests:
+          - not_null
+
+      - name: type
+        description: The 'type' column indicates the type of assessment performed
+          for each item in the model. [GenAI Description]
+
+      - name: questions_version
+        description: The 'questions_version' column provides the version of the assessment
+          questions used in this assessment. [GenAI Description]
+
+      - name: item_key
+        description: The 'item_key' column contains the unique identifier of each
+          assessment item (question). [GenAI Description]
+
+      - name: item_response
+        description: The column 'item_response' contains the responses of each item
+          from the assessments, stored as strings. [GenAI Description]
+
+      - name: assessment_configuration_id
+        description: The 'assessment_configuration_id' column holds the ID of the
+          assessment configuration related to the item response represented in the
+          row. [GenAI Description]
+
+      - name: assessment_configuration_uuid
+        description: The 'assessment_configuration_uuid' column is used to store a
+          universally-unique identifier associated with the assessment. [GenAI Description]

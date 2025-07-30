@@ -1,0 +1,21 @@
+version: 2
+
+models:
+  - name: base_app__program_journey_stages_historical
+    description: ""
+    columns:
+      - name: activities_resource_list_id
+      - name: created_at
+      - name: description_i18n
+      - name: id
+        tests:
+          - unique
+          - not_null
+      - name: length_days
+      - name: position
+      - name: program_journey_id
+      - name: stage_label_i18n
+      - name: title_i18n
+      - name: tools_resource_list_id
+      - name: updated_at
+      - name: uuid

@@ -1,0 +1,23 @@
+version: 2
+
+sources:
+  - name: hubspot
+    database: raw
+    schema: "{{ 'airbyte_hubspot_email' if env_var('DEPLOYMENT_ENVIRONMENT', '') == 'US Gov' else 'segment_hubspot' }}"
+
+    tables:
+      - name: campaigns
+      - name: companies
+      - name: contacts
+      - name: contacts_by_company
+      - name: contact_lists
+      - name: deals
+      - name: deal_pipelines
+      - name: email_events
+      - name: engagements
+      - name: forms
+      - name: form_submissions
+      - name: owners
+      - name: subscription_changes
+      - name: workflows
+

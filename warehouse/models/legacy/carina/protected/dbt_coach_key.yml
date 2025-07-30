@@ -1,0 +1,21 @@
+version: 2
+models:
+  - name: dbt_coach_key
+    description: >
+      Interim table used to map app_coach_id to surrogate coach_key without
+      creating duplicate records. When app_coach_id has multiple associated
+      Fountain accounts, this table selects the Fountain account with the
+      most recent stage transition.
+
+    columns:
+      - name: coach_key
+        description: Primary Key
+        tests:
+          - unique
+          - not_null
+
+      - name: app_coach_id
+        description: Foreign key to application coach_id
+        tests:
+          - unique
+          - not_null

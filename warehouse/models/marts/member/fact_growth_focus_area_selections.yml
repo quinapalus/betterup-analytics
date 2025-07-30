@@ -1,0 +1,48 @@
+version: 2
+
+models:
+  - name: fact_growth_focus_area_selections
+    description: The DBT model fact_growth_focus_area_selections is an aggregate of
+      data from growth focus areas, growth maps and growth focus area selections with
+      fields for growth focus area selection ID, growth map ID, growth focus area
+      ID, satisfaction, created at, updated at, name, position, and member ID. It
+      is used to track and analyze employees' growth area selections and performance.
+      [GenAI Description]
+    columns:
+      - name: growth_focus_area_selection_id
+        description: The growth_focus_area_selection_id column stores a unique identifier
+          for an individual selection made from a list of focused growth areas. [GenAI
+          Description]
+
+      - name: growth_map_id
+        description: Growth_map_id is a foreign key that relates the table to growth_maps,
+          providing the member_id associated with each selection. [GenAI Description]
+
+      - name: growth_focus_area_id
+        description: The 'growth_focus_area_id' column contains the unique identifiers
+          that relate the selected growth areas with the growth map members. [GenAI
+          Description]
+
+      - name: satisfaction
+        description: The 'satisfaction' column holds a customer's level of satisfaction
+          with a particular item. [GenAI Description]
+
+      - name: created_at
+        description: This column stores the datetime when growth focus area selections
+          were made. [GenAI Description]
+
+      - name: updated_at
+        description: The 'updated_at' column contains the timestamp when a row was
+          last updated. [GenAI Description]
+
+      - name: name
+        description: The 'name' column stores the name of the growth focus area associated
+          with a selection in the growth map. [GenAI Description]
+
+      - name: position
+        description: The 'position' column contains numerical values representing
+          the relative order of the growth focus areas. [GenAI Description]
+
+      - name: member_id
+        description: The 'member_id' column contains a unique identifier for each
+          member. [GenAI Description]

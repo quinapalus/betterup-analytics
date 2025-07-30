@@ -1,0 +1,12 @@
+version: 2
+
+models:
+  - name: dim_user_experiment_variant_assignment
+    description: Each record represents the valid time interval a user_id in an experiment
+      and variant group in amplitude.
+    columns:
+      - name: id
+        description: Primary id for this table
+        tests:
+          - unique
+          - not_null

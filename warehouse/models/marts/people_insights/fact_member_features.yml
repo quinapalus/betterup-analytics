@@ -1,0 +1,35 @@
+version: 2
+
+models:
+  - name: fact_member_features
+    description: ""
+    columns:
+      - name: primary_key
+        description: "Primary key"
+        tests:
+          - not_null
+          - unique
+
+      - name: member_id
+        description: ""
+
+      - name: associated_record_id
+        description: ""
+
+      - name: associated_record_type
+        description: ""
+
+      - name: feature_collected_at
+        description: ""
+
+      - name: feature_key
+        description: ""
+
+      - name: classification
+        description: ""
+
+      - name: feature_attributes
+        description: ""
+
+      - name: feature_type
+        description: ""

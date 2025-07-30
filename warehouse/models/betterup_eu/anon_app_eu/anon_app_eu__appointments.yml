@@ -1,0 +1,105 @@
+version: 2
+
+models:
+  - name: anon_app_eu__appointments
+    description: >
+      Appointments table from app with removed PII. Appointments are scheduled events between a coach and a member.
+    columns:
+      - name: id
+        description: Unique identifier of the appointment.
+        tests:
+          - unique
+          - not_null
+
+      - name: user_id
+        description: Foreign key identifier of the user/member related to the appointment.
+        tests:
+          - not_null
+
+      - name: coach_id
+        description: Foreign key identifier of the coach related to this appointment.
+
+      - name: requested_length
+        description: Requested length of the appointment in minutes.
+
+      - name: recurring
+        description: Flag that indicates if the appointment is part of a recurring
+          series of appointments between this coach and member. Will be true if recurring,
+          false otherwise.
+
+      - name: missed
+        description: Flag that indicates if the appointment was missed. Will be true
+          if missed, false otherwise.
+
+      - name: sequence_number
+        description: Sequence number of this appointment.
+
+      - name: coach_assignment_id
+        description: Foreign key identifier of the coach assignment record related
+          to the appointment.
+
+      - name: track_assignment_id
+        description: Foreign key identifier of the track assignment record related
+          to this appointment.
+
+      - name: call_id
+        description: Foreign key identifier of the call record related to this appointment.
+
+      - name: created_at
+        description: Timestamp of when the appointment record was created.
+        tests:
+          - not_null
+
+      - name: starts_at
+        description: Timestamp of when the appointment is scheduled to start.
+        tests:
+          - not_null
+
+      - name: started_at
+        description: Timestamp of when the appointment actually started.
+
+      - name: ends_at
+        description: Timestamp of when the appointment is scheduled to end.
+
+      - name: contact_method
+        description: contact method indicated for the session
+
+      - name: creator_id
+        description: >
+          Denormalized foreign key to associated user who initiated the
+          assessment. Can be a NULL field for particular assessments.
+        tests:
+          - not_null
+
+      - name: length
+        description: >
+          Integer denoting the requested length for the session. NULL if the event
+          type is not
+          `completed_sessions`.
+        tests:
+          - not_null
+
+      - name: updated_at
+        description: >
+          When the appointment was updated.
+        tests:
+          - not_null
+
+      - name: uuid
+        description: A unique identifier assigned to each appointment in\
+          \ the EU. [GenAI Description]
+      - name: original_starts_at
+        description: The 'original_starts_at' column stores the original starting
+          timestamp of an appointment. [GenAI Description]
+      - name: participant_id
+        tests:
+          - not_null
+
+        description: The participant_id column contains the unique identifier for
+          the participant of each appointment. [GenAI Description]
+      - name: product_subscription_assignment_id
+        description: The 'product_subscription_assignment_id' column contains an identifier
+          which links the appointment to a product subscription. [GenAI Description]
+      - name: timeslot_id
+        description: The 'timeslot_id' column specifies the time frame to which an
+          appointment belongs. [GenAI Description]

@@ -1,0 +1,89 @@
+version: 2
+#if there is a source freshness failure on any of these sources check https://app.segment.com/betterup/sources/segment_salesforce/overview
+
+sources:
+  - name: salesforce
+    schema: "{{ 'airbyte_raw_salesforce' if env_var('DEPLOYMENT_ENVIRONMENT', '') == 'US Gov' else 'segment_salesforce' }}" 
+    database: raw
+    tables:
+      - name: account_history
+
+      - name: accounts
+        identifier: "{{ '_airbyte_raw_account' if env_var('DEPLOYMENT_ENVIRONMENT', '') == 'US Gov' else 'accounts' }}" 
+        
+      - name: opportunities
+        identifier: "{{ '_airbyte_raw_opportunity' if env_var('DEPLOYMENT_ENVIRONMENT', '') == 'US Gov' else 'opportunities' }}" 
+
+      - name: opportunity_line_items
+        identifier: "{{ '_airbyte_raw_opportunitylineitem' if env_var('DEPLOYMENT_ENVIRONMENT', '') == 'US Gov' else 'opportunity_product' }}" 
+
+      - name: opportunity_history
+
+      - name: opportunity_field_history
+
+      - name: products
+        identifier: "{{ '_airbyte_raw_product2' if env_var('DEPLOYMENT_ENVIRONMENT', '') == 'US Gov' else 'products' }}" 
+
+      - name: programs
+        identifier: "{{ '_airbyte_raw_program__c' if env_var('DEPLOYMENT_ENVIRONMENT', '') == 'US Gov' else 'programs' }}" 
+
+      - name: subscriptions
+
+      - name: users
+        identifier: "{{ '_airbyte_raw_user' if env_var('DEPLOYMENT_ENVIRONMENT', '') == 'US Gov' else 'users' }}" 
+
+      - name: user_roles
+        identifier: "{{ '_airbyte_raw_userrole' if env_var('DEPLOYMENT_ENVIRONMENT', '') == 'US Gov' else 'role' }}" 
+
+      - name: contacts
+        identifier: "{{ '_airbyte_raw_contact' if env_var('DEPLOYMENT_ENVIRONMENT', '') == 'US Gov' else 'contacts' }}" 
+
+      - name: leads
+      
+      - name: launch_requests
+
+      - name: record_types
+        identifier: "{{ '_airbyte_raw_recordtype' if env_var('DEPLOYMENT_ENVIRONMENT', '') == 'US Gov' else 'record_types' }}" 
+
+      - name: forecasts
+        identifier: my_forecasts
+
+      - name: forecast_field_history
+        identifier: history_my_forecast
+      
+      - name: campaigns
+
+      - name: contracts
+
+      - name: order_items
+
+      - name: orders
+
+      - name: dated_conversion_rate
+        identifier: "{{ '_airbyte_raw_datedconversionrate' if env_var('DEPLOYMENT_ENVIRONMENT', '') == 'US Gov' else 'dated_conversion_rate' }}" 
+
+      - name: opportunity_stage
+
+      - name: campaign_influence_detail
+
+      - name: campaign_members
+      
+      - name: my_forecasts
+
+      - name: history_my_forecast
+
+      - name: events
+
+      - name: role
+
+      - name: tasks
+
+      - name: assets
+
+              
+  - name: salesforce_hard_deletes
+    schema: "{{ 'airbyte_gsheets_sfdc_hard_deleted_records' if env_var('DEPLOYMENT_ENVIRONMENT', '') == 'US Gov' else 'stitch_gsheets_sfdc_hard_deleted_records' }}"
+
+    database: raw
+    tables:
+      - name: campaign_members    

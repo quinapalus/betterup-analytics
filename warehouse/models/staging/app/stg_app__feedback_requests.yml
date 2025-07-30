@@ -1,0 +1,35 @@
+version: 2
+models:
+
+  - name: stg_app__feedback_requests
+    description: Model representing the feedback request.
+
+    columns:
+      - name: feedback_request_id
+        description: Primary key
+        tests:
+          - not_null
+          - unique
+
+      - name: member_id
+        description: Unique identifer of the Member.
+        tests:
+          - not_null
+
+      - name: requesting_assessment_id
+        description: Assessment ID that triggered the request.
+        tests:
+          - not_null
+
+      - name: report_available_at
+        description: Time the feedback report became available.
+
+      - name: created_at
+        description: When the record was created.
+        tests:
+          - not_null
+
+      - name: updated_at
+        description: When the record was updated.
+        tests:
+          - not_null

@@ -1,0 +1,49 @@
+version: 2
+
+models:
+  - name: dbt_events__user_engaged
+    description: The dbt_events__user_engaged model tracks registered user engagement
+      with the website. It contains fields that capture the user ID, the time the
+      event occurred, event action, event object, an action/object combination, associated
+      record type, associated record ID, and a set of custom attributes associated
+      with the user and the event object. The data for this model is sourced from
+      the stg_app__engagement_events parent model. [GenAI Description]
+    columns:
+      - name: dbt_events__user_engaged_id
+        description: Primary Key, concatenation of 'member_id', 'event_object', 'event_at',  'associated_record_id'
+        tests:
+          - unique
+          - not_null
+
+      - name: member_id
+        description: The 'member_id' column is a user identifier connecting the event
+          to its associated user. [GenAI Description]
+
+      - name: event_at
+        description: The 'event_at' column contains the date and time of the user
+          engagement event. [GenAI Description]
+
+      - name: event_action
+        description: The column 'event_action' stores the action that a user performed
+          on an event object. [GenAI Description]
+
+      - name: event_object
+        description: The column 'event_object' provides the type of entity associated
+          with an event, which is 'user' in this model. [GenAI Description]
+
+      - name: event_action_and_object
+        description: The column 'event_action_and_object' contains a combination of
+          the paired values of 'event_action' and 'event_object'. [GenAI Description]
+
+      - name: associated_record_type
+        description: The 'associated_record_type' column stores the type of associated
+          record present in the model related to the event action that occurred. [GenAI
+          Description]
+
+      - name: associated_record_id
+        description: "'associated_record_id' is the unique identifier associated with\
+          \ an event object for a user. [GenAI Description]"
+
+      - name: attributes
+        description: The 'attributes' column stores an object with additional information
+          related to the event. [GenAI Description]

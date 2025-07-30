@@ -1,0 +1,31 @@
+version: 2
+
+models:
+  - name: dim_reporting_groups
+    description: The DBT model dim_reporting_groups provides a dimensional view of
+      reporting groups, pre-aggregated for their product type, and including their
+      reporting_group_id, reporting_group_name, product_type, created_at, and updated_at
+      fields. [GenAI Description]
+    columns:
+      - name: reporting_group_id
+        description: This column contains the unique identifier for each reporting
+          group. [GenAI Description]
+        tests:
+          - unique
+          - not_null
+
+      - name: reporting_group_name
+        description: The column 'reporting_group_name' stores the name of a reporting
+          group. [GenAI Description]
+
+      - name: product_type
+        description: The 'product_type' column identifies the product type associated
+          with each reporting group. [GenAI Description]
+
+      - name: created_at
+        description: "'created_at' is a timestamp indicating when the reporting group\
+          \ was created. [GenAI Description]"
+
+      - name: updated_at
+        description: The "updated_at" column stores the date and time of the last
+          update for the reporting group. [GenAI Description]

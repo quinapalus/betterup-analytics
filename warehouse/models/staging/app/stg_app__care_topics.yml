@@ -1,0 +1,58 @@
+version: 2
+models:
+  - name: stg_app__care_topics
+    description: The DBT model stg_app__care_topics is an analytical model that summarizes
+      data from the raw.stitch_app.care_topics source. It consists of fields such
+      as care_topic_id, program_journey_id, description_i18n, description, name_i18n,
+      name, translation_key, uuid, created_at, updated_at, which have relationships
+      with parent models. This model provides the ability to query and report on care
+      topics in an organized manner, allowing for deeper analysis and better decision-making.
+      [GenAI Description]
+    columns:
+      - name: care_topic_id
+        description: The 'care_topic_id' column stores the unique identifier for a
+          care topic. [GenAI Description]
+        tests:
+          - unique
+          - not_null
+
+      - name: program_journey_id
+        description: The 'program_journey_id' column in this model stores an ID value
+          that is linked to a program journey blueprint. [GenAI Description]
+
+      - name: growth_focus_area_id
+        description: "'growth_focus_area_id' is an ID which maps a care topic to a\
+          \ growth focus area. [GenAI Description]"
+
+      - name: description_i18n
+        description: The 'description_i18n' column stores internationalised descriptions
+          in a JSON string format. [GenAI Description]
+
+      - name: description
+        description: The 'description' column contains a text field of the description
+          of the given care topic, parsed from a JSON field containing multiple language
+          values. [GenAI Description]
+
+      - name: name_i18n
+        description: The column 'name_i18n' stores a JSON string containing language-specific
+          versions of the care topic name. [GenAI Description]
+
+      - name: name
+        description: The 'name' column provides the care topic name in English. [GenAI
+          Description]
+
+      - name: translation_key
+        description: The 'translation_key' column stores a string used to identify
+          the internationalized text of the corresponding care topic. [GenAI Description]
+
+      - name: uuid
+        description: The 'uuid' column is a universally unique identifier (UUID) that
+          is used to identify each care topic record. [GenAI Description]
+
+      - name: created_at
+        description: The 'created_at' column stores the datetime a record was first
+          created. [GenAI Description]
+
+      - name: updated_at
+        description: The 'updated_at' column in this model contains a timestamp of
+          the latest date of update for each care topic. [GenAI Description]

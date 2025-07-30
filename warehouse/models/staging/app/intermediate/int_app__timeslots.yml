@@ -1,0 +1,70 @@
+version: 2
+
+models:
+  - name: int_app__timeslots
+    description: Data around submitted availability of coaches for a coaching session
+      (timeslots).
+    columns:
+      - name: timeslot_id
+        description: The 'timeslot_id' column contains an ID for the corresponding
+          timeslot record. [GenAI Description]
+        tests:
+          - not_null
+          - unique
+
+      - name: coach_id
+        description: The 'coach_id' column identifies the coach associated with each
+          timeslot. [GenAI Description]
+
+      - name: created_at
+        description: The 'created_at' column contains the date and time at which the
+          timeslot was created. [GenAI Description]
+
+      - name: updated_at
+        description: The 'updated_at' column contains a timestamp for when the timeslot
+          was last updated. [GenAI Description]
+
+      - name: starts_at
+        description: The 'starts_at' column stores the timestamp when the timeslot
+          begins. [GenAI Description]
+
+      - name: ends_at
+        description: The 'ends_at' column stores the date and time of when the timeslot
+          ends. [GenAI Description]
+
+      - name: available_minutes
+        description: The 'available_minutes' column represents the amount of time,
+          in minutes, that is available to be used by coaches in their timeslot. [GenAI
+          Description]
+
+      - name: available_hours
+        description: The column 'available_hours' stores the number of hours a coach
+          is available, calculated from the number of minutes of availability. [GenAI
+          Description]
+
+      - name: external_unavailable_minutes
+        description: The external_unavailable_minutes column in this model records
+          the number of minutes within the timeslot that are unavailable for a user
+          to book. [GenAI Description]
+
+      - name: external_unavailable_hours
+        description: '" external_unavailable_hours" is the total number of hours unavailable
+          to the external party within a given timeslot, measured in hours and rounded
+          to two decimal places. [GenAI Description]'
+
+      - name: timeslot_minutes
+        description: This column contains the difference in minutes between the given
+          timeslot’s start and end time. [GenAI Description]
+
+      - name: timeslot_hours
+        description: This column contains the total number of hours in each timeslot,
+          calculated as the difference between the timeslot's start and end times.
+          [GenAI Description]
+
+      - name: timeslot_minutes_minus_external
+        description: This column calculates the difference between the timeslot minutes
+          and the external unavailable minutes for each timeslot. [GenAI Description]
+
+      - name: timeslot_hours_minus_external
+        description: This column holds the length (in hours) of the timeslot minus
+          any externally unavailable time. [GenAI Description]

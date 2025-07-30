@@ -1,0 +1,40 @@
+version: 2
+models:
+  - name: dbt_member_dates_on_track_sessions
+    description: >
+      This protected dbt model expands the `dbt_member_dates_on_track` model with
+      cumulative number of sessions for each member-track pair on every day of the
+      member's track asssignment. This model should be used to augment `dei` models
+      that need to use this information, such as `dei_member_engagement_by_day`.
+
+    columns:
+      - name: member_id
+        description: Foreign key for associated member.
+        tests:
+          - not_null
+          - relationships:
+              to: ref('int_app__users')
+              field: user_id
+
+      - name: track_id
+        description: Foreign key for associated track for given member on given day.
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_tracks')
+              field: track_id
+
+      - name: date_day
+        description: >
+          SQL date for every day the member was open on associated track_assignment. Includes
+          a row for the day the track_assignment was created, up through the last full day
+          the member was open on the track_assignment.
+        tests:
+          - not_null
+
+      - name: completed_session_count_track_to_date
+        description: >
+          Cumulative number of completed sessions to date for the member-track pair. This
+          model also accounts for cases in which the member completes more than one session in a day.
+        tests:
+          - not_null

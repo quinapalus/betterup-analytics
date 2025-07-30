@@ -1,0 +1,20 @@
+version: 2
+
+models:
+  - name: base_app__nylas_events_historical
+    description: ""
+    columns:
+      - name: calendar_id
+      - name: created_at
+      - name: ends_at
+      - name: ical_uid
+      - name: id
+        tests:
+          - unique
+          - not_null
+      - name: identifier
+      - name: master_event_id
+      - name: nylas_account_id
+      - name: starts_at
+      - name: updated_at
+      - name: island

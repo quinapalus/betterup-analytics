@@ -1,0 +1,19 @@
+version: 2
+
+models:
+  - name: base_app__growth_plan_items_historical
+    description: ""
+    columns:
+      - name: completed_at
+      - name: created_at
+      - name: deleted_at
+      - name: growth_focus_area_id
+      - name: growth_plan_id
+      - name: id
+        tests:
+          - unique
+          - not_null
+      - name: item_id
+      - name: item_type
+      - name: position
+      - name: updated_at

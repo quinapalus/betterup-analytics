@@ -1,0 +1,30 @@
+version: 2
+
+sources:
+  - name: assessment
+    database: raw
+    ## Schema is dynamic based on the DEPLOY_ENVIRONMENT environment variable.
+    schema: "{{ 'airbyte_assessment' if env_var('DEPLOYMENT_ENVIRONMENT', '') == 'US Gov' else 'stitch_assessment' }}"
+
+# tables listed below must match the source (raw) table names
+    tables:
+      - name: assessment_items
+      - name: assessment_configurations
+      - name: assessment_sections
+      - name: assessment_tags #not in dbt
+      - name: assessment_section_items
+      - name: assessment_configuration_sections
+      # - name: assessment_report_configurations #not in dbt 
+      - name: assessment_feedback_settings #not in dbt
+      - name: assessment_response_options
+      - name: assessment_response_sets
+      - name: assessment_descriptor_tags #not in dbt
+      - name: assessment_descriptor_tag_mappings #not in dbt
+      - name: constructs
+      - name: construct_items
+      - name: construct_assessments
+      - name: construct_assessment_excluded_construct_items #not in dbt
+      - name: construct_reference_populations
+      - name: reference_population_subgroups
+      - name: reference_populations
+      - name: whole_person_subdimensions

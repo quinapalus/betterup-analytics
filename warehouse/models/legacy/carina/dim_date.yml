@@ -1,0 +1,77 @@
+version: 2
+models:
+  - name: dim_date
+    description: >
+      Conformed Date dimension, includes one row for every day from February 9, 2015
+      up through
+      five years from the current date.
+
+    columns:
+      - name: date_key
+        description: Primary Key
+        tests:
+          - unique
+          - not_null
+
+      - name: date
+        description: SQL date for the given day.
+        tests:
+          - unique
+          - not_null
+
+      - name: calendar_year_month
+        description: Concatenated Calendar year-month (YYYY-MM format) for the given
+          day.
+        tests:
+          - not_null
+
+      - name: calendar_month_name
+        description: >
+          Mixed case calendar Month name for the given day, eg. `January`, `February`,
+          etc.
+        tests:
+          - not_null
+
+      - name: calendar_month_number
+        description: >
+          Two-digit calendar month number for the given day, eg. `01`, `02`, etc.
+        tests:
+          - not_null
+
+      - name: calendar_year
+        description: >
+          Calendar year for the given day, eg. `2019`, `2020`, etc.
+        tests:
+          - not_null
+
+      - name: fiscal_year
+        description: Fiscal year for the given day, note that our fiscal year starts
+          on February 1.
+        tests:
+          - not_null
+
+      - name: fiscal_quarter
+        description: Fiscal quarter for the given day.
+        tests:
+          - not_null
+          - accepted_values:
+              values: [Q1, Q2, Q3, Q4]
+
+      - name: fiscal_year_quarter
+        description: Concatenated Fiscal year-quarter for the given day.
+        tests:
+          - not_null
+
+      - name: is_current_fiscal_quarter
+        description: Boolean flag, true if date is within current fiscal quarter.
+        tests:
+          - not_null
+          - accepted_values:
+              values: [true, false]
+
+      - name: is_previous_fiscal_quarter
+        description: Boolean flag, true if date is within previous fiscal quarter.
+        tests:
+          - not_null
+          - accepted_values:
+              values: [true, false]

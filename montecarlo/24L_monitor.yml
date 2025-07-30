@@ -1,0 +1,90 @@
+montecarlo:
+  custom_sql:
+    - sql: |
+        WITH event_1 AS (SELECT
+            f1.*,
+            COALESCE(f2.activated_at < DATE_TRUNC('MINUTE', f1.event_at), FALSE) AS has_previously_activated,
+            COALESCE(f3.completed_first_appointment_at < DATE_TRUNC('MINUTE', f1.event_at), FALSE) AS has_previous_appointment,
+            TO_CHAR(f1.event_at, 'YYYYMMDD') AS date_key,
+            CASE
+              WHEN f1.event_name IN ('invited primary_coaching_product','invited on_demand_product','invited extended_network_product', 'invited care_product') AND f1.event_at < '2022-01-01' THEN FALSE
+              WHEN f1.event_name IN ('invited primary_coaching_product','invited on_demand_product','invited extended_network_product') AND f1.event_at >= '2022-07-01' THEN TRUE
+              WHEN f1.event_name = 'invited care_product' AND f1.event_at >= '2022-02-01' THEN TRUE
+              WHEN f1.event_name = 'invited foundations_product' THEN TRUE
+              ELSE m.is_on_converged_platform
+            END AS is_on_converged_platform
+          FROM "ANALYTICS"."ANALYTICS"."FACT_MEMBER_EVENTS"
+           AS f1
+                LEFT JOIN (SELECT DISTINCT member_id, MIN(DATE_TRUNC('MINUTE', event_at)) AS activated_at FROM "ANALYTICS"."ANALYTICS"."FACT_MEMBER_EVENTS"
+           WHERE event_action = 'activated' AND associated_record_type IN ('ProductSubscriptionAssignment','TrackAssignment') GROUP BY member_id) AS f2
+                  ON f1.member_id = f2.member_id
+                LEFT JOIN (SELECT DISTINCT member_id, MIN(DATE_TRUNC('MINUTE', event_at)) AS completed_first_appointment_at FROM "ANALYTICS"."ANALYTICS"."FACT_MEMBER_EVENTS"
+           WHERE event_action = 'completed' AND associated_record_type = 'Appointment' GROUP BY member_id) AS f3
+                  ON f1.member_id = f3.member_id
+                INNER JOIN -- if dev -- "ANALYTICS"."CORE"."DIM_MEMBERS"
+         "ANALYTICS"."CORE"."DIM_MEMBERS"
+         AS m
+                  ON f1.member_id = m.member_id
+                WHERE ((f1."EVENT_NAME") = 'invited track') AND
+                      1=1 -- no filter on 'event_1.assessment_type_filter'
+
+                  )
+        ,  event_2 AS (SELECT f1.primary_key as previous_event_primary_key, f2.*
+          FROM event_1 AS f1
+          INNER JOIN "ANALYTICS"."ANALYTICS"."FACT_MEMBER_EVENTS"
+           AS f2
+          ON
+            f1.member_id = f2.member_id AND
+            f1.event_at <= f2.event_at
+          WHERE ((f2."EVENT_NAME") = 'activated track') AND
+                1=1 -- no filter on 'event_2.assessment_type_filter'
+
+          QUALIFY ROW_NUMBER() OVER (PARTITION BY f1.member_id, f1.associated_record_id ORDER BY f2.event_at) = 1
+          )
+        ,  event_3 AS (SELECT f1.primary_key as previous_event_primary_key, f2.*
+               FROM event_2 AS f1
+               INNER JOIN "ANALYTICS"."ANALYTICS"."FACT_MEMBER_EVENTS"
+           AS f2
+                ON
+                  f1.member_id = f2.member_id AND
+                  f1.event_at <= f2.event_at
+                WHERE ((f2."EVENT_NAME") = 'completed onboarding_assessment_track') AND
+                      1=1 -- no filter on 'event_3.assessment_type_filter'
+
+                QUALIFY ROW_NUMBER() OVER (PARTITION BY f1.member_id, f1.associated_record_id ORDER BY f2.event_at) = 1
+                )
+          ,counts as(
+          SELECT
+              COUNT(DISTINCT ( event_1."MEMBER_ID"  ) ) AS "event_1.count_members",
+              COUNT(DISTINCT ( event_2."MEMBER_ID"  ) ) AS "event_2.count_members",
+              COUNT(DISTINCT ( event_3."MEMBER_ID"  ) ) AS "event_3.count_members"
+          FROM event_1
+          LEFT JOIN event_2 ON (event_1."PRIMARY_KEY") = (event_2."PREVIOUS_EVENT_PRIMARY_KEY")
+          LEFT JOIN event_3 ON (event_2."PRIMARY_KEY") = (event_3."PREVIOUS_EVENT_PRIMARY_KEY")
+          LEFT JOIN "ANALYTICS"."ANALYTICS"."DIM_REPORTING_GROUP_ASSIGNMENTS"
+               AS reporting_group_assignments ON (event_1."MEMBER_ID") = (reporting_group_assignments."MEMBER_ID") AND
+                      (event_1."EVENT_AT") >= (reporting_group_assignments."STARTS_AT") AND
+                      ((event_1."EVENT_AT") < (reporting_group_assignments."ENDED_AT") OR (reporting_group_assignments."ENDED_AT") IS NULL)
+          WHERE (reporting_group_assignments."MEMBER_IS_OPEN" )
+          )
+
+          ,threshold as (
+          select *,
+          IFF ("event_1.count_members" > "event_2.count_members", 1, 0) as threshold_value1,
+          IFF ("event_2.count_members" > "event_3.count_members", 1, 0) as threshold_value2
+          from counts
+          )
+
+          select IFF(threshold_value1 = threshold_value2, 1, 0 )
+          from threshold
+      description: |
+        Count of members in the activation funnel should be completed_onboarding < activated < invited, ie, "event_1.count_members" > "event_2.count_members" > "event_3.count_members"
+      comparisons:
+        - type: threshold
+          operator: EQ
+          threshold_value: 0
+      schedule:
+        type: fixed
+        interval_minutes: 180
+        start_time: "2023-07-12T19:00:00"
+      labels: [pad]

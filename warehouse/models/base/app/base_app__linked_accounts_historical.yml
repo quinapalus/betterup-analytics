@@ -1,0 +1,15 @@
+version: 2
+
+models:
+  - name: base_app__linked_accounts_historical
+    description: ""
+    columns:
+      - name: account_type
+      - name: created_at
+      - name: external_id
+      - name: id
+        tests:
+          - unique
+          - not_null
+      - name: updated_at
+      - name: user_id

@@ -1,0 +1,32 @@
+version: 2
+
+models:
+  - name: stg_app__user_role_changes
+    description: UserRoleChanges Record model represents a single row of change made
+      on the UsersRoles model.
+    columns:
+      - name: user_role_change_id
+        description: Unique identifer of the role change record.
+        tests:
+          - not_null
+          - unique
+
+      - name: user_id
+        description: Foreign Key to associated User.
+        tests:
+          - not_null
+
+      - name: role_id
+        description: Foreign Key to associated Role.
+        tests:
+          - not_null
+
+      - name: event_type
+        description: Event type that has occured. User's role added or removed.
+
+      - name: created_at
+        description: Time when the Rails object was created in UTC, i.e. when the
+          user role change record was created.
+
+      - name: updated_at
+        description: Time when the Rails object was updated in UTC.

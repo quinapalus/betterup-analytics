@@ -1,0 +1,29 @@
+version: 2
+
+models:
+  - name: int_metrics__kpi_2_invited
+    description: ""
+    columns:
+      - name: primary_key
+        description: ""
+        tests:
+          - unique
+          - not_null
+
+      - name: metric_date
+        description: ""
+        tests:
+          - not_null
+
+      - name: metric_name
+        description: ""
+        tests:
+          - not_null
+
+      - name: metric_value
+        description: ""
+
+      - name: metric_granularity
+        description: ""
+        tests:
+          - not_null

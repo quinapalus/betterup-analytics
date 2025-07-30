@@ -1,0 +1,27 @@
+version: 2
+
+models:
+  - name: dbt_funnels__care
+    description: DBT model dbt_funnels__care is a data model that contains funnel_type,
+      event_name, and funnel_stage fields. It provides a relationship between those
+      three fields and assigns a surrogate key for future resilience and primary key
+      functionality. This model is used to configure a funnel and can be modified
+      by changing the parameters, not the logic in the SQL code. [GenAI Description]
+    columns:
+      - name: funnel_type_event_name_id
+        description: Surrogate Primary Key
+        tests:
+          - not_null
+          - unique
+
+      - name: funnel_type
+        description: The "funnel_type" column stores the type of user journey or funnel
+          associated with funnel events. [GenAI Description]
+
+      - name: event_name
+        description: The 'event_name' is a string field that holds the name of each
+          event in the funnel for identifying the stage of the funnel. [GenAI Description]
+
+      - name: funnel_stage
+        description: The 'funnel_stage' column stores the stage, or order, of events
+          that make up a particular funnel. [GenAI Description]

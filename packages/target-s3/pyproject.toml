@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "target-s3"
+version = "0.1.0"
+description = ""
+authors = ["Your Name <you@example.com>"]
+readme = "README.md"
+packages = [{include = "target_s3"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+boto3 = "^1.26.63"
+singer-python = "^5.12.2"
+
+[tool.poetry.scripts]
+target-s3 = "target_s3.target:main"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

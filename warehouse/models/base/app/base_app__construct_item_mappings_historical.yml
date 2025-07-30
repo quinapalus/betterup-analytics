@@ -1,0 +1,12 @@
+version: 2
+
+models:
+  - name: base_app__construct_item_mappings_historical
+    description: ""
+    columns:
+      - name: construct_uuid
+      - name: id
+        tests:
+          - unique
+          - not_null
+      - name: item_mapping_id

@@ -1,0 +1,58 @@
+version: 2
+
+models:
+  - name: int_app__messages
+    description: >
+      In this intermediate model, we remove deleted records.
+      We also join to two other models to get information relevant to messages: coach_assignments and member_events.
+      (This model was copied from LookML to dbt, so it might need refactoring if the need for this join logic is outdated.)
+    columns:
+      - name: message_id
+        description: ""
+        tests:
+          - unique
+          - not_null
+
+      - name: created_at
+        description: ""
+
+      - name: updated_at
+        description: ""
+
+      - name: attachment_status
+        description: ""
+
+      - name: body
+        description: ""
+
+      - name: client_uuid
+        description: ""
+
+      - name: coach_assignment_id
+        description: ""
+
+      - name: created_from
+        description: ""
+
+      - name: read_by_recipient_at
+        description: ""
+
+      - name: recipient_id
+        description: ""
+
+      - name: sender_id
+        description: ""
+
+      - name: conversation_participant_id
+        description: ""
+
+      - name: role
+        description: ""
+
+      - name: message_type
+        description: ""
+
+      - name: generated_message_id
+        description: "Foreign key to generated_messages table. This is populated if the message was generated using the AI beta feature ZAP!. It is null if message was written normally, without ZAP!."
+
+

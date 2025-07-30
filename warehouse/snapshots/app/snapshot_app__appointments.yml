@@ -1,0 +1,125 @@
+version: 2
+
+snapshots:
+  - name: snapshot_app__appointments
+    description: >
+      Snapshot of Appointments staging model.
+      More docs here: https://betterup.atlassian.net/wiki/spaces/DATA/pages/3345450158/Coach+Snapshot+Data+Model
+    tests:
+      - unique:
+          column_name: "(id || '-' || dbt_valid_from || '-' || dbt_valid_to)"
+
+    columns:
+      - name: id
+        description: ""
+
+      - name: uuid
+        description: ""
+
+      - name: created_at
+        description: ""
+
+      - name: updated_at
+        description: ""
+
+      - name: timeslot_id
+        description: ""
+
+      - name: coach_id
+        description: ""
+
+      - name: creator_id
+        description: ""
+
+      - name: user_id
+        description: ""
+
+      - name: starts_at
+        description: ""
+
+      - name: ends_at
+        description: ""
+
+      - name: started_at
+        description: ""
+
+      - name: complete_at
+        description: ""
+
+      - name: canceled_at
+        description: ""
+
+      - name: call_id
+        description: ""
+
+      - name: participant_id
+        description: ""
+
+      - name: canceled_by_user_id
+        description: ""
+
+      - name: coach_assignment_id
+        description: ""
+
+      - name: confirmed_at
+        description: ""
+
+      - name: contact_method
+        description: ""
+
+      - name: length
+        description: ""
+
+      - name: missed
+        description: ""
+
+      - name: recurring
+        description: ""
+
+      - name: original_starts_at
+        description: ""
+
+      - name: development_topic_id
+        description: ""
+
+      - name: post_session_member_assessment_id
+        description: ""
+
+      - name: requested_length
+        description: ""
+
+      - name: requested_weekly_interval
+        description: ""
+
+      - name: track_assignment_id
+        description: ""
+
+      - name: nylas_event_id
+        description: ""
+
+      - name: product_subscription_assignment_id
+        description: ""
+
+      - name: facilitator_assignment_id
+        description: ""
+
+      - name: last_rescheduled_by_user_id
+        description: ""
+
+      - name: token
+        description: ""
+
+      - name: sequence_number
+        description: ""
+
+      - name: dbt_scd_id
+        description: ""
+
+      - name: dbt_updated_at
+        description: ""
+
+      - name: dbt_valid_from
+        description: ""
+
+      - name: dbt_valid_to
+        description: ""

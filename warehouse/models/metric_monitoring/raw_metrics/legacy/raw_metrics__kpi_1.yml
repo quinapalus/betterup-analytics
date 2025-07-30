@@ -1,0 +1,26 @@
+version: 2
+
+models:
+  - name: raw_metrics__kpi_1
+    description: "Looker link: https://betterup.looker.com/x/WmYfFxGCQwwcrqsM982x8J"
+    columns:
+      - name: calendar_month
+        description: ""
+
+      - name: session_hours
+        description: ""
+
+      - name: count_coaching_sessions
+        description: ""
+
+      - name: members_with_coaching_session
+        description: ""
+
+      - name: mid_month_members
+        description: ""
+
+      - name: primary_key
+        description: ""
+        tests:
+          - not_null
+          - unique

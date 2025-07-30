@@ -1,0 +1,59 @@
+version: 2
+
+models:
+  - name: sessions
+    description: ""
+    columns:
+      - name: session_id
+        description: Primary key
+        tests:
+          - unique
+          - not_null
+
+      - name: member_id
+        description: ""
+
+      - name: coach_id
+        description: ""
+
+      - name: track_id
+        description: ""
+
+      - name: scheduled_at
+        description: ""
+
+      - name: appointment_updated_at
+        description: ""
+
+      - name: requested_length
+        description: ""
+
+      - name: is_appointment_recurring
+        description: ""
+
+      - name: starts_at
+        description: ""
+
+      - name: started_at
+        description: ""
+
+      - name: ends_at
+        description: ""
+
+      - name: canceled_at
+        description: ""
+
+      - name: complete_at
+        description: ""
+
+      - name: is_appointment_missed
+        description: ""
+
+      - name: sequence_number
+        description: ""
+      
+      - name: next_session_scheduled_at
+        description: "Hours between when session ended and when the next session in the coaching assignment was scheduled."
+      
+      - name: next_session_scheduled_by_role
+        description: "role of the user who scheduled next session in coaching assignment. Can be member or coach"

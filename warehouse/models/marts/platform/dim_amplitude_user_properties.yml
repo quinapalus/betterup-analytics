@@ -1,0 +1,31 @@
+version: 2
+
+models:
+  - name: dim_amplitude_user_properties
+    description: The DBT model dim_amplitude_user_properties stores user properties
+      from an analytics platform called Amplitude. It includes fields for a unique
+      primary key, user_id, event time, property name and property value. It aggregates
+      properties from a parent model int_amplitude__events, and is incremental, only
+      gathering new data since the last run. This model also flattens user properties
+      and extracts only the oldest event time value for each user and property name
+      combination. [GenAI Description]
+    columns:
+      - name: primary_key
+        description: The 'primary_key' column is a surrogate key composed of the columns
+          'user_id' and 'property_name', which is used to uniquely identify the model's
+          records. [GenAI Description]
+        tests:
+          - unique
+          - not_null
+
+      - name: user_id
+        description: '{{ doc("amplitude_user_id") }}'
+
+      - name: event_time
+        description: '{{ doc("amplitude_event_time") }}'
+
+      - name: property_name
+        description: The name of the specific user property.
+
+      - name: property_value
+        description: The value of the specific user property.

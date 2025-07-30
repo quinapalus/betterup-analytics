@@ -1,0 +1,70 @@
+version: 2
+models:
+  - name: sfdc_contacts_global_roles
+    description: >
+      Helper model that reconciles platform role fields from the Contacts
+      model in Salesforce with the current values from the application. The
+      purpose of this model is to prepare records that need to be updated on
+      nightly sync.
+
+    columns:
+      - name: sfdc_contact_id
+        description: Unique identifier for contact in Salesforce
+
+      - name: sfdc_is_current_member
+        description: >
+          Current value for `is_current_member` in Salesforce from the
+          most recent replication run.
+        tests:
+          - accepted_values:
+              values: [true, false]
+
+      - name: sfdc_is_past_member
+        description: >
+          Current value for `is_past_member` in Salesforce from the
+          most recent replication run.
+        tests:
+          - accepted_values:
+              values: [true, false]
+
+      - name: sfdc_is_program_admin
+        description: >
+          Current value for `is_program_admin` in Salesforce from the
+          most recent replication run.
+        tests:
+          - accepted_values:
+              values: [true, false]
+
+      - name: app_is_current_member
+        description: >
+          Current value for `is_current_member` from the application.
+        tests:
+          - not_null
+          - accepted_values:
+              values: [true, false]
+
+      - name: app_is_past_member
+        description: >
+          Current value for `is_past_member` from the application.
+        tests:
+          - not_null
+          - accepted_values:
+              values: [true, false]
+
+      - name: app_is_program_admin
+        description: >
+          Current value for `is_program_admin` from the application.
+        tests:
+          - not_null
+          - accepted_values:
+              values: [true, false]
+
+      - name: values_differ_from_app
+        description: >
+          Boolean indicating whether any values for the platform role fields
+          differ between Salesforce and the application. Will be true if record
+          needs to be updated in the next nightly run.
+        tests:
+          - not_null
+          - accepted_values:
+              values: [true, false]

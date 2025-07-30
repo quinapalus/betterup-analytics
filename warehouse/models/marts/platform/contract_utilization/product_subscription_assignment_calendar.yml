@@ -1,0 +1,65 @@
+version: 2
+
+models:
+  - name: product_subscription_assignment_calendar
+    description: ""
+    columns:
+      - name: product_subscription_assignment_calendar_id
+        description: ""
+        tests:
+          - unique
+          - not_null
+
+      - name: date_key
+        description: ""
+
+      - name: date
+        description: ""
+
+      - name: calendar_year_month
+        description: ""
+
+      - name: is_current_fiscal_quarter
+        description: ""
+
+      - name: is_previous_fiscal_quarter
+        description: ""
+
+      - name: is_last_day_of_month
+        description: ""
+
+      - name: starts_date
+        description: ""
+
+      - name: ends_date
+        description: ""
+
+      - name: product_subscription_assignment_id
+        description: ""
+
+      - name: member_id
+        description: ""
+
+      - name: starts_at
+        description: ""
+
+      - name: ends_at
+        description: ""
+
+      - name: ended_at
+        description: ""
+
+      - name: product_subscription_id
+        description: ""
+
+      - name: organization_id
+        description: ""
+
+      - name: non_transfer_period
+        description: ""
+
+      - name: product_id
+        description: ""
+
+      - name: psa_rownum
+        description: ""

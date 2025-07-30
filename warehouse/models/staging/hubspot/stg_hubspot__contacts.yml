@@ -1,0 +1,119 @@
+version: 2
+models:
+  - name: stg_hubspot__contacts
+    description: >
+      Contains all unique hubspot contacts collected by BetterUp. 
+    columns:
+      - name: hubspot_contact_id
+        description: Unique identifier for hubspot contacts that submitted their email on landing pages. 
+        tests:
+          - unique
+          - not_null
+
+      - name: hubspot_portal_id
+        description: ""
+
+      - name: hubspot_canonical_vid
+        description: ""
+
+      - name: hubspot_lead_guid
+        description: ""
+
+      - name: hubspot_merged_vids
+        description: ""
+
+      - name: is_contact
+        description: ""
+
+      - name: contact_last_name
+        description: ""
+
+      - name: contact_first_name
+        description: ""
+
+      - name: form_submissions
+        description: ""
+
+      - name: list_memberships
+        description: ""
+
+      - name: contact_company_name
+        description: ""
+
+      - name: added_at
+        description: "The timestamp the contact was added to this table."
+
+      - name: received_at
+        description: ""
+
+      - name: uuid_ts
+        description: ""
+
+      - name: last_modified_at
+        description: ""
+
+      - name: analytics_source_value
+        description: ""
+
+      - name: utm_adset_id
+        description: ""
+
+      - name: utm_adgroup_id
+        description: ""
+
+      - name: utm_creative
+        description: ""
+
+      - name: utm_medium
+        description: ""
+
+      - name: utm_source
+        description: ""
+
+      - name: utm_term
+        description: ""
+
+      - name: utm_campaign_id
+        description: ""
+
+      - name: utm_campaign
+        description: ""
+
+      - name: utm_content
+        description: ""
+
+      - name: analytics_source_data_value_1
+        description: ""
+
+      - name: analytics_source_data_value_2
+        description: ""
+
+      - name: ft_utm_source
+        description: ""
+
+      - name: lt_utm_source
+        description: ""
+
+      - name: analytics_first_url
+        description: ""
+
+      - name: analytics_last_url
+        description: ""
+
+      - name: marketing_lead_type
+        description: ""
+
+      - name: analytics_num_page_views
+        description: ""
+
+      - name: latest_source_data_1
+        description: ""
+
+      - name: latest_source_data_2
+        description: ""
+
+      - name: latest_source
+        description: ""
+
+      - name: created_date
+        description: "Mostly null properties column."
